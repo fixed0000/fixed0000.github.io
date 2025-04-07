@@ -3,69 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自己紹介</title>
+    <title>Мой сайт</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <ul class="menu">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html">Обо мне</a></li>
+            <!-- Элементы слева -->
+            <li class="controls-group">
+                <div class="custom-select">
+                    <select id="language-select">
+                        <option value="ru">🇷🇺 Русский</option>
+                        <option value="en">🇬🇧 English</option>
+                        <option value="ja">🇯🇵 日本語</option>
+                    </select>
+                    <span class="select-arrow">▼</span>
+                </div>
+                <button id="theme-toggle" class="theme-btn" data-i18n="theme.toggle">
+                    <span class="theme-icon">🌓</span>
+                    <span class="btn-text">Сменить тему</span>
+                </button>
+            </li>
+            
+            <!-- Ссылки справа -->
+            <li class="nav-links">
+                <a href="index.html" data-i18n="nav.home">Главная</a>
+                <a href="about.html" data-i18n="nav.about">Обо мне</a>
+            </li>
         </ul>
     </nav>
 
+    <!-- Остальная часть кстатьбе остается аналогичной, но с добавлением data-атрибутов -->
     <header>
-        <h1>Добро пожаловать! 👋</h1>
+        <h1 data-i18n="welcome">Добро пожаловать!</h1>
     </header>
 
     <main>
-        <button id="theme-toggle">🌓 Сменить тему</button>
+        
 
+        <!-- Пример перевода для секции "Обо мне" -->
         <section class="intro">
-            <h2>Обо мне</h2>
-            <p>Привет! Я начинающий веб-разработчик.</p>
-        </section>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h2 data-i18n="about.title">Обо мне</h2>
+                    
+                    <div class="highlight-box">
+                        <h3 data-i18n="about.education">Образование</h3>
+                        <ul class="timeline">
+                            <li data-i18n="about.education.item1">Студентка 4 курса МГПУ: Переводчик японского языка</li>
+                            <li data-i18n="about.education.item2">Программа обмена: Университет Цукубы (Япония), 2022</li>
+                            <li data-i18n="about.education.item3">Дополнительное образование: Основы программирования</li>
+                            <li data-i18n="about.education.item4">Методика преподавания РКИ: Курс для преподавателей-русистов</li>
+                        </ul>
+                    </div>
+        
+                    <div class="highlight-box">
+                        <h3>Профессиональный опыт</h3>
+                        <ul class="achievements">
+                            <li data-i18n="experience.item1">Локализация контента для японских компаний</li>
+                            <li data-i18n="experience.item2">Персональное сопровождение CEO из Японии</li>
+                            <li data-i18n="experience.item3">Работа с клиентами: кассир в Японии (Mosburger)</li>
+                            <li data-i18n="experience.item4">Преподавание русского языка: Индивидуальные занятия для иностранцев</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Изображение справа с улучшенной семантикой -->
+<div class="image-wrapper">
+    <img 
+        src="images/image1.jpg" 
+        alt="Мое фото" 
+        class="profile-photo"
+        data-i18n-alt="image.alt"
+        srcset="images/image1.jpg 1x, 
+                images/image1@2x.jpg 2x,
+                images/image1@3x.jpg 3x"
+        sizes="(max-width: 768px) 100vw, 40vw"
+        loading="lazy"
+        decoding="async"
+        fetchpriority="high"
+    >
+    <p class="image-caption" data-i18n="image.caption">Фото сделано в кампусе Университета Цукубы</p>
+</div>
+</div>
+</section>
 
         <section class="gallery">
-            <img src="images/image1.jpg" alt="Пример работы 1">
-            <img src="images/image2.jpg" alt="Пример работы 2">
-            <img src="images/image3.jpg" alt="Пример работы 3">
+            <img src="images/image2.jpg" alt="Пример работы 1">
+            <img src="images/image3.jpg" alt="Пример работы 2">
+            <img src="images/image4.jpg" alt="Пример работы 3">
         </section>
 
         <section class="skills">
-            <h2>Мои навыки</h2>
+            <h2 data-i18n="skills.title">Мои навыки</h2>
             <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript (в процессе)</li>
+                <li data-i18n="skills.html">HTML</li>
+                <li data-i18n="skills.css">CSS</li>
+                <li data-i18n="skills.js">JavaScript (в процессе)</li>
             </ul>
         </section>
-
+        
+        <!-- В секции FAQ -->
         <details class="faq">
-            <summary>Как вы начали программировать?</summary>
-            <p>Я начал с онлайн-курсов и практики...</p>
+            <summary data-i18n="faq.question">Как вы начали программировать?</summary>
+            <p data-i18n="faq.answer">Я начал с онлайн-курсов и практики...</p>
         </details>
-
-        <section class="social-links">
-            <a href="https://facebook.com" target="_blank">Facebook</a>
-            <a href="https://instagram.com" target="_blank">Instagram</a>
-            <a href="https://github.com/fixed0000" target="_blank">GitHub</a>
-        </section>
-
+        
+        <!-- В секции contact -->
         <section class="contact">
-            <h2>Свяжитесь со мной</h2>
+            <h2 data-i18n="contact.title">Свяжитесь со мной</h2>
             <form>
-                <input type="text" placeholder="Ваше имя" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Сообщение..." rows="5"></textarea>
-                <button type="submit">Отправить</button>
+                <input type="text" 
+                       data-i18n-placeholder="contact.name" 
+                       placeholder="Ваше имя" 
+                       required>
+                <input type="email" 
+                       data-i18n-placeholder="contact.email" 
+                       placeholder="Email" 
+                       required>
+                <textarea 
+                    data-i18n-placeholder="contact.message" 
+                    placeholder="Сообщение..." 
+                    rows="5"></textarea>
+                <button type="submit" data-i18n="contact.submit">Отправить</button>
             </form>
         </section>
-    </main>
-
-    <footer>
-        <p>© 2024 Мой первый сайт</p>
-    </footer>
+        
+        <!-- В футере -->
+        <footer>
+            <p data-i18n="footer.copyright">© 2024 Мой первый сайт</p>
+        </footer>
 
     <script src="script.js"></script>
 </body>

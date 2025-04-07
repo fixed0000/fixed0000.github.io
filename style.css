@@ -13,10 +13,10 @@ header {
 }
 
 .intro {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
+  background-color: var(--intro-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
 }
 
 .skills {
@@ -103,11 +103,21 @@ footer {
   }
 
   /* Стили для страницы "Обо мне" */
-.timeline {
-    border-left: 3px solid #3498db;
+  .timeline {
     padding-left: 20px;
     margin-left: 20px;
-  }
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: -3px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: 3px;
+}
   
   .timeline .item {
     margin-bottom: 30px;
@@ -185,17 +195,21 @@ footer {
   :root {
     --bg-color: #ffffff;
     --text-color: #333333;
+    --intro-bg: #f9f9f9;
   }
   
   [data-theme="dark"] {
     --bg-color: #1a1a1a;
     --text-color: #ffffff;
+    --intro-bg: #2d2d2d;
   }
   
   body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    transition: 0.3s; /* Для плавности */
+    transition: 
+      background-color 0.3s ease-in-out,
+      color 0.3s ease-in-out;
   }
 
 
@@ -234,3 +248,514 @@ footer {
       grid-template-columns: 1fr;
     }
   }
+
+  p, h1, h2, h3, h4, h5, h6, li, a, span, summary, details {
+    color: inherit;
+  }
+  
+  .intro-content {
+    max-width: 1700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 750px; /* Большое изображение справа */
+    gap: 80px;
+    align-items: start;
+    padding: 0 40px;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 750px; /* Фиксированная высота */
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Адаптивность */
+@media (max-width: 1440px) {
+  .intro-content {
+      grid-template-columns: 1fr 600px;
+      gap: 60px;
+  }
+  
+  .profile-photo {
+      height: 500px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .intro-content {
+      grid-template-columns: 1fr 450px;
+      gap: 40px;
+  }
+  
+  .profile-photo {
+      height: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .intro-content {
+      grid-template-columns: 1fr;
+  }
+  
+  .profile-photo {
+      height: 500px;
+      max-width: 600px;
+      margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-photo {
+      height: 350px;
+  }
+}
+
+
+/* Дополнительные улучшения */
+.intro-text {
+  padding: 40px;
+  background: var(--intro-bg);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+.highlight-box {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.timeline li::before {
+  content: "🎓";
+  margin-right: 8px;
+}
+
+.achievements li::before {
+  content: "✅";
+  margin-right: 8px;
+}
+
+.skills-list li {
+  margin: 10px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.skills-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+.cta-text {
+  font-weight: bold;
+  border-left: 3px solid var(--accent-color);
+  padding-left: 15px;
+  margin-top: 20px;
+}
+
+.highlight-box {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .highlight-box {
+    background: rgba(0,0,0,0.15);
+}
+
+.language-switcher {
+  margin-left: auto;
+}
+
+.language-switcher select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+}
+
+/* Для многоязычной поддержки */
+[lang="ja"] body {
+  font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  line-height: 1.8;
+}
+
+[lang="ja"] .timeline li::before {
+  content: "📘";
+}
+
+/* Выравнивание для японского текста */
+[lang="ja"] .intro-text {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  text-align: center;
+  max-width: 90%;
+  backdrop-filter: blur(3px);
+}
+
+[data-theme="dark"] .image-caption {
+  background: rgba(255,255,255,0.1);
+  color: var(--text-color);
+}
+
+/* Стили для языкового селектора */
+.custom-select {
+  position: relative;
+  width: 180px;
+}
+
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 10px 15px;
+  background: var(--bg-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 25px;
+  color: var(--text-color);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-color);
+  pointer-events: none;
+}
+
+.custom-select:hover select {
+  background: var(--hover-bg);
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Стили для кнопки темы */
+.theme-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.theme-icon {
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+
+.theme-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.theme-btn:active {
+  transform: translateY(1px);
+}
+
+/* Добавьте в переменные */
+:root {
+  --accent-color: #3498db;
+  --accent-hover: #2980b9;
+  --hover-bg: rgba(52, 152, 219, 0.1);
+}
+
+[data-theme="dark"] {
+  --accent-color: #2ecc71;
+  --accent-hover: #27ae60;
+  --hover-bg: rgba(46, 204, 113, 0.1);
+}
+
+.theme-icon {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.custom-select select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+@media (max-width: 768px) {
+  .custom-select {
+      width: 140px;
+  }
+  
+  .theme-btn {
+      padding: 10px 20px;
+  }
+  
+  .btn-text {
+      display: none;
+  }
+}
+
+
+
+
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.controls-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .menu {
+      flex-wrap: wrap;
+      padding: 10px;
+  }
+  
+  .controls-group {
+      order: 1;
+      width: 100%;
+      justify-content: space-between;
+      margin: 10px 0;
+  }
+  
+  .nav-links {
+      order: 2;
+      width: 100%;
+      justify-content: center;
+      margin: 10px 0;
+  }
+}
+
+/* Улучшенные стили для выравнивания */
+.custom-select {
+  margin-right: 10px;
+}
+
+.theme-btn {
+  white-space: nowrap;
+}
+
+.nav-links a {
+  padding: 8px 12px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: var(--hover-bg);
+}
+
+/* Добавьте эти стили в ваш CSS */
+.custom-select select {
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Стили для опций в выпадающем списке */
+.custom-select select option {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 10px;
+}
+
+/* Для браузеров на WebKit (Chrome, Safari) */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .custom-select select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+  }
+  
+  .custom-select select::-ms-expand {
+      display: none;
+  }
+  
+  .custom-select select option {
+      background: var(--bg-color);
+      color: var(--text-color);
+  }
+}
+
+/* Для темной темы - дополнительные корректировки */
+[data-theme="dark"] .custom-select select {
+  border-color: var(--accent-color);
+}
+
+[data-theme="dark"] .select-arrow {
+  color: var(--accent-color);
+}
+
+/* В разделе :root */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #3498db;
+  --intro-bg: #f9f9f9;
+  --card-bg: #ffffff;
+}
+
+/* Для темной темы */
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #f8f9fa;
+  --accent-color: #2ecc71;
+  --intro-bg: #2d2d2d;
+  --card-bg: #2a2a2a;
+}
+
+/* Обязательные базовые стили */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: 
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+/* Явное наследование для всех текстовых элементов */
+h1, h2, h3, h4, h5, h6,
+p, li, a, span, button, 
+summary, details, label,
+.timeline, .skill-cards, 
+.goal-list, .contact-form {
+  color: inherit;
+}
+
+/* Дополнительные исправления для конкретных элементов */
+.card {
+  background: var(--card-bg);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .card {
+  border-color: rgba(255,255,255,0.1);
+}
+
+.meter {
+  background: rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .meter {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Добавьте эти стили в ваш CSS файл */
+
+/* Исправление для секции образования */
+.education .item {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-left: 3px solid var(--accent-color);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+}
+
+.education .item h3 {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.education .date {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 0.9em;
+}
+
+/* Исправление для целей */
+.goal {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.goal h3 {
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 5px;
+}
+
+/* Общие исправления */
+.timeline {
+  border-color: var(--accent-color);
+}
+
+.skill-cards .card {
+  background: var(--card-bg);
+  border: 1px solid var(--accent-color);
+}
+
+.meter {
+  background: rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .meter {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Добавьте в переменные */
+:root {
+  --card-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --card-bg: #2d2d2d;
+}
