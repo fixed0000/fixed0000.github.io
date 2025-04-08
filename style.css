@@ -759,3 +759,294 @@ summary, details, label,
 [data-theme="dark"] {
   --card-bg: #2d2d2d;
 }
+
+/* Для страницы услуг */
+.service-card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid var(--accent-color);
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.language-pairs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 15px 0;
+}
+
+/* Для плейграунда */
+.code-editor {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: 'Fira Code', monospace;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.language-select {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+}
+
+/* Стили для страницы опыта */
+.experience-timeline {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.timeline-section {
+  position: relative;
+  padding-left: 30px;
+  margin: 40px 0;
+  border-left: 3px solid var(--accent-color);
+}
+
+.timeline-item {
+  background: var(--card-bg);
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.timeline-date {
+  position: absolute;
+  left: -140px;
+  top: 15px;
+  width: 120px;
+  text-align: right;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.company {
+  color: var(--accent-color);
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.achievements {
+  padding-left: 20px;
+}
+
+.achievements li {
+  margin: 8px 0;
+  position: relative;
+}
+
+.achievements li::before {
+  content: "▹";
+  color: var(--accent-color);
+  position: absolute;
+  left: -20px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 15px;
+  background: rgba(52, 152, 219, 0.1);
+  border-radius: 8px;
+}
+
+.stat-number {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.experience-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.exp-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.exp-card:hover {
+  transform: translateY(-5px);
+}
+
+.exp-icon {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .timeline-date {
+      position: static;
+      text-align: left;
+      margin-bottom: 10px;
+  }
+  
+  .timeline-section {
+      padding-left: 0;
+      border-left: none;
+  }
+}
+
+/* Стили для страницы образования */
+.education-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.education-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.university-badge {
+  background: var(--accent-color);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 1.1em;
+}
+
+.academic-timeline {
+  position: relative;
+  padding-left: 30px;
+  margin: 40px 0;
+}
+
+.timeline-item {
+  background: var(--card-bg);
+  padding: 25px;
+  margin: 25px 0;
+  border-radius: 15px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.timeline-year {
+  position: absolute;
+  left: -120px;
+  top: 20px;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.program-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.gpa {
+  text-align: center;
+  padding: 10px 20px;
+  background: rgba(52, 152, 219, 0.1);
+  border-radius: 10px;
+}
+
+.gpa-score {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.course-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.course-card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.course-progress {
+  height: 8px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.activity-card {
+  padding: 20px;
+  border-radius: 15px;
+  background: var(--card-bg);
+}
+
+.activity-card.club {
+  border-left: 4px solid #e74c3c;
+}
+
+.activity-card.event {
+  border-left: 4px solid #2ecc71;
+}
+
+@media (max-width: 768px) {
+  .timeline-year {
+      position: static;
+      margin-bottom: 10px;
+  }
+  
+  .academic-timeline {
+      padding-left: 0;
+  }
+  
+  .program-details {
+      flex-direction: column;
+      gap: 15px;
+  }
+}

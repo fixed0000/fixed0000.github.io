@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="experience.page_title">Опыт работы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="controls-group">
+                <div class="custom-select">
+                    <select id="language-select">
+                        <option value="ru">🇷🇺 Русский</option>
+                        <option value="en">🇬🇧 English</option>
+                        <option value="ja">🇯🇵 日本語</option>
+                    </select>
+                    <span class="select-arrow">▼</span>
+                </div>
+                <button id="theme-toggle" class="theme-btn">
+                    <span class="theme-icon">🌓</span>
+                    <span class="btn-text" data-i18n="theme.toggle">Сменить тему</span>
+                </button>
+            </li>
+            <li class="nav-links">
+                <a href="index.html" data-i18n="nav.home">Главная</a>
+                <a href="about.html" data-i18n="nav.about">Обо мне</a>
+                <a href="experience.html" data-i18n="nav.experience.title">Опыт</a>
+                <a href="services.html" data-i18n="nav.services">Услуги</a>
+                <a href="playground.html" data-i18n="nav.playground">Код</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="experience-timeline">
+            <h1 data-i18n="experience.main_title">Профессиональный путь</h1>
+            
+            <!-- Полная занятость -->
+            <div class="timeline-section">
+                <h2 data-i18n="experience.full_time">Основная занятость</h2>
+                <div class="timeline-item">
+                    <div class="timeline-date" data-i18n="experience.date1">2023-настоящее время</div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="experience.position1">Старший Переводчик</h3>
+                        <div class="company" data-i18n="experience.company1">Японская IT-компания "Sakura Tech"</div>
+                        <ul class="achievements">
+                            <li data-i18n="experience.achievement1">Локализация UI/UX для мобильных приложений</li>
+                            <li data-i18n="experience.achievement2">Техническая документация (EN/JA → RU)</li>
+                            <li data-i18n="experience.achievement3">Участие в кросс-культурных тренингах</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Подработка -->
+            <div class="timeline-section part-time">
+                <h2 data-i18n="experience.part_time">Проектная работа</h2>
+                <div class="timeline-item">
+                    <div class="timeline-date" data-i18n="experience.date2">2021-2023</div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="experience.position2">Фриланс-переводчик</h3>
+                        <div class="platforms">
+                            <span data-i18n="experience.platform1">Upwork</span>
+                            <span data-i18n="experience.platform2">Fiverr</span>
+                        </div>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <div class="stat-number">50+</div>
+                                <div data-i18n="experience.stat1">завершенных проектов</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">98%</div>
+                                <div data-i18n="experience.stat2">положительных отзывов</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Дополнительный опыт -->
+            <div class="additional-experience">
+                <h2 data-i18n="experience.other">Дополнительный опыт</h2>
+                <div class="experience-cards">
+                    <div class="exp-card">
+                        <div class="exp-icon">🏪</div>
+                        <h4 data-i18n="experience.job1">Кассир в Mosburger</h4>
+                        <p data-i18n="experience.job1_desc">Обслуживание клиентов на японском языке</p>
+                    </div>
+                    <div class="exp-card">
+                        <div class="exp-icon">👩🏫</div>
+                        <h4 data-i18n="experience.job2">Преподаватель РКИ</h4>
+                        <p data-i18n="experience.job2_desc">Индивидуальные уроки для иностранцев</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="education.page_title">Образование</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <!-- Навигация (аналогичная другим страницам) -->
+        <ul class="menu">
+            <li class="controls-group">...</li>
+            <li class="nav-links">...</li>
+        </ul>
+    </nav>
+
+    <main class="education-page">
+        <header class="education-header">
+            <h1 data-i18n="education.main_title">Академический путь 🎓</h1>
+            <p class="university-badge">
+                <span data-i18n="education.current_status">Студент 4 курса</span>
+                <strong>МГПУ</strong>
+            </p>
+        </header>
+
+        <!-- Основная временная шкала -->
+        <section class="academic-timeline">
+            <div class="timeline-item">
+                <div class="timeline-year" data-i18n="education.year1">2020-2024</div>
+                <div class="timeline-content">
+                    <h2 data-i18n="education.degree">Бакалавр лингвистики</h2>
+                    <div class="program-details">
+                        <div class="program-info">
+                            <span data-i18n="education.specialty">Специальность:</span>
+                            <span data-i18n="education.specialty_name">Перевод и переводоведение (японский язык)</span>
+                        </div>
+                        <div class="gpa">
+                            <div class="gpa-score">4.8</div>
+                            <span data-i18n="education.gpa">Средний балл</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Обменная программа -->
+            <div class="timeline-item exchange-program">
+                <div class="timeline-year" data-i18n="education.year2">2022</div>
+                <div class="timeline-content">
+                    <h2 data-i18n="education.exchange">Программа обмена</h2>
+                    <div class="university-logo">
+                        <img src="images/tsukuba-logo.png" alt="University of Tsukuba">
+                    </div>
+                    <ul class="achievements">
+                        <li data-i18n="education.achievement1">Стипендия JASSO</li>
+                        <li data-i18n="education.achievement2">Курс межкультурной коммуникации</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Карточки с курсами -->
+        <section class="courses-section">
+            <h2 data-i18n="education.courses_title">Ключевые дисциплины</h2>
+            <div class="course-cards">
+                <div class="course-card">
+                    <div class="course-icon">🇯🇵</div>
+                    <h3 data-i18n="education.course1">Практический японский</h3>
+                    <p data-i18n="education.course1_desc">Уровень N2 JLPT</p>
+                    <div class="course-progress">
+                        <div class="progress-bar" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">💻</div>
+                    <h3 data-i18n="education.course2">Основы программирования</h3>
+                    <p data-i18n="education.course2_desc">Python, HTML/CSS, SQL</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Внеучебная активность -->
+        <section class="campus-activities">
+            <h2 data-i18n="education.activities_title">Университетская жизнь</h2>
+            <div class="activity-grid">
+                <div class="activity-card club">
+                    <h3 data-i18n="education.club1">Клуб переговоров</h3>
+                    <p data-i18n="education.club1_role">Организатор межвузовских дебатов</p>
+                </div>
+                <div class="activity-card event">
+                    <h3 data-i18n="education.event1">Фестиваль культур</h3>
+                    <p data-i18n="education.event1_desc">Проведение мастер-классов по каллиграфии</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <!-- Подсветка кода -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+
+<!-- NLP демо (опционально) -->
+<script src="https://cdn.jsdelivr.net/npm/kuromoji@0.1.2/build/kuromoji.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="playground.title">Code Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>...</nav>
+
+    <main>
+        <div class="code-editor">
+            <div class="editor-header">
+                <select class="language-select">
+                    <option value="html">HTML</option>
+                    <option value="python">Python (NLP)</option>
+                    <option value="js">JavaScript</option>
+                </select>
+            </div>
+            
+            <div class="editor-content">
+                <pre><code class="language-html" data-i18n="playground.demo1">
+&lt;!-- Пример локализации --&gt;
+&lt;div data-lang="ja"&gt;
+  こんにちは世界！
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="nlp-demo">
+                <input type="text" 
+                       data-i18n-placeholder="playground.input" 
+                       placeholder="Введите японский текст">
+                <button data-i18n="playground.analyze">Анализ</button>
+                <div class="nlp-result"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
