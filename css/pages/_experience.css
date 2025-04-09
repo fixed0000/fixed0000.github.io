@@ -1,100 +1,120 @@
 /* css/pages/_experience.css */
-/* Стили для страницы опыта */
-.experience-timeline {
-   max-width: 1200px;
-   margin: 0 auto;
-   padding: 40px 20px;
- }
- 
- .timeline-section {
-   position: relative;
-   padding-left: 30px;
-   margin: 40px 0;
-   border-left: 3px solid var(--accent-color);
- }
- 
- /* This duplicates .timeline-item from _timeline.css */
- .timeline-item {
-   background: var(--card-bg);
-   padding: 25px;
-   margin: 20px 0;
-   border-radius: 12px;
-   box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-   position: relative;
- }
- 
- .timeline-date {
-   position: absolute;
-   left: -140px;
-   top: 15px;
-   width: 120px;
-   text-align: right;
-   color: var(--text-color);
-   opacity: 0.8;
- }
- 
- .company {
-   color: var(--accent-color);
-   margin: 10px 0;
-   font-weight: 600;
- }
- 
- /* This duplicates .achievements from _lists.css */
- .achievements {
-   padding-left: 20px;
- }
- 
- .achievements li {
-   margin: 8px 0;
-   position: relative;
- }
- 
- /* This defines specific ::before for achievements on this page */
- .achievements li::before {
-   content: "▹";
-   color: var(--accent-color);
-   position: absolute;
-   left: -20px;
- }
- 
- /* This duplicates .stats grid from _grid.css */
- .stats {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-   gap: 20px;
-   margin-top: 20px;
- }
- 
- .stat-item {
-   text-align: center;
-   padding: 15px;
-   background: rgba(52, 152, 219, 0.1);
-   border-radius: 8px;
- }
- 
- .stat-number {
-   font-size: 1.8em;
-   font-weight: bold;
-   color: var(--accent-color);
- }
- 
- /* This duplicates .experience-cards grid from _grid.css */
- .experience-cards {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-   gap: 20px;
-   margin-top: 30px;
- }
- 
- @media (max-width: 768px) {
-   .timeline-date {
-       position: static;
-       text-align: left;
-       margin-bottom: 10px;
-   }
- 
-   .timeline-section {
-       padding-left: 0;
-       border-left: none;
-   }
- }
+/* Styles specifically for the Experience page */
+
+/* --- Page Layout Container --- */
+.experience-timeline { /* Using 'timeline' in name, but it's the page wrapper */
+  max-width: var(--container-width-large, 1200px); /* Use layout variable */
+  margin: 0 auto; /* Center horizontally */
+  /* Use spacing variables */
+  padding: var(--spacing-large, 40px) var(--spacing-medium, 20px);
+}
+
+/* --- Timeline Section Styling --- */
+/* Container for a logical section within the timeline (e.g., a single job) */
+.timeline-section {
+  position: relative; /* For absolute positioning of date/line */
+  /* Use spacing variables */
+  padding-left: var(--spacing-large, 30px);
+  margin: var(--spacing-large, 40px) 0;
+  /* Explicit vertical line for this page's timeline sections */
+  border-left: 3px solid var(--accent-color);
+}
+
+/* Specific styling for timeline items on this page */
+/* Assumes base styles (e.g., background, position:relative) might come from
+   a base .timeline-item class or .card class if applied. */
+.timeline-section .timeline-item { /* Contextual selector */
+  /* Define overrides or specific styles here */
+  padding: var(--spacing-large, 25px);
+  margin: var(--spacing-medium, 20px) 0; /* Vert margin only */
+  border-radius: var(--border-radius-large, 12px); /* Specific radius */
+  box-shadow: var(--shadow-medium, 0 3px 15px rgba(0,0,0,0.1)); /* Specific shadow */
+  /* Ensure background is set if not inherited */
+  /* background: var(--card-bg); */
+  /* Ensure position is relative if not inherited */
+  position: relative; /* Re-state position relative needed for child absolute */
+}
+
+.timeline-date { /* Positioned relative to .timeline-section */
+  position: absolute;
+  left: -140px; /* Adjust as needed, consider variable */
+  top: 15px;    /* Adjust as needed, consider variable */
+  width: 120px; /* Fixed width */
+  text-align: right;
+  color: var(--text-color);
+  opacity: var(--opacity-medium, 0.8); /* Use opacity variable */
+}
+
+.company { /* Styling for company name within a timeline item */
+  color: var(--accent-color);
+  margin: var(--spacing-small, 10px) 0;
+  font-weight: 600;
+}
+
+/* --- Achievements List Override --- */
+/* Specific marker for achievements list on THIS page */
+/* Base .achievements and li styles should come from _lists.css */
+.achievements li::before {
+  content: "▹"; /* Specific marker */
+  color: var(--accent-color);
+  position: absolute;
+  left: -20px; /* Specific positioning */
+  /* Remove margin-right if default marker had it */
+}
+
+/* --- Stats Section Item Styling --- */
+/* Styles for individual items within the .stats grid */
+.stat-item {
+  text-align: center;
+  padding: var(--spacing-medium, 15px);
+  /* Use variable for subtle accent background */
+  background: var(--accent-bg-subtle, rgba(52, 152, 219, 0.1));
+  border-radius: var(--border-radius-medium, 8px);
+}
+
+.stat-number {
+  display: block; /* Ensure it takes its own line */
+  font-size: 1.8em; /* Consider font-size variable */
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-xs, 5px); /* Add space below number */
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .timeline-date {
+    position: static; /* Stack date above content */
+    width: auto; /* Reset width */
+    text-align: left;
+    margin-bottom: var(--spacing-small, 10px);
+    opacity: 1; /* Full opacity when static */
+  }
+
+  .timeline-section {
+    padding-left: 0; /* Remove padding */
+    border-left: none; /* Remove the vertical line */
+    margin-left: 0; /* Remove potential inherited margin */
+  }
+
+  /* Optional: Adjust stat item padding on mobile */
+  /* .stat-item { padding: var(--spacing-small, 10px); } */
+}
+
+
+/* --- Removed Redundant Styles --- */
+/*
+  Removed duplicate grid definitions for:
+  - .stats
+  - .experience-cards
+  (Define these once in layout/_grid.css)
+
+  Removed duplicate base styles for:
+  - .achievements
+  - .achievements li
+  (Define base list styles in components/_lists.css)
+
+  Removed base styles potentially duplicated within:
+  - .timeline-item
+  (Define base styles in components/_timeline.css or components/_cards.css)
+*/

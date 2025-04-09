@@ -13,6 +13,8 @@
 @import 'components/_progress-bars.css';
 @import 'components/_timeline.css';
 @import 'components/_lists.css';
+@import 'components/_sections.css';
+@import 'components/_code-editor.css';
 
 /* 3. Макет */
 @import 'layout/_header.css';

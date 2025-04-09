@@ -1,6 +1,14 @@
 /* css/pages/_contact.css */
+/* Styles for the main container of the contact page */
+
 .contact {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+  /* Constrain width - use variable or keep specific value */
+  max-width: var(--container-width-narrow, 600px);
+
+  /* Center the container horizontally */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Add padding inside the container - use spacing variable */
+  padding: var(--spacing-medium, 20px);
 }

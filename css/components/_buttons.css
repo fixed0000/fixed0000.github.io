@@ -1,71 +1,70 @@
 /* css/components/_buttons.css */
+
+/* --- Social Links --- */
 .social-links {
   display: flex;
   gap: 15px;
   justify-content: center;
-  margin: 20px;
+  margin: 20px; /* Consider if this margin belongs here or in the layout using the component */
 }
 
 .social-links a {
-  text-decoration: none;
-  color: #3498db;
+  display: inline-block; /* Good practice for link padding/sizing */
   padding: 8px 15px;
-  border: 2px solid #3498db;
+  border: 2px solid var(--accent-color); /* Use theme variable */
   border-radius: 20px;
-  transition: 0.3s;
+  color: var(--accent-color); /* Use theme variable */
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s; /* Be specific with transitions */
 }
 
 .social-links a:hover {
-  background-color: #3498db;
-  color: white;
+  background-color: var(--accent-color); /* Use theme variable */
+  color: white; /* Explicit white is clear here */
 }
 
-/* Стили для кнопки темы */
+/* --- Theme Toggle Button --- */
 .theme-btn {
-display: flex;
-align-items: center;
-gap: 10px;
-padding: 12px 25px;
-background: var(--accent-color);
-color: white;
-border: none;
-border-radius: 30px;
-cursor: pointer;
-transition: all 0.3s ease;
-box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
-}
-
-.theme-icon {
-font-size: 1.2em;
-transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  background: var(--accent-color);
+  color: white; /* Explicit white */
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3); /* Kept RGBA for simplicity, uses #3498db base */
+  white-space: nowrap; /* Merged from duplicate rule */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* More specific transitions */
 }
 
 .theme-btn:hover {
-background: var(--accent-hover);
-transform: translateY(-2px);
-box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4); /* Kept RGBA, alpha increased */
 }
 
 .theme-btn:active {
-transform: translateY(1px);
+  transform: translateY(1px); /* Simulate press */
 }
 
-.theme-icon { /* Duplicate - included as requested */
-animation: pulse 2s infinite;
+.theme-icon {
+  font-size: 1.2em;
+  /* Animation defined in _animations.css */
+  /* Transition for transform potentially added by parent .theme-btn transition='all', or define here if needed */
+   transition: transform 0.3s ease; /* Kept original transition */
+   /* animation: pulse 2s infinite; */ /* Merged - Animation should be in base/_animations.css */
 }
 
-.theme-btn { /* Duplicate - included as requested */
-white-space: nowrap;
-}
-
+/* --- Responsive Styles for Buttons --- */
 @media (max-width: 768px) {
-/* This block also included in _forms.css as requested */
-/* Rules specific to theme-btn */
-.theme-btn {
-    padding: 10px 20px;
-}
+  .theme-btn {
+    padding: 10px 20px; /* Adjust padding */
+  }
 
-.btn-text {
-    display: none;
-}
+  /* Assuming .btn-text is a child element holding the button's text label */
+  .btn-text {
+    display: none; /* Hide text on smaller screens */
+  }
 }

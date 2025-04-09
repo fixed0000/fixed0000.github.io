@@ -1,0 +1,19 @@
+.code-editor {
+    background: #1e1e1e; /* Specific dark background, might ignore theme */
+    border-radius: 8px;
+    padding: 20px;
+    font-family: 'Fira Code', monospace; /* Specific font */
+  }
+
+  .editor-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  .language-select {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+  }

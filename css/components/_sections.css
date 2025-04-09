@@ -1,0 +1,4 @@
+.skills { /* Container for skills */
+    border: 2px solid #3498db; /* Рамка вокруг секции */
+    padding: 15px;             /* Внутренний отступ секции */
+  }

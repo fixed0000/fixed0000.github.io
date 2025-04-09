@@ -1,106 +1,130 @@
 /* css/layout/_intro.css */
+
+/* --- Intro Section Wrapper --- */
 .intro {
-  background-color: var(--intro-bg);
-  padding: 20px;
-  border-radius: 8px;
-  margin: 20px 0;
+  background-color: var(--intro-bg); /* Theme variable */
+  padding: var(--spacing-medium, 20px); /* Use spacing variable */
+  border-radius: var(--border-radius-medium, 8px); /* Use radius variable */
+  margin: var(--spacing-medium, 20px) 0; /* Vertical margin */
 }
 
+/* --- Intro Content Grid Layout --- */
 .intro-content {
-    max-width: 1700px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 750px; /* Большое изображение справа */
-    gap: 80px;
-    align-items: start;
-    padding: 0 40px;
+  display: grid;
+  /* Define grid columns, image width is dynamic based on breakpoint */
+  grid-template-columns: 1fr var(--intro-image-width-lg, 750px);
+  gap: var(--spacing-xl, 80px); /* Large gap for desktop */
+  align-items: start; /* Align items to the top of their grid area */
+
+  /* Container constraints */
+  max-width: var(--intro-max-width, 1700px);
+  margin: 0 auto; /* Center the content */
+  padding: 0 var(--spacing-large, 40px); /* Horizontal padding */
 }
 
+/* --- Profile Photo Styling --- */
 .profile-photo {
-  width: 100%;
-  height: 750px; /* Фиксированная высота */
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-  object-fit: cover;
-  object-position: top;
+  width: 100%; /* Take full width of its grid column */
+  height: var(--intro-image-height-lg, 750px); /* Specific height for large screens */
+  border-radius: var(--border-radius-large, 20px); /* Larger radius */
+  box-shadow: var(--shadow-large, 0 10px 40px rgba(0,0,0,0.3)); /* Pronounced shadow */
+  object-fit: cover; /* Ensure image covers the area */
+  object-position: top; /* Focus on the top part of the image */
 }
 
-/* Адаптивность */
-@media (max-width: 1440px) {
-  .intro-content {
-      grid-template-columns: 1fr 600px;
-      gap: 60px;
-  }
-
-  .profile-photo {
-      height: 500px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .intro-content {
-      grid-template-columns: 1fr 450px;
-      gap: 40px;
-  }
-
-  .profile-photo {
-      height: 400px;
-  }
-}
-
-@media (max-width: 992px) {
-  .intro-content {
-      grid-template-columns: 1fr;
-  }
-
-  .profile-photo {
-      height: 500px;
-      max-width: 600px;
-      margin: 0 auto;
-  }
-}
-
-@media (max-width: 576px) {
-  .profile-photo {
-      height: 350px;
-  }
-}
-
-/* Дополнительные улучшения */
+/* --- Intro Text Block Styling --- */
 .intro-text {
-  padding: 40px;
-  background: var(--intro-bg);
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  font-size: 1.1em;
-  line-height: 1.8;
+  background: var(--intro-bg); /* Consistent background */
+  padding: var(--spacing-large, 40px); /* Generous padding */
+  border-radius: var(--border-radius-large, 20px); /* Match photo radius */
+  box-shadow: var(--shadow-medium, 0 4px 20px rgba(0,0,0,0.1)); /* Softer shadow */
+  font-size: var(--font-size-large, 1.1em); /* Larger text size */
+  line-height: var(--line-height-loose, 1.8); /* Increased line spacing */
 }
 
+/* Language-specific text alignment for Japanese */
 [lang="ja"] .intro-text {
   text-align: justify;
   text-justify: inter-ideograph;
 }
 
+/* --- Image Helper Components --- */
+/* Wrapper (if needed for positioning context) */
 .image-wrapper {
   position: relative;
 }
 
+/* Caption overlay for images */
 .image-caption {
   position: absolute;
-  bottom: 10px;
+  bottom: 10px; /* Position near bottom */
   left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,0.7);
-  color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.9em;
+  transform: translateX(-50%); /* Center horizontally */
+  max-width: 90%; /* Limit caption width */
+
+  /* Appearance */
+  background: var(--caption-bg, rgba(0,0,0,0.7)); /* Default dark semi-transparent bg */
+  color: var(--caption-text-color, white); /* Default light text */
+  padding: 5px 15px; /* Small padding */
+  border-radius: 20px; /* Pill shape */
+  font-size: 0.9em; /* Small text */
   text-align: center;
-  max-width: 90%;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px); /* Frosted glass effect */
 }
 
+/* Dark theme override for caption */
 [data-theme="dark"] .image-caption {
-  background: rgba(255,255,255,0.1);
-  color: var(--text-color);
+  background: var(--caption-bg-dark, rgba(255,255,255,0.1)); /* Lighter semi-transparent bg */
+  color: var(--text-color); /* Use standard theme text color */
+}
+
+
+/* --- Responsive Adjustments for Intro Section --- */
+/* Extra Large Screens (Base style is 1700px) */
+
+/* Large Screens / Desktops */
+@media (max-width: 1440px) {
+  .intro-content {
+    grid-template-columns: 1fr var(--intro-image-width-md, 600px);
+    gap: var(--spacing-large, 60px); /* Adjust gap */
+  }
+  .profile-photo {
+    height: var(--intro-image-height-md, 500px);
+  }
+}
+
+/* Medium Screens / Laptops */
+@media (max-width: 1200px) {
+  .intro-content {
+    grid-template-columns: 1fr var(--intro-image-width-sm, 450px);
+    gap: var(--spacing-medium, 40px); /* Adjust gap */
+  }
+  .profile-photo {
+    height: var(--intro-image-height-sm, 400px);
+  }
+}
+
+/* Small Screens / Tablets */
+@media (max-width: 992px) {
+  .intro-content {
+    grid-template-columns: 1fr; /* Stack content */
+    gap: var(--spacing-large, 40px); /* Consistent vertical gap */
+    padding: 0 var(--spacing-medium, 20px); /* Adjust horizontal padding */
+  }
+  .profile-photo {
+    height: var(--intro-image-height-xs, 500px); /* Keep a decent height */
+    max-width: 600px; /* Limit width when stacked */
+    margin: 0 auto; /* Center the image */
+  }
+}
+
+/* Extra Small Screens / Mobiles */
+@media (max-width: 576px) {
+  .profile-photo {
+    height: var(--intro-image-height-xxs, 350px); /* Reduce height further */
+  }
+  .intro-text {
+     padding: var(--spacing-medium, 20px); /* Reduce padding */
+     font-size: 1em; /* Reset font size slightly */
+  }
 }

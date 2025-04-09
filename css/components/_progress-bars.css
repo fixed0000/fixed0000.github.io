@@ -1,117 +1,85 @@
-/* --- Контейнер секции Навыков --- */
-.skills {
-  border: 2px solid #3498db; /* Рамка вокруг секции */
-  padding: 15px;             /* Внутренний отступ секции */
+/* css/components/_progress-bars.css */
+
+/* --- Progress Bar Variant 1: Skill Bar --- */
+/* Used for individual skill display */
+
+.skill-bar { /* Container for label + bar */
+  margin: 15px 0;
 }
 
-/* --- Сетка для карточек навыков --- */
-.skill-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивная сетка */
-  gap: 20px; /* Промежуток между карточками */
-}
-
-/* --- Базовые стили для карточек (используются для skill-card) --- */
-.card {
-  background: white; /* Фон карточки по умолчанию */
-  padding: 20px;     /* Внутренний отступ карточки */
-  border: 1px solid #eee; /* Рамка карточки по умолчанию */
-  border-radius: 10px;    /* Скругление углов */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Тень */
-  transition: transform 0.3s; /* Анимация для hover */
-  /* Дополнительные стили из поздних исправлений: */
-  background: var(--card-bg); /* Используем переменную для фона */
-  border: 1px solid rgba(0,0,0,0.1); /* Уточненная рамка */
-}
-
-.card:hover {
-  transform: translateY(-5px); /* Эффект приподнимания при наведении */
-}
-
-/* --- Специфичные стили для карточек навыков --- */
-.skill-card { /* Стили для анимации появления */
-  opacity: 0;
-  transform: translateY(50px);
-  transition: 1s;
-}
-
-.skill-card.active { /* Состояние после анимации */
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Уточнение стилей для карточек внутри сетки навыков */
-.skill-cards .card { /* (Из блока "Общие исправления") */
-background: var(--card-bg); /* Убедимся, что используется переменная */
-border: 1px solid var(--accent-color); /* Используем акцентный цвет для рамки */
-}
-
-/* --- Стили для Прогресс-баров (Вариант 1: .skill-bar > .bar > .progress) --- */
-.skill-bar { /* Контейнер для одного навыка с прогресс-баром */
-  margin: 15px 0; /* Вертикальные отступы */
-}
-
-.bar { /* "Трек" прогресс-бара */
-  height: 10px;     /* Высота */
-  background: #eee; /* Цвет фона трека */
-  border-radius: 5px; /* Скругление */
-  overflow: hidden; /* Обрезаем выходящее за рамки заполнение */
-}
-
-.progress { /* Заполняющая полоса прогресс-бара */
-  height: 100%; /* Занимает всю высоту трека */
-  background: linear-gradient(90deg, #3498db, #2ecc71); /* Цвет заполнения */
-  transition: width 1s ease-in-out; /* Анимация изменения ширины */
-  transform-origin: left; /* Анимация идет слева направо */
-  /* Ширина задается инлайн-стилем в HTML: style="width: XX%" */
-}
-
-/* --- Адаптивность для сетки навыков --- */
-@media (max-width: 768px) {
-  /* Правило из блока с @media для .skill-cards */
-  .skill-cards {
-    grid-template-columns: 1fr; /* Одна колонка на мобильных */
-  }
-}
-
-/* --- Дополнительные стили прогресс-баров, найденные в коде --- */
-/* Вариант 2: .meter (из блока :root/theme) */
-.meter {
-  height: 5px;
-  position: relative;
-  background: #f3efe6; /* Исходный фон */
+.bar { /* Track */
+  height: 10px;
+  /* Use a variable for track background, fallback if not defined */
+  background: var(--track-color, #eee);
+  border-radius: 5px;
   overflow: hidden;
-  /* Уточненные стили: */
-  background: rgba(0,0,0,0.1); /* Фон из блока исправлений */
 }
-.meter span { /* Обертка для .progress внутри .meter */
+
+.bar .progress { /* Filler element */
+  height: 100%;
+  /* Assuming --success-color exists or should be defined for #2ecc71 */
+  background: linear-gradient(90deg, var(--accent-color, #3498db), var(--success-color, #2ecc71));
+  transition: width 1s ease-in-out;
+  transform-origin: left;
+  /* Width is typically set dynamically via inline style or JS */
+}
+
+
+/* --- Progress Bar Variant 2: Meter --- */
+/* Used for potentially different visual style, animated */
+
+.meter { /* Track */
+  height: 5px;
+  position: relative; /* Often needed for absolute positioning of labels/tooltips */
+  /* Use a subtle variable for track background, fallback if not defined */
+  background: var(--track-color-subtle, rgba(0, 0, 0, 0.1)); /* Using final style from original */
+  overflow: hidden;
+  border-radius: 2.5px; /* Optional: add radius for consistency */
+}
+
+.meter span { /* Wrapper often used for the filler, may not always be necessary */
   display: block;
   height: 100%;
 }
-.meter .progress { /* Заполнение для .meter */
-  background-color: #e4c465; /* Исходный цвет */
+
+.meter .progress { /* Filler element */
+  height: 100%;
+  background-color: #e4c465; /* Specific color for this variant */
+  /* Animation applied */
   animation: progressBar 3s ease-in-out;
-  animation-fill-mode:both;
-}
-[data-theme="dark"] .meter { /* Фон для темной темы */
-  background: rgba(255,255,255,0.1);
-}
-@keyframes progressBar { /* Анимация для .meter .progress */
-0% { width: 0; }
-100% { width: 100%; }
+  animation-fill-mode: both; /* Keep end state */
+  /* Width is controlled by the animation */
 }
 
-/* Вариант 3: .progress-bar (из блока education) */
-/* Этот стиль может быть не связан с секцией "Мои навыки", но содержит класс .progress-bar */
-.course-progress { /* Контейнер */
-height: 8px;
-background: rgba(0,0,0,0.1);
-border-radius: 4px;
-margin-top: 15px;
+/* Dark theme override for meter track */
+[data-theme="dark"] .meter {
+  /* Use a light subtle background for dark theme */
+  background: var(--track-color-subtle-dark, rgba(255, 255, 255, 0.1));
 }
-.progress-bar { /* Заполнение */
-height: 100%;
-background: var(--accent-color);
-border-radius: 4px;
-transition: width 0.5s ease;
+
+/* Animation definition for meter progress */
+@keyframes progressBar {
+  0% { width: 0; }
+  100% { width: 100%; } /* Animates to full width */
+}
+
+
+/* --- Progress Bar Variant 3: Course Progress --- */
+/* Used within course cards (context from original comments) */
+
+.course-progress { /* Track */
+  height: 8px;
+  /* Use a subtle variable for track background */
+  background: var(--track-color-subtle, rgba(0, 0, 0, 0.1));
+  border-radius: 4px;
+  margin-top: 15px; /* Spacing within its container */
+  overflow: hidden;
+}
+
+.progress-bar { /* Filler element - Note distinct class name */
+  height: 100%;
+  background: var(--accent-color); /* Use theme accent color */
+  border-radius: 4px; /* Match track radius */
+  transition: width 0.5s ease;
+  /* Width is typically set dynamically via inline style or JS */
 }

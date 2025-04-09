@@ -1,66 +1,99 @@
 /* css/components/_lists.css */
+
+/* --- Component: Highlight Box --- */
+.highlight-box {
+  /* Merged: Using more detailed definition */
+  padding: 20px;
+  margin-bottom: 30px; /* Explicit bottom margin */
+  /* Subtle white background for light theme */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px; /* Consistent radius */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Note: Original had margin: 15px 0; overridden by margin-bottom */
+}
+
+/* Dark theme override for highlight box */
+[data-theme="dark"] .highlight-box {
+  background: rgba(0, 0, 0, 0.15); /* Darker, translucent background */
+}
+
+/* --- Component: CTA Text --- */
+.cta-text {
+  font-weight: bold;
+  border-left: 3px solid var(--accent-color);
+  padding-left: 15px; /* Consistent padding */
+  margin-top: 20px; /* Consistent margin */
+}
+
+/* --- List Style: Achievements (Base) --- */
+/* Container styling */
+.achievements {
+  padding-left: 20px; /* Indentation for the list */
+  list-style: none; /* Remove default bullets if not already done globally */
+}
+
+/* List item styling */
+.achievements li {
+  margin: 8px 0; /* Spacing between items */
+  position: relative; /* Needed for absolute positioning of ::before */
+}
+
+/* Default list item marker */
+/* Note: This ::before style might be overridden in page-specific CSS
+   (e.g., pages/_experience.css uses '▹' with different positioning) */
+.achievements li::before {
+  content: "✅"; /* Default checkmark marker */
+  margin-right: 8px; /* Space between marker and text */
+  /* position: absolute; left: -20px; */ /* Example of alternative positioning if needed */
+}
+
+/* --- List Style: Skills List --- */
+/* Container styling - assumed ul or ol */
+.skills-list {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0; /* Reset default padding if needed */
+}
+
+/* List item styling */
+.skills-list li {
+  margin: 10px 0;
+  padding-left: 25px; /* Space for the custom marker */
+  position: relative; /* For positioning the ::before */
+}
+
+/* Custom marker for skills list items */
+.skills-list li::before {
+  content: ""; /* Empty content */
+  position: absolute;
+  left: 0;
+  top: 4px; /* Adjust vertical alignment */
+  width: 18px;
+  height: 18px;
+  background: var(--accent-color); /* Use theme accent color */
+  border-radius: 4px; /* Slightly rounded square */
+}
+
+@media (max-width: 768px) { /* Duplicate - included as requested */
+  .goal-list, .menu {
+    flex-direction: column;
+  }
+  /* .skill-cards grid rule is in _grid.css */
+}
+
+
+/* --- Layout Helper: Goal List Container --- */
+/* This primarily defines layout for goal items (styled in _cards.css) */
 .goal-list {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 20px; /* Space between goal items */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
-.highlight-box {
-background: rgba(255,255,255,0.1);
-padding: 15px;
-border-radius: 10px;
-margin: 15px 0;
+/* Responsive styles for goal-list might be needed elsewhere (e.g., layout) */
+/* Example:
+@media (max-width: 768px) {
+  .goal-list {
+    flex-direction: column;
+  }
 }
-
-.achievements li::before {
-content: "✅";
-margin-right: 8px;
-}
-
-.skills-list li {
-margin: 10px 0;
-padding-left: 25px;
-position: relative;
-}
-
-.skills-list li::before {
-content: "";
-position: absolute;
-left: 0;
-top: 4px;
-width: 18px;
-height: 18px;
-background: var(--accent-color);
-border-radius: 4px;
-}
-
-.cta-text {
-font-weight: bold;
-border-left: 3px solid var(--accent-color);
-padding-left: 15px;
-margin-top: 20px;
-}
-
-.highlight-box { /* Duplicate - included as requested */
-  margin-bottom: 30px;
-  padding: 20px;
-  background: rgba(255,255,255,0.95);
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-[data-theme="dark"] .highlight-box {
-  background: rgba(0,0,0,0.15);
-}
-
-/* Note: Page-specific list styles (.achievements overrides) are in pages/*.css */
-.achievements {
-padding-left: 20px;
-}
-
-.achievements li {
-margin: 8px 0;
-position: relative;
-}
-
-/* achievements li::before is defined differently in pages/_experience.css */
+*/

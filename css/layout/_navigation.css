@@ -1,82 +1,119 @@
 /* css/layout/_navigation.css */
+
+/* --- Main Navigation Container (.menu) --- */
 .menu {
+  /* Assume it's a list */
   list-style: none;
-  padding: 0;
+  margin: 0; /* Reset default list margin */
+
+  /* Flexbox Layout */
   display: flex;
-  gap: 20px;
-  background-color: #34495e;
-  padding: 1rem;
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Space out children */
+  gap: var(--spacing-medium, 20px); /* Default gap */
+
+  /* Appearance */
+  /* Use theme variable for background, fallback to original */
+  background-color: var(--nav-bg-color, #34495e);
+  /* Use final padding definition, consider variable */
+  padding: 0 var(--spacing-medium, 20px);
+  /* Original padding: 1rem; */ /* Keep note of original if needed */
 }
 
+/* --- Internal Structure (.controls-group, .nav-links) --- */
+/* Optional group for controls like theme/language switcher */
+.controls-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small, 15px);
+  /* margin-right: auto; */ /* Might not be needed if justify-content: space-between is on .menu */
+}
+
+/* Container for the main navigation links */
+.nav-links {
+  display: flex;
+  align-items: center; /* Ensure vertical alignment */
+  gap: var(--spacing-large, 25px); /* Larger gap for main links */
+  /* margin-left: auto; */ /* Might not be needed if justify-content: space-between is on .menu */
+}
+
+/* --- Navigation Link Styling --- */
+/* Base style for all links within .menu */
 .menu a {
-  color: white;
+  /* Use theme variable for base link color, fallback to original */
+  color: var(--nav-link-color, white);
   text-decoration: none;
   font-weight: bold;
+  display: inline-block; /* Ensures padding applies correctly */
 }
 
+/* Hover state for base links */
 .menu a:hover {
-  color: #3498db;
+  /* Use accent color for hover, potentially a specific nav hover color */
+  color: var(--nav-link-hover-color, var(--accent-color, #3498db));
 }
 
+/* Specific styling for links within .nav-links */
+.nav-links a {
+  padding: 8px 12px;
+  border-radius: 20px; /* Pill shape */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover state includes background change */
+.nav-links a:hover {
+  background: var(--hover-bg); /* Use theme variable for hover background */
+  /* Optional: Ensure text color remains readable on hover background */
+  /* color: var(--nav-link-hover-text-color, var(--nav-link-color, white)); */
+}
+
+/* --- Language Switcher Placeholder --- */
+/* Adjust layout if needed */
 .language-switcher {
-margin-left: auto;
+  /* margin-left: auto; */ /* Original rule - may not be needed depending on layout */
 }
 
-.menu { /* Duplicate - included as requested */
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 0 20px;
-}
 
-.controls-group {
-display: flex;
-align-items: center;
-gap: 15px;
-margin-right: auto;
-}
-
-.nav-links {
-display: flex;
-gap: 25px;
-margin-left: auto;
-}
-
-/* Адаптивность */
+/* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
-.menu {
-    flex-wrap: wrap;
-    padding: 10px;
-}
+  .menu {
+    flex-wrap: wrap; /* Allow items to wrap onto next line */
+    justify-content: center; /* Center items when wrapped */
+    padding: 10px; /* Adjust padding for mobile */
+    gap: var(--spacing-small, 10px); /* Reduce gap */
+  }
 
-.controls-group {
-    order: 1;
+  /* Controls group takes full width, items spaced apart */
+  .controls-group {
+    order: 1; /* Show controls first */
     width: 100%;
     justify-content: space-between;
-    margin: 10px 0;
-}
+    margin: 10px 0; /* Add vertical margin when wrapped */
+  }
 
-.nav-links {
-    order: 2;
+  /* Nav links take full width and center */
+  .nav-links {
+    order: 2; /* Show nav links second */
     width: 100%;
     justify-content: center;
-    margin: 10px 0;
-}
-}
-
-.nav-links a { /* Duplicate - included as requested */
-padding: 8px 12px;
-border-radius: 20px;
-transition: background 0.3s ease;
-}
-
-.nav-links a:hover {
-background: var(--hover-bg);
-}
-
-@media (max-width: 768px) { /* Duplicate - included as requested */
-  .goal-list, .menu {
-    flex-direction: column;
+    margin: 10px 0; /* Add vertical margin when wrapped */
+    gap: var(--spacing-medium, 15px); /* Adjust gap */
   }
-  /* .skill-cards grid rule is in _grid.css */
+
+  /* Basic style for select within a specific container. Review if needed. */
+
+.language-switcher select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+}
+
+
+/* Style related to 'Playground' code editor. Move to relevant component CSS. */
+
+
+  /* Removed unrelated .goal-list rule */
+  /* Removed .menu { flex-direction: column } as flex-wrap is used */
 }

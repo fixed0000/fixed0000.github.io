@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', init);
   initializeTheme();
   initializeLanguage();
   initializeContactForm();
-});
 
 // Функция обновления языка
 function updateLanguage(lang) {
@@ -78,41 +77,35 @@ function updateLanguage(lang) {
 }
 
 const initializeContactForm = () => {
-  const form = document.getElementById('contactForm'); // Используем ID
+  const form = document.querySelector('.contact form');
   
   if (form) {
-      form.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          
-          const submitBtn = form.querySelector('button[type="submit"]');
-          const originalText = submitBtn.textContent;
-          
-          try {
-              submitBtn.disabled = true;
-              submitBtn.textContent = translations[document.documentElement.lang]['contact.sending'];
-              
-              const response = await fetch('https://formspree.io/f/xzzeyzdj', {
-                  method: 'POST',
-                  body: new FormData(form), // Используем FormData напрямую
-                  headers: {
-                      'Accept': 'application/json'
-                  }
-              });
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Получаем данные формы
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
 
-              const result = await response.json();
-              
-              if (result.ok) {
-                  alert(translations[document.documentElement.lang]['contact.success']);
-                  form.reset();
-              } else {
-                  throw new Error(result.error || 'Unknown error');
-              }
-          } catch (error) {
-              alert(`${translations[document.documentElement.lang]['contact.error']}: ${error.message}`);
-          } finally {
-              submitBtn.disabled = false;
-              submitBtn.textContent = originalText;
-          }
-      });
+      try {
+        // Замените URL на ваш реальный эндпоинт
+        const response = await fetch('https://your-backend.com/send', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          alert(translations[document.documentElement.lang]['contact.success']);
+          form.reset();
+        } else {
+          throw new Error(translations[document.documentElement.lang]['contact.error']);
+        }
+      } catch (error) {
+        alert(error.message);
+      }
+    });
   }
 };

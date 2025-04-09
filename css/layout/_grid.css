@@ -1,75 +1,107 @@
 /* css/layout/_grid.css */
-.skills { /* Container for skills */
-  border: 2px solid #3498db;
-  padding: 15px;
-}
+/* Contains various grid layout containers */
 
+/* --- Gallery Grid --- */
+/* Specific 3-column grid layout for image galleries */
 .gallery {
   display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Final state: 3 fixed columns */
+  gap: var(--grid-gap-small, 10px);     /* Use variable or specific small gap */
+  padding: var(--grid-padding, 20px);   /* Optional padding for the grid container */
+}
+
+/* Styling for images within the gallery grid */
+.gallery img {
+  width: 100%;
+  height: 300px; /* Consider aspect-ratio for responsiveness if design allows */
+  object-fit: cover;
+  border-radius: var(--image-border-radius, 8px); /* Use theme variable */
+  filter: brightness(0.9); /* Initial subtle darkening */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Specific transitions */
+}
+
+.gallery img:hover {
+  transform: scale(1.05); /* Slightly less jumpy scale */
+  filter: brightness(1); /* Full brightness on hover */
+  z-index: 1; /* Ensure hovered image is on top */
+}
+
+
+/* --- Responsive Auto-Fit Grids --- */
+/* Common pattern for card or item collections */
+
+/* Grid for Skill Cards */
+.skill-cards {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--grid-gap-medium, 20px); /* Use variable or standard medium gap */
+}
+
+/* Grid for Stats Items (e.g., on Experience page) */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller items */
+  gap: var(--grid-gap-medium, 20px);
+  margin-top: 20px; /* Spacing above this grid */
+}
+
+/* Grid for Experience Cards */
+.experience-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--grid-gap-medium, 20px);
+  margin-top: 30px; /* Spacing above this grid */
+}
+
+/* Grid for Course Cards */
+.course-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly larger items */
+  gap: var(--grid-gap-large, 25px); /* Slightly larger gap */
+  margin-top: 30px; /* Spacing above this grid */
+}
+
+/* Grid for Activities */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--grid-gap-medium, 20px);
+  margin-top: 25px; /* Spacing above this grid */
+}
+
+/* Consider moving to layout/_grid.css or a specific component using it */
+.language-pairs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  padding: 20px;
+  margin: 15px 0;
 }
 
 .skill-cards { /* Grid Definition */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивная сетка */
+  gap: 20px; /* Промежуток между карточками */
 }
 
-.gallery { /* Duplicate - included as requested */
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 10px;
+@media (max-width: 768px) {
+  /* Правило из блока с @media для .skill-cards */
+  .skill-cards {
+    grid-template-columns: 1fr; /* Одна колонка на мобильных */
+  }
 }
 
-.gallery img {
-width: 100%;
-height: 300px;
-object-fit: cover;
-border-radius: 8px;
-transition: all 0.3s ease;
-filter: brightness(0.9); /* Легкое затемнение */
-}
 
-.gallery img:hover {
-transform: scale(1.1);
-filter: brightness(1);
-z-index: 1; /* Чтобы изображение "выплывало" над остальными */
-}
-
-.stats { /* Grid Definition from experience page */
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-gap: 20px;
-margin-top: 20px;
-}
-
-.experience-cards { /* Grid Definition from experience page */
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 20px;
-margin-top: 30px;
-}
-
-.course-cards { /* Grid Definition from education page */
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 25px;
-margin-top: 30px;
-}
-
-.activity-grid { /* Grid Definition from education page */
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 20px;
-margin-top: 25px;
-}
-
-@media (max-width: 768px) { /* Duplicate - included as requested */
-  /* .goal-list rule is in _lists.css */
-  /* .menu rule is in _navigation.css */
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  /* Stack skill cards into a single column */
   .skill-cards {
     grid-template-columns: 1fr;
   }
+
+  /* Example: Adjust gallery for tablets */
+  /*
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  */
 }

@@ -1,40 +1,53 @@
 /* css/components/_timeline.css */
+
+/* --- Base Timeline Container --- */
 .timeline {
-  padding-left: 20px;
-  margin-left: 20px;
-  position: relative;
+  /* Merged: Layout and positioning */
+  position: relative; /* Required for absolute positioning of ::before */
+  padding-left: 20px; /* Space for items relative to the line */
+  margin-left: 20px;  /* Indentation of the whole component */
+  /* Removed border-color rule here, apply color directly to the line below */
 }
 
+/* The vertical line */
 .timeline::before {
   content: "";
   position: absolute;
-  left: -3px;
+  left: -3px; /* Position to the left of the padding */
   top: 0;
   bottom: 0;
   width: 3px;
-  border-radius: 3px;
-  /* border-color is set below */
+  background-color: var(--accent-color); /* Explicitly color the line */
+  border-radius: 3px; /* Soften line ends */
 }
 
+/* --- Default Timeline Item Style --- */
+/* Style for generic .item elements within .timeline */
+/* Page-specific timelines might use different classes (e.g., .timeline-item) */
 .timeline .item {
-  margin-bottom: 30px;
-  background: #f9f9f9;
+  margin-bottom: 30px; /* Space below each item */
+  /* Use a variable for background, fallback to original light gray */
+  background: var(--card-bg-subtle, #f9f9f9);
   padding: 15px;
   border-radius: 8px;
 }
 
+/* --- Default Timeline List Item Marker (if using li) --- */
+/* Applies if the timeline structure uses <li> elements */
 .timeline li::before {
-content: "🎓";
-margin-right: 8px;
+  content: "🎓"; /* Default icon marker */
+  margin-right: 8px; /* Space between icon and text */
+  /* Consider display: inline-block if vertical alignment is an issue */
 }
 
+/* Language-specific marker override */
 [lang="ja"] .timeline li::before {
-content: "📘";
+  content: "📘"; /* Different icon for Japanese */
 }
 
-/* Общие исправления */
-.timeline { /* Duplicate - included as requested */
-border-color: var(--accent-color); /* Applies border color to the ::before pseudo-element implicitly? Check browser behavior or apply directly */
-}
-
-/* Note: Page-specific timeline styles (.experience-timeline, .academic-timeline, .timeline-section, .timeline-item overrides) are in pages/*.css */
+/*
+  Note: This file provides base styles.
+  Page-specific implementations (e.g., .experience-timeline, .academic-timeline)
+  or item variations (.timeline-item with different padding/shadows)
+  are typically defined in their respective page or component CSS files.
+*/

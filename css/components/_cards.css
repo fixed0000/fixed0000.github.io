@@ -1,32 +1,60 @@
 /* css/components/_cards.css */
+
+/* --- Base Card Style --- */
 .card {
-  background: white;
+  background: var(--card-bg); /* Merged: Use variable */
   padding: 20px;
-  border: 1px solid #eee;
+  border: 1px solid rgba(0,0,0,0.1); /* Merged: Use rgba for subtle border */
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.goal {
-  flex: 1;
-  min-width: 250px;
-  background: #e8f4ff;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.card { /* Duplicate - included as requested */
-  transition: transform 0.3s;
+  transition: transform 0.3s; /* Merged: Add transition */
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Merged: Add hover effect */
 }
 
+/* Dark theme override for base card border */
+[data-theme="dark"] .card {
+  border-color: rgba(255,255,255,0.1);
+}
+
+/* --- Specific Card Type: Goal --- */
+.goal {
+  flex: 1; /* Keep layout property */
+  min-width: 250px; /* Keep layout property */
+  background: var(--card-bg); /* Merged: Use variable */
+  padding: 20px;             /* Merged: Updated padding */
+  border-radius: 10px;        /* Merged: Updated radius */
+  margin: 15px 0;             /* Merged: Added margin */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Merged: Added shadow */
+  /* Note: Inherits base .card styles if applied to the same element,
+     but seems intended as a standalone style here based on original structure. */
+}
+
+/* Heading within a Goal card */
+.goal h3 {
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 5px;
+}
+
+/* --- Specific Card Type: Skill Card --- */
+/* Card container specific override */
+.skill-cards .card {
+  /* This applies when a .card is inside .skill-cards container */
+  background: var(--card-bg); /* Explicitly set, maybe redundant if base uses var */
+  border: 1px solid var(--accent-color); /* Specific border color */
+}
+
+/* Individual skill card (often animated) */
 .skill-card {
+  /* Base styles might come from .card if applied to the same element */
+  /* Animation properties: */
   opacity: 0;
   transform: translateY(50px);
-  transition: 1s;
+  transition: opacity 1s, transform 1s; /* Be specific */
 }
 
 .skill-card.active {
@@ -34,123 +62,102 @@
   transform: translateY(0);
 }
 
-/* Дополнительные исправления для конкретных элементов */
-.card { /* Duplicate - included as requested */
-background: var(--card-bg);
-border: 1px solid rgba(0,0,0,0.1);
-}
-
-[data-theme="dark"] .card {
-border-color: rgba(255,255,255,0.1);
-}
-
-/* Исправление для целей */
-.goal { /* Duplicate - included as requested */
-background: var(--card-bg);
-padding: 20px;
-border-radius: 10px;
-margin: 15px 0;
-box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.goal h3 {
-color: var(--accent-color);
-margin-bottom: 15px;
-border-bottom: 2px solid var(--accent-color);
-padding-bottom: 5px;
-}
-
-.skill-cards .card { /* Duplicate? - included as requested */
-background: var(--card-bg);
-border: 1px solid var(--accent-color);
-}
-
-/* Для страницы услуг */
+/* --- Specific Card Type: Service Card --- */
 .service-card {
-background: var(--card-bg);
-padding: 25px;
-border-radius: 15px;
-border: 2px solid var(--accent-color);
-transition: transform 0.3s;
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid var(--accent-color);
+  transition: transform 0.3s;
 }
 
 .service-card:hover {
-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
-.language-pairs {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 10px;
-margin: 15px 0;
-}
-
-/* Для плейграунда */
-.code-editor {
-background: #1e1e1e;
-border-radius: 8px;
-padding: 20px;
-font-family: 'Fira Code', monospace;
-}
-
-.editor-header {
-display: flex;
-justify-content: space-between;
-margin-bottom: 15px;
-}
-
-/* Contains .language-select which is also in _forms.css */
-.language-select {
-background: #333;
-color: #fff;
-border: none;
-padding: 5px 10px;
-}
-
+/* --- Specific Card Type: Experience Card --- */
 .exp-card {
-background: var(--card-bg);
-padding: 20px;
-border-radius: 10px;
-text-align: center;
-transition: transform 0.3s;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
 }
 
 .exp-card:hover {
-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
-.exp-icon {
-font-size: 2.5em;
-margin-bottom: 10px;
+.exp-icon { /* Icon used within Experience card */
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
+/* --- Specific Card Type: Course Card --- */
 .course-card {
-background: var(--card-bg);
-padding: 25px;
-border-radius: 15px;
-text-align: center;
-transition: transform 0.3s;
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px; /* Different radius than exp-card */
+  text-align: center;
+  transition: transform 0.3s;
 }
 
 .course-card:hover {
-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
-.course-icon {
-font-size: 2.5em;
-margin-bottom: 15px;
+.course-icon { /* Icon used within Course card */
+  font-size: 2.5em;
+  margin-bottom: 15px; /* Different margin than exp-icon */
 }
 
+/* --- Specific Card Type: Activity Card --- */
 .activity-card {
-padding: 20px;
-border-radius: 15px;
-background: var(--card-bg);
+  padding: 20px;
+  border-radius: 15px;
+  background: var(--card-bg);
 }
 
+/* Modifiers for Activity Card type */
 .activity-card.club {
-border-left: 4px solid #e74c3c;
+  border-left: 4px solid #e74c3c; /* Keep hardcoded unless theme var exists */
 }
 
 .activity-card.event {
-border-left: 4px solid #2ecc71;
+  border-left: 4px solid #2ecc71; /* Keep hardcoded unless theme var exists */
+}
+
+/* --- Базовые стили для карточек (используются для skill-card) --- */
+.card {
+  background: white; /* Фон карточки по умолчанию */
+  padding: 20px;     /* Внутренний отступ карточки */
+  border: 1px solid #eee; /* Рамка карточки по умолчанию */
+  border-radius: 10px;    /* Скругление углов */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Тень */
+  transition: transform 0.3s; /* Анимация для hover */
+  /* Дополнительные стили из поздних исправлений: */
+  background: var(--card-bg); /* Используем переменную для фона */
+  border: 1px solid rgba(0,0,0,0.1); /* Уточненная рамка */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Эффект приподнимания при наведении */
+}
+
+/* --- Специфичные стили для карточек навыков --- */
+.skill-card { /* Стили для анимации появления */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
+}
+
+.skill-card.active { /* Состояние после анимации */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Уточнение стилей для карточек внутри сетки навыков */
+.skill-cards .card { /* (Из блока "Общие исправления") */
+  background: var(--card-bg); /* Убедимся, что используется переменная */
+  border: 1px solid var(--accent-color); /* Используем акцентный цвет для рамки */
 }

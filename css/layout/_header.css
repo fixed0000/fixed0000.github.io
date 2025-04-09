@@ -1,7 +1,12 @@
 /* css/layout/_header.css */
+
 header {
-  background-color: #2c3e50;
-  color: white;
-  padding: 2rem;
+  /* Define header background and text colors using variables */
+  /* Add these variables to _variables.css if they don't exist */
+  background-color: var(--header-bg-color, #2c3e50); /* Fallback to original */
+  color: var(--header-text-color, white);         /* Fallback to original */
+
+  /* Layout and spacing */
+  padding: 2rem; /* Keep rem unit for scalable padding */
   text-align: center;
 }

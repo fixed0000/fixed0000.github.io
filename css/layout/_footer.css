@@ -1,7 +1,12 @@
 /* css/layout/_footer.css */
+
 footer {
+  /* Define footer background and text colors using variables */
+  /* Add these variables to _variables.css if they don't exist */
+  background-color: var(--footer-bg-color, #34495e); /* Fallback to original */
+  color: var(--footer-text-color, white);         /* Fallback to original */
+
+  /* Layout and spacing */
   text-align: center;
-  padding: 1rem;
-  background-color: #34495e;
-  color: white;
+  padding: 1rem; /* Keep rem unit */
 }
