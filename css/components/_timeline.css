@@ -17,7 +17,6 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background-color: var(--accent-color); /* Explicitly color the line */
   border-radius: 3px; /* Soften line ends */
 }
 

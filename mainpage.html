@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru"> <!-- Атрибут lang будет обновляться скриптом -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.main.title">[Ваше Имя] - Веб-разработчик и Лингвист</title> <!-- Конкретный Title -->
+    <link rel="stylesheet" href="css/main.css"> <!-- Подключаем CSS -->
+    <!-- Добавьте FontAwesome или другие иконки, если планируете их использовать -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+    <style>
+      /* Стиль для скрытия меток (если нет в main.css) */
+      .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
+      /* Базовые стили для кнопок (можно перенести в CSS) */
+      .btn { display: inline-block; padding: 10px 20px; margin: 5px; border: 1px solid transparent; border-radius: 5px; text-decoration: none; cursor: pointer; transition: background-color 0.3s, color 0.3s; }
+      .btn-primary { background-color: var(--accent-color); color: white; border-color: var(--accent-color); }
+      .btn-primary:hover { background-color: var(--accent-hover); border-color: var(--accent-hover); }
+      .btn-secondary { background-color: transparent; color: var(--accent-color); border-color: var(--accent-color); }
+      .btn-secondary:hover { background-color: var(--hover-bg); }
+      /* Примерные стили для сеток (перенести в CSS) */
+      .skills-grid, .teaser-grid { display: grid; gap: 20px; margin-top: 20px; }
+      .skills-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+      .teaser-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+      .teaser-card { border: 1px solid rgba(0,0,0,0.1); padding: 20px; border-radius: 8px; text-align: center; background: var(--card-bg); }
+      [data-theme="dark"] .teaser-card { border-color: rgba(255,255,255,0.1); }
+      .teaser-card .icon { font-size: 2em; margin-bottom: 10px; display: block; }
+      .final-cta { text-align: center; padding: 40px 20px; background-color: var(--intro-bg); margin-top: 40px; }
+      .cta-links a { margin: 0 10px; }
+      /* Стили для hero и about-teaser (примерные, настроить в CSS) */
+      .hero { padding: 60px 20px; text-align: center; background-color: var(--intro-bg); }
+      .hero .subtitle { font-size: 1.5em; margin: 10px 0; color: var(--accent-color); }
+      .hero .description { max-width: 700px; margin: 15px auto; }
+      .about-teaser-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; max-width: 1200px; margin: 40px auto; padding: 20px; }
+      @media (max-width: 768px) { .about-teaser-content { grid-template-columns: 1fr; } .about-teaser-content img { order: -1; max-width: 300px; margin: 0 auto 20px auto; height: auto;} }
+      .skills-highlights { max-width: 900px; margin: 40px auto; padding: 20px; }
+      .portfolio-teasers { max-width: 1200px; margin: 40px auto; padding: 20px; }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация (существующая) -->
+    <nav>
+        <ul class="menu">
+            <li class="controls-group">
+                <div class="custom-select language-switcher">
+                    <select id="language-select">
+                        <option value="ru">🇷🇺 Русский</option>
+                        <option value="en">🇬🇧 English</option>
+                        <option value="ja">🇯🇵 日本語</option>
+                    </select>
+                    <span class="select-arrow">▼</span>
+                </div>
+                <button id="theme-toggle" class="theme-btn">
+                    <span class="theme-icon">🌓</span>
+                    <span class="btn-text" data-i18n="theme.toggle">Сменить тему</span>
+                </button>
+            </li>
+            <li class="nav-links">
+                <a href="index.html" data-i18n="nav.home">Главная</a>
+                <a href="about.html" data-i18n="nav.about">Образование</a>
+                <a href="experience.html" data-i18n="nav.experience">Опыт</a>
+                <a href="services.html" data-i18n="nav.services">Услуги</a>
+                <a href="playground.html" data-i18n="nav.playground">Код</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1 data-i18n="hero.name">[Ваше Имя]</h1>
+        <p class="subtitle" data-i18n="hero.title">Веб-разработчик | Лингвист-Японист | Межкультурная коммуникация</p>
+        <p class="description" data-i18n="hero.description">
+            Создаю адаптивные и функциональные веб-сайты, используя [Технология 1, Технология 2]. Свободное владение японским (JLPT N[Ваш уровень]) и английским языками. Ищу интересные проекты и возможности для роста в технологической сфере Японии.
+        </p>
+        <div class="cta-buttons">
+            <a href="#contact" class="btn btn-primary" data-i18n="hero.cta.contact">Связаться со мной</a>
+            <a href="path/to/your/resume_jp.pdf" class="btn btn-secondary" target="_blank" data-i18n="hero.cta.resume">Смотреть резюме (JP)</a>
+            <!-- Добавьте ссылку на англ. резюме, если есть -->
+            <!-- <a href="path/to/your/resume_en.pdf" class="btn btn-secondary" target="_blank" data-i18n="hero.cta.resume_en">Resume (EN)</a> -->
+        </div>
+    </header>
+
+    <main>
+        <!-- About Me Teaser -->
+        <section id="about-teaser" class="about-teaser">
+             <div class="about-teaser-content">
+                 <div class="text-content">
+                    <h2 data-i18n="aboutTeaser.title">Технологии + Язык = Уникальные Решения</h2>
+                    <p data-i18n="aboutTeaser.text">
+                        Мое увлечение веб-разработкой сочетается с глубоким пониманием японского языка и деловой культуры, полученным во время учебы и жизни в Японии. Я создаю продукты, которые не просто работают, но и находят отклик у японской аудитории. Стремлюсь к проектам, где ценятся техническая точность и культурная адаптация.
+                    </p>
+                    <a href="about.html" class="btn btn-secondary" data-i18n="aboutTeaser.cta">Подробнее об образовании</a>
+                 </div>
+                 <img src="images/image1.jpg" alt="Портретное фото" class="profile-photo" data-i18n-alt="image.alt" srcset="images/image1.jpg 1x, images/image1@2x.jpg 2x, images/image1@3x.jpg 3x" sizes="(max-width: 768px) 300px, (max-width: 992px) 40vw, (max-width: 1200px) 450px, (max-width: 1440px) 600px, 750px" loading="lazy" decoding="async">
+                 <!-- Подпись к фото убрана из этого блока, чтобы избежать путаницы, она была связана с intro-content -->
+             </div>
+        </section>
+
+        <!-- Skills Highlights -->
+        <section id="skills-highlights" class="skills-highlights">
+            <h2 data-i18n="skillsHighlights.title">Ключевые компетенции</h2>
+            <div class="skills-grid">
+                <div>
+                    <h3 data-i18n="skillsHighlights.tech">Технические навыки</h3>
+                    <ul>
+                        <li data-i18n="skills.html">HTML5</li>
+                        <li data-i18n="skills.css">CSS3 (Flexbox, Grid, SASS/SCSS)</li>
+                        <li data-i18n="skills.js">JavaScript (ES6+)</li>
+                        <li data-i18n="skills.react">[React / Vue / Angular - Выберите фреймворк]</li>
+                        <li data-i18n="skills.git">Git & GitHub</li>
+                        <li data-i18n="skills.other">[Другой важный навык, напр. Node.js]</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 data-i18n="skillsHighlights.lang">Языковые навыки</h3>
+                    <ul>
+                        <li data-i18n="skills.japanese">Японский: JLPT N[Уровень] (Бизнес-уровень)</li>
+                        <li data-i18n="skills.english">Английский: [Уровень B2/C1/TOEIC]</li>
+                        <li data-i18n="skills.russian">Русский: Родной</li>
+                    </ul>
+                     <h3 data-i18n="skillsHighlights.soft">Soft Skills</h3>
+                     <ul>
+                        <li data-i18n="skills.communication">Межкультурная коммуникация</li>
+                        <li data-i18n="skills.problemSolving">Решение проблем</li>
+                        <!-- Добавьте 1-2 релевантных -->
+                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio/Section Teasers -->
+        <section id="portfolio-teasers" class="portfolio-teasers">
+            <h2 data-i18n="teasers.title">Узнайте больше</h2>
+            <div class="teaser-grid">
+                <div class="teaser-card">
+                    <span class="icon">🎓</span>
+                    <h3 data-i18n="teasers.education.title">Образование</h3>
+                    <p data-i18n="teasers.education.desc">МГПУ, Университет Цукубы, курсы программирования.</p>
+                    <a href="about.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
+                </div>
+                <div class="teaser-card">
+                    <span class="icon">💼</span>
+                    <h3 data-i18n="teasers.experience.title">Опыт работы</h3>
+                    <p data-i18n="teasers.experience.desc">Локализация, сопровождение, разработка, преподавание.</p>
+                    <a href="experience.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
+                </div>
+                <div class="teaser-card">
+                    <span class="icon">💡</span>
+                    <h3 data-i18n="teasers.services.title">Услуги</h3>
+                    <p data-i18n="teasers.services.desc">Веб-разработка, локализация для японского рынка.</p>
+                    <a href="services.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
+                </div>
+                <div class="teaser-card">
+                    <span class="icon"></></span>
+                    <h3 data-i18n="teasers.code.title">Примеры Кода</h3>
+                    <p data-i18n="teasers.code.desc">Интерактивные демонстрации и фрагменты кода.</p>
+                    <a href="playground.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section id="final-cta" class="final-cta">
+            <h2 data-i18n="finalCta.title">Готов(а) к новым вызовам в Японии!</h2>
+            <p data-i18n="finalCta.text">Давайте обсудим, как мои навыки могут быть полезны вашему проекту.</p>
+            <div class="cta-links">
+                 <a href="mailto:[ваш email]" class="btn btn-primary" data-i18n="finalCta.email">Написать на Email</a>
+                 <a href="[ссылка на LinkedIn]" target="_blank" class="btn btn-secondary" data-i18n="finalCta.linkedin">LinkedIn</a>
+                 <a href="[ссылка на GitHub]" target="_blank" class="btn btn-secondary" data-i18n="finalCta.github">GitHub</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Футер (существующий) -->
+    <footer>
+        <p data-i18n="footer.copyright">© 2024 [Ваше Имя]</p> <!-- Обновлено -->
+    </footer>
+
+    <!-- Подключение скриптов -->
+    <script src="js/translations.js" defer></script>
+    <script src="js/script.js" defer></script>
+
+</body>
+</html>

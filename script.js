@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', () => {
   // Инициализация анимаций
   const initializeAnimations = () => {
     const cards = document.querySelectorAll('.skill-card');
@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', init);
   initializeTheme();
   initializeLanguage();
   initializeContactForm();
+});
 
 // Функция обновления языка
 function updateLanguage(lang) {
