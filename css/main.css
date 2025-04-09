@@ -15,6 +15,7 @@
 @import 'components/_lists.css';
 @import 'components/_sections.css';
 @import 'components/_code-editor.css';
+@import 'components/_skills.css';
 
 /* 3. Макет */
 @import 'layout/_header.css';
@@ -22,13 +23,13 @@
 @import 'layout/_intro.css';
 @import 'layout/_grid.css';     /* Галерея и другие сетки */
 @import 'layout/_footer.css';
+@import 'layout/_teasers.css';
 
 /* 4. Стили страниц/секций */
 @import 'pages/_contact.css';
 @import 'pages/_experience.css';
 @import 'pages/_education.css';
 /* @import 'pages/_about.css'; */ /* Если есть специфичные стили */
-/* @import 'pages/_skills.css'; */ /* Специфичные для страницы навыков */
 /* @import 'pages/_services.css'; */ /* Если есть страница услуг */
 /* @import 'pages/_playground.css'; */ /* Если есть */
 

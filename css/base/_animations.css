@@ -14,3 +14,29 @@
   0% { width: 0; }
   100% { width: 100%; }
 }
+
+/* --- Scroll Animations --- */
+:root {
+  --animation-delay: 0s; /* Переменная для задержки */
+}
+
+/* Начальное состояние анимируемых элементов */
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition-delay: var(--animation-delay); /* Применяем задержку */
+}
+
+.animate-on-scroll.fade-in {
+  /* Уже есть opacity: 0 */
+}
+
+.animate-on-scroll.slide-up {
+  transform: translateY(30px); /* Начальное смещение вниз */
+}
+
+/* Активное состояние (когда элемент видим) */
+.animate-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0); /* Возвращаем на место */
+}

@@ -1,130 +1,235 @@
 /* css/layout/_intro.css */
 
-/* --- Intro Section Wrapper --- */
+/* --- Контейнер секции Intro --- */
 .intro {
-  background-color: var(--intro-bg); /* Theme variable */
-  padding: var(--spacing-medium, 20px); /* Use spacing variable */
-  border-radius: var(--border-radius-medium, 8px); /* Use radius variable */
-  margin: var(--spacing-medium, 20px) 0; /* Vertical margin */
+  margin: 40px 0; /* Только внешние отступы секции */
 }
 
-/* --- Intro Content Grid Layout --- */
+/* --- Сетка контента Intro (Текст + Фото) --- */
 .intro-content {
   display: grid;
-  /* Define grid columns, image width is dynamic based on breakpoint */
-  grid-template-columns: 1fr var(--intro-image-width-lg, 750px);
-  gap: var(--spacing-xl, 80px); /* Large gap for desktop */
-  align-items: start; /* Align items to the top of their grid area */
-
-  /* Container constraints */
-  max-width: var(--intro-max-width, 1700px);
-  margin: 0 auto; /* Center the content */
-  padding: 0 var(--spacing-large, 40px); /* Horizontal padding */
+  grid-template-columns: 1fr 750px; /* Колонки: текст занимает остаток, фото фикс. ширины */
+  gap: 80px; /* Большой отступ между колонками */
+  align-items: start; /* Выравнивание по верхнему краю ячеек */
+  max-width: 1700px; /* Ограничение общей ширины */
+  margin: 0 auto; /* Центрирование */
+  padding: 0 40px; /* Горизонтальные отступы */
 }
 
-/* --- Profile Photo Styling --- */
-.profile-photo {
-  width: 100%; /* Take full width of its grid column */
-  height: var(--intro-image-height-lg, 750px); /* Specific height for large screens */
-  border-radius: var(--border-radius-large, 20px); /* Larger radius */
-  box-shadow: var(--shadow-large, 0 10px 40px rgba(0,0,0,0.3)); /* Pronounced shadow */
-  object-fit: cover; /* Ensure image covers the area */
-  object-position: top; /* Focus on the top part of the image */
-}
-
-/* --- Intro Text Block Styling --- */
+/* --- Левая колонка: Текстовый блок --- */
 .intro-text {
-  background: var(--intro-bg); /* Consistent background */
-  padding: var(--spacing-large, 40px); /* Generous padding */
-  border-radius: var(--border-radius-large, 20px); /* Match photo radius */
-  box-shadow: var(--shadow-medium, 0 4px 20px rgba(0,0,0,0.1)); /* Softer shadow */
-  font-size: var(--font-size-large, 1.1em); /* Larger text size */
-  line-height: var(--line-height-loose, 1.8); /* Increased line spacing */
+  background: var(--card-bg-subtle, #f9f9f9); /* Фон текстового блока */
+  padding: 40px; /* Внутренние отступы */
+  border-radius: 15px; /* Скругление углов */
+  font-size: 1.1em;
+  line-height: 1.8;
+  /* Flex для управления внутренним пространством и прижатия блока "Подход" к низу */
+  display: flex;
+  flex-direction: column;
+  /* min-height: 400px; */ /* Убираем min-height, пусть высота определяется контентом и фото */
+}
+/* Блок с основным текстом (Образование, Опыт), растягивается */
+.intro-text-content {
+   flex-grow: 1;
+}
+/* Стили текстового блока для темной темы */
+[data-theme="dark"] .intro-text {
+  background: var(--card-bg); /* Фон как у карточек */
 }
 
-/* Language-specific text alignment for Japanese */
+
+/* --- Правая колонка: Обёртка для фото --- */
+.image-wrapper {
+  position: relative; /* Для позиционирования подписи */
+  /* align-self: stretch; */ /* Можно попробовать растянуть обертку, если нужно */
+}
+
+/* --- Фотография профиля --- */
+.profile-photo {
+  display: block; /* Убираем лишний отступ */
+  width: 100%; /* Занимает всю ширину обертки */
+  height: auto; /* Высота определяется соотношением сторон */
+  aspect-ratio: 3 / 4; /* Соотношение сторон фото */
+  object-fit: cover; /* Масштабируем и обрезаем */
+  object-position: top; /* Фокус на верх */
+  border-radius: 20px; /* Скругление */
+  box-shadow: var(--shadow-large, 0 10px 40px rgba(0,0,0,0.3)); /* Тень */
+  min-height: 500px; /* Минимальная высота фото, чтобы текст не сжимал его слишком сильно */
+                      /* Подберите это значение или удалите, если не нужно */
+}
+
+/* --- Подпись под фото --- */
+.image-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90%;
+  background: var(--caption-bg, rgba(0,0,0,0.7));
+  color: var(--caption-text-color, white);
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  text-align: center;
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+/* Подпись для темной темы */
+[data-theme="dark"] .image-caption {
+  background: var(--caption-bg-dark, rgba(255,255,255,0.1));
+  color: var(--text-color);
+}
+
+/* --- Стили для блоков Highlight и Списков внутри Intro Text --- */
+.intro-text .highlight-box {
+  background-color: transparent; /* Прозрачный фон */
+  border-left: 4px solid var(--accent-color); /* Линия слева */
+  padding: 0; /* Убираем внутренние отступы самого highlight-box */
+  padding-left: 25px; /* Отступ слева для содержимого */
+  margin-bottom: 35px; /* Отступ снизу */
+  border-radius: 0; /* Убираем скругление */
+  box-shadow: none; /* Убираем тень */
+}
+.intro-text .highlight-box h3 {
+  margin-top: 0; /* Убираем верхний отступ заголовка */
+  margin-bottom: 15px; /* Отступ под заголовком */
+  font-size: 1.3em;
+}
+/* Скрываем стандартную линию timeline */
+.intro .highlight-box .timeline::before {
+  display: none;
+}
+/* Общие стили для элементов списков */
+.intro .highlight-box .timeline li,
+.intro .highlight-box .achievements li {
+  position: relative;
+  padding-left: 25px; /* Отступ для маркера */
+  margin-bottom: 12px; /* Отступ между элементами */
+  line-height: 1.6; /* Межстрочный интервал */
+}
+/* Общий маркер для обоих списков */
+.intro .highlight-box .timeline li::before,
+.intro .highlight-box .achievements li::before {
+  content: "▹"; /* Маркер "стрелка" */
+  position: absolute;
+  left: 0;
+  top: 1px; /* Вертикальное выравнивание маркера */
+  color: var(--accent-color); /* Цвет маркера */
+  font-weight: bold;
+  transition: transform 0.2s ease; /* Анимация маркера при наведении */
+}
+/* Эффект при наведении на элемент списка */
+.intro .highlight-box .timeline li:hover::before,
+.intro .highlight-box .achievements li:hover::before {
+  transform: translateX(3px); /* Сдвиг маркера вправо */
+}
+
+/* --- НОВЫЙ РАЗДЕЛ: Ключевые моменты / Подход --- */
+.intro-key-points {
+  margin-top: 35px; /* Отступ сверху от основного контента */
+  padding-top: 25px; /* Внутренний отступ сверху */
+  border-top: 1px solid var(--border-color, rgba(0,0,0,0.1)); /* Разделительная линия */
+}
+[data-theme="dark"] .intro-key-points {
+    border-top-color: var(--border-color-dark, rgba(255,255,255,0.1));
+}
+
+.intro-key-points h3 {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.intro-key-points ul {
+  list-style: none; /* Убираем стандартные маркеры */
+  padding-left: 0; /* Убираем стандартный отступ */
+}
+
+.intro-key-points li {
+  margin-bottom: 10px;
+  display: flex; /* Для выравнивания иконки и текста */
+  align-items: flex-start; /* Выравнивание по верху */
+  gap: 10px; /* Отступ между иконкой и текстом */
+  font-size: 0.95em; /* Чуть меньше основного текста */
+  line-height: 1.6;
+}
+
+.intro-key-points li i {
+  color: var(--accent-color); /* Цвет иконки */
+  margin-top: 3px; /* Коррекция вертикального положения */
+  flex-shrink: 0; /* Не сжимать иконку */
+  width: 1.2em; /* Задать ширину иконке для лучшего выравнивания */
+  text-align: center; /* Центрировать иконку */
+}
+
+
+/* --- Адаптивность для секции Intro --- */
+/* Уменьшаем фото и отступ на больших планшетах/небольших десктопах */
+@media (max-width: 1440px) {
+  .intro-content {
+    grid-template-columns: 1fr 600px;
+    gap: 60px;
+  }
+}
+/* Еще уменьшаем */
+@media (max-width: 1200px) {
+  .intro-content {
+    grid-template-columns: 1fr 450px;
+    gap: 40px;
+  }
+}
+/* Планшеты и меньше - перестраиваем в одну колонку */
+@media (max-width: 992px) {
+  .intro-content {
+    grid-template-columns: 1fr; /* Одна колонка */
+    padding: 0 20px; /* Уменьшаем боковые отступы */
+    gap: 40px; /* Вертикальный отступ */
+    align-items: start; /* Возвращаем выравнивание по верху */
+  }
+  .image-wrapper {
+    order: -1; /* Фотография идет первой */
+    max-width: 500px; /* Ограничиваем макс. ширину фото */
+    margin: 0 auto 30px auto; /* Центрируем и добавляем отступ снизу */
+  }
+  .profile-photo {
+    aspect-ratio: 4/3; /* Меняем пропорции на более горизонтальные */
+    min-height: auto; /* Убираем мин. высоту */
+  }
+  .intro-text {
+    order: 1; /* Текст идет вторым */
+    padding: 30px; /* Уменьшаем отступы */
+    min-height: auto; /* Сбрасываем минимальную высоту */
+  }
+}
+/* Мобильные телефоны */
+@media (max-width: 576px) {
+  .intro-content { padding: 0 15px; gap: 30px; }
+  .profile-photo {
+    aspect-ratio: 1/1; /* Квадратное фото */
+    border-radius: 15px;
+  }
+  .intro-text {
+    padding: 20px;
+    font-size: 1em;
+  }
+  /* Корректируем списки */
+  .intro .highlight-box .timeline li,
+  .intro .highlight-box .achievements li {
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  .intro .highlight-box .timeline li::before,
+  .intro .highlight-box .achievements li::before {
+    left: -2px;
+  }
+  .intro-text .highlight-box { padding-left: 20px; margin-bottom: 25px;}
+  .intro-text .highlight-box h3 { font-size: 1.2em; }
+  .intro-key-points { margin-top: 25px; padding-top: 20px;}
+  .intro-key-points h3 { font-size: 1.1em; }
+  .intro-key-points li { font-size: 0.9em; }
+}
+
+/* --- Стилизация японского текста --- */
 [lang="ja"] .intro-text {
   text-align: justify;
   text-justify: inter-ideograph;
-}
-
-/* --- Image Helper Components --- */
-/* Wrapper (if needed for positioning context) */
-.image-wrapper {
-  position: relative;
-}
-
-/* Caption overlay for images */
-.image-caption {
-  position: absolute;
-  bottom: 10px; /* Position near bottom */
-  left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
-  max-width: 90%; /* Limit caption width */
-
-  /* Appearance */
-  background: var(--caption-bg, rgba(0,0,0,0.7)); /* Default dark semi-transparent bg */
-  color: var(--caption-text-color, white); /* Default light text */
-  padding: 5px 15px; /* Small padding */
-  border-radius: 20px; /* Pill shape */
-  font-size: 0.9em; /* Small text */
-  text-align: center;
-  backdrop-filter: blur(3px); /* Frosted glass effect */
-}
-
-/* Dark theme override for caption */
-[data-theme="dark"] .image-caption {
-  background: var(--caption-bg-dark, rgba(255,255,255,0.1)); /* Lighter semi-transparent bg */
-  color: var(--text-color); /* Use standard theme text color */
-}
-
-
-/* --- Responsive Adjustments for Intro Section --- */
-/* Extra Large Screens (Base style is 1700px) */
-
-/* Large Screens / Desktops */
-@media (max-width: 1440px) {
-  .intro-content {
-    grid-template-columns: 1fr var(--intro-image-width-md, 600px);
-    gap: var(--spacing-large, 60px); /* Adjust gap */
-  }
-  .profile-photo {
-    height: var(--intro-image-height-md, 500px);
-  }
-}
-
-/* Medium Screens / Laptops */
-@media (max-width: 1200px) {
-  .intro-content {
-    grid-template-columns: 1fr var(--intro-image-width-sm, 450px);
-    gap: var(--spacing-medium, 40px); /* Adjust gap */
-  }
-  .profile-photo {
-    height: var(--intro-image-height-sm, 400px);
-  }
-}
-
-/* Small Screens / Tablets */
-@media (max-width: 992px) {
-  .intro-content {
-    grid-template-columns: 1fr; /* Stack content */
-    gap: var(--spacing-large, 40px); /* Consistent vertical gap */
-    padding: 0 var(--spacing-medium, 20px); /* Adjust horizontal padding */
-  }
-  .profile-photo {
-    height: var(--intro-image-height-xs, 500px); /* Keep a decent height */
-    max-width: 600px; /* Limit width when stacked */
-    margin: 0 auto; /* Center the image */
-  }
-}
-
-/* Extra Small Screens / Mobiles */
-@media (max-width: 576px) {
-  .profile-photo {
-    height: var(--intro-image-height-xxs, 350px); /* Reduce height further */
-  }
-  .intro-text {
-     padding: var(--spacing-medium, 20px); /* Reduce padding */
-     font-size: 1em; /* Reset font size slightly */
-  }
 }

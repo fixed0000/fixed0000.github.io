@@ -111,9 +111,6 @@
 }
 
 
-/* Style related to 'Playground' code editor. Move to relevant component CSS. */
-
-
   /* Removed unrelated .goal-list rule */
   /* Removed .menu { flex-direction: column } as flex-wrap is used */
 }

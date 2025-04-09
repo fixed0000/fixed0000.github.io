@@ -1,0 +1,95 @@
+/* css/layout/_teasers.css или main.css */
+
+/* --- Секция Тизеров (Портфолио/Разделы) --- */
+.portfolio-teasers {
+    /* 1. Ограничиваем максимальную ширину */
+    max-width: 1200px; /* Или другое значение, которое было раньше или подходит по дизайну */
+  
+    /* 2. Центрируем саму секцию */
+    margin-left: auto;
+    margin-right: auto;
+  
+    /* 3. Добавляем внутренние и внешние отступы */
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 20px; /* Внутренние отступы */
+  
+    /* 4. Убеждаемся, что заголовок центрируется */
+    text-align: center; /* Центрируем весь текст внутри, включая заголовок */
+  }
+  
+  /* Заголовок секции тизеров */
+  .portfolio-teasers h2 {
+    margin-bottom: 40px; /* Увеличили отступ под заголовком */
+    font-size: 1.8em; /* Размер заголовка секции */
+    /* text-align: center; */ /* Уже задано для родителя .portfolio-teasers */
+  }
+  
+  /* Сетка для карточек-тизеров */
+  .teaser-grid {
+    display: grid;
+    gap: 25px; /* Отступ между карточками */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Адаптивные колонки */
+    text-align: left; /* Возвращаем выравнивание текста влево для содержимого карточек */
+    margin-top: 20px; /* Отступ от заголовка секции */
+  }
+  
+  /* Стили для отдельной карточки-тизера */
+  .teaser-card {
+    border: 1px solid var(--border-color, rgba(0,0,0,0.1));
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center; /* Центрируем содержимое карточки */
+    background: var(--card-bg);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .teaser-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium, 0 4px 20px rgba(0,0,0,0.1));
+  }
+  [data-theme="dark"] .teaser-card {
+    border-color: var(--border-color-dark, rgba(255,255,255,0.1));
+  }
+  
+  .teaser-card .icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    display: block;
+    color: var(--accent-color);
+  }
+  
+  .teaser-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3em; /* Размер заголовка карточки */
+  }
+  
+  .teaser-card p {
+    font-size: 0.95em; /* Размер описания */
+    line-height: 1.6;
+    margin-bottom: 20px; /* Отступ перед кнопкой */
+    color: var(--text-color-secondary, inherit); /* Менее заметный цвет для описания */
+  }
+  
+  /* Кнопка внутри тизера */
+  .teaser-card .btn-secondary {
+      /* Можно добавить специфичные стили, если нужно */
+  }
+  
+  /* Адаптивность для тизеров */
+  @media (max-width: 576px) {
+      .portfolio-teasers {
+          margin-top: 40px;
+          margin-bottom: 40px;
+          padding: 15px;
+      }
+      .portfolio-teasers h2 {
+          font-size: 1.6em;
+          margin-bottom: 30px;
+      }
+      .teaser-grid {
+          gap: 20px;
+      }
+       .teaser-card { padding: 20px; }
+       .teaser-card h3 { font-size: 1.2em; }
+       .teaser-card p { font-size: 0.9em; margin-bottom: 15px;}
+  }
