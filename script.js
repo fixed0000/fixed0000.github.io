@@ -55,7 +55,7 @@ const translations = {
     "specialty_name": "Перевод и переводоведение (японский язык)",
     "gpa": "Средний балл",
     "nav.home": "Главная",
-    "nav.about": "Обо мне",
+    "nav.about": "Образование",
     "welcome": "Добро пожаловать! ",
     "theme.toggle": "Сменить тему",
     "about.title": "Обо мне",
@@ -101,7 +101,7 @@ const translations = {
     "specialty_name": "Translation Studies (Japanese)",
     "gpa": "GPA",
     "nav.home": "Home",
-    "nav.about": "About",
+    "nav.about": "Education",
     "welcome": "Welcome! ",
     "theme.toggle": "Toggle theme",
     "about.title": "About Me",
@@ -180,7 +180,7 @@ const translations = {
     "specialty_name": "翻訳学（日本語）",
     "gpa": "GPA",
     "nav.home": "ホーム",
-    "nav.about": "自己紹介",
+    "nav.about": "学歴",
     "welcome": "ようこそ！ ",
     "theme.toggle": "テーマ切替",
     "about.title": "自己紹介",
@@ -277,3 +277,16 @@ function updateLanguage(lang) {
   // Сохранение выбора языка
   localStorage.setItem('selectedLanguage', lang);
 }
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.post('/submit-form', (req, res) => {
+    console.log('Получены данные:', req.body);
+    res.sendStatus(200);
+});
+
+app.listen(3000, () => console.log('Сервер запущен'));

@@ -12,7 +12,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>...</nav>
+    <nav>
+        <ul class="menu">
+            <!-- Элементы слева -->
+            <li class="controls-group">
+                <div class="custom-select">
+                    <select id="language-select">
+                        <option value="ru">🇷🇺 Русский</option>
+                        <option value="en">🇬🇧 English</option>
+                        <option value="ja">🇯🇵 日本語</option>
+                    </select>
+                    <span class="select-arrow">▼</span>
+                </div>
+                <button id="theme-toggle" class="theme-btn" data-i18n="theme.toggle">
+                    <span class="theme-icon">🌓</span>
+                    <span class="btn-text">Сменить тему</span>
+                </button>
+            </li>
+            
+            <!-- Ссылки справа -->
+            <li class="nav-links">
+                <a href="index.html" data-i18n="nav.home">Главная</a>
+                <a href="about.html" data-i18n="nav.about">Образование</a>
+                <a href="experience.html" data-i18n="nav.experience">Опыт</a>
+                <a href="services.html" data-i18n="nav.services">Услуги</a>
+                <a href="playground.html" data-i18n="nav.playground">Код</a>
+            </li>
+        </ul>
+    </nav>
 
     <main>
         <div class="code-editor">

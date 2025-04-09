@@ -28,7 +28,7 @@
             <!-- Ссылки справа -->
             <li class="nav-links">
                 <a href="index.html" data-i18n="nav.home">Главная</a>
-                <a href="about.html" data-i18n="nav.about">Обо мне</a>
+                <a href="about.html" data-i18n="nav.about">Университет</a>
                 <a href="experience.html" data-i18n="nav.experience">Опыт</a>
                 <a href="services.html" data-i18n="nav.services">Услуги</a>
                 <a href="playground.html" data-i18n="nav.playground">Код</a>
@@ -48,7 +48,7 @@
         <section class="intro">
             <div class="intro-content">
                 <div class="intro-text">
-                    <h2 data-i18n="about.title">Обо мне</h2>
+                    <h2 data-i18n="about.title">Образование</h2>
                     
                     <div class="highlight-box">
                         <h3 data-i18n="about.education">Образование</h3>
@@ -78,9 +78,9 @@
         alt="Мое фото" 
         class="profile-photo"
         data-i18n-alt="image.alt"
-        srcset="images/image1.jpg 1x, 
-                images/image1@2x.jpg 2x,
-                images/image1@3x.jpg 3x"
+        srcset="images/image1.jpg, 
+                images/image1@2x.jpg,
+                images/image1@3x.jpg"
         sizes="(max-width: 768px) 100vw, 40vw"
         loading="lazy"
         decoding="async"
@@ -102,7 +102,10 @@
             <ul>
                 <li data-i18n="skills.html">HTML</li>
                 <li data-i18n="skills.css">CSS</li>
-                <li data-i18n="skills.js">JavaScript (в процессе)</li>
+                <li data-i18n="skills.js">JavaScript</li>
+                <li data-i18="skills.japanese">Японский язык (продвинутый уровень)</li>
+                <li data-i18n="skills.english">Английский язык (продвинутый уровень)</li>
+                <li data-i18n="skills.russian">Русский язык (носитель)</li>
             </ul>
         </section>
         
@@ -116,6 +119,7 @@
         <section class="contact">
             <h2 data-i18n="contact.title">Свяжитесь со мной</h2>
             <form>
+                <form id="contactForm" action="/submit-form" method="POST"></form>
                 <input type="text" 
                        data-i18n-placeholder="contact.name" 
                        placeholder="Ваше имя" 
