@@ -1,0 +1,75 @@
+/* css/layout/_grid.css */
+.skills { /* Container for skills */
+  border: 2px solid #3498db;
+  padding: 15px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.skill-cards { /* Grid Definition */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery { /* Duplicate - included as requested */
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 10px;
+}
+
+.gallery img {
+width: 100%;
+height: 300px;
+object-fit: cover;
+border-radius: 8px;
+transition: all 0.3s ease;
+filter: brightness(0.9); /* Легкое затемнение */
+}
+
+.gallery img:hover {
+transform: scale(1.1);
+filter: brightness(1);
+z-index: 1; /* Чтобы изображение "выплывало" над остальными */
+}
+
+.stats { /* Grid Definition from experience page */
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+gap: 20px;
+margin-top: 20px;
+}
+
+.experience-cards { /* Grid Definition from experience page */
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+margin-top: 30px;
+}
+
+.course-cards { /* Grid Definition from education page */
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 25px;
+margin-top: 30px;
+}
+
+.activity-grid { /* Grid Definition from education page */
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+margin-top: 25px;
+}
+
+@media (max-width: 768px) { /* Duplicate - included as requested */
+  /* .goal-list rule is in _lists.css */
+  /* .menu rule is in _navigation.css */
+  .skill-cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,106 @@
+/* css/layout/_intro.css */
+.intro {
+  background-color: var(--intro-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.intro-content {
+    max-width: 1700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 750px; /* Большое изображение справа */
+    gap: 80px;
+    align-items: start;
+    padding: 0 40px;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 750px; /* Фиксированная высота */
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Адаптивность */
+@media (max-width: 1440px) {
+  .intro-content {
+      grid-template-columns: 1fr 600px;
+      gap: 60px;
+  }
+
+  .profile-photo {
+      height: 500px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .intro-content {
+      grid-template-columns: 1fr 450px;
+      gap: 40px;
+  }
+
+  .profile-photo {
+      height: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .intro-content {
+      grid-template-columns: 1fr;
+  }
+
+  .profile-photo {
+      height: 500px;
+      max-width: 600px;
+      margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-photo {
+      height: 350px;
+  }
+}
+
+/* Дополнительные улучшения */
+.intro-text {
+  padding: 40px;
+  background: var(--intro-bg);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+[lang="ja"] .intro-text {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  text-align: center;
+  max-width: 90%;
+  backdrop-filter: blur(3px);
+}
+
+[data-theme="dark"] .image-caption {
+  background: rgba(255,255,255,0.1);
+  color: var(--text-color);
+}

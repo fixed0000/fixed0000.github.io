@@ -1,0 +1,123 @@
+/* css/components/_forms.css */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.language-switcher select {
+padding: 5px 10px;
+border-radius: 5px;
+background: var(--bg-color);
+color: var(--text-color);
+border: 1px solid var(--text-color);
+}
+
+/* Стили для языкового селектора */
+.custom-select {
+position: relative;
+width: 180px;
+}
+
+.custom-select select {
+appearance: none;
+-webkit-appearance: none;
+width: 100%;
+padding: 10px 15px;
+background: var(--bg-color);
+border: 2px solid var(--accent-color);
+border-radius: 25px;
+color: var(--text-color);
+font-size: 14px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.select-arrow {
+position: absolute;
+right: 15px;
+top: 50%;
+transform: translateY(-50%);
+color: var(--text-color);
+pointer-events: none;
+}
+
+.custom-select:hover select {
+background: var(--hover-bg);
+box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+}
+
+.custom-select select:focus {
+outline: none;
+box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+/* Улучшенные стили для выравнивания */
+.custom-select { /* Duplicate - included as requested */
+margin-right: 10px;
+}
+
+/* Добавьте эти стили в ваш CSS */
+.custom-select select { /* Duplicate - included as requested */
+background: var(--bg-color) !important;
+color: var(--text-color) !important;
+}
+
+/* Стили для опций в выпадающем списке */
+.custom-select select option {
+background: var(--bg-color);
+color: var(--text-color);
+padding: 10px;
+}
+
+/* Для браузеров на WebKit (Chrome, Safari) */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.custom-select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.custom-select select::-ms-expand {
+    display: none;
+}
+
+.custom-select select option {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+}
+
+/* Для темной темы - дополнительные корректировки */
+[data-theme="dark"] .custom-select select {
+border-color: var(--accent-color);
+}
+
+[data-theme="dark"] .select-arrow {
+color: var(--accent-color);
+}
+
+/* Contains .language-select which is also in _cards.css */
+.language-select {
+background: #333;
+color: #fff;
+border: none;
+padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+  /* This block also included in _buttons.css as requested */
+  /* Rules specific to custom-select */
+  .custom-select {
+      width: 140px;
+  }
+  /* These rules might belong in _buttons.css */
+  /* .theme-btn { padding: 10px 20px; } */
+  /* .btn-text { display: none; } */
+}

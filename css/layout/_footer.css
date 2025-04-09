@@ -1,0 +1,7 @@
+/* css/layout/_footer.css */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #34495e;
+  color: white;
+}

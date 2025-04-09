@@ -1,0 +1,8 @@
+/* css/base/_theme.css */
+body { /* Duplicate included as requested */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}

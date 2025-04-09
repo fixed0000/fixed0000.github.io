@@ -1,0 +1,52 @@
+/* css/base/_variables.css */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --intro-bg: #f9f9f9;
+}
+
+/* Добавьте в переменные */
+:root {
+--accent-color: #3498db;
+--accent-hover: #2980b9;
+--hover-bg: rgba(52, 152, 219, 0.1);
+}
+
+/* В разделе :root */
+:root {
+--bg-color: #ffffff;
+--text-color: #333333;
+--accent-color: #3498db;
+--intro-bg: #f9f9f9;
+--card-bg: #ffffff;
+}
+
+/* Добавьте в переменные */
+:root {
+--card-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --intro-bg: #2d2d2d;
+}
+
+[data-theme="dark"] {
+--accent-color: #2ecc71;
+--accent-hover: #27ae60;
+--hover-bg: rgba(46, 204, 113, 0.1);
+}
+
+/* Для темной темы */
+[data-theme="dark"] {
+--bg-color: #1a1a1a;
+--text-color: #f8f9fa;
+--accent-color: #2ecc71;
+--intro-bg: #2d2d2d;
+--card-bg: #2a2a2a;
+}
+
+[data-theme="dark"] {
+--card-bg: #2d2d2d;
+}

@@ -1,0 +1,40 @@
+/* css/components/_timeline.css */
+.timeline {
+  padding-left: 20px;
+  margin-left: 20px;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  border-radius: 3px;
+  /* border-color is set below */
+}
+
+.timeline .item {
+  margin-bottom: 30px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.timeline li::before {
+content: "🎓";
+margin-right: 8px;
+}
+
+[lang="ja"] .timeline li::before {
+content: "📘";
+}
+
+/* Общие исправления */
+.timeline { /* Duplicate - included as requested */
+border-color: var(--accent-color); /* Applies border color to the ::before pseudo-element implicitly? Check browser behavior or apply directly */
+}
+
+/* Note: Page-specific timeline styles (.experience-timeline, .academic-timeline, .timeline-section, .timeline-item overrides) are in pages/*.css */

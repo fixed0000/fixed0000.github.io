@@ -1,0 +1,51 @@
+/* css/base/_base.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+p, h1, h2, h3, h4, h5, h6, li, a, span, summary, details {
+  color: inherit;
+}
+
+/* Для многоязычной поддержки */
+[lang="ja"] body {
+font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+line-height: 1.8;
+}
+
+/* Обязательные базовые стили */
+body { /* Duplicate - included as requested */
+background-color: var(--bg-color);
+color: var(--text-color);
+transition:
+  background-color 0.3s ease-in-out,
+  color 0.3s ease-in-out;
+}
+
+/* Явное наследование для всех текстовых элементов */
+h1, h2, h3, h4, h5, h6,
+p, li, a, span, button,
+summary, details, label,
+.timeline, .skill-cards,
+.goal-list, .contact-form {
+color: inherit;
+}
+
+@media (max-width: 768px) {
+  .goal-list, .menu {
+    flex-direction: column;
+  }
+
+  .skill-cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,11 @@
+/* css/base/_animations.css */
+@keyframes progressBar {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}

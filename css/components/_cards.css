@@ -1,0 +1,156 @@
+/* css/components/_cards.css */
+.card {
+  background: white;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.goal {
+  flex: 1;
+  min-width: 250px;
+  background: #e8f4ff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.card { /* Duplicate - included as requested */
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
+}
+
+.skill-card.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Дополнительные исправления для конкретных элементов */
+.card { /* Duplicate - included as requested */
+background: var(--card-bg);
+border: 1px solid rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .card {
+border-color: rgba(255,255,255,0.1);
+}
+
+/* Исправление для целей */
+.goal { /* Duplicate - included as requested */
+background: var(--card-bg);
+padding: 20px;
+border-radius: 10px;
+margin: 15px 0;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.goal h3 {
+color: var(--accent-color);
+margin-bottom: 15px;
+border-bottom: 2px solid var(--accent-color);
+padding-bottom: 5px;
+}
+
+.skill-cards .card { /* Duplicate? - included as requested */
+background: var(--card-bg);
+border: 1px solid var(--accent-color);
+}
+
+/* Для страницы услуг */
+.service-card {
+background: var(--card-bg);
+padding: 25px;
+border-radius: 15px;
+border: 2px solid var(--accent-color);
+transition: transform 0.3s;
+}
+
+.service-card:hover {
+transform: translateY(-5px);
+}
+
+.language-pairs {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 10px;
+margin: 15px 0;
+}
+
+/* Для плейграунда */
+.code-editor {
+background: #1e1e1e;
+border-radius: 8px;
+padding: 20px;
+font-family: 'Fira Code', monospace;
+}
+
+.editor-header {
+display: flex;
+justify-content: space-between;
+margin-bottom: 15px;
+}
+
+/* Contains .language-select which is also in _forms.css */
+.language-select {
+background: #333;
+color: #fff;
+border: none;
+padding: 5px 10px;
+}
+
+.exp-card {
+background: var(--card-bg);
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+transition: transform 0.3s;
+}
+
+.exp-card:hover {
+transform: translateY(-5px);
+}
+
+.exp-icon {
+font-size: 2.5em;
+margin-bottom: 10px;
+}
+
+.course-card {
+background: var(--card-bg);
+padding: 25px;
+border-radius: 15px;
+text-align: center;
+transition: transform 0.3s;
+}
+
+.course-card:hover {
+transform: translateY(-5px);
+}
+
+.course-icon {
+font-size: 2.5em;
+margin-bottom: 15px;
+}
+
+.activity-card {
+padding: 20px;
+border-radius: 15px;
+background: var(--card-bg);
+}
+
+.activity-card.club {
+border-left: 4px solid #e74c3c;
+}
+
+.activity-card.event {
+border-left: 4px solid #2ecc71;
+}

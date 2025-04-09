@@ -1,0 +1,34 @@
+/* css/main.css - Главный файл импорта */
+
+/* 1. База */
+@import 'base/_variables.css';
+@import 'base/_base.css';
+@import 'base/_animations.css';
+@import 'base/_theme.css';
+
+/* 2. Компоненты */
+@import 'components/_buttons.css';
+@import 'components/_cards.css';
+@import 'components/_forms.css';
+@import 'components/_progress-bars.css';
+@import 'components/_timeline.css';
+@import 'components/_lists.css';
+
+/* 3. Макет */
+@import 'layout/_header.css';
+@import 'layout/_navigation.css'; /* Меню */
+@import 'layout/_intro.css';
+@import 'layout/_grid.css';     /* Галерея и другие сетки */
+@import 'layout/_footer.css';
+
+/* 4. Стили страниц/секций */
+@import 'pages/_contact.css';
+@import 'pages/_experience.css';
+@import 'pages/_education.css';
+/* @import 'pages/_about.css'; */ /* Если есть специфичные стили */
+/* @import 'pages/_skills.css'; */ /* Специфичные для страницы навыков */
+/* @import 'pages/_services.css'; */ /* Если есть страница услуг */
+/* @import 'pages/_playground.css'; */ /* Если есть */
+
+/* 5. Вендоры (если есть) */
+/* @import 'vendors/_some-library.css'; */

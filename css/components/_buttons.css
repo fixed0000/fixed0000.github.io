@@ -1,0 +1,71 @@
+/* css/components/_buttons.css */
+.social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #3498db;
+  padding: 8px 15px;
+  border: 2px solid #3498db;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Стили для кнопки темы */
+.theme-btn {
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 12px 25px;
+background: var(--accent-color);
+color: white;
+border: none;
+border-radius: 30px;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.theme-icon {
+font-size: 1.2em;
+transition: transform 0.3s ease;
+}
+
+.theme-btn:hover {
+background: var(--accent-hover);
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.theme-btn:active {
+transform: translateY(1px);
+}
+
+.theme-icon { /* Duplicate - included as requested */
+animation: pulse 2s infinite;
+}
+
+.theme-btn { /* Duplicate - included as requested */
+white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+/* This block also included in _forms.css as requested */
+/* Rules specific to theme-btn */
+.theme-btn {
+    padding: 10px 20px;
+}
+
+.btn-text {
+    display: none;
+}
+}
