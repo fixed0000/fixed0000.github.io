@@ -68,3 +68,101 @@
     display: none; /* Hide text on smaller screens */
   }
 }
+
+/* --- components/_buttons.css --- */
+
+/* Базовый стиль кнопки */
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  line-height: var(--line-height-base);
+  color: var(--color-text-base);
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: var(--spacing-sm) var(--spacing-lg); /* Используем переменные */
+  font-size: var(--font-size-md);
+  border-radius: var(--border-radius-md); /* Используем переменные */
+  transition: all var(--transition-base); /* Анимация всех свойств */
+  text-decoration: none; /* Убираем подчеркивание у ссылок-кнопок */
+}
+.btn:hover {
+  text-decoration: none;
+}
+/* Убираем рамку при фокусе, добавим свою */
+.btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(var(--color-accent-rgb), 0.25); /* RGB акцентного цвета нужен в переменных */
+}
+
+/* Основная кнопка (акцентная) */
+.btn-primary {
+  color: var(--color-white);
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.btn-primary:hover {
+  color: var(--color-white);
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  transform: translateY(-2px); /* Легкий подъем */
+  box-shadow: var(--shadow-sm);
+}
+
+/* Кнопка переключения темы (специфичный стиль) */
+.theme-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-md); /* Немного меньше основной */
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius-pill); /* Круглая */
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+}
+.theme-btn:hover {
+  background: var(--color-primary);
+  transform: scale(1.05); /* Увеличение */
+  box-shadow: var(--shadow-md);
+}
+.theme-icon {
+  font-size: 1.2em;
+  transition: transform var(--transition-base);
+}
+/* Анимация пульсации может быть в _animations.css */
+
+/* Социальные ссылки (переделка) */
+.social-links {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin: var(--spacing-lg) 0;
+}
+.social-links a {
+  display: inline-flex; /* Для выравнивания иконки, если она будет */
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Фиксированный размер */
+  height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%; /* Круглые */
+  color: var(--color-text-muted);
+  transition: all var(--transition-base);
+  font-size: var(--font-size-lg); /* Размер иконки */
+  text-decoration: none;
+}
+.social-links a:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-light);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+/* ... (responsive styles) ... */
