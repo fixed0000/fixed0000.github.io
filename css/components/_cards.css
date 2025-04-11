@@ -156,8 +156,50 @@
   transform: translateY(0);
 }
 
-/* Уточнение стилей для карточек внутри сетки навыков */
-.skill-cards .card { /* (Из блока "Общие исправления") */
-  background: var(--card-bg); /* Убедимся, что используется переменная */
-  border: 1px solid var(--accent-color); /* Используем акцентный цвет для рамки */
+/* --- components/_cards.css --- */
+
+.card { /* Общий стиль для всех карточек */
+  background: var(--card-bg, var(--color-bg-base));
+  border: 1px solid var(--card-border-color, var(--color-border));
+  border-radius: var(--card-border-radius, var(--border-radius-lg));
+  box-shadow: var(--card-shadow, var(--shadow-sm)); /* Меньше тень по умолчанию */
+  padding: var(--spacing-lg); /* Используем отступ */
+  transition: all var(--transition-base);
+  overflow: hidden; /* Если будут внутренние элементы с фоном/border */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Поднятие */
+  box-shadow: var(--shadow-lg); /* Увеличение тени */
+  border-color: var(--color-accent); /* Подсветка рамки */
+}
+
+/* Стили для .highlight-box теперь могут наследоваться от .card или иметь свои */
+.highlight-box {
+   /* Наследуем стили .card? Или оставляем свои? */
+   /* Например, если они похожи: */
+   /* @extend .card; */ /* (Если используется Sass) */
+   /* Если нет, применяем переменные: */
+   background: var(--color-bg-subtle); /* Используем свой фон */
+   padding: var(--spacing-lg);
+   border-radius: var(--border-radius-md);
+   margin-bottom: var(--spacing-lg);
+   border: 1px solid var(--card-border-color);
+   /* Без тени по умолчанию? */
+   /* box-shadow: none; */
+}
+
+/* Уточняющие стили для карточек в сетках */
+.skill-cards .card {
+    /* Возможно, специфичный фон или рамка */
+    text-align: center;
+}
+/* ... другие стили для goal, service-card и т.д., использующие переменные ... */
+
+.goal h3, .experience-section h3, .education-section h3 {
+    /* Стилизация заголовков внутри карточек/секций */
+    /* border-bottom: 2px solid var(--color-accent); */
+    /* padding-bottom: var(--spacing-sm); */
+    /* margin-bottom: var(--spacing-md); */
+    /* color: var(--color-primary); */
 }

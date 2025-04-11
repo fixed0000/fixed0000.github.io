@@ -1,84 +1,211 @@
 // js/translations.js
 
-// Полный объект переводов с ИСПРАВЛЕННЫМИ ЗАПЯТЫМИ
+// Полный объект переводов, синхронизированный с последними версиями index.html и experience.html
+// Удалены лишние ключи, добавлены недостающие. Проверен синтаксис.
 const translations = {
   ru: {
-    "page.title": "Мой сайт", // Добавлен ключ для <title>
-    "contact.success": "Сообщение успешно отправлено!",
-    "contact.error": "Ошибка отправки. Попробуйте позже.",
-    "contact.sending": "Отправка...", // <<< ДОБАВЛЕНА ЗАПЯТАЯ
-    "main_title": "Академический путь 🎓", // Кажется, этот ключ не используется в HTML?
-    "current_status": "Студент 4 курса",
-    "year1": "2020-2024",
-    "degree": "Бакалавр лингвистики",
-    "specialty": "Специальность:",
-    "specialty_name": "Перевод и переводоведение (японский язык)",
-    "gpa": "Средний балл",
+    // --- Общие и для index.html ---
+    "page.title": "Бородина Лидия - Веб-разработчик и Лингвист", // Используется в index.html <title>
     "nav.home": "Главная",
-    "nav.about": "Образование", // Ключ соответствует about.html, но секция называется 'Об авторе'
+    "nav.about": "Образование",
     "nav.experience": "Опыт",
     "nav.services": "Услуги",
     "nav.playground": "Код",
-    "welcome": "Добро пожаловать!",
     "theme.toggle": "Сменить тему",
-    "about.title": "Об авторе", // Ключ для <h2> в секции intro
-    "about.education": "Образование", // Ключ для <h3> внутри блока
+
+    // Hero Section (index.html)
+    "hero.name": "Бородина Лидия",
+    "hero.title": "Веб-разработчик | Лингвист-Японист | Межкультурная коммуникация",
+    "hero.description": "Создаю адаптивные и функциональные веб-сайты, используя [Технология 1, Технология 2]. Свободное владение японским (JLPT N1) и английским языками (C1). Ищу интересные проекты и возможности для роста в технологической сфере Японии.",
+    "hero.cta.contact": "Связаться со мной",
+    "hero.cta.resume": "Смотреть резюме (JP)",
+
+    // Intro Section (index.html)
+    "about.title": "Об авторе", // Заголовок секции Intro
+    "about.education": "Образование", // Подзаголовок блока Образование в Intro
     "about.education.item1": "Студентка 4 курса МГПУ: Переводчик японского языка",
     "about.education.item2": "Программа обмена: Университет Цукубы (Япония), 2022",
     "about.education.item3": "Дополнительное образование: Основы программирования",
     "about.education.item4": "Методика преподавания РКИ: Курс для преподавателей-русистов",
-    "experience.title": "Профессиональный опыт", // Ключ для <h3>
+    "experience.title": "Профессиональный опыт", // Подзаголовок блока Опыт в Intro
     "experience.item1": "Локализация контента для японских компаний",
     "experience.item2": "Персональное сопровождение CEO из Японии",
     "experience.item3": "Работа с клиентами: кассир в Японии (Mosburger)",
     "experience.item4": "Преподавание русского языка для иностранцев",
-    "skills.title": "Мои навыки",
+    "introKeyPoints.title": "Мой подход", // Подзаголовок блока Подход в Intro
+    "introKeyPoints.item1": "Внимание к деталям и культурным нюансам.",
+    "introKeyPoints.item2": "Ориентация на пользователя и цели бизнеса.",
+    "introKeyPoints.item3": "Стремление к чистому, поддерживаемому коду.",
+    "introKeyPoints.item4": "Эффективная коммуникация на трех языках.",
+    "image.alt": "Портретное фото", // Alt для фото в Intro (index.html)
+    "image.caption": "Токио", // Подпись к фото в Intro (index.html)
+
+    // Skills Highlights (index.html)
+    "skillsHighlights.title": "Ключевые компетенции",
+    "skillsHighlights.tech": "Технические навыки",
+    "skillsHighlights.lang": "Языковые навыки",
+    "skillsHighlights.soft": "Soft Skills",
     "skills.html": "HTML",
     "skills.css": "CSS",
-    "skills.js": "JavaScript (в процессе)",
-    "skills.japanese": "Японский язык (продвинутый уровень)", // Убедитесь, что ключ в HTML правильный (data-i18n)
-    "skills.english": "Английский язык (продвинутый уровень)",
-    "skills.russian": "Русский язык (носитель)",
-    "faq.title": "Часто задаваемые вопросы", // Добавлен ключ для заголовка FAQ
-    "faq.question1": "Как вы начали программировать?", // Используем question1 для первого
-    "faq.answer1": "Я начал с онлайн-курсов и практики...", // Используем answer1 для первого
-    "faq.question2": "Какие языки вы знаете?", // Пример второго вопроса
-    "faq.answer2": "Японский, Английский, Русский...", // Пример второго ответа
-    "contact.title": "Свяжитесь со мной",
-    "contact.namePlaceholder": "Ваше имя", // Ключ для плейсхолдера
-    "contact.emailPlaceholder": "Ваш Email", // Ключ для плейсхолдера
-    "contact.messagePlaceholder": "Ваше сообщение...", // Ключ для плейсхолдера
-    "contact.nameLabel": "Имя", // Ключ для скрытой метки
-    "contact.emailLabel": "Email", // Ключ для скрытой метки
-    "contact.messageLabel": "Сообщение", // Ключ для скрытой метки
-    "contact.submit": "Отправить",
-    "footer.copyright": "© 2024 Мой первый сайт",
-    "image.alt": "Портретное фото",
-    "image.caption": "Токио",
-    "gallery.image1.alt": "Пример работы 1", // Alt для галереи
+    "skills.js": "JavaScript",
+    "skills.react": "React", // Пример дополнительного
+    "skills.git": "Git & GitHub", // Пример дополнительного
+    "skills.other": "[Node.js]", // Пример дополнительного
+    "skills.japanese": "Японский: JLPT N1", // Уровень лучше указать здесь
+    "skills.english": "Английский: C1",   // Уровень лучше указать здесь
+    "skills.russian": "Русский: Родной",
+    "skills.communication": "Межкультурная коммуникация", // Пример Soft Skill
+    "skills.problemSolving": "Решение проблем", // Пример Soft Skill
+
+    // Gallery (index.html)
+    "gallery.image1.alt": "Пример работы 1",
     "gallery.image2.alt": "Пример работы 2",
-    "gallery.image3.alt": "Пример работы 3"
-    // Убраны дублирующиеся ключи "page_title", "main_title" и т.д. Оставьте только один набор для каждой страницы или используйте более специфичные ключи.
+    "gallery.image3.alt": "Пример работы 3",
+
+    // Portfolio Teasers (index.html)
+    "teasers.title": "Узнайте больше",
+    "teasers.education.title": "Образование",
+    "teasers.education.desc": "МГПУ, Университет Цукубы, курсы программирования.",
+    "teasers.cta": "Подробнее",
+    "teasers.experience.title": "Опыт работы",
+    "teasers.experience.desc": "Локализация, сопровождение, разработка, преподавание.",
+    "teasers.services.title": "Услуги",
+    "teasers.services.desc": "Веб-разработка, локализация для японского рынка.",
+    "teasers.code.title": "Примеры Кода",
+    "teasers.code.desc": "Интерактивные демонстрации и фрагменты кода.",
+
+    // FAQ (index.html)
+    "faq.title": "Часто задаваемые вопросы",
+    "faq.question1": "Как вы начали программировать?",
+    "faq.answer1": "Я начал с онлайн-курсов и практики...",
+    "faq.question2": "Какие языки вы знаете?",
+    "faq.answer2": "Японский, Английский, Русский...",
+
+    // Contact Form (index.html & potentially other pages)
+    "contact.title": "Свяжитесь со мной",
+    "contact.namePlaceholder": "Ваше имя",
+    "contact.emailPlaceholder": "Ваш Email",
+    "contact.messagePlaceholder": "Ваше сообщение...",
+    "contact.nameLabel": "Имя",
+    "contact.emailLabel": "Email",
+    "contact.messageLabel": "Сообщение",
+    "contact.submit": "Отправить",
+    "contact.success": "Сообщение успешно отправлено!", // Для JS alert
+    "contact.error": "Ошибка отправки. Попробуйте позже.", // Для JS alert
+    "contact.sending": "Отправка...", // Для JS (если нужно)
+
+    // Final CTA (index.html)
+    "finalCta.title": "Готов(а) к новым вызовам в Японии!",
+    "finalCta.text": "Давайте обсудим, как мои навыки могут быть полезны вашему проекту.",
+    "finalCta.email": "Написать на Email",
+    "finalCta.linkedin": "LinkedIn",
+    "finalCta.github": "GitHub",
+
+    // Footer (Common)
+    "footer.copyright": "© 2024 Бородина Лидия",
+
+    // --- Ключи для страницы Опыта (experience.html) ---
+    "experiencePage.pageTitle": "Опыт работы",
+    "experiencePage.mainTitle": "Профессиональный Путь",
+    "experiencePage.introText": "Мой опыт охватывает локализацию игр, преподавание японского языка, устный перевод и сопровождение иностранных гостей, а также работу в сфере японского сервиса. Это позволило мне развить как технические, так и межкультурные коммуникативные навыки, умение решать нестандартные задачи и адаптироваться к различным рабочим средам.",
+    "experiencePage.stat1.value": "1+",
+    "experiencePage.stat1.label": "Год опыта в локализации",
+    "experiencePage.stat2.value": "3",
+    "experiencePage.stat2.label": "Рабочих языка (RU, EN, JP)",
+    "experiencePage.stat3.value": "5+",
+    "experiencePage.stat3.label": "Успешных учеников (N5/N4)",
+    "experiencePage.stat4.value": "2",
+    "experiencePage.stat4.label": "Сферы устного перевода (Бизнес, Культура)",
+    "experiencePage.localization.title": "Локализация Игр (Английский -> Русский)",
+    "experiencePage.localization.companyLabel": "Компания:",
+    "experiencePage.localization.companyValue": "Fruitbat Factory (Финляндия, Удаленно)",
+    "experiencePage.localization.roleLabel": "Роль:",
+    "experiencePage.localization.roleValue": "Локализатор контента",
+    "experiencePage.localization.datesLabel": "Даты:",
+    "experiencePage.localization.datesValue": "Июль 2023 – Настоящее время",
+    "experiencePage.localization.projectLabel": "Проект:",
+    "experiencePage.localization.projectValue": "Игра \"100% Orange Juice\"",
+    "experiencePage.responsibilities": "Основные Обязанности:",
+    "experiencePage.localization.resp1": "Перевод и адаптация игровых текстов: диалоги персонажей, описания карточек, элементы интерфейса (меню), объявления, обновления и DLC.",
+    "experiencePage.localization.resp2": "Обеспечение стилистического единства и соответствия лору игры.",
+    "experiencePage.localization.resp3": "Работа с системами контроля версий и файлообменниками для получения задач и отправки готовых переводов.",
+    "experiencePage.achievements": "Ключевые Достижения:",
+    "experiencePage.localization.ach1": "Обеспечила качественную и культурно адаптированную русскую локализацию для N+ обновлений и DLC, сохранив оригинальный юмор и нюансы персонажей.",
+    "experiencePage.localization.ach2": "Успешно справлялась со сложной игровой терминологией и неологизмами, находя точные эквиваленты в русском языке.",
+    "experiencePage.localization.ach3": "Наладила эффективный рабочий процесс с использованием предоставленных инструментов, всегда соблюдая установленные сроки.",
+    "experiencePage.toolsLabel": "Используемые инструменты:",
+    "experiencePage.toolsValueLocalization": "Visual Studio Code, TortoiseSVN, GitHub (для отслеживания задач), Dropbox.", // Используем этот ключ
+    "experiencePage.skillsLabel": "Развитые навыки:",
+    "experiencePage.skillsValueLocalization": "Внимание к деталям, работа с терминологией, контроль версий, соблюдение сроков, лингвистическая адаптация.",
+    "experiencePage.tutoring.title": "Преподавание Японского Языка",
+    "experiencePage.tutoring.platformLabel": "Платформа:",
+    "experiencePage.tutoring.platformValue": "Онлайн (самостоятельный поиск учеников)",
+    "experiencePage.tutoring.roleLabel": "Роль:",
+    "experiencePage.tutoring.roleValue": "Учитель японского языка (уровни N5-N4)",
+    "experiencePage.tutoring.datesLabel": "Даты:",
+    "experiencePage.tutoring.datesValue": "Август 2023 – Март 2024",
+    "experiencePage.tutoring.resp1": "Разработка и проведение индивидуальных онлайн-уроков японского языка для начинающих.",
+    "experiencePage.tutoring.resp2": "Подбор и адаптация учебных материалов (Нечаева, Tae Kim Grammar Guide, Bunpro.jp) под нужды каждого ученика.",
+    "experiencePage.tutoring.resp3": "Использование интерактивных инструментов (Zoom, Miro/Jamboard) для повышения вовлеченности.",
+    "experiencePage.tutoring.resp4": "Отслеживание прогресса учеников и предоставление обратной связи.",
+    "experiencePage.tutoring.ach1": "Разработала персонализированные учебные планы для 5+ учеников, что позволило им достичь уверенного уровня N5/N4 и успешно сдать соответствующие тесты/продемонстрировать навыки.",
+    "experiencePage.tutoring.ach2": "Создала позитивную и поддерживающую атмосферу на занятиях, мотивируя учеников к регулярному изучению языка.",
+    "experiencePage.tutoring.ach3": "Эффективно управляла своим расписанием и коммуникацией с учениками на онлайн-платформах.",
+    "experiencePage.toolsValueTutoring": "Zoom, Miro (или Google Jamboard), Учебные пособия Нечаевой, Tae Kim Grammar Guide, Bunpro.jp.",
+    "experiencePage.skillsValueTutoring": "Педагогика, планирование уроков, адаптация материала, межличностная коммуникация, организационные навыки, использование онлайн-инструментов.",
+    "experiencePage.interpreting.title": "Сопровождение и Устный Перевод (Японский <-> Русский)",
+    "experiencePage.interpreting.orgLabel": "Организация:",
+    "experiencePage.interpreting.orgValue": "Японский дом (Стажировка)",
+    "experiencePage.interpreting.eventLabel": "Мероприятие:",
+    "experiencePage.interpreting.eventValue": "Фестиваль японской культуры \"Hinode Power Japan\"",
+    "experiencePage.interpreting.datesLabel": "Даты:",
+    "experiencePage.interpreting.datesValue": "[202X]", // Замените на год
+    "experiencePage.interpreting.resp1": "Полное сопровождение японских гостей (члены жюри, музыканты, соучредители фестиваля) в течение дня в Москве.",
+    "experiencePage.interpreting.resp2": "Обеспечение устного последовательного перевода во время официальных частей мероприятия, неформального общения, посещения культурных объектов и ресторанов.",
+    "experiencePage.interpreting.resp3": "Решение организационных и бытовых вопросов гостей, координация с организаторами фестиваля.",
+    "experiencePage.interpreting.ach1": "Успешно обеспечила взаимопонимание между японскими и российскими участниками (музыкантами-барабанщиками), точно передавая специфическую терминологию и культурные нюансы во время обсуждений и совместных активностей.",
+    "experiencePage.interpreting.ach2": "Обеспечила комфортное пребывание и позитивный опыт для японских гостей, оперативно решая возникающие вопросы и демонстрируя глубокое понимание японского этикета.",
+    "experiencePage.interpreting.ach3": "Продемонстрировала высокую стрессоустойчивость и адаптивность, работая в динамичной среде фестиваля.",
+    "experiencePage.interpreting.photo1Alt": "Фото с фестиваля Hinode 1",
+    "experiencePage.interpreting.photo2Alt": "Фото с японскими гостями",
+    "experiencePage.skillsValueInterpreting": "Последовательный устный перевод (JP<->RU), межкультурная коммуникация, деловой этикет (японский), решение проблем, ответственность, стрессоустойчивость, адаптивность.",
+    "experiencePage.mosburger.title": "Работа в Сфере Обслуживания (Япония)",
+    "experiencePage.mosburger.companyLabel": "Компания:",
+    "experiencePage.mosburger.companyValue": "MOS Food Services, Inc. (Mosburger)",
+    "experiencePage.mosburger.roleLabel": "Роль:",
+    "experiencePage.mosburger.roleValue": "Кассир / Член команды",
+    "experiencePage.mosburger.locationLabel": "Местоположение:",
+    "experiencePage.mosburger.locationValue": "Цукуба, Япония",
+    "experiencePage.mosburger.datesLabel": "Даты:",
+    "experiencePage.mosburger.datesValue": "Июнь 2024 – Сентябрь 2024",
+    "experiencePage.mosburger.resp1": "Прием заказов у посетителей в зале и через систему Drive-thru (ドライブスルー).",
+    "experiencePage.mosburger.resp2": "Консультирование клиентов по меню.",
+    "experiencePage.mosburger.resp3": "Приготовление напитков и сборка заказов.",
+    "experiencePage.mosburger.resp4": "Поддержание чистоты в зале.",
+    "experiencePage.mosburger.resp5": "Взаимодействие с командой, следование стандартам сервиса и корпоративным традициям (утреннее чтение девиза компании, совместные мероприятия \"номикаи\").",
+    "experiencePage.mosburger.ach1": "Освоила навыки многозадачности в условиях высокой нагрузки, эффективно обрабатывая заказы из Drive-thru и от клиентов в зале одновременно в пиковые часы.",
+    "experiencePage.mosburger.ach2": "Благодаря наставничеству старших коллег (семпаев) и руководства, отточила скорость выполнения задач, сохранив при этом высокие стандарты японского гостеприимства и вежливости (омотэнаси).",
+    "experiencePage.mosburger.ach3": "Успешно адаптировалась к японской рабочей культуре, стандартам сервиса и выстроила продуктивные отношения в коллективе.",
+    "experiencePage.skillsValueMosburger": "Японский язык (разговорный, рабочий), обслуживание клиентов (стандарты \"омотэнаси\"), многозадачность, работа в команде, стрессоустойчивость, культурная адаптация, работа с кассой."
   },
   en: {
-    "page.title": "My Website",
-    "contact.success": "Message sent successfully!",
-    "contact.error": "Sending error. Please try later.",
-    "contact.sending": "Sending...", // <<< ДОБАВЛЕНА ЗАПЯТАЯ
-    "main_title": "Academic Journey 🎓",
-    "current_status": "4th Year Student",
-    "year1": "2020-2024",
-    "degree": "Bachelor of Linguistics",
-    "specialty": "Major:",
-    "specialty_name": "Translation Studies (Japanese)",
-    "gpa": "GPA",
+    // --- Common & index.html ---
+    "page.title": "Borodina Lidiia - Web Developer & Linguist",
     "nav.home": "Home",
     "nav.about": "Education",
     "nav.experience": "Experience",
     "nav.services": "Services",
     "nav.playground": "Code",
-    "welcome": "Welcome!",
     "theme.toggle": "Toggle theme",
+
+    // Hero Section (index.html)
+    "hero.name": "Borodina Lidiia",
+    "hero.title": "Web Developer | Japanese Linguist | Cross-Cultural Communication",
+    "hero.description": "Building responsive and functional websites using [Tech 1, Tech 2]. Fluent in Japanese (JLPT N1) and English (C1). Seeking interesting projects and growth opportunities in Japan's tech sphere.",
+    "hero.cta.contact": "Contact Me",
+    "hero.cta.resume": "View Resume (JP)",
+
+    // Intro Section (index.html)
     "about.title": "About Me",
     "about.education": "Education",
     "about.education.item1": "4th year student at MSPU: Japanese Translator",
@@ -90,18 +217,56 @@ const translations = {
     "experience.item2": "Personal assistance for Japanese CEOs",
     "experience.item3": "Customer service: Cashier in Japan (Mosburger)",
     "experience.item4": "Teaching Russian to foreign students",
-    "skills.title": "My Skills",
+    "introKeyPoints.title": "My Approach",
+    "introKeyPoints.item1": "Attention to detail and cultural nuances.",
+    "introKeyPoints.item2": "Focus on user needs and business goals.",
+    "introKeyPoints.item3": "Commitment to clean, maintainable code.",
+    "introKeyPoints.item4": "Effective communication in three languages.",
+    "image.alt": "Portrait photo",
+    "image.caption": "Tokyo",
+
+    // Skills Highlights (index.html)
+    "skillsHighlights.title": "Key Competencies",
+    "skillsHighlights.tech": "Technical Skills",
+    "skillsHighlights.lang": "Language Skills",
+    "skillsHighlights.soft": "Soft Skills",
     "skills.html": "HTML",
     "skills.css": "CSS",
-    "skills.js": "JavaScript (learning)",
-    "skills.japanese": "Japanese (Advanced)",
-    "skills.english": "English (Advanced)",
-    "skills.russian": "Russian (Native)",
+    "skills.js": "JavaScript",
+    "skills.react": "React",
+    "skills.git": "Git & GitHub",
+    "skills.other": "[Node.js]",
+    "skills.japanese": "Japanese: JLPT N1",
+    "skills.english": "English: C1",
+    "skills.russian": "Russian: Native",
+    "skills.communication": "Cross-cultural Communication",
+    "skills.problemSolving": "Problem Solving",
+
+    // Gallery (index.html)
+    "gallery.image1.alt": "Work Example 1",
+    "gallery.image2.alt": "Work Example 2",
+    "gallery.image3.alt": "Work Example 3",
+
+    // Portfolio Teasers (index.html)
+    "teasers.title": "Learn More",
+    "teasers.education.title": "Education",
+    "teasers.education.desc": "MSPU, University of Tsukuba, programming courses.",
+    "teasers.cta": "Details",
+    "teasers.experience.title": "Work Experience",
+    "teasers.experience.desc": "Localization, escort interpreting, development, tutoring.",
+    "teasers.services.title": "Services",
+    "teasers.services.desc": "Web development, localization for the Japanese market.",
+    "teasers.code.title": "Code Samples",
+    "teasers.code.desc": "Interactive demos and code snippets.",
+
+    // FAQ (index.html)
     "faq.title": "Frequently Asked Questions",
     "faq.question1": "How did you start programming?",
     "faq.answer1": "I started with online courses and practice...",
     "faq.question2": "Which languages do you speak?",
     "faq.answer2": "Japanese, English, Russian...",
+
+    // Contact Form (index.html & potentially other pages)
     "contact.title": "Contact Me",
     "contact.namePlaceholder": "Your Name",
     "contact.emailPlaceholder": "Your Email",
@@ -110,32 +275,122 @@ const translations = {
     "contact.emailLabel": "Email",
     "contact.messageLabel": "Message",
     "contact.submit": "Submit",
-    "footer.copyright": "© 2024 My First Website",
-    "image.alt": "Portrait photo",
-    "image.caption": "Tokyo",
-    "gallery.image1.alt": "Work Example 1",
-    "gallery.image2.alt": "Work Example 2",
-    "gallery.image3.alt": "Work Example 3"
+    "contact.success": "Message sent successfully!",
+    "contact.error": "Sending error. Please try later.",
+    "contact.sending": "Sending...",
+
+    // Final CTA (index.html)
+    "finalCta.title": "Ready for new challenges in Japan!",
+    "finalCta.text": "Let's discuss how my skills can benefit your project.",
+    "finalCta.email": "Email Me",
+    "finalCta.linkedin": "LinkedIn",
+    "finalCta.github": "GitHub",
+
+    // Footer (Common)
+    "footer.copyright": "© 2024 Borodina Lidiia",
+
+    // --- Keys for Experience Page (experience.html) ---
+    "experiencePage.pageTitle": "Work Experience",
+    "experiencePage.mainTitle": "Professional Journey",
+    "experiencePage.introText": "My experience spans game localization, Japanese language tutoring, interpreting and assisting foreign guests, and working in the Japanese service industry. This has allowed me to develop both technical and cross-cultural communication skills, the ability to solve unconventional problems, and adapt to various work environments.",
+    "experiencePage.stat1.value": "1+",
+    "experiencePage.stat1.label": "Year of Localization Experience",
+    "experiencePage.stat2.value": "3",
+    "experiencePage.stat2.label": "Working Languages (RU, EN, JP)",
+    "experiencePage.stat3.value": "5+",
+    "experiencePage.stat3.label": "Successful Students (N5/N4)",
+    "experiencePage.stat4.value": "2",
+    "experiencePage.stat4.label": "Interpreting Fields (Business, Culture)",
+    "experiencePage.localization.title": "Game Localization (English -> Russian)",
+    "experiencePage.localization.companyLabel": "Company:",
+    "experiencePage.localization.companyValue": "Fruitbat Factory (Finland, Remote)",
+    "experiencePage.localization.roleLabel": "Role:",
+    "experiencePage.localization.roleValue": "Content Localizer",
+    "experiencePage.localization.datesLabel": "Dates:",
+    "experiencePage.localization.datesValue": "July 2023 – Present",
+    "experiencePage.localization.projectLabel": "Project:",
+    "experiencePage.localization.projectValue": "\"100% Orange Juice\" Game",
+    "experiencePage.responsibilities": "Key Responsibilities:",
+    "experiencePage.localization.resp1": "Translation and adaptation of game texts: character dialogues, card descriptions, UI elements (menus), announcements, updates, and DLCs.",
+    "experiencePage.localization.resp2": "Ensuring stylistic consistency and adherence to the game's lore.",
+    "experiencePage.localization.resp3": "Working with version control systems and file-sharing platforms to receive tasks and submit completed translations.",
+    "experiencePage.achievements": "Key Achievements:",
+    "experiencePage.localization.ach1": "Provided high-quality and culturally adapted Russian localization for N+ updates and DLCs, preserving the original humor and character nuances.",
+    "experiencePage.localization.ach2": "Successfully handled complex game terminology and neologisms, finding accurate Russian equivalents.",
+    "experiencePage.localization.ach3": "Established an efficient workflow using the provided tools, consistently meeting deadlines.",
+    "experiencePage.toolsLabel": "Tools Used:",
+    "experiencePage.toolsValueLocalization": "Visual Studio Code, TortoiseSVN, GitHub (for task tracking), Dropbox.",
+    "experiencePage.skillsLabel": "Skills Developed:",
+    "experiencePage.skillsValueLocalization": "Attention to detail, terminology management, version control, deadline adherence, linguistic adaptation.",
+    "experiencePage.tutoring.title": "Japanese Language Tutoring",
+    "experiencePage.tutoring.platformLabel": "Platform:",
+    "experiencePage.tutoring.platformValue": "Online (independent student acquisition)",
+    "experiencePage.tutoring.roleLabel": "Role:",
+    "experiencePage.tutoring.roleValue": "Japanese Language Tutor (Levels N5-N4)",
+    "experiencePage.tutoring.datesLabel": "Dates:",
+    "experiencePage.tutoring.datesValue": "August 2023 – March 2024",
+    "experiencePage.tutoring.resp1": "Developed and conducted individual online Japanese lessons for beginners.",
+    "experiencePage.tutoring.resp2": "Selected and adapted teaching materials (Nechaeva, Tae Kim Grammar Guide, Bunpro.jp) to meet each student's needs.",
+    "experiencePage.tutoring.resp3": "Utilized interactive tools (Zoom, Miro/Jamboard) to enhance engagement.",
+    "experiencePage.tutoring.resp4": "Tracked student progress and provided feedback.",
+    "experiencePage.tutoring.ach1": "Developed personalized learning plans for 5+ students, enabling them to reach a confident N5/N4 level and successfully pass relevant tests/demonstrate skills.",
+    "experiencePage.tutoring.ach2": "Created a positive and supportive learning atmosphere, motivating students for regular language study.",
+    "experiencePage.tutoring.ach3": "Effectively managed scheduling and communication with students on online platforms.",
+    "experiencePage.toolsValueTutoring": "Zoom, Miro (or Google Jamboard), Nechaeva textbooks, Tae Kim Grammar Guide, Bunpro.jp.",
+    "experiencePage.skillsValueTutoring": "Pedagogy, lesson planning, material adaptation, interpersonal communication, organizational skills, online tool proficiency.",
+    "experiencePage.interpreting.title": "Escort Interpreting (Japanese <-> Russian)",
+    "experiencePage.interpreting.orgLabel": "Organization:",
+    "experiencePage.interpreting.orgValue": "Japan House (Internship)",
+    "experiencePage.interpreting.eventLabel": "Event:",
+    "experiencePage.interpreting.eventValue": "\"Hinode Power Japan\" Cultural Festival",
+    "experiencePage.interpreting.datesLabel": "Dates:",
+    "experiencePage.interpreting.datesValue": "[202X]", // Replace with year
+    "experiencePage.interpreting.resp1": "Provided full escort support for Japanese guests (jury members, musicians, festival co-founders) throughout the day in Moscow.",
+    "experiencePage.interpreting.resp2": "Delivered consecutive interpretation during official event parts, informal communication, cultural site visits, and dining.",
+    "experiencePage.interpreting.resp3": "Resolved guests' organizational and logistical issues, coordinating with festival organizers.",
+    "experiencePage.interpreting.ach1": "Successfully facilitated mutual understanding between Japanese and Russian participants (drummers), accurately conveying specific terminology and cultural nuances during discussions and joint activities.",
+    "experiencePage.interpreting.ach2": "Ensured a comfortable stay and positive experience for Japanese guests by promptly addressing issues and demonstrating a deep understanding of Japanese etiquette.",
+    "experiencePage.interpreting.ach3": "Showcased high stress tolerance and adaptability while working in the dynamic festival environment.",
+    "experiencePage.interpreting.photo1Alt": "Photo from Hinode festival 1",
+    "experiencePage.interpreting.photo2Alt": "Photo with Japanese guests",
+    "experiencePage.skillsValueInterpreting": "Consecutive Interpreting (JP<->RU), Cross-cultural Communication, Business Etiquette (Japanese), Problem Solving, Responsibility, Stress Tolerance, Adaptability.",
+    "experiencePage.mosburger.title": "Customer Service Experience (Japan)",
+    "experiencePage.mosburger.companyLabel": "Company:",
+    "experiencePage.mosburger.companyValue": "MOS Food Services, Inc. (Mosburger)",
+    "experiencePage.mosburger.roleLabel": "Role:",
+    "experiencePage.mosburger.roleValue": "Cashier / Team Member",
+    "experiencePage.mosburger.locationLabel": "Location:",
+    "experiencePage.mosburger.locationValue": "Tsukuba, Japan",
+    "experiencePage.mosburger.datesLabel": "Dates:",
+    "experiencePage.mosburger.datesValue": "June 2024 – September 2024",
+    "experiencePage.mosburger.resp1": "Took customer orders at the counter and via the Drive-thru system.",
+    "experiencePage.mosburger.resp2": "Assisted customers with menu inquiries.",
+    "experiencePage.mosburger.resp3": "Prepared beverages and assembled orders.",
+    "experiencePage.mosburger.resp4": "Maintained cleanliness in the dining area.",
+    "experiencePage.mosburger.resp5": "Collaborated with the team, adhering to service standards and corporate traditions (morning motto recitation, team gatherings \"nomikai\").",
+    "experiencePage.mosburger.ach1": "Mastered multitasking skills under high pressure, efficiently handling Drive-thru and counter orders simultaneously during peak hours.",
+    "experiencePage.mosburger.ach2": "Refined task execution speed while maintaining high standards of Japanese hospitality and politeness (omotenashi), thanks to guidance from supervisors and senior colleagues (senpai).",
+    "experiencePage.mosburger.ach3": "Successfully adapted to the Japanese work culture and service standards, building productive relationships within the team.",
+    "experiencePage.skillsValueMosburger": "Japanese (Conversational, Business), Customer Service (Omotenashi Standards), Multitasking, Teamwork, Stress Tolerance, Cultural Adaptation, POS Operation."
   },
   ja: {
-    "page.title": "私のサイト",
-    "contact.success": "メッセージを送信しました！",
-    "contact.error": "送信エラー。後でもう一度お試しください。",
-    "contact.sending": "送信中...", // <<< ДОБАВЛЕНА ЗАПЯТАЯ
-    "main_title": "学業の歩み 🎓",
-    "current_status": "4年生",
-    "year1": "2020-2024年",
-    "degree": "言語学学士",
-    "specialty": "専攻:",
-    "specialty_name": "翻訳学（日本語）",
-    "gpa": "GPA",
+    // --- Общие и для index.html ---
+    "page.title": "ボロディナ・リディア - ウェブ開発者 & 言語学者",
     "nav.home": "ホーム",
     "nav.about": "学歴",
     "nav.experience": "職務経歴",
     "nav.services": "サービス",
     "nav.playground": "コード",
-    "welcome": "ようこそ！",
     "theme.toggle": "テーマ切替",
+
+    // Hero Section (index.html)
+    "hero.name": "ボロディナ・リディア",
+    "hero.title": "ウェブ開発者 | 日本語言語学者 | 異文化コミュニケーション",
+    "hero.description": "[技術1、技術2]を使用して、レスポンシブで機能的なウェブサイトを構築します。日本語（JLPT N1）と英語（C1）に堪能。日本の技術分野での興味深いプロジェクトと成長の機会を探しています。",
+    "hero.cta.contact": "連絡する",
+    "hero.cta.resume": "履歴書を見る (JP)",
+
+    // Intro Section (index.html)
     "about.title": "自己紹介",
     "about.education": "学歴",
     "about.education.item1": "モスクワ市立教育大学4年生：日本語翻訳者",
@@ -147,18 +402,56 @@ const translations = {
     "experience.item2": "日本企業CEOのパーソナルアシスタント",
     "experience.item3": "接客業務：モスバーガーでのレジ担当（日本）",
     "experience.item4": "外国人向けロシア語教育",
-    "skills.title": "スキル",
+    "introKeyPoints.title": "私のアプローチ",
+    "introKeyPoints.item1": "細部と文化的なニュアンスへの注意。",
+    "introKeyPoints.item2": "ユーザーとビジネス目標への注力。",
+    "introKeyPoints.item3": "クリーンで保守可能なコードへのコミットメント。",
+    "introKeyPoints.item4": "3言語での効果的なコミュニケーション。",
+    "image.alt": "ポートレート写真",
+    "image.caption": "東京",
+
+     // Skills Highlights (index.html)
+    "skillsHighlights.title": "主要な能力",
+    "skillsHighlights.tech": "技術スキル",
+    "skillsHighlights.lang": "語学スキル",
+    "skillsHighlights.soft": "ソフトスキル",
     "skills.html": "HTML",
     "skills.css": "CSS",
-    "skills.js": "JavaScript (学習中)",
-    "skills.japanese": "日本語（上級）",
-    "skills.english": "英語（上級）",
-    "skills.russian": "ロシア語（ネイティブ）",
+    "skills.js": "JavaScript",
+    "skills.react": "React",
+    "skills.git": "Git & GitHub",
+    "skills.other": "[Node.js]",
+    "skills.japanese": "日本語: JLPT N1",
+    "skills.english": "英語: C1",
+    "skills.russian": "ロシア語: ネイティブ",
+    "skills.communication": "異文化コミュニケーション",
+    "skills.problemSolving": "問題解決能力",
+
+    // Gallery (index.html)
+    "gallery.image1.alt": "制作例 1",
+    "gallery.image2.alt": "制作例 2",
+    "gallery.image3.alt": "制作例 3",
+
+    // Portfolio Teasers (index.html)
+    "teasers.title": "詳細を見る",
+    "teasers.education.title": "学歴",
+    "teasers.education.desc": "モスクワ市立教育大学、筑波大学、プログラミングコース。",
+    "teasers.cta": "詳細",
+    "teasers.experience.title": "職務経歴",
+    "teasers.experience.desc": "ローカライズ、随行通訳、開発、教育。",
+    "teasers.services.title": "サービス",
+    "teasers.services.desc": "ウェブ開発、日本市場向けローカライズ。",
+    "teasers.code.title": "コードサンプル",
+    "teasers.code.desc": "インタラクティブなデモとコードスニペット。",
+
+    // FAQ (index.html)
     "faq.title": "よくある質問",
     "faq.question1": "プログラミングを始めたきっかけは？",
     "faq.answer1": "オンラインコースと自主学習から始めました...",
     "faq.question2": "どの言語を話せますか？",
     "faq.answer2": "日本語、英語、ロシア語...",
+
+    // Contact Form (index.html & potentially other pages)
     "contact.title": "連絡先",
     "contact.namePlaceholder": "お名前",
     "contact.emailPlaceholder": "メールアドレス",
@@ -167,13 +460,105 @@ const translations = {
     "contact.emailLabel": "メールアドレス",
     "contact.messageLabel": "メッセージ",
     "contact.submit": "送信",
-    "footer.copyright": "© 2024 私の最初のサイト",
-    "image.alt": "ポートレート写真",
-    "image.caption": "東京",
-    "gallery.image1.alt": "制作例 1",
-    "gallery.image2.alt": "制作例 2",
-    "gallery.image3.alt": "制作例 3"
+    "contact.success": "メッセージを送信しました！",
+    "contact.error": "送信エラー。後でもう一度お試しください。",
+    "contact.sending": "送信中...",
+
+    // Final CTA (index.html)
+    "finalCta.title": "日本での新たな挑戦への準備はできています！",
+    "finalCta.text": "私のスキルがあなたのプロジェクトにどのように役立つか話し合いましょう。",
+    "finalCta.email": "メールを送る",
+    "finalCta.linkedin": "LinkedIn",
+    "finalCta.github": "GitHub",
+
+    // Footer (Common)
+    "footer.copyright": "© 2024 ボロディナ・リディア",
+
+    // --- 職務経歴ページ用のキー (experience.html) ---
+    "experiencePage.pageTitle": "職務経歴",
+    "experiencePage.mainTitle": "プロフェッショナルな歩み",
+    "experiencePage.introText": "私の経験は、ゲームのローカライズ、日本語教育、通訳・外国人ゲストの随行、日本のサービス業での勤務など多岐にわたります。これにより、技術的なスキルと異文化コミュニケーション能力、型にはまらない問題解決能力、様々な労働環境への適応力を養うことができました。",
+    "experiencePage.stat1.value": "1年以上",
+    "experiencePage.stat1.label": "ローカライズ経験",
+    "experiencePage.stat2.value": "3",
+    "experiencePage.stat2.label": "使用言語 (RU, EN, JP)",
+    "experiencePage.stat3.value": "5人以上",
+    "experiencePage.stat3.label": "指導成功生徒 (N5/N4)",
+    "experiencePage.stat4.value": "2",
+    "experiencePage.stat4.label": "通訳分野 (ビジネス, 文化)",
+    "experiencePage.localization.title": "ゲームローカライゼーション (英語 -> ロシア語)",
+    "experiencePage.localization.companyLabel": "会社:",
+    "experiencePage.localization.companyValue": "Fruitbat Factory (フィンランド, リモート)",
+    "experiencePage.localization.roleLabel": "役職:",
+    "experiencePage.localization.roleValue": "コンテンツローカライザー",
+    "experiencePage.localization.datesLabel": "期間:",
+    "experiencePage.localization.datesValue": "2023年7月 – 現在",
+    "experiencePage.localization.projectLabel": "プロジェクト:",
+    "experiencePage.localization.projectValue": "ゲーム「100% Orange Juice」",
+    "experiencePage.responsibilities": "主な職務:",
+    "experiencePage.localization.resp1": "ゲームテキストの翻訳・翻案：キャラクターの台詞、カード説明、UI要素（メニュー）、お知らせ、アップデート、DLC。",
+    "experiencePage.localization.resp2": "文体の一貫性とゲームの世界観への準拠を保証。",
+    "experiencePage.localization.resp3": "バージョン管理システムやファイル共有ツールを使用し、タスク受領と翻訳納品を実施。",
+    "experiencePage.achievements": "主な実績:",
+    "experiencePage.localization.ach1": "N以上のアップデートとDLCに対し、原作のユーモアとキャラクターのニュアンスを保ちつつ、高品質で文化的に適応したロシア語ローカライズを提供。",
+    "experiencePage.localization.ach2": "複雑なゲーム用語や造語に対し、正確なロシア語の対応表現を見つけ、うまく対応。",
+    "experiencePage.localization.ach3": "提供されたツールを使用して効率的なワークフローを確立し、常に納期を遵守。",
+    "experiencePage.toolsLabel": "使用ツール:",
+    "experiencePage.toolsValueLocalization": "Visual Studio Code, TortoiseSVN, GitHub (タスク管理用), Dropbox.",
+    "experiencePage.skillsLabel": "習得スキル:",
+    "experiencePage.skillsValueLocalization": "細部への注意、用語管理、バージョン管理、納期管理、言語的適応。",
+    "experiencePage.tutoring.title": "日本語教育",
+    "experiencePage.tutoring.platformLabel": "プラットフォーム:",
+    "experiencePage.tutoring.platformValue": "オンライン (個人での生徒募集)",
+    "experiencePage.tutoring.roleLabel": "役職:",
+    "experiencePage.tutoring.roleValue": "日本語教師 (N5-N4レベル)",
+    "experiencePage.tutoring.datesLabel": "期間:",
+    "experiencePage.tutoring.datesValue": "2023年8月 – 2024年3月",
+    "experiencePage.tutoring.resp1": "初心者向けの個人オンライン日本語レッスンの開発と実施。",
+    "experiencePage.tutoring.resp2": "各生徒のニーズに合わせた教材（ネチャーエワ、Tae Kim Grammar Guide, Bunpro.jp）の選定と調整。",
+    "experiencePage.tutoring.resp3": "エンゲージメント向上のためのインタラクティブツール（Zoom, Miro/Jamboard）の活用。",
+    "experiencePage.tutoring.resp4": "生徒の進捗状況の追跡とフィードバックの提供。",
+    "experiencePage.tutoring.ach1": "5人以上の生徒に対し、個別学習計画を作成し、N5/N4レベルの確実な達成と関連テスト合格/スキル証明を可能にした。",
+    "experiencePage.tutoring.ach2": "授業において、前向きで協力的な雰囲気を作り出し、生徒の定期的な言語学習への意欲を向上。",
+    "experiencePage.tutoring.ach3": "オンラインプラットフォーム上で、自身のスケジュール管理と生徒とのコミュニケーションを効果的に実施。",
+    "experiencePage.toolsValueTutoring": "Zoom, Miro (または Google Jamboard), ネチャーエワ教科書, Tae Kim Grammar Guide, Bunpro.jp.",
+    "experiencePage.skillsValueTutoring": "教育学、授業計画、教材適応、対人コミュニケーション、組織力、オンラインツール活用能力。",
+    "experiencePage.interpreting.title": "随行通訳 (日本語 <-> ロシア語)",
+    "experiencePage.interpreting.orgLabel": "組織:",
+    "experiencePage.interpreting.orgValue": "ジャパンハウス (インターンシップ)",
+    "experiencePage.interpreting.eventLabel": "イベント:",
+    "experiencePage.interpreting.eventValue": "日本文化フェスティバル「Hinode Power Japan」",
+    "experiencePage.interpreting.datesLabel": "期間:",
+    "experiencePage.interpreting.datesValue": "[202X年]", // 年を入れてください
+    "experiencePage.interpreting.resp1": "モスクワ滞在中の日本人ゲスト（審査員、ミュージシャン、フェスティバル共同設立者）への終日随行サポート。",
+    "experiencePage.interpreting.resp2": "イベントの公式部分、非公式な交流、文化施設やレストラン訪問時の逐次通訳。",
+    "experiencePage.interpreting.resp3": "ゲストの組織的・日常的な問題解決、フェスティバル主催者との調整。",
+    "experiencePage.interpreting.ach1": "日本人とロシア人の参加者（ドラマー）間の議論や共同活動において、専門用語や文化的なニュアンスを正確に伝え、相互理解を成功裏に促進。",
+    "experiencePage.interpreting.ach2": "発生する問題に迅速に対応し、日本のエチケットへの深い理解を示すことで、日本人ゲストの快適な滞在とポジティブな経験を保証。",
+    "experiencePage.interpreting.ach3": "ダイナミックなフェスティバル環境で働きながら、高いストレス耐性と適応力を発揮。",
+    "experiencePage.interpreting.photo1Alt": "日の出フェスティバルの写真1",
+    "experiencePage.interpreting.photo2Alt": "日本人ゲストとの写真",
+    "experiencePage.skillsValueInterpreting": "逐次通訳 (日露), 異文化コミュニケーション, ビジネスエチケット（日本）, 問題解決能力, 責任感, ストレス耐性, 適応力。",
+    "experiencePage.mosburger.title": "接客業経験 (日本)",
+    "experiencePage.mosburger.companyLabel": "会社:",
+    "experiencePage.mosburger.companyValue": "株式会社モスフードサービス (モスバーガー)",
+    "experiencePage.mosburger.roleLabel": "役職:",
+    "experiencePage.mosburger.roleValue": "レジ担当 / チームメンバー",
+    "experiencePage.mosburger.locationLabel": "場所:",
+    "experiencePage.mosburger.locationValue": "つくば市、日本",
+    "experiencePage.mosburger.datesLabel": "期間:",
+    "experiencePage.mosburger.datesValue": "2024年6月 – 2024年9月",
+    "experiencePage.mosburger.resp1": "店内カウンターおよびドライブスルーでの顧客からの注文受付。",
+    "experiencePage.mosburger.resp2": "メニューに関する顧客へのコンサルティング。",
+    "experiencePage.mosburger.resp3": "飲み物の準備と注文品の組み立て。",
+    "experiencePage.mosburger.resp4": "ダイニングエリアの清潔維持。",
+    "experiencePage.mosburger.resp5": "チームとの協力、サービス基準と企業文化（朝礼での社訓唱和、懇親会「飲み会」）の遵守。",
+    "experiencePage.mosburger.ach1": "ピーク時にドライブスルーとカウンターの注文を同時に効率的に処理し、高負荷下でのマルチタスク能力を習得。",
+    "experiencePage.mosburger.ach2": "先輩や上司の指導のおかげで、日本の高いおもてなし基準と丁寧さを維持しながら、タスク遂行速度を向上。",
+    "experiencePage.mosburger.ach3": "日本の労働文化とサービス基準にうまく適応し、チーム内で生産的な関係を構築。",
+    "experiencePage.skillsValueMosburger": "日本語（会話、ビジネス）, 接客（おもてなし基準）, マルチタスク, チームワーク, ストレス耐性, 文化適応, POS操作。"
   }
 };
 
-console.log("translations.js loaded successfully."); // Для проверки загрузки
+// Убедитесь, что этот лог выводится при загрузке страницы в консоли
+console.log("translations.js loaded successfully.");
