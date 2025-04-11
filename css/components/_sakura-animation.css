@@ -102,7 +102,7 @@
 .petal:nth-child(9n + 9) { background-image: url('../images/sakura9.png'); animation-delay: 8s, 0.1s; }
 */
 
-/* --- Анимации Лепестков --- */
+/* --- Анимации Лепестков  */
 
 /* Анимация падения (fall) */
 @keyframes fall {
