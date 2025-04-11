@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru"> <!-- Язык будет обновляться JS -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="experience.page_title">Опыт работы</title>
+    <title data-i18n="experiencePage.pageTitle">Опыт работы</title> <!-- Уникальный title -->
     <link rel="stylesheet" href="css/main.css">
+    <style>
+      /* Стиль для скрытия меток (если нет в main.css) */
+      .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
+      /* Простой стиль для галереи внутри секции опыта */
+      .experience-gallery { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
+      .experience-gallery img { max-width: 150px; height: auto; border-radius: 5px; }
+    </style>
 </head>
 <body>
+    <!-- Подключаем Навигацию (можно вынести в отдельный файл и подключать через JS/фреймворк, но для простоты дублируем) -->
     <nav>
         <ul class="menu">
             <li class="controls-group">
-                <div class="custom-select">
+                <div class="custom-select language-switcher">
                     <select id="language-select">
                         <option value="ru">🇷🇺 Русский</option>
                         <option value="en">🇬🇧 English</option>
@@ -26,78 +34,165 @@
             <li class="nav-links">
                 <a href="index.html" data-i18n="nav.home">Главная</a>
                 <a href="about.html" data-i18n="nav.about">Образование</a>
-                <a href="experience.html" data-i18n="nav.experience.title">Опыт</a>
+                <a href="experience.html" data-i18n="nav.experience">Опыт</a>
                 <a href="services.html" data-i18n="nav.services">Услуги</a>
                 <a href="playground.html" data-i18n="nav.playground">Код</a>
             </li>
         </ul>
     </nav>
 
-    <main>
-        <section class="experience-timeline">
-            <h1 data-i18n="experience.main_title">Профессиональный путь</h1>
-            
-            <!-- Полная занятость -->
-            <div class="timeline-section">
-                <h2 data-i18n="experience.full_time">Основная занятость</h2>
-                <div class="timeline-item">
-                    <div class="timeline-date" data-i18n="experience.date1">2023-настоящее время</div>
-                    <div class="timeline-content">
-                        <h3 data-i18n="experience.position1">Старший Переводчик</h3>
-                        <div class="company" data-i18n="experience.company1">Японская IT-компания "Sakura Tech"</div>
-                        <ul class="achievements">
-                            <li data-i18n="experience.achievement1">Локализация UI/UX для мобильных приложений</li>
-                            <li data-i18n="experience.achievement2">Техническая документация (EN/JA → RU)</li>
-                            <li data-i18n="experience.achievement3">Участие в кросс-культурных тренингах</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <!-- Основное содержимое страницы Опыта -->
+    <main class="experience-page"> <!-- Общий контейнер страницы -->
 
-            <!-- Подработка -->
-            <div class="timeline-section part-time">
-                <h2 data-i18n="experience.part_time">Проектная работа</h2>
-                <div class="timeline-item">
-                    <div class="timeline-date" data-i18n="experience.date2">2021-2023</div>
-                    <div class="timeline-content">
-                        <h3 data-i18n="experience.position2">Фриланс-переводчик</h3>
-                        <div class="platforms">
-                            <span data-i18n="experience.platform1">Upwork</span>
-                            <span data-i18n="experience.platform2">Fiverr</span>
-                        </div>
-                        <div class="stats">
-                            <div class="stat-item">
-                                <div class="stat-number">50+</div>
-                                <div data-i18n="experience.stat1">завершенных проектов</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">98%</div>
-                                <div data-i18n="experience.stat2">положительных отзывов</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Дополнительный опыт -->
-            <div class="additional-experience">
-                <h2 data-i18n="experience.other">Дополнительный опыт</h2>
-                <div class="experience-cards">
-                    <div class="exp-card">
-                        <div class="exp-icon">🏪</div>
-                        <h4 data-i18n="experience.job1">Кассир в Mosburger</h4>
-                        <p data-i18n="experience.job1_desc">Обслуживание клиентов на японском языке</p>
-                    </div>
-                    <div class="exp-card">
-                        <div class="exp-icon">👩🏫</div>
-                        <h4 data-i18n="experience.job2">Преподаватель РКИ</h4>
-                        <p data-i18n="experience.job2_desc">Индивидуальные уроки для иностранцев</p>
-                    </div>
-                </div>
-            </div>
+        <!-- 1. Краткое введение -->
+        <section class="experience-intro">
+          <h2 data-i18n="experiencePage.mainTitle">Профессиональный Путь</h2>
+          <p data-i18n="experiencePage.introText">
+            Мой опыт охватывает локализацию игр, преподавание японского языка, устный перевод и сопровождение иностранных гостей, а также работу в сфере японского сервиса. Это позволило мне развить как технические, так и межкультурные коммуникативные навыки, умение решать нестандартные задачи и адаптироваться к различным рабочим средам.
+          </p>
         </section>
+
+        <!-- 2. Статистика -->
+        <section class="stats experience-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-i18n="experiencePage.stat1.value">1+</span>
+            <span class="stat-label" data-i18n="experiencePage.stat1.label">Год опыта в локализации</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-i18n="experiencePage.stat2.value">3</span>
+            <span class="stat-label" data-i18n="experiencePage.stat2.label">Рабочих языка (RU, EN, JP)</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-i18n="experiencePage.stat3.value">5+</span>
+            <span class="stat-label" data-i18n="experiencePage.stat3.label">Успешных учеников (N5/N4)</span>
+          </div>
+           <div class="stat-item">
+            <span class="stat-number" data-i18n="experiencePage.stat4.value">2</span>
+            <span class="stat-label" data-i18n="experiencePage.stat4.label">Сферы устного перевода (Бизнес, Культура)</span>
+          </div>
+        </section>
+
+        <!-- 3. Разделы Опыта -->
+
+        <!-- Секция Опыта 1: Локализация -->
+        <section class="highlight-box experience-section">
+          <h3 data-i18n="experiencePage.localization.title">Локализация Игр (Английский -> Русский)</h3>
+          <p><strong data-i18n="experiencePage.localization.companyLabel">Компания:</strong> <span data-i18n="experiencePage.localization.companyValue">Fruitbat Factory (Финляндия, Удаленно)</span></p>
+          <p><strong data-i18n="experiencePage.localization.roleLabel">Роль:</strong> <span data-i18n="experiencePage.localization.roleValue">Локализатор контента</span></p>
+          <p><strong data-i18n="experiencePage.localization.datesLabel">Даты:</strong> <span data-i18n="experiencePage.localization.datesValue">Июль 2023 – Настоящее время</span></p>
+          <p><strong data-i18n="experiencePage.localization.projectLabel">Проект:</strong> <span data-i18n="experiencePage.localization.projectValue">Игра "100% Orange Juice"</span></p>
+
+          <h4 data-i18n="experiencePage.responsibilities">Основные Обязанности:</h4>
+          <ul>
+            <li data-i18n="experiencePage.localization.resp1">Перевод и адаптация игровых текстов: диалоги персонажей, описания карточек, элементы интерфейса (меню), объявления, обновления и DLC.</li>
+            <li data-i18n="experiencePage.localization.resp2">Обеспечение стилистического единства и соответствия лору игры.</li>
+            <li data-i18n="experiencePage.localization.resp3">Работа с системами контроля версий и файлообменниками для получения задач и отправки готовых переводов.</li>
+          </ul>
+
+          <h4 data-i18n="experiencePage.achievements">Ключевые Достижения:</h4>
+          <ul>
+            <li data-i18n="experiencePage.localization.ach1">Обеспечила качественную и культурно адаптированную русскую локализацию для N+ обновлений и DLC, сохранив оригинальный юмор и нюансы персонажей.</li>
+            <li data-i18n="experiencePage.localization.ach2">Успешно справлялась со сложной игровой терминологией и неологизмами, находя точные эквиваленты в русском языке.</li>
+            <li data-i18n="experiencePage.localization.ach3">Наладила эффективный рабочий процесс с использованием предоставленных инструментов, всегда соблюдая установленные сроки.</li>
+          </ul>
+
+          <p><strong data-i18n="experiencePage.toolsLabel">Используемые инструменты:</strong> <span data-i18n="experiencePage.toolsValue">Visual Studio Code, TortoiseSVN, GitHub (для отслеживания задач), Dropbox.</span></p>
+          <p><strong data-i18n="experiencePage.skillsLabel">Развитые навыки:</strong> <span data-i18n="experiencePage.skillsValueLocalization">Внимание к деталям, работа с терминологией, контроль версий, соблюдение сроков, лингвистическая адаптация.</span></p>
+        </section>
+
+        <!-- Секция Опыта 2: Преподавание -->
+        <section class="highlight-box experience-section">
+          <h3 data-i18n="experiencePage.tutoring.title">Преподавание Японского Языка</h3>
+          <p><strong data-i18n="experiencePage.tutoring.platformLabel">Платформа:</strong> <span data-i18n="experiencePage.tutoring.platformValue">Онлайн (самостоятельный поиск учеников)</span></p>
+          <p><strong data-i18n="experiencePage.tutoring.roleLabel">Роль:</strong> <span data-i18n="experiencePage.tutoring.roleValue">Учитель японского языка (уровни N5-N4)</span></p>
+          <p><strong data-i18n="experiencePage.tutoring.datesLabel">Даты:</strong> <span data-i18n="experiencePage.tutoring.datesValue">Август 2023 – Март 2024</span></p>
+
+          <h4 data-i18n="experiencePage.responsibilities">Основные Обязанности:</h4>
+          <ul>
+            <li data-i18n="experiencePage.tutoring.resp1">Разработка и проведение индивидуальных онлайн-уроков японского языка для начинающих.</li>
+            <li data-i18n="experiencePage.tutoring.resp2">Подбор и адаптация учебных материалов (Нечаева, Tae Kim Grammar Guide, Bunpro.jp) под нужды каждого ученика.</li>
+            <li data-i18n="experiencePage.tutoring.resp3">Использование интерактивных инструментов (Zoom, Miro/Jamboard) для повышения вовлеченности.</li>
+            <li data-i18n="experiencePage.tutoring.resp4">Отслеживание прогресса учеников и предоставление обратной связи.</li>
+          </ul>
+
+          <h4 data-i18n="experiencePage.achievements">Ключевые Достижения:</h4>
+          <ul>
+            <li data-i18n="experiencePage.tutoring.ach1">Разработала персонализированные учебные планы для 5+ учеников, что позволило им достичь уверенного уровня N5/N4 и успешно сдать соответствующие тесты/продемонстрировать навыки.</li>
+            <li data-i18n="experiencePage.tutoring.ach2">Создала позитивную и поддерживающую атмосферу на занятиях, мотивируя учеников к регулярному изучению языка.</li>
+            <li data-i18n="experiencePage.tutoring.ach3">Эффективно управляла своим расписанием и коммуникацией с учениками на онлайн-платформах.</li>
+          </ul>
+
+          <p><strong data-i18n="experiencePage.toolsLabel">Используемые инструменты:</strong> <span data-i18n="experiencePage.toolsValueTutoring">Zoom, Miro (или Google Jamboard), Учебные пособия Нечаевой, Tae Kim Grammar Guide, Bunpro.jp.</span></p>
+          <p><strong data-i18n="experiencePage.skillsLabel">Развитые навыки:</strong> <span data-i18n="experiencePage.skillsValueTutoring">Педагогика, планирование уроков, адаптация материала, межличностная коммуникация, организационные навыки, использование онлайн-инструментов.</span></p>
+        </section>
+
+        <!-- Секция Опыта 3: Сопровождение и Перевод -->
+        <section class="highlight-box experience-section">
+          <h3 data-i18n="experiencePage.interpreting.title">Сопровождение и Устный Перевод (Японский <-> Русский)</h3>
+          <p><strong data-i18n="experiencePage.interpreting.orgLabel">Организация:</strong> <span data-i18n="experiencePage.interpreting.orgValue">Японский дом (Стажировка)</span></p>
+          <p><strong data-i18n="experiencePage.interpreting.eventLabel">Мероприятие:</strong> <span data-i18n="experiencePage.interpreting.eventValue">Фестиваль японской культуры "Hinode Power Japan"</span></p>
+          <p><strong data-i18n="experiencePage.interpreting.datesLabel">Даты:</strong> <span data-i18n="experiencePage.interpreting.datesValue">[202X]</span></p> <!-- Замените на год -->
+
+          <h4 data-i18n="experiencePage.responsibilities">Основные Обязанности:</h4>
+          <ul>
+            <li data-i18n="experiencePage.interpreting.resp1">Полное сопровождение японских гостей (члены жюри, музыканты, соучредители фестиваля) в течение дня в Москве.</li>
+            <li data-i18n="experiencePage.interpreting.resp2">Обеспечение устного последовательного перевода во время официальных частей мероприятия, неформального общения, посещения культурных объектов и ресторанов.</li>
+            <li data-i18n="experiencePage.interpreting.resp3">Решение организационных и бытовых вопросов гостей, координация с организаторами фестиваля.</li>
+          </ul>
+
+          <h4 data-i18n="experiencePage.achievements">Ключевые Достижения и Опыт:</h4>
+          <ul>
+            <li data-i18n="experiencePage.interpreting.ach1">Успешно обеспечила взаимопонимание между японскими и российскими участниками (музыкантами-барабанщиками), точно передавая специфическую терминологию и культурные нюансы во время обсуждений и совместных активностей.</li>
+            <li data-i18n="experiencePage.interpreting.ach2">Обеспечила комфортное пребывание и позитивный опыт для японских гостей, оперативно решая возникающие вопросы и демонстрируя глубокое понимание японского этикета.</li>
+            <li data-i18n="experiencePage.interpreting.ach3">Продемонстрировала высокую стрессоустойчивость и адаптивность, работая в динамичной среде фестиваля.</li>
+          </ul>
+
+           <div class="experience-gallery">
+               <img src="images/hinode_photo1.jpg" data-i18n-alt="experiencePage.interpreting.photo1Alt" alt="Фото с фестиваля Hinode 1">
+               <img src="images/hinode_photo2.jpg" data-i18n-alt="experiencePage.interpreting.photo2Alt" alt="Фото с японскими гостями">
+               <!-- Добавьте больше фото при необходимости -->
+           </div>
+
+          <p><strong data-i18n="experiencePage.skillsLabel">Развитые навыки:</strong> <span data-i18n="experiencePage.skillsValueInterpreting">Последовательный устный перевод (JP<->RU), межкультурная коммуникация, деловой этикет (японский), решение проблем, ответственность, стрессоустойчивость, адаптивность.</span></p>
+        </section>
+
+        <!-- Секция Опыта 4: Работа в Mosburger -->
+        <section class="highlight-box experience-section">
+          <h3 data-i18n="experiencePage.mosburger.title">Работа в Сфере Обслуживания (Япония)</h3>
+          <p><strong data-i18n="experiencePage.mosburger.companyLabel">Компания:</strong> <span data-i18n="experiencePage.mosburger.companyValue">MOS Food Services, Inc. (Mosburger)</span></p>
+          <p><strong data-i18n="experiencePage.mosburger.roleLabel">Роль:</strong> <span data-i18n="experiencePage.mosburger.roleValue">Кассир / Член команды</span></p>
+          <p><strong data-i18n="experiencePage.mosburger.locationLabel">Местоположение:</strong> <span data-i18n="experiencePage.mosburger.locationValue">Цукуба, Япония</span></p>
+          <p><strong data-i18n="experiencePage.mosburger.datesLabel">Даты:</strong> <span data-i18n="experiencePage.mosburger.datesValue">Июнь 2024 – Сентябрь 2024</span></p>
+
+          <h4 data-i18n="experiencePage.responsibilities">Основные Обязанности:</h4>
+          <ul>
+            <li data-i18n="experiencePage.mosburger.resp1">Прием заказов у посетителей в зале и через систему Drive-thru (ドライブスルー).</li>
+            <li data-i18n="experiencePage.mosburger.resp2">Консультирование клиентов по меню.</li>
+            <li data-i18n="experiencePage.mosburger.resp3">Приготовление напитков и сборка заказов.</li>
+            <li data-i18n="experiencePage.mosburger.resp4">Поддержание чистоты в зале.</li>
+            <li data-i18n="experiencePage.mosburger.resp5">Взаимодействие с командой, следование стандартам сервиса и корпоративным традициям (утреннее чтение девиза компании, совместные мероприятия "номикаи").</li>
+          </ul>
+
+          <h4 data-i18n="experiencePage.achievements">Ключевые Достижения и Опыт:</h4>
+          <ul>
+            <li data-i18n="experiencePage.mosburger.ach1">Освоила навыки многозадачности в условиях высокой нагрузки, эффективно обрабатывая заказы из Drive-thru и от клиентов в зале одновременно в пиковые часы.</li>
+            <li data-i18n="experiencePage.mosburger.ach2">Благодаря наставничеству старших коллег (семпаев) и руководства, отточила скорость выполнения задач, сохранив при этом высокие стандарты японского гостеприимства и вежливости (омотэнаси).</li>
+            <li data-i18n="experiencePage.mosburger.ach3">Успешно адаптировалась к японской рабочей культуре, стандартам сервиса и выстроила продуктивные отношения в коллективе.</li>
+          </ul>
+
+          <p><strong data-i18n="experiencePage.skillsLabel">Развитые навыки:</strong> <span data-i18n="experiencePage.skillsValueMosburger">Японский язык (разговорный, рабочий), обслуживание клиентов (стандарты "омотэнаси"), многозадачность, работа в команде, стрессоустойчивость, культурная адаптация, работа с кассой.</span></p>
+        </section>
+
     </main>
 
-    <script src="script.js"></script>
+    <!-- Подключаем Футер (аналогично навигации) -->
+    <footer>
+        <p data-i18n="footer.copyright">© 2024 Мой первый сайт</p>
+    </footer>
+
+    <!-- Подключение скриптов -->
+    <script src="js/translations.js" defer></script>
+    <script src="js/script.js" defer></script>
+
 </body>
 </html>

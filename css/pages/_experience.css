@@ -118,3 +118,188 @@
   - .timeline-item
   (Define base styles in components/_timeline.css or components/_cards.css)
 */
+
+/* css/pages/_experience.css */
+/* Стили СПЕЦИФИЧНО для страницы Опыта */
+
+/* --- Контейнер страницы --- */
+.experience-page {
+  max-width: var(--container-width-large, 1200px);
+  margin: 0 auto;
+  padding: var(--spacing-large, 40px) var(--spacing-medium, 20px);
+}
+
+/* --- Введение --- */
+.experience-intro {
+  margin-bottom: var(--spacing-large, 40px); /* Отступ после введения */
+  /* Можно добавить стили для текста введения, если нужно */
+  /* text-align: center; */
+}
+.experience-intro h2 {
+    text-align: center; /* Центрируем главный заголовок страницы */
+    margin-bottom: var(--spacing-medium, 20px);
+}
+
+/* --- Общая Статистика --- */
+.experience-stats {
+  margin-bottom: var(--spacing-xl, 50px); /* Большой отступ после статистики */
+}
+
+/* Стили для .stat-item УЖЕ ДОЛЖНЫ БЫТЬ ЗДЕСЬ из предыдущего рефакторинга */
+.stat-item {
+  text-align: center;
+  padding: var(--spacing-medium, 15px);
+  background: var(--accent-bg-subtle, rgba(52, 152, 219, 0.1));
+  border-radius: var(--border-radius-medium, 8px);
+}
+.stat-number {
+  display: block;
+  font-size: 1.8em; /* Consider font-size variable */
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-xs, 5px);
+}
+.stat-label {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* --- Секции Опыта --- */
+/* Добавляем отступ между секциями опыта */
+.experience-section {
+  margin-bottom: var(--spacing-large, 40px);
+}
+
+/* Заголовки внутри секций */
+.experience-section h3 {
+  margin-bottom: var(--spacing-medium, 20px);
+  /* Можно добавить линию под заголовком секции */
+  /* border-bottom: 1px solid var(--divider-color, #eee); */
+  /* padding-bottom: var(--spacing-small, 10px); */
+}
+.experience-section h4 {
+  margin-top: var(--spacing-medium, 25px); /* Отступ перед подзаголовками Обязанности/Достижения */
+  margin-bottom: var(--spacing-small, 10px);
+  font-weight: 600; /* Сделать подзаголовки чуть жирнее */
+  /* color: var(--text-color-secondary); */ /* Можно сделать их менее контрастными */
+}
+
+/* Стили для списков обязанностей/достижений */
+.experience-section ul {
+  list-style: disc; /* Используем стандартные маркеры для этих списков */
+  padding-left: 20px; /* Стандартный отступ для списка с маркерами */
+  margin-left: var(--spacing-small, 15px); /* Доп. отступ слева */
+}
+.experience-section ul li {
+  margin-bottom: var(--spacing-xs, 8px); /* Отступ между пунктами */
+}
+
+/* Стили для строк с инструментами/навыками */
+.experience-section p strong {
+  /* Можно немного выделить метки */
+  /* color: var(--text-color-secondary); */
+}
+
+/* Стили для галереи внутри секции (перенос из HTML) */
+.experience-gallery {
+  display: flex;
+  gap: var(--spacing-small, 10px);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-medium, 15px);
+}
+.experience-gallery img {
+  max-width: 150px; /* Макс. ширина миниатюры */
+  height: auto; /* Автоматическая высота */
+  border-radius: var(--border-radius-small, 5px);
+  object-fit: cover; /* Масштабировать с обрезкой */
+  box-shadow: var(--shadow-small, 0 1px 3px rgba(0,0,0,0.1)); /* Легкая тень */
+}
+
+/* --- Таймлайн (если используется) --- */
+/* Специфичные стили для таймлайна на этой странице, если нужно */
+/* Например, если используется класс .experience-timeline для <main>
+   и внутри него есть структура .timeline-section > .timeline-item */
+
+/* Уточнение для .timeline-section, если нужно (вертикальная линия) */
+.timeline-section {
+  position: relative;
+  padding-left: var(--spacing-large, 30px);
+  margin: var(--spacing-large, 40px) 0;
+  border-left: 3px solid var(--accent-color); /* Линия таймлайна */
+}
+
+/* Специфичные стили для ИТЕМОВ таймлайна НА ЭТОЙ СТРАНИЦЕ */
+/* (Переносим из нашего рефакторинга) */
+.timeline-section .timeline-item {
+  /* Убедитесь, что эти стили не конфликтуют с .highlight-box, если они на одном элементе */
+  padding: var(--spacing-large, 25px);
+  margin: var(--spacing-medium, 20px) 0;
+  border-radius: var(--border-radius-large, 12px);
+  box-shadow: var(--shadow-medium, 0 3px 15px rgba(0,0,0,0.1));
+  position: relative; /* Для позиционирования .timeline-date */
+  /* Добавьте фон, если он не наследуется от .highlight-box */
+  /* background: var(--card-bg); */
+}
+
+/* Стили для даты (уже были в рефакторинге) */
+.timeline-date {
+  position: absolute;
+  left: -140px; /* Настроить под ширину */
+  top: 15px;
+  width: 120px;
+  text-align: right;
+  color: var(--text-color);
+  opacity: var(--opacity-medium, 0.8);
+  font-size: 0.9em;
+}
+
+/* Стили для .company (уже были в рефакторинге) */
+.company {
+  color: var(--accent-color);
+  margin: var(--spacing-small, 10px) 0;
+  font-weight: 600;
+}
+
+/* --- Достижения (achievements) --- */
+/* Специфичный маркер ДЛЯ ЭТОЙ СТРАНИЦЫ (перенос из рефакторинга) */
+.achievements li::before {
+  content: "▹";
+  color: var(--accent-color);
+  position: absolute;
+  left: -20px; /* Позиция маркера относительно li */
+}
+/* Возможно, нужно сбросить отступ для .achievements, если базовый стиль не подходит */
+.achievements {
+    padding-left: 20px; /* Или другое значение */
+    list-style: none; /* Убираем стандартные маркеры */
+    margin-left: 0; /* Сбрасываем доп. отступ, т.к. есть ::before */
+}
+.achievements li {
+  position: relative; /* Для позиционирования ::before */
+  margin-bottom: var(--spacing-xs, 8px);
+}
+
+
+/* --- Адаптивность ДЛЯ ЭТОЙ СТРАНИЦЫ --- */
+@media (max-width: 768px) {
+  /* Адаптивность таймлайна (уже была) */
+  .timeline-date {
+      position: static;
+      width: auto;
+      text-align: left;
+      margin-bottom: var(--spacing-small, 10px);
+      opacity: 1;
+      font-size: 0.85em; /* Чуть меньше на мобильных */
+  }
+  .timeline-section {
+      padding-left: 0;
+      border-left: none;
+      margin-left: 0;
+  }
+
+  /* Можно добавить адаптивность для статистики */
+  .stats {
+    /* grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Уменьшить мин. ширину */
+    /* grid-template-columns: 1fr 1fr; /* Строго 2 колонки */
+  }
+}
