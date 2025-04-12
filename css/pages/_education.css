@@ -1,118 +1,252 @@
-/* css/pages/_education.css */
-/* Styles specifically for the Education page */
+/* css/pages/education.css */
+/* Стили для страницы Образование */
 
-/* --- Page Layout Container --- */
+/* --- Контейнер страницы --- */
 .education-page {
-  max-width: var(--container-width-large, 1200px); /* Use layout variable */
-  margin: 0 auto; /* Center horizontally */
-  /* Use spacing variables */
-  padding: var(--spacing-large, 40px) var(--spacing-medium, 20px);
-}
-
-/* --- Page Header Elements --- */
-.education-header {
-  text-align: center;
-  margin-bottom: var(--spacing-xl, 50px); /* Use spacing variable */
-}
-
-.university-badge {
-  display: inline-block; /* Correct display type */
-  background: var(--accent-color);
-  color: white; /* Explicit white or use variable */
-  padding: 8px 20px; /* Use spacing variables? */
-  border-radius: 20px; /* Use variable? --border-radius-pill */
-  font-size: var(--font-size-large, 1.1em); /* Use font-size variable */
-}
-
-/* --- Academic Timeline Section --- */
-.academic-timeline {
-  position: relative; /* For absolute positioning of year */
-  /* Use spacing variables */
-  padding-left: var(--spacing-large, 30px);
-  margin: var(--spacing-large, 40px) 0;
-  /* Optional: Add the vertical line if needed specifically here */
-  /* border-left: 3px solid var(--accent-color); */
-  /* Or rely on base .timeline styles if .academic-timeline also has .timeline class */
-}
-
-/* Specific styling for timeline items on this page */
-/* Assumes base styles (e.g., background, position:relative) might come from
-   a base .timeline-item class or .card class if applied. */
-.academic-timeline .timeline-item {
-  /* Define overrides or specific styles here */
-  padding: var(--spacing-large, 25px);
-  margin: var(--spacing-large, 25px) 0;
-  border-radius: var(--border-radius-xl, 15px); /* Specific radius */
-  box-shadow: var(--shadow-medium, 0 3px 15px rgba(0,0,0,0.1)); /* Specific shadow */
-  /* Ensure background is set if not inherited */
-  /* background: var(--card-bg); */
-  /* Ensure position is relative if not inherited */
-  /* position: relative; */
-}
-
-.timeline-year { /* Positioned relative to .timeline-item */
-  position: absolute;
-  left: -120px; /* Adjust as needed, consider variable */
-  top: 20px;    /* Adjust as needed, consider variable */
-  font-weight: bold;
-  color: var(--accent-color);
-}
-
-/* --- Program Details & GPA Component --- */
-.program-details {
-  display: flex;
-  justify-content: space-between;
-  margin-top: var(--spacing-medium, 15px);
-}
-
-.gpa {
-  text-align: center;
-  padding: 10px 20px; /* Use spacing variables? */
-  /* Use variable for subtle accent background */
-  background: var(--accent-bg-subtle, rgba(52, 152, 219, 0.1));
-  border-radius: var(--border-radius-medium, 10px);
-}
-
-.gpa-score {
-  font-size: 2em; /* Consider font-size variable */
-  font-weight: bold;
-  color: var(--accent-color);
-}
-
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 768px) {
-  .timeline-year {
-    position: static; /* Stack year above content */
-    margin-bottom: 10px;
-    text-align: left; /* Align left when stacked */
+    max-width: var(--container-width-large, 1200px);
+    margin: 0 auto;
+    padding: var(--spacing-large, 40px) var(--spacing-medium, 20px);
+    position: relative; /* Для позиционирования фоновых фигур */
+    overflow-x: hidden; /* Предотвратить горизонтальный выход фигур */
   }
-
-  .academic-timeline {
-    padding-left: 0; /* Remove padding */
-    border-left: none; /* Remove line if it was added specifically here */
+  
+  /* --- Фоновые фигуры (аналогично experience, но с префиксом .education-page) --- */
+  .education-page .background-shapes {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      overflow: hidden; z-index: -1; pointer-events: none;
   }
-
-  .program-details {
-    flex-direction: column; /* Stack details */
-    gap: var(--spacing-medium, 15px); /* Add gap when stacked */
+  .education-page .shape {
+      position: absolute; border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      background-color: var(--accent-color); opacity: 0.05;
+      animation: float 20s infinite linear alternate; will-change: transform;
   }
-}
-
-/* --- Removed Redundant Styles --- */
-/*
-  Removed duplicate grid definitions for:
-  - .course-cards
-  - .activity-grid
-  (Define these once in layout/_grid.css)
-
-  Removed duplicate progress bar styles for:
-  - .course-progress
-  - .progress-bar
-  (Define these once in components/_progress-bars.css)
-
-  Removed conflicting/older timeline item styles for:
-  - .education .item
-  - .education .item h3
-  - .education .date
-*/
+  .education-page .shape.shape-1 { width: 200px; height: 180px; top: 10%; left: 8%; animation-duration: 24s; animation-delay: -2s;}
+  .education-page .shape.shape-2 { width: 120px; height: 100px; top: 70%; right: 10%; animation-duration: 19s; animation-delay: -6s; background-color: var(--secondary-color, #7ed5ea); }
+  .education-page .shape.shape-3 { width: 160px; height: 140px; top: 45%; left: 30%; animation-duration: 21s; animation-delay: -9s; border-radius: 50%; opacity: 0.04; }
+  [data-theme="dark"] .education-page .shape { opacity: 0.08; }
+  
+  /* Анимация остается той же */
+  @keyframes float { 0% { transform: translateY(0px) rotate(0deg) scale(1); } 50% { transform: translateY(-20px) rotate(180deg) scale(1.05); } 100% { transform: translateY(0px) rotate(360deg) scale(1); } }
+  
+  
+  /* --- Введение --- */
+  .education-intro {
+    margin-bottom: var(--spacing-xl, 50px);
+    text-align: center;
+  }
+  .education-intro h2 { /* Заголовок "Академический путь" */
+      color: var(--accent-color); font-size: 2.2em; font-weight: 700;
+      margin-bottom: var(--spacing-small, 15px); padding-bottom: var(--spacing-small, 15px);
+      border-bottom: 2px solid var(--accent-bg-subtle, rgba(52, 152, 219, 0.2));
+      display: inline-block;
+  }
+  [data-theme="dark"] .education-intro h2 { border-bottom-color: var(--accent-color); }
+  .education-intro p { /* Текст введения */
+      max-width: 800px; margin: 0 auto; line-height: 1.7;
+      color: var(--text-muted, inherit); margin-bottom: var(--spacing-medium, 25px);
+  }
+  .key-facts { /* Блок с ключевыми фактами */
+      font-size: 0.95em;
+      color: var(--text-muted, inherit);
+      opacity: 0.9;
+  }
+  .key-facts span {
+      margin: 0 var(--spacing-small, 10px); /* Отступы между фактами */
+      white-space: nowrap; /* Предотвратить перенос */
+  }
+  .key-facts span:first-child { margin-left: 0; }
+  .key-facts span:last-child { margin-right: 0; }
+  
+  
+  /* --- Общие стили для секций образования --- */
+  .education-section { /* Класс для <section id="..." class="highlight-box education-section"> */
+    margin-bottom: var(--spacing-xl, 50px);
+    /* Используем стили highlight-box для фона/тени */
+    padding: var(--spacing-large, 30px);
+    position: relative; z-index: 1; /* Контент над фоном */
+  }
+  .education-section h3 { /* Заголовки секций (названия ВУЗов и т.д.) */
+    display: flex; /* Для выравнивания логотипа и текста */
+    align-items: center;
+    margin-top: 0; margin-bottom: var(--spacing-medium, 20px);
+    color: var(--accent-color); font-size: 1.5em; /* Крупнее */
+    border-bottom: 1px solid var(--border-color-subtle, rgba(0,0,0,0.08));
+    padding-bottom: var(--spacing-small, 10px);
+  }
+  [data-theme="dark"] .education-section h3 { border-bottom-color: var(--dark-border-subtle, rgba(255,255,255,0.08)); }
+  
+  .education-section h4 { /* Подзаголовки внутри секций */
+    margin-top: var(--spacing-large, 30px); margin-bottom: var(--spacing-medium, 15px);
+    font-weight: 600; color: var(--text-base, inherit); font-size: 1.15em;
+  }
+  .education-section p {
+      margin-bottom: var(--spacing-small, 10px);
+      line-height: 1.7;
+  }
+  .education-section p strong { /* Метки "Факультет:", "Даты:" и т.д. */
+      font-weight: 600;
+      color: var(--text-base, inherit);
+      margin-right: var(--spacing-xs, 5px);
+  }
+  .education-section ul:not(.key-disciplines) { /* Обычные списки */
+      list-style-position: outside;
+      padding-left: 20px;
+      margin-left: 5px;
+  }
+  .education-section ul:not(.key-disciplines) li {
+      margin-bottom: var(--spacing-xs, 8px);
+  }
+  
+  
+  /* --- Логотипы и Иконки --- */
+  .logo-placeholder {
+      display: inline-block;
+      width: 35px; height: 35px;
+      background-color: var(--bg-color-subtle, #eee); /* Фон плейсхолдера */
+      border-radius: 4px;
+      margin-right: var(--spacing-small, 12px);
+      vertical-align: middle;
+      flex-shrink: 0; /* Не сжимать */
+      /* Замените на реальные логотипы через background-image */
+  }
+  .mspu-logo { /* background-image: url('../images/logos/mspu.svg'); */ }
+  .tsukuba-logo { /* background-image: url('../images/logos/tsukuba.svg'); */ }
+  .school21-logo { /* background-image: url('../images/logos/school21.svg'); */ }
+  
+  .flag-icon { /* Для флага Японии */
+      font-size: 1.5em; /* Размер эмодзи */
+      margin-left: var(--spacing-small, 10px);
+      vertical-align: middle;
+  }
+  .icon { /* Для иконок дисциплин/сертификатов */
+      display: inline-block;
+      width: 1.2em; height: 1.2em;
+      margin-right: var(--spacing-small, 8px);
+      vertical-align: middle; /* Выравнивание с текстом */
+      /* Стилизация (можно использовать background-image или Font Awesome) */
+      /* color: var(--accent-color); */
+      /* font-size: 1.1em; */
+  }
+  
+  
+  /* --- Секция Основного Образования --- */
+  .key-disciplines { /* Список ключевых дисциплин */
+      list-style: none;
+      padding-left: 0;
+      margin-top: var(--spacing-medium, 15px);
+  }
+  .key-disciplines li {
+      display: flex;
+      align-items: baseline; /* Выравнивание иконки по базовой линии текста */
+      margin-bottom: var(--spacing-small, 10px);
+  }
+  
+  
+  /* --- Секция Учебы по Обмену --- */
+  .docs-carousel.carousel-container { /* Специфичные стили для карусели документов */
+      max-width: 700px; /* Шире, чем стандартная карусель */
+      border: 1px solid var(--border-color-subtle, rgba(0,0,0,0.1));
+      box-shadow: none; /* Уберем тень, если не нужна */
+  }
+  [data-theme="dark"] .docs-carousel.carousel-container {
+      border-color: var(--dark-border-subtle, rgba(255,255,255,0.1));
+  }
+  .docs-carousel .carousel-slide img {
+      aspect-ratio: auto; /* У документов нет стандартного соотношения */
+      object-fit: contain; /* Показать весь документ, не обрезая */
+      background-color: var(--bg-color-subtle, #f8f8f8); /* Фон под документом */
+      max-height: 70vh; /* Ограничение высоты */
+  }
+  [data-theme="dark"] .docs-carousel .carousel-slide img {
+      background-color: #333; /* Темный фон под документом */
+  }
+  
+  
+  /* --- Секция Доп. Образования --- */
+  .additional-grid {
+      display: grid;
+      /* Адаптивные колонки */
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-large, 30px);
+      margin-top: var(--spacing-medium, 20px);
+  }
+  .additional-item {
+      /* Стили для каждого блока в сетке */
+      background: var(--bg-color-subtle, rgba(0,0,0,0.02));
+      padding: var(--spacing-medium, 20px);
+      border-radius: var(--border-radius-medium, 8px);
+      border: 1px solid var(--border-color-extra-subtle, rgba(0,0,0,0.05));
+  }
+  [data-theme="dark"] .additional-item {
+      background: var(--dark-bg-subtle, rgba(255,255,255,0.03));
+      border-color: var(--dark-border-subtle, rgba(255,255,255,0.08));
+  }
+  .additional-item h4 {
+      display: flex; /* Для логотипа */
+      align-items: center;
+      margin-top: 0;
+      margin-bottom: var(--spacing-small, 10px);
+      font-size: 1.1em;
+      border-bottom: none; /* Убираем линию под заголовком в блоках */
+      padding-bottom: 0;
+  }
+  .additional-item p {
+      font-size: 0.9em;
+      color: var(--text-muted, inherit);
+      margin-bottom: var(--spacing-xs, 5px);
+  }
+  .additional-item p strong { /* Уровень N1/N2 */
+      color: var(--accent-color);
+      font-weight: 700;
+  }
+  
+  /* --- Секция Академ. Достижений --- */
+  .achievements-content {
+      margin-top: var(--spacing-medium, 20px);
+  }
+  .achievements-content > div { /* Отступ между подразделами */
+      margin-bottom: var(--spacing-large, 30px);
+  }
+  .achievements-content h4 { /* Заголовки подразделов */
+      margin-top: 0;
+      margin-bottom: var(--spacing-small, 10px);
+      font-size: 1.1em;
+      border-bottom: none;
+      padding-bottom: 0;
+  }
+  .achievements-content ul { list-style-type: disc; padding-left: 20px; margin-left: 5px; }
+  .achievements-content li { margin-bottom: var(--spacing-xs, 5px); }
+  .achievements-content p strong { font-weight: 600; } /* Тема ВКР */
+  .achievements-content p:last-child { margin-bottom: 0; }
+  
+  
+  /* --- Адаптивность --- */
+  @media (max-width: 1200px) {
+      .education-page .shape.shape-1 { width: 150px; height: 120px; left: 3%; }
+      .education-page .shape.shape-2 { width: 70px; height: 90px; right: 5%; }
+  }
+  @media (max-width: 768px) {
+      .education-page .shape { display: none; } /* Скрываем фон */
+      .key-facts { font-size: 0.9em; }
+      .key-facts span { display: block; margin: 5px 0; } /* Факты друг под другом */
+      .additional-grid { grid-template-columns: 1fr; } /* 1 колонка для доп. образования */
+      .docs-carousel.carousel-container { max-width: 95%; }
+  }
+  @media (max-width: 480px) {
+      .education-intro h2 { font-size: 1.8em; }
+      .education-section h3 { font-size: 1.3em; }
+      .education-section h4 { font-size: 1.1em; }
+  }
+  
+  /* --- Доступность: Отключение анимаций --- */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .animate-on-scroll { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .shape { animation: none !important; }
+    .carousel-slides { transition: none !important; }
+  }

@@ -16,7 +16,7 @@ const translations = {
     // Hero Section (index.html)
     "hero.name": "Бородина Лидия",
     "hero.title": "Веб-разработчик | Лингвист-Японист | Межкультурная коммуникация",
-    "hero.description": "Создаю адаптивные и функциональные веб-сайты, используя [Технология 1, Технология 2]. Свободное владение японским (JLPT N1) и английским языками (C1). Ищу интересные проекты и возможности для роста в технологической сфере Японии.",
+    "hero.description": "Создаю адаптивные и функциональные веб-сайты. Свободное владение японским (JLPT N1) и английским языками (C1). Ищу интересные проекты и возможности для роста в технологической сфере Японии.",
     "hero.cta.contact": "Связаться со мной",
     "hero.cta.resume": "Смотреть резюме (JP)",
 
@@ -186,7 +186,72 @@ const translations = {
     "experiencePage.mosburger.ach1": "Освоила навыки многозадачности в условиях высокой нагрузки, эффективно обрабатывая заказы из Drive-thru и от клиентов в зале одновременно в пиковые часы.",
     "experiencePage.mosburger.ach2": "Благодаря наставничеству старших коллег (семпаев) и руководства, отточила скорость выполнения задач, сохранив при этом высокие стандарты японского гостеприимства и вежливости (омотэнаси).",
     "experiencePage.mosburger.ach3": "Успешно адаптировалась к японской рабочей культуре, стандартам сервиса и выстроила продуктивные отношения в коллективе.",
-    "experiencePage.skillsValueMosburger": "Японский язык (разговорный, рабочий), обслуживание клиентов (стандарты \"омотэнаси\"), многозадачность, работа в команде, стрессоустойчивость, культурная адаптация, работа с кассой."
+    "experiencePage.skillsValueMosburger": "Японский язык (разговорный, рабочий), обслуживание клиентов (стандарты \"омотэнаси\"), многозадачность, работа в команде, стрессоустойчивость, культурная адаптация, работа с кассой.",
+    "educationPage.pageTitle": "Образование",
+    "educationPage.mainTitle": "Академический путь 🎓",
+    "educationPage.introText": "Сочетание глубокой лингвистической подготовки по японскому языку с международным опытом обучения в Японии и практическими навыками в сфере IT и веб-технологий.",
+    "educationPage.degree": "Степень: Бакалавр (2025)",
+    "educationPage.jlpt": "JLPT: N1 (2024)",
+    "educationPage.exchange": "Обмен: Япония (2024) 🇯🇵",
+
+    // Основное Образование (МГПУ)
+    "educationPage.mspu.name": "Московский Городской Педагогический Университет",
+    "educationPage.facultyLabel": "Институт/Факультет:",
+    "educationPage.mspu.faculty": "Институт иностранных языков (ИИЯ)",
+    "educationPage.departmentLabel": "Кафедра:",
+    "educationPage.mspu.department": "Кафедра японского языка",
+    "educationPage.specialtyLabel": "Специальность:",
+    "educationPage.mspu.specialty": "Перевод и переводоведение (японский язык)",
+    "educationPage.degreeLabel": "Степень:",
+    "educationPage.mspu.degree": "Бакалавр",
+    "educationPage.yearsLabel": "Годы обучения:",
+    "educationPage.mspu.years": "2020 - 2025 (Очная форма)",
+    "educationPage.keyCoursesLabel": "Ключевые дисциплины:",
+    "educationPage.mspu.course1": "Практика устной и письменной речи (японский язык)",
+    "educationPage.mspu.course2": "Основы устного последовательного перевода",
+    "educationPage.mspu.course3": "Практический курс английского языка (профессиональный уровень)",
+    "educationPage.mspu.course4": "Методика обучения японскому языку",
+    "educationPage.mspu.course5": "Информационные технологии в переводоведении",
+
+    // Учеба по Обмену (Университет Цукубы)
+    "educationPage.tsukuba.name": "Университет Цукубы",
+    "educationPage.programLabel": "Программа:",
+    "educationPage.tsukuba.program": "Учеба по обмену",
+    "educationPage.datesLabel": "Период:", // Переиспользуемый ключ
+    "educationPage.tsukuba.dates": "Апрель - Август 2024",
+    "educationPage.tsukuba.description": "Интенсивное погружение в языковую и культурную среду, изучение японского языка на продвинутом уровне, а также курсы по Data Science (на английском, язык R) и азиатским исследованиям (на японском). Принимала участие в качестве ассистента на занятиях по русскому языку.",
+    "educationPage.tsukuba.docsLabel": "Подтверждающие документы:",
+    "educationPage.tsukuba.doc1Alt": "Сертификат о прохождении курсов (1)",
+    "educationPage.tsukuba.doc2Alt": "Сертификат о прохождении курсов (2)",
+
+    // Дополнительное Образование и Сертификаты
+    "educationPage.additional.title": "Дополнительное Образование и Сертификаты",
+    "educationPage.additional.school21.title": "Школа 21 (Сбер) 💻",
+    "educationPage.additional.school21.period": "1 год обучения",
+    "educationPage.additional.school21.skills": "Изученные технологии: C, Bash, Git.",
+    "educationPage.additional.rfl.title": "Методика преподавания РКИ 📚",
+    "educationPage.additional.rfl.source": "Курс при МГПУ (в рамках \"Приоритет-2030\")",
+    "educationPage.additional.rfl.status": "Интегрировано в диплом бакалавра.",
+    "educationPage.additional.webdev.title": "Основы верстки 🌐",
+    "educationPage.additional.webdev.source": "Курс при МГПУ (в рамках \"Приоритет-2030\")",
+    "educationPage.additional.webdev.status": "Средне-специальное образование (в дипломе).",
+    "educationPage.additional.jlpt.title": "JLPT (Нихонго Норёку Сикэн) 📜",
+    "educationPage.additional.jlpt.n1": "N1",
+    "educationPage.additional.jlpt.n1year": "(2024)",
+    "educationPage.additional.jlpt.n2": "N2",
+    "educationPage.additional.jlpt.n2year": "(2023)",
+
+    // Академические Достижения
+    "educationPage.achievements.title": "Исследования и Академические Достижения 🔬",
+    "educationPage.achievements.thesisLabel": "Выпускная Квалификационная Работа (ВКР) 📝",
+    "educationPage.achievements.thesisTitle": "Тема:",
+    "educationPage.achievements.thesisTheme": "Проблема поиска эквивалентов при переводе японских коммуникативов с японского на русский язык (на примере произведений медиафраншизы «Истории монстров»)",
+    "educationPage.achievements.thesisTech": "При выполнении использовались технологии NLP и собственный код для анализа данных.",
+    "educationPage.achievements.conferencesLabel": "Участие в конференциях 🎤:",
+    "educationPage.achievements.conf1": "[Название конференции 1, год] - Тема: \"Особенности фольклора народа айну\"", // Заполните название и год
+    "educationPage.achievements.conf2": "[Название конференции 2, год] - Тема: \"Анализ ассоциаций с концептом 'Семья' носителей японского и русского языков\"", // Заполните название и год
+    "educationPage.achievements.publicationLabel": "Публикация 📰:",
+    "educationPage.achievements.pubDetails": "[Название университетского журнала, год] - Статья по теме: \"Анализ ассоциаций с концептом 'Семья'...\"" // Заполните название и год
   },
   en: {
     // --- Common & index.html ---
@@ -201,7 +266,7 @@ const translations = {
     // Hero Section (index.html)
     "hero.name": "Borodina Lidiia",
     "hero.title": "Web Developer | Japanese Linguist | Cross-Cultural Communication",
-    "hero.description": "Building responsive and functional websites using [Tech 1, Tech 2]. Fluent in Japanese (JLPT N1) and English (C1). Seeking interesting projects and growth opportunities in Japan's tech sphere.",
+    "hero.description": "Building responsive and functional websites. Fluent in Japanese (JLPT N1) and English (C1). Seeking interesting projects and growth opportunities in Japan's tech sphere.",
     "hero.cta.contact": "Contact Me",
     "hero.cta.resume": "View Resume (JP)",
 
@@ -371,7 +436,74 @@ const translations = {
     "experiencePage.mosburger.ach1": "Mastered multitasking skills under high pressure, efficiently handling Drive-thru and counter orders simultaneously during peak hours.",
     "experiencePage.mosburger.ach2": "Refined task execution speed while maintaining high standards of Japanese hospitality and politeness (omotenashi), thanks to guidance from supervisors and senior colleagues (senpai).",
     "experiencePage.mosburger.ach3": "Successfully adapted to the Japanese work culture and service standards, building productive relationships within the team.",
-    "experiencePage.skillsValueMosburger": "Japanese (Conversational, Business), Customer Service (Omotenashi Standards), Multitasking, Teamwork, Stress Tolerance, Cultural Adaptation, POS Operation."
+    "experiencePage.skillsValueMosburger": "Japanese (Conversational, Business), Customer Service (Omotenashi Standards), Multitasking, Teamwork, Stress Tolerance, Cultural Adaptation, POS Operation.",
+
+    // Общие для страницы
+    "educationPage.pageTitle": "Education",
+    "educationPage.mainTitle": "Academic Journey 🎓",
+    "educationPage.introText": "Combining deep linguistic training in Japanese with international study experience in Japan and practical skills in IT and web technologies.",
+    "educationPage.degree": "Degree: Bachelor (2025)",
+    "educationPage.jlpt": "JLPT: N1 (2024)",
+    "educationPage.exchange": "Exchange: Japan (2024) 🇯🇵",
+
+    // Основное Образование (МГПУ)
+    "educationPage.mspu.name": "Moscow City University (MCU)",
+    "educationPage.facultyLabel": "Institute/Faculty:",
+    "educationPage.mspu.faculty": "Institute of Foreign Languages",
+    "educationPage.departmentLabel": "Department:",
+    "educationPage.mspu.department": "Department of Japanese Language",
+    "educationPage.specialtyLabel": "Major:",
+    "educationPage.mspu.specialty": "Translation and Interpretation Studies (Japanese Language)",
+    "educationPage.degreeLabel": "Degree:",
+    "educationPage.mspu.degree": "Bachelor",
+    "educationPage.yearsLabel": "Years of Study:",
+    "educationPage.mspu.years": "2020 - 2025 (Full-time)",
+    "educationPage.keyCoursesLabel": "Key Disciplines:",
+    "educationPage.mspu.course1": "Practical Course of Oral and Written Speech (Japanese)",
+    "educationPage.mspu.course2": "Basics of Consecutive Interpreting",
+    "educationPage.mspu.course3": "Practical Course of English Language (Professional Level)",
+    "educationPage.mspu.course4": "Methodology of Teaching Japanese Language",
+    "educationPage.mspu.course5": "Information Technologies in Translation Studies",
+
+    // Учеба по Обмену (Университет Цукубы)
+    "educationPage.tsukuba.name": "University of Tsukuba",
+    "educationPage.programLabel": "Program:",
+    "educationPage.tsukuba.program": "Exchange Study Program",
+    "educationPage.datesLabel": "Period:", // Reusable key
+    "educationPage.tsukuba.dates": "April - August 2024",
+    "educationPage.tsukuba.description": "Intensive immersion in the linguistic and cultural environment, advanced study of the Japanese language, as well as courses in Data Science (in English, R language) and Asian Studies (in Japanese). Participated as an assistant in Russian language classes.",
+    "educationPage.tsukuba.docsLabel": "Supporting Documents:",
+    "educationPage.tsukuba.doc1Alt": "Certificate of Course Completion (1)",
+    "educationPage.tsukuba.doc2Alt": "Certificate of Course Completion (2)",
+
+    // Дополнительное Образование и Сертификаты
+    "educationPage.additional.title": "Additional Education & Certificates",
+    "educationPage.additional.school21.title": "School 21 (Sber) 💻",
+    "educationPage.additional.school21.period": "1 year of study",
+    "educationPage.additional.school21.skills": "Technologies studied: C, Bash, Git.",
+    "educationPage.additional.rfl.title": "Methodology of Teaching Russian as a Foreign Language 📚",
+    "educationPage.additional.rfl.source": "Course at MCU (within Priority-2030 program)",
+    "educationPage.additional.rfl.status": "Integrated into the Bachelor's diploma.",
+    "educationPage.additional.webdev.title": "Web Development Basics 🌐",
+    "educationPage.additional.webdev.source": "Course at MCU (within Priority-2030 program)",
+    "educationPage.additional.webdev.status": "Vocational education certificate (in diploma).",
+    "educationPage.additional.jlpt.title": "JLPT (Japanese Language Proficiency Test) 📜",
+    "educationPage.additional.jlpt.n1": "N1",
+    "educationPage.additional.jlpt.n1year": "(2024)",
+    "educationPage.additional.jlpt.n2": "N2",
+    "educationPage.additional.jlpt.n2year": "(2023)",
+
+    // Академические Достижения
+    "educationPage.achievements.title": "Research & Academic Achievements 🔬",
+    "educationPage.achievements.thesisLabel": "Bachelor's Thesis 📝",
+    "educationPage.achievements.thesisTitle": "Topic:",
+    "educationPage.achievements.thesisTheme": "The Problem of Finding Equivalents in Translating Japanese Communicatives from Japanese to Russian (based on the Monogatari Series media franchise)",
+    "educationPage.achievements.thesisTech": "Utilized NLP technologies and custom code for data analysis during thesis preparation.",
+    "educationPage.achievements.conferencesLabel": "Conference Participation 🎤:",
+    "educationPage.achievements.conf1": "[Conference Name 1, Year] - Topic: \"Features of Ainu Folklore\"", // Fill in name and year
+    "educationPage.achievements.conf2": "[Conference Name 2, Year] - Topic: \"Analysis of Associations with the Concept 'Family' among Native Japanese and Russian Speakers\"", // Fill in name and year
+    "educationPage.achievements.publicationLabel": "Publication 📰:",
+    "educationPage.achievements.pubDetails": "[University Journal Name, Year] - Article on the topic: \"Analysis of Associations with the Concept 'Family'...\"" // Fill in name and year
   },
   ja: {
     // --- Общие и для index.html ---
@@ -386,7 +518,7 @@ const translations = {
     // Hero Section (index.html)
     "hero.name": "ボロディナ・リディア",
     "hero.title": "ウェブ開発者 | 日本語言語学者 | 異文化コミュニケーション",
-    "hero.description": "[技術1、技術2]を使用して、レスポンシブで機能的なウェブサイトを構築します。日本語（JLPT N1）と英語（C1）に堪能。日本の技術分野での興味深いプロジェクトと成長の機会を探しています。",
+    "hero.description": "レスポンシブで機能的なウェブサイトを構築します。日本語（JLPT N1）と英語（C1）に堪能。日本の技術分野での興味深いプロジェクトと成長の機会を探しています。",
     "hero.cta.contact": "連絡する",
     "hero.cta.resume": "履歴書を見る (JP)",
 
@@ -556,7 +688,78 @@ const translations = {
     "experiencePage.mosburger.ach1": "ピーク時にドライブスルーとカウンターの注文を同時に効率的に処理し、高負荷下でのマルチタスク能力を習得。",
     "experiencePage.mosburger.ach2": "先輩や上司の指導のおかげで、日本の高いおもてなし基準と丁寧さを維持しながら、タスク遂行速度を向上。",
     "experiencePage.mosburger.ach3": "日本の労働文化とサービス基準にうまく適応し、チーム内で生産的な関係を構築。",
-    "experiencePage.skillsValueMosburger": "日本語（会話、ビジネス）, 接客（おもてなし基準）, マルチタスク, チームワーク, ストレス耐性, 文化適応, POS操作。"
+    "experiencePage.skillsValueMosburger": "日本語（会話、ビジネス）, 接客（おもてなし基準）, マルチタスク, チームワーク, ストレス耐性, 文化適応, POS操作。",
+
+    // Вставьте эти ключи внутрь объекта ja: { ... } в файле translations.js
+
+    // --- Ключи для education.html ---
+
+    // Общие для страницы
+    "educationPage.pageTitle": "学歴",
+    "educationPage.mainTitle": "学業の歩み 🎓",
+    "educationPage.introText": "日本語の深い言語的訓練と、日本での国際的な学習経験、ITおよびウェブ技術分野での実践的なスキルを組み合わせています。",
+    "educationPage.degree": "学位: 学士 (2025年)",
+    "educationPage.jlpt": "JLPT: N1 (2024年)",
+    "educationPage.exchange": "交換留学: 日本 (2024年) 🇯🇵",
+
+    // Основное Образование (МГПУ)
+    "educationPage.mspu.name": "モスクワ市立教育大学",
+    "educationPage.facultyLabel": "学部:",
+    "educationPage.mspu.faculty": "外国語学部",
+    "educationPage.departmentLabel": "学科:",
+    "educationPage.mspu.department": "日本語学科",
+    "educationPage.specialtyLabel": "専攻:",
+    "educationPage.mspu.specialty": "翻訳・通訳学（日本語）",
+    "educationPage.degreeLabel": "学位:",
+    "educationPage.mspu.degree": "学士",
+    "educationPage.yearsLabel": "在学期間:",
+    "educationPage.mspu.years": "2020年 - 2025年 (全日制)",
+    "educationPage.keyCoursesLabel": "主要科目:",
+    "educationPage.mspu.course1": "口頭および筆記スピーチの実践（日本語）",
+    "educationPage.mspu.course2": "逐次通訳の基礎",
+    "educationPage.mspu.course3": "実践英語コース（プロフェッショナルレベル）",
+    "educationPage.mspu.course4": "日本語教授法",
+    "educationPage.mspu.course5": "翻訳学における情報技術",
+
+    // Учеба по Обмену (Университет Цукубы)
+    "educationPage.tsukuba.name": "筑波大学",
+    "educationPage.programLabel": "プログラム:",
+    "educationPage.tsukuba.program": "交換留学プログラム",
+    "educationPage.datesLabel": "期間:", // 再利用可能なキー
+    "educationPage.tsukuba.dates": "2024年4月 - 8月",
+    "educationPage.tsukuba.description": "言語と文化環境への集中没入、上級レベルの日本語学習、およびデータサイエンス（英語、R言語使用）とアジア研究（日本語）のコースを受講しました。ロシア語クラスのアシスタントとしても参加しました。",
+    "educationPage.tsukuba.docsLabel": "修了証明書:",
+    "educationPage.tsukuba.doc1Alt": "コース修了証明書 (1)",
+    "educationPage.tsukuba.doc2Alt": "コース修了証明書 (2)",
+
+    // Дополнительное Образование и Сертификаты
+    "educationPage.additional.title": "追加教育・資格",
+    "educationPage.additional.school21.title": "School 21 (Sber) 💻",
+    "educationPage.additional.school21.period": "1年間学習",
+    "educationPage.additional.school21.skills": "学習した技術： C言語、Bash、Git。",
+    "educationPage.additional.rfl.title": "外国語としてのロシア語教授法 📚",
+    "educationPage.additional.rfl.source": "MCUでのコース (Priority-2030プログラム枠内)",
+    "educationPage.additional.rfl.status": "学士課程の卒業証書に統合。",
+    "educationPage.additional.webdev.title": "ウェブ開発基礎 🌐",
+    "educationPage.additional.webdev.source": "MCUでのコース (Priority-2030プログラム枠内)",
+    "educationPage.additional.webdev.status": "中等専門教育証明書（卒業証書に記載）。",
+    "educationPage.additional.jlpt.title": "日本語能力試験 (JLPT) 📜",
+    "educationPage.additional.jlpt.n1": "N1",
+    "educationPage.additional.jlpt.n1year": "(2024年)",
+    "educationPage.additional.jlpt.n2": "N2",
+    "educationPage.additional.jlpt.n2year": "(2023年)",
+
+    // Академические Достижения
+    "educationPage.achievements.title": "研究・学術成果 🔬",
+    "educationPage.achievements.thesisLabel": "卒業論文 📝",
+    "educationPage.achievements.thesisTitle": "テーマ:",
+    "educationPage.achievements.thesisTheme": "日本語コミュニカティブ表現の露訳における等価性検索の問題（メディアフランチャイズ『〈物語〉シリーズ』の作品を例に）",
+    "educationPage.achievements.thesisTech": "論文作成にはNLP技術と独自のコードによるデータ分析を利用しました。",
+    "educationPage.achievements.conferencesLabel": "学会発表 🎤:",
+    "educationPage.achievements.conf1": "[学会名1、年] - テーマ:「アイヌ民族の民間伝承の特徴」", // 学会名と年を記入
+    "educationPage.achievements.conf2": "[学会名2、年] - テーマ:「日本語母語話者とロシア語母語話者の『家族』概念に関する連想分析」", // 学会名と年を記入
+    "educationPage.achievements.publicationLabel": "論文掲載 📰:",
+    "educationPage.achievements.pubDetails": "[大学紀要名、年] - 論文テーマ:「『家族』概念に関する連想分析...」" // 紀要名と年を記入
   }
 };
 

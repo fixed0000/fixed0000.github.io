@@ -1,0 +1,118 @@
+/* css/pages/_education.css */
+/* Styles specifically for the Education page */
+
+/* --- Page Layout Container --- */
+.education-page {
+  max-width: var(--container-width-large, 1200px); /* Use layout variable */
+  margin: 0 auto; /* Center horizontally */
+  /* Use spacing variables */
+  padding: var(--spacing-large, 40px) var(--spacing-medium, 20px);
+}
+
+/* --- Page Header Elements --- */
+.education-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl, 50px); /* Use spacing variable */
+}
+
+.university-badge {
+  display: inline-block; /* Correct display type */
+  background: var(--accent-color);
+  color: white; /* Explicit white or use variable */
+  padding: 8px 20px; /* Use spacing variables? */
+  border-radius: 20px; /* Use variable? --border-radius-pill */
+  font-size: var(--font-size-large, 1.1em); /* Use font-size variable */
+}
+
+/* --- Academic Timeline Section --- */
+.academic-timeline {
+  position: relative; /* For absolute positioning of year */
+  /* Use spacing variables */
+  padding-left: var(--spacing-large, 30px);
+  margin: var(--spacing-large, 40px) 0;
+  /* Optional: Add the vertical line if needed specifically here */
+  /* border-left: 3px solid var(--accent-color); */
+  /* Or rely on base .timeline styles if .academic-timeline also has .timeline class */
+}
+
+/* Specific styling for timeline items on this page */
+/* Assumes base styles (e.g., background, position:relative) might come from
+   a base .timeline-item class or .card class if applied. */
+.academic-timeline .timeline-item {
+  /* Define overrides or specific styles here */
+  padding: var(--spacing-large, 25px);
+  margin: var(--spacing-large, 25px) 0;
+  border-radius: var(--border-radius-xl, 15px); /* Specific radius */
+  box-shadow: var(--shadow-medium, 0 3px 15px rgba(0,0,0,0.1)); /* Specific shadow */
+  /* Ensure background is set if not inherited */
+  /* background: var(--card-bg); */
+  /* Ensure position is relative if not inherited */
+  /* position: relative; */
+}
+
+.timeline-year { /* Positioned relative to .timeline-item */
+  position: absolute;
+  left: -120px; /* Adjust as needed, consider variable */
+  top: 20px;    /* Adjust as needed, consider variable */
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+/* --- Program Details & GPA Component --- */
+.program-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-medium, 15px);
+}
+
+.gpa {
+  text-align: center;
+  padding: 10px 20px; /* Use spacing variables? */
+  /* Use variable for subtle accent background */
+  background: var(--accent-bg-subtle, rgba(52, 152, 219, 0.1));
+  border-radius: var(--border-radius-medium, 10px);
+}
+
+.gpa-score {
+  font-size: 2em; /* Consider font-size variable */
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .timeline-year {
+    position: static; /* Stack year above content */
+    margin-bottom: 10px;
+    text-align: left; /* Align left when stacked */
+  }
+
+  .academic-timeline {
+    padding-left: 0; /* Remove padding */
+    border-left: none; /* Remove line if it was added specifically here */
+  }
+
+  .program-details {
+    flex-direction: column; /* Stack details */
+    gap: var(--spacing-medium, 15px); /* Add gap when stacked */
+  }
+}
+
+/* --- Removed Redundant Styles --- */
+/*
+  Removed duplicate grid definitions for:
+  - .course-cards
+  - .activity-grid
+  (Define these once in layout/_grid.css)
+
+  Removed duplicate progress bar styles for:
+  - .course-progress
+  - .progress-bar
+  (Define these once in components/_progress-bars.css)
+
+  Removed conflicting/older timeline item styles for:
+  - .education .item
+  - .education .item h3
+  - .education .date
+*/
