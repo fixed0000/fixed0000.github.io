@@ -159,7 +159,7 @@ const translations = {
     "experiencePage.interpreting.eventLabel": "Мероприятие:",
     "experiencePage.interpreting.eventValue": "Фестиваль японской культуры \"Hinode Power Japan\"",
     "experiencePage.interpreting.datesLabel": "Даты:",
-    "experiencePage.interpreting.datesValue": "[202X]", // Замените на год
+    "experiencePage.interpreting.datesValue": "2024", // Замените на год
     "experiencePage.interpreting.resp1": "Полное сопровождение японских гостей (члены жюри, музыканты, соучредители фестиваля) в течение дня в Москве.",
     "experiencePage.interpreting.resp2": "Обеспечение устного последовательного перевода во время официальных частей мероприятия, неформального общения, посещения культурных объектов и ресторанов.",
     "experiencePage.interpreting.resp3": "Решение организационных и бытовых вопросов гостей, координация с организаторами фестиваля.",
@@ -344,7 +344,7 @@ const translations = {
     "experiencePage.interpreting.eventLabel": "Event:",
     "experiencePage.interpreting.eventValue": "\"Hinode Power Japan\" Cultural Festival",
     "experiencePage.interpreting.datesLabel": "Dates:",
-    "experiencePage.interpreting.datesValue": "[202X]", // Replace with year
+    "experiencePage.interpreting.datesValue": "2024", // Replace with year
     "experiencePage.interpreting.resp1": "Provided full escort support for Japanese guests (jury members, musicians, festival co-founders) throughout the day in Moscow.",
     "experiencePage.interpreting.resp2": "Delivered consecutive interpretation during official event parts, informal communication, cultural site visits, and dining.",
     "experiencePage.interpreting.resp3": "Resolved guests' organizational and logistical issues, coordinating with festival organizers.",
@@ -529,7 +529,7 @@ const translations = {
     "experiencePage.interpreting.eventLabel": "イベント:",
     "experiencePage.interpreting.eventValue": "日本文化フェスティバル「Hinode Power Japan」",
     "experiencePage.interpreting.datesLabel": "期間:",
-    "experiencePage.interpreting.datesValue": "[202X年]", // 年を入れてください
+    "experiencePage.interpreting.datesValue": "2024年", // 年を入れてください
     "experiencePage.interpreting.resp1": "モスクワ滞在中の日本人ゲスト（審査員、ミュージシャン、フェスティバル共同設立者）への終日随行サポート。",
     "experiencePage.interpreting.resp2": "イベントの公式部分、非公式な交流、文化施設やレストラン訪問時の逐次通訳。",
     "experiencePage.interpreting.resp3": "ゲストの組織的・日常的な問題解決、フェスティバル主催者との調整。",

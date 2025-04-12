@@ -2,7 +2,7 @@
 /* Стили СПЕЦИФИЧНО для страницы Опыта */
 
 /* --- Контейнер страницы --- */
-.experience-page { /* Используем этот класс для <main> */
+.experience-page { /* Класс для <main> */
   max-width: var(--container-width-large, 1200px);
   margin: 0 auto;
   padding: var(--spacing-large, 40px) var(--spacing-medium, 20px);
@@ -11,178 +11,188 @@
 /* --- Введение --- */
 .experience-intro {
   margin-bottom: var(--spacing-large, 40px);
+  text-align: center; /* Центрируем весь блок введения */
 }
-.experience-intro h2 {
-    text-align: center;
+.experience-intro h2 { /* Стиль для "Профессиональный Путь" */
+    color: var(--accent-color); /* Цвет акцента */
+    font-size: 2.2em; /* Увеличенный размер */
+    font-weight: 700; /* Более жирный */
     margin-bottom: var(--spacing-medium, 20px);
+    padding-bottom: var(--spacing-small, 15px); /* Отступ для линии */
+    border-bottom: 2px solid var(--accent-bg-subtle, rgba(52, 152, 219, 0.2)); /* Линия под заголовком */
+    display: inline-block; /* Чтобы граница была по ширине текста */
+    text-align: center; /* Центрирование заголовка */
 }
+[data-theme="dark"] .experience-intro h2 {
+    border-bottom-color: var(--accent-color); /* Линия акцентного цвета в темной теме */
+}
+.experience-intro p { /* Стили для текста введения */
+    max-width: 800px; /* Ограничим ширину для читаемости */
+    margin: 0 auto; /* Центрируем параграф */
+    line-height: 1.7;
+    color: var(--text-muted, inherit);
+}
+
 
 /* --- Общая Статистика --- */
 .experience-stats { /* Класс для <section class="stats experience-stats"> */
   margin-bottom: var(--spacing-xl, 50px);
-  /* Стили для .stats (grid) должны быть в layout/_grid.css */
+  /* Стили для сетки .stats находятся в layout/_grid.css */
 }
-
-/* Стили для отдельного элемента статистики */
 .stat-item {
   text-align: center;
   padding: var(--spacing-medium, 15px);
   background: var(--accent-bg-subtle, rgba(52, 152, 219, 0.1));
   border-radius: var(--border-radius-medium, 8px);
+  border: 1px solid transparent;
+  transition: background-color var(--transition-base), border-color var(--transition-base);
+}
+[data-theme="dark"] .stat-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 .stat-number {
-  display: block;
-  font-size: 1.8em;
-  font-weight: bold;
-  color: var(--accent-color);
-  margin-bottom: var(--spacing-xs, 5px);
+  display: block; font-size: 1.8em; font-weight: bold;
+  color: var(--accent-color); margin-bottom: var(--spacing-xs, 5px);
 }
-.stat-label {
-    font-size: 0.9em;
-    opacity: 0.8;
-}
+.stat-label { font-size: 0.9em; opacity: 0.8; color: var(--text-muted, inherit); }
 
 /* --- Секции Опыта --- */
-.experience-section { /* Класс для <section class="highlight-box experience-section"> */
-  margin-bottom: var(--spacing-large, 40px);
-  /* Стили для .highlight-box должны быть в components/_lists.css */
+.experience-section { /* Класс для <section id="..." class="highlight-box experience-section"> */
+  margin-bottom: var(--spacing-xl, 50px); /* Увеличим отступ между секциями */
+  /* Используем стили highlight-box для фона/тени/скругления из components/_lists.css */
+  padding: var(--spacing-large, 30px); /* Внутренний отступ */
 }
 
 /* Заголовки внутри секций опыта */
-.experience-section h3 {
-  margin-bottom: var(--spacing-medium, 20px);
+.experience-section h3 { /* Заголовок должности/проекта */
+  margin-top: 0; margin-bottom: var(--spacing-small, 15px);
+  color: var(--accent-color); font-size: 1.4em;
 }
-.experience-section h4 {
-  margin-top: var(--spacing-medium, 25px);
-  margin-bottom: var(--spacing-small, 10px);
-  font-weight: 600;
+.experience-section h4 { /* Подзаголовки: Обязанности, Достижения, Инструменты, Навыки */
+  margin-top: var(--spacing-large, 30px); margin-bottom: var(--spacing-small, 10px);
+  font-weight: 600; color: var(--text-base, inherit); font-size: 1.1em;
+  padding-bottom: var(--spacing-xs, 5px);
+  border-bottom: 1px solid var(--border-color-subtle, rgba(0,0,0,0.08));
 }
-
-/* Стили для списков внутри секций опыта (обязанности/достижения) */
-.experience-section ul:not(.achievements) { /* Применяем только если это НЕ список достижений */
-  list-style: disc;
-  padding-left: 20px;
-  margin-left: var(--spacing-small, 15px);
-}
-.experience-section ul li { /* Стиль для всех li внутри секции */
-  margin-bottom: var(--spacing-xs, 8px);
+[data-theme="dark"] .experience-section h4 {
+    border-bottom-color: var(--dark-border-subtle, rgba(255,255,255,0.08));
 }
 
-/* Стили для строк с инструментами/навыками */
-.experience-section p strong {
-  /* Можно стилизовать метки */
+/* Стили для списков обязанностей (если используется ul) */
+.experience-section h4 + ul:not(.achievements) {
+  list-style-type: disc; padding-left: 20px; margin-left: var(--spacing-small, 15px);
+  margin-top: var(--spacing-medium, 15px);
+}
+.experience-section ul:not(.achievements) li { margin-bottom: var(--spacing-xs, 8px); line-height: 1.7; }
+
+/* Стили для параграфов с инструментами/навыками */
+.experience-section h4 + p {
+    margin-top: var(--spacing-medium, 15px); font-size: 0.95em;
+    line-height: 1.7; color: var(--text-muted, inherit);
+}
+.experience-section p strong { /* Стиль для метки, если она внутри <p> со <strong> */
+    color: var(--text-base, inherit); font-weight: 600;
+    margin-right: var(--spacing-xs, 8px);
 }
 
-/* --- Галерея на странице Опыта --- */
-.experience-gallery { /* Класс для div, содержащего фото */
-  display: flex;
-  gap: var(--spacing-medium, 15px);
-  flex-wrap: wrap;
-  margin-top: var(--spacing-medium, 20px);
+/* --- Список Достижений --- */
+.achievements {
+    padding-left: 25px; list-style: none; margin-left: 0;
+    margin-top: var(--spacing-medium, 15px);
 }
-
-.experience-gallery img {
-  /* Устанавливаем ЖЕЛАЕМЫЙ размер */
-  max-width: 500px; /* <<-- УСТАНОВИТЕ НУЖНОЕ ЗНАЧЕНИЕ */
-  width: 100%; /* Для адаптивности */
-  height: auto;
-  aspect-ratio: 4 / 3; /* Соотношение сторон (можно изменить) */
-  object-fit: cover;
-  border-radius: var(--border-radius-md, 8px);
-  box-shadow: var(--shadow-md, 0 4px 6px rgba(0,0,0,0.1));
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.experience-gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: var(--shadow-lg, 0 10px 15px rgba(0,0,0,0.15));
-}
-
-/* --- Таймлайн на странице Опыта --- */
-.timeline-section { /* Может быть тем же элементом, что и .experience-section */
-  position: relative;
-  padding-left: var(--spacing-large, 30px);
-  margin-top: var(--spacing-large, 40px); /* Используем только верхний отступ, нижний от .experience-section */
-  margin-bottom: 0; /* Убираем дублирующий нижний отступ */
-  border-left: 3px solid var(--accent-color);
-}
-
-.timeline-section .timeline-item { /* Если итем внутри секции таймлайна */
-  padding: var(--spacing-large, 25px);
-  margin: var(--spacing-medium, 20px) 0;
-  border-radius: var(--border-radius-large, 12px);
-  box-shadow: var(--shadow-medium, 0 3px 15px rgba(0,0,0,0.1));
-  position: relative;
-  /* background: var(--card-bg); */ /* Добавьте, если не наследуется */
-}
-
-.timeline-date {
-  position: absolute;
-  left: -140px;
-  top: 15px;
-  width: 120px;
-  text-align: right;
-  color: var(--text-color); /* Должно наследоваться, но можно указать */
-  opacity: var(--opacity-medium, 0.8);
-  font-size: 0.9em;
-}
-
-.company {
-  color: var(--accent-color);
-  margin: var(--spacing-small, 10px) 0;
-  font-weight: 600;
-}
-
-/* --- Список Достижений на странице Опыта --- */
-.achievements { /* Селектор для ul с классом achievements */
-    padding-left: 20px;
-    list-style: none;
-    margin-left: 0; /* Сбрасываем внешний отступ */
-}
-.achievements li {
-  position: relative;
-  margin-bottom: var(--spacing-xs, 8px);
-}
+.achievements li { position: relative; margin-bottom: var(--spacing-sm, 10px); line-height: 1.7; }
 .achievements li::before {
-  content: "▹"; /* Маркер для этой страницы */
-  color: var(--accent-color);
-  position: absolute;
-  left: -20px;
+  content: "▹"; color: var(--accent-color); position: absolute;
+  left: -25px; top: 2px; font-weight: bold;
 }
 
-/* --- Адаптивность для страницы Опыта --- */
-@media (max-width: 768px) {
-  /* Адаптивность таймлайна */
-  .timeline-date {
-      position: static;
-      width: auto;
-      text-align: left;
-      margin-bottom: var(--spacing-small, 10px);
-      opacity: 1;
-      font-size: 0.85em;
-  }
-  .timeline-section {
-      padding-left: 0;
-      border-left: none;
-      margin-left: 0;
-  }
 
-  /* Адаптивность галереи */
-  .experience-gallery img {
-      max-width: 220px;
-  }
-  /* Адаптивность статистики (пример) */
-  /* .stats { grid-template-columns: 1fr 1fr; } */
+/* === Стили для Галереи и Изображений === */
+
+/* --- Контейнеры для изображений --- */
+.scrollable-gallery,
+.experience-image-container { /* Общий отступ сверху */
+    margin-top: var(--spacing-large, 30px);
 }
 
-@media (max-width: 480px) {
-    /* Адаптивность галереи */
-    .experience-gallery {
-        gap: var(--spacing-small, 10px);
+/* --- Стилизация прокручиваемого контейнера --- */
+.scrollable-gallery {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: var(--spacing-medium, 20px); /* Отступ между картинками */
+    padding-bottom: var(--spacing-medium, 15px); /* Место под скроллбар */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Плавный скролл на iOS */
+}
+/* Стилизация скроллбара (опционально) */
+.scrollable-gallery::-webkit-scrollbar { height: 8px; }
+.scrollable-gallery::-webkit-scrollbar-track { background: var(--track-color-subtle, rgba(0,0,0,0.1)); border-radius: 4px; }
+[data-theme="dark"] .scrollable-gallery::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); }
+.scrollable-gallery::-webkit-scrollbar-thumb { background: var(--accent-color); border-radius: 4px; }
+.scrollable-gallery::-webkit-scrollbar-thumb:hover { background: var(--accent-hover); }
+
+/* --- ОБЩИЕ Стили для ВСЕХ изображений в секциях опыта --- */
+.scrollable-gallery img,
+.experience-image-container img {
+    display: block; /* Для правильного применения margin auto */
+    flex-shrink: 0; /* Предотвращает сжатие во flex-контейнере галереи */
+    width: 90%; /* Базовая ширина */
+    max-width: 600px; /* Максимальная ширина для увеличенного вида */
+    height: auto; /* Авто-высота */
+    aspect-ratio: 16 / 10; /* Единое соотношение сторон */
+    object-fit: cover; /* Масштабирование с обрезкой */
+    border-radius: 8px; /* Единый радиус */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Единая тень */
+    scroll-snap-align: center; /* Прилипание к центру (только для галереи) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+/* Центрирование одиночного изображения */
+.experience-image-container img {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+/* Общий ховер-эффект */
+.scrollable-gallery img:hover,
+.experience-image-container img:hover {
+    transform: scale(1.02); /* Единый эффект */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Единая тень */
+}
+
+
+/* --- Адаптивность общая для изображений --- */
+@media (max-width: 992px) {
+    .scrollable-gallery img, .experience-image-container img {
+        max-width: 500px;
+        width: 85%;
     }
-    .experience-gallery img {
-        max-width: 100%;
-        aspect-ratio: 16 / 10;
+}
+@media (max-width: 768px) {
+    .scrollable-gallery img, .experience-image-container img {
+        max-width: 450px;
+        width: 80%;
+        aspect-ratio: 16/9; /* Меняем соотношение для средних экранов */
+    }
+    /* Статистика может стать 2х колонками */
+    .experience-stats {
+        /* grid-template-columns: repeat(2, 1fr); */ /* Раскомментируйте, если нужно 2 колонки */
+    }
+}
+@media (max-width: 480px) {
+    .scrollable-gallery img, .experience-image-container img {
+        max-width: 90%;
+        width: 90%;
+        aspect-ratio: 4/3; /* Меняем соотношение для малых экранов */
+    }
+    /* Убедимся что отступ между элементами галереи не слишком большой на мобильных */
+    .scrollable-gallery {
+         gap: var(--spacing-small, 10px);
+    }
+    /* Статистика может стать 1 колонкой */
+    .experience-stats {
+       /* grid-template-columns: 1fr; */ /* Раскомментируйте, если нужна 1 колонка */
     }
 }
