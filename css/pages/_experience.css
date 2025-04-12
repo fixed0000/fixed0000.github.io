@@ -1,129 +1,8 @@
 /* css/pages/_experience.css */
-/* Styles specifically for the Experience page */
-
-/* --- Page Layout Container --- */
-.experience-timeline { /* Using 'timeline' in name, but it's the page wrapper */
-  max-width: var(--container-width-large, 1200px); /* Use layout variable */
-  margin: 0 auto; /* Center horizontally */
-  /* Use spacing variables */
-  padding: var(--spacing-large, 40px) var(--spacing-medium, 20px);
-}
-
-/* --- Timeline Section Styling --- */
-/* Container for a logical section within the timeline (e.g., a single job) */
-.timeline-section {
-  position: relative; /* For absolute positioning of date/line */
-  /* Use spacing variables */
-  padding-left: var(--spacing-large, 30px);
-  margin: var(--spacing-large, 40px) 0;
-  /* Explicit vertical line for this page's timeline sections */
-  border-left: 3px solid var(--accent-color);
-}
-
-/* Specific styling for timeline items on this page */
-/* Assumes base styles (e.g., background, position:relative) might come from
-   a base .timeline-item class or .card class if applied. */
-.timeline-section .timeline-item { /* Contextual selector */
-  /* Define overrides or specific styles here */
-  padding: var(--spacing-large, 25px);
-  margin: var(--spacing-medium, 20px) 0; /* Vert margin only */
-  border-radius: var(--border-radius-large, 12px); /* Specific radius */
-  box-shadow: var(--shadow-medium, 0 3px 15px rgba(0,0,0,0.1)); /* Specific shadow */
-  /* Ensure background is set if not inherited */
-  /* background: var(--card-bg); */
-  /* Ensure position is relative if not inherited */
-  position: relative; /* Re-state position relative needed for child absolute */
-}
-
-.timeline-date { /* Positioned relative to .timeline-section */
-  position: absolute;
-  left: -140px; /* Adjust as needed, consider variable */
-  top: 15px;    /* Adjust as needed, consider variable */
-  width: 120px; /* Fixed width */
-  text-align: right;
-  color: var(--text-color);
-  opacity: var(--opacity-medium, 0.8); /* Use opacity variable */
-}
-
-.company { /* Styling for company name within a timeline item */
-  color: var(--accent-color);
-  margin: var(--spacing-small, 10px) 0;
-  font-weight: 600;
-}
-
-/* --- Achievements List Override --- */
-/* Specific marker for achievements list on THIS page */
-/* Base .achievements and li styles should come from _lists.css */
-.achievements li::before {
-  content: "▹"; /* Specific marker */
-  color: var(--accent-color);
-  position: absolute;
-  left: -20px; /* Specific positioning */
-  /* Remove margin-right if default marker had it */
-}
-
-/* --- Stats Section Item Styling --- */
-/* Styles for individual items within the .stats grid */
-.stat-item {
-  text-align: center;
-  padding: var(--spacing-medium, 15px);
-  /* Use variable for subtle accent background */
-  background: var(--accent-bg-subtle, rgba(52, 152, 219, 0.1));
-  border-radius: var(--border-radius-medium, 8px);
-}
-
-.stat-number {
-  display: block; /* Ensure it takes its own line */
-  font-size: 1.8em; /* Consider font-size variable */
-  font-weight: bold;
-  color: var(--accent-color);
-  margin-bottom: var(--spacing-xs, 5px); /* Add space below number */
-}
-
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 768px) {
-  .timeline-date {
-    position: static; /* Stack date above content */
-    width: auto; /* Reset width */
-    text-align: left;
-    margin-bottom: var(--spacing-small, 10px);
-    opacity: 1; /* Full opacity when static */
-  }
-
-  .timeline-section {
-    padding-left: 0; /* Remove padding */
-    border-left: none; /* Remove the vertical line */
-    margin-left: 0; /* Remove potential inherited margin */
-  }
-
-  /* Optional: Adjust stat item padding on mobile */
-  /* .stat-item { padding: var(--spacing-small, 10px); } */
-}
-
-
-/* --- Removed Redundant Styles --- */
-/*
-  Removed duplicate grid definitions for:
-  - .stats
-  - .experience-cards
-  (Define these once in layout/_grid.css)
-
-  Removed duplicate base styles for:
-  - .achievements
-  - .achievements li
-  (Define base list styles in components/_lists.css)
-
-  Removed base styles potentially duplicated within:
-  - .timeline-item
-  (Define base styles in components/_timeline.css or components/_cards.css)
-*/
-
-/* css/pages/_experience.css */
 /* Стили СПЕЦИФИЧНО для страницы Опыта */
 
 /* --- Контейнер страницы --- */
-.experience-page {
+.experience-page { /* Используем этот класс для <main> */
   max-width: var(--container-width-large, 1200px);
   margin: 0 auto;
   padding: var(--spacing-large, 40px) var(--spacing-medium, 20px);
@@ -131,21 +10,20 @@
 
 /* --- Введение --- */
 .experience-intro {
-  margin-bottom: var(--spacing-large, 40px); /* Отступ после введения */
-  /* Можно добавить стили для текста введения, если нужно */
-  /* text-align: center; */
+  margin-bottom: var(--spacing-large, 40px);
 }
 .experience-intro h2 {
-    text-align: center; /* Центрируем главный заголовок страницы */
+    text-align: center;
     margin-bottom: var(--spacing-medium, 20px);
 }
 
 /* --- Общая Статистика --- */
-.experience-stats {
-  margin-bottom: var(--spacing-xl, 50px); /* Большой отступ после статистики */
+.experience-stats { /* Класс для <section class="stats experience-stats"> */
+  margin-bottom: var(--spacing-xl, 50px);
+  /* Стили для .stats (grid) должны быть в layout/_grid.css */
 }
 
-/* Стили для .stat-item УЖЕ ДОЛЖНЫ БЫТЬ ЗДЕСЬ из предыдущего рефакторинга */
+/* Стили для отдельного элемента статистики */
 .stat-item {
   text-align: center;
   padding: var(--spacing-medium, 15px);
@@ -154,7 +32,7 @@
 }
 .stat-number {
   display: block;
-  font-size: 1.8em; /* Consider font-size variable */
+  font-size: 1.8em;
   font-weight: bold;
   color: var(--accent-color);
   margin-bottom: var(--spacing-xs, 5px);
@@ -165,131 +43,124 @@
 }
 
 /* --- Секции Опыта --- */
-/* Добавляем отступ между секциями опыта */
-.experience-section {
+.experience-section { /* Класс для <section class="highlight-box experience-section"> */
   margin-bottom: var(--spacing-large, 40px);
+  /* Стили для .highlight-box должны быть в components/_lists.css */
 }
 
-/* Заголовки внутри секций */
+/* Заголовки внутри секций опыта */
 .experience-section h3 {
   margin-bottom: var(--spacing-medium, 20px);
-  /* Можно добавить линию под заголовком секции */
-  /* border-bottom: 1px solid var(--divider-color, #eee); */
-  /* padding-bottom: var(--spacing-small, 10px); */
 }
 .experience-section h4 {
-  margin-top: var(--spacing-medium, 25px); /* Отступ перед подзаголовками Обязанности/Достижения */
+  margin-top: var(--spacing-medium, 25px);
   margin-bottom: var(--spacing-small, 10px);
-  font-weight: 600; /* Сделать подзаголовки чуть жирнее */
-  /* color: var(--text-color-secondary); */ /* Можно сделать их менее контрастными */
+  font-weight: 600;
 }
 
-/* Стили для списков обязанностей/достижений */
-.experience-section ul {
-  list-style: disc; /* Используем стандартные маркеры для этих списков */
-  padding-left: 20px; /* Стандартный отступ для списка с маркерами */
-  margin-left: var(--spacing-small, 15px); /* Доп. отступ слева */
+/* Стили для списков внутри секций опыта (обязанности/достижения) */
+.experience-section ul:not(.achievements) { /* Применяем только если это НЕ список достижений */
+  list-style: disc;
+  padding-left: 20px;
+  margin-left: var(--spacing-small, 15px);
 }
-.experience-section ul li {
-  margin-bottom: var(--spacing-xs, 8px); /* Отступ между пунктами */
+.experience-section ul li { /* Стиль для всех li внутри секции */
+  margin-bottom: var(--spacing-xs, 8px);
 }
 
 /* Стили для строк с инструментами/навыками */
 .experience-section p strong {
-  /* Можно немного выделить метки */
-  /* color: var(--text-color-secondary); */
+  /* Можно стилизовать метки */
 }
 
-/* Стили для галереи внутри секции (перенос из HTML) */
-.experience-gallery {
+/* --- Галерея на странице Опыта --- */
+.experience-gallery { /* Класс для div, содержащего фото */
   display: flex;
-  gap: var(--spacing-small, 10px);
+  gap: var(--spacing-medium, 15px);
   flex-wrap: wrap;
-  margin-top: var(--spacing-medium, 15px);
+  margin-top: var(--spacing-medium, 20px);
 }
+
 .experience-gallery img {
-  max-width: 150px; /* Макс. ширина миниатюры */
-  height: auto; /* Автоматическая высота */
-  border-radius: var(--border-radius-small, 5px);
-  object-fit: cover; /* Масштабировать с обрезкой */
-  box-shadow: var(--shadow-small, 0 1px 3px rgba(0,0,0,0.1)); /* Легкая тень */
+  /* Устанавливаем ЖЕЛАЕМЫЙ размер */
+  max-width: 500px; /* <<-- УСТАНОВИТЕ НУЖНОЕ ЗНАЧЕНИЕ */
+  width: 100%; /* Для адаптивности */
+  height: auto;
+  aspect-ratio: 4 / 3; /* Соотношение сторон (можно изменить) */
+  object-fit: cover;
+  border-radius: var(--border-radius-md, 8px);
+  box-shadow: var(--shadow-md, 0 4px 6px rgba(0,0,0,0.1));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-/* --- Таймлайн (если используется) --- */
-/* Специфичные стили для таймлайна на этой странице, если нужно */
-/* Например, если используется класс .experience-timeline для <main>
-   и внутри него есть структура .timeline-section > .timeline-item */
+.experience-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg, 0 10px 15px rgba(0,0,0,0.15));
+}
 
-/* Уточнение для .timeline-section, если нужно (вертикальная линия) */
-.timeline-section {
+/* --- Таймлайн на странице Опыта --- */
+.timeline-section { /* Может быть тем же элементом, что и .experience-section */
   position: relative;
   padding-left: var(--spacing-large, 30px);
-  margin: var(--spacing-large, 40px) 0;
-  border-left: 3px solid var(--accent-color); /* Линия таймлайна */
+  margin-top: var(--spacing-large, 40px); /* Используем только верхний отступ, нижний от .experience-section */
+  margin-bottom: 0; /* Убираем дублирующий нижний отступ */
+  border-left: 3px solid var(--accent-color);
 }
 
-/* Специфичные стили для ИТЕМОВ таймлайна НА ЭТОЙ СТРАНИЦЕ */
-/* (Переносим из нашего рефакторинга) */
-.timeline-section .timeline-item {
-  /* Убедитесь, что эти стили не конфликтуют с .highlight-box, если они на одном элементе */
+.timeline-section .timeline-item { /* Если итем внутри секции таймлайна */
   padding: var(--spacing-large, 25px);
   margin: var(--spacing-medium, 20px) 0;
   border-radius: var(--border-radius-large, 12px);
   box-shadow: var(--shadow-medium, 0 3px 15px rgba(0,0,0,0.1));
-  position: relative; /* Для позиционирования .timeline-date */
-  /* Добавьте фон, если он не наследуется от .highlight-box */
-  /* background: var(--card-bg); */
+  position: relative;
+  /* background: var(--card-bg); */ /* Добавьте, если не наследуется */
 }
 
-/* Стили для даты (уже были в рефакторинге) */
 .timeline-date {
   position: absolute;
-  left: -140px; /* Настроить под ширину */
+  left: -140px;
   top: 15px;
   width: 120px;
   text-align: right;
-  color: var(--text-color);
+  color: var(--text-color); /* Должно наследоваться, но можно указать */
   opacity: var(--opacity-medium, 0.8);
   font-size: 0.9em;
 }
 
-/* Стили для .company (уже были в рефакторинге) */
 .company {
   color: var(--accent-color);
   margin: var(--spacing-small, 10px) 0;
   font-weight: 600;
 }
 
-/* --- Достижения (achievements) --- */
-/* Специфичный маркер ДЛЯ ЭТОЙ СТРАНИЦЫ (перенос из рефакторинга) */
-.achievements li::before {
-  content: "▹";
-  color: var(--accent-color);
-  position: absolute;
-  left: -20px; /* Позиция маркера относительно li */
-}
-/* Возможно, нужно сбросить отступ для .achievements, если базовый стиль не подходит */
-.achievements {
-    padding-left: 20px; /* Или другое значение */
-    list-style: none; /* Убираем стандартные маркеры */
-    margin-left: 0; /* Сбрасываем доп. отступ, т.к. есть ::before */
+/* --- Список Достижений на странице Опыта --- */
+.achievements { /* Селектор для ul с классом achievements */
+    padding-left: 20px;
+    list-style: none;
+    margin-left: 0; /* Сбрасываем внешний отступ */
 }
 .achievements li {
-  position: relative; /* Для позиционирования ::before */
+  position: relative;
   margin-bottom: var(--spacing-xs, 8px);
 }
+.achievements li::before {
+  content: "▹"; /* Маркер для этой страницы */
+  color: var(--accent-color);
+  position: absolute;
+  left: -20px;
+}
 
-
-/* --- Адаптивность ДЛЯ ЭТОЙ СТРАНИЦЫ --- */
+/* --- Адаптивность для страницы Опыта --- */
 @media (max-width: 768px) {
-  /* Адаптивность таймлайна (уже была) */
+  /* Адаптивность таймлайна */
   .timeline-date {
       position: static;
       width: auto;
       text-align: left;
       margin-bottom: var(--spacing-small, 10px);
       opacity: 1;
-      font-size: 0.85em; /* Чуть меньше на мобильных */
+      font-size: 0.85em;
   }
   .timeline-section {
       padding-left: 0;
@@ -297,9 +168,21 @@
       margin-left: 0;
   }
 
-  /* Можно добавить адаптивность для статистики */
-  .stats {
-    /* grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Уменьшить мин. ширину */
-    /* grid-template-columns: 1fr 1fr; /* Строго 2 колонки */
+  /* Адаптивность галереи */
+  .experience-gallery img {
+      max-width: 220px;
   }
+  /* Адаптивность статистики (пример) */
+  /* .stats { grid-template-columns: 1fr 1fr; } */
+}
+
+@media (max-width: 480px) {
+    /* Адаптивность галереи */
+    .experience-gallery {
+        gap: var(--spacing-small, 10px);
+    }
+    .experience-gallery img {
+        max-width: 100%;
+        aspect-ratio: 16 / 10;
+    }
 }
