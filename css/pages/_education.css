@@ -1,252 +1,214 @@
 /* css/pages/education.css */
-/* Стили для страницы Образование */
+/* Стили СПЕЦИФИЧНО для страницы Образование */
 
 /* --- Контейнер страницы --- */
 .education-page {
     max-width: var(--container-width-large, 1200px);
     margin: 0 auto;
     padding: var(--spacing-large, 40px) var(--spacing-medium, 20px);
-    position: relative; /* Для позиционирования фоновых фигур */
-    overflow-x: hidden; /* Предотвратить горизонтальный выход фигур */
+    position: relative;
+    overflow: hidden;
   }
   
-  /* --- Фоновые фигуры (аналогично experience, но с префиксом .education-page) --- */
-  .education-page .background-shapes {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      overflow: hidden; z-index: -1; pointer-events: none;
-  }
-  .education-page .shape {
-      position: absolute; border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-      background-color: var(--accent-color); opacity: 0.05;
-      animation: float 20s infinite linear alternate; will-change: transform;
-  }
-  .education-page .shape.shape-1 { width: 200px; height: 180px; top: 10%; left: 8%; animation-duration: 24s; animation-delay: -2s;}
-  .education-page .shape.shape-2 { width: 120px; height: 100px; top: 70%; right: 10%; animation-duration: 19s; animation-delay: -6s; background-color: var(--secondary-color, #7ed5ea); }
-  .education-page .shape.shape-3 { width: 160px; height: 140px; top: 45%; left: 30%; animation-duration: 21s; animation-delay: -9s; border-radius: 50%; opacity: 0.04; }
-  [data-theme="dark"] .education-page .shape { opacity: 0.08; }
-  
-  /* Анимация остается той же */
-  @keyframes float { 0% { transform: translateY(0px) rotate(0deg) scale(1); } 50% { transform: translateY(-20px) rotate(180deg) scale(1.05); } 100% { transform: translateY(0px) rotate(360deg) scale(1); } }
-  
+  /* --- Фоновые фигуры --- */
+  .education-page .background-shapes { /* ... стили как в предыдущем ответе ... */ }
+  .education-page .bg-silhouette { /* ... стили как в предыдущем ответе ... */ }
+  /* ... Индивидуальные стили силуэтов ... */
+  @keyframes gentleFloat { /* ... анимация ... */ }
+  [data-theme="dark"] @keyframes gentleFloat { /* ... анимация ... */ }
+  .education-page .bg-silhouette { /* ... переменные прозрачности ... */ }
   
   /* --- Введение --- */
-  .education-intro {
-    margin-bottom: var(--spacing-xl, 50px);
-    text-align: center;
-  }
-  .education-intro h2 { /* Заголовок "Академический путь" */
-      color: var(--accent-color); font-size: 2.2em; font-weight: 700;
-      margin-bottom: var(--spacing-small, 15px); padding-bottom: var(--spacing-small, 15px);
-      border-bottom: 2px solid var(--accent-bg-subtle, rgba(52, 152, 219, 0.2));
-      display: inline-block;
-  }
+  .education-intro { margin-bottom: var(--spacing-xl, 50px); text-align: center; position: relative; z-index: 1; }
+  .education-intro h2 { color: var(--accent-color); font-size: 2.2em; font-weight: 700; margin-bottom: var(--spacing-small, 15px); padding-bottom: var(--spacing-small, 15px); border-bottom: 2px solid var(--accent-bg-subtle, rgba(52, 152, 219, 0.2)); display: inline-block; }
   [data-theme="dark"] .education-intro h2 { border-bottom-color: var(--accent-color); }
-  .education-intro p { /* Текст введения */
-      max-width: 800px; margin: 0 auto; line-height: 1.7;
-      color: var(--text-muted, inherit); margin-bottom: var(--spacing-medium, 25px);
-  }
-  .key-facts { /* Блок с ключевыми фактами */
-      font-size: 0.95em;
-      color: var(--text-muted, inherit);
-      opacity: 0.9;
-  }
-  .key-facts span {
-      margin: 0 var(--spacing-small, 10px); /* Отступы между фактами */
-      white-space: nowrap; /* Предотвратить перенос */
-  }
+  .education-intro p { max-width: 800px; margin: 0 auto; line-height: 1.7; color: var(--text-muted, inherit); margin-bottom: var(--spacing-medium, 25px); }
+  .key-facts { font-size: 0.95em; color: var(--text-muted, inherit); opacity: 0.9; }
+  .key-facts span { margin: 0 var(--spacing-small, 10px); white-space: nowrap; }
   .key-facts span:first-child { margin-left: 0; }
   .key-facts span:last-child { margin-right: 0; }
   
+  /* --- Общая Статистика --- */
+  .education-page .stats { margin-bottom: var(--spacing-xl, 50px); position: relative; z-index: 1; }
+  .education-page .stat-item { text-align: center; padding: var(--spacing-medium, 15px); background: var(--accent-bg-subtle, rgba(52, 152, 219, 0.1)); border-radius: var(--border-radius-medium, 8px); border: 1px solid transparent; transition: background-color var(--transition-base), border-color var(--transition-base); }
+  [data-theme="dark"] .education-page .stat-item { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1); }
+  .education-page .stat-number { display: block; font-size: 1.8em; font-weight: bold; color: var(--accent-color); margin-bottom: var(--spacing-xs, 5px); }
+  .education-page .stat-label { font-size: 0.9em; opacity: 0.8; color: var(--text-muted, inherit); }
   
   /* --- Общие стили для секций образования --- */
-  .education-section { /* Класс для <section id="..." class="highlight-box education-section"> */
-    margin-bottom: var(--spacing-xl, 50px);
-    /* Используем стили highlight-box для фона/тени */
-    padding: var(--spacing-large, 30px);
-    position: relative; z-index: 1; /* Контент над фоном */
-  }
-  .education-section h3 { /* Заголовки секций (названия ВУЗов и т.д.) */
-    display: flex; /* Для выравнивания логотипа и текста */
-    align-items: center;
-    margin-top: 0; margin-bottom: var(--spacing-medium, 20px);
-    color: var(--accent-color); font-size: 1.5em; /* Крупнее */
-    border-bottom: 1px solid var(--border-color-subtle, rgba(0,0,0,0.08));
-    padding-bottom: var(--spacing-small, 10px);
-  }
+  .education-section { margin-bottom: var(--spacing-xl, 50px); padding: var(--spacing-large, 30px); position: relative; z-index: 1; }
+  .education-section h3 { display: flex; align-items: center; margin-top: 0; margin-bottom: var(--spacing-medium, 20px); color: var(--accent-color); font-size: 1.5em; border-bottom: 1px solid var(--border-color-subtle, rgba(0,0,0,0.08)); padding-bottom: var(--spacing-small, 10px); }
   [data-theme="dark"] .education-section h3 { border-bottom-color: var(--dark-border-subtle, rgba(255,255,255,0.08)); }
-  
-  .education-section h4 { /* Подзаголовки внутри секций */
-    margin-top: var(--spacing-large, 30px); margin-bottom: var(--spacing-medium, 15px);
-    font-weight: 600; color: var(--text-base, inherit); font-size: 1.15em;
-  }
-  .education-section p {
-      margin-bottom: var(--spacing-small, 10px);
-      line-height: 1.7;
-  }
-  .education-section p strong { /* Метки "Факультет:", "Даты:" и т.д. */
-      font-weight: 600;
-      color: var(--text-base, inherit);
-      margin-right: var(--spacing-xs, 5px);
-  }
-  .education-section ul:not(.key-disciplines) { /* Обычные списки */
-      list-style-position: outside;
-      padding-left: 20px;
-      margin-left: 5px;
-  }
-  .education-section ul:not(.key-disciplines) li {
-      margin-bottom: var(--spacing-xs, 8px);
-  }
+  .education-section h4 { margin-top: var(--spacing-large, 30px); margin-bottom: var(--spacing-medium, 15px); font-weight: 600; color: var(--text-base, inherit); font-size: 1.15em; }
+  .education-section p { margin-bottom: var(--spacing-small, 10px); line-height: 1.7; }
+  .education-section p strong { font-weight: 600; color: var(--text-base, inherit); margin-right: var(--spacing-xs, 5px); }
+  .education-section ul:not(.key-disciplines):not(.additional-grid):not(.achievements) { list-style-position: outside; padding-left: 20px; margin-left: 5px; margin-top: 10px; }
+  .education-section ul:not(.key-disciplines):not(.additional-grid):not(.achievements) li { margin-bottom: var(--spacing-xs, 8px); }
+  .education-section .achievements { padding-left: 25px; list-style: none; margin-left: 0; margin-top: var(--spacing-medium, 15px); }
+  .education-section .achievements li { position: relative; margin-bottom: var(--spacing-sm, 10px); line-height: 1.7; }
+  .education-section .achievements li::before { content: "▹"; color: var(--accent-color); position: absolute; left: -25px; top: 2px; font-weight: bold; }
   
   
   /* --- Логотипы и Иконки --- */
-  .logo-placeholder {
-      display: inline-block;
-      width: 35px; height: 35px;
-      background-color: var(--bg-color-subtle, #eee); /* Фон плейсхолдера */
-      border-radius: 4px;
-      margin-right: var(--spacing-small, 12px);
-      vertical-align: middle;
-      flex-shrink: 0; /* Не сжимать */
-      /* Замените на реальные логотипы через background-image */
-  }
-  .mspu-logo { /* background-image: url('../images/logos/mspu.svg'); */ }
-  .tsukuba-logo { /* background-image: url('../images/logos/tsukuba.svg'); */ }
-  .school21-logo { /* background-image: url('../images/logos/school21.svg'); */ }
-  
-  .flag-icon { /* Для флага Японии */
-      font-size: 1.5em; /* Размер эмодзи */
-      margin-left: var(--spacing-small, 10px);
-      vertical-align: middle;
-  }
-  .icon { /* Для иконок дисциплин/сертификатов */
-      display: inline-block;
-      width: 1.2em; height: 1.2em;
-      margin-right: var(--spacing-small, 8px);
-      vertical-align: middle; /* Выравнивание с текстом */
-      /* Стилизация (можно использовать background-image или Font Awesome) */
-      /* color: var(--accent-color); */
-      /* font-size: 1.1em; */
-  }
-  
+  .logo-placeholder { display: inline-block; width: 35px; height: 35px; background-color: var(--bg-color-subtle, #eee); border-radius: 4px; margin-right: var(--spacing-small, 12px); vertical-align: middle; flex-shrink: 0; background-repeat: no-repeat; background-position: center; background-size: contain; border: none; }
+  /* .mspu-logo { background-image: url('../images/logos/mspu-logo.svg'); } */
+  /* .tsukuba-logo { background-image: url('../images/logos/tsukuba-logo.svg'); } */
+  /* .school21-logo { background-image: url('../images/logos/school21-logo.svg'); } */
+  .flag-icon { font-size: 1.5em; margin-left: var(--spacing-small, 10px); vertical-align: middle; }
+  .icon { display: inline-block; width: 1.2em; height: 1.2em; margin-right: var(--spacing-small, 8px); vertical-align: middle; }
   
   /* --- Секция Основного Образования --- */
-  .key-disciplines { /* Список ключевых дисциплин */
-      list-style: none;
-      padding-left: 0;
-      margin-top: var(--spacing-medium, 15px);
-  }
-  .key-disciplines li {
-      display: flex;
-      align-items: baseline; /* Выравнивание иконки по базовой линии текста */
-      margin-bottom: var(--spacing-small, 10px);
-  }
+  .key-disciplines { list-style: none; padding-left: 0; margin-top: var(--spacing-medium, 15px); }
+  .key-disciplines li { display: flex; align-items: baseline; margin-bottom: var(--spacing-small, 10px); }
   
-  
-  /* --- Секция Учебы по Обмену --- */
-  .docs-carousel.carousel-container { /* Специфичные стили для карусели документов */
-      max-width: 700px; /* Шире, чем стандартная карусель */
-      border: 1px solid var(--border-color-subtle, rgba(0,0,0,0.1));
-      box-shadow: none; /* Уберем тень, если не нужна */
+  /* --- Карусель ОБЩИЕ СТИЛИ --- */
+  .carousel-container {
+      position: relative; overflow: hidden; width: 100%;
+      max-width: 700px; /* Общая максимальная ширина для каруселей */
+      margin: 30px auto; border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border: 1px solid var(--border-color-subtle, rgba(0,0,0,0.1)); /* Добавим рамку всем */
   }
-  [data-theme="dark"] .docs-carousel.carousel-container {
+  [data-theme="dark"] .carousel-container {
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       border-color: var(--dark-border-subtle, rgba(255,255,255,0.1));
   }
+  .carousel-slides { display: flex; transition: transform 0.5s ease-in-out; width: 100%; }
+  .carousel-slide { flex: 0 0 100%; width: 100%; box-sizing: border-box; }
+  .carousel-slide img { display: block; width: 100%; height: auto; object-fit: cover; /* По умолчанию cover */ }
+  /* Стрелки */
+  .carousel-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 8px 12px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; line-height: 1; opacity: 0.7; transition: opacity 0.3s ease, background-color 0.3s ease; }
+  .carousel-arrow:hover { opacity: 1; background-color: rgba(0, 0, 0, 0.7); }
+  .carousel-arrow.prev { left: 15px; }
+  .carousel-arrow.next { right: 15px; }
+  .carousel-arrow:disabled { opacity: 0.3; cursor: default; }
+  /* Точки пагинации */
+  .carousel-dots { text-align: center; padding: 10px 0; position: absolute; bottom: 10px; left: 0; width: 100%; z-index: 2; }
+  .carousel-dot { display: inline-block; width: 10px; height: 10px; background-color: rgba(255, 255, 255, 0.5); border-radius: 50%; margin: 0 5px; cursor: pointer; transition: background-color 0.3s ease, transform 0.3s ease; }
+  .carousel-dot.active { background-color: white; transform: scale(1.2); }
+  [data-theme="dark"] .carousel-dot { background-color: rgba(0, 0, 0, 0.4); }
+  [data-theme="dark"] .carousel-dot.active { background-color: var(--text-color); }
+  
+  
+  /* --- Специфичные стили для Карусели Документов --- */
   .docs-carousel .carousel-slide img {
-      aspect-ratio: auto; /* У документов нет стандартного соотношения */
-      object-fit: contain; /* Показать весь документ, не обрезая */
-      background-color: var(--bg-color-subtle, #f8f8f8); /* Фон под документом */
-      max-height: 70vh; /* Ограничение высоты */
+      aspect-ratio: auto; /* Убираем соотношение сторон */
+      object-fit: contain; /* Показываем весь документ */
+      background-color: var(--bg-color-subtle, #f8f8f8); /* Фон подложки */
+      max-height: 70vh; /* Ограничиваем высоту */
+      padding: 10px; /* Небольшой отступ от краев слайда */
+      box-sizing: border-box;
   }
-  [data-theme="dark"] .docs-carousel .carousel-slide img {
-      background-color: #333; /* Темный фон под документом */
+  [data-theme="dark"] .docs-carousel .carousel-slide img { background-color: #333; }
+  
+  /* --- Специфичные стили для Карусели Фото МГПУ --- */
+  #mspu .carousel-container { /* Применяем стили карусели к фото МГПУ */
+       max-width: 800px; /* Можно сделать шире */
+       margin-top: 20px; /* Отступ от списка дисциплин */
+  }
+  #mspu .carousel-slide img {
+      aspect-ratio: 16 / 9; /* Соотношение сторон для фото */
+      /* object-fit: cover; уже задан */
   }
   
   
   /* --- Секция Доп. Образования --- */
-  .additional-grid {
-      display: grid;
-      /* Адаптивные колонки */
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: var(--spacing-large, 30px);
+  .additional-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-large, 30px); margin-top: var(--spacing-medium, 20px); }
+  .additional-item { background: var(--bg-color-subtle, rgba(0,0,0,0.02)); padding: var(--spacing-medium, 20px); border-radius: var(--border-radius-medium, 8px); border: 1px solid var(--border-color-extra-subtle, rgba(0,0,0,0.05)); }
+  [data-theme="dark"] .additional-item { background: var(--dark-bg-subtle, rgba(255,255,255,0.03)); border-color: var(--dark-border-subtle, rgba(255,255,255,0.08)); }
+  .additional-item h4 { display: flex; align-items: center; margin-top: 0; margin-bottom: var(--spacing-small, 10px); font-size: 1.1em; border-bottom: none; padding-bottom: 0; }
+  .additional-item p { font-size: 0.9em; color: var(--text-muted, inherit); margin-bottom: var(--spacing-xs, 5px); }
+  .additional-item p strong { color: var(--accent-color); font-weight: 700; }
+  
+  /* --- Галерея Активностей и Сертификата N2 --- */
+  .activities-gallery {
+      display: grid; /* Используем Grid для лучшего контроля */
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Адаптивные колонки */
+      gap: var(--spacing-medium, 15px);
       margin-top: var(--spacing-medium, 20px);
   }
-  .additional-item {
-      /* Стили для каждого блока в сетке */
-      background: var(--bg-color-subtle, rgba(0,0,0,0.02));
-      padding: var(--spacing-medium, 20px);
-      border-radius: var(--border-radius-medium, 8px);
-      border: 1px solid var(--border-color-extra-subtle, rgba(0,0,0,0.05));
+  .activities-gallery img {
+      width: 100%; /* Заполняет ячейку грида */
+      height: auto;
+      aspect-ratio: 4 / 3; /* Соотношение для превью */
+      object-fit: cover;
+      border-radius: var(--border-radius-small, 6px); /* Меньшее скругление */
+      box-shadow: var(--shadow-sm, 0 2px 4px rgba(0,0,0,0.1));
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
   }
-  [data-theme="dark"] .additional-item {
-      background: var(--dark-bg-subtle, rgba(255,255,255,0.03));
-      border-color: var(--dark-border-subtle, rgba(255,255,255,0.08));
+  .activities-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-md, 0 4px 8px rgba(0,0,0,0.15));
   }
-  .additional-item h4 {
-      display: flex; /* Для логотипа */
-      align-items: center;
-      margin-top: 0;
-      margin-bottom: var(--spacing-small, 10px);
-      font-size: 1.1em;
-      border-bottom: none; /* Убираем линию под заголовком в блоках */
-      padding-bottom: 0;
-  }
-  .additional-item p {
-      font-size: 0.9em;
-      color: var(--text-muted, inherit);
-      margin-bottom: var(--spacing-xs, 5px);
-  }
-  .additional-item p strong { /* Уровень N1/N2 */
-      color: var(--accent-color);
-      font-weight: 700;
+  /* Специфично для сертификата N2, если нужно */
+  #additional-edu .additional-item:last-child .activities-gallery img {
+      max-width: 250px; /* Ограничим ширину сертификата */
+      aspect-ratio: auto; /* Уберем соотношение сторон */
+      object-fit: contain; /* Показать полностью */
+      margin: 0 auto; /* Центрируем */
   }
   
+  
   /* --- Секция Академ. Достижений --- */
-  .achievements-content {
-      margin-top: var(--spacing-medium, 20px);
-  }
-  .achievements-content > div { /* Отступ между подразделами */
-      margin-bottom: var(--spacing-large, 30px);
-  }
-  .achievements-content h4 { /* Заголовки подразделов */
-      margin-top: 0;
-      margin-bottom: var(--spacing-small, 10px);
-      font-size: 1.1em;
-      border-bottom: none;
-      padding-bottom: 0;
-  }
+  .achievements-content { margin-top: var(--spacing-medium, 20px); }
+  .achievements-content > div { margin-bottom: var(--spacing-large, 30px); }
+  .achievements-content h4 { margin-top: 0; margin-bottom: var(--spacing-small, 10px); font-size: 1.1em; border-bottom: none; padding-bottom: 0; }
   .achievements-content ul { list-style-type: disc; padding-left: 20px; margin-left: 5px; }
   .achievements-content li { margin-bottom: var(--spacing-xs, 5px); }
-  .achievements-content p strong { font-weight: 600; } /* Тема ВКР */
+  .achievements-content p strong { font-weight: 600; }
   .achievements-content p:last-child { margin-bottom: 0; }
+  
+  
+  /* --- Фоновые Силуэты --- */
+  .education-page .background-shapes { /* ... стили как в предыдущем ответе ... */ }
+  .education-page .bg-silhouette { /* ... стили как в предыдущем ответе ... */ }
+  /* ... Индивидуальные стили силуэтов ... */
+  @keyframes gentleFloat { /* ... анимация ... */ }
+  [data-theme="dark"] @keyframes gentleFloat { /* ... анимация ... */ }
+  .education-page .bg-silhouette { /* ... переменные прозрачности ... */ }
+  
+  
+  /* === Анимация появления при скролле === */
+  .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; will-change: opacity, transform; }
+  .animate-on-scroll.active { opacity: 1; transform: translateY(0); }
+  .education-page .stat-item { transition-delay: calc(var(--animation-order, 0) * 100ms); }
   
   
   /* --- Адаптивность --- */
   @media (max-width: 1200px) {
-      .education-page .shape.shape-1 { width: 150px; height: 120px; left: 3%; }
-      .education-page .shape.shape-2 { width: 70px; height: 90px; right: 5%; }
+      .education-page .bg-silhouette { transform: scale(0.8); }
+  }
+  @media (max-width: 992px) {
+      .education-page .bg-silhouette { transform: scale(0.65); opacity: 0.05 !important; }
+      [data-theme="dark"] .education-page .bg-silhouette { opacity: 0.08 !important; }
+      .carousel-container, .docs-carousel.carousel-container { max-width: 90%; }
   }
   @media (max-width: 768px) {
-      .education-page .shape { display: none; } /* Скрываем фон */
-      .key-facts { font-size: 0.9em; }
-      .key-facts span { display: block; margin: 5px 0; } /* Факты друг под другом */
-      .additional-grid { grid-template-columns: 1fr; } /* 1 колонка для доп. образования */
+      .education-page .bg-silhouette { display: none; }
+      .key-facts span { display: block; margin: 5px 0; }
+      .additional-grid { grid-template-columns: 1fr; }
       .docs-carousel.carousel-container { max-width: 95%; }
+      .carousel-arrow { padding: 6px 10px; font-size: 1rem; }
+      .carousel-dot { width: 8px; height: 8px; }
+      .education-page .stats { grid-template-columns: repeat(2, 1fr); }
+      .activities-gallery { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); } /* Уменьшим колонки */
   }
   @media (max-width: 480px) {
+      .docs-carousel .carousel-slide img { max-height: 60vh; }
+      .carousel-dots { bottom: 5px; }
       .education-intro h2 { font-size: 1.8em; }
       .education-section h3 { font-size: 1.3em; }
       .education-section h4 { font-size: 1.1em; }
+      .education-page .stats { grid-template-columns: 1fr; }
+      .activities-gallery { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); } /* Еще меньше */
   }
   
   /* --- Доступность: Отключение анимаций --- */
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
     .animate-on-scroll { opacity: 1 !important; transform: none !important; transition: none !important; }
-    .shape { animation: none !important; }
+    .shape, .bg-silhouette { animation: none !important; }
     .carousel-slides { transition: none !important; }
+    .activities-gallery img:hover { transform: none; } /* Отключаем ховер */
   }
