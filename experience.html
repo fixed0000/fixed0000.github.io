@@ -5,80 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="experiencePage.pageTitle">Опыт работы</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="favicon.ico" sizes="any"> <!-- Для .ico файла -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"> <!-- Для iOS устройств -->
+    <link rel="manifest" href="/site.webmanifest"> <!-- Для PWA и Android -->
+    <!-- Рекомендуется подключить стили через <link> -->
+    <link rel="stylesheet" href="css/pages/experience.css">
     <style>
-      /* Стили лучше перенести в main.css или _experience.css */
+      /* Минимальный стиль для скрытия меток, если нет в main.css */
       .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
-
-      /* === Стили для заголовка страницы === */
-      .experience-intro h2 {
-          color: var(--accent-color); font-size: 2.2em; font-weight: 700;
-          margin-bottom: var(--spacing-medium, 20px); padding-bottom: var(--spacing-small, 15px);
-          border-bottom: 2px solid var(--accent-bg-subtle, rgba(52, 152, 219, 0.2));
-          display: inline-block; text-align: center; /* Центрирование заголовка */
-      }
-      .experience-intro { text-align: center; } /* Центрирование всего блока интро */
-      .experience-intro p { max-width: 800px; margin: 0 auto; line-height: 1.7; color: var(--text-muted, inherit); }
-      [data-theme="dark"] .experience-intro h2 { border-bottom-color: var(--accent-color); }
-
-      /* === Стили для прокручиваемой галереи === */
-      .scrollable-gallery {
-          display: flex; overflow-x: auto; overflow-y: hidden;
-          gap: var(--spacing-medium, 20px); /* Увеличим отступ */
-          padding-bottom: var(--spacing-medium, 15px); margin-top: 30px; /* Увеличим отступ сверху */
-          scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
-      }
-      .scrollable-gallery::-webkit-scrollbar { height: 8px; }
-      .scrollable-gallery::-webkit-scrollbar-track { background: var(--track-color-subtle, rgba(0,0,0,0.1)); border-radius: 4px; }
-      [data-theme="dark"] .scrollable-gallery::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); }
-      .scrollable-gallery::-webkit-scrollbar-thumb { background: var(--accent-color); border-radius: 4px; }
-      .scrollable-gallery::-webkit-scrollbar-thumb:hover { background: var(--accent-hover); }
-
-      .scrollable-gallery img {
-          flex: 0 0 auto;
-          /* УВЕЛИЧЕННЫЙ РАЗМЕР: ширина ~90%, макс. 600px */
-          width: 90%;
-          max-width: 600px;
-          height: auto;
-          aspect-ratio: 16 / 10; /* Соотношение сторон */
-          object-fit: cover; border-radius: 8px;
-          box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Чуть больше тень */
-          scroll-snap-align: center;
-          transition: transform 0.3s ease;
-      }
-      .scrollable-gallery img:hover { transform: scale(1.02); } /* Меньший масштаб при ховере */
-
-      /* Стили для БОЛЬШОЙ картинки (Mosburger) */
-      .experience-large-image { margin-top: 30px; }
-      .experience-large-image img {
-          display: block; width: 100%; height: auto; object-fit: cover;
-          border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-          aspect-ratio: 3 / 2; /* Стандартное соотношение для большой картинки */
-      }
-
-      /* Адаптивность для галереи */
-      @media (max-width: 992px) { .scrollable-gallery img { max-width: 500px; width: 85%; } }
-      @media (max-width: 768px) { .scrollable-gallery img { max-width: 450px; width: 80%; aspect-ratio: 16/9; } }
-      @media (max-width: 480px) { .scrollable-gallery img { max-width: 90%; width: 90%; aspect-ratio: 4/3; } }
-
-      /* Стили для секции опыта и внутренних элементов */
-      .experience-section { margin-bottom: 50px; padding: 30px; }
-      .experience-section h3 { margin-top: 0; margin-bottom: 15px; color: var(--accent-color); font-size: 1.4em; }
-      .experience-section h4 { margin-top: 30px; margin-bottom: 10px; font-weight: 600; color: var(--text-base, inherit); font-size: 1.1em; padding-bottom: 5px; border-bottom: 1px solid var(--border-color-subtle, rgba(0,0,0,0.08)); }
-      [data-theme="dark"] .experience-section h4 { border-bottom-color: var(--dark-border-subtle, rgba(255,255,255,0.08)); }
-      .experience-section h4 + ul:not(.achievements) { list-style-type: disc; padding-left: 20px; margin-left: 15px; margin-top: 15px; }
-      .experience-section ul:not(.achievements) li { margin-bottom: 8px; line-height: 1.7; }
-      .experience-section h4 + p { margin-top: 15px; font-size: 0.95em; line-height: 1.7; color: var(--text-muted, inherit); }
-      .experience-section p strong { color: var(--text-base, inherit); font-weight: 600; margin-right: 8px; }
-      .achievements { padding-left: 25px; list-style: none; margin-left: 0; margin-top: 15px; }
-      .achievements li { position: relative; margin-bottom: 10px; line-height: 1.7; }
-      .achievements li::before { content: "▹"; color: var(--accent-color); position: absolute; left: -25px; top: 2px; font-weight: bold; }
-      .stats.experience-stats { margin-bottom: 50px; }
-      .stat-item { text-align: center; padding: 15px; background: var(--accent-bg-subtle, rgba(52, 152, 219, 0.1)); border-radius: 8px; border: 1px solid transparent; transition: background-color var(--transition-base), border-color var(--transition-base); }
-      [data-theme="dark"] .stat-item { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1); }
-      .stat-number { display: block; font-size: 1.8em; font-weight: bold; color: var(--accent-color); margin-bottom: 5px; }
-      .stat-label { font-size: 0.9em; opacity: 0.8; color: var(--text-muted, inherit); }
-
-
     </style>
 </head>
 <body>
@@ -112,8 +46,15 @@
     <!-- Основное содержимое страницы Опыта -->
     <main class="experience-page">
 
+         <!-- Фоновые фигуры -->
+         <div class="background-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+
         <!-- 1. Краткое введение -->
-        <section class="experience-intro">
+        <section class="experience-intro animate-on-scroll">
           <h2 id="main-title" data-i18n="experiencePage.mainTitle">Профессиональный Путь</h2>
           <p data-i18n="experiencePage.introText">
             Мой опыт охватывает локализацию игр, преподавание японского языка, устный перевод и сопровождение иностранных гостей, а также работу в сфере японского сервиса. Это позволило мне развить как технические, так и межкультурные коммуникативные навыки, умение решать нестандартные задачи и адаптироваться к различным рабочим средам.
@@ -121,8 +62,8 @@
         </section>
 
         <!-- 2. Статистика -->
-        <section class="stats experience-stats">
-            <div class="stat-item">
+        <section class="stats experience-stats animate-on-scroll">
+             <div class="stat-item">
               <span class="stat-number" data-i18n="experiencePage.stat1.value">1+</span>
               <span class="stat-label" data-i18n="experiencePage.stat1.label">Год опыта в локализации</span>
             </div>
@@ -143,7 +84,7 @@
         <!-- 3. Разделы Опыта (в новом порядке) -->
 
         <!-- Секция Опыта: Сопровождение и Перевод -->
-        <section id="interpreting" class="highlight-box experience-section">
+        <section id="interpreting" class="highlight-box experience-section animate-on-scroll">
           <h3 data-i18n="experiencePage.interpreting.title">Сопровождение и Устный Перевод (Японский <-> Русский)</h3>
           <p><strong data-i18n="experiencePage.interpreting.orgLabel">Организация:</strong> <span data-i18n="experiencePage.interpreting.orgValue">Японский дом (Стажировка)</span></p>
           <p><strong data-i18n="experiencePage.interpreting.eventLabel">Мероприятие:</strong> <span data-i18n="experiencePage.interpreting.eventValue">Фестиваль японской культуры "Hinode Power Japan"</span></p>
@@ -163,20 +104,24 @@
             <li data-i18n="experiencePage.interpreting.ach3">Продемонстрировала высокую стрессоустойчивость и адаптивность, работая в динамичной среде фестиваля.</li>
           </ul>
 
-          <h4 data-i18n="experiencePage.skillsLabel">Развитые навыки</h4>
-          <p><span data-i18n="experiencePage.skillsValueInterpreting">Последовательный устный перевод (JP<->RU), межкультурная коммуникация, деловой этикет (японский), решение проблем, ответственность, стрессоустойчивость, адаптивность.</span></p>
+          <!-- Возвращен параграф для навыков -->
+          <p><strong data-i18n="experiencePage.skillsLabel">Развитые навыки:</strong> <span data-i18n="experiencePage.skillsValueInterpreting">Последовательный устный перевод (JP<->RU), межкультурная коммуникация, деловой этикет (японский), решение проблем, ответственность, стрессоустойчивость, адаптивность.</span></p>
 
-           <!-- Контейнер для ПРОКРУЧИВАЕМЫХ изображений -->
-           <div class="scrollable-gallery">
-               <img src="images/hinode_photo3.jpg" data-i18n-alt="experiencePage.interpreting.photo1Alt" alt="Фото с японскими гостями (1)">
-               <img src="images/hinode_photo1.jpg" data-i18n-alt="experiencePage.interpreting.photo2Alt" alt="Фото с фестиваля Hinode">
-               <img src="images/hinode_photo2.jpg" data-i18n-alt="experiencePage.interpreting.photo2Alt" alt="Фото с японскими гостями (2)">
-               <!-- Можно добавить еще фото -->
+           <!-- Карусель -->
+           <div class="carousel-container">
+               <div class="carousel-slides">
+                   <div class="carousel-slide"><img src="images/hinode_photo3.jpg" data-i18n-alt="experiencePage.interpreting.photo1Alt" alt="Фото с японскими гостями (1)"></div>
+                   <div class="carousel-slide"><img src="images/hinode_photo1.jpg" data-i18n-alt="experiencePage.interpreting.photo2Alt" alt="Фото с фестиваля Hinode"></div>
+                   <div class="carousel-slide"><img src="images/hinode_photo2.jpg" data-i18n-alt="experiencePage.interpreting.photo3Alt" alt="Фото с японскими гостями (2)"></div>
+               </div>
+               <button class="carousel-arrow prev" aria-label="Previous slide">❮</button>
+               <button class="carousel-arrow next" aria-label="Next slide">❯</button>
+               <div class="carousel-dots"></div>
            </div>
         </section>
 
         <!-- Секция Опыта: Локализация -->
-        <section id="localization" class="highlight-box experience-section">
+        <section id="localization" class="highlight-box experience-section animate-on-scroll">
           <h3 data-i18n="experiencePage.localization.title">Локализация Игр (Английский -> Русский)</h3>
           <p><strong data-i18n="experiencePage.localization.companyLabel">Компания:</strong> <span data-i18n="experiencePage.localization.companyValue">Fruitbat Factory (Финляндия, Удаленно)</span></p>
           <p><strong data-i18n="experiencePage.localization.roleLabel">Роль:</strong> <span data-i18n="experiencePage.localization.roleValue">Локализатор контента</span></p>
@@ -197,22 +142,24 @@
             <li data-i18n="experiencePage.localization.ach3">Наладила эффективный рабочий процесс с использованием предоставленных инструментов, всегда соблюдая установленные сроки.</li>
           </ul>
 
-          <h4 data-i18n="experiencePage.toolsLabel">Используемые инструменты</h4>
-          <p><span data-i18n="experiencePage.toolsValueLocalization">Visual Studio Code, TortoiseSVN, GitHub (для отслеживания задач), Dropbox.</span></p>
-          <h4 data-i18n="experiencePage.skillsLabel">Развитые навыки</h4>
-          <p><span data-i18n="experiencePage.skillsValueLocalization">Внимание к деталям, работа с терминологией, контроль версий, соблюдение сроков, лингвистическая адаптация.</span></p>
+          <!-- Возвращен параграф для инструментов -->
+          <p><strong data-i18n="experiencePage.toolsLabel">Используемые инструменты:</strong> <span data-i18n="experiencePage.toolsValueLocalization">Visual Studio Code, TortoiseSVN, GitHub (для отслеживания задач), Dropbox.</span></p>
+          <!-- Возвращен параграф для навыков -->
+          <p><strong data-i18n="experiencePage.skillsLabel">Развитые навыки:</strong> <span data-i18n="experiencePage.skillsValueLocalization">Внимание к деталям, работа с терминологией, контроль версий, соблюдение сроков, лингвистическая адаптация.</span></p>
 
-          <!-- Контейнер для ПРОКРУЧИВАЕМЫХ изображений -->
-          <div class="scrollable-gallery">
-              <img src="images/orangejuice.jpg"
-                   data-i18n-alt="experiencePage.localization.imageAlt"
-                   alt="Скриншот из игры 100% Orange Juice с русским текстом">
-              <!-- Можно добавить еще скриншоты -->
+          <!-- Карусель -->
+          <div class="carousel-container">
+              <div class="carousel-slides">
+                  <div class="carousel-slide"><img src="images/orangejuice.jpg" data-i18n-alt="experiencePage.localization.imageAlt" alt="Скриншот из игры 100% Orange Juice"></div>
+              </div>
+              <button class="carousel-arrow prev" aria-label="Previous slide">❮</button>
+              <button class="carousel-arrow next" aria-label="Next slide">❯</button>
+              <div class="carousel-dots"></div>
           </div>
         </section>
 
         <!-- Секция Опыта: Работа в Mosburger -->
-        <section id="mosburger" class="highlight-box experience-section">
+        <section id="mosburger" class="highlight-box experience-section animate-on-scroll">
           <h3 data-i18n="experiencePage.mosburger.title">Работа в Сфере Обслуживания (Япония)</h3>
           <p><strong data-i18n="experiencePage.mosburger.companyLabel">Компания:</strong> <span data-i18n="experiencePage.mosburger.companyValue">MOS Food Services, Inc. (Mosburger)</span></p>
           <p><strong data-i18n="experiencePage.mosburger.roleLabel">Роль:</strong> <span data-i18n="experiencePage.mosburger.roleValue">Кассир / Член команды</span></p>
@@ -235,17 +182,17 @@
             <li data-i18n="experiencePage.mosburger.ach3">Успешно адаптировалась к японской рабочей культуре, стандартам сервиса и выстроила продуктивные отношения в коллективе.</li>
           </ul>
 
-          <h4 data-i18n="experiencePage.skillsLabel">Развитые навыки</h4>
-          <p><span data-i18n="experiencePage.skillsValueMosburger">Японский язык (разговорный, рабочий), обслуживание клиентов (стандарты "омотэнаси"), многозадачность, работа в команде, стрессоустойчивость, культурная адаптация, работа с кассой.</span></p>
+          <!-- Возвращен параграф для навыков -->
+          <p><strong data-i18n="experiencePage.skillsLabel">Развитые навыки:</strong> <span data-i18n="experiencePage.skillsValueMosburger">Японский язык (разговорный, рабочий), обслуживание клиентов (стандарты "омотэнаси"), многозадачность, работа в команде, стрессоустойчивость, культурная адаптация, работа с кассой.</span></p>
 
-           <!-- ИЗМЕНЕН КЛАСС КОНТЕЙНЕРА -->
+           <!-- ОДИНОЧНОЕ Изображение -->
            <div class="experience-image-container">
                 <img src="images/image5.jpg" alt="Фотография рабочего места или ресторана Mosburger" data-i18n-alt="experiencePage.mosburger.largeImgAlt">
            </div>
         </section>
 
         <!-- Секция Опыта: Преподавание -->
-        <section id="tutoring" class="highlight-box experience-section">
+        <section id="tutoring" class="highlight-box experience-section animate-on-scroll">
           <h3 data-i18n="experiencePage.tutoring.title">Преподавание Японского Языка</h3>
           <p><strong data-i18n="experiencePage.tutoring.platformLabel">Платформа:</strong> <span data-i18n="experiencePage.tutoring.platformValue">Онлайн (самостоятельный поиск учеников)</span></p>
           <p><strong data-i18n="experiencePage.tutoring.roleLabel">Роль:</strong> <span data-i18n="experiencePage.tutoring.roleValue">Учитель японского языка (уровни N5-N4)</span></p>
@@ -266,21 +213,20 @@
             <li data-i18n="experiencePage.tutoring.ach3">Эффективно управляла своим расписанием и коммуникацией с учениками на онлайн-платформах.</li>
           </ul>
 
-          <h4 data-i18n="experiencePage.toolsLabel">Используемые инструменты</h4>
-          <p><span data-i18n="experiencePage.toolsValueTutoring">Zoom, Miro (или Google Jamboard), Учебные пособия Нечаевой, Tae Kim Grammar Guide, Bunpro.jp.</span></p>
-          <h4 data-i18n="experiencePage.skillsLabel">Развитые навыки</h4>
-          <p><span data-i18n="experiencePage.skillsValueTutoring">Педагогика, планирование уроков, адаптация материала, межличностная коммуникация, организационные навыки, использование онлайн-инструментов.</span></p>
-          <!-- Галерея здесь не предусмотрена, но можно добавить div.scrollable-gallery при необходимости -->
+          <!-- Возвращен параграф для инструментов -->
+          <p><strong data-i18n="experiencePage.toolsLabel">Используемые инструменты:</strong> <span data-i18n="experiencePage.toolsValueTutoring">Zoom, Miro (или Google Jamboard), Учебные пособия Нечаевой, Tae Kim Grammar Guide, Bunpro.jp.</span></p>
+          <!-- Возвращен параграф для навыков -->
+          <p><strong data-i18n="experiencePage.skillsLabel">Развитые навыки:</strong> <span data-i18n="experiencePage.skillsValueTutoring">Педагогика, планирование уроков, адаптация материала, межличностная коммуникация, организационные навыки, использование онлайн-инструментов.</span></p>
         </section>
 
     </main>
 
-    <!-- Футер (без изменений) -->
+    <!-- Футер -->
     <footer>
         <p data-i18n="footer.copyright">© 2024 Мой первый сайт</p>
     </footer>
 
-    <!-- Подключение скриптов (без изменений) -->
+    <!-- Подключение скриптов -->
     <script src="translations.js" defer></script>
     <script src="script.js" defer></script>
 

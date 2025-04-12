@@ -1,59 +1,50 @@
 /**
  * script.js
  *
- * Содержит основной JavaScript для инициализации интерактивных элементов страницы:
- * - Анимации появления элементов при прокрутке
- * - Переключение тем (светлая/темная)
- * - Переключение языка интерфейса
- * - Обработка отправки контактной формы
+ * Основной JavaScript для интерактивных элементов страницы.
  */
 
 // --- Определения Функций Инициализации ---
 
 /**
  * Инициализирует Intersection Observer для анимации появления
- * элементов с классом '.animate-on-scroll' при прокрутке.
+ * элементов с классом '.animate-on-scroll'.
  */
 const initializeScrollAnimations = () => {
   const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-  console.log(`Found ${elementsToAnimate.length} elements to animate on scroll.`); // DEBUG
+  // console.log(`Found ${elementsToAnimate.length} elements to animate on scroll.`); // DEBUG
 
   if (elementsToAnimate.length > 0) {
     const observer = new IntersectionObserver((entries, observerInstance) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Добавляем класс 'active' для запуска CSS анимации/transition
           entry.target.classList.add('active');
-          // Перестаем наблюдать за этим элементом после активации
           observerInstance.unobserve(entry.target);
-          // console.log('Element animated:', entry.target); // DEBUG (можно раскомментировать)
+          // console.log('Element animated:', entry.target); // DEBUG
         }
       });
     }, {
-      threshold: 0.1, // Начать анимацию, когда видно хотя бы 10% элемента
+      threshold: 0.1, // Начать анимацию при 10% видимости
     });
-
     elementsToAnimate.forEach(element => observer.observe(element));
   }
 };
 
 /**
  * Инициализирует переключатель темы (светлая/темная).
- * Сохраняет выбор пользователя в localStorage.
  */
 const initializeTheme = () => {
   const toggle = document.getElementById('theme-toggle');
   if (toggle) {
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.body.dataset.theme = savedTheme;
-    // console.log(`Initial theme set to: ${savedTheme}`); // DEBUG
 
     toggle.addEventListener('click', () => {
       const currentTheme = document.body.dataset.theme;
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       document.body.dataset.theme = newTheme;
-      console.log(`Theme changed to: ${newTheme}`); // DEBUG
       localStorage.setItem('theme', newTheme);
+       // console.log(`Theme changed to: ${newTheme}`); // DEBUG
     });
   } else {
     console.error("Theme toggle button with id 'theme-toggle' not found.");
@@ -62,27 +53,21 @@ const initializeTheme = () => {
 
 /**
  * Инициализирует переключатель языка интерфейса.
- * Сохраняет выбор пользователя в localStorage и обновляет текст на странице.
  */
 const initializeLanguage = () => {
   const languageSelect = document.getElementById('language-select');
   if (languageSelect) {
-    // Проверяем наличие translations ПЕРЕД использованием
     if (typeof translations === 'undefined') {
         console.error("CRITICAL in initializeLanguage: 'translations' object is undefined! Cannot initialize language features.");
-        return; // Прерываем инициализацию языка
+        return;
     }
-    // console.log("'translations' object seems defined."); // DEBUG
 
-    const savedLang = localStorage.getItem('selectedLanguage') || document.documentElement.lang || 'ru'; // Используем lang из HTML как запасной вариант
+    const savedLang = localStorage.getItem('selectedLanguage') || document.documentElement.lang || 'ru';
     languageSelect.value = savedLang;
-    // console.log(`Initial language set to: ${savedLang}`); // DEBUG
     updateLanguage(savedLang); // Первичное обновление
 
     languageSelect.addEventListener('change', (event) => {
-      const newLang = event.target.value;
-      // console.log(`Language select CHANGED to: ${newLang}`); // DEBUG
-      updateLanguage(newLang);
+      updateLanguage(event.target.value);
     });
   } else {
     console.error("Language select dropdown with id 'language-select' not found.");
@@ -91,25 +76,22 @@ const initializeLanguage = () => {
 
 /**
  * Инициализирует обработчик отправки контактной формы.
- * Отправляет данные на сервер асинхронно (fetch).
  */
 const initializeContactForm = () => {
     const form = document.getElementById('contactForm'); // Используем ID
     if (form) {
-      // console.log('Contact form FOUND.'); // DEBUG
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
-        // console.log('Contact form submitted.'); // DEBUG
 
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
         const currentLang = document.documentElement.lang || 'ru';
         const successMsgKey = 'contact.success';
         const errorMsgKey = 'contact.error';
-        const sendingMsgKey = 'contact.sending'; // Ключ для "Отправка..."
+        const sendingMsgKey = 'contact.sending';
         const genericErrorMsg = 'An error occurred during submission.';
         const submitButton = form.querySelector('button[type="submit"]');
-        const originalButtonText = submitButton.textContent;
+        const originalButtonText = submitButton ? submitButton.textContent : 'Submit'; // Сохраняем исходный текст
 
         // Проверка наличия переводов
          if (typeof translations === 'undefined' || !translations[currentLang] || !translations[currentLang][successMsgKey] || !translations[currentLang][errorMsgKey] || !translations[currentLang][sendingMsgKey]) {
@@ -125,20 +107,14 @@ const initializeContactForm = () => {
         }
 
         try {
-          // console.log('Attempting to send form data:', data); // DEBUG
-
-          // --- !!! ВАЖНО: УКАЖИТЕ ВАШ URL ЭНДПОИНТА ЗДЕСЬ !!! ---
+          // --- !!! ЗАМЕНИТЕ URL !!! ---
           const endpointURL = 'YOUR_BACKEND_ENDPOINT_URL';
           if (endpointURL === 'YOUR_BACKEND_ENDPOINT_URL') {
               console.error('Please replace YOUR_BACKEND_ENDPOINT_URL with your actual form processing URL.');
               alert('Form endpoint URL is not configured.');
-              if(submitButton) { // Разблокируем кнопку при ошибке конфигурации
-                  submitButton.disabled = false;
-                  submitButton.textContent = originalButtonText;
-              }
-              return;
+              throw new Error('Form endpoint not configured'); // Бросаем ошибку, чтобы попасть в finally
           }
-          // ---------------------------------------------------------
+          // --------------------------------
 
           const response = await fetch(endpointURL, {
             method: 'POST',
@@ -147,27 +123,24 @@ const initializeContactForm = () => {
           });
 
           if (response.ok) {
-            console.log('Form submitted successfully.');
             alert(translations[currentLang][successMsgKey]);
             form.reset();
           } else {
-            const errorData = await response.text();
-            console.error(`Server error: ${response.status} - ${response.statusText}. Response: ${errorData}`);
-            throw new Error(translations[currentLang][errorMsgKey]);
+            throw new Error(translations[currentLang][errorMsgKey]); // Бросаем ошибку с текстом из перевода
           }
         } catch (error) {
-          console.error('Form submission fetch error:', error);
+          console.error('Form submission error:', error);
           alert(error.message || genericErrorMsg);
         } finally {
-            // Разблокируем кнопку и возвращаем исходный текст в любом случае
+            // Разблокируем кнопку и возвращаем исходный текст
             if(submitButton) {
                 submitButton.disabled = false;
-                submitButton.textContent = originalButtonText;
+                // Убедимся, что originalButtonText не пустой (если кнопка без текста)
+                const buttonTextKey = submitButton.dataset.i18n || 'contact.submit'; // Получаем ключ перевода кнопки
+                submitButton.textContent = translations[currentLang][buttonTextKey] || originalButtonText || 'Submit'; // Восстанавливаем переведенный текст или исходный
             }
         }
       });
-    } else {
-      // console.log("Contact form with id 'contactForm' not found."); // DEBUG
     }
 };
 
@@ -182,7 +155,6 @@ function updateLanguage(lang) {
       console.error(`Translations for language '${lang}' not found.`);
       return;
     }
-    // console.log(`--- Updating language TO: ${lang} ---`); // DEBUG
     document.documentElement.lang = lang;
 
     document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -190,7 +162,7 @@ function updateLanguage(lang) {
       if (translations[lang][key] !== undefined) {
         element.textContent = translations[lang][key];
       } else {
-        // console.warn(`Translation key '${key}' not found for lang '${lang}' in element:`, element); // DEBUG
+         console.warn(`Translation key '${key}' not found for lang '${lang}' in element:`, element);
       }
     });
     document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
@@ -198,7 +170,7 @@ function updateLanguage(lang) {
       if (translations[lang][key] !== undefined) {
         element.placeholder = translations[lang][key];
       } else {
-        // console.warn(`Placeholder key '${key}' not found for lang '${lang}' in element:`, element); // DEBUG
+         console.warn(`Placeholder key '${key}' not found for lang '${lang}' in element:`, element);
       }
     });
     document.querySelectorAll('[data-i18n-alt]').forEach(img => {
@@ -206,7 +178,7 @@ function updateLanguage(lang) {
       if (translations[lang][key] !== undefined) {
         img.alt = translations[lang][key];
       } else {
-        // console.warn(`Alt text key '${key}' not found for lang '${lang}' in element:`, img); // DEBUG
+         console.warn(`Alt text key '${key}' not found for lang '${lang}' in element:`, img);
       }
     });
 
@@ -215,20 +187,85 @@ function updateLanguage(lang) {
 }
 
 
+// --- Логика для Карусели ---
+const initializeCarousels = () => {
+  // console.log('Attempting to initialize Carousels...'); // DEBUG
+  const carousels = document.querySelectorAll('.carousel-container');
+
+  if (carousels.length === 0) {
+      // console.log('No carousels found on the page.'); // DEBUG
+      return;
+  }
+
+  carousels.forEach((carousel, carouselIndex) => {
+      const slidesContainer = carousel.querySelector('.carousel-slides');
+      const slides = carousel.querySelectorAll('.carousel-slide');
+      const prevButton = carousel.querySelector('.carousel-arrow.prev');
+      const nextButton = carousel.querySelector('.carousel-arrow.next');
+      const dotsContainer = carousel.querySelector('.carousel-dots');
+
+      if (!slidesContainer || slides.length === 0 || !prevButton || !nextButton || !dotsContainer) {
+          console.error(`Carousel ${carouselIndex + 1} is missing required elements. Skipping.`);
+          return;
+      }
+
+      let currentIndex = 0;
+      const totalSlides = slides.length;
+
+      // --- Создание точек ---
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < totalSlides; i++) {
+          const dot = document.createElement('button');
+          dot.classList.add('carousel-dot');
+          dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+          dot.dataset.index = i;
+          dotsContainer.appendChild(dot);
+      }
+      const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+      // --- Отображение слайда ---
+      const showSlide = (index) => {
+          if (index >= totalSlides) index = 0;
+          else if (index < 0) index = totalSlides - 1;
+
+          slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+          currentIndex = index;
+
+          dots.forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === currentIndex));
+          // Убираем disabled для бесконечной прокрутки
+          // prevButton.disabled = currentIndex === 0;
+          // nextButton.disabled = currentIndex === totalSlides - 1;
+      };
+
+      // --- События ---
+      nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
+      prevButton.addEventListener('click', () => showSlide(currentIndex - 1));
+      dots.forEach(dot => {
+          dot.addEventListener('click', (e) => showSlide(parseInt(e.target.dataset.index, 10)));
+      });
+
+      // --- Инициализация ---
+      showSlide(currentIndex);
+      // console.log(`Carousel ${carouselIndex + 1} initialized.`); // DEBUG
+
+  }); // конец forEach(carousel)
+};
+
 // --- Точка Входа: Инициализация после Загрузки DOM ---
 document.addEventListener('DOMContentLoaded', () => {
   // console.log('>>> DOM fully loaded. Starting initializations...'); // DEBUG
-
   if (typeof translations === 'undefined') {
     console.error('>>> CRITICAL: translations object is UNDEFINED right after DOMContentLoaded!');
   } else {
     // console.log('>>> translations object seems OK right after DOMContentLoaded.'); // DEBUG
   }
 
-  initializeScrollAnimations(); // Используем новую функцию для анимаций
+  // Вызов всех функций инициализации
+  initializeScrollAnimations(); // Используем новый класс .animate-on-scroll
   initializeTheme();
   initializeLanguage();
   initializeContactForm();
+  initializeCarousels();
 
   // console.log('>>> All initializations attempted.'); // DEBUG
 });

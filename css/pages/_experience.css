@@ -6,6 +6,8 @@
   max-width: var(--container-width-large, 1200px);
   margin: 0 auto;
   padding: var(--spacing-large, 40px) var(--spacing-medium, 20px);
+  position: relative; /* Для позиционирования фоновых фигур */
+  overflow: hidden; /* Предотвратить выход фигур за пределы main */
 }
 
 /* --- Введение --- */
@@ -14,185 +16,120 @@
   text-align: center; /* Центрируем весь блок введения */
 }
 .experience-intro h2 { /* Стиль для "Профессиональный Путь" */
-    color: var(--accent-color); /* Цвет акцента */
-    font-size: 2.2em; /* Увеличенный размер */
-    font-weight: 700; /* Более жирный */
-    margin-bottom: var(--spacing-medium, 20px);
-    padding-bottom: var(--spacing-small, 15px); /* Отступ для линии */
-    border-bottom: 2px solid var(--accent-bg-subtle, rgba(52, 152, 219, 0.2)); /* Линия под заголовком */
-    display: inline-block; /* Чтобы граница была по ширине текста */
-    text-align: center; /* Центрирование заголовка */
+    color: var(--accent-color); font-size: 2.2em; font-weight: 700;
+    margin-bottom: var(--spacing-medium, 20px); padding-bottom: var(--spacing-small, 15px);
+    border-bottom: 2px solid var(--accent-bg-subtle, rgba(52, 152, 219, 0.2));
+    display: inline-block; text-align: center;
 }
-[data-theme="dark"] .experience-intro h2 {
-    border-bottom-color: var(--accent-color); /* Линия акцентного цвета в темной теме */
-}
-.experience-intro p { /* Стили для текста введения */
-    max-width: 800px; /* Ограничим ширину для читаемости */
-    margin: 0 auto; /* Центрируем параграф */
-    line-height: 1.7;
-    color: var(--text-muted, inherit);
-}
+[data-theme="dark"] .experience-intro h2 { border-bottom-color: var(--accent-color); }
+.experience-intro p { max-width: 800px; margin: 0 auto; line-height: 1.7; color: var(--text-muted, inherit); }
 
 
 /* --- Общая Статистика --- */
-.experience-stats { /* Класс для <section class="stats experience-stats"> */
-  margin-bottom: var(--spacing-xl, 50px);
-  /* Стили для сетки .stats находятся в layout/_grid.css */
-}
+.experience-stats { margin-bottom: var(--spacing-xl, 50px); }
 .stat-item {
-  text-align: center;
-  padding: var(--spacing-medium, 15px);
+  text-align: center; padding: var(--spacing-medium, 15px);
   background: var(--accent-bg-subtle, rgba(52, 152, 219, 0.1));
   border-radius: var(--border-radius-medium, 8px);
   border: 1px solid transparent;
   transition: background-color var(--transition-base), border-color var(--transition-base);
 }
-[data-theme="dark"] .stat-item {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.1);
-}
-.stat-number {
-  display: block; font-size: 1.8em; font-weight: bold;
-  color: var(--accent-color); margin-bottom: var(--spacing-xs, 5px);
-}
+[data-theme="dark"] .stat-item { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1); }
+.stat-number { display: block; font-size: 1.8em; font-weight: bold; color: var(--accent-color); margin-bottom: var(--spacing-xs, 5px); }
 .stat-label { font-size: 0.9em; opacity: 0.8; color: var(--text-muted, inherit); }
 
 /* --- Секции Опыта --- */
-.experience-section { /* Класс для <section id="..." class="highlight-box experience-section"> */
-  margin-bottom: var(--spacing-xl, 50px); /* Увеличим отступ между секциями */
-  /* Используем стили highlight-box для фона/тени/скругления из components/_lists.css */
-  padding: var(--spacing-large, 30px); /* Внутренний отступ */
+.experience-section {
+  margin-bottom: var(--spacing-xl, 50px);
+  padding: var(--spacing-large, 30px);
+  position: relative; z-index: 1;
 }
-
-/* Заголовки внутри секций опыта */
-.experience-section h3 { /* Заголовок должности/проекта */
-  margin-top: 0; margin-bottom: var(--spacing-small, 15px);
-  color: var(--accent-color); font-size: 1.4em;
-}
-.experience-section h4 { /* Подзаголовки: Обязанности, Достижения, Инструменты, Навыки */
-  margin-top: var(--spacing-large, 30px); margin-bottom: var(--spacing-small, 10px);
-  font-weight: 600; color: var(--text-base, inherit); font-size: 1.1em;
-  padding-bottom: var(--spacing-xs, 5px);
-  border-bottom: 1px solid var(--border-color-subtle, rgba(0,0,0,0.08));
-}
-[data-theme="dark"] .experience-section h4 {
-    border-bottom-color: var(--dark-border-subtle, rgba(255,255,255,0.08));
-}
-
-/* Стили для списков обязанностей (если используется ul) */
-.experience-section h4 + ul:not(.achievements) {
-  list-style-type: disc; padding-left: 20px; margin-left: var(--spacing-small, 15px);
-  margin-top: var(--spacing-medium, 15px);
-}
+.experience-section h3 { margin-top: 0; margin-bottom: var(--spacing-small, 15px); color: var(--accent-color); font-size: 1.4em; }
+.experience-section h4 { margin-top: var(--spacing-large, 30px); margin-bottom: var(--spacing-small, 10px); font-weight: 600; color: var(--text-base, inherit); font-size: 1.1em; padding-bottom: var(--spacing-xs, 5px); border-bottom: 1px solid var(--border-color-subtle, rgba(0,0,0,0.08)); }
+[data-theme="dark"] .experience-section h4 { border-bottom-color: var(--dark-border-subtle, rgba(255,255,255,0.08)); }
+.experience-section h4 + ul:not(.achievements) { list-style-type: disc; padding-left: 20px; margin-left: var(--spacing-small, 15px); margin-top: var(--spacing-medium, 15px); }
 .experience-section ul:not(.achievements) li { margin-bottom: var(--spacing-xs, 8px); line-height: 1.7; }
 
-/* Стили для параграфов с инструментами/навыками */
-.experience-section h4 + p {
-    margin-top: var(--spacing-medium, 15px); font-size: 0.95em;
-    line-height: 1.7; color: var(--text-muted, inherit);
-}
-.experience-section p strong { /* Стиль для метки, если она внутри <p> со <strong> */
-    color: var(--text-base, inherit); font-weight: 600;
-    margin-right: var(--spacing-xs, 8px);
-}
-
 /* --- Список Достижений --- */
-.achievements {
-    padding-left: 25px; list-style: none; margin-left: 0;
-    margin-top: var(--spacing-medium, 15px);
-}
+.achievements { padding-left: 25px; list-style: none; margin-left: 0; margin-top: var(--spacing-medium, 15px); }
 .achievements li { position: relative; margin-bottom: var(--spacing-sm, 10px); line-height: 1.7; }
-.achievements li::before {
-  content: "▹"; color: var(--accent-color); position: absolute;
-  left: -25px; top: 2px; font-weight: bold;
+.achievements li::before { content: "▹"; color: var(--accent-color); position: absolute; left: -25px; top: 2px; font-weight: bold; }
+
+/* --- Стили для параграфов Инструменты/Навыки (ВОЗВРАЩЕНО) --- */
+.experience-section h4 + p {
+    margin-top: var(--spacing-medium, 15px);
+    font-size: 0.95em;
+    line-height: 1.7;
+    color: var(--text-muted, inherit); /* Текст описания приглушен */
+}
+.experience-section p strong { /* Стиль для метки "Развитые навыки:", "Инструменты:" */
+    color: var(--text-base, inherit); /* Стандартный цвет */
+    font-weight: 600; /* Полужирный */
+    margin-right: var(--spacing-xs, 8px); /* Отступ от двоеточия */
 }
 
+/* === Стили для Карусели и Одиночного Изображения === */
+.carousel-container, .experience-image-container { position: relative; overflow: hidden; width: 100%; max-width: 800px; margin: 30px auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+[data-theme="dark"] .carousel-container, [data-theme="dark"] .experience-image-container { box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
 
-/* === Стили для Галереи и Изображений === */
+.carousel-slides { display: flex; transition: transform 0.5s ease-in-out; width: 100%; }
+.carousel-slide { flex: 0 0 100%; width: 100%; box-sizing: border-box; }
 
-/* --- Контейнеры для изображений --- */
-.scrollable-gallery,
-.experience-image-container { /* Общий отступ сверху */
-    margin-top: var(--spacing-large, 30px);
-}
+.carousel-slide img, .experience-image-container img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
 
-/* --- Стилизация прокручиваемого контейнера --- */
-.scrollable-gallery {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    gap: var(--spacing-medium, 20px); /* Отступ между картинками */
-    padding-bottom: var(--spacing-medium, 15px); /* Место под скроллбар */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* Плавный скролл на iOS */
-}
-/* Стилизация скроллбара (опционально) */
-.scrollable-gallery::-webkit-scrollbar { height: 8px; }
-.scrollable-gallery::-webkit-scrollbar-track { background: var(--track-color-subtle, rgba(0,0,0,0.1)); border-radius: 4px; }
-[data-theme="dark"] .scrollable-gallery::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); }
-.scrollable-gallery::-webkit-scrollbar-thumb { background: var(--accent-color); border-radius: 4px; }
-.scrollable-gallery::-webkit-scrollbar-thumb:hover { background: var(--accent-hover); }
+.carousel-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 8px 12px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; line-height: 1; opacity: 0.7; transition: opacity 0.3s ease, background-color 0.3s ease; }
+.carousel-arrow:hover { opacity: 1; background-color: rgba(0, 0, 0, 0.7); }
+.carousel-arrow.prev { left: 15px; }
+.carousel-arrow.next { right: 15px; }
+.carousel-arrow:disabled { opacity: 0.3; cursor: default; }
 
-/* --- ОБЩИЕ Стили для ВСЕХ изображений в секциях опыта --- */
-.scrollable-gallery img,
-.experience-image-container img {
-    display: block; /* Для правильного применения margin auto */
-    flex-shrink: 0; /* Предотвращает сжатие во flex-контейнере галереи */
-    width: 90%; /* Базовая ширина */
-    max-width: 600px; /* Максимальная ширина для увеличенного вида */
-    height: auto; /* Авто-высота */
-    aspect-ratio: 16 / 10; /* Единое соотношение сторон */
-    object-fit: cover; /* Масштабирование с обрезкой */
-    border-radius: 8px; /* Единый радиус */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Единая тень */
-    scroll-snap-align: center; /* Прилипание к центру (только для галереи) */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-/* Центрирование одиночного изображения */
-.experience-image-container img {
-   margin-left: auto;
-   margin-right: auto;
-}
-
-/* Общий ховер-эффект */
-.scrollable-gallery img:hover,
-.experience-image-container img:hover {
-    transform: scale(1.02); /* Единый эффект */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Единая тень */
-}
+.carousel-dots { text-align: center; padding: 10px 0; position: absolute; bottom: 10px; left: 0; width: 100%; z-index: 2; }
+.carousel-dot { display: inline-block; width: 10px; height: 10px; background-color: rgba(255, 255, 255, 0.5); border-radius: 50%; margin: 0 5px; cursor: pointer; transition: background-color 0.3s ease, transform 0.3s ease; }
+.carousel-dot.active { background-color: white; transform: scale(1.2); }
+[data-theme="dark"] .carousel-dot { background-color: rgba(0, 0, 0, 0.4); }
+[data-theme="dark"] .carousel-dot.active { background-color: var(--text-color); }
 
 
-/* --- Адаптивность общая для изображений --- */
+/* === Стили для фоновых фигур === */
+.experience-page .background-shapes { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 0; pointer-events: none; }
+.experience-page .shape { position: absolute; border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; background-color: var(--accent-color); opacity: 0.05; animation: float 20s infinite linear alternate; will-change: transform; }
+.experience-page .shape.shape-1 { width: 250px; height: 200px; top: 15%; left: 10%; animation-duration: 25s; }
+.experience-page .shape.shape-2 { width: 100px; height: 120px; top: 65%; left: 85%; animation-duration: 18s; animation-delay: -5s; background-color: var(--secondary-color, #7ed5ea); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+.experience-page .shape.shape-3 { width: 180px; height: 150px; top: 40%; left: 40%; animation-duration: 22s; animation-delay: -10s; border-radius: 50%; }
+[data-theme="dark"] .experience-page .shape { opacity: 0.08; }
+
+@keyframes float { 0% { transform: translateY(0px) rotate(0deg) scale(1); } 50% { transform: translateY(-25px) rotate(180deg) scale(1.05); } 100% { transform: translateY(0px) rotate(360deg) scale(1); } }
+
+/* --- Удалены стили для .tool-list, .skill-list, .animated-icon --- */
+
+/* --- Адаптивность --- */
 @media (max-width: 992px) {
-    .scrollable-gallery img, .experience-image-container img {
-        max-width: 500px;
-        width: 85%;
-    }
+    .carousel-container, .experience-image-container { max-width: 90%; }
+    .experience-page .shape { width: 100px; height: 100px; }
+    .experience-page .shape.shape-1 { width: 180px; height: 150px; }
+    .experience-page .shape.shape-3 { width: 120px; height: 100px; }
 }
 @media (max-width: 768px) {
-    .scrollable-gallery img, .experience-image-container img {
-        max-width: 450px;
-        width: 80%;
-        aspect-ratio: 16/9; /* Меняем соотношение для средних экранов */
-    }
-    /* Статистика может стать 2х колонками */
-    .experience-stats {
-        /* grid-template-columns: repeat(2, 1fr); */ /* Раскомментируйте, если нужно 2 колонки */
-    }
+    .carousel-container, .experience-image-container { max-width: 95%; }
+    .carousel-slide img, .experience-image-container img { aspect-ratio: 16 / 9; }
+    .carousel-arrow { padding: 6px 10px; font-size: 1rem; }
+    .carousel-dot { width: 8px; height: 8px; }
+    .experience-page .shape { display: none; }
+    .experience-stats { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 480px) {
-    .scrollable-gallery img, .experience-image-container img {
-        max-width: 90%;
-        width: 90%;
-        aspect-ratio: 4/3; /* Меняем соотношение для малых экранов */
-    }
-    /* Убедимся что отступ между элементами галереи не слишком большой на мобильных */
-    .scrollable-gallery {
-         gap: var(--spacing-small, 10px);
-    }
-    /* Статистика может стать 1 колонкой */
-    .experience-stats {
-       /* grid-template-columns: 1fr; */ /* Раскомментируйте, если нужна 1 колонка */
-    }
+    .carousel-slide img, .experience-image-container img { aspect-ratio: 4 / 3; }
+    .carousel-dots { bottom: 5px; }
+    .experience-stats { grid-template-columns: 1fr; }
+    .experience-section h3 { font-size: 1.3em; }
+    .experience-section h4 { font-size: 1.05em; }
+}
+
+/* --- Доступность: Отключение анимаций --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  /* .animated-icon стили удалены */
+  .shape { animation: none !important; }
+  .carousel-slide img:hover, .experience-image-container img:hover { transform: none; /* Убираем ховер-эффект */ }
+  .carousel-slides { transition: none !important; /* Отключаем плавный переход */ }
 }
