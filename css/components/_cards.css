@@ -203,3 +203,8 @@
     /* margin-bottom: var(--spacing-md); */
     /* color: var(--color-primary); */
 }
+
+ Например:
+   @media (max-width: 768px) {
+     .skill-cards { grid-template-columns: 1fr; }
+   }

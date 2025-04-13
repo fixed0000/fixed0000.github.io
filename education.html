@@ -241,8 +241,14 @@
     <!-- Футер -->
     <footer> <p data-i18n="footer.copyright">© 2024 Бородина Лидия</p> </footer>
 
-     <!-- Кнопка "Наверх" -->
-     <a href="#" id="back-to-top-btn" class="back-to-top-btn" title="Наверх" aria-label="Вернуться наверх">
+    <!-- Контейнер для кнопок навигации -->
+     <!-- Кнопка "На главную" (видна всегда) -->
+     <a href="index.html" id="back-to-home-btn" class="back-to-home-btn" title="На главную" aria-label="Вернуться на главную страницу" data-i18n-title="backToHome.title" data-i18n-aria-label="backToHome.ariaLabel">
+        <i class="fas fa-home"></i>
+    </a>
+
+    <!-- Кнопка "Наверх" (появляется при скролле) -->
+    <a href="#" id="back-to-top-btn" class="back-to-top-btn" title="Наверх" aria-label="Вернуться наверх" data-i18n-title="backToTop.title" data-i18n-aria-label="backToTop.ariaLabel">
         <i class="fas fa-arrow-up"></i>
     </a>
 

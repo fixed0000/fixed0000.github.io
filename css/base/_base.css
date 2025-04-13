@@ -1,52 +1,50 @@
-/* css/base/_base.css */
+/* --- Базовые стили для Body --- */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  line-height: 1.6;
+  margin: 0; /* Убираем стандартные отступы браузера - УБИРАЕТ БЕЛЫЕ ПОЛЯ ВОКРУГ */
+  font-family: Arial, sans-serif; /* Шрифт по умолчанию */
+  line-height: 1.6; /* Базовый межстрочный интервал */
+  /* padding: 20px; */ /* !!! УБИРАЕМ ПАДДИНГ С BODY !!! Он создает отступы для ВСЕГО контента */
+
+  /* Стили темы (из дублирующегося блока) */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+
+  /* Добавляем для лучшего рендеринга шрифтов */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* --- Стили для Изображений --- */
 img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  max-width: 100%; /* Предотвращает выход за пределы контейнера */
+  height: auto;    /* Сохраняет пропорции */
+  display: block;  /* Убирает возможные нижние отступы */
+  /* border-radius: 8px; */ /* Скругление лучше задавать конкретным классам, а не всем img */
 }
 
-p, h1, h2, h3, h4, h5, h6, li, a, span, summary, details {
-  color: inherit;
-}
-
-/* Для многоязычной поддержки */
-[lang="ja"] body {
-font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-line-height: 1.8;
-}
-
-/* Обязательные базовые стили */
-body { /* Duplicate - included as requested */
-background-color: var(--bg-color);
-color: var(--text-color);
-transition:
-  background-color 0.3s ease-in-out,
-  color 0.3s ease-in-out;
-}
-
-/* Явное наследование для всех текстовых элементов */
+/* --- Наследование цвета --- */
+/* Явное наследование цвета текста для большинства элементов */
 h1, h2, h3, h4, h5, h6,
 p, li, a, span, button,
 summary, details, label,
-.timeline, .skill-cards,
-.goal-list, .contact-form {
-color: inherit;
+input, textarea, select, /* Добавим элементы форм */
+/* Уточняем компоненты, где нужно наследование */
+.timeline, .card, .goal, .stat-item, .skill-tag, .teaser-card, .faq
+/* Убрали общие layout классы .skill-cards, .goal-list, .contact-form, т.к. наследование должно быть у контента ВНУТРИ них */
+{
+  color: inherit; /* Наследуем цвет от родителя (обычно body) */
 }
 
-@media (max-width: 768px) {
-  .goal-list, .menu {
-    flex-direction: column;
-  }
+/* Убираем стандартное подчеркивание у ссылок (если это нужно глобально) */
+ a { text-decoration: none; } */ /* Раскомментируйте, если нужно 
 
-  .skill-cards {
-    grid-template-columns: 1fr;
-  }
+
+/* --- Стили для Японского Языка --- */
+/* Применяем специфичный шрифт и межстрочный интервал, если установлен язык 'ja' */
+[lang="ja"] body {
+  font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif; /* Шрифты для японского */
+  line-height: 1.8; /* Увеличенный интервал для иероглифов */
 }
-

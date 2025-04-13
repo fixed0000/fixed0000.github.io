@@ -97,3 +97,8 @@
   }
 }
 */
+
+@media (max-width: 768px) {
+  .goal-list { flex-direction: column; }
+}
+// в _lists.css
