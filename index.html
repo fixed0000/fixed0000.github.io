@@ -10,13 +10,12 @@
     <meta name="keywords" content="веб-разработчик, лингвист, японист, японский язык, JLPT N1, портфолио, frontend, JavaScript, React, HTML, CSS, локализация, перевод, Япония, Токио, Лидия Бородина">
 
     <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="favicon.ico" sizes="any"> <!-- Для .ico файла -->
-    <link rel="apple-touch-icon" href="apple-touch-icon.png"> <!-- Для iOS устройств -->
-    <link rel="manifest" href="/site.webmanifest"> <!-- Для PWA и Android -->
-    <!-- Подключите Font Awesome (нужен для иконок в кнопках и, возможно, в скиллах) -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Стили - Рекомендуется перенести в main.css или соответствующие файлы */
+        /* Стили - Перенесите в main.css или соответствующие файлы */
         .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
         .btn { display: inline-block; padding: 10px 20px; margin: 5px; border: 1px solid transparent; border-radius: 5px; text-decoration: none; cursor: pointer; transition: background-color 0.3s, color 0.3s, transform 0.2s; font-weight: 500; }
         .btn i { margin-right: 8px; }
@@ -50,11 +49,10 @@
         .intro-text-content { flex-grow: 1; }
         .intro-text .highlight-box { background-color: transparent; border-left: 4px solid var(--accent-color); padding: 0; padding-left: 25px; margin-bottom: 35px; border-radius: 0; box-shadow: none; }
         .intro-text .highlight-box h3 { margin-top: 0; margin-bottom: 15px; font-size: 1.3em;}
-        .intro .highlight-box ul { padding-left: 0; list-style: none; /* Применяем ко всем ul внутри .highlight-box */ }
-        .intro .highlight-box li { position: relative; padding-left: 25px; margin-bottom: 12px; line-height: 1.6; /* Эти стили применятся ко всем li */ }
-        .intro .highlight-box li::before { content: "▹"; position: absolute; left: 0; top: 1px; color: var(--accent-color); font-weight: bold; transition: transform 0.2s ease; /* Этот псевдоэлемент применится ко всем li */ }
+        .intro .highlight-box ul { padding-left: 0; list-style: none; }
+        .intro .highlight-box li { position: relative; padding-left: 25px; margin-bottom: 12px; line-height: 1.6; }
+        .intro .highlight-box li::before { content: "▹"; position: absolute; left: 0; top: 1px; color: var(--accent-color); font-weight: bold; transition: transform 0.2s ease; }
         .intro .highlight-box li:hover::before { transform: translateX(3px); }
-        /* Убраны специфичные стили для .approach-list li и иконок */
         @media (max-width: 1200px) { .intro-content { grid-template-columns: 1fr minmax(300px, 40%); gap: 4%; padding: 0 30px; } }
         @media (max-width: 992px) { .intro-content { grid-template-columns: 1fr; padding: 0 20px; gap: 30px; } .image-wrapper { order: -1; max-width: 450px; margin: 0 auto 30px auto; } .profile-photo { aspect-ratio: 1/1; min-height: auto; } .intro-text { order: 1; padding: 30px; } }
         @media (max-width: 576px) { .intro-content { padding: 0 15px; gap: 25px; } .profile-photo { aspect-ratio: 1/1; border-radius: 15px; } .intro-text { padding: 20px; font-size: 1em; } .intro .highlight-box li { padding-left: 20px; margin-bottom: 10px; } .intro .highlight-box li::before { left: -2px; } .intro-text .highlight-box { padding-left: 20px; margin-bottom: 25px;} .intro-text .highlight-box h3 { font-size: 1.2em; } }
@@ -81,7 +79,8 @@
         .teaser-card { border: 1px solid var(--border-color, rgba(0,0,0,0.1)); padding: 25px; border-radius: 8px; text-align: center; background: var(--card-bg); transition: transform 0.3s, box-shadow 0.3s; }
         .teaser-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-medium, 0 4px 20px rgba(0,0,0,0.1));}
         [data-theme="dark"] .teaser-card { border-color: var(--border-color-dark, rgba(255,255,255,0.1)); }
-        .teaser-card .icon { font-size: 2.5em; margin-bottom: 15px; display: block; color: var(--accent-color); }
+        /* ИСПРАВЛЕН СТИЛЬ ДЛЯ ИКОНКИ/СМАЙЛИКА */
+        .teaser-card .icon { font-size: 2.5em; margin-bottom: 15px; display: inline-block; color: var(--accent-color); line-height: 1; }
         .teaser-card h3 { margin-bottom: 10px; font-size: 1.3em; }
         .teaser-card p { font-size: 0.95em; line-height: 1.6; margin-bottom: 20px; color: var(--text-color-secondary, inherit); }
         @media (max-width: 576px) { .portfolio-teasers { margin-top: 40px; margin-bottom: 40px; padding: 15px; } .portfolio-teasers h2 { font-size: 1.6em; margin-bottom: 30px; } .teaser-grid { gap: 20px; } .teaser-card { padding: 20px; } .teaser-card h3 { font-size: 1.2em; } .teaser-card p { font-size: 0.9em; margin-bottom: 15px;} }
@@ -115,7 +114,7 @@
 <body>
 
     <!-- Контейнер для фоновой анимации сакуры (если используется) -->
-    <!-- <div class="sakura-background"></div> -->
+    <div class="sakura-background"></div>
 
     <!-- Навигация -->
     <nav>
@@ -167,7 +166,7 @@
                         <h2 data-i18n="about.title">Об авторе</h2>
                         <div class="highlight-box">
                             <h3 data-i18n="about.education">Образование</h3>
-                            <ul> <!-- Списки теперь без доп. классов -->
+                            <ul>
                                 <li data-i18n="about.education.item1">Студентка 4 курса МГПУ: Переводчик японского языка</li>
                                 <li data-i18n="about.education.item2">Программа обмена: Университет Цукубы (Япония), 2024</li>
                                 <li data-i18n="about.education.item3">Дополнительное образование: Основы программирования (Школа 21)</li>
@@ -187,9 +186,8 @@
                     <!-- Раздел "Мой подход" со стилем как у других списков -->
                     <div class="highlight-box">
                         <h3 data-i18n="introKeyPoints.title">Мой подход</h3>
-                        <ul> <!-- Убран класс approach-list, наследует стили -->
+                        <ul> <!-- Убран класс approach-list -->
                             <li data-i18n="introKeyPoints.item1">
-                                <!-- Иконки удалены, будет стандартный маркер ▹ -->
                                 <span>Внимание к деталям и культурным нюансам.</span>
                             </li>
                             <li data-i18n="introKeyPoints.item2">
@@ -219,8 +217,9 @@
                      <h3 data-i18n="skillsHighlights.tech">Технические навыки</h3>
                      <div class="skill-tags">
                          <span class="skill-tag tech" data-i18n="skills.html"><i class="fab fa-html5"></i> HTML5</span>
-                         <span class="skill-tag tech" data-i18n="skills.css"><i class="fab fa-css3-alt"></i> CSS3 (SASS)</span>
+                         <span class="skill-tag tech" data-i18n="skills.css"><i class="fab fa-css3-alt"></i> CSS3 (Flex, Grid, SASS)</span>
                          <span class="skill-tag tech" data-i18n="skills.js"><i class="fab fa-js-square"></i> JavaScript (ES6+)</span>
+                         <span class="skill-tag tech" data-i18n="skills.react"><i class="fab fa-react"></i> React</span>
                          <span class="skill-tag tech" data-i18n="skills.git"><i class="fab fa-git-alt"></i> Git & GitHub</span>
                          <span class="skill-tag tech" data-i18n="skills.c"><i class="fa-solid fa-c"></i> C Lang</span>
                          <span class="skill-tag tech" data-i18n="skills.bash"><i class="fa-solid fa-terminal"></i> Bash</span>
@@ -327,10 +326,14 @@
         <p data-i18n="footer.copyright">© 2024 Бородина Лидия</p>
     </footer>
 
+    <a href="#" id="back-to-top-btn" class="back-to-top-btn" title="Наверх" aria-label="Вернуться наверх">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
     <!-- Подключение скриптов -->
     <script src="js/translations.js" defer></script>
     <script src="js/script.js" defer></script>
-    <!-- <script src="js/sakura-animation.js" defer></script> -->
+    <script src="js/sakura-animation.js" defer></script> 
 
 </body>
 </html>

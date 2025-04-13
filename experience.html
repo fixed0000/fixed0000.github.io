@@ -10,6 +10,7 @@
     <link rel="manifest" href="/site.webmanifest"> <!-- Для PWA и Android -->
     <!-- Рекомендуется подключить стили через <link> -->
     <link rel="stylesheet" href="css/pages/experience.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       /* Минимальный стиль для скрытия меток, если нет в main.css */
       .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
@@ -230,6 +231,11 @@
     <footer>
         <p data-i18n="footer.copyright">© 2024 Мой первый сайт</p>
     </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <a href="#" id="back-to-top-btn" class="back-to-top-btn" title="Наверх" aria-label="Вернуться наверх">
+      <i class="fas fa-arrow-up"></i>
+  </a>
 
     <!-- Подключение скриптов -->
     <script src="js/translations.js" defer></script>

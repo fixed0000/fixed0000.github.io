@@ -8,7 +8,9 @@
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="css/pages/education.css"> <!-- Подключаем стили страницы -->
+    <link rel="stylesheet" href="css/pages/education.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- Подключаем стили страницы -->
     <style>
       /* Минимальный стиль для скрытия меток, если нет в main.css */
       .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
@@ -238,6 +240,11 @@
 
     <!-- Футер -->
     <footer> <p data-i18n="footer.copyright">© 2024 Бородина Лидия</p> </footer>
+
+     <!-- Кнопка "Наверх" -->
+     <a href="#" id="back-to-top-btn" class="back-to-top-btn" title="Наверх" aria-label="Вернуться наверх">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     <!-- Подключение скриптов -->
     <script src="js/translations.js" defer></script>

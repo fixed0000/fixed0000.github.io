@@ -1,7 +1,13 @@
 /**
  * script.js
  *
- * Основной JavaScript для интерактивных элементов страницы.
+ * Основной JavaScript для интерактивных элементов страницы:
+ * - Анимации появления элементов при прокрутке
+ * - Переключение тем (светлая/темная)
+ * - Переключение языка интерфейса
+ * - Обработка отправки контактной формы
+ * - Инициализация каруселей
+ * - Кнопка "Наверх"
  */
 
 // --- Определения Функций Инициализации ---
@@ -126,18 +132,30 @@ const initializeContactForm = () => {
             alert(translations[currentLang][successMsgKey]);
             form.reset();
           } else {
-            throw new Error(translations[currentLang][errorMsgKey]); // Бросаем ошибку с текстом из перевода
+            // Попытка получить текст ошибки, если есть
+            let errorText = translations[currentLang][errorMsgKey] || genericErrorMsg; // Базовая ошибка из перевода
+            try {
+                const errorDetails = await response.text(); // Или response.json() если бэкенд шлет JSON
+                if(errorDetails) {
+                    console.error(`Server error: ${response.status} - ${response.statusText}. Details: ${errorDetails}`);
+                    // Можно добавить детали к сообщению, но осторожно (не показывать пользователю техническую инфу)
+                } else {
+                     console.error(`Server error: ${response.status} - ${response.statusText}. No details.`);
+                }
+            } catch (e) {
+                 console.error(`Server error: ${response.status} - ${response.statusText}. Could not parse error details.`);
+            }
+            throw new Error(errorText); // Бросаем ошибку с текстом из перевода
           }
         } catch (error) {
           console.error('Form submission error:', error);
-          alert(error.message || genericErrorMsg);
+          alert(error.message || genericErrorMsg); // Показываем сообщение об ошибке
         } finally {
             // Разблокируем кнопку и возвращаем исходный текст
             if(submitButton) {
                 submitButton.disabled = false;
-                // Убедимся, что originalButtonText не пустой (если кнопка без текста)
-                const buttonTextKey = submitButton.dataset.i18n || 'contact.submit'; // Получаем ключ перевода кнопки
-                submitButton.textContent = translations[currentLang][buttonTextKey] || originalButtonText || 'Submit'; // Восстанавливаем переведенный текст или исходный
+                const buttonTextKey = submitButton.dataset.i18n || 'contact.submit';
+                submitButton.textContent = translations[currentLang][buttonTextKey] || originalButtonText || 'Submit';
             }
         }
       });
@@ -192,10 +210,7 @@ const initializeCarousels = () => {
   // console.log('Attempting to initialize Carousels...'); // DEBUG
   const carousels = document.querySelectorAll('.carousel-container');
 
-  if (carousels.length === 0) {
-      // console.log('No carousels found on the page.'); // DEBUG
-      return;
-  }
+  if (carousels.length === 0) { return; }
 
   carousels.forEach((carousel, carouselIndex) => {
       const slidesContainer = carousel.querySelector('.carousel-slides');
@@ -208,6 +223,13 @@ const initializeCarousels = () => {
           console.error(`Carousel ${carouselIndex + 1} is missing required elements. Skipping.`);
           return;
       }
+      if (slides.length <= 1) { // Если слайд один, скрываем навигацию
+           prevButton.style.display = 'none';
+           nextButton.style.display = 'none';
+           dotsContainer.style.display = 'none';
+           return; // Дальнейшая инициализация не нужна
+      }
+
 
       let currentIndex = 0;
       const totalSlides = slides.length;
@@ -232,9 +254,7 @@ const initializeCarousels = () => {
           currentIndex = index;
 
           dots.forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === currentIndex));
-          // Убираем disabled для бесконечной прокрутки
-          // prevButton.disabled = currentIndex === 0;
-          // nextButton.disabled = currentIndex === totalSlides - 1;
+          // Для бесконечной прокрутки кнопки всегда активны
       };
 
       // --- События ---
@@ -251,6 +271,38 @@ const initializeCarousels = () => {
   }); // конец forEach(carousel)
 };
 
+// --- НОВОЕ: Логика для Кнопки "Наверх" ---
+/**
+ * Инициализирует кнопку "Наверх".
+ */
+const initializeBackToTopButton = () => {
+    const backToTopButton = document.getElementById('back-to-top-btn');
+
+    if (!backToTopButton) { return; } // Если кнопки нет на странице
+
+    const scrollThreshold = 200; // Порог прокрутки в пикселях
+
+    const checkScroll = () => {
+        if (window.scrollY > scrollThreshold) {
+            backToTopButton.classList.add('active');
+        } else {
+            backToTopButton.classList.remove('active');
+        }
+    };
+
+    window.addEventListener('scroll', checkScroll);
+
+    backToTopButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // console.log('Scrolling to top.'); // DEBUG
+    });
+
+    checkScroll(); // Проверка при загрузке
+    // console.log('Back to top button initialized.'); // DEBUG
+};
+
+
 // --- Точка Входа: Инициализация после Загрузки DOM ---
 document.addEventListener('DOMContentLoaded', () => {
   // console.log('>>> DOM fully loaded. Starting initializations...'); // DEBUG
@@ -261,11 +313,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Вызов всех функций инициализации
-  initializeScrollAnimations(); // Используем новый класс .animate-on-scroll
+  initializeScrollAnimations();
   initializeTheme();
   initializeLanguage();
   initializeContactForm();
   initializeCarousels();
+  initializeBackToTopButton(); // <--- ДОБАВЛЕН ВЫЗОВ
 
   // console.log('>>> All initializations attempted.'); // DEBUG
 });
