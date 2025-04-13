@@ -32,6 +32,7 @@
 @import 'pages/_contact.css';
 @import 'pages/_experience.css';
 @import 'pages/_education.css';
+@import 'pages/_404.css';
 /* @import 'pages/_about.css'; */ /* Если есть специфичные стили */
 /* @import 'pages/_services.css'; */ /* Если есть страница услуг */
 /* @import 'pages/_playground.css'; */ /* Если есть */

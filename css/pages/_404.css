@@ -1,0 +1,155 @@
+/* css/pages/404.css */
+/* Стили для страницы 404 Not Found */
+
+/* --- Базовые стили страницы --- */
+body.page-404-body { /* Добавьте этот класс к body в 404.html ИЛИ стилизуйте просто body, если нет конфликтов */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Растягиваем body на всю высоту экрана */
+    margin: 0; /* Убираем отступы body */
+    background-color: var(--bg-color); /* Фон страницы */
+    color: var(--text-color); /* Цвет текста */
+}
+
+/* Контейнер основного контента */
+.page-404 {
+    flex-grow: 1; /* Занимает все доступное пространство между header и footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Вертикальное центрирование */
+    align-items: center;     /* Горизонтальное центрирование */
+    text-align: center;
+    padding: var(--spacing-xl, 60px) var(--spacing-medium, 20px); /* Внутренние отступы */
+    position: relative; /* Для позиционирования фоновых элементов */
+    overflow: hidden;   /* Обрезаем выходящие фоновые элементы */
+}
+
+/* Обертка для текстового контента и иллюстрации */
+.content-wrapper-404 {
+    position: relative; /* Чтобы быть над фоном */
+    z-index: 2;
+    max-width: 600px; /* Ограничение ширины */
+    width: 100%; /* Чтобы занимал доступную ширину */
+}
+
+/* --- Основная иллюстрация --- */
+.illustration-404 {
+    display: block; /* Убираем лишние отступы */
+    max-width: 300px; /* Макс. ширина */
+    width: 70%;      /* Адаптивная ширина */
+    height: auto;
+    margin: 0 auto var(--spacing-large, 30px) auto; /* Центрирование и отступ снизу */
+    animation: gentleBob 3s ease-in-out infinite alternate; /* Анимация покачивания */
+}
+
+/* --- Текстовые элементы --- */
+.title-404 {
+    font-size: clamp(1.8em, 5vw, 2.5em); /* Адаптивный размер шрифта */
+    color: var(--accent-color);
+    margin-bottom: var(--spacing-medium, 15px);
+    font-weight: 700;
+}
+
+.message-404 {
+    font-size: clamp(1em, 2.5vw, 1.1em); /* Адаптивный размер шрифта */
+    line-height: 1.7;
+    margin-bottom: var(--spacing-large, 30px);
+    color: var(--text-muted, #555);
+}
+[data-theme="dark"] .message-404 {
+    color: var(--text-muted-dark, #aaa);
+}
+
+/* --- Кнопки действий --- */
+.actions-404 {
+    display: flex;
+    flex-wrap: wrap; /* Перенос кнопок на новую строку */
+    justify-content: center;
+    gap: var(--spacing-medium, 15px); /* Отступ между кнопками */
+}
+.actions-404 a.btn { /* Применяем стили к ссылкам-кнопкам */
+    margin: 0; /* Убираем стандартный margin у кнопок */
+}
+/* Стили для .btn, .btn-primary, .btn-secondary должны быть в main.css */
+
+
+/* --- Фоновые элементы --- */
+.education-page .background-shapes { /* Используем .education-page как пример родителя */
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    overflow: hidden; z-index: 0; pointer-events: none;
+}
+/* Если контейнер будет другим, измените селектор */
+.page-404 .background-shapes {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    overflow: hidden; z-index: 1; pointer-events: none; /* z-index: 1 чтобы быть под контентом */
+}
+.page-404 .bg-element-404 {
+    position: absolute;
+    opacity: 0.08;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: subtleFadeRotate 30s linear infinite alternate;
+    will-change: transform, opacity;
+}
+[data-theme="dark"] .page-404 .bg-element-404 { opacity: 0.12; }
+
+/* Позиции и файлы (замените пути!) */
+.page-404 .bg-element-404.element-1 {
+    width: 150px; height: 150px; top: 10%; left: 5%;
+    background-image: url('/images/silhouettes/question-mark.svg');
+    animation-duration: 35s;
+}
+.page-404 .bg-element-404.element-2 {
+    width: 100px; height: 100px; bottom: 15%; right: 10%;
+    background-image: url('/images/silhouettes/compass.svg');
+    animation-duration: 25s; animation-delay: -5s;
+}
+.page-404 .bg-element-404.element-3 {
+    width: 120px; height: 120px; top: 50%; right: 15%;
+    transform: translateY(-50%);
+    background-image: url('/images/silhouettes/map-scroll.svg');
+    animation-duration: 40s; animation-delay: -10s;
+}
+
+/* --- Анимации --- */
+@keyframes gentleBob {
+    from { transform: translateY(-5px); }
+    to { transform: translateY(5px); }
+}
+@keyframes subtleFadeRotate {
+    0% { transform: rotate(0deg) scale(1); opacity: 0.06; }
+    50% { transform: rotate(180deg) scale(1.05); opacity: 0.09; }
+    100% { transform: rotate(360deg) scale(1); opacity: 0.06; }
+}
+[data-theme="dark"] @keyframes subtleFadeRotate {
+     0% { opacity: 0.09; transform: rotate(0deg) scale(1); }
+     50% { opacity: 0.12; transform: rotate(180deg) scale(1.05); }
+     100% { opacity: 0.09; transform: rotate(360deg) scale(1); }
+}
+
+/* --- Адаптивность --- */
+@media (max-width: 768px) {
+    .page-404 { padding-top: 30px; padding-bottom: 30px;}
+    .title-404 { font-size: 2em; }
+    .message-404 { font-size: 1em; }
+    .illustration-404 { max-width: 250px; }
+    .page-404 .bg-element-404 { transform: scale(0.8); } /* Уменьшаем фон */
+}
+ @media (max-width: 480px) {
+    .title-404 { font-size: 1.8em; }
+    .illustration-404 { max-width: 200px; margin-bottom: 20px; }
+    .page-404 .bg-element-404 { display: none; } /* Скрываем фон */
+    .actions-404 .btn { display: block; width: 80%; margin: 10px auto; /* Кнопки друг под другом */ }
+}
+
+/* --- Доступность: Отключение анимаций --- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    .illustration-404, .bg-element-404 { animation: none !important; }
+}
+
+/* --- Подключение стилей для шапки и футера --- */
+/* Убедитесь, что стили для nav и footer загружаются из main.css */
+/* Если нет, импортируйте или скопируйте их сюда */
+/* @import url('../layout/_header.css'); */
+/* @import url('../layout/_footer.css'); */
