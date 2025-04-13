@@ -106,7 +106,7 @@ const initializeContactForm = () => {
         const sendingMsgKey = 'contact.sending';
         const genericErrorMsg = 'An error occurred during submission.';
         const submitButton = form.querySelector('button[type="submit"]');
-        const originalButtonText = submitButton ? submitButton.textContent : 'Submit';
+        const originalButtonText = submitButton ? submitButton.textContent : 'Submit'; // Сохраняем исходный текст
 
         // Проверка наличия объекта translations и ключей ПЕРЕД использованием
          if (typeof translations === 'undefined' || !translations[currentLang] || !translations[currentLang][successMsgKey] || !translations[currentLang][errorMsgKey] || !translations[currentLang][sendingMsgKey]) {
@@ -115,18 +115,21 @@ const initializeContactForm = () => {
            return; // Прерываем отправку
          }
 
+        // Блокируем кнопку и показываем статус отправки
         if(submitButton) {
             submitButton.disabled = true;
             submitButton.textContent = translations[currentLang][sendingMsgKey];
         }
 
         try {
-          const endpointURL = 'YOUR_BACKEND_ENDPOINT_URL'; // ЗАМЕНИТЕ URL
+          // --- !!! ЗАМЕНИТЕ URL !!! ---
+          const endpointURL = 'YOUR_BACKEND_ENDPOINT_URL';
           if (endpointURL === 'YOUR_BACKEND_ENDPOINT_URL') {
-              console.error('Form endpoint URL is not configured.');
+              console.error('Please replace YOUR_BACKEND_ENDPOINT_URL with your actual form processing URL.');
               alert('Form endpoint URL is not configured.');
-              throw new Error('Form endpoint not configured');
+              throw new Error('Form endpoint not configured'); // Бросаем ошибку, чтобы попасть в finally
           }
+          // --------------------------------
 
           const response = await fetch(endpointURL, {
             method: 'POST',
@@ -154,7 +157,7 @@ const initializeContactForm = () => {
                 if (translations[displayLang] && translations[displayLang][buttonTextKey]) {
                     submitButton.textContent = translations[displayLang][buttonTextKey];
                 } else {
-                    submitButton.textContent = originalButtonText || 'Submit';
+                    submitButton.textContent = originalButtonText || 'Submit'; // Возвращаем исходный или дефолтный
                 }
             }
         }
@@ -164,16 +167,23 @@ const initializeContactForm = () => {
 
 
 // --- Асинхронная Функция Загрузки и Применения Языка ---
+/**
+ * Загружает JSON-файл с переводами для указанного языка,
+ * сохраняет их в глобальный объект translations и обновляет страницу.
+ * @param {string} lang - Код языка (ru, en, ja).
+ */
 async function loadAndSetLanguage(lang) {
     // console.log(`[DEBUG] Attempting to load language: ${lang}`); // DEBUG
 
+    // Если переводы уже есть, используем их
     if (translations[lang]) {
         // console.log(`[DEBUG] Translations for ${lang} already loaded. Updating UI.`); // DEBUG
         updateUIForLanguage(lang);
-        return;
+        return; // Выходим, т.к. загружать не нужно
     }
 
-    const filePath = `js/${lang}.json`;
+    // Если нет, загружаем JSON
+    const filePath = `js/${lang}.json`; // Убедитесь, что путь ВЕРНЫЙ!
     // console.log(`[DEBUG] Fetching translations for ${lang} from: ${filePath}`); // DEBUG
 
     try {
@@ -181,35 +191,53 @@ async function loadAndSetLanguage(lang) {
         // console.log(`[DEBUG] Fetch response status for ${lang}.json: ${response.status}`); // DEBUG
 
         if (!response.ok) {
+            // Ошибка загрузки файла (например, 404 или ошибка сервера)
             throw new Error(`HTTP error! status: ${response.status} for ${filePath}`);
         }
 
-        const langData = await response.json();
+        const langData = await response.json(); // Пытаемся распарсить JSON
         // console.log(`[DEBUG] Successfully fetched and parsed ${lang}.json`); // DEBUG
 
-        translations[lang] = langData;
+        translations[lang] = langData; // Сохраняем переводы
 
-        updateUIForLanguage(lang);
+        updateUIForLanguage(lang); // Обновляем интерфейс
 
     } catch (error) {
         console.error(`[DEBUG] Error loading or parsing translations for ${lang}:`, error);
-        alert(`Error loading language file for "${lang}". Check console.`);
+        // Показываем ошибку пользователю
+        alert(`Error loading language file for "${lang}". Please check console for details.`);
     }
 }
 
 // --- Функция Обновления Интерфейса по Языку ---
+/**
+ * Обновляет текст и атрибуты элементов на странице, используя
+ * ЗАГРУЖЕННЫЕ переводы из глобального объекта `translations`.
+ * @param {string} lang - Код языка (ru, en, ja).
+ */
 function updateUIForLanguage(lang) {
+    // Проверка, загружены ли переводы для этого языка
     if (!translations || !translations[lang]) {
       console.error(`[DEBUG] ERROR in updateUIForLanguage: Translations for '${lang}' are not loaded.`);
-      return;
+      return; // Прерываем
     }
     // console.log(`[DEBUG] --- Updating UI TO: ${lang} ---`); // DEBUG
-    document.documentElement.lang = lang;
-    let updatedCount = 0;
+    document.documentElement.lang = lang; // Устанавливаем язык документа
+    let updatedCount = 0; // Счетчик обновленных элементов
 
-    const translateElements = (selector, attribute, isContent = false) => {
+    // Внутренняя функция для обработки одного типа атрибута
+    const translateAttribute = (selector, attribute, isContent = false) => {
         document.querySelectorAll(selector).forEach(element => {
-            const key = isContent ? element.dataset.i18n : element.dataset[attribute.replace('data-','').replace(/-(\w)/g, (match, chr) => chr.toUpperCase())]; // Преобразуем data-i18n-placeholder в i18nPlaceholder
+            // Формируем имя data-атрибута (data-i18n, data-i18n-placeholder, ...)
+            const dataAttributeName = attribute
+                ? `i18n${attribute.charAt(0).toUpperCase() + attribute.slice(1)}` // data-i18nPlaceholder
+                : 'i18n'; // data-i18n
+
+            // Получаем ключ из data-атрибута
+            const key = element.dataset[dataAttributeName];
+
+            if (!key) return; // Если нет ключа, пропускаем
+
             let translationFound = false;
             if (translations[lang][key] !== undefined) {
                 if (isContent) {
@@ -223,23 +251,24 @@ function updateUIForLanguage(lang) {
                     if (element.tagName === 'TITLE') {
                         document.title = translations[lang][key];
                     }
-                } else if (attribute === 'aria-label') {
+                } else if (attribute === 'ariaLabel') { // Используем camelCase для aria-label
                      element.setAttribute('aria-label', translations[lang][key]);
                 }
                 translationFound = true;
                 updatedCount++;
             }
             if (!translationFound) {
-                 console.warn(`[DEBUG] Key '${key}' (for ${attribute}) not found for lang '${lang}'`);
+                 console.warn(`[DEBUG] Key '${key}' (for ${attribute || 'content'}) not found for lang '${lang}'`);
             }
         });
     };
 
-    translateElements('[data-i18n]', null, true); // Text Content
-    translateElements('[data-i18n-placeholder]', 'placeholder');
-    translateElements('[data-i18n-alt]', 'alt');
-    translateElements('[data-i18n-title]', 'title');
-    translateElements('[data-i18n-aria-label]', 'aria-label');
+    // Вызываем хелпер для каждого типа атрибута
+    translateAttribute('[data-i18n]', null, true); // Text Content
+    translateAttribute('[data-i18n-placeholder]', 'placeholder');
+    translateAttribute('[data-i18n-alt]', 'alt');
+    translateAttribute('[data-i18n-title]', 'title');
+    translateAttribute('[data-i18n-aria-label]', 'ariaLabel'); // Соответствует data-i18n-aria-label
 
     localStorage.setItem('selectedLanguage', lang);
     // console.log(`[DEBUG] --- Language UI update complete for ${lang}. ${updatedCount} elements updated. ---`); // DEBUG
@@ -270,7 +299,7 @@ const initializeCarousels = () => {
       dotsContainer.innerHTML = '';
       for (let i = 0; i < totalSlides; i++) {
           const dot = document.createElement('button'); dot.classList.add('carousel-dot');
-          // Используем data-i18n-aria-label для доступности точки
+          // Добавляем data-атрибут для перевода aria-label
           dot.setAttribute('data-i18n-aria-label', 'carousel.goToSlide'); // Пример ключа
           dot.setAttribute('aria-label', `Go to slide ${i + 1}`); // Дефолтное значение
           dot.dataset.index = i; dotsContainer.appendChild(dot);
@@ -287,8 +316,19 @@ const initializeCarousels = () => {
       prevButton.addEventListener('click', () => showSlide(currentIndex - 1));
       dots.forEach(dot => dot.addEventListener('click', (e) => showSlide(parseInt(e.target.dataset.index, 10))));
       showSlide(currentIndex);
-       // Обновляем aria-label для точек после инициализации языка
-       updateUIForLanguage(document.documentElement.lang || 'ru');
+       // Обновляем aria-label для ТОЛЬКО ЧТО СОЗДАННЫХ точек карусели
+       // после инициализации языка (на случай если язык уже был загружен)
+       const currentLang = document.documentElement.lang || 'ru';
+       if (translations && translations[currentLang]) {
+            dots.forEach(dot => {
+                const key = dot.dataset.i18nAriaLabel;
+                if (key && translations[currentLang][key]) {
+                    // Простая замена плейсхолдера {index}, если он есть в переводе
+                    const labelText = translations[currentLang][key].replace('{index}', parseInt(dot.dataset.index) + 1);
+                    dot.setAttribute('aria-label', labelText);
+                }
+            });
+       }
   });
 };
 
@@ -308,6 +348,10 @@ const initializeBackToTopButton = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
     checkScroll();
+
+    // Отладочная проверка кнопки "Домой"
+    const backToHomeButton = document.getElementById('back-to-home-btn');
+    if (!backToHomeButton) { console.warn("Back-to-home button not found."); }
 };
 
 
