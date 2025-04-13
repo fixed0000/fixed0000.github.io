@@ -17,7 +17,6 @@
 @import 'components/_sections.css';
 @import 'components/_code-editor.css';
 @import 'components/_skills.css';
-@import 'components/_additional.css';
 @import 'components/_sakura-animation.css';
 
 /* 3. Макет */
@@ -27,6 +26,7 @@
 @import 'layout/_grid.css';     /* Галерея и другие сетки */
 @import 'layout/_footer.css';
 @import 'layout/_teasers.css';
+@import 'layout/_additional.css';
 
 /* 4. Стили страниц/секций */
 @import 'pages/_contact.css';

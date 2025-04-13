@@ -10,12 +10,13 @@
     <meta name="keywords" content="веб-разработчик, лингвист, японист, японский язык, JLPT N1, портфолио, frontend, JavaScript, React, HTML, CSS, локализация, перевод, Япония, Токио, Лидия Бородина">
 
     <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="favicon.ico" sizes="any"> <!-- Для .ico файла -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"> <!-- Для iOS устройств -->
+    <link rel="manifest" href="/site.webmanifest"> <!-- Для PWA и Android -->
+    <!-- Подключите Font Awesome (нужен для иконок в кнопках и скиллах) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Стили - Перенесите в main.css или соответствующие файлы */
+        /* Стили - Рекомендуется перенести в main.css или соответствующие файлы */
         .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
         .btn { display: inline-block; padding: 10px 20px; margin: 5px; border: 1px solid transparent; border-radius: 5px; text-decoration: none; cursor: pointer; transition: background-color 0.3s, color 0.3s, transform 0.2s; font-weight: 500; }
         .btn i { margin-right: 8px; }
@@ -49,14 +50,16 @@
         .intro-text-content { flex-grow: 1; }
         .intro-text .highlight-box { background-color: transparent; border-left: 4px solid var(--accent-color); padding: 0; padding-left: 25px; margin-bottom: 35px; border-radius: 0; box-shadow: none; }
         .intro-text .highlight-box h3 { margin-top: 0; margin-bottom: 15px; font-size: 1.3em;}
-        .intro .highlight-box ul { padding-left: 0; list-style: none; }
-        .intro .highlight-box li { position: relative; padding-left: 25px; margin-bottom: 12px; line-height: 1.6; }
-        .intro .highlight-box li::before { content: "▹"; position: absolute; left: 0; top: 1px; color: var(--accent-color); font-weight: bold; transition: transform 0.2s ease; }
+        .intro .highlight-box ul { padding-left: 0; list-style: none; /* Применяем ко всем ul */ }
+        .intro .highlight-box li { position: relative; padding-left: 25px; margin-bottom: 12px; line-height: 1.6; /* Общий стиль для li */ }
+        .intro .highlight-box li::before { content: "▹"; position: absolute; left: 0; top: 1px; color: var(--accent-color); font-weight: bold; transition: transform 0.2s ease; /* Общий стиль псевдоэлемента */ }
         .intro .highlight-box li:hover::before { transform: translateX(3px); }
+        /* Специфичные стили для иконок FA в списке "Мой подход" УДАЛЕНЫ */
         @media (max-width: 1200px) { .intro-content { grid-template-columns: 1fr minmax(300px, 40%); gap: 4%; padding: 0 30px; } }
         @media (max-width: 992px) { .intro-content { grid-template-columns: 1fr; padding: 0 20px; gap: 30px; } .image-wrapper { order: -1; max-width: 450px; margin: 0 auto 30px auto; } .profile-photo { aspect-ratio: 1/1; min-height: auto; } .intro-text { order: 1; padding: 30px; } }
         @media (max-width: 576px) { .intro-content { padding: 0 15px; gap: 25px; } .profile-photo { aspect-ratio: 1/1; border-radius: 15px; } .intro-text { padding: 20px; font-size: 1em; } .intro .highlight-box li { padding-left: 20px; margin-bottom: 10px; } .intro .highlight-box li::before { left: -2px; } .intro-text .highlight-box { padding-left: 20px; margin-bottom: 25px;} .intro-text .highlight-box h3 { font-size: 1.2em; } }
         [lang="ja"] .intro-text { text-align: justify; text-justify: inter-ideograph; }
+        /* Skills, Teasers, FAQ, Contact, Final CTA - стили как в предыдущих ответах */
         .skills-highlights { max-width: 1000px; margin: 60px auto; padding: 20px; }
         .skills-highlights h2 { text-align: center; margin-bottom: 40px; font-size: 1.8em; }
         section#skills-highlights .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px 40px; margin-top: 20px; }
@@ -66,7 +69,7 @@
         .skill-tag i { font-size: 1.2em; color: currentColor; line-height: 1; }
         .skill-tag.lang { color: var(--lang-skill-color, #2ecc71); background-color: var(--lang-skill-bg, rgba(46, 204, 113, 0.1)); }
         .skill-tag.soft { color: var(--soft-skill-color, #e74c3c); background-color: var(--soft-skill-bg, rgba(231, 76, 60, 0.1)); }
-        .skill-tag.tech { /* Оставляем акцентный цвет по умолчанию */ }
+        .skill-tag.tech { /* */ }
         .skill-tag:hover { transform: translateY(-2px) scale(1.02); box-shadow: var(--shadow-light, 0 4px 8px rgba(0, 0, 0, 0.1)); border-color: currentColor; }
         [data-theme="dark"] .skill-tag { background-color: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.1); }
         [data-theme="dark"] .skill-tag.lang { background-color: rgba(46, 204, 113, 0.15); border-color: rgba(46, 204, 113, 0.2); }
@@ -79,7 +82,6 @@
         .teaser-card { border: 1px solid var(--border-color, rgba(0,0,0,0.1)); padding: 25px; border-radius: 8px; text-align: center; background: var(--card-bg); transition: transform 0.3s, box-shadow 0.3s; }
         .teaser-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-medium, 0 4px 20px rgba(0,0,0,0.1));}
         [data-theme="dark"] .teaser-card { border-color: var(--border-color-dark, rgba(255,255,255,0.1)); }
-        /* ИСПРАВЛЕН СТИЛЬ ДЛЯ ИКОНКИ/СМАЙЛИКА */
         .teaser-card .icon { font-size: 2.5em; margin-bottom: 15px; display: inline-block; color: var(--accent-color); line-height: 1; }
         .teaser-card h3 { margin-bottom: 10px; font-size: 1.3em; }
         .teaser-card p { font-size: 0.95em; line-height: 1.6; margin-bottom: 20px; color: var(--text-color-secondary, inherit); }
@@ -114,7 +116,7 @@
 <body>
 
     <!-- Контейнер для фоновой анимации сакуры (если используется) -->
-    <div class="sakura-background"></div>
+    <<div class="sakura-background"></div> 
 
     <!-- Навигация -->
     <nav>
@@ -153,7 +155,6 @@
             <a href="#contact-section" class="btn btn-primary" data-i18n="hero.cta.contact">
                 <i class="fas fa-envelope"></i> Связаться со мной
             </a>
-            <!-- Кнопки CV теперь в секции Final CTA -->
         </div>
     </header>
 
@@ -183,11 +184,12 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Раздел "Мой подход" со стилем как у других списков -->
+                    <!-- Раздел "Мой подход" -->
                     <div class="highlight-box">
                         <h3 data-i18n="introKeyPoints.title">Мой подход</h3>
                         <ul> <!-- Убран класс approach-list -->
                             <li data-i18n="introKeyPoints.item1">
+                                <!-- Убраны иконки <i> -->
                                 <span>Внимание к деталям и культурным нюансам.</span>
                             </li>
                             <li data-i18n="introKeyPoints.item2">
@@ -326,14 +328,13 @@
         <p data-i18n="footer.copyright">© 2024 Бородина Лидия</p>
     </footer>
 
-    <!-- Кнопка "Наверх" (появляется при скролле) -->
+    <!-- Кнопка "Наверх" (если нужна) -->
     <a href="#" id="back-to-top-btn" class="back-to-top-btn" title="Наверх" aria-label="Вернуться наверх" data-i18n-title="backToTop.title" data-i18n-aria-label="backToTop.ariaLabel">
         <i class="fas fa-arrow-up"></i>
     </a>
-</div>
+
 
     <!-- Подключение скриптов -->
-    <script src="js/translations.js" defer></script>
     <script src="js/script.js" defer></script>
     <script src="js/sakura-animation.js" defer></script> 
 
