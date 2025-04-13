@@ -1,150 +1,22 @@
 <!DOCTYPE html>
-<html lang="ru"> <!-- Язык будет автоматически обновлен JS, если он загрузится -->
+<html lang="ru"> <!-- Язык будет обновляться JS, если он загрузится -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title тоже можно переводить, но нужен JS и translations -->
     <title data-i18n="notFoundPage.pageTitle">Страница не найдена (404)</title>
-    <link rel="stylesheet" href="css/main.css"> <!-- Путь от КОРНЯ сайта -->
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <!-- Font Awesome для иконок кнопок/ссылок -->
+    <link rel="stylesheet" href="css/main.css"> <!-- Путь от КОРНЯ -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Подключаем стили для этой страницы -->
+    <link rel="stylesheet" href="css/pages/404.css"> <!-- Путь от КОРНЯ -->
     <style>
-        /* Базовые стили для страницы 404 - лучше вынести в CSS */
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0; /* Убираем отступы body */
-        }
-        .page-404 {
-            flex-grow: 1; /* Занимает все доступное пространство между header и footer */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
-            position: relative; /* Для фоновых иллюстраций */
-            overflow: hidden;
-            background-color: var(--bg-color); /* Фон страницы */
-            color: var(--text-color); /* Цвет текста */
-        }
-
-        /* Контейнер для основного контента */
-        .content-wrapper-404 {
-            position: relative;
-            z-index: 2; /* Контент над фоновыми элементами */
-            max-width: 600px; /* Ограничение ширины текста */
-        }
-
-        /* Основная иллюстрация */
-        .illustration-404 {
-            max-width: 300px; /* Макс. ширина основной иллюстрации */
-            width: 70%;      /* Адаптивная ширина */
-            height: auto;
-            margin-bottom: 30px;
-            animation: gentleBob 3s ease-in-out infinite alternate; /* Легкое покачивание */
-        }
-
-        .title-404 {
-            font-size: 2.5em;
-            color: var(--accent-color);
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .message-404 {
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            color: var(--text-muted, inherit); /* Приглушенный цвет */
-        }
-        [data-theme="dark"] .message-404 { color: var(--text-muted-dark, inherit); }
-
-        .actions-404 a {
-            margin: 5px 10px;
-        }
-
-        /* Фоновые элементы (Пример) */
-        .bg-element-404 {
-            position: absolute;
-            opacity: 0.08;
-            z-index: 1; /* Под контентом, но над фоном body */
-            pointer-events: none;
-            background-size: contain;
-            background-repeat: no-repeat;
-            animation: subtleFadeRotate 30s linear infinite alternate;
-        }
-        [data-theme="dark"] .bg-element-404 { opacity: 0.12; }
-
-        .bg-element-404.element-1 {
-            width: 150px; height: 150px;
-            top: 10%; left: 5%;
-            background-image: url('/images/silhouettes/question-mark.svg'); /* Пример */
-            animation-duration: 35s;
-        }
-         .bg-element-404.element-2 {
-            width: 100px; height: 100px;
-            bottom: 15%; right: 10%;
-            background-image: url('/images/silhouettes/compass.svg'); /* Пример */
-            animation-duration: 25s;
-            animation-delay: -5s;
-        }
-         .bg-element-404.element-3 {
-            width: 120px; height: 120px;
-            top: 50%; right: 15%;
-            transform: translateY(-50%);
-            background-image: url('/images/silhouettes/map-scroll.svg'); /* Пример */
-            animation-duration: 40s;
-            animation-delay: -10s;
-         }
-
-        /* Анимации */
-        @keyframes gentleBob {
-            from { transform: translateY(-5px); }
-            to { transform: translateY(5px); }
-        }
-        @keyframes subtleFadeRotate {
-            0% { transform: rotate(0deg) scale(1); opacity: 0.06; }
-            50% { transform: rotate(180deg) scale(1.05); opacity: 0.09; }
-            100% { transform: rotate(360deg) scale(1); opacity: 0.06; }
-        }
-        [data-theme="dark"] @keyframes subtleFadeRotate {
-             0% { opacity: 0.09; /* ... */ }
-             50% { opacity: 0.12; /* ... */ }
-             100% { opacity: 0.09; /* ... */ }
-        }
-
-        /* Адаптивность */
-        @media (max-width: 768px) {
-            .title-404 { font-size: 2em; }
-            .message-404 { font-size: 1em; }
-            .illustration-404 { max-width: 250px; }
-            .bg-element-404 { transform: scale(0.8); }
-        }
-         @media (max-width: 480px) {
-            .title-404 { font-size: 1.8em; }
-            .illustration-404 { max-width: 200px; margin-bottom: 20px; }
-            .bg-element-404 { display: none; } /* Скрываем фон на мобильных */
-            .actions-404 .btn { display: block; width: 80%; margin: 10px auto; } /* Кнопки друг под другом */
-        }
-
-        /* Доступность */
-        @media (prefers-reduced-motion: reduce) {
-            .illustration-404, .bg-element-404 { animation: none !important; }
-        }
-
-        /* Стили для шапки и футера (если они не общие) */
-        /* Убедитесь, что они есть в main.css */
-        /* nav { ... } */
-        /* footer { ... } */
-
+        .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
     </style>
 </head>
-<body>
+<body class="page-404-body">
 
     <!-- Шапка (такая же, как на других страницах) -->
     <nav>
@@ -164,10 +36,10 @@
                 </button>
             </li>
             <li class="nav-links">
-                <a href="/" data-i18n="nav.home">Главная</a> <!-- Ссылка на корень -->
-                <a href="/education.html" data-i18n="nav.about">Образование</a> <!-- Пути от корня -->
-                <a href="/experience.html" data-i18n="nav.experience">Опыт</a>
-                <a href="/playground.html" data-i18n="nav.playground">Код</a>
+                <a href="/" data-i18n="nav.home">Главная</a>
+                <a href="education.html" data-i18n="nav.about">Образование</a>
+                <a href="experience.html" data-i18n="nav.experience">Опыт</a>
+                <a href="under-construction.html" data-i18n="nav.playground">Код</a>
             </li>
         </ul>
     </nav>
@@ -175,24 +47,31 @@
     <!-- Основной контент страницы 404 -->
     <main class="page-404">
 
-        <!-- Фоновые анимированные элементы -->
-        <div class="background-shapes">
-            <div class="bg-element-404 element-1"></div>
-            <div class="bg-element-404 element-2"></div>
-            <div class="bg-element-404 element-3"></div>
-            <!-- Можно добавить еще -->
-        </div>
+        <!-- Фоновые анимированные элементы (если нужны) -->
+        <!-- <div class="background-shapes"> ... </div> -->
 
         <!-- Контентная часть -->
         <div class="content-wrapper-404">
-            <!-- Основная иллюстрация -->
-            <img src="/images/illustrations/404-anime-character.png" <!-- УКАЖИТЕ ПУТЬ! -->
-                 alt=""
-                 class="illustration-404"
-                 data-i18n-alt="notFoundPage.illustrationAlt">
-            <!-- Alt можно оставить пустым, т.к. картинка декоративна, либо описать -->
 
-            <h1 class="title-404" data-i18n="notFoundPage.title">Ой! Страница потерялась... (404)</h1>
+            <!-- ЗАМЕНЕНА ИЛЛЮСТРАЦИЯ НА БЛОК 404 -->
+            <div class="error-code-container">
+                <div class="digit digit-4">4</div>
+                <div class="digit digit-0">
+                    0
+                    <div class="anime-emotion sweat-drop"></div> <!-- Капля пота -->
+                </div>
+                <div class="digit digit-4">
+                    4
+                    <div class="anime-emotion question-mark">?</div> <!-- Знак вопроса -->
+                </div>
+                <!-- Элемент поиска/расшифровки -->
+                <div class="search-element">
+                     <img src="images/silhouettes/scroll-magnifier.svg" alt=""> <!-- Иконка свитка с лупой -->
+                </div>
+            </div>
+            <!-- КОНЕЦ БЛОКА 404 -->
+
+            <h1 class="title-404" data-i18n="notFoundPage.title">Ой! Страница потерялась...</h1> <!-- Убрали (404) -->
             <p class="message-404" data-i18n="notFoundPage.message">
                 Кажется, страница, которую вы ищете, отправилась в другое измерение или просто никогда не существовала. Не волнуйтесь, давайте вернемся на правильный путь!
             </p>
@@ -212,8 +91,9 @@
         <p data-i18n="footer.copyright">© 2024 Бородина Лидия</p>
     </footer>
 
-    <!-- Подключение скриптов (важно для смены темы/языка, если пользователь попал сюда) -->
-    <!-- Пути должны быть от корня сайта -->
+    <!-- Подключение скриптов -->
+    <!-- Пути от корня сайта -->
+    <script src="js/translations.js" defer></script> <!-- Если старый метод -->
     <script src="js/script.js" defer></script>
 
 </body>
