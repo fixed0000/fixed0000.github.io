@@ -266,5 +266,9 @@
   "notFoundPage.title": "おっと！ページが見つかりません... (404)",
   "notFoundPage.message": "お探しのページは別の次元に移動したか、元々存在しなかったようです。心配いりません、正しい道に戻りましょう！",
   "notFoundPage.backHome": "ホームに戻る",
-  "notFoundPage.goBack": "戻る"
+  "notFoundPage.goBack": "戻る",
+  "constructionPage.pageTitle": "準備中のページ",
+  "constructionPage.title": "準備中のページ 🚧",
+  "constructionPage.message": "このセクションは近日公開予定です！現在、皆様に楽しんでいただけるコンテンツを作成中です。もうしばらくお待ちください。",
+  "constructionPage.backHome": "ホームに戻る"
 }

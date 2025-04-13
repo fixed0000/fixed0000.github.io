@@ -1,0 +1,132 @@
+/* css/pages/under-construction.css или добавьте в main.css */
+
+/* --- Базовые стили страницы "В разработке" --- */
+body.page-construction-body { /* Класс для <body> на этой странице */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Растягиваем body на всю высоту экрана */
+  margin: 0; /* Убираем стандартные отступы */
+  background-color: var(--bg-color); /* Фон страницы */
+  color: var(--text-color); /* Цвет текста */
+}
+
+/* Контейнер основного контента */
+.page-construction {
+  flex-grow: 1; /* Занимает все доступное пространство между header и footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Вертикальное центрирование */
+  align-items: center;     /* Горизонтальное центрирование */
+  text-align: center;
+  padding: var(--spacing-xl, 60px) var(--spacing-medium, 20px); /* Внутренние отступы */
+  position: relative; /* На случай добавления фоновых элементов */
+  overflow: hidden;
+}
+
+/* Иконка/Иллюстрация */
+.construction-icon {
+  font-size: 5em; /* Размер иконки Font Awesome */
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-large, 30px);
+  /* Анимация вращения (можно добавить другую) */
+  animation: spinTools 8s linear infinite;
+  line-height: 1; /* Убираем лишнюю высоту строки */
+}
+/* Если используете <img> вместо иконки: */
+/*
+.construction-icon img {
+  display: block;
+  max-width: 200px; / * Примерный размер иллюстрации * /
+  width: 60%;
+  height: auto;
+  margin: 0 auto var(--spacing-large, 30px) auto;
+  animation: gentleBob 3s ease-in-out infinite alternate; / * Другая анимация * /
+}
+*/
+
+/* Заголовок */
+.title-construction {
+  font-size: clamp(1.8em, 5vw, 2.2em); /* Адаптивный размер */
+  margin-bottom: var(--spacing-medium, 15px);
+  font-weight: 600;
+  color: var(--text-color); /* Основной цвет текста */
+}
+
+/* Сообщение */
+.message-construction {
+  font-size: clamp(1em, 2.5vw, 1.1em); /* Адаптивный размер */
+  line-height: 1.7;
+  max-width: 550px; /* Ограничение ширины для читаемости */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--spacing-large, 30px);
+  color: var(--text-muted, #555); /* Приглушенный цвет */
+}
+[data-theme="dark"] .message-construction {
+  color: var(--text-muted-dark, #aaa);
+}
+
+/* Кнопки действий */
+.actions-construction {
+  /* Отступы задаются кнопками */
+}
+.actions-construction a.btn {
+  /* Стили для .btn и .btn-primary берутся из общих стилей кнопок */
+}
+
+/* Анимация вращения для иконки */
+@keyframes spinTools {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/* Альтернативная анимация покачивания для <img> */
+/*
+@keyframes gentleBob {
+  from { transform: translateY(-5px); }
+  to { transform: translateY(5px); }
+}
+*/
+
+/* --- Адаптивность --- */
+@media (max-width: 768px) {
+   .page-construction { padding-top: 40px; padding-bottom: 40px; }
+   .construction-icon { font-size: 4em; }
+   /* .construction-icon img { max-width: 180px; } */
+   .title-construction { font-size: 1.8em; }
+   .message-construction { font-size: 1em; }
+}
+@media (max-width: 480px) {
+   .construction-icon { font-size: 3.5em; margin-bottom: 20px;}
+   .title-construction { font-size: 1.6em; }
+   .actions-construction a.btn { /* Кнопка на всю ширину */
+       display: block;
+       width: 80%;
+       margin-left: auto;
+       margin-right: auto;
+   }
+}
+
+/* --- Доступность: Отключение анимаций --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+  }
+  .construction-icon { /* Отключаем анимацию иконки */
+      animation: none;
+  }
+  /* Если используется анимация для img */
+  /* .construction-icon img { animation: none; } */
+}
+
+/* --- Стили для Шапки и Футера --- */
+/* Убедитесь, что стили для nav, .menu, footer и кнопок .btn */
+/* корректно загружаются из вашего основного файла main.css */
+/* Если нет, импортируйте или скопируйте нужные правила сюда. */
+
+/* Пример импорта (если используете структуру с @import): */
+/* @import url('../layout/_header.css'); */
+/* @import url('../layout/_footer.css'); */
+/* @import url('../components/_buttons.css'); */

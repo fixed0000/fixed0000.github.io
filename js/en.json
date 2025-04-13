@@ -266,5 +266,9 @@
   "notFoundPage.title": "Oops! Page Lost... (404)",
   "notFoundPage.message": "It seems the page you are looking for has ventured into another dimension or never existed. Don't worry, let's get back on the right path!",
   "notFoundPage.backHome": "Back to Home",
-  "notFoundPage.goBack": "Go Back"
+  "notFoundPage.goBack": "Go Back",
+  "constructionPage.pageTitle": "Page Under Construction",
+  "constructionPage.title": "Page Under Construction 🚧",
+  "constructionPage.message": "This section is coming soon! I'm working hard to create interesting content for you. Please check back a little later.",
+  "constructionPage.backHome": "Back to Home",
 }
