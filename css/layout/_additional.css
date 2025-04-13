@@ -1,0 +1,9 @@
+.availability-info {
+    font-size: 0.9em; /* Меньше основного текста */
+    color: var(--text-muted, #555); /* Приглушенный цвет */
+    margin-bottom: 30px; /* Отступ до формы */
+    margin-top: -15px; /* Можно немного подтянуть к заголовку */
+}
+[data-theme="dark"] .availability-info {
+    color: var(--text-muted-dark, #aaa);
+}
