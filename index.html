@@ -10,16 +10,16 @@
     <meta name="keywords" content="веб-разработчик, лингвист, японист, японский язык, JLPT N1, портфолио, frontend, JavaScript, React, HTML, CSS, локализация, перевод, Япония, Токио, Лидия Бородина">
 
     <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <!-- Font Awesome НЕ НУЖЕН, если иконки в подходе убираем -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="icon" href="favicon.ico" sizes="any"> <!-- Для .ico файла -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"> <!-- Для iOS устройств -->
+    <link rel="manifest" href="/site.webmanifest"> <!-- Для PWA и Android -->
+    <!-- Подключите Font Awesome (нужен для иконок в кнопках и, возможно, в скиллах) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Стили - Перенесите в main.css или соответствующие файлы */
+        /* Стили - Рекомендуется перенести в main.css или соответствующие файлы */
         .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
         .btn { display: inline-block; padding: 10px 20px; margin: 5px; border: 1px solid transparent; border-radius: 5px; text-decoration: none; cursor: pointer; transition: background-color 0.3s, color 0.3s, transform 0.2s; font-weight: 500; }
-        .btn i { margin-right: 8px; } /* Стиль для иконок Font Awesome, если они есть где-то еще */
+        .btn i { margin-right: 8px; }
         .btn-primary { background-color: var(--accent-color); color: white; border-color: var(--accent-color); }
         .btn-primary:hover { background-color: var(--accent-hover); border-color: var(--accent-hover); transform: translateY(-1px); }
         .btn-secondary { background-color: transparent; color: var(--accent-color); border-color: var(--accent-color); }
@@ -50,14 +50,14 @@
         .intro-text-content { flex-grow: 1; }
         .intro-text .highlight-box { background-color: transparent; border-left: 4px solid var(--accent-color); padding: 0; padding-left: 25px; margin-bottom: 35px; border-radius: 0; box-shadow: none; }
         .intro-text .highlight-box h3 { margin-top: 0; margin-bottom: 15px; font-size: 1.3em;}
-        .intro .highlight-box ul { padding-left: 0; list-style: none; }
-        .intro .highlight-box li { position: relative; padding-left: 25px; margin-bottom: 12px; line-height: 1.6; }
-        .intro .highlight-box li::before { content: "▹"; position: absolute; left: 0; top: 1px; color: var(--accent-color); font-weight: bold; transition: transform 0.2s ease; }
+        .intro .highlight-box ul { padding-left: 0; list-style: none; /* Применяем ко всем ul внутри .highlight-box */ }
+        .intro .highlight-box li { position: relative; padding-left: 25px; margin-bottom: 12px; line-height: 1.6; /* Эти стили применятся ко всем li */ }
+        .intro .highlight-box li::before { content: "▹"; position: absolute; left: 0; top: 1px; color: var(--accent-color); font-weight: bold; transition: transform 0.2s ease; /* Этот псевдоэлемент применится ко всем li */ }
         .intro .highlight-box li:hover::before { transform: translateX(3px); }
-        /* Убраны специфичные стили для иконок approach-list */
+        /* Убраны специфичные стили для .approach-list li и иконок */
         @media (max-width: 1200px) { .intro-content { grid-template-columns: 1fr minmax(300px, 40%); gap: 4%; padding: 0 30px; } }
         @media (max-width: 992px) { .intro-content { grid-template-columns: 1fr; padding: 0 20px; gap: 30px; } .image-wrapper { order: -1; max-width: 450px; margin: 0 auto 30px auto; } .profile-photo { aspect-ratio: 1/1; min-height: auto; } .intro-text { order: 1; padding: 30px; } }
-        @media (max-width: 576px) { .intro-content { padding: 0 15px; gap: 25px; } .profile-photo { aspect-ratio: 1/1; border-radius: 15px; } .intro-text { padding: 20px; font-size: 1em; } .intro .highlight-box li { padding-left: 20px; margin-bottom: 10px; } .intro .highlight-box li::before { left: -2px; } .intro-text .highlight-box { padding-left: 20px; margin-bottom: 25px;} .intro-text .highlight-box h3 { font-size: 1.2em; } /* .approach-list li i { margin-left: -20px;} */ }
+        @media (max-width: 576px) { .intro-content { padding: 0 15px; gap: 25px; } .profile-photo { aspect-ratio: 1/1; border-radius: 15px; } .intro-text { padding: 20px; font-size: 1em; } .intro .highlight-box li { padding-left: 20px; margin-bottom: 10px; } .intro .highlight-box li::before { left: -2px; } .intro-text .highlight-box { padding-left: 20px; margin-bottom: 25px;} .intro-text .highlight-box h3 { font-size: 1.2em; } }
         [lang="ja"] .intro-text { text-align: justify; text-justify: inter-ideograph; }
         .skills-highlights { max-width: 1000px; margin: 60px auto; padding: 20px; }
         .skills-highlights h2 { text-align: center; margin-bottom: 40px; font-size: 1.8em; }
@@ -94,30 +94,28 @@
         .faq p { padding: 0 20px 15px 40px; line-height: 1.6; }
         [data-theme="dark"] .faq { border-color: var(--border-color-dark, rgba(255,255,255,0.1));}
         @media (max-width: 576px) { .faq-section h2 { font-size: 1.6em;} }
-
-        /* Контакты */
         .contact { max-width: 700px; margin: 60px auto; padding: 40px; text-align: center; background-color: var(--card-bg-subtle, #f9f9f9); border-radius: 10px; }
         [data-theme="dark"] .contact { background-color: var(--card-bg); }
-        .contact h2 { margin-bottom: 20px; /* Уменьшили отступ */ font-size: 1.8em; }
-        /* Новый стиль для информации о доступности */
-        .availability-info { font-size: 0.9em; color: var(--text-muted, #555); margin-bottom: 30px; /* Отступ до формы */ }
+        .contact h2 { margin-bottom: 20px; font-size: 1.8em; }
+        .availability-info { font-size: 0.9em; color: var(--text-muted, #555); margin-bottom: 30px; }
         [data-theme="dark"] .availability-info { color: var(--text-muted-dark, #aaa); }
         #contactForm { text-align: left; }
         #contactForm input, #contactForm textarea { display: block; width: 100%; margin-bottom: 15px; padding: 12px; border: 1px solid var(--form-border-color, #ddd); border-radius: 4px; box-sizing: border-box; }
         #contactForm textarea { resize: vertical; min-height: 120px; }
         #contactForm button { margin-top: 10px; }
         @media (max-width: 576px) { .contact { padding: 25px;} .contact h2 { font-size: 1.6em;} .availability-info { font-size: 0.85em; margin-bottom: 25px;} }
-
-        /* Final CTA */
         .final-cta { max-width: 100%; margin-left: 0; margin-right: 0; text-align: center; padding: 60px 20px; background-color: var(--intro-bg); margin-top: 60px; border-radius: 0; }
         .final-cta h2 { margin-bottom: 15px; font-size: 1.8em; }
         .final-cta p { margin-bottom: 30px; font-size: 1.1em; }
         .cta-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 15px; }
-        .cta-links a { /* Убрали margin, используем gap */ }
+        .cta-links a { /* Пусто */ }
         @media (max-width: 576px) { .final-cta { padding: 40px 15px;} .final-cta h2 {font-size: 1.6em;} .final-cta p {font-size: 1em;} .cta-links .btn { width: calc(50% - 10px); } }
     </style>
 </head>
 <body>
+
+    <!-- Контейнер для фоновой анимации сакуры (если используется) -->
+    <!-- <div class="sakura-background"></div> -->
 
     <!-- Навигация -->
     <nav>
@@ -156,7 +154,7 @@
             <a href="#contact-section" class="btn btn-primary" data-i18n="hero.cta.contact">
                 <i class="fas fa-envelope"></i> Связаться со мной
             </a>
-            <!-- Кнопки CV в секции Final CTA -->
+            <!-- Кнопки CV теперь в секции Final CTA -->
         </div>
     </header>
 
@@ -169,7 +167,7 @@
                         <h2 data-i18n="about.title">Об авторе</h2>
                         <div class="highlight-box">
                             <h3 data-i18n="about.education">Образование</h3>
-                            <ul>
+                            <ul> <!-- Списки теперь без доп. классов -->
                                 <li data-i18n="about.education.item1">Студентка 4 курса МГПУ: Переводчик японского языка</li>
                                 <li data-i18n="about.education.item2">Программа обмена: Университет Цукубы (Япония), 2024</li>
                                 <li data-i18n="about.education.item3">Дополнительное образование: Основы программирования (Школа 21)</li>
@@ -186,29 +184,25 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- ВОЗВРАЩЕННЫЙ И ИСПРАВЛЕННЫЙ БЛОК "Мой подход" -->
+                    <!-- Раздел "Мой подход" со стилем как у других списков -->
                     <div class="highlight-box">
                         <h3 data-i18n="introKeyPoints.title">Мой подход</h3>
-                        <ul class="approach-list"> <!-- Использует стили li из .intro .highlight-box li -->
+                        <ul> <!-- Убран класс approach-list, наследует стили -->
                             <li data-i18n="introKeyPoints.item1">
-                                <!-- УБРАНА ИКОНКА Font Awesome -->
+                                <!-- Иконки удалены, будет стандартный маркер ▹ -->
                                 <span>Внимание к деталям и культурным нюансам.</span>
                             </li>
                             <li data-i18n="introKeyPoints.item2">
-                                <!-- УБРАНА ИКОНКА Font Awesome -->
                                 <span>Ориентация на пользователя и цели бизнеса.</span>
                             </li>
                             <li data-i18n="introKeyPoints.item3">
-                                <!-- УБРАНА ИКОНКА Font Awesome -->
                                 <span>Стремление к чистому, поддерживаемому коду.</span>
                             </li>
                             <li data-i18n="introKeyPoints.item4">
-                                <!-- УБРАНА ИКОНКА Font Awesome -->
                                 <span>Эффективная коммуникация на трех языках.</span>
                             </li>
                         </ul>
                     </div>
-                    <!-- Конец блока -->
                 </div>
                 <div class="image-wrapper">
                     <img src="images/image1.jpg" alt="Портретное фото" class="profile-photo" data-i18n-alt="image.alt" srcset="images/image1.jpg 1x, images/image1@2x.jpg 2x, images/image1@3x.jpg 3x" sizes="(max-width: 992px) 90vw, (max-width: 1200px) 450px, (max-width: 1440px) 600px, 750px" loading="lazy" decoding="async">
@@ -220,30 +214,91 @@
         <!-- Skills Highlights -->
         <section id="skills-highlights" class="skills-highlights animate-on-scroll fade-in">
              <h2 data-i18n="skillsHighlights.title">Ключевые компетенции</h2>
-             <!-- ... остальное содержимое skills ... -->
+             <div class="skills-grid">
+                 <div>
+                     <h3 data-i18n="skillsHighlights.tech">Технические навыки</h3>
+                     <div class="skill-tags">
+                         <span class="skill-tag tech" data-i18n="skills.html"><i class="fab fa-html5"></i> HTML5</span>
+                         <span class="skill-tag tech" data-i18n="skills.css"><i class="fab fa-css3-alt"></i> CSS3 (SASS)</span>
+                         <span class="skill-tag tech" data-i18n="skills.js"><i class="fab fa-js-square"></i> JavaScript (ES6+)</span>
+                         <span class="skill-tag tech" data-i18n="skills.git"><i class="fab fa-git-alt"></i> Git & GitHub</span>
+                         <span class="skill-tag tech" data-i18n="skills.c"><i class="fa-solid fa-c"></i> C Lang</span>
+                         <span class="skill-tag tech" data-i18n="skills.bash"><i class="fa-solid fa-terminal"></i> Bash</span>
+                     </div>
+                 </div>
+                 <div>
+                     <h3 data-i18n="skillsHighlights.lang">Языковые навыки</h3>
+                     <div class="skill-tags">
+                         <span class="skill-tag lang" data-i18n="skills.japanese"><i class="fas fa-language"></i> Японский: JLPT N1</span>
+                         <span class="skill-tag lang" data-i18n="skills.english"><i class="fas fa-language"></i> Английский: C1</span>
+                         <span class="skill-tag lang" data-i18n="skills.russian"><i class="fas fa-language"></i> Русский: Родной</span>
+                     </div>
+                 </div>
+                 <div>
+                      <h3 data-i18n="skillsHighlights.soft">Soft Skills</h3>
+                      <div class="skill-tags">
+                         <span class="skill-tag soft" data-i18n="skills.communication"><i class="fas fa-comments"></i> Межкультурная коммуникация</span>
+                         <span class="skill-tag soft" data-i18n="skills.problemSolving"><i class="fas fa-lightbulb"></i> Решение проблем</span>
+                         <span class="skill-tag soft" data-i18n="skills.adaptability"><i class="fas fa-arrows-rotate"></i> Адаптивность</span>
+                         <span class="skill-tag soft" data-i18n="skills.attentionToDetail"><i class="fas fa-magnifying-glass"></i> Внимание к деталям</span>
+                      </div>
+                 </div>
+             </div>
         </section>
 
         <!-- Portfolio/Section Teasers -->
         <section id="portfolio-teasers" class="portfolio-teasers animate-on-scroll fade-in">
             <h2 data-i18n="teasers.title">Узнайте больше</h2>
-            <!-- ... остальное содержимое teasers ... -->
+            <div class="teaser-grid">
+                <div class="teaser-card animate-on-scroll fade-in" style="--animation-delay: 0.1s;">
+                    <span class="icon">🎓</span> <h3 data-i18n="teasers.education.title">Образование</h3>
+                    <p data-i18n="teasers.education.desc">МГПУ, Университет Цукубы, Школа 21, курсы.</p>
+                    <a href="education.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
+                </div>
+                <div class="teaser-card animate-on-scroll fade-in" style="--animation-delay: 0.2s;">
+                    <span class="icon">💼</span> <h3 data-i18n="teasers.experience.title">Опыт работы</h3>
+                    <p data-i18n="teasers.experience.desc">Локализация, сопровождение, сервис, преподавание.</p>
+                    <a href="experience.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
+                </div>
+                <div class="teaser-card animate-on-scroll fade-in" style="--animation-delay: 0.3s;">
+                    <span class="icon">💻</span> <h3 data-i18n="teasers.code.title">Примеры Кода</h3>
+                    <p data-i18n="teasers.code.desc">Интерактивные демонстрации и фрагменты кода.</p>
+                    <a href="playground.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
+                </div>
+            </div>
         </section>
 
         <!-- Секция FAQ -->
         <section class="faq-section animate-on-scroll slide-up">
             <h2 data-i18n="faq.title">Часто задаваемые вопросы</h2>
-             <!-- ... остальное содержимое faq ... -->
+             <details class="faq">
+                <summary data-i18n="faq.question1">Как вы начали программировать?</summary>
+                <p data-i18n="faq.answer1">Я начала изучать программирование в Школе 21, где освоила основы языка C, работу с командной строкой Bash и систему контроля версий Git. Позже прошла курсы по веб-верстке и продолжила самостоятельное изучение JavaScript и React.</p>
+             </details>
+             <details class="faq">
+                <summary data-i18n="faq.question2">Почему вы хотите работать в Японии?</summary>
+                <p data-i18n="faq.answer2">Мой многолетний интерес к японскому языку и культуре, подкрепленный опытом обучения по обмену в Университете Цукубы и работой в японской компании, мотивирует меня искать возможности для профессионального развития именно в Японии, где я могу эффективно сочетать свои языковые и технические навыки.</p>
+             </details>
+             <details class="faq">
+                <summary data-i18n="faq.question3">Какой у вас уровень японского языка?</summary>
+                <p data-i18n="faq.answer3">Я успешно сдала экзамен Нихонго Норёку Сикэн (JLPT) на высший уровень N1 в 2024 году. Мой опыт включает устный перевод, преподавание, работу в японской компании и обучение на японском языке в университете.</p>
+             </details>
         </section>
 
         <!-- Секция Контакты -->
         <section id="contact-section" class="contact animate-on-scroll slide-up">
             <h2 data-i18n="contact.title">Свяжитесь со мной</h2>
-            <!-- ДОБАВЛЕНА ИНФОРМАЦИЯ О ЧАСОВОМ ПОЯСЕ -->
+            <!-- Информация о часовом поясе -->
             <p class="availability-info" data-i18n="contact.availability">
                 Доступна для связи: <span data-i18n="contact.availability.hours">9:00 – 18:00 JST</span> (Японское стандартное время)
             </p>
             <form id="contactForm">
-                <!-- ... поля формы ... -->
+                <label for="name" class="visually-hidden" data-i18n="contact.nameLabel">Имя</label>
+                <input type="text" id="name" name="name" required data-i18n-placeholder="contact.namePlaceholder" placeholder="Ваше имя">
+                <label for="email" class="visually-hidden" data-i18n="contact.emailLabel">Email</label>
+                <input type="email" id="email" name="email" required data-i18n-placeholder="contact.emailPlaceholder" placeholder="Ваш Email">
+                <label for="message" class="visually-hidden" data-i18n="contact.messageLabel">Сообщение</label>
+                <textarea id="message" name="message" rows="5" required data-i18n-placeholder="contact.messagePlaceholder" placeholder="Ваше сообщение..."></textarea>
                 <button type="submit" class="btn btn-primary" data-i18n="contact.submit">Отправить</button>
             </form>
         </section>
