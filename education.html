@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Язык будет обновляться JS -->
+<html lang="ru"> <!-- Язык будет обновляться JS -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,9 @@
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="css/pages/education.css">
+    <link rel="stylesheet" href="css/pages/education.css"> <!-- Подключаем стили страницы -->
+    <!-- Подключаем Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <!-- Подключаем стили страницы -->
     <style>
       /* Минимальный стиль для скрытия меток, если нет в main.css */
       .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
@@ -25,7 +25,7 @@
                     <select id="language-select">
                         <option value="ru">🇷🇺 Русский</option>
                         <option value="en">🇬🇧 English</option>
-                        <option value="jp">🇯🇵 日本語</option>
+                        <option value="ja">🇯🇵 日本語</option> <!-- Исправлено jp на ja -->
                     </select>
                     <span class="select-arrow">▼</span>
                 </div>
@@ -38,7 +38,7 @@
                 <a href="index.html" data-i18n="nav.home">Главная</a>
                 <a href="education.html" data-i18n="nav.about">Образование</a>
                 <a href="experience.html" data-i18n="nav.experience">Опыт</a>
-                <a href="under-construction.html" data-i18n="nav.playground">Код</a>
+                <a href="playground.html" data-i18n="nav.playground">Код</a>
             </li>
         </ul>
     </nav>
@@ -71,9 +71,9 @@
          </section>
 
          <!-- 2. Статистика (если нужна на этой странице) -->
-         <section class="stats experience-stats animate-on-scroll">
+         <section class="stats experience-stats animate-on-scroll"> <!-- Использован класс experience-stats для единообразия -->
              <div class="stat-item">
-              <span class="stat-number" data-i18n="educationPage.stat1.value">4</span> <!-- Пример -->
+              <span class="stat-number" data-i18n="educationPage.stat1.value">4</span>
               <span class="stat-label" data-i18n="educationPage.stat1.label">Года обучения</span>
             </div>
             <div class="stat-item">
@@ -93,7 +93,7 @@
          <!-- 3. Основное Образование (МГПУ) -->
          <section id="mspu" class="highlight-box education-section animate-on-scroll">
              <h3>
-                 <span class="logo-placeholder mspu-logo"></span> <!-- Замените на <img> или CSS background -->
+                 <span class="logo-placeholder mspu-logo"></span>
                  <span data-i18n="educationPage.mspu.name">Московский Городской Педагогический Университет</span>
              </h3>
              <p><strong data-i18n="educationPage.facultyLabel">Институт/Факультет:</strong> <span data-i18n="educationPage.mspu.faculty">Институт иностранных языков (ИИЯ)</span></p>
@@ -118,8 +118,8 @@
                      <div class="carousel-slide"><img src="images/image3.jpg" data-i18n-alt="educationPage.mspu.photo2Alt" alt="Фото из МГПУ 2"></div>
                      <!-- Добавьте еще слайды -->
                  </div>
-                 <button class="carousel-arrow prev" aria-label="Previous photo">❮</button>
-                 <button class="carousel-arrow next" aria-label="Next photo">❯</button>
+                 <button class="carousel-arrow prev" aria-label="Previous photo" data-i18n-aria-label="carousel.prevLabel">❮</button> <!-- Добавлен data-i18n-aria-label -->
+                 <button class="carousel-arrow next" aria-label="Next photo" data-i18n-aria-label="carousel.nextLabel">❯</button> <!-- Добавлен data-i18n-aria-label -->
                  <div class="carousel-dots"></div>
              </div>
          </section>
@@ -127,7 +127,7 @@
          <!-- 4. Учеба по Обмену (Университет Цукубы) -->
          <section id="tsukuba" class="highlight-box education-section animate-on-scroll">
              <h3>
-                 <span class="logo-placeholder tsukuba-logo"></span> <!-- Замените на <img> или CSS background -->
+                 <span class="logo-placeholder tsukuba-logo"></span>
                  <span data-i18n="educationPage.tsukuba.name">Университет Цукубы</span> <span class="flag-icon">🇯🇵</span>
              </h3>
              <p><strong data-i18n="educationPage.programLabel">Программа:</strong> <span data-i18n="educationPage.tsukuba.program">Учеба по обмену</span></p>
@@ -139,10 +139,9 @@
                  <div class="carousel-slides">
                      <div class="carousel-slide"><img src="images/tsukuba_teaching1.jpg" data-i18n-alt="educationPage.tsukuba.teachingPhoto1Alt" alt="Помощь на уроке РКИ"></div>
                      <div class="carousel-slide"><img src="images/tsukuba_teaching2.jpg" data-i18n-alt="educationPage.tsukuba.teachingPhoto2Alt" alt="С японскими студентами"></div>
-                     <!-- Добавьте еще фото преподавания -->
                  </div>
-                 <button class="carousel-arrow prev" aria-label="Previous teaching photo">❮</button>
-                 <button class="carousel-arrow next" aria-label="Next teaching photo">❯</button>
+                 <button class="carousel-arrow prev" aria-label="Previous teaching photo" data-i18n-aria-label="carousel.prevLabel">❮</button>
+                 <button class="carousel-arrow next" aria-label="Next teaching photo" data-i18n-aria-label="carousel.nextLabel">❯</button>
                  <div class="carousel-dots"></div>
              </div>
 
@@ -152,8 +151,8 @@
                     <div class="carousel-slide"><img src="images/tsukuba_doc2.jpg" data-i18n-alt="educationPage.tsukuba.doc1Alt" alt="Сертификат о прохождении курсов (1)"></div>
                     <div class="carousel-slide"><img src="images/tsukuba_doc1.jpg" data-i18n-alt="educationPage.tsukuba.doc2Alt" alt="Сертификат о прохождении курсов (2)"></div>
                 </div>
-                <button class="carousel-arrow prev" aria-label="Previous document">❮</button>
-                <button class="carousel-arrow next" aria-label="Next document">❯</button>
+                <button class="carousel-arrow prev" aria-label="Previous document" data-i18n-aria-label="carousel.prevLabel">❮</button>
+                <button class="carousel-arrow next" aria-label="Next document" data-i18n-aria-label="carousel.nextLabel">❯</button>
                 <div class="carousel-dots"></div>
             </div>
          </section>
@@ -165,7 +164,7 @@
             <p><strong data-i18n="educationPage.additional.school21.skillsLabel">Изученные технологии:</strong> <span data-i18n="educationPage.additional.school21.skillsValue">C, Bash, Git.</span></p>
             <p data-i18n="educationPage.additional.school21.lectures">Также проводила лекции для студентов школы по [Укажите тему лекций].</p>
             <h4 data-i18n="educationPage.additional.school21.photosLabel">Фотографии:</h4>
-             <div class="activities-gallery animate-on-scroll"> <!-- Обычная галерея -->
+             <div class="activities-gallery animate-on-scroll">
                  <img src="images/school21_photo1.jpg" data-i18n-alt="educationPage.additional.school21.photo1Alt" alt="Фото из Школы 21">
                  <img src="images/school21_lecture.jpg" data-i18n-alt="educationPage.additional.school21.lectureAlt" alt="Фото с лекции">
              </div>
@@ -193,7 +192,6 @@
                          <img src="images/jlpt_n2_cert.jpg" data-i18n-alt="educationPage.additional.jlpt.n2certAlt" alt="Сертификат JLPT N2">
                      </div>
                  </div>
-                 <!-- Добавьте еще курсы/сертификаты сюда в виде .additional-item -->
              </div>
          </section>
 
@@ -231,8 +229,9 @@
             </ul>
              <h4 data-i18n="educationPage.activities.photosLabel">Фотографии:</h4>
              <div class="activities-gallery animate-on-scroll">
+                 <img src="images/ainu_club.jpg" data-i18n-alt="educationPage.activities.ainuClubAlt" alt="Фото клуба айнского языка">
                  <img src="images/blood_donation.jpg" data-i18n-alt="educationPage.activities.bloodDonationAlt" alt="Фото с дня донора">
-                 <img src="images/image6.jpg" data-i18n-alt="educationPage.activities.businessProjectAlt" alt="Фото со студентами">
+                 <img src="images/business_project.jpg" data-i18n-alt="educationPage.activities.businessProjectAlt" alt="Фото презентации проекта">
              </div>
          </section>
 
@@ -241,14 +240,8 @@
     <!-- Футер -->
     <footer> <p data-i18n="footer.copyright">© 2024 Бородина Лидия</p> </footer>
 
-    <!-- Контейнер для кнопок навигации -->
-     <!-- Кнопка "На главную" (видна всегда) -->
-     <a href="index.html" id="back-to-home-btn" class="back-to-home-btn" title="На главную" aria-label="Вернуться на главную страницу" data-i18n-title="backToHome.title" data-i18n-aria-label="backToHome.ariaLabel">
-        <i class="fas fa-home"></i>
-    </a>
-
-    <!-- Кнопка "Наверх" (появляется при скролле) -->
-    <a href="#" id="back-to-top-btn" class="back-to-top-btn" title="Наверх" aria-label="Вернуться наверх" data-i18n-title="backToTop.title" data-i18n-aria-label="backToTop.ariaLabel">
+    <!-- Кнопка "Наверх" -->
+     <a href="#" id="back-to-top-btn" class="back-to-top-btn" title="Наверх" aria-label="Вернуться наверх" data-i18n-title="backToTop.title" data-i18n-aria-label="backToTop.ariaLabel">
         <i class="fas fa-arrow-up"></i>
     </a>
 
