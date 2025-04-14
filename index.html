@@ -1,222 +1,342 @@
-<!-- Контейнер для фоновой анимации сакуры (если используется) -->
-<div class="sakura-background"></div> 
+<!DOCTYPE html>
+<html lang="en"> <!-- Атрибут lang будет обновляться скриптом -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.main.title">Бородина Лидия - Веб-разработчик и Лингвист</title>
 
-<!-- Навигация -->
-<nav>
-    <ul class="menu">
-        <li class="controls-group">
-            <div class="custom-select language-switcher">
-                <select id="language-select">
-                    <option value="ru">🇷🇺 Русский</option>
-                    <option value="en">🇬🇧 English</option>
-                    <option value="jp">🇯🇵 日本語</option>
-                </select>
-                <span class="select-arrow">▼</span>
-            </div>
-            <button id="theme-toggle" class="theme-btn">
-                <span class="theme-icon">🌓</span>
-                <span class="btn-text" data-i18n="theme.toggle">Сменить тему</span>
-            </button>
-        </li>
-        <li class="nav-links">
-            <a href="index.html" data-i18n="nav.home">Главная</a>
-            <a href="education.html" data-i18n="nav.about">Образование</a>
-            <a href="experience.html" data-i18n="nav.experience">Опыт</a>
-            <a href="under-construction.html" data-i18n="nav.playground">Код</a>
-        </li>
-    </ul>
-</nav>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Портфолио Лидии Бородиной, веб-разработчика и лингвиста-япониста (JLPT N1). Опыт в веб-разработке, локализации, переводе и межкультурной коммуникации. Ищу возможности в Японии.">
+    <meta name="keywords" content="веб-разработчик, лингвист, японист, японский язык, JLPT N1, портфолио, frontend, JavaScript, React, HTML, CSS, локализация, перевод, Япония, Токио, Лидия Бородина">
 
-<!-- Hero Section -->
-<header class="hero animate-on-scroll fade-in">
-    <h1 data-i18n="hero.name">Бородина Лидия</h1>
-    <p class="subtitle" data-i18n="hero.title">Веб-разработчик | Лингвист-Японист | Межкультурная коммуникация</p>
-    <p class="description" data-i18n="hero.description">
-        Создаю адаптивные и функциональные веб-сайты. Свободное владение японским (JLPT N1) и английским языками (C1). Ищу интересные проекты и возможности для роста в технологической сфере Японии.
-    </p>
-    <div class="cta-buttons">
-        <a href="#contact-section" class="btn btn-primary" data-i18n="hero.cta.contact">
-            <i class="fas fa-envelope"></i> Связаться со мной
-        </a>
-    </div>
-</header>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="favicon.ico" sizes="any"> <!-- Для .ico файла -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"> <!-- Для iOS устройств -->
+    <link rel="manifest" href="/site.webmanifest"> <!-- Для PWA и Android -->
+    <!-- Подключите Font Awesome (нужен для иконок в кнопках и скиллах) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Стили - Рекомендуется перенести в main.css или соответствующие файлы */
+        .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
+        .btn { display: inline-block; padding: 10px 20px; margin: 5px; border: 1px solid transparent; border-radius: 5px; text-decoration: none; cursor: pointer; transition: background-color 0.3s, color 0.3s, transform 0.2s; font-weight: 500; }
+        .btn i { margin-right: 8px; }
+        .btn-primary { background-color: var(--accent-color); color: white; border-color: var(--accent-color); }
+        .btn-primary:hover { background-color: var(--accent-hover); border-color: var(--accent-hover); transform: translateY(-1px); }
+        .btn-secondary { background-color: transparent; color: var(--accent-color); border-color: var(--accent-color); }
+        .btn-secondary:hover { background-color: var(--hover-bg); transform: translateY(-1px);}
+        :root { --animation-delay: 0s; }
+        .animate-on-scroll { opacity: 0; transition: opacity 0.6s ease-out, transform 0.6s ease-out; transition-delay: var(--animation-delay); will-change: opacity, transform; }
+        .animate-on-scroll.fade-in {}
+        .animate-on-scroll.slide-up { transform: translateY(40px); }
+        .animate-on-scroll.active { opacity: 1; transform: translateY(0); }
+        .hero { position: relative; overflow: hidden; padding: 80px 20px 60px 20px; text-align: center; background-color: var(--header-bg-color, #2c3e50); color: var(--header-text-color, white); z-index: 1; }
+        .hero h1 { margin-bottom: 10px; font-size: 2.8em; position: relative; z-index: 2; }
+        .hero .subtitle { font-size: 1.4em; margin: 10px 0 15px 0; color: var(--accent-color); font-weight: 500; position: relative; z-index: 2; }
+        .hero .description { max-width: 700px; margin: 15px auto 30px auto; font-size: 1.1em; line-height: 1.7; position: relative; z-index: 2; }
+        .hero .cta-buttons { margin-top: 20px; position: relative; z-index: 2; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 15px; }
+        .hero::before, .hero::after { content: ''; position: absolute; background-image: url('images/sakuratree1.png'); background-repeat: no-repeat; background-size: contain; opacity: 0.25; z-index: 1; pointer-events: none; transition: transform 0.5s ease-out; }
+        .hero::before { width: 300px; height: 280px; top: -40px; left: -80px; transform: rotate(-25deg); }
+        .hero::after { width: 350px; height: 330px; top: -50px; right: -100px; transform: scaleX(-1) rotate(-10deg); }
+        @media (max-width: 768px) { .hero::before { width: 200px; height: 180px; left: -50px; top: -20px; } .hero::after { width: 220px; height: 200px; right: -60px; top: -25px; } }
+        @media (max-width: 480px) { .hero::before { width: 150px; height: 130px; left: -30px; top: -10px; } .hero::after { display: none; } .hero .cta-buttons .btn { width: calc(50% - 10px); } }
+        .intro { margin: 40px 0; }
+        .intro-content { display: grid; grid-template-columns: 1fr minmax(300px, 45%); gap: 5%; align-items: flex-start; max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        .image-wrapper { position: relative; }
+        .profile-photo { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 15px; box-shadow: var(--shadow-large, 0 10px 40px rgba(0,0,0,0.3)); min-height: 400px; }
+        .image-caption { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); max-width: 90%; background: var(--caption-bg, rgba(0,0,0,0.7)); color: var(--caption-text-color, white); padding: 6px 15px; border-radius: 20px; font-size: 0.9em; text-align: center; backdrop-filter: blur(3px); z-index: 1; }
+        [data-theme="dark"] .image-caption { background: var(--caption-bg-dark, rgba(255,255,255,0.1)); color: var(--text-color); }
+        .intro-text { background: var(--card-bg-subtle, #f9f9f9); padding: 40px; border-radius: 15px; font-size: 1.1em; line-height: 1.7; display: flex; flex-direction: column; }
+        [data-theme="dark"] .intro-text { background: var(--card-bg); }
+        .intro-text-content { flex-grow: 1; }
+        .intro-text .highlight-box { background-color: transparent; border-left: 4px solid var(--accent-color); padding: 0; padding-left: 25px; margin-bottom: 35px; border-radius: 0; box-shadow: none; }
+        .intro-text .highlight-box h3 { margin-top: 0; margin-bottom: 15px; font-size: 1.3em;}
+        .intro .highlight-box ul { padding-left: 0; list-style: none; /* Применяем ко всем ul */ }
+        .intro .highlight-box li { position: relative; padding-left: 25px; margin-bottom: 12px; line-height: 1.6; /* Общий стиль для li */ }
+        .intro .highlight-box li::before { content: "▹"; position: absolute; left: 0; top: 1px; color: var(--accent-color); font-weight: bold; transition: transform 0.2s ease; /* Общий стиль псевдоэлемента */ }
+        .intro .highlight-box li:hover::before { transform: translateX(3px); }
+        /* Специфичные стили для иконок FA в списке "Мой подход" УДАЛЕНЫ */
+        @media (max-width: 1200px) { .intro-content { grid-template-columns: 1fr minmax(300px, 40%); gap: 4%; padding: 0 30px; } }
+        @media (max-width: 992px) { .intro-content { grid-template-columns: 1fr; padding: 0 20px; gap: 30px; } .image-wrapper { order: -1; max-width: 450px; margin: 0 auto 30px auto; } .profile-photo { aspect-ratio: 1/1; min-height: auto; } .intro-text { order: 1; padding: 30px; } }
+        @media (max-width: 576px) { .intro-content { padding: 0 15px; gap: 25px; } .profile-photo { aspect-ratio: 1/1; border-radius: 15px; } .intro-text { padding: 20px; font-size: 1em; } .intro .highlight-box li { padding-left: 20px; margin-bottom: 10px; } .intro .highlight-box li::before { left: -2px; } .intro-text .highlight-box { padding-left: 20px; margin-bottom: 25px;} .intro-text .highlight-box h3 { font-size: 1.2em; } }
+        [lang="ja"] .intro-text { text-align: justify; text-justify: inter-ideograph; }
+        /* Skills, Teasers, FAQ, Contact, Final CTA - стили как в предыдущих ответах */
+        .skills-highlights { max-width: 1000px; margin: 60px auto; padding: 20px; }
+        .skills-highlights h2 { text-align: center; margin-bottom: 40px; font-size: 1.8em; }
+        section#skills-highlights .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px 40px; margin-top: 20px; }
+        .skills-grid h3 { margin-bottom: 20px; border-left: 4px solid var(--accent-color); padding-left: 15px; font-size: 1.3em; color: var(--text-color); }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 12px; }
+        .skill-tag { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 20px; font-size: 1em; font-weight: 500; background-color: var(--hover-bg); color: var(--accent-color); border: 1px solid transparent; transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease; cursor: default; }
+        .skill-tag i { font-size: 1.2em; color: currentColor; line-height: 1; }
+        .skill-tag.lang { color: var(--lang-skill-color, #2ecc71); background-color: var(--lang-skill-bg, rgba(46, 204, 113, 0.1)); }
+        .skill-tag.soft { color: var(--soft-skill-color, #e74c3c); background-color: var(--soft-skill-bg, rgba(231, 76, 60, 0.1)); }
+        .skill-tag.tech { /* */ }
+        .skill-tag:hover { transform: translateY(-2px) scale(1.02); box-shadow: var(--shadow-light, 0 4px 8px rgba(0, 0, 0, 0.1)); border-color: currentColor; }
+        [data-theme="dark"] .skill-tag { background-color: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.1); }
+        [data-theme="dark"] .skill-tag.lang { background-color: rgba(46, 204, 113, 0.15); border-color: rgba(46, 204, 113, 0.2); }
+        [data-theme="dark"] .skill-tag.soft { background-color: rgba(231, 76, 60, 0.15); border-color: rgba(231, 76, 60, 0.2); }
+        [data-theme="dark"] .skill-tag:hover { box-shadow: 0 4px 10px rgba(255, 255, 255, 0.07); background-color: rgba(255, 255, 255, 0.12); }
+        @media (max-width: 576px) { .skills-highlights h2 { font-size: 1.6em; } .skills-grid h3 { font-size: 1.1em; } .skill-tags { gap: 8px; } .skill-tag { padding: 6px 12px; font-size: 0.9em; } }
+        .portfolio-teasers { max-width: 1200px; margin: 60px auto; padding: 20px; text-align: center; }
+        .portfolio-teasers h2 { margin-bottom: 40px; font-size: 1.8em; }
+        .teaser-grid { display: grid; gap: 25px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); text-align: left; margin-top: 20px; }
+        .teaser-card { border: 1px solid var(--border-color, rgba(0,0,0,0.1)); padding: 25px; border-radius: 8px; text-align: center; background: var(--card-bg); transition: transform 0.3s, box-shadow 0.3s; }
+        .teaser-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-medium, 0 4px 20px rgba(0,0,0,0.1));}
+        [data-theme="dark"] .teaser-card { border-color: var(--border-color-dark, rgba(255,255,255,0.1)); }
+        .teaser-card .icon { font-size: 2.5em; margin-bottom: 15px; display: inline-block; color: var(--accent-color); line-height: 1; }
+        .teaser-card h3 { margin-bottom: 10px; font-size: 1.3em; }
+        .teaser-card p { font-size: 0.95em; line-height: 1.6; margin-bottom: 20px; color: var(--text-color-secondary, inherit); }
+        @media (max-width: 576px) { .portfolio-teasers { margin-top: 40px; margin-bottom: 40px; padding: 15px; } .portfolio-teasers h2 { font-size: 1.6em; margin-bottom: 30px; } .teaser-grid { gap: 20px; } .teaser-card { padding: 20px; } .teaser-card h3 { font-size: 1.2em; } .teaser-card p { font-size: 0.9em; margin-bottom: 15px;} }
+        .faq-section { max-width: 900px; margin: 60px auto; padding: 20px; }
+        .faq-section h2 { text-align: center; margin-bottom: 30px; font-size: 1.8em; }
+        .faq { margin-bottom: 15px; border: 1px solid var(--border-color, rgba(0,0,0,0.1)); border-radius: 8px; background: var(--card-bg); overflow: hidden; }
+        .faq summary { padding: 15px 20px; cursor: pointer; font-weight: 600; display: list-item; list-style: inside; }
+        .faq summary::marker { content: '► '; font-size: 0.8em; margin-right: 5px; }
+        .faq[open] summary::marker { content: '▼ '; }
+        .faq p { padding: 0 20px 15px 40px; line-height: 1.6; }
+        [data-theme="dark"] .faq { border-color: var(--border-color-dark, rgba(255,255,255,0.1));}
+        @media (max-width: 576px) { .faq-section h2 { font-size: 1.6em;} }
+        .contact { max-width: 700px; margin: 60px auto; padding: 40px; text-align: center; background-color: var(--card-bg-subtle, #f9f9f9); border-radius: 10px; }
+        [data-theme="dark"] .contact { background-color: var(--card-bg); }
+        .contact h2 { margin-bottom: 20px; font-size: 1.8em; }
+        .availability-info { font-size: 0.9em; color: var(--text-muted, #555); margin-bottom: 30px; }
+        [data-theme="dark"] .availability-info { color: var(--text-muted-dark, #aaa); }
+        #contactForm { text-align: left; }
+        #contactForm input, #contactForm textarea { display: block; width: 100%; margin-bottom: 15px; padding: 12px; border: 1px solid var(--form-border-color, #ddd); border-radius: 4px; box-sizing: border-box; }
+        #contactForm textarea { resize: vertical; min-height: 120px; }
+        #contactForm button { margin-top: 10px; }
+        @media (max-width: 576px) { .contact { padding: 25px;} .contact h2 { font-size: 1.6em;} .availability-info { font-size: 0.85em; margin-bottom: 25px;} }
+        .final-cta { max-width: 100%; margin-left: 0; margin-right: 0; text-align: center; padding: 60px 20px; background-color: var(--intro-bg); margin-top: 60px; border-radius: 0; }
+        .final-cta h2 { margin-bottom: 15px; font-size: 1.8em; }
+        .final-cta p { margin-bottom: 30px; font-size: 1.1em; }
+        .cta-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 15px; }
+        .cta-links a { /* Пусто */ }
+        @media (max-width: 576px) { .final-cta { padding: 40px 15px;} .final-cta h2 {font-size: 1.6em;} .final-cta p {font-size: 1em;} .cta-links .btn { width: calc(50% - 10px); } }
+    </style>
+</head>
+<body>
 
-<main>
-    <!-- Секция Интро -->
-    <section class="intro animate-on-scroll slide-up">
-        <div class="intro-content">
-            <div class="intro-text">
-                <div class="intro-text-content">
-                    <h2 data-i18n="about.title">Об авторе</h2>
-                    <div class="highlight-box">
-                        <h3 data-i18n="about.education">Образование</h3>
-                        <ul>
-                            <li data-i18n="about.education.item1">Студентка 4 курса МГПУ: Переводчик японского языка</li>
-                            <li data-i18n="about.education.item2">Программа обмена: Университет Цукубы (Япония), 2024</li>
-                            <li data-i18n="about.education.item3">Дополнительное образование: Основы программирования (Школа 21)</li>
-                            <li data-i18n="about.education.item4">Методика преподавания РКИ: Курс при МГПУ</li>
-                        </ul>
-                    </div>
-                    <div class="highlight-box">
-                        <h3 data-i18n="experience.title">Ключевой Опыт</h3>
-                        <ul>
-                            <li data-i18n="experience.item1">Локализация игр (Fruitbat Factory)</li>
-                            <li data-i18n="experience.item2">Сопровождение и устный перевод (Японский дом)</li>
-                            <li data-i18n="experience.item3">Работа в сфере обслуживания (Mosburger, Япония)</li>
-                            <li data-i18n="experience.item4">Преподавание японского языка (Онлайн)</li>
-                        </ul>
-                    </div>
+    <!-- Контейнер для фоновой анимации сакуры (если используется) -->
+    <div class="sakura-background"></div> 
+
+    <!-- Навигация -->
+    <nav>
+        <ul class="menu">
+            <li class="controls-group">
+                <div class="custom-select language-switcher">
+                    <select id="language-select">
+                        <option value="ru">🇷🇺 Русский</option>
+                        <option value="en">🇬🇧 English</option>
+                        <option value="jp">🇯🇵 日本語</option>
+                    </select>
+                    <span class="select-arrow">▼</span>
                 </div>
-                <!-- Раздел "Мой подход" -->
-                <div class="highlight-box">
-                    <h3 data-i18n="introKeyPoints.title">Мой подход</h3>
-                    <ul> <!-- Убран класс approach-list -->
-                        <li data-i18n="introKeyPoints.item1">
-                            <!-- Убраны иконки <i> -->
-                            <span>Внимание к деталям и культурным нюансам.</span>
-                        </li>
-                        <li data-i18n="introKeyPoints.item2">
-                            <span>Ориентация на пользователя и цели бизнеса.</span>
-                        </li>
-                        <li data-i18n="introKeyPoints.item3">
-                            <span>Стремление к чистому, поддерживаемому коду.</span>
-                        </li>
-                        <li data-i18n="introKeyPoints.item4">
-                            <span>Эффективная коммуникация на трех языках.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="image-wrapper">
-                <img src="images/image1.jpg" alt="Портретное фото" class="profile-photo" data-i18n-alt="image.alt" srcset="images/image1.jpg 1x, images/image1@2x.jpg 2x, images/image1@3x.jpg 3x" sizes="(max-width: 992px) 90vw, (max-width: 1200px) 450px, (max-width: 1440px) 600px, 750px" loading="lazy" decoding="async">
-                <p class="image-caption" data-i18n="image.caption">Токио</p>
-            </div>
-        </div>
-    </section>
+                <button id="theme-toggle" class="theme-btn">
+                    <span class="theme-icon">🌓</span>
+                    <span class="btn-text" data-i18n="theme.toggle">Сменить тему</span>
+                </button>
+            </li>
+            <li class="nav-links">
+                <a href="index.html" data-i18n="nav.home">Главная</a>
+                <a href="education.html" data-i18n="nav.about">Образование</a>
+                <a href="experience.html" data-i18n="nav.experience">Опыт</a>
+                <a href="under-construction.html" data-i18n="nav.playground">Код</a>
+            </li>
+        </ul>
+    </nav>
 
-    <!-- Skills Highlights -->
-    <section id="skills-highlights" class="skills-highlights animate-on-scroll fade-in">
-         <h2 data-i18n="skillsHighlights.title">Ключевые компетенции</h2>
-         <div class="skills-grid">
-             <div>
-                 <h3 data-i18n="skillsHighlights.tech">Технические навыки</h3>
-                 <div class="skill-tags">
-                     <span class="skill-tag tech" data-i18n="skills.html"><i class="fab fa-html5"></i> HTML5</span>
-                     <span class="skill-tag tech" data-i18n="skills.css"><i class="fab fa-css3-alt"></i> CSS3 (Flex, Grid, SASS)</span>
-                     <span class="skill-tag tech" data-i18n="skills.js"><i class="fab fa-js-square"></i> JavaScript (ES6+)</span>
-                     <span class="skill-tag tech" data-i18n="skills.react"><i class="fab fa-react"></i> React</span>
-                     <span class="skill-tag tech" data-i18n="skills.git"><i class="fab fa-git-alt"></i> Git & GitHub</span>
-                     <span class="skill-tag tech" data-i18n="skills.c"><i class="fa-solid fa-c"></i> C Lang</span>
-                     <span class="skill-tag tech" data-i18n="skills.bash"><i class="fa-solid fa-terminal"></i> Bash</span>
-                 </div>
-             </div>
-             <div>
-                 <h3 data-i18n="skillsHighlights.lang">Языковые навыки</h3>
-                 <div class="skill-tags">
-                     <span class="skill-tag lang" data-i18n="skills.japanese"><i class="fas fa-language"></i> Японский: JLPT N1</span>
-                     <span class="skill-tag lang" data-i18n="skills.english"><i class="fas fa-language"></i> Английский: C1</span>
-                     <span class="skill-tag lang" data-i18n="skills.russian"><i class="fas fa-language"></i> Русский: Родной</span>
-                 </div>
-             </div>
-             <div>
-                  <h3 data-i18n="skillsHighlights.soft">Soft Skills</h3>
-                  <div class="skill-tags">
-                     <span class="skill-tag soft" data-i18n="skills.communication"><i class="fas fa-comments"></i> Межкультурная коммуникация</span>
-                     <span class="skill-tag soft" data-i18n="skills.problemSolving"><i class="fas fa-lightbulb"></i> Решение проблем</span>
-                     <span class="skill-tag soft" data-i18n="skills.adaptability"><i class="fas fa-arrows-rotate"></i> Адаптивность</span>
-                     <span class="skill-tag soft" data-i18n="skills.attentionToDetail"><i class="fas fa-magnifying-glass"></i> Внимание к деталям</span>
-                  </div>
-             </div>
-         </div>
-    </section>
-
-    <!-- Portfolio/Section Teasers -->
-    <section id="portfolio-teasers" class="portfolio-teasers animate-on-scroll fade-in">
-        <h2 data-i18n="teasers.title">Узнайте больше</h2>
-        <div class="teaser-grid">
-            <div class="teaser-card animate-on-scroll fade-in" style="--animation-delay: 0.1s;">
-                <span class="icon">🎓</span> <h3 data-i18n="teasers.education.title">Образование</h3>
-                <p data-i18n="teasers.education.desc">МГПУ, Университет Цукубы, Школа 21, курсы.</p>
-                <a href="education.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
-            </div>
-            <div class="teaser-card animate-on-scroll fade-in" style="--animation-delay: 0.2s;">
-                <span class="icon">💼</span> <h3 data-i18n="teasers.experience.title">Опыт работы</h3>
-                <p data-i18n="teasers.experience.desc">Локализация, сопровождение, сервис, преподавание.</p>
-                <a href="experience.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
-            </div>
-            <div class="teaser-card animate-on-scroll fade-in" style="--animation-delay: 0.3s;">
-                <span class="icon">💻</span> <h3 data-i18n="teasers.code.title">Примеры Кода</h3>
-                <p data-i18n="teasers.code.desc">Интерактивные демонстрации и фрагменты кода.</p>
-                <a href="playground.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Секция FAQ -->
-    <section class="faq-section animate-on-scroll slide-up">
-        <h2 data-i18n="faq.title">Часто задаваемые вопросы</h2>
-         <details class="faq">
-            <summary data-i18n="faq.question1">Как вы начали программировать?</summary>
-            <p data-i18n="faq.answer1">Я начала изучать программирование в Школе 21, где освоила основы языка C, работу с командной строкой Bash и систему контроля версий Git. Позже прошла курсы по веб-верстке и продолжила самостоятельное изучение JavaScript и React.</p>
-         </details>
-         <details class="faq">
-            <summary data-i18n="faq.question2">Почему вы хотите работать в Японии?</summary>
-            <p data-i18n="faq.answer2">Мой многолетний интерес к японскому языку и культуре, подкрепленный опытом обучения по обмену в Университете Цукубы и работой в японской компании, мотивирует меня искать возможности для профессионального развития именно в Японии, где я могу эффективно сочетать свои языковые и технические навыки.</p>
-         </details>
-         <details class="faq">
-            <summary data-i18n="faq.question3">Какой у вас уровень японского языка?</summary>
-            <p data-i18n="faq.answer3">Я успешно сдала экзамен Нихонго Норёку Сикэн (JLPT) на высший уровень N1 в 2024 году. Мой опыт включает устный перевод, преподавание, работу в японской компании и обучение на японском языке в университете.</p>
-         </details>
-    </section>
-
-    <!-- Секция Контакты -->
-    <section id="contact-section" class="contact animate-on-scroll slide-up">
-        <h2 data-i18n="contact.title">Свяжитесь со мной</h2>
-        <!-- Информация о часовом поясе -->
-        <p class="availability-info" data-i18n="contact.availability">
-            Доступна для связи: <span data-i18n="contact.availability.hours">9:00 – 18:00 JST</span> (Японское стандартное время)
+    <!-- Hero Section -->
+    <header class="hero animate-on-scroll fade-in">
+        <h1 data-i18n="hero.name">Бородина Лидия</h1>
+        <p class="subtitle" data-i18n="hero.title">Веб-разработчик | Лингвист-Японист | Межкультурная коммуникация</p>
+        <p class="description" data-i18n="hero.description">
+            Создаю адаптивные и функциональные веб-сайты. Свободное владение японским (JLPT N1) и английским языками (C1). Ищу интересные проекты и возможности для роста в технологической сфере Японии.
         </p>
-        <form id="contactForm">
-            <label for="name" class="visually-hidden" data-i18n="contact.nameLabel">Имя</label>
-            <input type="text" id="name" name="name" required data-i18n-placeholder="contact.namePlaceholder" placeholder="Ваше имя">
-            <label for="email" class="visually-hidden" data-i18n="contact.emailLabel">Email</label>
-            <input type="email" id="email" name="email" required data-i18n-placeholder="contact.emailPlaceholder" placeholder="Ваш Email">
-            <label for="message" class="visually-hidden" data-i18n="contact.messageLabel">Сообщение</label>
-            <textarea id="message" name="message" rows="5" required data-i18n-placeholder="contact.messagePlaceholder" placeholder="Ваше сообщение..."></textarea>
-            <button type="submit" class="btn btn-primary" data-i18n="contact.submit">Отправить</button>
-        </form>
-    </section>
-
-    <!-- Final CTA -->
-    <section id="final-cta" class="final-cta animate-on-scroll fade-in">
-        <h2 data-i18n="finalCta.title">Готов(а) к новым вызовам в Японии!</h2>
-        <p data-i18n="finalCta.text">Давайте обсудим, как мои навыки могут быть полезны вашему проекту.</p>
-        <div class="cta-links">
-             <a href="mailto:ssh2112@yandex.ru" class="btn btn-primary" data-i18n="finalCta.email"><i class="fas fa-envelope"></i> Написать на Email</a>
-             <a href="https://www.linkedin.com/in/%E3%83%AA%E3%83%87%E3%82%A3%E3%82%A2-%E3%83%9C%E3%83%AD%E3%83%87%E3%82%A3%E3%83%8A-8092b7285/?locale=en_US" target="_blank" class="btn btn-secondary" data-i18n="finalCta.linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
-             <a href="https://github.com/fixed0000" target="_blank" class="btn btn-secondary" data-i18n="finalCta.github"><i class="fab fa-github"></i> GitHub</a>
-             <!-- Кнопки CV -->
-             <a href="Lidia_Borodina_CV_EN.pdf" class="btn btn-secondary" target="_blank" data-i18n="hero.cta.resume_en">
-                <i class="fas fa-download"></i> Download CV (EN)
-             </a>
-             <a href="Lidia_Borodina_CV_JP.pdf" class="btn btn-secondary" target="_blank" data-i18n="hero.cta.resume_jp">
-                <i class="fas fa-download"></i> Download CV (JP)
-             </a>
+        <div class="cta-buttons">
+            <a href="#contact-section" class="btn btn-primary" data-i18n="hero.cta.contact">
+                <i class="fas fa-envelope"></i> Связаться со мной
+            </a>
         </div>
-    </section>
-</main>
+    </header>
 
-<!-- Футер -->
-<footer>
-    <p data-i18n="footer.copyright">© 2024 Бородина Лидия</p>
-</footer>
+    <main>
+        <!-- Секция Интро -->
+        <section class="intro animate-on-scroll slide-up">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <div class="intro-text-content">
+                        <h2 data-i18n="about.title">Об авторе</h2>
+                        <div class="highlight-box">
+                            <h3 data-i18n="about.education">Образование</h3>
+                            <ul>
+                                <li data-i18n="about.education.item1">Студентка 4 курса МГПУ: Переводчик японского языка</li>
+                                <li data-i18n="about.education.item2">Программа обмена: Университет Цукубы (Япония), 2024</li>
+                                <li data-i18n="about.education.item3">Дополнительное образование: Основы программирования (Школа 21)</li>
+                                <li data-i18n="about.education.item4">Методика преподавания РКИ: Курс при МГПУ</li>
+                            </ul>
+                        </div>
+                        <div class="highlight-box">
+                            <h3 data-i18n="experience.title">Ключевой Опыт</h3>
+                            <ul>
+                                <li data-i18n="experience.item1">Локализация игр (Fruitbat Factory)</li>
+                                <li data-i18n="experience.item2">Сопровождение и устный перевод (Японский дом)</li>
+                                <li data-i18n="experience.item3">Работа в сфере обслуживания (Mosburger, Япония)</li>
+                                <li data-i18n="experience.item4">Преподавание японского языка (Онлайн)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Раздел "Мой подход" -->
+                    <div class="highlight-box">
+                        <h3 data-i18n="introKeyPoints.title">Мой подход</h3>
+                        <ul> <!-- Убран класс approach-list -->
+                            <li data-i18n="introKeyPoints.item1">
+                                <!-- Убраны иконки <i> -->
+                                <span>Внимание к деталям и культурным нюансам.</span>
+                            </li>
+                            <li data-i18n="introKeyPoints.item2">
+                                <span>Ориентация на пользователя и цели бизнеса.</span>
+                            </li>
+                            <li data-i18n="introKeyPoints.item3">
+                                <span>Стремление к чистому, поддерживаемому коду.</span>
+                            </li>
+                            <li data-i18n="introKeyPoints.item4">
+                                <span>Эффективная коммуникация на трех языках.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/image1.jpg" alt="Портретное фото" class="profile-photo" data-i18n-alt="image.alt" srcset="images/image1.jpg 1x, images/image1@2x.jpg 2x, images/image1@3x.jpg 3x" sizes="(max-width: 992px) 90vw, (max-width: 1200px) 450px, (max-width: 1440px) 600px, 750px" loading="lazy" decoding="async">
+                    <p class="image-caption" data-i18n="image.caption">Токио</p>
+                </div>
+            </div>
+        </section>
 
-<!-- Кнопка "Наверх" (если нужна) -->
-<a href="#" id="back-to-top-btn" class="back-to-top-btn" title="Наверх" aria-label="Вернуться наверх" data-i18n-title="backToTop.title" data-i18n-aria-label="backToTop.ariaLabel">
-    <i class="fas fa-arrow-up"></i>
-</a>
+        <!-- Skills Highlights -->
+        <section id="skills-highlights" class="skills-highlights animate-on-scroll fade-in">
+             <h2 data-i18n="skillsHighlights.title">Ключевые компетенции</h2>
+             <div class="skills-grid">
+                 <div>
+                     <h3 data-i18n="skillsHighlights.tech">Технические навыки</h3>
+                     <div class="skill-tags">
+                         <span class="skill-tag tech" data-i18n="skills.html"><i class="fab fa-html5"></i> HTML5</span>
+                         <span class="skill-tag tech" data-i18n="skills.css"><i class="fab fa-css3-alt"></i> CSS3 (Flex, Grid, SASS)</span>
+                         <span class="skill-tag tech" data-i18n="skills.js"><i class="fab fa-js-square"></i> JavaScript (ES6+)</span>
+                         <span class="skill-tag tech" data-i18n="skills.react"><i class="fab fa-react"></i> React</span>
+                         <span class="skill-tag tech" data-i18n="skills.git"><i class="fab fa-git-alt"></i> Git & GitHub</span>
+                         <span class="skill-tag tech" data-i18n="skills.c"><i class="fa-solid fa-c"></i> C Lang</span>
+                         <span class="skill-tag tech" data-i18n="skills.bash"><i class="fa-solid fa-terminal"></i> Bash</span>
+                     </div>
+                 </div>
+                 <div>
+                     <h3 data-i18n="skillsHighlights.lang">Языковые навыки</h3>
+                     <div class="skill-tags">
+                         <span class="skill-tag lang" data-i18n="skills.japanese"><i class="fas fa-language"></i> Японский: JLPT N1</span>
+                         <span class="skill-tag lang" data-i18n="skills.english"><i class="fas fa-language"></i> Английский: C1</span>
+                         <span class="skill-tag lang" data-i18n="skills.russian"><i class="fas fa-language"></i> Русский: Родной</span>
+                     </div>
+                 </div>
+                 <div>
+                      <h3 data-i18n="skillsHighlights.soft">Soft Skills</h3>
+                      <div class="skill-tags">
+                         <span class="skill-tag soft" data-i18n="skills.communication"><i class="fas fa-comments"></i> Межкультурная коммуникация</span>
+                         <span class="skill-tag soft" data-i18n="skills.problemSolving"><i class="fas fa-lightbulb"></i> Решение проблем</span>
+                         <span class="skill-tag soft" data-i18n="skills.adaptability"><i class="fas fa-arrows-rotate"></i> Адаптивность</span>
+                         <span class="skill-tag soft" data-i18n="skills.attentionToDetail"><i class="fas fa-magnifying-glass"></i> Внимание к деталям</span>
+                      </div>
+                 </div>
+             </div>
+        </section>
+
+        <!-- Portfolio/Section Teasers -->
+        <section id="portfolio-teasers" class="portfolio-teasers animate-on-scroll fade-in">
+            <h2 data-i18n="teasers.title">Узнайте больше</h2>
+            <div class="teaser-grid">
+                <div class="teaser-card animate-on-scroll fade-in" style="--animation-delay: 0.1s;">
+                    <span class="icon">🎓</span> <h3 data-i18n="teasers.education.title">Образование</h3>
+                    <p data-i18n="teasers.education.desc">МГПУ, Университет Цукубы, Школа 21, курсы.</p>
+                    <a href="education.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
+                </div>
+                <div class="teaser-card animate-on-scroll fade-in" style="--animation-delay: 0.2s;">
+                    <span class="icon">💼</span> <h3 data-i18n="teasers.experience.title">Опыт работы</h3>
+                    <p data-i18n="teasers.experience.desc">Локализация, сопровождение, сервис, преподавание.</p>
+                    <a href="experience.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
+                </div>
+                <div class="teaser-card animate-on-scroll fade-in" style="--animation-delay: 0.3s;">
+                    <span class="icon">💻</span> <h3 data-i18n="teasers.code.title">Примеры Кода</h3>
+                    <p data-i18n="teasers.code.desc">Интерактивные демонстрации и фрагменты кода.</p>
+                    <a href="playground.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция FAQ -->
+        <section class="faq-section animate-on-scroll slide-up">
+            <h2 data-i18n="faq.title">Часто задаваемые вопросы</h2>
+             <details class="faq">
+                <summary data-i18n="faq.question1">Как вы начали программировать?</summary>
+                <p data-i18n="faq.answer1">Я начала изучать программирование в Школе 21, где освоила основы языка C, работу с командной строкой Bash и систему контроля версий Git. Позже прошла курсы по веб-верстке и продолжила самостоятельное изучение JavaScript и React.</p>
+             </details>
+             <details class="faq">
+                <summary data-i18n="faq.question2">Почему вы хотите работать в Японии?</summary>
+                <p data-i18n="faq.answer2">Мой многолетний интерес к японскому языку и культуре, подкрепленный опытом обучения по обмену в Университете Цукубы и работой в японской компании, мотивирует меня искать возможности для профессионального развития именно в Японии, где я могу эффективно сочетать свои языковые и технические навыки.</p>
+             </details>
+             <details class="faq">
+                <summary data-i18n="faq.question3">Какой у вас уровень японского языка?</summary>
+                <p data-i18n="faq.answer3">Я успешно сдала экзамен Нихонго Норёку Сикэн (JLPT) на высший уровень N1 в 2024 году. Мой опыт включает устный перевод, преподавание, работу в японской компании и обучение на японском языке в университете.</p>
+             </details>
+        </section>
+
+        <!-- Секция Контакты -->
+        <section id="contact-section" class="contact animate-on-scroll slide-up">
+            <h2 data-i18n="contact.title">Свяжитесь со мной</h2>
+            <!-- Информация о часовом поясе -->
+            <p class="availability-info" data-i18n="contact.availability">
+                Доступна для связи: <span data-i18n="contact.availability.hours">9:00 – 18:00 JST</span> (Японское стандартное время)
+            </p>
+            <form id="contactForm">
+                <label for="name" class="visually-hidden" data-i18n="contact.nameLabel">Имя</label>
+                <input type="text" id="name" name="name" required data-i18n-placeholder="contact.namePlaceholder" placeholder="Ваше имя">
+                <label for="email" class="visually-hidden" data-i18n="contact.emailLabel">Email</label>
+                <input type="email" id="email" name="email" required data-i18n-placeholder="contact.emailPlaceholder" placeholder="Ваш Email">
+                <label for="message" class="visually-hidden" data-i18n="contact.messageLabel">Сообщение</label>
+                <textarea id="message" name="message" rows="5" required data-i18n-placeholder="contact.messagePlaceholder" placeholder="Ваше сообщение..."></textarea>
+                <button type="submit" class="btn btn-primary" data-i18n="contact.submit">Отправить</button>
+            </form>
+        </section>
+
+        <!-- Final CTA -->
+        <section id="final-cta" class="final-cta animate-on-scroll fade-in">
+            <h2 data-i18n="finalCta.title">Готов(а) к новым вызовам в Японии!</h2>
+            <p data-i18n="finalCta.text">Давайте обсудим, как мои навыки могут быть полезны вашему проекту.</p>
+            <div class="cta-links">
+                 <a href="mailto:ssh2112@yandex.ru" class="btn btn-primary" data-i18n="finalCta.email"><i class="fas fa-envelope"></i> Написать на Email</a>
+                 <a href="https://www.linkedin.com/in/%E3%83%AA%E3%83%87%E3%82%A3%E3%82%A2-%E3%83%9C%E3%83%AD%E3%83%87%E3%82%A3%E3%83%8A-8092b7285/?locale=en_US" target="_blank" class="btn btn-secondary" data-i18n="finalCta.linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                 <a href="https://github.com/fixed0000" target="_blank" class="btn btn-secondary" data-i18n="finalCta.github"><i class="fab fa-github"></i> GitHub</a>
+                 <!-- Кнопки CV -->
+                 <a href="Lidia_Borodina_CV_EN.pdf" class="btn btn-secondary" target="_blank" data-i18n="hero.cta.resume_en">
+                    <i class="fas fa-download"></i> Download CV (EN)
+                 </a>
+                 <a href="Lidia_Borodina_CV_JP.pdf" class="btn btn-secondary" target="_blank" data-i18n="hero.cta.resume_jp">
+                    <i class="fas fa-download"></i> Download CV (JP)
+                 </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <p data-i18n="footer.copyright">© 2024 Бородина Лидия</p>
+    </footer>
+
+    <!-- Кнопка "Наверх" (если нужна) -->
+    <a href="#" id="back-to-top-btn" class="back-to-top-btn" title="Наверх" aria-label="Вернуться наверх" data-i18n-title="backToTop.title" data-i18n-aria-label="backToTop.ariaLabel">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
 
-<!-- Подключение скриптов -->
-<script src="js/script.js" defer></script>
-<script src="js/sakura-animation.js" defer></script> 
+    <!-- Подключение скриптов -->
+    <script src="js/script.js" defer></script>
+    <script src="js/sakura-animation.js" defer></script> 
+
+</body>
+</html>
