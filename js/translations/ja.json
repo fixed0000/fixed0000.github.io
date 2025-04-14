@@ -270,5 +270,7 @@
   "constructionPage.pageTitle": "準備中のページ",
   "constructionPage.title": "準備中のページ 🚧",
   "constructionPage.message": "このセクションは近日公開予定です！現在、皆様に楽しんでいただけるコンテンツを作成中です。もうしばらくお待ちください。",
-  "constructionPage.backHome": "ホームに戻る"
+  "constructionPage.backHome": "ホームに戻る",
+      "meta.description": "ボロディナ・リディアのポートフォリオ。ウェブ開発者兼言語学者・日本研究者（JLPT N1）。ウェブ開発、ローカリゼーション、翻訳、異文化コミュニケーションの経験。日本での機会を探しています。",
+    "meta.keywords": "ウェブ開発者, 言語学者, 日本研究者, 日本語, JLPT N1, ポートフォリオ, フロントエンド, JavaScript, React, HTML, CSS, ローカリゼーション, 翻訳, 日本, 東京, ボロディナ・リディア"
 }
