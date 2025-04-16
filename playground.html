@@ -1,22 +1,35 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <!-- Подсветка кода -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
-
-<!-- NLP демо (опционально) -->
-<script src="https://cdn.jsdelivr.net/npm/kuromoji@0.1.2/build/kuromoji.js"></script>
+<html lang="ru"> <!-- Язык будет обновляться JS, установлен ru как дефолтный -->
 <head>
     <meta charset="UTF-8">
-    <title data-i18n="playground.title">Code Playground</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title с data-атрибутом для перевода -->
+    <title data-i18n-title="playgroundPage.pageTitle">Игровая площадка</title>
+
+    <!-- SEO Meta Tags с data-атрибутами -->
+    <meta name="description" data-i18n="meta.playground.description" content="Интерактивная демонстрация мини-игры на JavaScript от Лидии Бородиной.">
+    <meta name="keywords" data-i18n="meta.playground.keywords" content="javascript игра, game demo, пошаговая тактика, html игра, портфолио, Лидия Бородина, javascript game, grid game">
+
+    <!-- Основные стили и иконки -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Стили для этой страницы -->
+    <link rel="stylesheet" href="css/pages/playground.css">
+    <!-- Font Awesome (если нужен для интерфейса) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      /* Минимальный стиль для скрытия меток */
+      .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
+    </style>
 </head>
 <body>
+    <!-- Навигация -->
     <nav>
         <ul class="menu">
-            <!-- Элементы слева -->
             <li class="controls-group">
-                <div class="custom-select">
+                <div class="custom-select language-switcher">
                     <select id="language-select">
                         <option value="ru">🇷🇺 Русский</option>
                         <option value="en">🇬🇧 English</option>
@@ -24,48 +37,103 @@
                     </select>
                     <span class="select-arrow">▼</span>
                 </div>
-                <button id="theme-toggle" class="theme-btn" data-i18n="theme.toggle">
+                <button id="theme-toggle" class="theme-btn">
                     <span class="theme-icon">🌓</span>
-                    <span class="btn-text">Сменить тему</span>
+                    <span class="btn-text" data-i18n="theme.toggle">Сменить тему</span>
                 </button>
             </li>
-            
-            <!-- Ссылки справа -->
             <li class="nav-links">
                 <a href="index.html" data-i18n="nav.home">Главная</a>
-                <a href="about.html" data-i18n="nav.about">Образование</a>
+                <a href="education.html" data-i18n="nav.about">Образование</a>
                 <a href="experience.html" data-i18n="nav.experience">Опыт</a>
                 <a href="playground.html" data-i18n="nav.playground">Код</a>
             </li>
         </ul>
     </nav>
 
-    <main>
-        <div class="code-editor">
-            <div class="editor-header">
-                <select class="language-select">
-                    <option value="html">HTML</option>
-                    <option value="python">Python (NLP)</option>
-                    <option value="js">JavaScript</option>
-                </select>
-            </div>
-            
-            <div class="editor-content">
-                <pre><code class="language-html" data-i18n="playground.demo1">
-&lt;!-- Пример локализации --&gt;
-&lt;div data-lang="ja"&gt;
-  こんにちは世界！
-&lt;/div&gt;</code></pre>
-            </div>
+    <!-- Основное содержимое страницы Игровой Площадки -->
+    <main class="playground-page">
 
-            <div class="nlp-demo">
-                <input type="text" 
-                       data-i18n-placeholder="playground.input" 
-                       placeholder="Введите японский текст">
-                <button data-i18n="playground.analyze">Анализ</button>
-                <div class="nlp-result"></div>
+        <!-- Заголовок страницы -->
+        <header class="playground-header animate-on-scroll">
+            <h1 data-i18n="playground.pageHeader">Игровая Площадка</h1>
+            <p data-i18n="playground.pageDescription">Здесь вы можете увидеть примеры интерактивных элементов и демонстраций, созданных с помощью JavaScript.</p>
+        </header>
+
+        <!-- Секция Игрового Примера -->
+        <section id="game-demo" class="highlight-box animate-on-scroll"> <!-- Используем highlight-box и анимацию -->
+            <h2 data-i18n="playground.gameDemo.title">Демо: Пошаговая мини-стратегия</h2>
+            <p data-i18n="playground.gameDemo.description">Управляйте героем 🦸 на случайно генерируемой карте. Взаимодействуйте с объектами (💰, 🪵, 🏰, ❓, 👹) и собирайте ресурсы. Кликните на героя, затем на доступную клетку для перемещения.</p>
+
+            <div class="game-container">
+                <!-- Игровое поле (генерируется JS) -->
+                <div class="game-grid" id="gameGrid" aria-label="Игровое поле">
+                    <!-- Ячейки будут добавлены JS -->
+                    <!-- Пример ячейки: <div class="grid-cell terrain-grass" data-row="0" data-col="0" role="button" tabindex="0"></div> -->
+                </div>
+
+                <!-- Панель управления/информации -->
+                <aside class="game-controls">
+                    <h3 data-i18n="playground.gameDemo.heroPanel">Панель Героя</h3>
+                    <div id="heroInfo">
+                        <p><strong><span data-i18n="playground.gameDemo.heroNameLabel">Имя:</span></strong> <span id="heroName" data-i18n="playground.gameDemo.heroNameDefault">Герой</span></p>
+                        <p><strong><span data-i18n="playground.gameDemo.apLabel">Очки Хода:</span></strong> <span id="actionPoints">3</span> / 3</p>
+                    </div>
+                    <h4 data-i18n="playground.gameDemo.resources">Ресурсы</h4>
+                    <div id="resourceInfo">
+                         <p><span class="resource-icon">💰</span> <span data-i18n="resource.gold">Золото</span>: <span id="goldAmount">100</span></p>
+                         <p><span class="resource-icon">🪵</span> <span data-i18n="resource.wood">Дерево</span>: <span id="woodAmount">50</span></p>
+                         <!-- Добавьте другие ресурсы, если нужно -->
+                    </div>
+                     <h4 data-i18n="playground.gameDemo.log">Журнал</h4>
+                     <div id="gameLog" class="game-log" aria-live="polite">
+                         <p data-i18n="playground.gameDemo.logStart">Выберите героя для начала.</p>
+                         <!-- Сообщения будут добавляться JS -->
+                     </div>
+                    <button id="endTurnButton" class="btn btn-secondary" data-i18n="playground.gameDemo.endTurn">Закончить ход</button>
+                    <button id="newGameButton" class="btn btn-secondary" data-i18n="playground.gameDemo.reset">Новая карта</button>
+                </aside>
+            </div>
+             <p class="tech-used">
+                 <strong data-i18n="playground.techUsedLabel">Технологии:</strong>
+                 <span data-i18n="playground.gameDemo.tech">HTML, CSS Grid, JavaScript (DOM, Random Generation, Event Handling)</span>
+            </p>
+        </section>
+
+        <!-- Модальное окно для взаимодействия (скрыто по умолчанию) -->
+        <div id="interactionModal" class="modal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-content">
+                <!-- Добавлены data-атрибуты для aria-label -->
+                <button class="modal-close" onclick="closeModal()" aria-label="Закрыть" data-i18n-aria-label="modal.closeLabel">×</button>
+                <h3 id="modalTitle" data-i18n="modal.defaultTitle">Взаимодействие</h3> <!-- Добавлен ключ для заголовка по умолчанию -->
+                <div id="modalBody">
+                    <p id="modalDescription" data-i18n="modal.defaultDescription">Описание объекта...</p> <!-- Добавлен ключ -->
+                    <div id="modalActions">
+                        <!-- Кнопки действий будут добавляться JS -->
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Сюда можно добавить другие демо-проекты -->
+
     </main>
+
+    <!-- Футер -->
+    <footer> <p data-i18n="footer.copyright">© 2024 Бородина Лидия</p> </footer>
+
+    <!-- Кнопки "Наверх" и "Домой" -->
+     <a href="index.html" id="back-to-home-btn" class="back-to-home-btn" title="На главную" aria-label="Вернуться на главную страницу" data-i18n-title="backToHome.title" data-i18n-aria-label="backToHome.ariaLabel">
+        <i class="fas fa-home"></i>
+    </a>
+    <a href="#" id="back-to-top-btn" class="back-to-top-btn" title="Наверх" aria-label="Вернуться наверх" data-i18n-title="backToTop.title" data-i18n-aria-label="backToTop.ariaLabel">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Подключение скриптов -->
+    <script src="js/script.js" defer></script>
+    <!-- Подключите скрипт с логикой игры -->
+    <script src="js/game-logic.js" defer></script>
+
 </body>
 </html>
