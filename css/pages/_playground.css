@@ -20,6 +20,7 @@
 .playground-header h1 {
     color: var(--accent-color);
     margin-bottom: var(--spacing-small, 10px);
+    font-size: 2em; /* Немного увеличим */
 }
 .playground-header p {
     color: var(--text-muted, inherit);
@@ -33,22 +34,30 @@
 
 /* --- Секция Демо Игры (#game-demo) --- */
 #game-demo {
-    /* Стили .highlight-box применяются из CSS компонентов */
+    /* Стили .highlight-box применяются из CSS компонентов, если этот класс добавлен в HTML */
     padding: var(--spacing-large, 30px);
     margin-bottom: var(--spacing-xl, 50px);
+    background: var(--card-bg-subtle, #f9f9f9); /* Добавим фон */
+    border-radius: var(--border-radius-large, 12px); /* Добавим скругление */
+    box-shadow: var(--shadow-md); /* Добавим тень */
 }
+[data-theme="dark"] #game-demo {
+    background: var(--card-bg);
+}
+
 #game-demo h2 {
     text-align: center;
     margin-top: 0;
     margin-bottom: var(--spacing-small, 15px);
-    font-size: 1.6em;
+    font-size: 1.8em; /* Немного увеличим */
+    color: var(--accent-color);
 }
 #game-demo > p { /* Описание под заголовком */
     text-align: center;
     max-width: 700px;
     margin: 0 auto var(--spacing-large, 30px) auto;
     color: var(--text-muted, inherit);
-    font-size: 0.95em;
+    font-size: 1em; /* Сделаем чуть крупнее */
     line-height: 1.6;
 }
 
@@ -65,16 +74,16 @@
 /* --- Игровая Сетка --- */
 .game-grid {
     display: grid;
-    /* Колонки и строки будут заданы через JS как inline style или через CSS переменные */
-    /* Пример: grid-template-columns: repeat(var(--grid-cols, 10), var(--cell-size, 40px)); */
-    /*         grid-template-rows: repeat(var(--grid-rows, 10), var(--cell-size, 40px)); */
-    gap: 1px; /* Тонкий зазор */
-    border: 2px solid var(--border-color-darker, #bbb); /* Более заметная рамка */
+    /* Колонки и строки задаются через JS переменные --grid-cols, --grid-rows, --cell-size */
+    grid-template-columns: repeat(var(--grid-cols, 10), var(--cell-size, 40px));
+    grid-template-rows: repeat(var(--grid-rows, 10), var(--cell-size, 40px));
+    gap: 1px;
+    border: 2px solid var(--border-color-darker, #bbb);
     background-color: var(--border-color-subtle, #ddd); /* Фон зазоров */
-    width: fit-content;
-    margin: 0 auto; /* Центрирование если панель снизу */
-    box-shadow: var(--shadow-sm);
-    user-select: none; /* Запретить выделение текста на поле */
+    width: fit-content; /* Ширина по содержимому */
+    margin: 0 auto; /* Центрирование, если панель снизу */
+    box-shadow: var(--shadow-md); /* Добавили тень */
+    user-select: none;
 }
 [data-theme="dark"] .game-grid {
     border-color: #666;
@@ -83,22 +92,22 @@
 
 /* --- Ячейка Сетки --- */
 .grid-cell {
-    width: var(--cell-size, 40px); /* Размер ячейки через переменную */
+    width: var(--cell-size, 40px);
     height: var(--cell-size, 40px);
     background-color: var(--bg-color-subtle, #fdfdfd);
-    border: 1px solid var(--border-color-extra-subtle, #eee);
+    /* border: 1px solid var(--border-color-extra-subtle, #eee); */ /* Убрали рамку ячейки, т.к. есть фон у сетки */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.6em; /* Размер иконок/эмодзи юнитов */
-    cursor: pointer;
-    transition: background-color 0.15s ease-out, transform 0.1s ease-out;
+    font-size: calc(var(--cell-size, 40px) * 0.55); /* Размер иконки зависит от размера ячейки */
+    cursor: default; /* По умолчанию не кликабельно */
+    transition: background-color 0.15s ease-out, transform 0.1s ease-out, box-shadow 0.2s ease-out;
     position: relative;
-    box-sizing: border-box; /* Учитываем рамку в размере */
+    box-sizing: border-box;
 }
 [data-theme="dark"] .grid-cell {
     background-color: var(--dark-bg-subtle, #3a3a3a);
-    border-color: #4a4a4a;
+    /* border-color: #4a4a4a; */
 }
 
 /* Типы Местности */
@@ -113,112 +122,115 @@
 [data-theme="dark"] .grid-cell.terrain-mountain { background-color: #706c66; }
 [data-theme="dark"] .grid-cell.terrain-sand { background-color: #bfa988; }
 
-/* Объекты и Юниты (используем псевдоэлементы для эмодзи/иконок) */
-.grid-cell [class^="object-"]::before,
-.grid-cell [class^="unit-"]::before {
+/* Объекты и Юниты (убрали псевдоэлементы, т.к. контент будет в JS) */
+/* Стилизуем сам контент ячейки (например, span или div внутри) */
+.grid-cell > * { /* Применить к дочернему элементу */
     display: block;
     line-height: 1;
     text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
-.grid-cell.object-resource-gold::before { content: '💰'; }
-.grid-cell.object-resource-wood::before { content: '🪵'; }
-.grid-cell.object-city::before { content: '🏰'; font-size: 1.2em; }
-.grid-cell.object-quest::before { content: '❓'; font-size: 1.2em; color: orange; }
-.grid-cell.object-enemy-weak::before { content: '👹'; }
-.grid-cell.object-enemy-strong::before { content: '🐲'; font-size: 1.3em; }
-.grid-cell.unit-hero::before { content: '🦸'; }
+/* Примеры классов для JS */
+.object-resource-gold { color: gold; }
+.object-resource-wood { color: saddlebrown; }
+.object-city { /* Можно стилизовать иконку */ }
+.object-quest { color: orange; font-weight: bold; }
+.object-enemy-weak { /* */ }
+.object-enemy-strong { transform: scale(1.1); } /* Немного крупнее */
+.unit-hero { color: var(--accent-color); font-weight: bold; transform: scale(1.1); }
 
 /* Состояния ячеек */
 .grid-cell.selected {
     outline: 3px solid var(--accent-color);
-    outline-offset: -2px;
+    outline-offset: -3px; /* Сделать рамку внутри */
     z-index: 1;
     transform: scale(1.05);
-    box-shadow: 0 0 8px var(--accent-color);
+    box-shadow: 0 0 10px rgba(var(--accent-color-rgb, 52, 152, 219), 0.5); /* Используем RGB версию акцентного цвета */
 }
 .grid-cell.possible-move {
-    background-color: hsla(120, 73%, 74%, 0.4); /* Полупрозрачный зеленый */
-    outline: 1px dashed hsla(120, 73%, 44%, 0.6);
-    outline-offset: -1px;
+    background-color: hsla(120, 73%, 74%, 0.4);
+    /* outline: 1px dashed hsla(120, 73%, 44%, 0.6); */ /* Убрали рамку, используем box-shadow */
+    box-shadow: inset 0 0 0 2px hsla(120, 73%, 44%, 0.7); /* Внутренняя рамка через тень */
+    /* outline-offset: -1px; */
     cursor: pointer;
 }
-.grid-cell.path-highlight { /* Подсветка пути (опционально) */
-    background-color: hsla(50, 100%, 80%, 0.4);
+.grid-cell.path-highlight {
+    background-color: hsla(50, 100%, 80%, 0.5); /* Сделаем чуть ярче */
 }
-.grid-cell:hover:not([class*="terrain-water"]):not([class*="terrain-mountain"]) {
-   background-color: rgba(0, 0, 0, 0.05);
+.grid-cell:not(.selected):not([class*="terrain-water"]):not([class*="terrain-mountain"]):hover {
+   /* background-color: rgba(0, 0, 0, 0.05); */ /* Убрали, чтобы не перекрывать подсветку хода */
+   box-shadow: inset 0 0 0 1px var(--accent-color); /* Рамка при наведении */
+   cursor: pointer; /* Курсор для кликабельных */
+   z-index: 2;
 }
-[data-theme="dark"] .grid-cell.possible-move { background-color: hsla(120, 50%, 30%, 0.5); outline-color: hsla(120, 50%, 60%, 0.7); }
-[data-theme="dark"] .grid-cell.path-highlight { background-color: hsla(50, 70%, 40%, 0.4); }
-[data-theme="dark"] .grid-cell:hover:not([class*="terrain-water"]):not([class*="terrain-mountain"]) { background-color: rgba(255, 255, 255, 0.08); }
+[data-theme="dark"] .grid-cell.possible-move { background-color: hsla(120, 50%, 30%, 0.6); box-shadow: inset 0 0 0 2px hsla(120, 50%, 60%, 0.8); }
+[data-theme="dark"] .grid-cell.path-highlight { background-color: hsla(50, 70%, 40%, 0.5); }
+[data-theme="dark"] .grid-cell:not(.selected):not([class*="terrain-water"]):not([class*="terrain-mountain"]):hover { box-shadow: inset 0 0 0 1px var(--accent-color); }
 
 
 /* --- Панель Управления --- */
 .game-controls {
-    min-width: 250px; /* Ширина панели */
+    min-width: 250px;
     max-width: 300px;
-    flex-shrink: 0; /* Не сжимать */
+    flex-shrink: 0;
     padding: var(--spacing-medium, 20px);
-    background-color: var(--card-bg-subtle, #f9f9f9);
+    background-color: var(--card-bg); /* Изменили фон */
     border: 1px solid var(--border-color, #ddd);
     border-radius: 8px;
+    box-shadow: var(--shadow-sm); /* Добавили тень */
 }
 [data-theme="dark"] .game-controls {
-    background-color: var(--card-bg);
+    background-color: var(--dark-bg-subtle); /* Используем другой фон */
     border-color: var(--dark-border, #444);
 }
-.game-controls h3, .game-controls h4 { /* Отступы для заголовков панели */
+.game-controls h3, .game-controls h4 {
     margin-top: 20px;
     margin-bottom: 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--border-color-subtle, #eee);
 }
-.game-controls h3:first-of-type, .game-controls h4:first-of-type {
-    margin-top: 0;
-    border-top: none;
-    padding-top: 0;
-}
+.game-controls h3:first-of-type, .game-controls h4:first-of-type { margin-top: 0; }
 [data-theme="dark"] .game-controls h3, [data-theme="dark"] .game-controls h4 {
     border-bottom-color: var(--dark-border-subtle, #333);
 }
 
-#heroInfo p, #resourceInfo p { margin-bottom: 8px; display: flex; align-items: center; gap: 5px; }
-#heroInfo strong, #resourceInfo strong span[data-i18n] { font-weight: 600; }
+#heroInfo p, #resourceInfo p { margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 0.95em; }
+#heroInfo strong, #resourceInfo strong, span[data-i18n] { font-weight: 600; }
 .resource-icon { font-size: 1.1em; display: inline-block; width: 1.5em; text-align: center; }
 
 .game-log {
-    height: 120px; /* Увеличили высоту лога */
+    height: 150px; /* Увеличили высоту лога */
     overflow-y: auto;
-    border: 1px solid var(--border-color-extra-subtle, #eee);
-    padding: 10px;
+    border: 1px solid var(--border-color-subtle, #eee); /* Тоньше рамка */
+    padding: 10px 12px;
     font-size: 0.85em;
     background: var(--bg-color, white);
     border-radius: 4px;
     margin-bottom: 15px;
+    line-height: 1.5; /* Улучшили читаемость лога */
 }
-.game-log p { margin: 0 0 5px 0; line-height: 1.4; }
+.game-log p { margin: 0 0 6px 0; }
 .game-log p:last-child { margin-bottom: 0; }
-[data-theme="dark"] .game-log { border-color: #444; background: #222; }
+[data-theme="dark"] .game-log { border-color: #444; background: #222; color: #ccc; }
 
-.game-controls button { display: block; width: 100%; margin-top: 10px; }
+.game-controls .btn { /* Применяем общие стили кнопок */ display: block; width: 100%; margin-top: 10px; }
 
 
 /* --- Технологии --- */
-.tech-used { text-align: center; font-size: 0.9em; color: var(--text-muted); margin-top: 25px; }
+.tech-used { text-align: center; font-size: 0.9em; color: var(--text-muted); margin-top: 35px; /* Увеличили отступ */ }
 .tech-used strong { color: var(--text-base); }
 
 
 /* --- Модальное Окно --- */
-.modal { display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); animation: fadeIn 0.3s ease-out; }
-.modal-content { background-color: var(--card-bg, #fff); margin: 10% auto; /* Уменьшили отступ сверху */ padding: 25px 30px; border: 1px solid var(--border-color, #888); width: 90%; max-width: 450px; /* Чуть уже */ border-radius: 8px; position: relative; box-shadow: var(--shadow-large); animation: slideInModal 0.4s ease-out; }
-[data-theme="dark"] .modal-content { background-color: var(--dark-bg-subtle); border-color: #555; }
-.modal-close { color: #aaa; position: absolute; top: 10px; right: 20px; font-size: 28px; font-weight: bold; line-height: 1; cursor: pointer; }
-.modal-close:hover, .modal-close:focus { color: #333; text-decoration: none; }
-[data-theme="dark"] .modal-close:hover, [data-theme="dark"] .modal-close:focus { color: #ccc; }
-#modalTitle { margin-top: 0; margin-bottom: 20px; color: var(--accent-color); }
+.modal { display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.7); /* Темнее фон */ animation: fadeIn 0.3s ease-out; }
+.modal-content { background-color: var(--card-bg, #fff); margin: 10% auto; padding: 25px 30px; border: none; /* Убрали рамку */ width: 90%; max-width: 450px; border-radius: 8px; position: relative; box-shadow: var(--shadow-large); animation: slideInModal 0.4s ease-out; }
+[data-theme="dark"] .modal-content { background-color: var(--dark-bg-subtle); }
+.modal-close { color: #aaa; position: absolute; top: 10px; right: 20px; font-size: 28px; font-weight: bold; line-height: 1; cursor: pointer; transition: color 0.2s ease; }
+.modal-close:hover, .modal-close:focus { color: var(--text-color, #333); text-decoration: none; }
+[data-theme="dark"] .modal-close:hover, [data-theme="dark"] .modal-close:focus { color: #eee; }
+#modalTitle { margin-top: 0; margin-bottom: 20px; color: var(--accent-color); font-size: 1.4em; }
 #modalBody p { margin-bottom: 15px; line-height: 1.6; }
 #modalActions { margin-top: 25px; text-align: right; display: flex; justify-content: flex-end; gap: 10px; }
-#modalActions button { /* Стили кнопок btn применяются */ }
+#modalActions .btn { /* Общие стили кнопок применяются */ }
 
 /* Анимации для модалки */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -228,20 +240,20 @@
 /* --- Адаптивность --- */
 @media (max-width: 768px) {
     .game-container { flex-direction: column; align-items: center; }
-    .game-controls { width: 100%; max-width: 400px; /* Ограничим ширину панели */ }
-    /* Уменьшаем ячейки для планшетов */
-    .game-grid { --cell-size: 35px; /* Меняем размер через переменную */ }
-    .grid-cell { width: var(--cell-size); height: var(--cell-size); font-size: 1.4em;}
+    .game-controls { width: 100%; max-width: 500px; /* Панель шире на планшетах */ }
+    .game-grid { --cell-size: 35px; /* Размер ячейки для планшетов */ }
+    .grid-cell { font-size: calc(var(--cell-size) * 0.6); }
 }
 
 @media (max-width: 480px) {
     .playground-header h1 { font-size: 1.8em; }
     #game-demo h2 { font-size: 1.4em; }
-    /* Сильно уменьшаем ячейки для мобильных */
+    /* Уменьшаем ячейки для мобильных */
     .game-grid { --cell-size: 28px; }
-    .grid-cell { width: var(--cell-size); height: var(--cell-size); font-size: 1.1em;}
-    .game-controls { min-width: auto; }
-    .modal-content { width: 95%; margin: 10% auto; padding: 20px; }
+    .grid-cell { font-size: calc(var(--cell-size) * 0.65); } /* Относительно новый размер */
+    .game-controls { min-width: auto; padding: 15px; }
+    .game-log { height: 120px; }
+    .modal-content { width: 95%; margin: 8% auto; padding: 20px; }
     #modalTitle { font-size: 1.2em; }
 }
 
@@ -251,5 +263,5 @@
   .animate-on-scroll { opacity: 1 !important; transform: none !important; transition: none !important; }
   .modal { animation: none !important; }
   .modal-content { animation: none !important; }
-  /* Добавьте сюда отключение других анимаций, если они есть */
+  .grid-cell { transition: none !important; } /* Отключаем transition у ячеек */
 }

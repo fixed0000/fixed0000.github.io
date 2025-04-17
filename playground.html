@@ -33,7 +33,7 @@
                     <select id="language-select">
                         <option value="ru">🇷🇺 Русский</option>
                         <option value="en">🇬🇧 English</option>
-                        <option value="ja">🇯🇵 日本語</option>
+                        <option value="ja">🇯🇵 日本語</option> <!-- Исправлено jp на ja -->
                     </select>
                     <span class="select-arrow">▼</span>
                 </div>
@@ -56,58 +56,56 @@
 
         <!-- Заголовок страницы -->
         <header class="playground-header animate-on-scroll">
-            <h1 data-i18n="playground.pageHeader">Игровая Площадка</h1>
-            <p data-i18n="playground.pageDescription">Здесь вы можете увидеть примеры интерактивных элементов и демонстраций, созданных с помощью JavaScript.</p>
+            <h1 data-i18n="playgroundPage.pageHeader">Игровая Площадка</h1> <!-- Изменен ключ -->
+            <p data-i18n="playgroundPage.pageDescription">Здесь вы можете увидеть примеры интерактивных элементов и демонстраций, созданных с помощью JavaScript.</p> <!-- Изменен ключ -->
         </header>
 
         <!-- Секция Игрового Примера -->
         <section id="game-demo" class="highlight-box animate-on-scroll"> <!-- Используем highlight-box и анимацию -->
-            <h2 data-i18n="playground.gameDemo.title">Демо: Пошаговая мини-стратегия</h2>
-            <p data-i18n="playground.gameDemo.description">Управляйте героем 🦸 на случайно генерируемой карте. Взаимодействуйте с объектами (💰, 🪵, 🏰, ❓, 👹) и собирайте ресурсы. Кликните на героя, затем на доступную клетку для перемещения.</p>
+            <h2 data-i18n="playgroundPage.gameDemo.title">Демо: Пошаговая мини-стратегия</h2> <!-- Изменен ключ -->
+            <p data-i18n="playgroundPage.gameDemo.description">Управляйте героем 🦸 на случайно генерируемой карте. Взаимодействуйте с объектами (💰, 🪵, 🏰, ❓, 👹) и собирайте ресурсы. Кликните на героя, затем на доступную клетку для перемещения.</p> <!-- Изменен ключ -->
 
             <div class="game-container">
                 <!-- Игровое поле (генерируется JS) -->
-                <div class="game-grid" id="gameGrid" aria-label="Игровое поле">
+                <div class="game-grid" id="gameGrid" aria-label="Игровое поле" data-i18n-aria-label="playgroundPage.gameDemo.gridAriaLabel"> <!-- Добавлен data-атрибут -->
                     <!-- Ячейки будут добавлены JS -->
-                    <!-- Пример ячейки: <div class="grid-cell terrain-grass" data-row="0" data-col="0" role="button" tabindex="0"></div> -->
                 </div>
 
                 <!-- Панель управления/информации -->
                 <aside class="game-controls">
-                    <h3 data-i18n="playground.gameDemo.heroPanel">Панель Героя</h3>
+                    <h3 data-i18n="playgroundPage.gameDemo.heroPanel">Панель Героя</h3> <!-- Изменен ключ -->
                     <div id="heroInfo">
-                        <p><strong><span data-i18n="playground.gameDemo.heroNameLabel">Имя:</span></strong> <span id="heroName" data-i18n="playground.gameDemo.heroNameDefault">Герой</span></p>
-                        <p><strong><span data-i18n="playground.gameDemo.apLabel">Очки Хода:</span></strong> <span id="actionPoints">3</span> / 3</p>
+                        <p><strong data-i18n="playgroundPage.gameDemo.heroNameLabel">Имя:</strong> <span id="heroName" data-i18n="playgroundPage.gameDemo.heroNameDefault">Герой</span></p> <!-- Изменены ключи -->
+                        <p><strong data-i18n="playgroundPage.gameDemo.apLabel">Очки Хода:</strong> <span id="actionPoints">3</span> / 3</p> <!-- Изменен ключ -->
                     </div>
-                    <h4 data-i18n="playground.gameDemo.resources">Ресурсы</h4>
+                    <h4 data-i18n="playgroundPage.gameDemo.resources">Ресурсы</h4> <!-- Изменен ключ -->
                     <div id="resourceInfo">
                          <p><span class="resource-icon">💰</span> <span data-i18n="resource.gold">Золото</span>: <span id="goldAmount">100</span></p>
                          <p><span class="resource-icon">🪵</span> <span data-i18n="resource.wood">Дерево</span>: <span id="woodAmount">50</span></p>
                          <!-- Добавьте другие ресурсы, если нужно -->
                     </div>
-                     <h4 data-i18n="playground.gameDemo.log">Журнал</h4>
+                     <h4 data-i18n="playgroundPage.gameDemo.log">Журнал</h4> <!-- Изменен ключ -->
                      <div id="gameLog" class="game-log" aria-live="polite">
-                         <p data-i18n="playground.gameDemo.logStart">Выберите героя для начала.</p>
+                         <p data-i18n="playgroundPage.gameDemo.logStart">Выберите героя для начала.</p> <!-- Изменен ключ -->
                          <!-- Сообщения будут добавляться JS -->
                      </div>
-                    <button id="endTurnButton" class="btn btn-secondary" data-i18n="playground.gameDemo.endTurn">Закончить ход</button>
-                    <button id="newGameButton" class="btn btn-secondary" data-i18n="playground.gameDemo.reset">Новая карта</button>
+                    <button id="endTurnButton" class="btn btn-secondary" data-i18n="playgroundPage.gameDemo.endTurn">Закончить ход</button> <!-- Изменен ключ -->
+                    <button id="newGameButton" class="btn btn-secondary" data-i18n="playgroundPage.gameDemo.reset">Новая карта</button> <!-- Изменен ключ -->
                 </aside>
             </div>
              <p class="tech-used">
-                 <strong data-i18n="playground.techUsedLabel">Технологии:</strong>
-                 <span data-i18n="playground.gameDemo.tech">HTML, CSS Grid, JavaScript (DOM, Random Generation, Event Handling)</span>
+                 <strong data-i18n="playgroundPage.techUsedLabel">Технологии:</strong> <!-- Изменен ключ -->
+                 <span data-i18n="playgroundPage.gameDemo.tech">HTML, CSS Grid, JavaScript (DOM, Random Generation, Event Handling)</span> <!-- Изменен ключ -->
             </p>
         </section>
 
         <!-- Модальное окно для взаимодействия (скрыто по умолчанию) -->
         <div id="interactionModal" class="modal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
             <div class="modal-content">
-                <!-- Добавлены data-атрибуты для aria-label -->
                 <button class="modal-close" onclick="closeModal()" aria-label="Закрыть" data-i18n-aria-label="modal.closeLabel">×</button>
-                <h3 id="modalTitle" data-i18n="modal.defaultTitle">Взаимодействие</h3> <!-- Добавлен ключ для заголовка по умолчанию -->
+                <h3 id="modalTitle" data-i18n="modal.defaultTitle">Взаимодействие</h3>
                 <div id="modalBody">
-                    <p id="modalDescription" data-i18n="modal.defaultDescription">Описание объекта...</p> <!-- Добавлен ключ -->
+                    <p id="modalDescription" data-i18n="modal.defaultDescription">Описание объекта...</p>
                     <div id="modalActions">
                         <!-- Кнопки действий будут добавляться JS -->
                     </div>
@@ -124,7 +122,7 @@
 
     <!-- Кнопки "Наверх" и "Домой" -->
      <a href="index.html" id="back-to-home-btn" class="back-to-home-btn" title="На главную" aria-label="Вернуться на главную страницу" data-i18n-title="backToHome.title" data-i18n-aria-label="backToHome.ariaLabel">
-        <i class="fas fa-home"></i>
+      <i class="fas fa-home"></i>
     </a>
     <a href="#" id="back-to-top-btn" class="back-to-top-btn" title="Наверх" aria-label="Вернуться наверх" data-i18n-title="backToTop.title" data-i18n-aria-label="backToTop.ariaLabel">
         <i class="fas fa-arrow-up"></i>
