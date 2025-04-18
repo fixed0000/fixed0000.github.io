@@ -48,3 +48,5 @@ input, textarea, select, /* Добавим элементы форм */
   font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif; /* Шрифты для японского */
   line-height: 1.8; /* Увеличенный интервал для иероглифов */
 }
+
+.visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}

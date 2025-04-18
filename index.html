@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru"> <!-- Язык будет обновляться JS, установлен ru как дефолтный -->
+<html lang="en"> <!-- Язык будет обновляться JS, установлен ru как дефолтный -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,6 @@
         .btn-secondary:hover { background-color: var(--hover-bg); transform: translateY(-1px);}
         :root { --animation-delay: 0s; }
         .animate-on-scroll { opacity: 0; transition: opacity 0.6s ease-out, transform 0.6s ease-out; transition-delay: var(--animation-delay); will-change: opacity, transform; }
-        .animate-on-scroll.fade-in {}
         .animate-on-scroll.slide-up { transform: translateY(40px); }
         .animate-on-scroll.active { opacity: 1; transform: translateY(0); }
         .hero { position: relative; overflow: hidden; padding: 80px 20px 60px 20px; text-align: center; background-color: var(--header-bg-color, #2c3e50); color: var(--header-text-color, white); z-index: 1; }
@@ -55,7 +54,6 @@
         .intro .highlight-box li { position: relative; padding-left: 25px; margin-bottom: 12px; line-height: 1.6; }
         .intro .highlight-box ul:not(.approach-list) li::before { content: "▹"; position: absolute; left: 0; top: 1px; color: var(--accent-color); font-weight: bold; transition: transform 0.2s ease; }
         .intro .highlight-box ul:not(.approach-list) li:hover::before { transform: translateX(3px); }
-        .approach-list li { /* Наследует li */ }
         .approach-list li i { color: var(--accent-color); margin-top: 3px; flex-shrink: 0; width: 1.2em; text-align: center; margin-right: 10px; position: absolute; left: 0; }
         .approach-list li span { display: block; }
         @media (max-width: 1200px) { .intro-content { grid-template-columns: 1fr minmax(300px, 40%); gap: 4%; padding: 0 30px; } }
@@ -71,7 +69,6 @@
         .skill-tag i { font-size: 1.2em; color: currentColor; line-height: 1; }
         .skill-tag.lang { color: var(--lang-skill-color, #2ecc71); background-color: var(--lang-skill-bg, rgba(46, 204, 113, 0.1)); }
         .skill-tag.soft { color: var(--soft-skill-color, #e74c3c); background-color: var(--soft-skill-bg, rgba(231, 76, 60, 0.1)); }
-        .skill-tag.tech { /* */ }
         .skill-tag:hover { transform: translateY(-2px) scale(1.02); box-shadow: var(--shadow-light, 0 4px 8px rgba(0, 0, 0, 0.1)); border-color: currentColor; }
         [data-theme="dark"] .skill-tag { background-color: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.1); }
         [data-theme="dark"] .skill-tag.lang { background-color: rgba(46, 204, 113, 0.15); border-color: rgba(46, 204, 113, 0.2); }
@@ -111,8 +108,7 @@
         .final-cta h2 { margin-bottom: 15px; font-size: 1.8em; }
         .final-cta p { margin-bottom: 30px; font-size: 1.1em; }
         .cta-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 15px; }
-        .cta-links a.btn { /* Убедимся что стили кнопок применяются */ }
-        @media (max-width: 576px) { .final-cta { padding: 40px 15px;} .final-cta h2 {font-size: 1.6em;} .final-cta p {font-size: 1em;} .cta-links .btn { width: calc(50% - 10px); /* кнопки CV будут в 2 колонки */ } }
+        @media (max-width: 576px) { .final-cta { padding: 40px 15px;} .final-cta h2 {font-size: 1.6em;} .final-cta p {font-size: 1em;} .cta-links .btn { width: calc(50% - 10px); } }
         /* Кнопка "Наверх" */
         .back-to-top-btn { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background-color: var(--accent-color); color: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s, background-color 0.3s; z-index: 1000; box-shadow: 0 4px 8px rgba(0,0,0,0.2); font-size: 1.2em; }
         .back-to-top-btn:hover { background-color: var(--accent-hover); }
@@ -155,9 +151,9 @@
     <!-- Hero Section -->
     <header class="hero animate-on-scroll fade-in">
         <h1 data-i18n="hero.name">Бородина Лидия</h1>
-        <p class="subtitle" data-i18n="hero.title">Веб-разработчик | Лингвист-Японист | Межкультурная коммуникация</p>
+        <p class="subtitle" data-i18n="hero.title">Лингвист-Японист | Межкультурная коммуникация</p>
         <p class="description" data-i18n="hero.description">
-            Создаю адаптивные и функциональные веб-сайты. Свободное владение японским (JLPT N1) и английским языками (C1). Ищу интересные проекты и возможности для роста в технологической сфере Японии.
+            Создаю адаптивные и функциональные веб-сайты. Свободное владение японским (JLPT N1) и английским языками (C1). Ищу интересные проекты и возможности для роста в Японии.
         </p>
         <div class="cta-buttons">
             <a href="#contact-section" class="btn btn-primary" data-i18n="hero.cta.contact">
@@ -233,7 +229,7 @@
                          <span class="skill-tag tech" data-i18n="skills.html"><i class="fab fa-html5"></i> HTML5</span>
                          <span class="skill-tag tech" data-i18n="skills.css"><i class="fab fa-css3-alt"></i> CSS3 (Flex, Grid, SASS)</span>
                          <span class="skill-tag tech" data-i18n="skills.js"><i class="fab fa-js-square"></i> JavaScript (ES6+)</span>
-                         <span class="skill-tag tech" data-i18n="skills.react"><i class="fab fa-react"></i> React</span>
+                         <span class="skill-tag tech" data-i18n="skills.office"><i class="fab fa-react"></i> MS Office</span>
                          <span class="skill-tag tech" data-i18n="skills.git"><i class="fab fa-git-alt"></i> Git & GitHub</span>
                          <span class="skill-tag tech" data-i18n="skills.c"><i class="fa-solid fa-c"></i> C Lang</span>
                          <span class="skill-tag tech" data-i18n="skills.bash"><i class="fa-solid fa-terminal"></i> Bash</span>
@@ -276,7 +272,7 @@
                 <div class="teaser-card animate-on-scroll fade-in" style="--animation-delay: 0.3s;">
                     <span class="icon">💻</span> <h3 data-i18n="teasers.code.title">Примеры Кода</h3>
                     <p data-i18n="teasers.code.desc">Интерактивные демонстрации и фрагменты кода.</p>
-                    <a href="playground.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
+                    <a href="under-construction.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
                 </div>
             </div>
         </section>
@@ -302,7 +298,7 @@
         <section id="contact-section" class="contact animate-on-scroll slide-up">
             <h2 data-i18n="contact.title">Свяжитесь со мной</h2>
             <p class="availability-info" data-i18n="contact.availability">
-                Доступна для связи: <span data-i18n="contact.availability.hours">9:00 – 18:00 JST</span> (Японское стандартное время)
+                Доступна для связи: <span data-i18n="contact.availability.hours">13:00 – 03:00 JST</span> (Японское стандартное время)
             </p>
             <form id="contactForm">
                 <label for="name" class="visually-hidden" data-i18n="contact.nameLabel">Имя</label>
@@ -345,8 +341,6 @@
     </a>
 
     <!-- Подключение скриптов -->
-    <!-- Убедитесь, что translations ЗАГРУЖАЮТСЯ из JSON файлов скриптом script.js -->
-    <!-- <script src="js/translations.js" defer></script> <-- ЭТОТ ФАЙЛ БОЛЬШЕ НЕ НУЖЕН -->
     <script src="js/script.js" defer></script>
     <script src="js/sakura-animation.js" defer></script> 
 
