@@ -32,6 +32,8 @@
 @import 'pages/_contact.css';
 @import 'pages/_experience.css';
 @import 'pages/_education.css';
+@import 'pages/_index.css';
+@import 'pages/_under-construction.css';
 @import 'pages/_404.css';
 /* @import 'pages/_services.css'; */ /* Если есть страница услуг */
 @import 'pages/_playground.css';

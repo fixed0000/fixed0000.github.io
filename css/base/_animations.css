@@ -40,3 +40,7 @@
   opacity: 1;
   transform: translateY(0); /* Возвращаем на место */
 }
+
+.animate-on-scroll { opacity: 0; transition: opacity 0.6s ease-out, transform 0.6s ease-out; transition-delay: var(--animation-delay); will-change: opacity, transform; }
+        .animate-on-scroll.slide-up { transform: translateY(40px); }
+        .animate-on-scroll.active { opacity: 1; transform: translateY(0); }

@@ -10,3 +10,18 @@ header {
   padding: 2rem; /* Keep rem unit for scalable padding */
   text-align: center;
 }
+
+.hero { position: relative; overflow: hidden; padding: 80px 20px 60px 20px; text-align: center; background-color: var(--header-bg-color, #2c3e50); color: var(--header-text-color, white); z-index: 1; }
+        .hero h1 { margin-bottom: 10px; font-size: 2.8em; position: relative; z-index: 2; }
+        .hero .subtitle { font-size: 1.4em; margin: 10px 0 15px 0; color: var(--accent-color); font-weight: 500; position: relative; z-index: 2; }
+        .hero .description { max-width: 700px; margin: 15px auto 30px auto; font-size: 1.1em; line-height: 1.7; position: relative; z-index: 2; }
+        .hero .cta-buttons { margin-top: 20px; position: relative; z-index: 2; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 15px; }
+        .hero::before, .hero::after { content: ''; position: absolute; background-image: url('images/sakuratree1.png'); background-repeat: no-repeat; background-size: contain; opacity: 0.25; z-index: 1; pointer-events: none; transition: transform 0.5s ease-out; }
+        .hero::before { width: 300px; height: 280px; top: -40px; left: -80px; transform: rotate(-25deg); }
+        .hero::after { width: 350px; height: 330px; top: -50px; right: -100px; transform: scaleX(-1) rotate(-10deg); }
+        @media (max-width: 768px) { .hero::before { width: 200px; height: 180px; left: -50px; top: -20px; } .hero::after { width: 220px; height: 200px; right: -60px; top: -25px; } }
+        @media (max-width: 480px) { .hero::before { width: 150px; height: 130px; left: -30px; top: -10px; } .hero::after { display: none; } .hero .cta-buttons .btn { width: 100%; } }
+        @media (max-width: 1200px) { .intro-content { grid-template-columns: 1fr minmax(300px, 40%); gap: 4%; padding: 0 30px; } }
+        @media (max-width: 992px) { .intro-content { grid-template-columns: 1fr; padding: 0 20px; gap: 30px; } .image-wrapper { order: -1; max-width: 450px; margin: 0 auto 30px auto; } .profile-photo { aspect-ratio: 1/1; min-height: auto; } .intro-text { order: 1; padding: 30px; } }
+        @media (max-width: 576px) { .intro-content { padding: 0 15px; gap: 25px; } .profile-photo { aspect-ratio: 1/1; border-radius: 15px; } .intro-text { padding: 20px; font-size: 1em; } .intro .highlight-box li { padding-left: 20px; margin-bottom: 10px; } .intro .highlight-box ul:not(.approach-list) li::before { left: -2px; } .intro-text .highlight-box { padding-left: 20px; margin-bottom: 25px;} .intro-text .highlight-box h3 { font-size: 1.2em; } .approach-list li i { margin-left: 0;} }
+        [lang="ja"] .intro-text { text-align: justify; text-justify: inter-ideograph; }
