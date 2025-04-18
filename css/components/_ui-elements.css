@@ -1,0 +1,95 @@
+/* css/components/_ui-elements.css */
+/* Стили для различных мелких элементов интерфейса, таких как кнопки "Наверх" и т.д. */
+
+/* --- Базовый стиль для фиксированных кнопок действий --- */
+.fixed-action-btn {
+    position: fixed; /* Фиксированное позиционирование */
+    width: 50px;     /* Размер кнопки */
+    height: 50px;
+    background-color: var(--accent-color); /* Основной цвет */
+    color: var(--color-white, white); /* Цвет иконки */
+    border: none;
+    border-radius: 50%; /* Круглая форма */
+    display: flex; /* Для центрирования иконки */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000; /* Поверх большинства элементов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    font-size: 1.2em; /* Размер иконки */
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+}
+
+.fixed-action-btn:hover {
+    background-color: var(--accent-hover); /* Цвет при наведении */
+    transform: translateY(-2px); /* Легкий подъем */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Усиление тени */
+    color: var(--color-white, white); /* Убедимся, что цвет текста не меняется */
+}
+
+.fixed-action-btn:active {
+    transform: translateY(0); /* Возврат при нажатии */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Стандартная тень при нажатии */
+}
+
+/* Стиль фокуса для доступности */
+.fixed-action-btn:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+}
+.fixed-action-btn:focus {
+    outline: none;
+}
+
+/* --- Кнопка "Наверх" (#back-to-top-btn) --- */
+#back-to-top-btn {
+    bottom: 30px; /* Позиция от нижнего края */
+    right: 30px;  /* Позиция от правого края */
+    opacity: 0; /* Начальное состояние - невидима */
+    visibility: hidden; /* Начальное состояние - скрыта */
+    /* Наследует стили .fixed-action-btn */
+}
+
+/* Класс, который добавляет JS при скролле */
+#back-to-top-btn.show {
+    opacity: 0.8; /* Становится видимой */
+    visibility: visible;
+}
+#back-to-top-btn.show:hover {
+    opacity: 1; /* Полная непрозрачность при наведении */
+}
+
+
+/* --- Кнопка "На главную" (#back-to-home-btn) --- */
+#back-to-home-btn {
+    bottom: 30px; /* На той же высоте, что и "Наверх" */
+    left: 30px;   /* Но слева */
+    /* Видна всегда, поэтому opacity/visibility не нужны */
+    /* Наследует стили .fixed-action-btn */
+}
+
+/* --- Адаптивность для кнопок (пример) --- */
+@media (max-width: 768px) {
+    .fixed-action-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1em;
+        bottom: 20px; /* Ближе к краю на мобильных */
+    }
+    #back-to-top-btn { right: 20px; }
+    #back-to-home-btn { left: 20px; }
+}
+
+/* --- Доступность --- */
+@media (prefers-reduced-motion: reduce) {
+  .fixed-action-btn {
+    transition: none !important; /* Убираем все переходы */
+  }
+  .fixed-action-btn:hover {
+    transform: none; /* Убираем подъем */
+  }
+   #back-to-top-btn {
+       transition: none !important; /* Убираем transition для opacity/visibility */
+   }
+}

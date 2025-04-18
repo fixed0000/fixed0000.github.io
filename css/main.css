@@ -18,6 +18,7 @@
 @import 'components/_code-editor.css';
 @import 'components/_skills.css';
 @import 'components/_sakura-animation.css';
+@import 'components/_ui-elements.css';
 
 /* 3. Макет */
 @import 'layout/_header.css';
