@@ -106,6 +106,8 @@ const initializeContactForm = () => {
         const sendingMsgKey = 'contact.sending';
         const genericErrorMsg = 'An error occurred during submission.';
         const submitButton = form.querySelector('button[type="submit"]');
+        // Сохраняем КЛЮЧ перевода кнопки, если он есть, или исходный текст
+        const originalButtonTextKey = submitButton ? submitButton.dataset.i18n : 'contact.submit';
         const originalButtonText = submitButton ? submitButton.textContent : 'Submit';
 
         // Проверка наличия объекта translations и ключей ПЕРЕД использованием
@@ -148,12 +150,12 @@ const initializeContactForm = () => {
         } finally {
             if(submitButton) {
                 submitButton.disabled = false;
-                const buttonTextKey = submitButton.dataset.i18n || 'contact.submit';
+                // Восстанавливаем переведенный текст кнопки
                 const displayLang = document.documentElement.lang || 'ru';
-                if (translations && translations[displayLang] && translations[displayLang][buttonTextKey]) { // Проверка translations
-                    submitButton.textContent = translations[displayLang][buttonTextKey];
+                if (translations && translations[displayLang] && translations[displayLang][originalButtonTextKey]) { // Проверка translations
+                    submitButton.textContent = translations[displayLang][originalButtonTextKey];
                 } else {
-                    submitButton.textContent = originalButtonText || 'Submit';
+                    submitButton.textContent = originalButtonText; // Возвращаем исходный текст, если перевод не найден
                 }
             }
         }
@@ -188,15 +190,11 @@ async function loadAndSetLanguage(lang) {
         const langData = await response.json();
         // console.log(`[DEBUG] Successfully fetched and parsed ${lang}.json`);
 
-        // Сохраняем загруженные переводы глобально
-        translations[lang] = langData;
-
-        // Обновляем интерфейс
-        updateUIForLanguage(lang);
+        translations[lang] = langData; // Сохраняем загруженные переводы глобально
+        updateUIForLanguage(lang); // Обновляем интерфейс
 
     } catch (error) {
         console.error(`[DEBUG] Error loading or parsing translations for ${lang}:`, error);
-        // Можно показать сообщение пользователю или оставить язык по умолчанию
         alert(`Error loading language file for "${lang}". Please check console.`);
     }
 }
@@ -206,7 +204,7 @@ function updateUIForLanguage(lang) {
     // Дополнительная проверка на наличие объекта translations
     if (typeof translations === 'undefined' || !translations || !translations[lang]) {
       console.error(`[DEBUG] ERROR in updateUIForLanguage: Translations for '${lang}' are not loaded or available.`);
-      return; // Прерываем, если нет данных
+      return;
     }
     // console.log(`[DEBUG] --- Updating UI TO: ${lang} ---`);
     document.documentElement.lang = lang;
@@ -215,8 +213,9 @@ function updateUIForLanguage(lang) {
     const translateElements = (selector, attribute, isContent = false, useSetAttribute = false) => {
         document.querySelectorAll(selector).forEach(element => {
             // Ключ берем из соответствующего data-атрибута
-            const dataAttributeName = attribute ? attribute.replace(/-/g, '') : 'i18n'; // Преобразуем data-i18n-xyz в i18nХyz
-            const key = element.dataset[dataAttributeName];
+            // Преобразуем data-i18n-xyz в i18nХyz для доступа к dataset
+            const datasetKey = attribute ? attribute.replace(/^data-/, '').replace(/-(\w)/g, (match, chr) => chr.toUpperCase()) : 'i18n';
+            const key = element.dataset[datasetKey];
 
             if (!key) { // Если у элемента нет нужного data-атрибута со значением
                  // console.warn(`[DEBUG] Missing data attribute for ${attribute || 'content'} on element:`, element);
@@ -227,16 +226,20 @@ function updateUIForLanguage(lang) {
 
             if (translation !== undefined) {
                 if (isContent) {
-                    element.textContent = translation;
+                    // Для <title> используем document.title
+                    if (element.tagName === 'TITLE') {
+                         document.title = translation;
+                    } else {
+                        element.textContent = translation;
+                    }
                 } else if (useSetAttribute) {
+                    // Используем setAttribute для aria-* и, возможно, других атрибутов
                     element.setAttribute(attribute, translation);
                 } else if (attribute === 'placeholder' || attribute === 'title' || attribute === 'alt') {
-                    element[attribute] = translation; // Прямое присвоение для этих атрибутов
+                    // Прямое присвоение для стандартных атрибутов
+                    element[attribute] = translation;
                 }
-                // Обновляем title документа отдельно
-                if (element.tagName === 'TITLE' && attribute === 'title') {
-                    document.title = translation;
-                }
+                // Можно добавить обработку других атрибутов по аналогии
             } else {
                  console.warn(`[DEBUG] Key '${key}' (for ${attribute || 'content'}) not found for lang '${lang}'`);
             }
@@ -244,12 +247,16 @@ function updateUIForLanguage(lang) {
     };
 
     // --- Вызов функции для каждого типа перевода ---
-    translateElements('[data-i18n]', null, true);                           // Text Content
-    translateElements('[data-i18n-placeholder]', 'placeholder');             // Placeholder
-    translateElements('[data-i18n-alt]', 'alt');                             // Alt text
-    translateElements('[data-i18n-title]', 'title');                         // Title attribute (and document title)
-    translateElements('[data-i18n-aria-label]', 'aria-label', false, true); // Aria-label (use setAttribute)
-    // Добавьте другие атрибуты при необходимости
+    translateElements('[data-i18n]', null, true);                           // Text Content (использует data-i18n)
+    translateElements('[data-i18n-placeholder]', 'placeholder');             // Placeholder (использует data-i18n-placeholder)
+    translateElements('[data-i18n-alt]', 'alt');                             // Alt text (использует data-i18n-alt)
+    translateElements('[data-i18n-title]', 'title');                         // Title attribute (использует data-i18n-title)
+    translateElements('[data-i18n-aria-label]', 'aria-label', false, true); // Aria-label (использует data-i18n-aria-label и setAttribute)
+    // Обрабатываем title документа отдельно, если у тега title нет data-i18n-title, но есть data-i18n
+    const titleElement = document.querySelector('title[data-i18n]');
+    if (titleElement && titleElement.dataset.i18n && translations[lang][titleElement.dataset.i18n]) {
+        document.title = translations[lang][titleElement.dataset.i18n];
+    }
 
     localStorage.setItem('selectedLanguage', lang);
     // console.log(`[DEBUG] --- Language UI update complete for ${lang}. Preference saved. ---`);
@@ -282,7 +289,7 @@ const initializeCarousels = () => {
       dotsContainer.innerHTML = '';
       for (let i = 0; i < totalSlides; i++) {
           const dot = document.createElement('button'); dot.classList.add('carousel-dot');
-          dot.dataset.i18nAriaLabel = 'carousel.goToSlide'; // Ключ для перевода
+          dot.dataset.i18nAriaLabel = 'carousel.goToSlide'; // Ключ для перевода aria-label
           dot.setAttribute('aria-label', `Go to slide ${i + 1}`); // Дефолтное значение
           dot.dataset.index = i; dotsContainer.appendChild(dot);
       }
@@ -301,33 +308,35 @@ const initializeCarousels = () => {
       });
       showSlide(currentIndex);
   });
-  // После инициализации всех каруселей, обновим aria-label для точек
+  // После инициализации всех каруселей, обновим aria-label для точек и стрелок
   updateUIForLanguage(document.documentElement.lang || 'ru');
 };
 
 // --- Логика для Кнопки "Наверх" ---
 const initializeBackToTopButton = () => {
     const backToTopButton = document.getElementById('back-to-top-btn');
-    if (!backToTopButton) { return; }
+    if (!backToTopButton) {
+        // Убрали ошибку, так как кнопка может отсутствовать на некоторых страницах
+        // console.error("Back to top button with id 'back-to-top-btn' not found.");
+        return;
+    }
 
-    const scrollThreshold = 300; // Показать кнопку после прокрутки 300px
-    // Функция для проверки видимости кнопки
+    const scrollThreshold = 300;
     const checkScroll = () => {
-        if (window.scrollY > scrollThreshold) {
-            backToTopButton.classList.add('show'); // Используем класс 'show' из вашего CSS
-        } else {
-            backToTopButton.classList.remove('show');
+        if (backToTopButton) { // Проверяем еще раз на всякий случай
+            if (window.scrollY > scrollThreshold) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
         }
     };
-    // Слушатель события прокрутки
-    window.addEventListener('scroll', checkScroll, { passive: true }); // Оптимизация
-    // Слушатель клика по кнопке
+    window.addEventListener('scroll', checkScroll, { passive: true });
     backToTopButton.addEventListener('click', (event) => {
         event.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-    // Проверяем видимость при загрузке страницы
-    checkScroll();
+    checkScroll(); // Проверка при загрузке
 };
 
 
@@ -335,13 +344,13 @@ const initializeBackToTopButton = () => {
 document.addEventListener('DOMContentLoaded', () => {
   console.log('>>> DOM fully loaded. Starting initializations...');
 
-  // Вызов всех функций инициализации
+  // Вызов всех функций инициализации (без try...catch по запросу)
   initializeScrollAnimations();
   initializeTheme();
   initializeLanguage(); // Запускает асинхронную загрузку переводов
   initializeContactForm();
   initializeCarousels();
-  initializeBackToTopButton();
+  initializeBackToTopButton(); // Вызываем инициализацию кнопки
 
   console.log('>>> All initialization functions called.');
 });

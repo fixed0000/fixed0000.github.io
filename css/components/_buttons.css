@@ -72,10 +72,16 @@
     transform: translateY(0);
     box-shadow: none;
 }
-/* Стили для вторичной кнопки в темной теме (если нужны) */
+/* Стили для вторичной кнопки в темной теме (пример, раскомментируйте и настройте при необходимости) */
 /*
-[data-theme="dark"] .btn-secondary { ... }
-[data-theme="dark"] .btn-secondary:hover { ... }
+[data-theme="dark"] .btn-secondary {
+     color: var(--accent-color); // Может быть другим в темной теме
+     border-color: var(--accent-color);
+}
+[data-theme="dark"] .btn-secondary:hover {
+    color: var(--text-color-dark-button, #1a1a1a); // Цвет текста на акцентном фоне
+    background-color: var(--accent-color);
+}
 */
 
 /* --- Кнопка переключения темы --- */
@@ -107,11 +113,11 @@
 [data-theme="dark"] .theme-btn {
   background: var(--accent-color);
   color: white;
-  box-shadow: 0 4px 15px rgba(46, 204, 113, 0.25); /* Подставьте свой цвет */
+  box-shadow: 0 4px 15px rgba(46, 204, 113, 0.25); /* Подставьте цвет акцента темной темы */
 }
 [data-theme="dark"] .theme-btn:hover {
   background: var(--accent-hover);
-  box-shadow: 0 6px 20px rgba(46, 204, 113, 0.35);
+  box-shadow: 0 6px 20px rgba(46, 204, 113, 0.35); /* Подставьте цвет акцента темной темы */
 }
 
 .theme-icon {
@@ -154,36 +160,36 @@
   box-shadow: var(--shadow-sm, 0 2px 5px rgba(0,0,0,0.1));
 }
 [data-theme="dark"] .social-links a:hover {
-    background-color: var(--hover-bg);
+    background-color: var(--hover-bg); /* Используем переменную hover-bg темной темы */
 }
 
 /* --- Адаптивность для кнопок --- */
 @media (max-width: 768px) {
   .theme-btn {
-    padding: 10px 20px;
+    padding: var(--spacing-xs, 8px) 15px; /* Уменьшаем padding */
   }
-  .btn-text {
+  .btn-text { /* Скрываем текст кнопки темы */
     display: none;
   }
   .social-links a {
-      width: 36px;
+      width: 36px; /* Уменьшаем соц. иконки */
       height: 36px;
       font-size: 1.1rem;
   }
 }
 @media (max-width: 480px) {
-   .btn {
+   .btn { /* Уменьшаем базовые кнопки */
        padding: var(--spacing-xs, 6px) var(--spacing-md, 12px);
        font-size: var(--font-size-sm, 0.9rem);
    }
    .theme-btn {
-       padding: 8px 15px;
+       padding: 6px 12px; /* Еще меньше */
    }
    .theme-icon {
        font-size: 1.1em;
    }
     .social-links {
-        gap: var(--spacing-sm, 10px);
+        gap: var(--spacing-sm, 10px); /* Уменьшаем отступ соц. иконок */
     }
    .social-links a {
       width: 32px;
@@ -191,5 +197,3 @@
       font-size: 1rem;
   }
 }
-
-/* !!! УДАЛЕНЫ ДУБЛИРУЮЩИЕСЯ СТИЛИ И СТИЛИ ДЛЯ .back-to-top-btn !!! */

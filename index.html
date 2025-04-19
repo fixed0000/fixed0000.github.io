@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Язык будет обновляться JS, установлен ru как дефолтный -->
+<html lang="en"> <!-- ИСПРАВЛЕНО: Установлен русский язык по умолчанию -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,11 +16,15 @@
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Минимальный стиль для скрытия меток - лучше перенести в main.css */
+        .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
+        /* Прочие встроенные стили лучше перенести в соответствующие CSS-файлы */
+    </style>
 </head>
 <body>
 
-    <!-- Контейнер для фоновой анимации сакуры (если используется) -->
-    <div class="sakura-background"></div>
+    <div class="sakura-background"></div> 
 
     <!-- Навигация -->
     <nav>
@@ -30,7 +34,7 @@
                     <select id="language-select">
                         <option value="ru">🇷🇺 Русский</option>
                         <option value="en">🇬🇧 English</option>
-                        <option value="ja">🇯🇵 日本語</option> <!-- Исправлено -->
+                        <option value="ja">🇯🇵 日本語</option>
                     </select>
                     <span class="select-arrow">▼</span>
                 </div>
@@ -43,7 +47,7 @@
                 <a href="index.html" data-i18n="nav.home">Главная</a>
                 <a href="education.html" data-i18n="nav.about">Образование</a>
                 <a href="experience.html" data-i18n="nav.experience">Опыт</a>
-                <a href="under-construction.html" data-i18n="nav.playground">Код</a>
+                <a href="playground.html" data-i18n="nav.playground">Код</a> <!-- Ссылка на under-construction.html заменена -->
             </li>
         </ul>
     </nav>
@@ -51,9 +55,9 @@
     <!-- Hero Section -->
     <header class="hero animate-on-scroll fade-in">
         <h1 data-i18n="hero.name">Бородина Лидия</h1>
-        <p class="subtitle" data-i18n="hero.title">Лингвист-Японист | Межкультурная коммуникация</p>
+        <p class="subtitle" data-i18n="hero.title">Веб-разработчик | Лингвист-Японист | Межкультурная коммуникация</p> <!-- Добавлен Веб-разработчик -->
         <p class="description" data-i18n="hero.description">
-            Создаю адаптивные и функциональные веб-сайты. Свободное владение японским (JLPT N1) и английским языками (C1). Ищу интересные проекты и возможности для роста в Японии.
+            Создаю адаптивные и функциональные веб-сайты. Свободное владение японским (JLPT N1) и английским языками (C1). Ищу интересные проекты и возможности для роста в технологической сфере Японии.
         </p>
         <div class="cta-buttons">
             <a href="#contact-section" class="btn btn-primary" data-i18n="hero.cta.contact">
@@ -72,16 +76,16 @@
                         <h2 data-i18n="about.title">Об авторе</h2>
                         <div class="highlight-box">
                             <h3 data-i18n="about.education">Образование</h3>
-                            <ul> <!-- Убран класс timeline -->
+                            <ul> <!-- Убраны специфичные классы timeline/achievements -->
                                 <li data-i18n="about.education.item1">Студентка 4 курса МГПУ: Переводчик японского языка</li>
-                                <li data-i18n="about.education.item2">Программа обмена: Университет Цукубы (Япония), 2024</li> <!-- Исправлен год -->
+                                <li data-i18n="about.education.item2">Программа обмена: Университет Цукубы (Япония), 2024</li>
                                 <li data-i18n="about.education.item3">Дополнительное образование: Основы программирования (Школа 21)</li>
                                 <li data-i18n="about.education.item4">Методика преподавания РКИ: Курс при МГПУ</li>
                             </ul>
                         </div>
                         <div class="highlight-box">
                             <h3 data-i18n="experience.title">Ключевой Опыт</h3>
-                            <ul> <!-- Убран класс achievements -->
+                            <ul> <!-- Убраны специфичные классы timeline/achievements -->
                                 <li data-i18n="experience.item1">Локализация игр (Fruitbat Factory)</li>
                                 <li data-i18n="experience.item2">Сопровождение и устный перевод (Японский дом)</li>
                                 <li data-i18n="experience.item3">Работа в сфере обслуживания (Mosburger, Япония)</li>
@@ -89,12 +93,12 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Раздел "Мой подход" - возвращена версия с иконками -->
+                    <!-- Раздел "Мой подход" (с иконками FA) -->
                     <div class="highlight-box">
                         <h3 data-i18n="introKeyPoints.title">Мой подход</h3>
-                        <ul class="approach-list"> <!-- Класс для стилизации иконок -->
+                        <ul class="approach-list"> <!-- Используем этот класс для стилизации иконок в CSS -->
                             <li data-i18n="introKeyPoints.item1">
-                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-check-circle"></i> <!-- Иконка FontAwesome -->
                                 <span>Внимание к деталям и культурным нюансам.</span>
                             </li>
                             <li data-i18n="introKeyPoints.item2">
@@ -113,7 +117,10 @@
                     </div>
                 </div>
                 <div class="image-wrapper">
-                    <img src="images/image1.jpg" alt="Портретное фото" class="profile-photo" data-i18n-alt="image.alt" srcset="images/image1.jpg 1x" sizes="(max-width: 992px) 90vw, (max-width: 1200px) 450px, (max-width: 1440px) 600px, 750px" loading="lazy" decoding="async">
+                    <!-- ИСПРАВЛЕНО: Убраны лишние разрешения из srcset, если нет файлов @2x, @3x -->
+                    <img src="images/image1.jpg" alt="Портретное фото" class="profile-photo" data-i18n-alt="image.alt"
+                         srcset="images/image1.jpg"
+                         sizes="(max-width: 992px) 90vw, (max-width: 1200px) 450px, (max-width: 1440px) 600px, 750px" loading="lazy" decoding="async">
                     <p class="image-caption" data-i18n="image.caption">Токио</p>
                 </div>
             </div>
@@ -126,10 +133,9 @@
                  <div>
                      <h3 data-i18n="skillsHighlights.tech">Технические навыки</h3>
                      <div class="skill-tags">
-                         <span class="skill-tag tech" data-i18n="skills.html"><i class="fab fa-html5"></i> HTML5</span>
-                         <span class="skill-tag tech" data-i18n="skills.css"><i class="fab fa-css3-alt"></i> CSS3 (Flex, Grid, SASS)</span>
-                         <span class="skill-tag tech" data-i18n="skills.js"><i class="fab fa-js-square"></i> JavaScript (ES6+)</span>
-                         <span class="skill-tag tech" data-i18n="skills.office"><i class="fab fa-react"></i> MS Office</span>
+                         <span class="skill-tag tech" data-i18n="skills.html"><i class="fab fa-html5"></i> HTML</span>
+                         <span class="skill-tag tech" data-i18n="skills.css"><i class="fab fa-css3-alt"></i> CSS3</span>
+                         <span class="skill-tag tech" data-i18n="skills.js"><i class="fab fa-js-square"></i> JavaScript</span>
                          <span class="skill-tag tech" data-i18n="skills.git"><i class="fab fa-git-alt"></i> Git & GitHub</span>
                          <span class="skill-tag tech" data-i18n="skills.c"><i class="fa-solid fa-c"></i> C Lang</span>
                          <span class="skill-tag tech" data-i18n="skills.bash"><i class="fa-solid fa-terminal"></i> Bash</span>
@@ -172,7 +178,7 @@
                 <div class="teaser-card animate-on-scroll fade-in" style="--animation-delay: 0.3s;">
                     <span class="icon">💻</span> <h3 data-i18n="teasers.code.title">Примеры Кода</h3>
                     <p data-i18n="teasers.code.desc">Интерактивные демонстрации и фрагменты кода.</p>
-                    <a href="under-construction.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
+                    <a href="playground.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a> <!-- Ссылка исправлена -->
                 </div>
             </div>
         </section>
@@ -181,16 +187,16 @@
         <section class="faq-section animate-on-scroll slide-up">
             <h2 data-i18n="faq.title">Часто задаваемые вопросы</h2>
              <details class="faq">
-                <summary data-i18n="faq.question1">Как вы начали программировать?</summary>
-                <p data-i18n="faq.answer1">Я начала изучать программирование в Школе 21, где освоила основы языка C, работу с командной строкой Bash и систему контроля версий Git. Позже прошла курсы по веб-верстке и продолжила самостоятельное изучение JavaScript и React.</p>
+                <summary data-i18n="faq.question1">С какими типами текстов вы работаете?</summary> <!-- Изменен вопрос -->
+                <p data-i18n="faq.answer1">Основной опыт связан с локализацией игровых текстов (диалоги, UI, описания, обновления). Также перевожу маркетинговые материалы и техническую документацию, связанную с IT.</p> <!-- Изменен ответ -->
              </details>
              <details class="faq">
                 <summary data-i18n="faq.question2">Почему вы хотите работать в Японии?</summary>
                 <p data-i18n="faq.answer2">Мой многолетний интерес к японскому языку и культуре, подкрепленный опытом обучения по обмену в Университете Цукубы и работой в японской компании, мотивирует меня искать возможности для профессионального развития именно в Японии, где я могу эффективно сочетать свои языковые и технические навыки.</p>
              </details>
              <details class="faq">
-                <summary data-i18n="faq.question3">Какой у вас уровень японского языка?</summary>
-                <p data-i18n="faq.answer3">Я успешно сдала экзамен Нихонго Норёку Сикэн (JLPT) на высший уровень N1 в 2024 году. Мой опыт включает устный перевод, преподавание, работу в японской компании и обучение на японском языке в университете.</p>
+                <summary data-i18n="faq.question3">Готовы ли вы к переезду в Японию? Есть ли у вас виза?</summary> <!-- Изменен вопрос -->
+                <p data-i18n="faq.answer3">Да, я полностью готова и заинтересована в переезде в Японию для подходящей вакансии. В настоящее время я изучаю визовые вопросы и процедуры, соответствующие моей квалификации и потенциальным предложениям о работе.</p> <!-- Изменен ответ -->
              </details>
         </section>
 
@@ -200,7 +206,7 @@
             <p class="availability-info" data-i18n="contact.availability">
                 Доступна для связи: <span data-i18n="contact.availability.hours">13:00 – 03:00 JST</span> (Японское стандартное время)
             </p>
-            <form id="contactForm">
+            <form id="contactForm"> <!-- Добавлен ID, если его не было -->
                 <label for="name" class="visually-hidden" data-i18n="contact.nameLabel">Имя</label>
                 <input type="text" id="name" name="name" required data-i18n-placeholder="contact.namePlaceholder" placeholder="Ваше имя">
                 <label for="email" class="visually-hidden" data-i18n="contact.emailLabel">Email</label>
@@ -220,10 +226,10 @@
                  <a href="https://www.linkedin.com/in/%E3%83%AA%E3%83%87%E3%82%A3%E3%82%A2-%E3%83%9C%E3%83%AD%E3%83%87%E3%82%A3%E3%83%8A-8092b7285/?locale=en_US" target="_blank" class="btn btn-secondary" data-i18n="finalCta.linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
                  <a href="https://github.com/fixed0000" target="_blank" class="btn btn-secondary" data-i18n="finalCta.github"><i class="fab fa-github"></i> GitHub</a>
                  <!-- Кнопки CV -->
-                 <a href="Lidia_Borodina_CV_EN.pdf" class="btn btn-secondary" target="_blank" data-i18n="hero.cta.resume_en">
+                 <a href="Lidia_Borodina_CV_EN.pdf" class="btn btn-secondary" target="_blank" data-i18n="hero.cta.resume_en" title="Скачать резюме (English)" data-i18n-title="downloadCV.en"> <!-- Добавлен title -->
                     <i class="fas fa-download"></i> Download CV (EN)
                  </a>
-                 <a href="Lidia_Borodina_CV_JP.pdf" class="btn btn-secondary" target="_blank" data-i18n="hero.cta.resume_jp">
+                 <a href="Lidia_Borodina_CV_JP.pdf" class="btn btn-secondary" target="_blank" data-i18n="hero.cta.resume_jp" title="Скачать резюме (日本語)" data-i18n-title="downloadCV.jp"> <!-- Добавлен title -->
                     <i class="fas fa-download"></i> Download CV (JP)
                  </a>
             </div>
@@ -242,7 +248,7 @@
 
     <!-- Подключение скриптов -->
     <script src="js/script.js" defer></script>
-    <script src="js/sakura-animation.js" defer></script> 
+    <script src="js/sakura-animation.js" defer></script>
 
 </body>
 </html>

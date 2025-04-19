@@ -1,11 +1,14 @@
-/* --- Стили для фиксированных кнопок навигации --- */
+/* css/components/_buttons.css - Предполагаемый файл */
+/* или main.css, или другой общий файл стилей */
 
-/* Общие стили для ОБЕИХ кнопок */
-.back-to-top-btn,
-.back-to-home-btn {
+/* --- Стили для фиксированных кнопок навигации в углу --- */
+
+/* Базовый стиль (общий для обеих кнопок) */
+/* Используем ID селекторы, так как они уникальны */
+#back-to-top-btn,
+#back-to-home-btn {
   position: fixed; /* Фиксированное положение */
-  left: 30px;     /* Общий отступ слева */
-  z-index: 1001;   /* УВЕЛИЧЕННЫЙ z-index, чтобы быть над футером */
+  z-index: 1000;   /* Поверх большинства элементов */
 
   /* Внешний вид */
   display: flex;
@@ -22,90 +25,98 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.5rem; /* Размер иконки */
+  font-size: 1.2em;
   line-height: 1;
-  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out; /* Добавили opacity/visibility в общий transition */
+  transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
-/* Позиционирование кнопок */
-.back-to-home-btn {
-  bottom: 90px; /* Кнопка "Домой" чуть выше */
-  /* Она видна всегда, нет скрывающих стилей */
-  opacity: 1;
-  visibility: visible;
-  transform: none; /* Убедимся, что нет сдвига */
+#back-to-home-btn {
+  bottom: 30px;
+  left: 30px;
+  opacity: 0.9; /* Чуть прозрачна для отличия */
+  visibility: visible; /* Всегда видима */
+  margin-bottom: 60px; /* Добавлено: создает пространство для верхней кнопки */
 }
-.back-to-top-btn {
-  bottom: 30px; /* Кнопка "Наверх" ниже */
-  /* Начальное состояние - скрыто (управляется JS через класс .active) */
+
+#back-to-top-btn {
+  bottom: 30px;
+  left: 30px;
+  /* Начальное состояние - скрыто */
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px); /* Начинает чуть ниже для анимации */
-  pointer-events: none; /* Скрытая кнопка не кликабельна */
+  transform: translateY(10px); /* Небольшой начальный сдвиг вниз */
+  pointer-events: none;
 }
 
-/* Активное состояние ТОЛЬКО для кнопки "Наверх" */
-.back-to-top-btn.active {
-  opacity: 1;
+/* Активное состояние ТОЛЬКО для кнопки "Наверх" (класс 'show' из JS) */
+#back-to-top-btn.show {
+  opacity: 0.8; /* Становится видимой */
   visibility: visible;
   transform: translateY(0); /* Возвращается на место */
-  pointer-events: auto; /* Активная кнопка кликабельна */
+  pointer-events: auto;
 }
 
 /* Общий ховер-эффект */
-.back-to-top-btn:hover,
-.back-to-home-btn:hover {
+#back-to-top-btn:hover,
+#back-to-home-btn:hover {
   background-color: var(--accent-hover);
-  transform: scale(1.05) translateY(-1px); /* Учитываем начальный transform для кнопки Наверх */
+  opacity: 1; /* Полная непрозрачность при наведении */
+  transform: scale(1.05); /* Небольшое увеличение */
 }
-/* Корректировка ховера для кнопки Наверх в активном состоянии */
-.back-to-top-btn.active:hover {
-    transform: scale(1.05) translateY(-1px); /* Стандартный ховер */
+/* Специфичный ховер для кнопки "Наверх", когда она видима */
+#back-to-top-btn.show:hover {
+    transform: scale(1.05); /* Просто увеличение */
 }
-/* Корректировка ховера для кнопки Наверх в НЕактивном состоянии (можно просто оставить как есть) */
-.back-to-top-btn:not(.active):hover {
-    /* Нет смысла стилизовать ховер для невидимого элемента, */
-    /* но оставляем правило, чтобы не переопределять общий ховер */
+/* Эффект нажатия */
+#back-to-top-btn:active,
+#back-to-home-btn:active {
+    transform: scale(0.98); /* Немного уменьшаем при клике */
+    transition-duration: 0.1s; /* Быстрый эффект нажатия */
 }
 
 
 /* Стили для иконки внутри кнопок */
-.back-to-top-btn i,
-.back-to-home-btn i {
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 6 Free"; /* Убедитесь, что шрифт применяется */
-    font-weight: 900; /* Solid стиль */
+#back-to-top-btn i,
+#back-to-home-btn i {
     line-height: 1;
     color: inherit;
-    display: inline-block;
 }
 
-/* Адаптивность */
+/* Адаптивность для кнопок */
 @media (max-width: 768px) {
-  .back-to-top-btn, .back-to-home-btn { width: 45px; height: 45px; font-size: 1.3rem; left: 20px; }
-  .back-to-home-btn { bottom: 75px; } /* Скорректированный отступ */
-  .back-to-top-btn { bottom: 20px; }
+  #back-to-top-btn, #back-to-home-btn { /* Используем ID селекторы */
+      width: 45px; height: 45px;
+      font-size: 1.1em;
+      bottom: 20px;
+      margin-bottom: 50px; /* Изменено */
+  }
+  #back-to-home-btn { left: 20px; } /* Слева */
+  #back-to-top-btn { left: 20px; }  /* Слева */
 }
 @media (max-width: 480px) {
-    .back-to-top-btn, .back-to-home-btn { width: 40px; height: 40px; font-size: 1.1rem; left: 15px; }
-    .back-to-home-btn { bottom: 65px; } /* Скорректированный отступ */
-    .back-to-top-btn { bottom: 15px; }
+  #back-to-top-btn, #back-to-home-btn { /* Используем ID селекторы */
+      width: 40px; height: 40px;
+      font-size: 1em;
+      bottom: 15px;
+      margin-bottom: 40px; /* Изменено */
+  }
+  #back-to-home-btn { left: 15px; } /* Слева */
+  #back-to-top-btn { left: 15px; }   /* Слева */
 }
 
-/* Доступность: Отключение анимаций */
+/* Доступность */
 @media (prefers-reduced-motion: reduce) {
-    .back-to-top-btn, .back-to-home-btn {
-        transition: none !important;
-    }
-    /* Кнопка Наверх сразу видима, если пользователь предпочитает без анимаций */
-    .back-to-top-btn {
-        transform: none !important;
-        /* Видимость все еще управляется JS через .active, но без transform/transition */
-    }
-    .back-to-top-btn:hover, .back-to-home-btn:hover {
-        transform: none; /* Убираем ховер */
-    }
+  #back-to-top-btn, #back-to-home-btn { /* Используем ID селекторы */
+      transition: none !important;
+  }
+  #back-to-top-btn {
+      transform: none !important; /* Убираем начальный сдвиг */
+  }
+  #back-to-top-btn.show {
+      opacity: 0.8 !important; /* Просто показываем без transition */
+  }
+  #back-to-top-btn:hover, #back-to-home-btn:hover,
+  #back-to-top-btn:active, #back-to-home-btn:active {
+      transform: none !important; /* Убираем ховер и active эффекты */
+  }
 }

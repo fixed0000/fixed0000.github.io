@@ -7,8 +7,8 @@
 @import 'base/_theme.css';
 
 /* 2. Компоненты */
-@import 'components/_buttons.css';
 @import 'components/_back-to-top.css';
+@import 'components/_buttons.css';
 @import 'components/_cards.css';
 @import 'components/_forms.css';
 @import 'components/_progress-bars.css';
