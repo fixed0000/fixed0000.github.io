@@ -1,53 +1,64 @@
-/* css/base/_variables.css */
 :root {
   --bg-color: #ffffff;
   --text-color: #333333;
   --intro-bg: #f9f9f9;
-}
+  --accent-color: #3498db; /* Акцентный цвет */
+  --accent-hover: #2980b9; /* Акцентный цвет при наведении */
+  --hover-bg: rgba(52, 152, 219, 0.1); /* Фон при наведении */
+  --card-bg: #ffffff; /* Фон карточек */
+  --border-color: #ddd; /* Цвет границы */
+  --border-color-subtle: #eee; /* Тонкий цвет границы */
+  --border-color-darker: #bbb; /* Более темный цвет границы */
+  --border-color-extra-subtle: #f2f2f2; /* Очень тонкий цвет границы */
+  --text-muted: #777; /* Цвет приглушенного текста */
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.2); /* Средняя тень */
+  --shadow-large: 0 6px 20px rgba(0, 0, 0, 0.3); /* Большая тень */
+  --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.25);
+  --container-width-xl: 1400px;
+  --spacing-small: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 30px;
+  --spacing-xl: 50px;
+  --border-radius-large: 12px;
+  --bg-color-subtle: #fdfdfd;
+  --dark-bg: #1a1a1a;
+  --dark-text: #f8f9fa;
+  --dark-accent: #2ecc71;
+  --dark-accent-hover: #27ae60;
+  --dark-hover-bg: rgba(46, 204, 113, 0.1);
+  --dark-card-bg: #2a2a2a;
+  --dark-border: #444;
+  --dark-border-subtle: #333;
+  --dark-bg-subtle: #2d2d2d;
+  --dark-bg-color: #222;
+  --accent-color-rgb: 52, 152, 219; /* RGB значение для --accent-color */
+  --text-base: #333; /* Цвет основного текста */
 
-/* Добавьте в переменные */
-:root {
---accent-color: #3498db;
---accent-hover: #2980b9;
---hover-bg: rgba(52, 152, 219, 0.1);
-}
-
-/* В разделе :root */
-:root {
---bg-color: #ffffff;
---text-color: #333333;
---accent-color: #3498db;
---intro-bg: #f9f9f9;
---card-bg: #ffffff;
-}
-
-/* Добавьте в переменные */
-:root {
---card-bg: #ffffff;
 }
 
 [data-theme="dark"] {
   --bg-color: #1a1a1a;
   --text-color: #ffffff;
   --intro-bg: #2d2d2d;
-}
+  --accent-color: #2ecc71;
+  --accent-hover: #27ae60;
+  --hover-bg: rgba(46, 204, 113, 0.1);
+  --card-bg: #2a2a2a;
+  --border-color: #444;
+  --border-color-subtle: #333;
+  --border-color-darker: #666;
+  --border-color-extra-subtle: #3a3a3a;
+  --text-muted: #aaa;
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.2);
+  --shadow-large: 0 6px 20px rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.25);
+  --bg-color-subtle: #3a3a3a;
+  --dark-bg-subtle: #2d2d2d;
+  --text-base: #eee;
+  --accent-color-rgb: 46, 204, 113;
 
-[data-theme="dark"] {
---accent-color: #2ecc71;
---accent-hover: #27ae60;
---hover-bg: rgba(46, 204, 113, 0.1);
 }
-
-/* Для темной темы */
-[data-theme="dark"] {
---bg-color: #1a1a1a;
---text-color: #f8f9fa;
---accent-color: #2ecc71;
---intro-bg: #2d2d2d;
---card-bg: #2a2a2a;
-}
-
-[data-theme="dark"] {
---card-bg: #2d2d2d;
-}
-
