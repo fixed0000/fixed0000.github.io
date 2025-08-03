@@ -57,15 +57,10 @@
 /* ==========================================================================
    ГЛАВНОЕ ИСПРАВЛЕНИЕ: Фикс цвета текста для ТЕМНОЙ ТЕМЫ
    ========================================================================== */
-[data-theme="dark"] .contact input[type="text"],
-[data-theme="dark"] .contact input[type="email"],
-[data-theme="dark"] .contact textarea {
-  /* Устанавливаем цвет ТЕКСТА внутри поля на темный, чтобы он был виден на белом фоне */
-  color: #222; /* Темно-серый цвет для хорошей читаемости */
-  
-  /* Явно указываем белый фон, чтобы избежать сюрпризов от браузеров или расширений */
-  background-color: #fff;
-
-  /* Можно также поменять цвет рамки по умолчанию в темной теме */
-  border-color: #ddd;
-}
+   [data-theme="dark"] .contact input[type="text"],
+   [data-theme="dark"] .contact input[type="email"],
+   [data-t  heme="dark"] .contact textarea {
+     color: #222 !important; /* <--- ДОБАВЬ ЭТО! */
+     background-color: #fff !important; /* <--- И ЭТО НА ВСЯКИЙ СЛУЧАЙ */
+     border-color: #ddd;
+   }
