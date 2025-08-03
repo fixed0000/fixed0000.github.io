@@ -324,5 +324,18 @@
       "playground.gameDemo.questActionDecline": "Decline",
       "carousel.prevLabel": "Previous Slide",
       "carousel.nextLabel": "Next Slide",
-      "carousel.goToSlide": "Go to slide"
+      "carousel.goToSlide": "Go to slide",
+      "educationPage.additional.school21.description": "Intensive peer-to-peer programming training. Main focus on practical problem solving, algorithms, and data structures.",
+      "educationPage.additional.school21.projectsLabel": "Key Projects:",
+      "educationPage.additional.school21.project1": "<b>Project 1:</b> Collaborative development of Ping-Pong in C.",
+      "educationPage.additional.school21.project2": "<b>Project 2:</b> Implementation of several bash functions in C.",
+      "educationPage.additional.school21.skillsLabel": "Core Technologies:",
+      "educationPage.additional.school21.skillsValue": "C, Bash, Git.",
+      "educationPage.achievements.title": "Research & Publications 🔬",
+      "educationPage.achievements.publicationsLabel": "Scientific Publications 📰:",
+      "educationPage.achievements.pub1": "Features of the Ainu people's folklore (MCU Science Days, 2021).",
+      "educationPage.achievements.pub2": "Analysis of associations with the 'Family' concept among native Japanese speakers (MCU Science Days, 2024).",
+      "educationPage.achievements.pubLinkJournal": "Read in MCU Journal",
+      "educationPage.achievements.pubLinkElibrary": "eLibrary.ru",
+      "educationPage.activities.businessProject": "Participated in the development and presentation of a business project to representatives of Japanese companies (including Mitsubishi Corporation) at an MCU event."
 }

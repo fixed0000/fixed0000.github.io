@@ -324,5 +324,18 @@
   "playground.gameDemo.questTitle": "Новое задание",
   "playground.gameDemo.questDesc": "Местный лорд просит вас собрать ресурсы.",
   "playground.gameDemo.questActionAccept": "Принять",
-  "playground.gameDemo.questActionDecline": "Отказаться"
+  "playground.gameDemo.questActionDecline": "Отказаться",
+  "educationPage.additional.school21.description": "Интенсивное обучение программированию по системе peer-to-peer. Основной фокус на решении практических задач, алгоритмах и структурах данных.",
+  "educationPage.additional.school21.projectsLabel": "Ключевые проекты:",
+  "educationPage.additional.school21.project1": "<b>Проект 1:</b> Совместное написание пинг-понг на C.",
+  "educationPage.additional.school21.project2": "<b>Проект 2:</b> Реализация некоторых функций bash на языке C.",
+  "educationPage.additional.school21.skillsLabel": "Основные технологии:",
+  "educationPage.additional.school21.skillsValue": "C, Bash, Git.",
+  "educationPage.achievements.title": "Исследования и Публикации 🔬",
+  "educationPage.achievements.publicationsLabel": "Научные публикации 📰:",
+  "educationPage.achievements.pub1": "Особенности фольклора народа айну (Дни науки МГПУ, 2021).",
+  "educationPage.achievements.pub2": "Анализ ассоциаций с концептом «Семья» носителей японского языка (Дни науки МГПУ, 2024).",
+  "educationPage.achievements.pubLinkJournal": "Читать в журнале МГПУ",
+  "educationPage.achievements.pubLinkElibrary": "eLibrary.ru",
+  "educationPage.activities.businessProject": "Участие в разработке и презентации бизнес-проекта для представителей японских компаний (включая Mitsubishi Corporation) в рамках мероприятия в МГПУ."
 }

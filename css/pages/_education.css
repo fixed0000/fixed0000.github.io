@@ -91,13 +91,25 @@
   
   
   /* --- Логотипы и Иконки --- */
-  .logo-placeholder {
-      display: inline-block; width: 35px; height: 35px;
-      background-color: var(--bg-color-subtle, #eee);
-      border-radius: 4px; margin-right: var(--spacing-small, 12px);
-      vertical-align: middle; flex-shrink: 0;
-      background-repeat: no-repeat; background-position: center; background-size: contain;
-      border: none;
+  /* --- Логотипы и Иконки --- */
+.logo-placeholder {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: transparent; /* ИСПРАВЛЕНО: Фон всегда прозрачный */
+    border-radius: 4px;
+    margin-right: var(--spacing-small, 12px);
+    vertical-align: middle;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    /* Если/когда добавишь логотипы, раскомментируй строки ниже */
+    /* .mspu-logo { background-image: url('../images/logos/mspu-logo.svg'); } */
+    /* .tsukuba-logo { background-image: url('../images/logos/tsukuba-logo.svg'); } */
+    /* .school21-logo { background-image: url('../images/logos/school21-logo.svg'); } */
+}
       /* Замените на реальные лого */
   }
   /* .mspu-logo { background-image: url('../images/logos/mspu-logo.svg'); } */
@@ -171,13 +183,56 @@
   }
   
   
-  /* --- Секция Доп. Образования --- */
-  .additional-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-large, 30px); margin-top: var(--spacing-medium, 20px); }
-  .additional-item { background: var(--bg-color-subtle, rgba(0,0,0,0.02)); padding: var(--spacing-medium, 20px); border-radius: var(--border-radius-medium, 8px); border: 1px solid var(--border-color-extra-subtle, rgba(0,0,0,0.05)); }
-  [data-theme="dark"] .additional-item { background: var(--dark-bg-subtle, rgba(255,255,255,0.03)); border-color: var(--dark-border-subtle, rgba(255,255,255,0.08)); }
-  .additional-item h4 { display: flex; align-items: center; margin-top: 0; margin-bottom: var(--spacing-small, 10px); font-size: 1.1em; border-bottom: none; padding-bottom: 0; }
-  .additional-item p { font-size: 0.9em; color: var(--text-muted, inherit); margin-bottom: var(--spacing-xs, 5px); }
-  .additional-item p strong { color: var(--accent-color); font-weight: 700; }
+/* --- Секция Доп. Образования (ИСПРАВЛЕННАЯ ВЕРСИЯ) --- */
+.additional-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: var(--spacing-large, 30px); 
+    margin-top: var(--spacing-medium, 20px);
+    align-items: stretch; /* Важно, чтобы все ячейки грида имели одинаковую высоту */
+}
+
+.additional-item { 
+    background: var(--bg-color-subtle, rgba(0,0,0,0.02)); 
+    padding: var(--spacing-medium, 20px); 
+    border-radius: var(--border-radius-medium, 8px); 
+    border: 1px solid var(--border-color-extra-subtle, rgba(0,0,0,0.05));
+    
+    /* Добавляем Flexbox для выравнивания содержимого внутри карточки */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Распределяем пространство */
+}
+
+[data-theme="dark"] .additional-item { 
+    background: var(--dark-bg-subtle, rgba(255,255,255,0.03)); 
+    border-color: var(--dark-border-subtle, rgba(255,255,255,0.08)); 
+}
+
+/* Новый селектор для текстового блока */
+.additional-item-content {
+    flex-grow: 1; /* Позволяем тексту занять все свободное место */
+}
+
+/* Оставляем твои стили для текста без изменений */
+.additional-item h4 { 
+    display: flex; 
+    align-items: center; 
+    margin-top: 0; 
+    margin-bottom: var(--spacing-small, 10px); 
+    font-size: 1.1em; 
+    border-bottom: none; 
+    padding-bottom: 0; 
+}
+.additional-item p { 
+    font-size: 0.9em; 
+    color: var(--text-muted, inherit); 
+    margin-bottom: var(--spacing-xs, 5px); 
+}
+.additional-item p strong { 
+    color: var(--accent-color); 
+    font-weight: 700; 
+}
   
   /* --- Галерея Активностей и Сертификата N2 --- */
   .activities-gallery {
@@ -295,3 +350,26 @@
     .carousel-slides { transition: none !important; }
     .activities-gallery img:hover { transform: none; }
   }
+
+  /* --- Стили для ссылок на публикации --- */
+.publication-links {
+    margin-left: 8px;
+    font-size: 0.9em;
+    white-space: nowrap; /* Чтобы ссылки не переносились на новую строку */
+}
+
+.publication-links a {
+    color: var(--accent-color); /* Используем твой акцентный цвет */
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+.publication-links a:hover {
+    color: var(--accent-color-dark, #2980b9); /* Цвет при наведении, подбери если нужно */
+}
+
+[data-theme="dark"] .publication-links a:hover {
+    color: var(--accent-color-light, #5dade2);
+}

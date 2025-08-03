@@ -201,21 +201,30 @@
         </section>
 
         <!-- Секция Контакты -->
-        <section id="contact-section" class="contact animate-on-scroll slide-up">
-            <h2 data-i18n="contact.title">Свяжитесь со мной</h2>
-            <p class="availability-info" data-i18n="contact.availability">
-                Доступна для связи: <span data-i18n="contact.availability.hours">13:00 – 03:00 JST</span> (Японское стандартное время)
-            </p>
-            <form id="contactForm"> <!-- Добавлен ID, если его не было -->
-                <label for="name" class="visually-hidden" data-i18n="contact.nameLabel">Имя</label>
-                <input type="text" id="name" name="name" required data-i18n-placeholder="contact.namePlaceholder" placeholder="Ваше имя">
-                <label for="email" class="visually-hidden" data-i18n="contact.emailLabel">Email</label>
-                <input type="email" id="email" name="email" required data-i18n-placeholder="contact.emailPlaceholder" placeholder="Ваш Email">
-                <label for="message" class="visually-hidden" data-i18n="contact.messageLabel">Сообщение</label>
-                <textarea id="message" name="message" rows="5" required data-i18n-placeholder="contact.messagePlaceholder" placeholder="Ваше сообщение..."></textarea>
-                <button type="submit" class="btn btn-primary" data-i18n="contact.submit">Отправить</button>
-            </form>
-        </section>
+        <!-- Секция Контакты (ИСПРАВЛЕННАЯ ВЕРСИЯ) -->
+<section id="contact-section" class="contact animate-on-scroll slide-up">
+    <h2 data-i18n="contact.title">Свяжитесь со мной</h2>
+    <p class="availability-info" data-i18n="contact.availability">
+        Доступна для связи: <span data-i18n="contact.availability.hours">13:00 – 03:00 JST</span> (Японское стандартное время)
+    </p>
+    
+    <!-- Используем Formspree для отправки -->
+    <form action="https://formspree.io/f/YOUR_UNIQUE_CODE" method="POST">
+        <label for="name" class="visually-hidden" data-i18n="contact.nameLabel">Имя</label>
+        <input type="text" id="name" name="name" required 
+               data-i18n-placeholder="contact.namePlaceholder" placeholder="Ваше имя">
+        
+        <label for="email" class="visually-hidden" data-i18n="contact.emailLabel">Email</label>
+        <input type="email" id="email" name="email" required 
+               data-i18n-placeholder="contact.emailPlaceholder" placeholder="Ваш Email">
+        
+        <label for="message" class="visually-hidden" data-i18n="contact.messageLabel">Сообщение</label>
+        <textarea id="message" name="message" rows="5" required 
+                  data-i18n-placeholder="contact.messagePlaceholder" placeholder="Ваше сообщение..."></textarea>
+        
+        <button type="submit" class="btn btn-primary" data-i18n="contact.submit">Отправить</button>
+    </form>
+</section>
 
         <!-- Final CTA -->
         <section id="final-cta" class="final-cta animate-on-scroll fade-in">

@@ -324,5 +324,18 @@
         "playground.gameDemo.questActionDecline": "断る",
         "carousel.prevLabel": "前のスライド", 
         "carousel.nextLabel": "次のスライド",     
-        "carousel.goToSlide": "スライドに移動"      
+        "carousel.goToSlide": "スライドに移動",
+        "educationPage.additional.school21.description": "ピアツーピア方式による集中的なプログラミングトレーニング。実践的な問題解決、アルゴリズム、データ構造に重点を置いています。",
+        "educationPage.additional.school21.projectsLabel": "主なプロジェクト：",
+        "educationPage.additional.school21.project1": "<b>プロジェクト1：</b> C言語によるピンポンゲームの共同開発。",
+        "educationPage.additional.school21.project2": "<b>プロジェクト2：</b> C言語によるbashのいくつかの機能の実装。",
+        "educationPage.additional.school21.skillsLabel": "主要技術：",
+        "educationPage.additional.school21.skillsValue": "C, Bash, Git.",
+        "educationPage.achievements.title": "研究と出版物 🔬",
+        "educationPage.achievements.publicationsLabel": "学術出版物 📰：",
+        "educationPage.achievements.pub1": "アイヌ民族の民間伝承の特徴（モスクワ市立教育大学科学デー、2021年）。",
+        "educationPage.achievements.pub2": "日本語母語話者における「家族」という概念との連想分析（モスクワ市立教育大学科学デー、2024年）。",
+        "educationPage.achievements.pubLinkJournal": "大学ジャーナルで読む",
+        "educationPage.achievements.pubLinkElibrary": "eLibrary.ru",
+        "educationPage.activities.businessProject": "モスクワ市立教育大学のイベントで、三菱商事を含む日本企業代表者向けにビジネスプロジェクトの開発とプレゼンテーションに参加しました。" 
 }
