@@ -1,14 +1,71 @@
 /* css/pages/_contact.css */
-/* Styles for the main container of the contact page */
+/* ==========================================================================
+   Стили для секции Контакты
+   ========================================================================== */
 
+/* --- 1. Основной контейнер секции --- */
 .contact {
-  /* Constrain width - use variable or keep specific value */
   max-width: var(--container-width-narrow, 600px);
-
-  /* Center the container horizontally */
-  margin-left: auto;
-  margin-right: auto;
-
-  /* Add padding inside the container - use spacing variable */
+  margin: 0 auto;
   padding: var(--spacing-medium, 20px);
+  /* Добавим отступ снизу для воздуха */
+  margin-bottom: var(--spacing-large, 40px);
+}
+
+/* --- 2. Стили для самой формы --- */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium, 1.2rem); /* Расстояние между полями */
+  margin-top: var(--spacing-medium, 20px);
+}
+
+/* --- 3. Общие стили для полей ввода и текстовой области --- */
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-family: inherit; /* Наследуем шрифт сайта */
+  font-size: 1rem;
+  border: 1px solid var(--border-color-subtle, #ccc);
+  border-radius: var(--border-radius-medium, 8px);
+  background-color: var(--bg-color, #fff);
+  color: var(--text-base, #222);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  -webkit-appearance: none; /* Убираем стандартный вид на iOS */
+}
+
+/* Стили при фокусе на поле (когда пользователь печатает) */
+.contact input[type="text"]:focus,
+.contact input[type="email"]:focus,
+.contact textarea:focus {
+  outline: none; /* Убираем стандартную обводку */
+  border-color: var(--accent-color); /* Рамка становится акцентного цвета */
+  /* Красивое свечение. Убедись, что переменная --accent-color-rgb задана в _variables.css */
+  box-shadow: 0 0 0 3px rgba(var(--accent-color-rgb, 52, 152, 219), 0.25);
+}
+
+/* --- 4. Информация о доступности --- */
+.contact .availability-info {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9em;
+  margin-top: var(--spacing-medium, 20px);
+}
+
+/* ==========================================================================
+   ГЛАВНОЕ ИСПРАВЛЕНИЕ: Фикс цвета текста для ТЕМНОЙ ТЕМЫ
+   ========================================================================== */
+[data-theme="dark"] .contact input[type="text"],
+[data-theme="dark"] .contact input[type="email"],
+[data-theme="dark"] .contact textarea {
+  /* Устанавливаем цвет ТЕКСТА внутри поля на темный, чтобы он был виден на белом фоне */
+  color: #222; /* Темно-серый цвет для хорошей читаемости */
+  
+  /* Явно указываем белый фон, чтобы избежать сюрпризов от браузеров или расширений */
+  background-color: #fff;
+
+  /* Можно также поменять цвет рамки по умолчанию в темной теме */
+  border-color: #ddd;
 }
