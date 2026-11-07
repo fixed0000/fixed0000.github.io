@@ -1,79 +1,11 @@
-<!DOCTYPE html>
-<html lang="ru"> <!-- Язык будет обновляться JS -->
+<!doctype html>
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n-title="constructionPage.pageTitle">Страница в разработке</title> <!-- Ключ перевода -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* Эти стили лучше вынести в css/pages/_under-construction.css */
-        body.page-construction-body { display: flex; flex-direction: column; min-height: 100vh; margin: 0; background-color: var(--bg-color); color: var(--text-color); }
-        .page-construction { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 40px 20px; }
-        .construction-icon { font-size: 5em; color: var(--accent-color); margin-bottom: 30px; animation: spinTools 8s linear infinite; }
-        .title-construction { font-size: 2em; margin-bottom: 15px; font-weight: 600; }
-        .message-construction { font-size: 1.1em; line-height: 1.6; max-width: 550px; margin-bottom: 30px; color: var(--text-muted, inherit); }
-        [data-theme="dark"] .message-construction { color: var(--text-muted-dark, inherit); }
-        @keyframes spinTools { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        @media (max-width: 768px) { .construction-icon { font-size: 4em; } .title-construction { font-size: 1.8em; } .message-construction { font-size: 1em; } }
-        @media (max-width: 480px) { .construction-icon { font-size: 3.5em; margin-bottom: 20px;} .title-construction { font-size: 1.6em; } }
-        @media (prefers-reduced-motion: reduce) { .construction-icon { animation: none; } }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/portfolio.css">
+  <meta http-equiv="refresh" content="0; url=/">
+  <title>ページの移動 | ボロディナ・リディア</title>
 </head>
-<body class="page-construction-body">
-
-    <!-- Шапка (такая же, как на других страницах) -->
-    <nav>
-        <ul class="menu">
-            <li class="controls-group">
-                <div class="custom-select language-switcher">
-                    <select id="language-select">
-                        <option value="ru">🇷🇺 Русский</option>
-                        <option value="en">🇬🇧 English</option>
-                        <option value="ja">🇯🇵 日本語</option> <!-- ИСПРАВЛЕНО: было jp -->
-                    </select>
-                    <span class="select-arrow">▼</span>
-                </div>
-                <button id="theme-toggle" class="theme-btn">
-                    <span class="theme-icon">🌓</span>
-                    <span class="btn-text" data-i18n="theme.toggle">Сменить тему</span>
-                </button>
-            </li>
-            <li class="nav-links">
-                <a href="index.html" data-i18n="nav.home">Главная</a>
-                <a href="education.html" data-i18n="nav.about">Образование</a>
-                <a href="experience.html" data-i18n="nav.experience">Опыт</a>
-                <a href="under-construction.html" data-i18n="nav.playground">Код</a> <!-- Ссылка на саму себя, что нормально -->
-            </li>
-        </ul>
-    </nav>
-
-    <!-- Основной контент страницы -->
-    <main class="page-construction">
-         <div class="construction-icon" aria-hidden="true">
-             <i class="fas fa-tools"></i>
-         </div>
-
-         <h1 class="title-construction" data-i18n="constructionPage.title">Страница в разработке</h1>
-         <p class="message-construction" data-i18n="constructionPage.message">
-             Этот раздел скоро появится! Я усердно работаю над созданием интересного контента для вас. Загляните сюда немного позже.
-         </p>
-         <div class="actions-construction">
-             <a href="index.html" class="btn btn-primary" data-i18n="constructionPage.backHome">
-                 <i class="fas fa-home"></i> Вернуться на главную
-             </a>
-         </div>
-    </main>
-
-    <!-- Футер (такой же, как на других страницах) -->
-    <footer>
-        <p data-i18n="footer.copyright">© 2024 Бородина Лидия</p>
-    </footer>
-
-    <script src="js/script.js" defer></script>
-
-</body>
+<body><main class="wrap page-heading"><h1>ページを移動しました</h1><p><a href="/">新しいページへ</a></p></main></body>
 </html>

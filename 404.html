@@ -1,99 +1,10 @@
-<!DOCTYPE html>
-<html lang="en"> <!-- Язык будет обновляться JS, если он загрузится -->
+<!doctype html>
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="notFoundPage.pageTitle">Страница не найдена (404)</title>
-    <link rel="stylesheet" href="css/main.css"> <!-- Путь от КОРНЯ -->
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Подключаем стили для этой страницы -->
-    <link rel="stylesheet" href="css/pages/404.css"> <!-- Путь от КОРНЯ -->
-    <style>
-        .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/portfolio.css">
+  <title>ページが見つかりません | ボロディナ・リディア</title>
 </head>
-<body class="page-404-body">
-
-    <!-- Шапка (такая же, как на других страницах) -->
-    <nav>
-        <ul class="menu">
-            <li class="controls-group">
-                <div class="custom-select language-switcher">
-                    <select id="language-select">
-                        <option value="ru">🇷🇺 Русский</option>
-                        <option value="en">🇬🇧 English</option>
-                        <option value="jp">🇯🇵 日本語</option>
-                    </select>
-                    <span class="select-arrow">▼</span>
-                </div>
-                <button id="theme-toggle" class="theme-btn">
-                    <span class="theme-icon">🌓</span>
-                    <span class="btn-text" data-i18n="theme.toggle">Сменить тему</span>
-                </button>
-            </li>
-            <li class="nav-links">
-                <a href="/" data-i18n="nav.home">Главная</a>
-                <a href="education.html" data-i18n="nav.about">Образование</a>
-                <a href="experience.html" data-i18n="nav.experience">Опыт</a>
-                <a href="under-construction.html" data-i18n="nav.playground">Код</a>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- Основной контент страницы 404 -->
-    <main class="page-404">
-
-        <!-- Фоновые анимированные элементы (если нужны) -->
-        <!-- <div class="background-shapes"> ... </div> -->
-
-        <!-- Контентная часть -->
-        <div class="content-wrapper-404">
-
-            <!-- ЗАМЕНЕНА ИЛЛЮСТРАЦИЯ НА БЛОК 404 -->
-            <div class="error-code-container">
-                <div class="digit digit-4">4</div>
-                <div class="digit digit-0">
-                    0
-                    <div class="anime-emotion sweat-drop"></div> <!-- Капля пота -->
-                </div>
-                <div class="digit digit-4">
-                    4
-                    <div class="anime-emotion question-mark">?</div> <!-- Знак вопроса -->
-                </div>
-                <!-- Элемент поиска/расшифровки -->
-                <div class="search-element">
-                     <img src="images/silhouettes/scroll-magnifier.svg" alt=""> <!-- Иконка свитка с лупой -->
-                </div>
-            </div>
-            <!-- КОНЕЦ БЛОКА 404 -->
-
-            <h1 class="title-404" data-i18n="notFoundPage.title">Ой! Страница потерялась...</h1> <!-- Убрали (404) -->
-            <p class="message-404" data-i18n="notFoundPage.message">
-                Кажется, страница, которую вы ищете, отправилась в другое измерение или просто никогда не существовала. Не волнуйтесь, давайте вернемся на правильный путь!
-            </p>
-            <div class="actions-404">
-                <a href="/" class="btn btn-primary" data-i18n="notFoundPage.backHome">
-                    <i class="fas fa-home"></i> Вернуться на главную
-                </a>
-                <a href="javascript:history.back()" class="btn btn-secondary" data-i18n="notFoundPage.goBack">
-                    <i class="fas fa-arrow-left"></i> Вернуться назад
-                </a>
-            </div>
-        </div>
-    </main>
-
-    <!-- Футер (такой же, как на других страницах) -->
-    <footer>
-        <p data-i18n="footer.copyright">© 2024 Бородина Лидия</p>
-    </footer>
-
-    <!-- Подключение скриптов -->
-    <!-- Пути от корня сайта -->
-    <script src="js/script.js" defer></script>
-
-</body>
+<body><main class="wrap page-heading"><h1>ページが見つかりません</h1><p><a href="/">日本語トップ</a> · <a href="/en/" lang="en">English home</a></p></main></body>
 </html>
