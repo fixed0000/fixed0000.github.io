@@ -1,263 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Устанавливаем title с data-атрибутом для перевода -->
-    <title data-i18n-title="page.main.title">Бородина Лидия (Лингвист)</title>
-
-    <!-- SEO Meta Tags с data-атрибутами -->
-    <meta name="description" data-i18n="meta.description" content="Портфолио Лидии Бородиной, лингвиста-япониста (JLPT N1). Опыт в локализации, переводе и межкультурной коммуникации. Ищу возможности работы в Японии.">
-    <meta name="keywords" data-i18n="meta.keywords" content="лингвист, японист, японский язык, JLPT N1, портфолио, frontend, JavaScript, React, HTML, CSS, локализация, перевод, Япония, Токио, Лидия Бородина, linguist, japanese specialist, localization, translation, Japan, Tokyo, Lidia Borodina, 言語学者, 日本語専門家, ローカリゼーション, 翻訳, 日本, 東京">
-
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* Минимальный стиль для скрытия меток - лучше перенести в main.css */
-        .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
-        /* Прочие встроенные стили лучше перенести в соответствующие CSS-файлы */
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="京都のホテルで、予約データの確認・修正や日次報告を担当しています。現場での経験を生かし、データ品質の管理や業務システムの運用に携わりたいと考えています。">
+  <meta name="theme-color" content="#183c37">
+  <title>ボロディナ・リディア | 日本での職務経験・ポートフォリオ</title>
+  <link rel="alternate" hreflang="ja" href="https://fixed0000.github.io/">
+  <link rel="alternate" hreflang="en" href="https://fixed0000.github.io/en/">
+  <link rel="alternate" hreflang="x-default" href="https://fixed0000.github.io/">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="stylesheet" href="./portfolio.css">
 </head>
 <body>
-
-    <div class="sakura-background"></div> 
-
-    <!-- Навигация -->
-    <nav>
-        <ul class="menu">
-            <li class="controls-group">
-                <div class="custom-select language-switcher">
-                    <select id="language-select">
-                        <option value="ru">🇷🇺 Русский</option>
-                        <option value="en">🇬🇧 English</option>
-                        <option value="ja">🇯🇵 日本語</option>
-                    </select>
-                    <span class="select-arrow">▼</span>
-                </div>
-                <button id="theme-toggle" class="theme-btn">
-                    <span class="theme-icon">🌓</span>
-                    <span class="btn-text" data-i18n="theme.toggle">Сменить тему</span>
-                </button>
-            </li>
-            <li class="nav-links">
-                <a href="index.html" data-i18n="nav.home">Главная</a>
-                <a href="education.html" data-i18n="nav.about">Образование</a>
-                <a href="experience.html" data-i18n="nav.experience">Опыт</a>
-                <a href="under-construction.html" data-i18n="nav.playground">Код</a> 
-            </li>
-        </ul>
+  <a class="skip" href="#main">本文へ</a>
+  <header class="header">
+    <a class="brand" href="./">LB<span>ボロディナ・リディア</span></a>
+    <nav aria-label="メインナビゲーション">
+      <a href="#work">職務経験</a>
+      <a href="#contact">連絡先</a>
+      <a class="text-link" href="./en/" lang="en" hreflang="en">English</a>
     </nav>
-
-    <!-- Hero Section -->
-    <header class="hero animate-on-scroll fade-in">
-        <h1 data-i18n="hero.name">Бородина Лидия</h1>
-        <p class="subtitle" data-i18n="hero.title">Веб-разработчик | Лингвист-Японист | Межкультурная коммуникация</p> <!-- Добавлен Веб-разработчик -->
-        <p class="description" data-i18n="hero.description">
-            Создаю адаптивные и функциональные веб-сайты. Свободное владение японским (JLPT N1) и английским языками (C1). Ищу интересные проекты и возможности для роста в технологической сфере Японии.
-        </p>
-        <div class="cta-buttons">
-            <a href="#contact-section" class="btn btn-primary" data-i18n="hero.cta.contact">
-                <i class="fas fa-envelope"></i> Связаться со мной
-            </a>
-            <!-- Кнопки CV перемещены в Final CTA -->
+  </header>
+  <main id="main">
+    <section class="hero wrap" id="profile">
+      <div class="hero-copy">
+        <p class="eyebrow">ボロディナ・リディア</p>
+        <h1>ホテルの業務から、<br>データとシステムの仕事へ。</h1>
+        <p class="intro">京都のホテルで、予約データの確認・修正や日次報告を担当しています。現場での経験を生かし、データ品質の管理や業務システムの運用に携わりたいと考えています。</p>
+        <div class="actions"><a class="button" href="#work">職務経験を見る <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <aside class="profile-card" aria-label="プロフィール">
+        <div class="monogram" aria-hidden="true">L<span>B</span><i></i></div>
+        <p class="card-name">Lidiia Borodina<span>京都、日本</span></p>
+        <p>日本語 JLPT N1 · 英語 TOEIC 910 · ロシア語母語</p>
+      </aside>
+    </section>
+    <section class="work-section" id="work">
+      <div class="wrap section">
+        <div class="section-heading"><h2>職務経験</h2></div>
+        <div class="timeline">
+          <article><span>2025年12月–現在</span><div><h3>ホテル運営</h3><p>予約管理システムとExcelを使い、予約情報の照合・修正、売上・入金の確認、日次報告を行っています。担当者として、担当業務の範囲内で他のスタッフに作業を割り振り、次のシフトに必要な情報を引き継ぎます。</p></div></article>
+          <article><span>Fruitbat Factory</span><div><h3>ゲームのローカライズ</h3><p>Fruitbat Factoryのゲームで、翻訳テキストの確認や言語品質チェック（LQA）を担当しました。GitHubとTortoiseSVNでテキストの変更を管理しました。</p></div></article>
         </div>
-    </header>
-
-    <main>
-        <!-- Секция Интро -->
-        <section class="intro animate-on-scroll slide-up">
-            <div class="intro-content">
-                <div class="intro-text">
-                    <div class="intro-text-content">
-                        <h2 data-i18n="about.title">Об авторе</h2>
-                        <div class="highlight-box">
-                            <h3 data-i18n="about.education">Образование</h3>
-                            <ul> <!-- Убраны специфичные классы timeline/achievements -->
-                                <li data-i18n="about.education.item1">Студентка 4 курса МГПУ: Переводчик японского языка</li>
-                                <li data-i18n="about.education.item2">Программа обмена: Университет Цукубы (Япония), 2024</li>
-                                <li data-i18n="about.education.item3">Дополнительное образование: Основы программирования (Школа 21)</li>
-                                <li data-i18n="about.education.item4">Методика преподавания РКИ: Курс при МГПУ</li>
-                            </ul>
-                        </div>
-                        <div class="highlight-box">
-                            <h3 data-i18n="experience.title">Ключевой Опыт</h3>
-                            <ul> <!-- Убраны специфичные классы timeline/achievements -->
-                                <li data-i18n="experience.item1">Локализация игр (Fruitbat Factory)</li>
-                                <li data-i18n="experience.item2">Сопровождение и устный перевод (Японский дом)</li>
-                                <li data-i18n="experience.item3">Работа в сфере обслуживания (Mosburger, Япония)</li>
-                                <li data-i18n="experience.item4">Преподавание японского языка (Онлайн)</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Раздел "Мой подход" (с иконками FA) -->
-                    <div class="highlight-box">
-                        <h3 data-i18n="introKeyPoints.title">Мой подход</h3>
-                        <ul class="approach-list"> <!-- Используем этот класс для стилизации иконок в CSS -->
-                            <li data-i18n="introKeyPoints.item1">
-                                <i class="fas fa-check-circle"></i> <!-- Иконка FontAwesome -->
-                                <span>Внимание к деталям и культурным нюансам.</span>
-                            </li>
-                            <li data-i18n="introKeyPoints.item2">
-                                <i class="fas fa-users"></i>
-                                <span>Ориентация на пользователя и цели бизнеса.</span>
-                            </li>
-                            <li data-i18n="introKeyPoints.item3">
-                                <i class="fas fa-sync-alt"></i>
-                                <span>Стремление к чистому, поддерживаемому коду.</span>
-                            </li>
-                            <li data-i18n="introKeyPoints.item4">
-                                <i class="fas fa-comments"></i>
-                                <span>Эффективная коммуникация на трех языках.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="image-wrapper">
-                    <!-- ИСПРАВЛЕНО: Убраны лишние разрешения из srcset, если нет файлов @2x, @3x -->
-                    <img src="images/image1.jpg" alt="Портретное фото" class="profile-photo" data-i18n-alt="image.alt"
-                         srcset="images/image1.jpg"
-                         sizes="(max-width: 992px) 90vw, (max-width: 1200px) 450px, (max-width: 1440px) 600px, 750px" loading="lazy" decoding="async">
-                    <p class="image-caption" data-i18n="image.caption">Токио</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Highlights -->
-        <section id="skills-highlights" class="skills-highlights animate-on-scroll fade-in">
-             <h2 data-i18n="skillsHighlights.title">Ключевые компетенции</h2>
-             <div class="skills-grid">
-                 <div>
-                     <h3 data-i18n="skillsHighlights.tech">Технические навыки</h3>
-                     <div class="skill-tags">
-                         <span class="skill-tag tech" data-i18n="skills.html"><i class="fab fa-html5"></i> HTML</span>
-                         <span class="skill-tag tech" data-i18n="skills.css"><i class="fab fa-css3-alt"></i> CSS3</span>
-                         <span class="skill-tag tech" data-i18n="skills.js"><i class="fab fa-js-square"></i> JavaScript</span>
-                         <span class="skill-tag tech" data-i18n="skills.git"><i class="fab fa-git-alt"></i> Git & GitHub</span>
-                         <span class="skill-tag tech" data-i18n="skills.c"><i class="fa-solid fa-c"></i> C Lang</span>
-                         <span class="skill-tag tech" data-i18n="skills.bash"><i class="fa-solid fa-terminal"></i> Bash</span>
-                     </div>
-                 </div>
-                 <div>
-                     <h3 data-i18n="skillsHighlights.lang">Языковые навыки</h3>
-                     <div class="skill-tags">
-                         <span class="skill-tag lang" data-i18n="skills.japanese"><i class="fas fa-language"></i> Японский: JLPT N1</span>
-                         <span class="skill-tag lang" data-i18n="skills.english"><i class="fas fa-language"></i> Английский: C1</span>
-                         <span class="skill-tag lang" data-i18n="skills.russian"><i class="fas fa-language"></i> Русский: Родной</span>
-                     </div>
-                 </div>
-                 <div>
-                      <h3 data-i18n="skillsHighlights.soft">Soft Skills</h3>
-                      <div class="skill-tags">
-                         <span class="skill-tag soft" data-i18n="skills.communication"><i class="fas fa-comments"></i> Межкультурная коммуникация</span>
-                         <span class="skill-tag soft" data-i18n="skills.problemSolving"><i class="fas fa-lightbulb"></i> Решение проблем</span>
-                         <span class="skill-tag soft" data-i18n="skills.adaptability"><i class="fas fa-arrows-rotate"></i> Адаптивность</span>
-                         <span class="skill-tag soft" data-i18n="skills.attentionToDetail"><i class="fas fa-magnifying-glass"></i> Внимание к деталям</span>
-                      </div>
-                 </div>
-             </div>
-        </section>
-
-        <!-- Portfolio/Section Teasers -->
-        <section id="portfolio-teasers" class="portfolio-teasers animate-on-scroll fade-in">
-            <h2 data-i18n="teasers.title">Узнайте больше</h2>
-            <div class="teaser-grid">
-                <div class="teaser-card animate-on-scroll fade-in" style="--animation-delay: 0.1s;">
-                    <span class="icon">🎓</span> <h3 data-i18n="teasers.education.title">Образование</h3>
-                    <p data-i18n="teasers.education.desc">МГПУ, Университет Цукубы, Школа 21, курсы.</p>
-                    <a href="education.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
-                </div>
-                <div class="teaser-card animate-on-scroll fade-in" style="--animation-delay: 0.2s;">
-                    <span class="icon">💼</span> <h3 data-i18n="teasers.experience.title">Опыт работы</h3>
-                    <p data-i18n="teasers.experience.desc">Локализация, сопровождение, сервис, преподавание.</p>
-                    <a href="experience.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a>
-                </div>
-                <div class="teaser-card animate-on-scroll fade-in" style="--animation-delay: 0.3s;">
-                    <span class="icon">💻</span> <h3 data-i18n="teasers.code.title">Примеры Кода</h3>
-                    <p data-i18n="teasers.code.desc">Интерактивные демонстрации и фрагменты кода.</p>
-                    <a href="playground.html" class="btn btn-secondary" data-i18n="teasers.cta">Подробнее</a> <!-- Ссылка исправлена -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Секция FAQ -->
-        <section class="faq-section animate-on-scroll slide-up">
-            <h2 data-i18n="faq.title">Часто задаваемые вопросы</h2>
-             <details class="faq">
-                <summary data-i18n="faq.question1">С какими типами текстов вы работаете?</summary> <!-- Изменен вопрос -->
-                <p data-i18n="faq.answer1">Основной опыт связан с локализацией игровых текстов (диалоги, UI, описания, обновления). Также перевожу маркетинговые материалы и техническую документацию, связанную с IT.</p> <!-- Изменен ответ -->
-             </details>
-             <details class="faq">
-                <summary data-i18n="faq.question2">Почему вы хотите работать в Японии?</summary>
-                <p data-i18n="faq.answer2">Мой многолетний интерес к японскому языку и культуре, подкрепленный опытом обучения по обмену в Университете Цукубы и работой в японской компании, мотивирует меня искать возможности для профессионального развития именно в Японии, где я могу эффективно сочетать свои языковые и технические навыки.</p>
-             </details>
-             <details class="faq">
-                <summary data-i18n="faq.question3">Готовы ли вы к переезду в Японию? Есть ли у вас виза?</summary> <!-- Изменен вопрос -->
-                <p data-i18n="faq.answer3">Да, я полностью готова и заинтересована в переезде в Японию для подходящей вакансии. В настоящее время я изучаю визовые вопросы и процедуры, соответствующие моей квалификации и потенциальным предложениям о работе.</p> <!-- Изменен ответ -->
-             </details>
-        </section>
-
-        <!-- Секция Контакты -->
-        <!-- Секция Контакты (ИСПРАВЛЕННАЯ ВЕРСИЯ) -->
-<section id="contact-section" class="contact animate-on-scroll slide-up">
-    <h2 data-i18n="contact.title">Свяжитесь со мной</h2>
-    <p class="availability-info" data-i18n="contact.availability">
-        Доступна для связи: <span data-i18n="contact.availability.hours">13:00 – 03:00 JST</span> (Японское стандартное время)
-    </p>
-    
-    <!-- Используем Formspree для отправки -->
-    <form action="https://formspree.io/f/xzzeyzdj" method="POST">
-        <label for="name" class="visually-hidden" data-i18n="contact.nameLabel">Имя</label>
-        <input type="text" id="name" name="name" required 
-               data-i18n-placeholder="contact.namePlaceholder" placeholder="Ваше имя">
-        
-        <label for="email" class="visually-hidden" data-i18n="contact.emailLabel">Email</label>
-        <input type="email" id="email" name="email" required 
-               data-i18n-placeholder="contact.emailPlaceholder" placeholder="Ваш Email">
-        
-        <label for="message" class="visually-hidden" data-i18n="contact.messageLabel">Сообщение</label>
-        <textarea id="message" name="message" rows="5" required 
-                  data-i18n-placeholder="contact.messagePlaceholder" placeholder="Ваше сообщение..."></textarea>
-        
-        <button type="submit" class="btn btn-primary" data-i18n="contact.submit">Отправить</button>
-    </form>
-</section>
-
-        <!-- Final CTA -->
-        <section id="final-cta" class="final-cta animate-on-scroll fade-in">
-            <h2 data-i18n="finalCta.title">Готов(а) к новым вызовам в Японии!</h2>
-            <p data-i18n="finalCta.text">Давайте обсудим, как мои навыки могут быть полезны вашему проекту.</p>
-            <div class="cta-links">
-                 <a href="mailto:ssh2112@yandex.ru" class="btn btn-primary" data-i18n="finalCta.email"><i class="fas fa-envelope"></i> Написать на Email</a>
-                 <a href="https://www.linkedin.com/in/%E3%83%AA%E3%83%87%E3%82%A3%E3%82%A2-%E3%83%9C%E3%83%AD%E3%83%87%E3%82%A3%E3%83%8A-8092b7285/?locale=en_US" target="_blank" class="btn btn-secondary" data-i18n="finalCta.linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                 <a href="https://github.com/fixed0000" target="_blank" class="btn btn-secondary" data-i18n="finalCta.github"><i class="fab fa-github"></i> GitHub</a>
-                 <!-- Кнопки CV -->
-                 <a href="Lidia_Borodina_CV_EN.pdf" class="btn btn-secondary" target="_blank" data-i18n="hero.cta.resume_en" title="Скачать резюме (English)" data-i18n-title="downloadCV.en"> <!-- Добавлен title -->
-                    <i class="fas fa-download"></i> Download CV (EN)
-                 </a>
-                 <a href="Lidia_Borodina_CV_JP.pdf" class="btn btn-secondary" target="_blank" data-i18n="hero.cta.resume_jp" title="Скачать резюме (日本語)" data-i18n-title="downloadCV.jp"> <!-- Добавлен title -->
-                    <i class="fas fa-download"></i> Download CV (JP)
-                 </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Футер -->
-    <footer>
-        <p data-i18n="footer.copyright">© 2024 Бородина Лидия</p>
-    </footer>
-
-    <!-- Кнопка "Наверх" -->
-    <a href="#" id="back-to-top-btn" class="back-to-top-btn" title="Наверх" aria-label="Вернуться наверх" data-i18n-title="backToTop.title" data-i18n-aria-label="backToTop.ariaLabel">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- Подключение скриптов -->
-    <script src="js/script.js" defer></script>
-    <script src="js/sakura-animation.js" defer></script>
-
+      </div>
+    </section>
+    <section class="wrap section education" id="education">
+      <div class="section-heading"><h2>学歴</h2></div>
+      <div class="about-copy"><p>モスクワ市立教育大学で日本語と翻訳を学び、2025年に学士課程を修了。2024年に筑波大学に交換留学しました。</p><a class="text-link" href="./education.html">卒業研究を見る ↗</a></div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <h2>連絡先</h2>
+        <p>採用に関するお問い合わせはこちらからお願いします。</p>
+        <a class="email" href="mailto:ssh2112@yandex.ru">ssh2112@yandex.ru</a>
+        <div class="contact-bottom"><a href="https://github.com/fixed0000">GitHub ↗</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap footer"><span>© 2026 Lidiia Borodina</span></footer>
 </body>
 </html>
