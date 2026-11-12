@@ -1,8 +1,11 @@
 import {WritingPad} from './canvas.js';
-import {Reference,pathsFor} from './reference.js';
+import {Reference,pathsFor,samplePathData} from './reference.js';
+import {StrokeOrderService,orderView,orderLabels,unableOrder} from './stroke-order-ui.js';
 import {KEY,OLD_KEY,fresh,validate,migrate,addAttempt} from './store.js';
 const en=document.documentElement.lang==='en',t=(j,e)=>en?e:j,$=id=>document.getElementById(id);
 const statuses={correct:t('正解！','Correct!'),incorrect:t('不正解','Incorrect'),unrecognized:t('認識できませんでした','Unable to Recognize'),reveals:t('お手本','Reference'),skips:t('スキップ','Skipped')};
+const strokeOrderService=new StrokeOrderService();
+let currentOrderRow=null,summarySession=null;
 let view=0,storageProtected=false,catalogPromise=null,recognizerRequested=false,recognitionFailed=false;
 let tasks=[],catalog={},data=fresh(),storage=true,queue=[],index=0,current=null,pad=null,reference=null,ready=false,worker=null,token=0,pending=null,settled=false,session=[],exam=false,daily=false,streak=0,active=false,starting=false,confirmAction=null,returnFocus=null;
 function notice(text,practice=active){$(practice?'practice-notice':'notice').textContent=text;}
@@ -29,9 +32,9 @@ function backgroundInert(value){for(const x of document.querySelectorAll('#main 
 function cancel(){token++;pending=null;$('check').disabled=false;}
 function resetReference(){reference?.pause();reference?.show(false);$('reference-controls').hidden=true;$('animation-controls').hidden=true;$('show-reference').checked=true;$('show-ink').checked=true;if(pad){pad.visible=true;pad.redraw();}}
 function idleResult(){const h=document.createElement('h3'),p=document.createElement('p');h.textContent=t('まず、書いてみましょう。','Start with a stroke.');p.textContent=exam?t('ミニテスト：結果は終了後に表示します。','Exam mode: feedback appears after the session.'):t('確認するまで答えは表示されません。','The answer stays hidden until you check.');$('result').className='result-card';$('result').replaceChildren(h,p);}
-async function start(items,{isExam=false,isDaily=false}={}){if(starting)return;if(!items.length){notice(t('このセットにはまだ漢字がありません。','There are no kanji in this set yet.'),false);return;}starting=true;returnFocus=document.activeElement;queue=items;index=0;session=[];streak=0;exam=isExam;daily=isDaily;active=true;if($('mode').value==='draw')ensureRecognizer();$('practice-loading').textContent=$('mode').value==='type'?t('キーボード入力','Keyboard input'):ready?t('認識準備完了','Recognition ready'):recognitionFailed?t('認識を利用できません','Recognition unavailable'):t('認識データ読込中…','Loading recognition…');backgroundInert(true);document.body.classList.add('practicing');$('practice').hidden=false;$('summary').replaceChildren();$('session-stats').hidden=true;$('practice-stats').setAttribute('aria-expanded','false');try{await show();}finally{starting=false;}}
-async function show(){cancel();const revision=++view;current=queue[index];settled=false;resetReference();reference?.destroy();pad?.destroy();$('pads').replaceChildren();$('typed').value='';$('reading').textContent=current.reading;$('meaning').textContent=current.meaning;$('stroke-hint').textContent=t(`${current.strokes}画 · ${current.jlpt||''} ${current.kanken?' / 漢検 '+current.kanken:''}`,`${current.strokes} strokes · ${current.jlpt||''}${current.kanken?' / Kanken '+current.kanken:''}`);$('position').textContent=`${index+1} / ${queue.length}${exam?' · '+t('ミニテスト','Exam'):''}`;$('session-progress').max=queue.length;$('session-progress').value=index;$('next').hidden=$('retry').hidden=true;$('check').hidden=false;$('reveal').hidden=exam;notice('');idleResult();
- pad=new WritingPad($('pads'),0,{character:t('筆記欄','Writing area'),hint:t('代替方法：キーボード入力','Alternative: keyboard input'),undo:t('一画戻す','Undo'),clear:t('消去','Clear')},()=>{cancel();notice('');});
+async function start(items,{isExam=false,isDaily=false}={}){if(starting)return;if(!items.length){notice(t('このセットにはまだ漢字がありません。','There are no kanji in this set yet.'),false);return;}starting=true;summarySession=null;returnFocus=document.activeElement;queue=items;index=0;session=[];streak=0;exam=isExam;daily=isDaily;active=true;if($('mode').value==='draw')ensureRecognizer();$('practice-loading').textContent=$('mode').value==='type'?t('キーボード入力','Keyboard input'):ready?t('認識準備完了','Recognition ready'):recognitionFailed?t('認識を利用できません','Recognition unavailable'):t('認識データ読込中…','Loading recognition…');backgroundInert(true);document.body.classList.add('practicing');$('practice').hidden=false;$('summary').replaceChildren();$('session-stats').hidden=true;$('practice-stats').setAttribute('aria-expanded','false');try{await show();}finally{starting=false;}}
+async function show(){cancel();const revision=++view;currentOrderRow=null;current=queue[index];settled=false;resetReference();reference?.destroy();pad?.destroy();$('pads').replaceChildren();$('typed').value='';$('reading').textContent=current.reading;$('meaning').textContent=current.meaning;$('stroke-hint').textContent=t(`${current.strokes}画 · ${current.jlpt||''} ${current.kanken?' / 漢検 '+current.kanken:''}`,`${current.strokes} strokes · ${current.jlpt||''}${current.kanken?' / Kanken '+current.kanken:''}`);$('position').textContent=`${index+1} / ${queue.length}${exam?' · '+t('ミニテスト','Exam'):''}`;$('session-progress').max=queue.length;$('session-progress').value=index;$('next').hidden=$('retry').hidden=true;$('check').hidden=false;$('reveal').hidden=exam;notice('');idleResult();
+ pad=new WritingPad($('pads'),0,{character:t('筆記欄','Writing area'),hint:t('代替方法：キーボード入力','Alternative: keyboard input'),undo:t('一画戻す','Undo'),clear:t('消去','Clear')},()=>{cancel();notice('');if(settled&&currentOrderRow){currentOrderRow=null;replaceOrderView(unableOrder('changed-input'));resetStrokeHighlights();notice(t('筆跡を変更しました。もう一度入力して確認してください。','Drawing changed. Use Try Again to check a new attempt.'));}});
  // The SVG and canvas use the same unmodified 109×109 view box; no fit-to-ink normalization.
  reference=new Reference(pad.surface,(n,total)=>{$('stroke-position').textContent=`${n} / ${total} `+t('画','strokes');});reference.speed=Number($('speed').value);reference.show(false);appearance();mode();favoriteState();stats();$('prompt').classList.remove('task-enter');void $('prompt').offsetWidth;$('prompt').classList.add('task-enter');
  $('check').focus({preventScroll:true});try{const paths=await pathsFor(current.char);if(revision!==view||!active)return;reference.setPaths(paths);reference.show(false);if(settled&&!exam)revealReference();}catch{if(revision===view)notice(t('お手本データを読み込めません。練習は続けられます。','Reference data could not load. Practice is still available.'));}}
@@ -39,18 +42,77 @@ function mode(){const typed=$('mode').value==='type';$('pads').hidden=typed;$('t
 function appearance(){const dark=$('dark').checked;$('practice').classList.toggle('trainer-dark',dark);if(pad){pad.color=dark?'#eaf1fc':'#182c45';pad.brush=Number($('brush').value);pad.redraw();}}
 function favoriteState(){const value=data.favorites.includes(current.char);$('favorite').setAttribute('aria-pressed',String(value));$('favorite').textContent=value?t('★ 保存済み','★ Saved'):t('☆ お気に入り','☆ Favorite');}
 function revealReference(){if(!reference?.paths?.length)return;reference.full();reference.show(true);$('show-reference').checked=true;$('reference-controls').hidden=false;}
-function result(kind,recognized=''){if(settled||!active)return;settled=true;$('session-progress').value=index+1;addAttempt(data,current.char,kind,recognized,getLevel()||'Custom');if(kind==='correct'){streak++;data.bestStreak=Math.max(streak,data.bestStreak);}else if(kind!=='unrecognized')streak=0;session.push({char:current.char,kind,recognized});save();$('check').hidden=true;$('next').hidden=false;$('retry').hidden=exam;$('reveal').hidden=true;
- const h=document.createElement('h3'),p=document.createElement('p');$('result').className='result-card '+(exam?'recorded':kind);if(exam){h.textContent=t('記録しました','Answer recorded');p.textContent=t('結果は終了後に確認できます。','Review feedback at the end.');}else{h.textContent=(kind==='correct'?'✓ ':kind==='incorrect'?'× ':'')+statuses[kind];p.textContent=kind==='unrecognized'?t('もう一度、画を分けて書いてみてください。','Try again with distinct strokes.'):t('入力・認識：','Input / recognized: ')+(recognized||'—')+' · '+t('正解：','Answer: ')+current.char;revealReference();} $('result').replaceChildren(h,p);$('result').focus({preventScroll:true});}
+function resetStrokeHighlights(){pad?.highlightStroke(null);reference?.full();}
+function inspectStroke(issue){
+ if(!pad||!reference)return;
+ $('show-ink').checked=true;pad.visible=true;pad.highlightStroke(issue.userStroke-1);
+ $('show-reference').checked=true;reference.show(true);reference.highlightStroke(issue.referenceStroke-1);
+}
+function replaceOrderView(assessment){
+ const old=$('stroke-order-assessment');if(!old)return;
+ const wasOpen=old.open,hadFocus=old.contains(document.activeElement);
+ const replacement=orderView(assessment,inspectStroke,resetStrokeHighlights);replacement.open=wasOpen;old.replaceWith(replacement);
+ if(hadFocus)replacement.querySelector('summary').focus({preventScroll:true});
+}
+function assessRow(row){
+ if(row.orderPromise)return row.orderPromise;
+ row.orderPromise=(async()=>{
+  if(!row.orderInput)return row.order=unableOrder(row.keyboard?'no-handwriting':'not-checked');
+  const input=row.orderInput;
+  try{
+   const referenceStrokes=input.referenceStrokes.length?input.referenceStrokes:samplePathData(await pathsFor(input.expected));
+   return row.order=await strokeOrderService.evaluate(input.userStrokes,referenceStrokes,{expected:input.expected,recognized:input.recognized});
+  }catch{return row.order=unableOrder('reference-unavailable');}
+ })();return row.orderPromise;
+}
+function result(kind,recognized=''){
+ if(settled||!active)return;
+ settled=true;$('session-progress').value=index+1;
+ addAttempt(data,current.char,kind,recognized,getLevel()||'Custom');
+ if(kind==='correct'){streak++;data.bestStreak=Math.max(streak,data.bestStreak);}else if(kind!=='unrecognized')streak=0;
+ const row={char:current.char,kind,recognized,keyboard:$('mode').value==='type',order:null};
+ if(!row.keyboard&&['correct','incorrect','unrecognized'].includes(kind))row.orderInput={
+  expected:current.char,recognized:recognized||null,
+  userStrokes:pad.strokes.map(stroke=>stroke.map(point=>[...point])),
+  referenceStrokes:reference?.sampledStrokes()||[]
+ };
+ if(!row.orderInput)row.order=unableOrder(row.keyboard?'no-handwriting':'not-checked');
+ session.push(row);save();$('check').hidden=true;$('next').hidden=false;$('retry').hidden=exam;$('reveal').hidden=true;
+ const h=document.createElement('h3'),p=document.createElement('p');$('result').className='result-card '+(exam?'recorded':kind);
+ if(exam){h.textContent=t('記録しました','Answer recorded');p.textContent=t('文字と書き順の結果は終了後に表示します。','Character and stroke-order feedback appears at the end.');$('result').replaceChildren(h,p);}
+ else{
+  const header=document.createElement('div');header.className='assessment-header';
+  const caption=document.createElement('span');caption.className='character-caption';caption.textContent=t('文字の正誤 ','Character ');
+  h.append(caption,document.createTextNode((kind==='correct'?'✓ ':kind==='incorrect'?'× ':'')+statuses[kind]));
+  p.textContent=kind==='unrecognized'?t('もう一度、画を分けて書いてみてください。','Try again with distinct strokes.'):t('入力・認識：','Input / recognized: ')+(recognized||'—')+' · '+t('正解：','Answer: ')+current.char;
+  header.append(h,orderView(row.order,inspectStroke,resetStrokeHighlights));$('result').replaceChildren(header,p);
+  revealReference();currentOrderRow=row;const resultView=view;
+  assessRow(row).then(assessment=>{if(active&&!exam&&settled&&view===resultView&&currentOrderRow===row)replaceOrderView(assessment);});
+ }
+ $('result').focus({preventScroll:true});
+}
 function check(){if(settled||pending!==null||!active)return;if($('mode').value==='type'){const answer=$('typed').value.normalize('NFC').trim();if([...answer].length!==1||!/^\p{Script=Han}$/u.test(answer)){notice(t('漢字を一字だけ入力してください。','Enter exactly one kanji.'));return;}result(answer===current.char?'correct':'incorrect',answer);return;}
  if(pad.active!==null)return;if(!pad.strokes.length){notice(t('まず一字書いてください。','Write one character first.'));return;}if(!ready){notice(recognitionFailed?t('認識を利用できません。終了してキーボード入力を選べます。','Recognition is unavailable. Exit and choose Keyboard input.'):t('認識データを準備中です。ホームに戻りキーボード入力も選べます。','Recognition is not ready. You can return and choose Keyboard input.'));return;}
  pending=++token;$('check').disabled=true;notice(t('認識しています…','Recognizing…'));worker.postMessage({type:'recognize',id:pending,strokes:[pad.strokes]});}
 async function next(){if(!active)return;if(!settled)result('skips');cancel();if(++index>=queue.length){if(daily&&session.every(x=>x.kind==='correct')){const date=new Date().toLocaleDateString('en-CA');if(!data.daily.includes(date))data.daily.push(date);}finish();}else await show();}
-function finish(){if(!active)return;cancel();active=false;backgroundInert(false);reference?.pause();document.body.classList.remove('practicing');$('practice').hidden=true;pad?.destroy();const title=document.createElement('h2'),p=document.createElement('p'),list=document.createElement('ul');title.textContent=t('今回の記録','Session Summary');p.textContent=Object.entries(statuses).map(([kind,label])=>label+' '+session.filter(x=>x.kind===kind).length).join(' · ');for(const row of session){const li=document.createElement('li');li.textContent=`${row.char} · ${statuses[row.kind]}${row.recognized?' · '+row.recognized:''}`;list.append(li);}$('summary').replaceChildren(title,p,list);save();$('summary').focus({preventScroll:true});returnFocus?.scrollIntoView({block:'center'});}
+function renderSessionSummary(rows){
+ const title=document.createElement('h2'),p=document.createElement('p'),list=document.createElement('ul');
+ title.textContent=t('今回の記録','Session Summary');p.textContent=Object.entries(statuses).map(([kind,label])=>label+' '+rows.filter(x=>x.kind===kind).length).join(' · ');
+ for(const row of rows){const li=document.createElement('li');li.textContent=`${row.char} · ${statuses[row.kind]}${row.recognized?' · '+row.recognized:''} · `+t('書き順（実験）：','Stroke order (experimental): ')+(row.order?orderLabels[row.order.status]:t('判定中…','Checking…'));list.append(li);}
+ $('summary').replaceChildren(title,p,list);
+}
+function finish(){
+ if(!active)return;
+ cancel();active=false;currentOrderRow=null;backgroundInert(false);reference?.pause();document.body.classList.remove('practicing');$('practice').hidden=true;pad?.destroy();
+ const completed=session;summarySession=completed;renderSessionSummary(completed);
+ for(const row of completed)assessRow(row).then(()=>{if(!active&&session===completed&&summarySession===completed)renderSessionSummary(completed);});
+ save();$('summary').focus({preventScroll:true});returnFocus?.scrollIntoView({block:'center'});
+}
 $('scheme').onchange=levels;$('level').onchange=setStatus;$('start').onclick=()=>start(shuffle(selected()));$('exam').onclick=()=>start(shuffle(selected()).slice(0,10),{isExam:true});$('daily').onclick=()=>{const date=new Date().toLocaleDateString('en-CA'),n=[...date].reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,0);start([tasks[n%tasks.length]],{isDaily:true});};
 $('review').onclick=()=>start(shuffle(Object.keys(data.records).filter(c=>data.records[c].difficult&&catalog[c]).map(c=>catalog[c])));$('favorites').onclick=()=>start(shuffle(data.favorites.filter(c=>catalog[c]).map(c=>catalog[c])));$('custom-practice').onclick=()=>start(shuffle(data.custom.filter(c=>catalog[c]).map(c=>catalog[c])));
 $('check').onclick=check;$('next').onclick=next;$('skip').onclick=()=>{if(!settled)result('skips');next();};$('reveal').onclick=()=>result('reveals');$('retry').onclick=()=>show();$('finish').onclick=finish;
 $('favorite').onclick=()=>{data.favorites=data.favorites.includes(current.char)?data.favorites.filter(c=>c!==current.char):[...data.favorites,current.char];favoriteState();save();};$('practice-stats').onclick=()=>{$('session-stats').hidden=!$('session-stats').hidden;$('practice-stats').setAttribute('aria-expanded',String(!$('session-stats').hidden));};
-$('show-reference').onchange=()=>{reference.pause();reference.show($('show-reference').checked);};$('show-ink').onchange=()=>{pad.visible=$('show-ink').checked;pad.redraw();};$('stroke-order').onclick=()=>{$('animation-controls').hidden=false;$('show-reference').checked=true;reference.show(true);reference.restart();reference.play();};$('play').onclick=()=>reference.play();$('pause').onclick=()=>reference.pause();$('restart').onclick=()=>reference.restart();$('speed').onchange=()=>{reference.speed=Number($('speed').value);};
+$('show-reference').onchange=()=>{reference.pause();reference.show($('show-reference').checked);};$('show-ink').onchange=()=>{pad.visible=$('show-ink').checked;pad.redraw();};$('stroke-order').onclick=()=>{pad.highlightStroke(null);$('animation-controls').hidden=false;$('show-reference').checked=true;reference.show(true);reference.restart();reference.play();};$('play').onclick=()=>reference.play();$('pause').onclick=()=>reference.pause();$('restart').onclick=()=>reference.restart();$('speed').onchange=()=>{reference.speed=Number($('speed').value);};
 $('brush').oninput=()=>{data.settings.brush=Number($('brush').value);appearance();save();};$('dark').onchange=()=>{data.settings.dark=$('dark').checked;appearance();save();};
 $('custom-form').onsubmit=async e=>{e.preventDefault();const c=$('custom-char').value.normalize('NFC').trim();if([...c].length===1&&/^\p{Script=Han}$/u.test(c)&&!catalog[c]){try{await ensureCatalog();}catch{$('custom-status').textContent=t('漢字データを読み込めません。','Kanji data could not load.');return;}}if([...c].length!==1||!/^\p{Script=Han}$/u.test(c)||!catalog[c]){$('custom-status').textContent=t('対応する漢字を一字だけ入力してください。','Enter exactly one supported kanji.');return;}try{await pathsFor(c);if(!data.custom.includes(c))data.custom.push(c);save();$('custom-char').value='';$('custom-status').textContent=t('セットに追加しました。','Added to your set.');}catch{$('custom-status').textContent=t('字形データを読み込めません。','Shape data could not load.');}};
 function confirm(message,action){$('confirm-message').textContent=message;$('confirm').hidden=false;confirmAction=action;$('confirm-yes').focus();}$('confirm-no').onclick=()=>{$('confirm').hidden=true;confirmAction=null;};$('confirm-yes').onclick=()=>{confirmAction?.();$('confirm').hidden=true;confirmAction=null;};

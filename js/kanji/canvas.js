@@ -1,6 +1,6 @@
 export class WritingPad {
  constructor(container,index,labels,onchange){
- this.strokes=[];this.active=null;this.onchange=onchange;
+ this.strokes=[];this.highlightedStroke=null;this.active=null;this.onchange=onchange;
  const div=document.createElement('div');div.className='pad';this.element=div;
  const text=document.createElement('p');text.className='label';text.textContent=`${labels.character} ${index+1}`;
  this.canvas=document.createElement('canvas');this.canvas.setAttribute('role','img');this.brush=1.4;this.color='#182c45';this.visible=true;this.canvas.setAttribute('aria-label',`${labels.character} ${index+1} — ${labels.hint}`);
@@ -15,7 +15,8 @@ export class WritingPad {
  }
  point(e){const r=this.canvas.getBoundingClientRect();return [(e.clientX-r.left)/r.width,(e.clientY-r.top)/r.height];}
  resize(){const r=this.canvas.getBoundingClientRect();const dpr=window.devicePixelRatio||1;this.canvas.width=Math.round(r.width*dpr);this.canvas.height=Math.round(r.height*dpr);this.redraw();}
- redraw(){const c=this.canvas,ctx=c.getContext('2d');ctx.clearRect(0,0,c.width,c.height);if(!this.visible)return;ctx.strokeStyle=this.color;ctx.lineWidth=c.width*this.brush/100;ctx.lineCap='round';ctx.lineJoin='round';for(const s of this.strokes){ctx.beginPath();s.forEach(([x,y],i)=>i?ctx.lineTo(x*c.width,y*c.height):ctx.moveTo(x*c.width,y*c.height));ctx.stroke();}}
+ redraw(){const c=this.canvas,ctx=c.getContext('2d');ctx.clearRect(0,0,c.width,c.height);if(!this.visible)return;ctx.strokeStyle=this.color;ctx.lineWidth=c.width*this.brush/100;ctx.lineCap='round';ctx.lineJoin='round';for(const [index,s] of this.strokes.entries()){const highlighted=this.highlightedStroke===index;ctx.globalAlpha=this.highlightedStroke===null||highlighted?1:.2;ctx.strokeStyle=highlighted?'#bd5519':this.color;ctx.beginPath();s.forEach(([x,y],i)=>i?ctx.lineTo(x*c.width,y*c.height):ctx.moveTo(x*c.width,y*c.height));ctx.stroke();}ctx.globalAlpha=1;}
+ highlightStroke(index){this.highlightedStroke=Number.isInteger(index)?index:null;this.redraw();}
  undo(){if(this.active!==null)return;this.strokes.pop();this.redraw();this.onchange();}
  clear(){this.strokes=[];this.redraw();this.onchange();}
  destroy(){this.observer.disconnect();}

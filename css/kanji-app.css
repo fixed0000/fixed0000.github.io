@@ -105,3 +105,27 @@ th,td { padding:.45rem; border-bottom:1px solid var(--line); text-align:left; }
 .loading-state.idle::before { animation:none; border-color:var(--muted); }
 #practice-loading { font-size:.7rem; color:var(--trainer-muted); margin-left:.75rem; }
 @media(max-width:700px) { #practice-loading { display:block; margin-left:0; } }
+/* Independent experimental stroke-order result within the existing feedback card. */
+.assessment-header { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:.65rem; align-items:start; }
+#result .character-caption { font-size:.65rem; font-weight:500; white-space:nowrap; }
+#result .stroke-order-assessment { min-width:0; color:#40566d; }
+#result .stroke-order-assessment summary { min-height:0; padding:0; font-size:.7rem; line-height:1.5; }
+#result .order-caption { display:block; font-size:.6rem; font-weight:500; }
+#result .stroke-order-assessment strong { display:block; font-size:.78rem; }
+#result .stroke-order-assessment.review strong { color:#804308; }
+#result .stroke-order-assessment.likely strong { color:#205a3a; }
+#result .stroke-order-assessment.unable strong { color:#40566d; }
+.assessment-header:has(.stroke-order-assessment[open]) { grid-template-columns:1fr; }
+#result .stroke-order-explanation { padding-top:.5rem; font-size:.82rem; }
+#result .stroke-order-explanation p { font-size:.82rem; margin:.4rem 0; }
+#result .stroke-order-explanation ol { padding-left:1.2rem; }
+#result .stroke-order-explanation button { font-size:.8rem; white-space:normal; text-align:left; }
+#result .stroke-order-explanation .note { color:#40566d; font-size:.75rem; }
+#result .stroke-match-legend { font-weight:600; }
+.kanji-reference.comparing { opacity:1; }
+.kanji-reference.comparing path { stroke-opacity:.15; }
+.kanji-reference.comparing .matched-stroke { stroke:#006778; stroke-opacity:1; }
+@media(max-width:700px) { #result .assessment-header > h3 { font-size:1.15rem; } }
+/* Resolve feedback ink on the card itself, including the trainer's dark theme. */
+#practice #result { color:var(--trainer-ink); }
+#practice.trainer-dark :focus-visible { outline-color:#9ac6f7; }

@@ -1,0 +1,25 @@
+{
+  "checks": [
+    "correct character and correct sequence",
+    "permuted strokes: character remains correct, warning identifies 1 → 2",
+    "reversed direction is independent of character score",
+    "changed drawing invalidates old order result",
+    "wrong character: order undetermined",
+    "unrecognized drawing: no order confidence",
+    "character progress survives reload without order warnings becoming errors",
+    "keyboard does not fabricate stroke-order data",
+    "exam defers both assessments",
+    "Japanese native touch and mobile fit",
+    "reference animation and dark theme still work",
+    "order-worker failure preserves character result",
+    "stale order result discarded after retry",
+    "JA/EN model credit, CC BY link, NoAI and existing disclaimer; gallery remains absent"
+  ],
+  "errors": [],
+  "audits": [],
+  "fit": {
+    "height": 664,
+    "scroll": 664,
+    "board": 230
+  }
+}

@@ -4,8 +4,9 @@
   "type": "module",
   "scripts": {
     "build": "python3 tools/build-app-markup.py && python3 tools/build-site.py",
-    "test": "node tests/v2-core.mjs && node tests/recognition.cjs artifacts/v2/recognition-results.json && node tests/validate-html.mjs && python3 tests/links.py && node tests/v2-browser.cjs && node tests/v2-resilience.cjs && node tests/v2-extra.cjs",
-    "serve": "python3 -m http.server 8000"
+    "test": "node --test tests/stroke-order.test.mjs && node tests/stroke-order-coverage.mjs && node tests/v2-core.mjs && node tests/recognition.cjs artifacts/v2/recognition-results.json && node tests/validate-html.mjs && python3 tests/links.py && node tests/v2-browser.cjs && node tests/v2-resilience.cjs && node tests/v2-extra.cjs && node tests/stroke-order-browser.cjs",
+    "serve": "python3 -m http.server 8000",
+    "test:stroke-order": "node --test tests/stroke-order.test.mjs && node tests/stroke-order-coverage.mjs && node tests/stroke-order-browser.cjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.11.0",

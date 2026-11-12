@@ -1,0 +1,25 @@
+✔ correct order and direction (6.661593ms)
+✔ independent pointer fixture: handwritten 山 (2.599656ms)
+✔ swapped strokes are possible order violations (2.338527ms)
+✔ a reversed stroke is a direction warning (2.281438ms)
+✔ swapped and reversed strokes remain separate issues (1.000218ms)
+✔ uniform scale and translation do not change verdict (1.675578ms)
+✔ small rotation and distortion do not become order errors (1.664571ms)
+✔ different recognized character: do not grade target stroke order (0.307551ms)
+✔ unrecognized character has no confident order grade (0.298171ms)
+✔ merged strokes cannot be reliably segmented (0.706299ms)
+✔ missing stroke is unable, not an order violation (0.476667ms)
+✔ matching stroke count alone is insufficient (1.407557ms)
+✔ equally plausible stroke assignment is rejected (0.484563ms)
+✔ close parallel strokes are ambiguous (1.562414ms)
+✔ direction of a dot-like stroke is not guessed (0.274745ms)
+✔ empty, non-finite, tap and excessive inputs are safe (0.466732ms)
+✔ single stroke 一 can be checked without an alternative assignment (0.308802ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 265.759878
