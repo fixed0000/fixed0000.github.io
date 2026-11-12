@@ -1,0 +1,16 @@
+{
+  "source_provided_by_owner": true,
+  "model_name": "Baby Chao",
+  "source_url": "https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c",
+  "sketchfab_account": "Alice.Sacco",
+  "license": {
+    "label": "CC Attribution",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "source_description": "From Sonic Adventure 2",
+  "noai": true,
+  "verified_via": "https://api.sketchfab.com/v3/models/4bbffce818cc45aa88c9862ebe296e7c",
+  "original_character_rights": "Remain with the relevant rights holders; no SEGA approval asserted",
+  "model_used_as_generative_ai_input": false,
+  "game_repository_modified": false
+}

@@ -1,0 +1,532 @@
+{
+  "canonical": {
+    "likely": 68,
+    "review": 0,
+    "unable": 0
+  },
+  "perturbed": {
+    "likely": 68,
+    "review": 0,
+    "unable": 0
+  },
+  "cases": [
+    {
+      "char": "一",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "事",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "人",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "任",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "会",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "使",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "保",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "党",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "判",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "効",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "区",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "協",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "同",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "国",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "境",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "変",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "妥",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "始",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "対",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "山",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "川",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "年",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "待",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "思",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "性",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "愛",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "把",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "拠",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "持",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "握",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "政",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "断",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "日",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "月",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "木",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "根",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "概",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "構",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "権",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "氏",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "民",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "決",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "派",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "済",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "測",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "現",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "発",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "社",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "第",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "約",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "終",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "経",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "結",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "統",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "総",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "自",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "融",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "試",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "議",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "責",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "資",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "造",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "連",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "選",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "部",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "長",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "関",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "領",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    }
+  ],
+  "recognition": [
+    {
+      "char": "山",
+      "original": "山",
+      "permuted": "山",
+      "reversed": "山"
+    },
+    {
+      "char": "人",
+      "original": "人",
+      "permuted": "人",
+      "reversed": "人"
+    },
+    {
+      "char": "川",
+      "original": "川",
+      "permuted": "川",
+      "reversed": "川"
+    },
+    {
+      "char": "土",
+      "original": "土",
+      "permuted": "土",
+      "reversed": "土"
+    },
+    {
+      "char": "士",
+      "original": "士",
+      "permuted": "士",
+      "reversed": "士"
+    },
+    {
+      "char": "日",
+      "original": "日",
+      "permuted": "日",
+      "reversed": "日"
+    }
+  ],
+  "unchanged": {
+    "js/kanji/recognizer.js": "29db665527573146bb36dda728f6cb0d1fcb326825fda8f07985789c68392bb1",
+    "js/kanji/worker.js": "11d7f2158a45fb401db07639d458cb0a25122a34be72b1b8e74aa52d8e6200c3"
+  }
+}

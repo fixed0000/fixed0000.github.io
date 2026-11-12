@@ -1,0 +1,51 @@
+
+> test
+> node --test tests/stroke-order.test.mjs && node tests/stroke-order-coverage.mjs && node tests/v2-core.mjs && node tests/recognition.cjs artifacts/v2/recognition-results.json && node tests/validate-html.mjs && python3 tests/links.py && node tests/v2-browser.cjs && node tests/v2-resilience.cjs && node tests/v2-extra.cjs && node tests/stroke-order-browser.cjs
+
+✔ correct order and direction (3.960197ms)
+✔ independent pointer fixture: handwritten 山 (1.150761ms)
+✔ swapped strokes are possible order violations (1.213456ms)
+✔ a reversed stroke is a direction warning (0.98622ms)
+✔ swapped and reversed strokes remain separate issues (1.305517ms)
+✔ uniform scale and translation do not change verdict (1.41186ms)
+✔ small rotation and distortion do not become order errors (1.096283ms)
+✔ different recognized character: do not grade target stroke order (0.275852ms)
+✔ unrecognized character has no confident order grade (0.502257ms)
+✔ merged strokes cannot be reliably segmented (0.366679ms)
+✔ missing stroke is unable, not an order violation (0.203261ms)
+✔ matching stroke count alone is insufficient (1.131127ms)
+✔ equally plausible stroke assignment is rejected (2.288445ms)
+✔ close parallel strokes are ambiguous (0.415893ms)
+✔ direction of a dot-like stroke is not guessed (0.646736ms)
+✔ empty, non-finite, tap and excessive inputs are safe (0.45193ms)
+✔ single stroke 一 can be checked without an alternative assignment (0.303853ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 294.649934
+Coverage { likely: 68, review: 0, unable: 0 } { likely: 68, review: 0, unable: 0 } ; original recognizer unchanged
+PASS 68 single-character prompts; classifications; migration; import validation; stroke paths
+{
+  '山': { char: '山', candidates: [ [Object], [Object], [Object] ] },
+  '人': { char: '人', candidates: [ [Object], [Object], [Object] ] },
+  '川': { char: '川', candidates: [ [Object], [Object], [Object] ] },
+  '土': { char: '土', candidates: [ [Object], [Object], [Object] ] },
+  '士': { char: '士', candidates: [ [Object], [Object], [Object] ] },
+  '日': { char: '日', candidates: [ [Object], [Object], [Object] ] },
+  empty: { char: null, candidates: [] },
+  partialMountain: { char: null, candidates: [ [Object], [Object], [Object] ] },
+  scribble: { char: null, candidates: [ [Object], [Object], [Object] ] },
+  durationMs: 16.054455000000075
+}
+PASS 29 HTML documents
+{'html_files': 29, 'local_references': 467, 'errors': []}
+mobile fit { height: 664, scroll: 664, viewport: 664, board: 230 }
+PASS v2 workflows and 22 pages
+PASS storage denial does not block keyboard practice; recognizer failure leaves keyboard fallback usable; unreadable progress is not silently overwritten
+PASS extra app and compatibility flows
+order mobile fit { height: 664, scroll: 664, board: 230 }
+PASS stroke-order UI, independent results and model credits
