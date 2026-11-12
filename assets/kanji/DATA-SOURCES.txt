@@ -1,0 +1,9 @@
+KanjiVG: SVG paths in document order, grouped by Unicode block. CC BY-SA 3.0. See NOTICE.txt and LICENSE.txt.
+Kanji metadata: David Gouveia, kanji-data, MIT scripts/data packaging.
+Source https://github.com/davidluzgouveia/kanji-data/tree/00fd7079c3890f430759536f91aa5e854ec0ca4f
+Selected fields: meanings, on/kun readings, grade (KANJIDIC2 origin); jlpt_new (Jonathan Waller study lists, not official JLPT). No WaniKani fields are redistributed.
+Upstream KANJIDIC2 by EDRDG: CC BY-SA 4.0, https://www.edrdg.org/wiki/index.php/KANJIDIC_Project and https://www.edrdg.org/edrdg/licence.html . Attribution: Electronic Dictionary Research and Development Group.
+Kanken elementary scope: official https://www.kanken.or.jp/kanken/outline/degree.html . 10 to 5 kyu correspond to cumulative elementary grades 1 to 6. Sets use grade membership as a new-character practice subset, not complete examination syllabuses. Grade field follows the older school allocation; only a small stable subset is used. Higher kyu are marked Preparing; no mapping from JLPT is made.
+English meanings abbreviated from upstream; not an official exam list.
+JLPT classification attribution: Jonathan Waller, Tanos JLPT Resources, CC BY according to upstream attribution. Not an official JLPT list.
+Derived catalog.json and tasks.json retain CC BY-SA 4.0 for KANJIDIC2-derived data. SVG shape shards remain CC BY-SA 3.0.

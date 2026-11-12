@@ -1,0 +1,122 @@
+[
+  {
+    "width": 320,
+    "path": "/",
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "path": "/en/",
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "path": "/research/",
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "path": "/projects/kanji-recall/",
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "path": "/about/",
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "path": "/en/projects/morigarden/",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "path": "/",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "path": "/en/",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "path": "/research/",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "path": "/projects/kanji-recall/",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "path": "/about/",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "path": "/en/projects/morigarden/",
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "path": "/",
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "path": "/en/",
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "path": "/research/",
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "path": "/projects/kanji-recall/",
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "path": "/about/",
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "path": "/en/projects/morigarden/",
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "path": "/",
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "path": "/en/",
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "path": "/research/",
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "path": "/projects/kanji-recall/",
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "path": "/about/",
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "path": "/en/projects/morigarden/",
+    "overflow": false
+  }
+]
