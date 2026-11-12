@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/fixed0000/MoriGarden",
+  "commit": "ad4523d1529c9b45bbfbc8c7162925e63cb51fa5",
+  "original_repository_changed": false,
+  "isolated_copy": true,
+  "godot": "4.5.1 stable mono",
+  "dotnet_sdk": "8.0.428",
+  "build": {
+    "exit_code": 0,
+    "warnings": 0,
+    "errors": 0
+  },
+  "headless_start": {
+    "quit_after_frames": 180,
+    "exit_code": 0,
+    "errors_in_log": 0
+  },
+  "visual_gameplay_test": false,
+  "screenshots_published": false,
+  "asset_license_confirmed": false
+}

@@ -1,0 +1,9 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {fresh,validate,migrate,addAttempt} from '../js/kanji/store.js';
+const tasks=JSON.parse(fs.readFileSync('assets/kanji/tasks.json')),catalog=JSON.parse(fs.readFileSync('assets/kanji/catalog.json'));
+assert(tasks.every(x=>[...x.char].length===1&&/^\p{Script=Han}$/u.test(x.char)));assert.equal(new Set(tasks.map(x=>x.id)).size,tasks.length);assert.equal(new Set(tasks.map(x=>[x.reading,x.meaning,x.strokes].join('|'))).size,tasks.length);
+for(const level of ['N1','N2','N3','N4','N5'])assert(tasks.some(x=>x.jlpt===level));for(let grade=1;grade<=6;grade++)assert(tasks.some(x=>x.schoolGrade===grade&&x.kanken===`${11-grade}級`));assert(!tasks.some(x=>['4級','3級','準2級','2級','準1級','1級'].includes(x.kanken)));
+const source=JSON.parse(fs.readFileSync('assets/kanji/words.json')),r={attempts:3,correct:1,errors:1,unrecognized:1,skips:0,reveals:0,completed:true,difficult:true,lastReviewed:'2026-11-12T00:00:00Z'},old={version:1,words:{[source.find(x=>x.word==='山').id]:r,[source.find(x=>x.word==='経験').id]:r},daily:['2026-11-12'],bestStreak:3};
+const migrated=migrate(old,source);assert.deepEqual(migrated.legacy,old);assert.equal(migrated.records['山'].attempts,3);assert(!migrated.records['経']);validate(migrated);const d=fresh();addAttempt(d,'持','unrecognized','','N4');assert.equal(d.records['持'].errors,0);addAttempt(d,'持','incorrect','待','N4');assert.equal(d.records['持'].errors,1);assert.equal(d.history.length,2);validate(JSON.parse(JSON.stringify(d)));assert.throws(()=>validate({...d,version:1}));assert.throws(()=>validate({...d,custom:['経験']}));
+for(const x of tasks){const key=(x.char.codePointAt(0)>>8).toString(16),paths=JSON.parse(fs.readFileSync(`assets/kanji/shapes/${key}.json`))[x.char];assert.equal(paths.length,x.strokes);assert(catalog[x.char]);}
+console.log('PASS',tasks.length,'single-character prompts; classifications; migration; import validation; stroke paths');

@@ -1,0 +1,682 @@
+[
+  {
+    "id": "u4e00",
+    "char": "一",
+    "reading": "イチ",
+    "meaning": "one; one radical (no.1)",
+    "strokes": 1,
+    "jlpt": "N5",
+    "schoolGrade": 1,
+    "kanken": "10級"
+  },
+  {
+    "id": "u4e8b",
+    "char": "事",
+    "reading": "ジ",
+    "meaning": "matter; thing; fact",
+    "strokes": 8,
+    "jlpt": "N4",
+    "schoolGrade": 3,
+    "kanken": "8級"
+  },
+  {
+    "id": "u4eba",
+    "char": "人",
+    "reading": "ジン",
+    "meaning": "person",
+    "strokes": 2,
+    "jlpt": "N5",
+    "schoolGrade": 1,
+    "kanken": "10級"
+  },
+  {
+    "id": "u4efb",
+    "char": "任",
+    "reading": "ニン",
+    "meaning": "responsibility; duty; term",
+    "strokes": 6,
+    "jlpt": "N3",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u4f1a",
+    "char": "会",
+    "reading": "カイ",
+    "meaning": "meeting; meet; party",
+    "strokes": 6,
+    "jlpt": "N4",
+    "schoolGrade": 2,
+    "kanken": "9級"
+  },
+  {
+    "id": "u4f7f",
+    "char": "使",
+    "reading": "シ",
+    "meaning": "use; send on a mission; order",
+    "strokes": 8,
+    "jlpt": "N4",
+    "schoolGrade": 3,
+    "kanken": "8級"
+  },
+  {
+    "id": "u4fdd",
+    "char": "保",
+    "reading": "ホ",
+    "meaning": "protect; guarantee; keep",
+    "strokes": 9,
+    "jlpt": "N1",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u515a",
+    "char": "党",
+    "reading": "トウ",
+    "meaning": "party; faction; clique",
+    "strokes": 10,
+    "jlpt": "N2",
+    "schoolGrade": 6,
+    "kanken": "5級"
+  },
+  {
+    "id": "u5224",
+    "char": "判",
+    "reading": "ハン",
+    "meaning": "judgement; signature; stamp",
+    "strokes": 7,
+    "jlpt": "N3",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u52b9",
+    "char": "効",
+    "reading": "コウ",
+    "meaning": "merit; efficacy; efficiency",
+    "strokes": 8,
+    "jlpt": "N2",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u533a",
+    "char": "区",
+    "reading": "ク",
+    "meaning": "ward; district",
+    "strokes": 4,
+    "jlpt": "N2",
+    "schoolGrade": 3,
+    "kanken": "8級"
+  },
+  {
+    "id": "u5354",
+    "char": "協",
+    "reading": "キョウ",
+    "meaning": "co-; cooperation",
+    "strokes": 8,
+    "jlpt": "N2",
+    "schoolGrade": 4,
+    "kanken": "7級"
+  },
+  {
+    "id": "u540c",
+    "char": "同",
+    "reading": "ドウ",
+    "meaning": "same; agree; equal",
+    "strokes": 6,
+    "jlpt": "N4",
+    "schoolGrade": 2,
+    "kanken": "9級"
+  },
+  {
+    "id": "u56fd",
+    "char": "国",
+    "reading": "コク",
+    "meaning": "country",
+    "strokes": 8,
+    "jlpt": "N5",
+    "schoolGrade": 2,
+    "kanken": "9級"
+  },
+  {
+    "id": "u5883",
+    "char": "境",
+    "reading": "キョウ",
+    "meaning": "boundary; border; region",
+    "strokes": 14,
+    "jlpt": "N2",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u5909",
+    "char": "変",
+    "reading": "ヘン",
+    "meaning": "unusual; change; strange",
+    "strokes": 9,
+    "jlpt": "N3",
+    "schoolGrade": 4,
+    "kanken": "7級"
+  },
+  {
+    "id": "u59a5",
+    "char": "妥",
+    "reading": "ダ",
+    "meaning": "gentle; peace; depravity",
+    "strokes": 7,
+    "jlpt": "N1",
+    "schoolGrade": 8,
+    "kanken": null
+  },
+  {
+    "id": "u59cb",
+    "char": "始",
+    "reading": "シ",
+    "meaning": "commence; begin",
+    "strokes": 8,
+    "jlpt": "N4",
+    "schoolGrade": 3,
+    "kanken": "8級"
+  },
+  {
+    "id": "u5bfe",
+    "char": "対",
+    "reading": "タイ",
+    "meaning": "vis-a-vis; opposite; even",
+    "strokes": 7,
+    "jlpt": "N3",
+    "schoolGrade": 3,
+    "kanken": "8級"
+  },
+  {
+    "id": "u5c71",
+    "char": "山",
+    "reading": "サン",
+    "meaning": "mountain",
+    "strokes": 3,
+    "jlpt": "N5",
+    "schoolGrade": 1,
+    "kanken": "10級"
+  },
+  {
+    "id": "u5ddd",
+    "char": "川",
+    "reading": "セン",
+    "meaning": "stream; river; river or three-stroke river radical (no. 47)",
+    "strokes": 3,
+    "jlpt": "N5",
+    "schoolGrade": 1,
+    "kanken": "10級"
+  },
+  {
+    "id": "u5e74",
+    "char": "年",
+    "reading": "ネン",
+    "meaning": "year; counter for years",
+    "strokes": 6,
+    "jlpt": "N5",
+    "schoolGrade": 1,
+    "kanken": "10級"
+  },
+  {
+    "id": "u5f85",
+    "char": "待",
+    "reading": "タイ",
+    "meaning": "wait; depend on",
+    "strokes": 9,
+    "jlpt": "N4",
+    "schoolGrade": 3,
+    "kanken": "8級"
+  },
+  {
+    "id": "u601d",
+    "char": "思",
+    "reading": "シ",
+    "meaning": "think",
+    "strokes": 9,
+    "jlpt": "N4",
+    "schoolGrade": 2,
+    "kanken": "9級"
+  },
+  {
+    "id": "u6027",
+    "char": "性",
+    "reading": "セイ",
+    "meaning": "sex; gender; nature",
+    "strokes": 8,
+    "jlpt": "N3",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u611b",
+    "char": "愛",
+    "reading": "アイ",
+    "meaning": "love; affection; favourite",
+    "strokes": 13,
+    "jlpt": "N3",
+    "schoolGrade": 4,
+    "kanken": "7級"
+  },
+  {
+    "id": "u628a",
+    "char": "把",
+    "reading": "ハ",
+    "meaning": "grasp; faggot; bunch",
+    "strokes": 7,
+    "jlpt": "N1",
+    "schoolGrade": 8,
+    "kanken": null
+  },
+  {
+    "id": "u62e0",
+    "char": "拠",
+    "reading": "キョ",
+    "meaning": "foothold; based on; follow",
+    "strokes": 8,
+    "jlpt": "N1",
+    "schoolGrade": 8,
+    "kanken": null
+  },
+  {
+    "id": "u6301",
+    "char": "持",
+    "reading": "ジ",
+    "meaning": "hold; have",
+    "strokes": 9,
+    "jlpt": "N4",
+    "schoolGrade": 3,
+    "kanken": "8級"
+  },
+  {
+    "id": "u63e1",
+    "char": "握",
+    "reading": "アク",
+    "meaning": "grip; hold; mould sushi",
+    "strokes": 12,
+    "jlpt": "N1",
+    "schoolGrade": 8,
+    "kanken": null
+  },
+  {
+    "id": "u653f",
+    "char": "政",
+    "reading": "セイ",
+    "meaning": "politics; government",
+    "strokes": 9,
+    "jlpt": "N3",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u65ad",
+    "char": "断",
+    "reading": "ダン",
+    "meaning": "severance; decline; refuse",
+    "strokes": 11,
+    "jlpt": "N3",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u65e5",
+    "char": "日",
+    "reading": "ニチ",
+    "meaning": "day; sun; japan",
+    "strokes": 4,
+    "jlpt": "N5",
+    "schoolGrade": 1,
+    "kanken": "10級"
+  },
+  {
+    "id": "u6708",
+    "char": "月",
+    "reading": "ゲツ",
+    "meaning": "month; moon",
+    "strokes": 4,
+    "jlpt": "N5",
+    "schoolGrade": 1,
+    "kanken": "10級"
+  },
+  {
+    "id": "u6728",
+    "char": "木",
+    "reading": "ボク",
+    "meaning": "tree; wood",
+    "strokes": 4,
+    "jlpt": "N5",
+    "schoolGrade": 1,
+    "kanken": "10級"
+  },
+  {
+    "id": "u6839",
+    "char": "根",
+    "reading": "コン",
+    "meaning": "root; radical; head (pimple)",
+    "strokes": 10,
+    "jlpt": "N2",
+    "schoolGrade": 3,
+    "kanken": "8級"
+  },
+  {
+    "id": "u6982",
+    "char": "概",
+    "reading": "ガイ",
+    "meaning": "outline; condition; approximation",
+    "strokes": 14,
+    "jlpt": "N1",
+    "schoolGrade": 8,
+    "kanken": null
+  },
+  {
+    "id": "u69cb",
+    "char": "構",
+    "reading": "コウ",
+    "meaning": "posture; build; pretend",
+    "strokes": 14,
+    "jlpt": "N3",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u6a29",
+    "char": "権",
+    "reading": "ケン",
+    "meaning": "authority; power; rights",
+    "strokes": 15,
+    "jlpt": "N3",
+    "schoolGrade": 6,
+    "kanken": "5級"
+  },
+  {
+    "id": "u6c0f",
+    "char": "氏",
+    "reading": "シ",
+    "meaning": "family name; surname; clan",
+    "strokes": 4,
+    "jlpt": "N1",
+    "schoolGrade": 4,
+    "kanken": "7級"
+  },
+  {
+    "id": "u6c11",
+    "char": "民",
+    "reading": "ミン",
+    "meaning": "people; nation; subjects",
+    "strokes": 5,
+    "jlpt": "N3",
+    "schoolGrade": 4,
+    "kanken": "7級"
+  },
+  {
+    "id": "u6c7a",
+    "char": "決",
+    "reading": "ケツ",
+    "meaning": "decide; fix; agree upon",
+    "strokes": 7,
+    "jlpt": "N3",
+    "schoolGrade": 3,
+    "kanken": "8級"
+  },
+  {
+    "id": "u6d3e",
+    "char": "派",
+    "reading": "ハ",
+    "meaning": "faction; group; party",
+    "strokes": 9,
+    "jlpt": "N1",
+    "schoolGrade": 6,
+    "kanken": "5級"
+  },
+  {
+    "id": "u6e08",
+    "char": "済",
+    "reading": "サイ",
+    "meaning": "settle (debt, etc.); relieve (burden); finish",
+    "strokes": 11,
+    "jlpt": "N3",
+    "schoolGrade": 6,
+    "kanken": "5級"
+  },
+  {
+    "id": "u6e2c",
+    "char": "測",
+    "reading": "ソク",
+    "meaning": "fathom; plan; scheme",
+    "strokes": 12,
+    "jlpt": "N2",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u73fe",
+    "char": "現",
+    "reading": "ゲン",
+    "meaning": "present; existing; actual",
+    "strokes": 11,
+    "jlpt": "N3",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u767a",
+    "char": "発",
+    "reading": "ハツ",
+    "meaning": "departure; discharge; publish",
+    "strokes": 9,
+    "jlpt": "N4",
+    "schoolGrade": 3,
+    "kanken": "8級"
+  },
+  {
+    "id": "u793e",
+    "char": "社",
+    "reading": "シャ",
+    "meaning": "company; firm; office",
+    "strokes": 7,
+    "jlpt": "N4",
+    "schoolGrade": 2,
+    "kanken": "9級"
+  },
+  {
+    "id": "u7b2c",
+    "char": "第",
+    "reading": "ダイ",
+    "meaning": "no.; residence",
+    "strokes": 11,
+    "jlpt": "N1",
+    "schoolGrade": 3,
+    "kanken": "8級"
+  },
+  {
+    "id": "u7d04",
+    "char": "約",
+    "reading": "ヤク",
+    "meaning": "promise; approximately; shrink",
+    "strokes": 9,
+    "jlpt": "N3",
+    "schoolGrade": 4,
+    "kanken": "7級"
+  },
+  {
+    "id": "u7d42",
+    "char": "終",
+    "reading": "シュウ",
+    "meaning": "end; finish",
+    "strokes": 11,
+    "jlpt": "N4",
+    "schoolGrade": 3,
+    "kanken": "8級"
+  },
+  {
+    "id": "u7d4c",
+    "char": "経",
+    "reading": "ケイ",
+    "meaning": "sutra; longitude; pass thru",
+    "strokes": 11,
+    "jlpt": "N3",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u7d50",
+    "char": "結",
+    "reading": "ケツ",
+    "meaning": "tie; bind; contract",
+    "strokes": 12,
+    "jlpt": "N1",
+    "schoolGrade": 4,
+    "kanken": "7級"
+  },
+  {
+    "id": "u7d71",
+    "char": "統",
+    "reading": "トウ",
+    "meaning": "overall; relationship; ruling",
+    "strokes": 12,
+    "jlpt": "N1",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u7dcf",
+    "char": "総",
+    "reading": "ソウ",
+    "meaning": "general; whole; all",
+    "strokes": 14,
+    "jlpt": "N2",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u81ea",
+    "char": "自",
+    "reading": "ジ",
+    "meaning": "oneself",
+    "strokes": 6,
+    "jlpt": "N4",
+    "schoolGrade": 2,
+    "kanken": "9級"
+  },
+  {
+    "id": "u878d",
+    "char": "融",
+    "reading": "ユウ",
+    "meaning": "dissolve; melt",
+    "strokes": 16,
+    "jlpt": "N1",
+    "schoolGrade": 8,
+    "kanken": null
+  },
+  {
+    "id": "u8a66",
+    "char": "試",
+    "reading": "シ",
+    "meaning": "test; try; attempt",
+    "strokes": 13,
+    "jlpt": "N4",
+    "schoolGrade": 4,
+    "kanken": "7級"
+  },
+  {
+    "id": "u8b70",
+    "char": "議",
+    "reading": "ギ",
+    "meaning": "deliberation; consultation; debate",
+    "strokes": 20,
+    "jlpt": "N3",
+    "schoolGrade": 4,
+    "kanken": "7級"
+  },
+  {
+    "id": "u8cac",
+    "char": "責",
+    "reading": "セキ",
+    "meaning": "blame; condemn; censure",
+    "strokes": 11,
+    "jlpt": "N3",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u8cc7",
+    "char": "資",
+    "reading": "シ",
+    "meaning": "assets; resources; capital",
+    "strokes": 13,
+    "jlpt": "N3",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u9020",
+    "char": "造",
+    "reading": "ゾウ",
+    "meaning": "create; make; structure",
+    "strokes": 10,
+    "jlpt": "N2",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  },
+  {
+    "id": "u9023",
+    "char": "連",
+    "reading": "レン",
+    "meaning": "take along; lead; join",
+    "strokes": 10,
+    "jlpt": "N3",
+    "schoolGrade": 4,
+    "kanken": "7級"
+  },
+  {
+    "id": "u9078",
+    "char": "選",
+    "reading": "セン",
+    "meaning": "elect; select; choose",
+    "strokes": 15,
+    "jlpt": "N3",
+    "schoolGrade": 4,
+    "kanken": "7級"
+  },
+  {
+    "id": "u90e8",
+    "char": "部",
+    "reading": "ブ",
+    "meaning": "section; bureau; dept",
+    "strokes": 11,
+    "jlpt": "N3",
+    "schoolGrade": 3,
+    "kanken": "8級"
+  },
+  {
+    "id": "u9577",
+    "char": "長",
+    "reading": "チョウ",
+    "meaning": "long; leader; superior",
+    "strokes": 8,
+    "jlpt": "N5",
+    "schoolGrade": 2,
+    "kanken": "9級"
+  },
+  {
+    "id": "u95a2",
+    "char": "関",
+    "reading": "カン",
+    "meaning": "connection; barrier; gateway",
+    "strokes": 14,
+    "jlpt": "N3",
+    "schoolGrade": 4,
+    "kanken": "7級"
+  },
+  {
+    "id": "u9818",
+    "char": "領",
+    "reading": "リョウ",
+    "meaning": "jurisdiction; dominion; territory",
+    "strokes": 14,
+    "jlpt": "N2",
+    "schoolGrade": 5,
+    "kanken": "6級"
+  }
+]
