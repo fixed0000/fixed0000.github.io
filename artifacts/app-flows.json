@@ -1,0 +1,18 @@
+{
+  "passed": [
+    "three-answer streak",
+    "mixed set unlock",
+    "daily completion",
+    "multiple kanji typed answer",
+    "retry",
+    "wrong answer",
+    "reveal",
+    "skip",
+    "finish summary",
+    "keyboard language switch",
+    "native CDP touch",
+    "resize retains strokes",
+    "undo clears touch stroke"
+  ],
+  "errors": []
+}

@@ -1,0 +1,10 @@
+KanjiVG stroke data — Ulrich Apel and KanjiVG contributors.
+https://kanjivg.tagaini.net/  https://github.com/KanjiVG/kanjivg
+License: Creative Commons Attribution-ShareAlike 3.0 (CC BY-SA 3.0).
+https://creativecommons.org/licenses/by-sa/3.0/
+Full license: LICENSE.txt in this directory.
+Modifications: SVG paths sampled at 16 equally spaced arc-length positions per
+stroke, rounded to integer SVG units, packed as base64 byte arrays in JSON by tools/build-templates.cjs. Derived data remains
+CC BY-SA 3.0. This license applies to the data, not to the entire portfolio.
+This dataset contains idealized stroke shapes, not handwriting training samples.
+610091ce618cf757ed1357a8954cd65283e015d6

@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "/",
+    "/experience/",
+    "/skills/",
+    "/education/",
+    "/research/",
+    "/contact/",
+    "/projects/kanji-recall/",
+    "/projects/morigarden/",
+    "/research/family/",
+    "/research/monogatari/",
+    "/en/",
+    "/en/experience/",
+    "/en/skills/",
+    "/en/education/",
+    "/en/research/",
+    "/en/contact/",
+    "/en/projects/kanji-recall/",
+    "/en/projects/morigarden/",
+    "/en/research/family/",
+    "/en/research/monogatari/"
+  ],
+  "handwritingResult": "Correct\nInput / recognized: 川\nAnswer: 川",
+  "dpr": {
+    "width": 960,
+    "css": 320,
+    "dpr": 3
+  },
+  "errors": [],
+  "a11y": [],
+  "checks": [
+    "correct keyboard",
+    "incorrect keyboard",
+    "empty input",
+    "multi-character segmentation",
+    "progress restoration",
+    "difficult review",
+    "manual pointer handwriting",
+    "undo",
+    "reset",
+    "mobile widths",
+    "touch event dispatch",
+    "rotation",
+    "storage denied",
+    "recognition load failure",
+    "PDF signatures",
+    "legacy redirects"
+  ]
+}

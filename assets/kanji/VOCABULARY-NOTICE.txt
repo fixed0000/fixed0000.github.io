@@ -1,0 +1,4 @@
+Level and reading metadata: Jonathan Waller (Tanos), via Stephen McKinnon / yomitan-jlpt-vocab, CC BY 4.0.
+https://github.com/stephenmk/yomitan-jlpt-vocab
+Meanings edited specifically for these practice prompts. This is not an official JLPT list.
+Source snapshot: b062d4e38c4bdd0950ae1d4ec55f04b176182e03

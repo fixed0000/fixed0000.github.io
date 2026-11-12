@@ -1,0 +1,242 @@
+[
+  {
+    "id": "n5-1302680",
+    "word": "山",
+    "reading": "やま",
+    "meaning": {
+      "ja": "山のような地形",
+      "en": "mountain"
+    },
+    "level": "N5",
+    "characters": 1,
+    "answers": [
+      "山"
+    ],
+    "source": "https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n5.csv",
+    "jmdict": "1302680"
+  },
+  {
+    "id": "n5-1390020",
+    "word": "川",
+    "reading": "かわ",
+    "meaning": {
+      "ja": "水が流れる自然の流路",
+      "en": "river"
+    },
+    "level": "N5",
+    "characters": 1,
+    "answers": [
+      "川"
+    ],
+    "source": "https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n5.csv",
+    "jmdict": "1390020"
+  },
+  {
+    "id": "n5-1580640",
+    "word": "人",
+    "reading": "ひと",
+    "meaning": {
+      "ja": "人間・人物",
+      "en": "person"
+    },
+    "level": "N5",
+    "characters": 1,
+    "answers": [
+      "人"
+    ],
+    "source": "https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n5.csv",
+    "jmdict": "1580640"
+  },
+  {
+    "id": "n4-1251270",
+    "word": "経験",
+    "reading": "けいけん",
+    "meaning": {
+      "ja": "実際に見聞きしたり行ったりすること",
+      "en": "experience"
+    },
+    "level": "N4",
+    "characters": 2,
+    "answers": [
+      "経験"
+    ],
+    "source": "https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n4.csv",
+    "jmdict": "1251270"
+  },
+  {
+    "id": "n4-1538130",
+    "word": "約束",
+    "reading": "やくそく",
+    "meaning": {
+      "ja": "相手と取り決めること",
+      "en": "promise"
+    },
+    "level": "N4",
+    "characters": 2,
+    "answers": [
+      "約束"
+    ],
+    "source": "https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n4.csv",
+    "jmdict": "1538130"
+  },
+  {
+    "id": "n4-1341670",
+    "word": "準備",
+    "reading": "じゅんび",
+    "meaning": {
+      "ja": "前もって用意すること",
+      "en": "preparation"
+    },
+    "level": "N4",
+    "characters": 2,
+    "answers": [
+      "準備"
+    ],
+    "source": "https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n4.csv",
+    "jmdict": "1341670"
+  },
+  {
+    "id": "n3-1213280",
+    "word": "環境",
+    "reading": "かんきょう",
+    "meaning": {
+      "ja": "周囲の状況",
+      "en": "environment"
+    },
+    "level": "N3",
+    "characters": 2,
+    "answers": [
+      "環境"
+    ],
+    "source": "https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n3.csv",
+    "jmdict": "1213280"
+  },
+  {
+    "id": "n3-1383180",
+    "word": "責任",
+    "reading": "せきにん",
+    "meaning": {
+      "ja": "引き受けるべき務め",
+      "en": "responsibility"
+    },
+    "level": "N3",
+    "characters": 2,
+    "answers": [
+      "責任"
+    ],
+    "source": "https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n3.csv",
+    "jmdict": "1383180"
+  },
+  {
+    "id": "n3-1478620",
+    "word": "判断",
+    "reading": "はんだん",
+    "meaning": {
+      "ja": "考えて決めること",
+      "en": "judgment; decision"
+    },
+    "level": "N3",
+    "characters": 2,
+    "answers": [
+      "判断"
+    ],
+    "source": "https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n3.csv",
+    "jmdict": "1478620"
+  },
+  {
+    "id": "n2-1531090",
+    "word": "矛盾",
+    "reading": "むじゅん",
+    "meaning": {
+      "ja": "つじつまが合わないこと",
+      "en": "contradiction"
+    },
+    "level": "N2",
+    "characters": 2,
+    "answers": [
+      "矛盾"
+    ],
+    "source": "https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n2.csv",
+    "jmdict": "1531090"
+  },
+  {
+    "id": "n2-1279790",
+    "word": "構造",
+    "reading": "こうぞう",
+    "meaning": {
+      "ja": "組み立て・仕組み",
+      "en": "structure"
+    },
+    "level": "N2",
+    "characters": 2,
+    "answers": [
+      "構造"
+    ],
+    "source": "https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n2.csv",
+    "jmdict": "1279790"
+  },
+  {
+    "id": "n2-1404570",
+    "word": "測定",
+    "reading": "そくてい",
+    "meaning": {
+      "ja": "量や大きさを測ること",
+      "en": "measurement"
+    },
+    "level": "N2",
+    "characters": 2,
+    "answers": [
+      "測定"
+    ],
+    "source": "https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n2.csv",
+    "jmdict": "1404570"
+  },
+  {
+    "id": "n1-1204480",
+    "word": "概念",
+    "reading": "がいねん",
+    "meaning": {
+      "ja": "物事についての抽象的な考え",
+      "en": "concept"
+    },
+    "level": "N1",
+    "characters": 2,
+    "answers": [
+      "概念"
+    ],
+    "source": "https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n1.csv",
+    "jmdict": "1204480"
+  },
+  {
+    "id": "n1-1290120",
+    "word": "根拠",
+    "reading": "こんきょ",
+    "meaning": {
+      "ja": "考えや判断のよりどころ",
+      "en": "basis; grounds"
+    },
+    "level": "N1",
+    "characters": 2,
+    "answers": [
+      "根拠"
+    ],
+    "source": "https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n1.csv",
+    "jmdict": "1290120"
+  },
+  {
+    "id": "n1-1408510",
+    "word": "妥協",
+    "reading": "だきょう",
+    "meaning": {
+      "ja": "互いに譲り合って合意すること",
+      "en": "compromise"
+    },
+    "level": "N1",
+    "characters": 2,
+    "answers": [
+      "妥協"
+    ],
+    "source": "https://github.com/stephenmk/yomitan-jlpt-vocab/blob/b062d4e38c4bdd0950ae1d4ec55f04b176182e03/original_data/n1.csv",
+    "jmdict": "1408510"
+  }
+]
