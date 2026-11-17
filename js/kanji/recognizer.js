@@ -14,7 +14,10 @@ function distance(a,b){let f=0,r=0;for(let i=0;i<16;i++){f+=Math.hypot(a[i][0]-b
 function assignment(cost){const n=cost.length,u=Array(n+1).fill(0),v=[...u],p=[...u],way=[...u];for(let i=1;i<=n;i++){p[0]=i;let j0=0;const min=Array(n+1).fill(Infinity),used=Array(n+1).fill(false);do{used[j0]=true;const i0=p[j0];let delta=Infinity,j1=0;for(let j=1;j<=n;j++)if(!used[j]){const cur=cost[i0-1][j-1]-u[i0]-v[j];if(cur<min[j]){min[j]=cur;way[j]=j0;}if(min[j]<delta){delta=min[j];j1=j;}}for(let j=0;j<=n;j++)if(used[j]){u[p[j]]+=delta;v[j]-=delta;}else min[j]-=delta;j0=j1;}while(p[j0]!==0);do{const j1=way[j0];p[j0]=p[j1];j0=j1;}while(j0);}return -v[0]/n;}
 export function prepare(data){return data.map(t=>{if(t.data){const bytes=Uint8Array.from(atob(t.data),c=>c.charCodeAt(0));t={char:t.char,strokes:Array.from({length:bytes.length/32},(_,i)=>Array.from({length:16},(_,j)=>[bytes[i*32+j*2],bytes[i*32+j*2+1]]))};}return {char:t.char,strokes:normalize(t.strokes)};}).filter(t=>t.strokes.length);}
 export function recognize(strokes,templates){
- if(!strokes.length||strokes.some(s=>s.length<2))return {char:null,candidates:[]};
+ // Bound input before normalization/assignment. A malformed or interrupted
+ // pointer stream must not hang the worker or turn NaN into a confident result.
+ if(!Array.isArray(strokes)||!strokes.length||strokes.length>64||strokes.some(s=>!Array.isArray(s)||s.length<2||s.length>10000||s.some(p=>!Array.isArray(p)||p.length!==2||!p.every(Number.isFinite))))return {char:null,candidates:[],reason:'invalid-input'};
+ if(strokes.reduce((n,s)=>n+s.length,0)>20000)return {char:null,candidates:[],reason:'input-limit'};
  const all=strokes.flat();if(Math.max(...all.map(p=>p[0]))-Math.min(...all.map(p=>p[0]))<.025&&Math.max(...all.map(p=>p[1]))-Math.min(...all.map(p=>p[1]))<.025)return {char:null,candidates:[]};
  const a=normalize(strokes), candidates=[];
  for(const t of templates){if(t.strokes.length!==a.length)continue;const cost=a.map(s=>t.strokes.map(b=>distance(s,b))); candidates.push({char:t.char,score:assignment(cost)});}

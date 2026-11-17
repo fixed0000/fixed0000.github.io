@@ -1,4 +1,6 @@
 /* Scoped trainer styles. The rest of the portfolio always stays light. */
+.writing-surface,.writing-surface canvas { touch-action:none;user-select:none;-webkit-user-select:none; }
+.writing-surface canvas[aria-disabled="true"] { cursor:default; }
 .app-panel { border-radius: 12px; background: #fff; padding: clamp(1.25rem,4vw,2.5rem); }
 .app-intro { max-width: 42rem; }
 .app-intro h2 { font-size: clamp(1.8rem,4vw,2.5rem); margin: .5rem 0; }

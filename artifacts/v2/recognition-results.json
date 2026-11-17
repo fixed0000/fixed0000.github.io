@@ -103,7 +103,8 @@
   },
   "empty": {
     "char": null,
-    "candidates": []
+    "candidates": [],
+    "reason": "invalid-input"
   },
   "partialMountain": {
     "char": null,
@@ -139,5 +140,5 @@
       }
     ]
   },
-  "durationMs": 29.513886000000184
+  "durationMs": 17.129899999999907
 }

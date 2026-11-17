@@ -84,7 +84,7 @@ for en in (False,True):
 urls=[]
 for f in ROOT.rglob('index.html'):
  if any(x in f.parts for x in ('node_modules','.git')):continue
- urls.append('https://fixed0000.github.io/'+str(f.parent.relative_to(ROOT)).replace('.','').strip('/')+('/' if f.parent!=ROOT else ''))
+ urls.append('https://fixed0000.github.io/'+f.parent.relative_to(ROOT).as_posix().replace('.','').strip('/')+('/' if f.parent!=ROOT else ''))
 (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+u+'</loc></url>' for u in sorted(urls))+'</urlset>')
 
 # Shared editorial enhancement is part of the reproducible build.

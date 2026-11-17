@@ -1,0 +1,26 @@
+const {chromium}=require('playwright');
+const fs=require('node:fs');
+(async()=>{
+ const browser=await chromium.launch({executablePath:process.env.CHROME_PATH||(process.platform==='win32'?'C:/Program Files/Google/Chrome/Application/chrome.exe':'/usr/bin/chromium')});
+ const page=await browser.newPage({viewport:{width:1280,height:900}});
+ await page.goto('http://localhost:8000/en/projects/kanji-recall/');
+ await page.waitForFunction(()=>!document.querySelector('#custom-practice').disabled);
+ await page.evaluate(()=>{const d=JSON.parse(localStorage.getItem('kanji-recall-v2'));d.custom=['思'];localStorage.setItem('kanji-recall-v2',JSON.stringify(d));});
+ await page.reload();await page.waitForFunction(()=>!document.querySelector('#custom-practice').disabled);
+ await page.locator('#custom-practice').click();await page.waitForFunction(()=>document.querySelectorAll('.kanji-reference path').length===9);
+ const canvas=page.locator('canvas'),box=await canvas.boundingBox();
+ await page.mouse.move(box.x+50,box.y+50);await page.mouse.down();await page.mouse.move(box.x+150,box.y+150);await page.mouse.up();
+ await page.locator('#reveal').click();
+ fs.mkdirSync('artifacts/repair',{recursive:true});
+ await page.screenshot({path:'artifacts/repair/before-review.png'});
+ const undo=page.getByRole('button',{name:'Undo',exact:true});
+ const report={reading:await page.locator('#reading').innerText(),undoEnabled:await undo.isEnabled()};
+ await undo.click();
+ report.referenceAfterUndo=await page.locator('.kanji-reference').isVisible();
+ report.inkAfterUndo=await canvas.evaluate(c=>c.getContext('2d').getImageData(0,0,c.width,c.height).data.some((v,i)=>i%4===3&&v));
+ await page.screenshot({path:'artifacts/repair/before-undo.png'});
+ await page.locator('#retry').click();await page.locator('#reveal').click();await page.locator('#finish').click();
+ report.summaryRows=await page.locator('#summary li').count();
+ fs.writeFileSync('artifacts/repair/baseline.json',JSON.stringify(report,null,2));console.log(report);
+ await browser.close();
+})();

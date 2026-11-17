@@ -56,8 +56,8 @@ function assign(cost, forbidden = null) {
   return {mapping, total: -v[0]};
 }
 export function analyzeStrokeOrder(userStrokes, referenceStrokes, {recognized, expected} = {}) {
-  if (!recognized) return unable('unrecognized-character');
-  if (recognized !== expected) return unable('different-character');
+  // Character recognition is intentionally not a gate: judge only whether the
+  // supplied trajectories can be matched confidently to the target's strokes.
   if (!valid(userStrokes) || !valid(referenceStrokes)) return unable('insufficient-input');
   if (userStrokes.length !== referenceStrokes.length) return unable('stroke-count', {actual: userStrokes.length, expected: referenceStrokes.length});
   const user = normalize(userStrokes), reference = normalize(referenceStrokes); if (!user || !reference) return unable('insufficient-input');

@@ -1,0 +1,962 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/experience/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/skills/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/education/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/research/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/contact/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/about/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/projects/kanji-recall/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/projects/morigarden/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/research/family/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/research/monogatari/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/experience/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/skills/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/education/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/research/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/contact/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/about/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/projects/kanji-recall/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/projects/morigarden/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/research/family/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/research/monogatari/",
+      "width": 360,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/experience/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/skills/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/education/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/research/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/contact/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/about/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/projects/kanji-recall/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/projects/morigarden/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/research/family/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/research/monogatari/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/experience/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/skills/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/education/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/research/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/contact/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/about/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/projects/kanji-recall/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/projects/morigarden/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/research/family/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "path": "/en/research/monogatari/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    }
+  ],
+  "mobilePrompts": [
+    {
+      "reading": "つかう",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "セキ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ソウ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "くち",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ためす",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "かまえる",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "き",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ほん",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "たもつ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "あらわれる",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "おわる",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "つくる",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ね",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "あう",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "やしろ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "キョ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ダ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ユウ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "アイ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "リョウ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "うじ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "かわ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "きく",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "とし",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "もつ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "えらぶ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "はかる",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "トウ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "おなじ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "にぎる",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ハ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "タイ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ことわる",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "へる",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ながい",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "さかい",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "こと",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "つき",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ガイ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "セイ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "キョウ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "たみ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "みずから",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "め",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ケン",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ハン",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "きめる",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ハ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ブ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ひと",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "まかせる",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "やま",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ギ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "むすぶ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "トウ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ハツ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "つれる",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ひ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "シ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ヤク",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "セイ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ダイ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ク",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "はじまる",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "かわる",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "ひとつ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "まつ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "くに",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "せめる",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "すむ",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    },
+    {
+      "reading": "おもう",
+      "width": 360,
+      "scrollWidth": 360,
+      "height": 740,
+      "scrollHeight": 740,
+      "check": 730.40625,
+      "viewport": 740
+    }
+  ],
+  "referenceFailure": "passed",
+  "external": [
+    {
+      "url": "https://github.com/fixed0000",
+      "status": 200,
+      "final": "https://github.com/fixed0000"
+    },
+    {
+      "url": "https://github.com/fixed0000/fixed0000.github.io",
+      "status": 200,
+      "final": "https://github.com/fixed0000/fixed0000.github.io"
+    },
+    {
+      "url": "https://github.com/davidluzgouveia/kanji-data",
+      "status": 200,
+      "final": "https://github.com/davidluzgouveia/kanji-data"
+    },
+    {
+      "url": "https://www.kanken.or.jp/kanken/outline/degree.html",
+      "status": 200,
+      "final": "https://www.kanken.or.jp/kanken/grades/overview/"
+    },
+    {
+      "url": "https://kanjivg.tagaini.net/",
+      "status": 200,
+      "final": "https://kanjivg.tagaini.net/"
+    },
+    {
+      "url": "https://github.com/fixed0000/MoriGarden",
+      "status": 200,
+      "final": "https://github.com/fixed0000/MoriGarden"
+    },
+    {
+      "url": "https://github.com/fixed0000/MoriGarden/commits/main/",
+      "status": 200,
+      "final": "https://github.com/fixed0000/MoriGarden/commits/main/"
+    },
+    {
+      "url": "https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c",
+      "status": 200,
+      "final": "https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "status": 200,
+      "final": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "url": "https://github.com/fixed0000/fixed0000.github.io/tree/bca2cf19c28cd41f1511ea425d0d7aa772676d60/js/translations",
+      "status": 200,
+      "final": "https://github.com/fixed0000/fixed0000.github.io/tree/bca2cf19c28cd41f1511ea425d0d7aa772676d60/js/translations"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 const PROGRESS_FILE=require('node:path').join(require('node:os').tmpdir(),'kanji-recall-v2-test.json');
 const {chromium,devices}=require('playwright'),assert=require('assert'),fs=require('fs');const {default:AxeBuilder}=require('@axe-core/playwright');
 const origin='http://localhost:8000',tasks=JSON.parse(fs.readFileSync('assets/kanji/tasks.json')),fixtures=JSON.parse(fs.readFileSync('tests/handwriting.json'));
-(async()=>{const b=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});const context=await b.newContext({viewport:{width:1280,height:800}}),p=await context.newPage();const errors=[];p.on('pageerror',e=>errors.push(e.message));p.on('console',m=>{if(m.type()==='error')errors.push(m.text());});let audits=[],checks=[];
+(async()=>{const b=await chromium.launch({executablePath:process.env.CHROME_PATH||(process.platform==='win32'?'C:/Program Files/Google/Chrome/Application/chrome.exe':'/usr/bin/chromium'),args:['--no-sandbox']});const context=await b.newContext({viewport:{width:1280,height:800}}),p=await context.newPage();const errors=[];p.on('pageerror',e=>errors.push(e.message));p.on('console',m=>{if(m.type()==='error')errors.push(m.text());});let audits=[],checks=[];
 const waitReady=page=>page.waitForFunction(()=>document.querySelector('#set-status').textContent.length>0);
 await p.goto(origin+'/en/projects/kanji-recall/');await waitReady(p);
 await p.locator('.settings summary').click();await p.locator('#custom-char').fill('経験');await p.locator('#custom-form button').click();assert.match(await p.locator('#custom-status').innerText(),/exactly one/);

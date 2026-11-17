@@ -3,7 +3,7 @@
     "correct character and correct sequence",
     "permuted strokes: character remains correct, warning identifies 1 → 2",
     "reversed direction is independent of character score",
-    "changed drawing invalidates old order result",
+    "review locks drawing controls",
     "wrong character: order undetermined",
     "unrecognized drawing: no order confidence",
     "character progress survives reload without order warnings becoming errors",
@@ -13,7 +13,7 @@
     "reference animation and dark theme still work",
     "order-worker failure preserves character result",
     "stale order result discarded after retry",
-    "JA/EN model credit, CC BY link, NoAI and existing disclaimer; gallery remains absent"
+    "JA/EN model credit, CC BY link, NoAI and existing disclaimer; real gallery available"
   ],
   "errors": [],
   "audits": [],

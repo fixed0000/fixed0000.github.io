@@ -1,0 +1,3956 @@
+{
+  "fixtureSource": "Hand-authored pointer trajectories, not a human handwriting corpus",
+  "thresholds": {
+    "shape": 0.105,
+    "margin": 0.012,
+    "changed": false
+  },
+  "characters": [
+    {
+      "char": "思",
+      "templateStrokes": 9,
+      "inputStrokes": 9,
+      "results": {
+        "canonical": {
+          "recognition": {
+            "char": "思",
+            "candidates": [
+              {
+                "char": "思",
+                "score": 1.1083987034699155e-16
+              },
+              {
+                "char": "怎",
+                "score": 0.12225601879248536
+              },
+              {
+                "char": "毘",
+                "score": 0.12349643131560871
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 9,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0,
+            "maxDistance": 0,
+            "assignmentGap": 0.41533948009848515
+          }
+        },
+        "handAuthored": {
+          "recognition": {
+            "char": "思",
+            "candidates": [
+              {
+                "char": "思",
+                "score": 0.040477269899319296
+              },
+              {
+                "char": "怎",
+                "score": 0.12083647967101514
+              },
+              {
+                "char": "怱",
+                "score": 0.12174205062589467
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 9,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.042363052313037816,
+            "maxDistance": 0.08859839868825536,
+            "assignmentGap": 0.3702928337775814
+          }
+        },
+        "scaled": {
+          "recognition": {
+            "char": "思",
+            "candidates": [
+              {
+                "char": "思",
+                "score": 0.040477269899319344
+              },
+              {
+                "char": "怎",
+                "score": 0.12083647967101523
+              },
+              {
+                "char": "怱",
+                "score": 0.12174205062589467
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 9,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.042363052313037844,
+            "maxDistance": 0.08859839868825536,
+            "assignmentGap": 0.37029283377758115
+          }
+        },
+        "permuted": {
+          "recognition": {
+            "char": "思",
+            "candidates": [
+              {
+                "char": "思",
+                "score": 0.040477269899319296
+              },
+              {
+                "char": "怎",
+                "score": 0.12083647967101514
+              },
+              {
+                "char": "怱",
+                "score": 0.12174205062589467
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 9,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 8,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 7,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 6,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 3,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 9,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 8,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 7,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 6,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 3,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.04236305231303781,
+            "maxDistance": 0.08859839868825536,
+            "assignmentGap": 0.3702928337775813
+          }
+        },
+        "reversed": {
+          "recognition": {
+            "char": "思",
+            "candidates": [
+              {
+                "char": "思",
+                "score": 0.040477269899319296
+              },
+              {
+                "char": "怎",
+                "score": 0.12083647967101514
+              },
+              {
+                "char": "怱",
+                "score": 0.12174205062589467
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 9,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 9,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "meanDistance": 0.042363052313037816,
+            "maxDistance": 0.08859839868825539,
+            "assignmentGap": 0.3702928337775814
+          }
+        },
+        "joined": {
+          "recognition": {
+            "char": null,
+            "candidates": [
+              {
+                "char": "忠",
+                "score": 0.10788712802646863
+              },
+              {
+                "char": "忽",
+                "score": 0.13715176409065077
+              },
+              {
+                "char": "念",
+                "score": 0.14060194291437306
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "stroke-count",
+            "issues": [],
+            "actual": 8,
+            "expected": 9
+          }
+        }
+      }
+    },
+    {
+      "char": "同",
+      "templateStrokes": 6,
+      "inputStrokes": 6,
+      "results": {
+        "canonical": {
+          "recognition": {
+            "char": "同",
+            "candidates": [
+              {
+                "char": "同",
+                "score": 7.236456201289314e-17
+              },
+              {
+                "char": "肉",
+                "score": 0.12270645747258098
+              },
+              {
+                "char": "夙",
+                "score": 0.12345148493005421
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0,
+            "maxDistance": 0,
+            "assignmentGap": 0.39103176121955596
+          }
+        },
+        "handAuthored": {
+          "recognition": {
+            "char": "同",
+            "candidates": [
+              {
+                "char": "同",
+                "score": 0.05019294889246373
+              },
+              {
+                "char": "向",
+                "score": 0.11972766263966966
+              },
+              {
+                "char": "団",
+                "score": 0.1216036792758579
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.05159646510508168,
+            "maxDistance": 0.10364338768239548,
+            "assignmentGap": 0.29895535714708266
+          }
+        },
+        "scaled": {
+          "recognition": {
+            "char": "同",
+            "candidates": [
+              {
+                "char": "同",
+                "score": 0.05019294889246371
+              },
+              {
+                "char": "向",
+                "score": 0.11972766263966965
+              },
+              {
+                "char": "団",
+                "score": 0.12160367927585793
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.051596465105081625,
+            "maxDistance": 0.10364338768239534,
+            "assignmentGap": 0.29895535714708255
+          }
+        },
+        "permuted": {
+          "recognition": {
+            "char": "同",
+            "candidates": [
+              {
+                "char": "同",
+                "score": 0.050192948892463736
+              },
+              {
+                "char": "向",
+                "score": 0.11972766263966966
+              },
+              {
+                "char": "団",
+                "score": 0.1216036792758579
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 6,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 5,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 3,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 6,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 5,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 3,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.0515964651050817,
+            "maxDistance": 0.10364338768239548,
+            "assignmentGap": 0.29895535714708266
+          }
+        },
+        "reversed": {
+          "recognition": {
+            "char": "同",
+            "candidates": [
+              {
+                "char": "同",
+                "score": 0.05019294889246372
+              },
+              {
+                "char": "向",
+                "score": 0.11972766263966965
+              },
+              {
+                "char": "団",
+                "score": 0.12160367927585787
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "meanDistance": 0.05159646510508168,
+            "maxDistance": 0.10364338768239548,
+            "assignmentGap": 0.29895535714708266
+          }
+        },
+        "joined": {
+          "recognition": {
+            "char": null,
+            "candidates": [
+              {
+                "char": "本",
+                "score": 0.2035153245555043
+              },
+              {
+                "char": "布",
+                "score": 0.2058715858988096
+              },
+              {
+                "char": "卮",
+                "score": 0.21349374033096002
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "stroke-count",
+            "issues": [],
+            "actual": 5,
+            "expected": 6
+          }
+        }
+      }
+    },
+    {
+      "char": "持",
+      "templateStrokes": 9,
+      "inputStrokes": 9,
+      "results": {
+        "canonical": {
+          "recognition": {
+            "char": "持",
+            "candidates": [
+              {
+                "char": "持",
+                "score": 7.732474268250398e-17
+              },
+              {
+                "char": "恃",
+                "score": 0.06250193156460657
+              },
+              {
+                "char": "待",
+                "score": 0.08162990607401997
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 9,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0,
+            "maxDistance": 0,
+            "assignmentGap": 0.3413027529899312
+          }
+        },
+        "handAuthored": {
+          "recognition": {
+            "char": "持",
+            "candidates": [
+              {
+                "char": "持",
+                "score": 0.03245883088515691
+              },
+              {
+                "char": "恃",
+                "score": 0.07659917212890595
+              },
+              {
+                "char": "挂",
+                "score": 0.07812794715941575
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 9,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.032618179866433346,
+            "maxDistance": 0.04645157841369517,
+            "assignmentGap": 0.28500701577763127
+          }
+        },
+        "scaled": {
+          "recognition": {
+            "char": "持",
+            "candidates": [
+              {
+                "char": "持",
+                "score": 0.032458830885156935
+              },
+              {
+                "char": "恃",
+                "score": 0.07659917212890592
+              },
+              {
+                "char": "挂",
+                "score": 0.07812794715941579
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 9,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.03261817986643334,
+            "maxDistance": 0.04645157841369523,
+            "assignmentGap": 0.2850070157776312
+          }
+        },
+        "permuted": {
+          "recognition": {
+            "char": "持",
+            "candidates": [
+              {
+                "char": "持",
+                "score": 0.03245883088515691
+              },
+              {
+                "char": "恃",
+                "score": 0.07659917212890596
+              },
+              {
+                "char": "挂",
+                "score": 0.07812794715941573
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 9,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 8,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 7,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 6,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 3,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 9,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 8,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 7,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 6,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 3,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.03261817986643334,
+            "maxDistance": 0.04645157841369517,
+            "assignmentGap": 0.2850070157776313
+          }
+        },
+        "reversed": {
+          "recognition": {
+            "char": "持",
+            "candidates": [
+              {
+                "char": "持",
+                "score": 0.03245883088515691
+              },
+              {
+                "char": "恃",
+                "score": 0.07659917212890598
+              },
+              {
+                "char": "挂",
+                "score": 0.07812794715941576
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 9,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 9,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "meanDistance": 0.032618179866433346,
+            "maxDistance": 0.046451578413695176,
+            "assignmentGap": 0.28500701577763116
+          }
+        },
+        "joined": {
+          "recognition": {
+            "char": "侍",
+            "candidates": [
+              {
+                "char": "侍",
+                "score": 0.09097125061880282
+              },
+              {
+                "char": "佶",
+                "score": 0.13154862227426128
+              },
+              {
+                "char": "佳",
+                "score": 0.13500615793634085
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "stroke-count",
+            "issues": [],
+            "actual": 8,
+            "expected": 9
+          }
+        }
+      }
+    },
+    {
+      "char": "待",
+      "templateStrokes": 9,
+      "inputStrokes": 9,
+      "results": {
+        "canonical": {
+          "recognition": {
+            "char": "待",
+            "candidates": [
+              {
+                "char": "待",
+                "score": 7.219930866132923e-17
+              },
+              {
+                "char": "恃",
+                "score": 0.07781303393291349
+              },
+              {
+                "char": "持",
+                "score": 0.08162990607401999
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 9,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0,
+            "maxDistance": 0,
+            "assignmentGap": 0.32000652320236983
+          }
+        },
+        "handAuthored": {
+          "recognition": {
+            "char": "待",
+            "candidates": [
+              {
+                "char": "待",
+                "score": 0.04379310317307841
+              },
+              {
+                "char": "持",
+                "score": 0.07403194010825653
+              },
+              {
+                "char": "恃",
+                "score": 0.08221065798549397
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 9,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.04432306972634221,
+            "maxDistance": 0.06712853961122409,
+            "assignmentGap": 0.252922269553433
+          }
+        },
+        "scaled": {
+          "recognition": {
+            "char": "待",
+            "candidates": [
+              {
+                "char": "待",
+                "score": 0.043793103173078385
+              },
+              {
+                "char": "持",
+                "score": 0.07403194010825652
+              },
+              {
+                "char": "恃",
+                "score": 0.08221065798549396
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 9,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.04432306972634215,
+            "maxDistance": 0.06712853961122406,
+            "assignmentGap": 0.25292226955343305
+          }
+        },
+        "permuted": {
+          "recognition": {
+            "char": "待",
+            "candidates": [
+              {
+                "char": "待",
+                "score": 0.04379310317307842
+              },
+              {
+                "char": "持",
+                "score": 0.07403194010825652
+              },
+              {
+                "char": "恃",
+                "score": 0.08221065798549398
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 9,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 8,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 7,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 6,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 3,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 9,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 8,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 7,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 6,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 3,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.04432306972634221,
+            "maxDistance": 0.06712853961122409,
+            "assignmentGap": 0.2529222695534329
+          }
+        },
+        "reversed": {
+          "recognition": {
+            "char": "待",
+            "candidates": [
+              {
+                "char": "待",
+                "score": 0.04379310317307841
+              },
+              {
+                "char": "持",
+                "score": 0.07403194010825653
+              },
+              {
+                "char": "恃",
+                "score": 0.08221065798549397
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 9,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 9,
+                "referenceStroke": 9,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "meanDistance": 0.04432306972634221,
+            "maxDistance": 0.06712853961122413,
+            "assignmentGap": 0.252922269553433
+          }
+        },
+        "joined": {
+          "recognition": {
+            "char": "侍",
+            "candidates": [
+              {
+                "char": "侍",
+                "score": 0.05092732445093576
+              },
+              {
+                "char": "佶",
+                "score": 0.10310612865945326
+              },
+              {
+                "char": "佳",
+                "score": 0.10431351666042914
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "stroke-count",
+            "issues": [],
+            "actual": 8,
+            "expected": 9
+          }
+        }
+      }
+    },
+    {
+      "char": "木",
+      "templateStrokes": 4,
+      "inputStrokes": 4,
+      "results": {
+        "canonical": {
+          "recognition": {
+            "char": "木",
+            "candidates": [
+              {
+                "char": "木",
+                "score": 7.211557323402829e-17
+              },
+              {
+                "char": "卅",
+                "score": 0.11848471233983232
+              },
+              {
+                "char": "ホ",
+                "score": 0.13180898394660698
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0,
+            "maxDistance": 0,
+            "assignmentGap": 0.6411481493012602
+          }
+        },
+        "handAuthored": {
+          "recognition": {
+            "char": "木",
+            "candidates": [
+              {
+                "char": "木",
+                "score": 0.02183164496872891
+              },
+              {
+                "char": "卅",
+                "score": 0.11847927904960961
+              },
+              {
+                "char": "ホ",
+                "score": 0.12341129261229435
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.024050214340627894,
+            "maxDistance": 0.046598508256248054,
+            "assignmentGap": 0.607480064232779
+          }
+        },
+        "scaled": {
+          "recognition": {
+            "char": "木",
+            "candidates": [
+              {
+                "char": "木",
+                "score": 0.021831644968728914
+              },
+              {
+                "char": "卅",
+                "score": 0.11847927904960963
+              },
+              {
+                "char": "ホ",
+                "score": 0.1234112926122943
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.024050214340627887,
+            "maxDistance": 0.04659850825624798,
+            "assignmentGap": 0.6074800642327791
+          }
+        },
+        "permuted": {
+          "recognition": {
+            "char": "木",
+            "candidates": [
+              {
+                "char": "木",
+                "score": 0.021831644968728907
+              },
+              {
+                "char": "卅",
+                "score": 0.11847927904960961
+              },
+              {
+                "char": "ホ",
+                "score": 0.12341129261229435
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 3,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 3,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.02405021434062789,
+            "maxDistance": 0.046598508256248054,
+            "assignmentGap": 0.607480064232779
+          }
+        },
+        "reversed": {
+          "recognition": {
+            "char": "木",
+            "candidates": [
+              {
+                "char": "木",
+                "score": 0.021831644968728907
+              },
+              {
+                "char": "卅",
+                "score": 0.11847927904960961
+              },
+              {
+                "char": "ホ",
+                "score": 0.12341129261229433
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "meanDistance": 0.02405021434062789,
+            "maxDistance": 0.046598508256248054,
+            "assignmentGap": 0.6074800642327791
+          }
+        },
+        "joined": {
+          "recognition": {
+            "char": null,
+            "candidates": [
+              {
+                "char": "及",
+                "score": 0.1703950505680217
+              },
+              {
+                "char": "刄",
+                "score": 0.18917841697733007
+              },
+              {
+                "char": "大",
+                "score": 0.21564754529189634
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "stroke-count",
+            "issues": [],
+            "actual": 3,
+            "expected": 4
+          }
+        }
+      }
+    },
+    {
+      "char": "本",
+      "templateStrokes": 5,
+      "inputStrokes": 5,
+      "results": {
+        "canonical": {
+          "recognition": {
+            "char": "本",
+            "candidates": [
+              {
+                "char": "本",
+                "score": 1.026694913169443e-16
+              },
+              {
+                "char": "夲",
+                "score": 0.12647187101515375
+              },
+              {
+                "char": "末",
+                "score": 0.13370477573263528
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0,
+            "maxDistance": 0,
+            "assignmentGap": 0.6098082650506409
+          }
+        },
+        "handAuthored": {
+          "recognition": {
+            "char": "本",
+            "candidates": [
+              {
+                "char": "本",
+                "score": 0.05272199661094934
+              },
+              {
+                "char": "末",
+                "score": 0.12464412786841017
+              },
+              {
+                "char": "未",
+                "score": 0.12607658857918164
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.05342542195218288,
+            "maxDistance": 0.08463583517518022,
+            "assignmentGap": 0.5150488577219172
+          }
+        },
+        "scaled": {
+          "recognition": {
+            "char": "本",
+            "candidates": [
+              {
+                "char": "本",
+                "score": 0.05272199661094941
+              },
+              {
+                "char": "末",
+                "score": 0.12464412786841024
+              },
+              {
+                "char": "未",
+                "score": 0.1260765885791817
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.05342542195218297,
+            "maxDistance": 0.08463583517518034,
+            "assignmentGap": 0.5150488577219172
+          }
+        },
+        "permuted": {
+          "recognition": {
+            "char": "本",
+            "candidates": [
+              {
+                "char": "本",
+                "score": 0.05272199661094934
+              },
+              {
+                "char": "末",
+                "score": 0.12464412786841024
+              },
+              {
+                "char": "未",
+                "score": 0.12607658857918164
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 5,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 5,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.053425421952182875,
+            "maxDistance": 0.08463583517518022,
+            "assignmentGap": 0.5150488577219173
+          }
+        },
+        "reversed": {
+          "recognition": {
+            "char": "本",
+            "candidates": [
+              {
+                "char": "本",
+                "score": 0.05272199661094932
+              },
+              {
+                "char": "末",
+                "score": 0.12464412786841024
+              },
+              {
+                "char": "未",
+                "score": 0.1260765885791816
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "meanDistance": 0.053425421952182875,
+            "maxDistance": 0.0846358351751802,
+            "assignmentGap": 0.5150488577219173
+          }
+        },
+        "joined": {
+          "recognition": {
+            "char": null,
+            "candidates": [
+              {
+                "char": "木",
+                "score": 0.18614852746247937
+              },
+              {
+                "char": "双",
+                "score": 0.1932773136459753
+              },
+              {
+                "char": "太",
+                "score": 0.2117256157400232
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "stroke-count",
+            "issues": [],
+            "actual": 4,
+            "expected": 5
+          }
+        }
+      }
+    },
+    {
+      "char": "日",
+      "templateStrokes": 4,
+      "inputStrokes": 4,
+      "results": {
+        "canonical": {
+          "recognition": {
+            "char": "日",
+            "candidates": [
+              {
+                "char": "日",
+                "score": 1.3762359733370164e-16
+              },
+              {
+                "char": "曰",
+                "score": 0.10450349890101826
+              },
+              {
+                "char": "丑",
+                "score": 0.13438136035201426
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0,
+            "maxDistance": 0,
+            "assignmentGap": 0.8680736275521457
+          }
+        },
+        "handAuthored": {
+          "recognition": {
+            "char": "日",
+            "candidates": [
+              {
+                "char": "日",
+                "score": 0.039615192516098276
+              },
+              {
+                "char": "E",
+                "score": 0.13369572644484815
+              },
+              {
+                "char": "曰",
+                "score": 0.1374500802073946
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.04078912648225679,
+            "maxDistance": 0.06032454823249031,
+            "assignmentGap": 0.7915363684864268
+          }
+        },
+        "scaled": {
+          "recognition": {
+            "char": "日",
+            "candidates": [
+              {
+                "char": "日",
+                "score": 0.03961519251609831
+              },
+              {
+                "char": "E",
+                "score": 0.1336957264448481
+              },
+              {
+                "char": "曰",
+                "score": 0.13745008020739463
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.04078912648225686,
+            "maxDistance": 0.06032454823249051,
+            "assignmentGap": 0.7915363684864268
+          }
+        },
+        "permuted": {
+          "recognition": {
+            "char": "日",
+            "candidates": [
+              {
+                "char": "日",
+                "score": 0.03961519251609828
+              },
+              {
+                "char": "E",
+                "score": 0.13369572644484815
+              },
+              {
+                "char": "曰",
+                "score": 0.1374500802073946
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 3,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 3,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.04078912648225679,
+            "maxDistance": 0.06032454823249031,
+            "assignmentGap": 0.7915363684864267
+          }
+        },
+        "reversed": {
+          "recognition": {
+            "char": "日",
+            "candidates": [
+              {
+                "char": "日",
+                "score": 0.0396151925160983
+              },
+              {
+                "char": "E",
+                "score": 0.13369572644484817
+              },
+              {
+                "char": "曰",
+                "score": 0.13745008020739463
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "meanDistance": 0.0407891264822568,
+            "maxDistance": 0.06032454823249031,
+            "assignmentGap": 0.7915363684864268
+          }
+        },
+        "joined": {
+          "recognition": {
+            "char": null,
+            "candidates": [
+              {
+                "char": "三",
+                "score": 0.1981583121495246
+              },
+              {
+                "char": "さ",
+                "score": 0.21709297809162864
+              },
+              {
+                "char": "土",
+                "score": 0.21718995555472298
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "stroke-count",
+            "issues": [],
+            "actual": 3,
+            "expected": 4
+          }
+        }
+      }
+    },
+    {
+      "char": "目",
+      "templateStrokes": 5,
+      "inputStrokes": 5,
+      "results": {
+        "canonical": {
+          "recognition": {
+            "char": "目",
+            "candidates": [
+              {
+                "char": "目",
+                "score": 9.088191263383422e-17
+              },
+              {
+                "char": "且",
+                "score": 0.06786830628204513
+              },
+              {
+                "char": "旦",
+                "score": 0.09909935578308282
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0,
+            "maxDistance": 0,
+            "assignmentGap": 0.5947579727748562
+          }
+        },
+        "handAuthored": {
+          "recognition": {
+            "char": "目",
+            "candidates": [
+              {
+                "char": "目",
+                "score": 0.03727331286667844
+              },
+              {
+                "char": "且",
+                "score": 0.057798777247175005
+              },
+              {
+                "char": "旦",
+                "score": 0.091773410057885
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.03939973702383589,
+            "maxDistance": 0.05001394378585129,
+            "assignmentGap": 0.5433383436463777
+          }
+        },
+        "scaled": {
+          "recognition": {
+            "char": "目",
+            "candidates": [
+              {
+                "char": "目",
+                "score": 0.03727331286667851
+              },
+              {
+                "char": "且",
+                "score": 0.05779877724717501
+              },
+              {
+                "char": "旦",
+                "score": 0.091773410057885
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.039399737023835965,
+            "maxDistance": 0.05001394378585146,
+            "assignmentGap": 0.5433383436463779
+          }
+        },
+        "permuted": {
+          "recognition": {
+            "char": "目",
+            "candidates": [
+              {
+                "char": "目",
+                "score": 0.03727331286667845
+              },
+              {
+                "char": "且",
+                "score": 0.057798777247175005
+              },
+              {
+                "char": "旦",
+                "score": 0.09177341005788497
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 5,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 5,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 4,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 2,
+                "order": true,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 1,
+                "order": true,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0.03939973702383589,
+            "maxDistance": 0.05001394378585129,
+            "assignmentGap": 0.5433383436463779
+          }
+        },
+        "reversed": {
+          "recognition": {
+            "char": "目",
+            "candidates": [
+              {
+                "char": "目",
+                "score": 0.03727331286667844
+              },
+              {
+                "char": "且",
+                "score": 0.05779877724717501
+              },
+              {
+                "char": "旦",
+                "score": 0.091773410057885
+              }
+            ]
+          },
+          "order": {
+            "status": "review",
+            "reason": "possible-violation",
+            "issues": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": true
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": true
+              }
+            ],
+            "meanDistance": 0.03939973702383589,
+            "maxDistance": 0.05001394378585133,
+            "assignmentGap": 0.5433383436463777
+          }
+        },
+        "joined": {
+          "recognition": {
+            "char": null,
+            "candidates": [
+              {
+                "char": "き",
+                "score": 0.20060826925254
+              },
+              {
+                "char": "壬",
+                "score": 0.2126653594698099
+              },
+              {
+                "char": "弖",
+                "score": 0.21551069965344283
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "stroke-count",
+            "issues": [],
+            "actual": 4,
+            "expected": 5
+          }
+        }
+      }
+    },
+    {
+      "char": "口",
+      "templateStrokes": 3,
+      "inputStrokes": 3,
+      "results": {
+        "canonical": {
+          "recognition": {
+            "char": "口",
+            "candidates": [
+              {
+                "char": "口",
+                "score": 1.138427410973719e-16
+              },
+              {
+                "char": "ロ",
+                "score": 0.030563924757746757
+              },
+              {
+                "char": "囗",
+                "score": 0.11571907632842314
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0,
+            "maxDistance": 0,
+            "assignmentGap": 1.070475468682269
+          }
+        },
+        "handAuthored": {
+          "recognition": {
+            "char": "囗",
+            "candidates": [
+              {
+                "char": "囗",
+                "score": 0.0498110399624315
+              },
+              {
+                "char": "ロ",
+                "score": 0.11323579875794221
+              },
+              {
+                "char": "口",
+                "score": 0.13448893732875636
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "geometry",
+            "issues": [],
+            "meanDistance": 0.14036305714317135,
+            "maxDistance": 0.18164073559042349
+          }
+        },
+        "scaled": {
+          "recognition": {
+            "char": "囗",
+            "candidates": [
+              {
+                "char": "囗",
+                "score": 0.0498110399624315
+              },
+              {
+                "char": "ロ",
+                "score": 0.11323579875794214
+              },
+              {
+                "char": "口",
+                "score": 0.1344889373287563
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "geometry",
+            "issues": [],
+            "meanDistance": 0.1403630571431714,
+            "maxDistance": 0.1816407355904236
+          }
+        },
+        "permuted": {
+          "recognition": {
+            "char": "囗",
+            "candidates": [
+              {
+                "char": "囗",
+                "score": 0.04981103996243149
+              },
+              {
+                "char": "ロ",
+                "score": 0.11323579875794221
+              },
+              {
+                "char": "口",
+                "score": 0.13448893732875636
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "geometry",
+            "issues": [],
+            "meanDistance": 0.14036305714317135,
+            "maxDistance": 0.18164073559042349
+          }
+        },
+        "reversed": {
+          "recognition": {
+            "char": "囗",
+            "candidates": [
+              {
+                "char": "囗",
+                "score": 0.049811039962431546
+              },
+              {
+                "char": "ロ",
+                "score": 0.1132357987579422
+              },
+              {
+                "char": "口",
+                "score": 0.13448893732875633
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "geometry",
+            "issues": [],
+            "meanDistance": 0.14036305714317135,
+            "maxDistance": 0.18164073559042349
+          }
+        },
+        "joined": {
+          "recognition": {
+            "char": null,
+            "candidates": [
+              {
+                "char": "コ",
+                "score": 0.28753264277795876
+              },
+              {
+                "char": "こ",
+                "score": 0.30484601906387765
+              },
+              {
+                "char": "二",
+                "score": 0.31946745088312367
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "stroke-count",
+            "issues": [],
+            "actual": 2,
+            "expected": 3
+          }
+        }
+      }
+    },
+    {
+      "char": "国",
+      "templateStrokes": 8,
+      "inputStrokes": 8,
+      "results": {
+        "canonical": {
+          "recognition": {
+            "char": "国",
+            "candidates": [
+              {
+                "char": "国",
+                "score": 8.01894831613292e-17
+              },
+              {
+                "char": "固",
+                "score": 0.10894538299724925
+              },
+              {
+                "char": "囹",
+                "score": 0.11280694188709091
+              }
+            ]
+          },
+          "order": {
+            "status": "likely",
+            "reason": "matched",
+            "issues": [],
+            "mapping": [
+              {
+                "userStroke": 1,
+                "referenceStroke": 1,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 2,
+                "referenceStroke": 2,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 3,
+                "referenceStroke": 3,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 4,
+                "referenceStroke": 4,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 5,
+                "referenceStroke": 5,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 6,
+                "referenceStroke": 6,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 7,
+                "referenceStroke": 7,
+                "order": false,
+                "direction": false
+              },
+              {
+                "userStroke": 8,
+                "referenceStroke": 8,
+                "order": false,
+                "direction": false
+              }
+            ],
+            "meanDistance": 0,
+            "maxDistance": 0,
+            "assignmentGap": 0.37650716593230515
+          }
+        },
+        "handAuthored": {
+          "recognition": {
+            "char": "国",
+            "candidates": [
+              {
+                "char": "国",
+                "score": 0.04753464700563089
+              },
+              {
+                "char": "固",
+                "score": 0.10332232047778331
+              },
+              {
+                "char": "囹",
+                "score": 0.11105849759195496
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "ambiguous-direction",
+            "issues": [],
+            "stroke": 6
+          }
+        },
+        "scaled": {
+          "recognition": {
+            "char": "国",
+            "candidates": [
+              {
+                "char": "国",
+                "score": 0.04753464700563097
+              },
+              {
+                "char": "固",
+                "score": 0.10332232047778332
+              },
+              {
+                "char": "囹",
+                "score": 0.11105849759195496
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "ambiguous-direction",
+            "issues": [],
+            "stroke": 6
+          }
+        },
+        "permuted": {
+          "recognition": {
+            "char": "国",
+            "candidates": [
+              {
+                "char": "国",
+                "score": 0.047534647005630884
+              },
+              {
+                "char": "固",
+                "score": 0.1033223204777833
+              },
+              {
+                "char": "囹",
+                "score": 0.11105849759195498
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "ambiguous-direction",
+            "issues": [],
+            "stroke": 3
+          }
+        },
+        "reversed": {
+          "recognition": {
+            "char": "国",
+            "candidates": [
+              {
+                "char": "国",
+                "score": 0.04753464700563089
+              },
+              {
+                "char": "固",
+                "score": 0.10332232047778327
+              },
+              {
+                "char": "囹",
+                "score": 0.11105849759195495
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "ambiguous-direction",
+            "issues": [],
+            "stroke": 6
+          }
+        },
+        "joined": {
+          "recognition": {
+            "char": null,
+            "candidates": [
+              {
+                "char": "豆",
+                "score": 0.1882869286788774
+              },
+              {
+                "char": "言",
+                "score": 0.19799035236862994
+              },
+              {
+                "char": "呈",
+                "score": 0.19830431288922687
+              }
+            ]
+          },
+          "order": {
+            "status": "unable",
+            "reason": "stroke-count",
+            "issues": [],
+            "actual": 7,
+            "expected": 8
+          }
+        }
+      }
+    }
+  ]
+}

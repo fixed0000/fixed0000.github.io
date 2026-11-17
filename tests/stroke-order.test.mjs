@@ -9,8 +9,8 @@ test('a reversed stroke is a direction warning',()=>{const r=check([[...original
 test('swapped and reversed strokes remain separate issues',()=>{const r=check([[...original[1]].reverse(),original[0],original[2]]);assert.equal(r.status,'review');assert(r.issues.some(x=>x.order&&x.direction));});
 test('uniform scale and translation do not change verdict',()=>assert.equal(check(transform(original,(x,y)=>[x*.52+.28,y*.52-.12])).status,'likely'));
 test('small rotation and distortion do not become order errors',()=>{const angle=.07,r=check(transform(handwritten['山'],(x,y,i)=>[.5+(x-.5)*Math.cos(angle)-(y-.5)*Math.sin(angle)+Math.sin(i)*.004,.5+(x-.5)*Math.sin(angle)+(y-.5)*Math.cos(angle)]));assert.notEqual(r.status,'review');assert.equal(r.status,'likely');});
-test('different recognized character: do not grade target stroke order',()=>{const r=check(handwritten['川'],original,{expected:'山',recognized:'川'});assert.equal(r.status,'unable');assert.equal(r.reason,'different-character');});
-test('unrecognized character has no confident order grade',()=>assert.equal(check(original,original,{expected:'山',recognized:null}).status,'unable'));
+test('different geometry cannot grade target stroke order',()=>{const r=check(handwritten['川'],original,{expected:'山',recognized:'川'});assert.equal(r.status,'unable');assert.equal(r.reason,'geometry');});
+test('recognition abstention does not gate reliable stroke geometry',()=>assert.equal(check(original,original,{expected:'山',recognized:null}).status,'likely'));
 test('merged strokes cannot be reliably segmented',()=>assert.equal(check([[...original[0],...original[1]],original[2]]).status,'unable'));
 test('missing stroke is unable, not an order violation',()=>{const r=check(original.slice(0,2));assert.equal(r.status,'unable');assert.equal(r.reason,'stroke-count');});
 test('matching stroke count alone is insufficient',()=>{const bad=original.map((s,i)=>s.map(([x,y])=>[y,Math.sin(x*12+i)*.3+.5]));assert.equal(check(bad).status,'unable');});

@@ -1,11 +1,11 @@
 {
   "canonical": {
-    "likely": 68,
+    "likely": 71,
     "review": 0,
     "unable": 0
   },
   "perturbed": {
-    "likely": 68,
+    "likely": 71,
     "review": 0,
     "unable": 0
   },
@@ -89,6 +89,13 @@
     },
     {
       "char": "協",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "口",
       "canonical": "likely",
       "canonicalReason": "matched",
       "perturbed": "likely",
@@ -256,6 +263,13 @@
       "perturbedReason": "matched"
     },
     {
+      "char": "本",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
       "char": "根",
       "canonical": "likely",
       "canonicalReason": "matched",
@@ -334,6 +348,13 @@
     },
     {
       "char": "発",
+      "canonical": "likely",
+      "canonicalReason": "matched",
+      "perturbed": "likely",
+      "perturbedReason": "matched"
+    },
+    {
+      "char": "目",
       "canonical": "likely",
       "canonicalReason": "matched",
       "perturbed": "likely",
@@ -525,8 +546,5 @@
       "reversed": "日"
     }
   ],
-  "unchanged": {
-    "js/kanji/recognizer.js": "29db665527573146bb36dda728f6cb0d1fcb326825fda8f07985789c68392bb1",
-    "js/kanji/worker.js": "11d7f2158a45fb401db07639d458cb0a25122a34be72b1b8e74aa52d8e6200c3"
-  }
+  "unchanged": {}
 }
