@@ -1,0 +1,9 @@
+
+> test:site
+> python -X utf8 tests/redesign-build.py && node tests/validate-html.mjs && python -X utf8 tests/links.py && node tests/redesign-browser.cjs
+
+Built 24 static pages from content/site.json
+PASS deterministic static build; preserved Kanji Recall mechanics, data and markup; licensed content
+PASS 30 HTML documents
+{'html_files': 30, 'local_references': 514, 'errors': []}
+PASS redesign: 96 layouts, 24 axe pages, navigation, text responsibilities, no-JS and 200% reflow

@@ -1291,3 +1291,11 @@ li+li {
 .page-about .editorial-section .section-content > p {
   max-width: 44rem;
 }
+
+/* Compact contact action, separate from the five navigation links. */
+.header-contact { min-height:44px; padding:.45rem .8rem; border-color:var(--accent); color:var(--accent); font-size:.75rem; }
+.header-contact[aria-current="page"] { background:var(--accent); color:#fff; }
+.header-tools { flex-wrap:wrap; }
+.professional-summary { max-width:44rem; }
+.skill-groups p { font-size:.88rem; line-height:1.85; color:var(--muted); margin:1rem 0 0; }
+@media(max-width:700px) { .header-tools { margin-left:auto; } .header-contact { font-size:.7rem; padding:.4rem .6rem; } }

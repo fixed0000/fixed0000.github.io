@@ -1,0 +1,14 @@
+[
+  {
+    "width": 390,
+    "url": "http://localhost:8000/en/contact/",
+    "contactCurrent": "page",
+    "pdfLinks": 0
+  },
+  {
+    "width": 1440,
+    "url": "http://localhost:8000/en/contact/",
+    "contactCurrent": "page",
+    "pdfLinks": 0
+  }
+]

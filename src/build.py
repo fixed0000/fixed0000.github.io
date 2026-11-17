@@ -20,9 +20,9 @@ def content(key,lang):
         evidence='<div class="evidence-strip">'+''.join('<div><span>'+e(item[lang]['label'])+'</span><strong>'+e(item[lang]['value'])+'</strong><small>'+e(item[lang]['date'])+'</small></div>' for item in d['homeEvidence'])+'</div>'
         return intro+actions+evidence+section('01',t('professional_background'),text_blocks(d['background'],lang)+link(p+'experience/',t('view_experience')),'professional-background')+section('02',t('personal_projects'),projects(d,lang))+section('03',t('research_into_language_meaning'),papers(d,lang))
     if key=='experience':
-        return section('01',t('work_history'),timeline(d,lang))
+        return section('01',d['professionalSummary'][lang]['title'],'<p class="professional-summary">'+e(d['professionalSummary'][lang]['body'])+'</p>','professional-summary')+section('02',t('work_history'),timeline(d,lang))
     if key=='skills':
-        groups='<div class="skill-groups">'+''.join('<article><h3>'+e(s[lang]['title'])+'</h3><ul>'+''.join('<li>'+e(x)+'</li>' for x in s[lang]['items'])+'</ul></article>' for s in d['skills'])+'</div>'
+        groups='<div class="skill-groups">'+''.join('<article><h3>'+e(s[lang]['title'])+'</h3>'+('<p>'+e(s[lang]['body'])+'</p>' if s[lang].get('body') else '<ul>'+''.join('<li>'+e(x)+'</li>' for x in s[lang]['items'])+'</ul>')+'</article>' for s in d['skills'])+'</div>'
         tools='<ul class="tool-list">'+''.join('<li>'+x+'</li>' for x in d['tools'])+'</ul><p>'+t('used_in_this_site_kanji_recall_and_morigarden_i_use_ai_assisted_t')+'</p>'
         return section('01',t('professional_experience'),groups)+section('02',t('personal_project_tools'),tools)+section('03',t('currently_learning'),'<p class="learning"><strong>'+e(' / '.join(d['learning']))+'</strong>'+t('learning_the_fundamentals')+'</p>')+section('04',t('languages_qualifications'),qualifications(d,lang))
     if key=='work':return section('01',t('personal_software_projects'),projects(d,lang))+section('02',t('completed_academic_research'),papers(d,lang))
@@ -33,7 +33,10 @@ def content(key,lang):
         about=d['aboutSections']
         return section('01',t('professional_biography'),paragraphs(about[0][lang]),'background')+education.replace('>01</span>','>02</span>',1)+''.join(section(f'{i:02}',record[lang]['title'],paragraphs(record[lang]),record['id']) for i,record in enumerate(about[1:],3))+section('06',t('about_this_website'),site,'website')
     if key=='contact':
-        return '<div class="contact-layout"><a class="email-address" href="mailto:'+d['person']['email']+'">'+d['person']['email']+' <span aria-hidden="true">↗</span></a><div class="contact-notes"><div><h2>'+t('location_preferences')+'</h2><p>'+t('tokyo_is_my_preferred_location_i_am_also_open_to_opportunities_in')+'</p></div><div><h2>'+t('contact_2')+'</h2><p>'+t('please_contact_me_by_email')+'</p><a class="text-link" href="'+d['person']['github']+'">GitHub / fixed0000 ↗</a></div></div></div>'
+        residence_value=e(d['residenceStatus'][lang].get('value',d['residenceStatus']['value']))
+        if lang=='en':residence_value+='<br><span class="note" lang="ja">'+e(d['residenceStatus']['value'])+'</span>'
+        document_link=link(d['applicationDocuments']['url'],d['applicationDocuments'][lang]['button']) if d['applicationDocuments']['approved'] and d['applicationDocuments']['url'] else ''
+        return '<div class="contact-layout"><a class="email-address" href="mailto:'+d['person']['email']+'">'+d['person']['email']+' <span aria-hidden="true">↗</span></a><div class="contact-notes"><div><h2>'+t('location_preferences')+'</h2><p>'+t('tokyo_is_my_preferred_location_i_am_also_open_to_opportunities_in')+'</p></div><div><h2>'+t('contact_2')+'</h2><p>'+t('please_contact_me_by_email')+'</p><a class="text-link" href="'+d['person']['github']+'">GitHub / fixed0000 ↗</a></div><div><h2>'+e(d['residenceStatus'][lang]['title'])+'</h2><p>'+residence_value+'</p></div><div id="application-documents"><h2>'+e(d['applicationDocuments'][lang]['title'])+'</h2><p>'+e(d['applicationDocuments'][lang]['body'])+'</p>'+document_link+'</div></div></div>'
     if key=='notfound':return '<div class="notfound-links">'+''.join(link(p+url,j if lang=='ja' else en) for url,j,en in d['navigation'])+'</div>'
     if key=='kanji-recall':return (ROOT/'tools'/('app-ja.html' if lang=='ja' else 'app-en.html')).read_text(encoding='utf-8')
     return d['pages'][key][lang]['body']
@@ -44,6 +47,8 @@ def render(key,lang):
     active='research/' if key in ['work','family','monogatari','kanji-recall','morigarden'] else 'about/' if key=='education' else route
     labels=DATA['labels'][lang];name=DATA['person'][lang];isapp=key=='kanji-recall'
     nav=''.join(f'<a href="{p+url}"'+(' aria-current="page"' if active==url else '')+'>'+e(j if lang=='ja' else en)+'</a>' for url,j,en in DATA['navigation'])
+    contact_url=p+DATA['contactAction']['route']
+    contact_action=f'<a class="button header-contact" href="{contact_url}"'+(' aria-current="page"' if route==DATA['contactAction']['route'] else '')+'>'+e(DATA['contactAction'][lang])+'</a>'
     heading=r['title'];lead=r['lead'];description=r.get('description',re.sub('<[^>]*>','',lead));eyebrow=r.get('eyebrow',labels['research'] if key in ['family','monogatari'] else labels['personal'])
     if key=='home' and 'titleLines' in r:heading=''.join('<span>'+e(line)+'</span>' for line in r['titleLines'])
     hero=f'<div class="hero-name"><span>{e(name)}</span><span>LIDIIA BORODINA / PORTFOLIO</span></div>' if key=='home' else ''
@@ -60,7 +65,7 @@ def render(key,lang):
 <meta property="og:type" content="website"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{ORIGIN+p+route}"><meta property="og:image" content="{ORIGIN}/assets/screenshots/social-preview.png"><meta property="og:image:alt" content="Lidiia Borodina — Portfolio"><meta name="twitter:card" content="summary_large_image">
 {css}<link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><script src="/js/site.js" defer></script></head>
 <body class="editorial-site page-{key}{' app-page' if isapp else ''}"><a class="skip" href="#main">{labels['skip']}</a>
-<header class="site-header"><div class="header-inner"><a class="brand" href="{p}" aria-label="{e(name)} — {t('home')}"><span class="mark" aria-hidden="true">LB<span>·</span></span><span class="brand-name">{e(name)}</span></a><div class="header-tools"><a class="language" href="{alt}" lang="{t('ja')}" hreflang="{t('ja')}">{t('label')}</a><button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" data-open="{labels['menu']}" data-close="{labels['close']}">{labels['menu']} <span aria-hidden="true">＋</span></button></div><nav id="site-navigation" class="navigation" aria-label="{t('main_navigation')}">{nav}</nav></div></header>
+<header class="site-header"><div class="header-inner"><a class="brand" href="{p}" aria-label="{e(name)} — {t('home')}"><span class="mark" aria-hidden="true">LB<span>·</span></span><span class="brand-name">{e(name)}</span></a><div class="header-tools">{contact_action}<a class="language" href="{alt}" lang="{t('ja')}" hreflang="{t('ja')}">{t('label')}</a><button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" data-open="{labels['menu']}" data-close="{labels['close']}">{labels['menu']} <span aria-hidden="true">＋</span></button></div><nav id="site-navigation" class="navigation" aria-label="{t('main_navigation')}">{nav}</nav></div></header>
 <main class="wrap" id="main" tabindex="-1"><div class="page-heading">{hero}<p class="eyebrow">{e(eyebrow)}</p><h1>{heading}</h1><p class="lead">{lead}</p></div>{content(key,lang)}</main>
 <footer class="footer wrap"><div class="footer-top"><a href="{p}contact/">{labels['contact']} <span aria-hidden="true">↗</span></a></div><div class="footer-bottom"><span>© 2026 Lidiia Borodina</span><a href="{DATA['person']['github']}">GitHub ↗</a><a href="{p}about/#website">{t('about_this_website')}</a><span>JA / EN</span></div></footer>
 {'<script type="module" src="/js/kanji/app.js"></script>' if isapp else ''}</body></html>'''

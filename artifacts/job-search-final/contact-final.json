@@ -1,0 +1,42 @@
+[
+  {
+    "width": 320,
+    "prefix": "/",
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "prefix": "/en/",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "prefix": "/",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "prefix": "/en/",
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "prefix": "/",
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "prefix": "/en/",
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "prefix": "/",
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "prefix": "/en/",
+    "overflow": false
+  }
+]

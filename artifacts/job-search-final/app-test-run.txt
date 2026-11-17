@@ -1,0 +1,129 @@
+
+> test
+> node --test tests/stroke-order.test.mjs && node tests/stroke-order-coverage.mjs && node tests/v2-core.mjs && node tests/recognition.cjs artifacts/v2/recognition-results.json && node tests/validate-html.mjs && python -X utf8 tests/links.py && node tests/v2-browser.cjs && node tests/v2-resilience.cjs && node tests/v2-extra.cjs && node tests/stroke-order-browser.cjs && node --test tests/repair-core.test.mjs && node tests/repair-browser.cjs
+
+✔ correct order and direction (3.1957ms)
+✔ independent pointer fixture: handwritten 山 (0.5111ms)
+✔ swapped strokes are possible order violations (0.7026ms)
+✔ a reversed stroke is a direction warning (0.43ms)
+✔ swapped and reversed strokes remain separate issues (0.4639ms)
+✔ uniform scale and translation do not change verdict (0.6249ms)
+✔ small rotation and distortion do not become order errors (0.7931ms)
+✔ different geometry cannot grade target stroke order (0.3499ms)
+✔ recognition abstention does not gate reliable stroke geometry (1.3989ms)
+✔ merged strokes cannot be reliably segmented (0.2693ms)
+✔ missing stroke is unable, not an order violation (0.1284ms)
+✔ matching stroke count alone is insufficient (0.3021ms)
+✔ equally plausible stroke assignment is rejected (0.1603ms)
+✔ close parallel strokes are ambiguous (0.1688ms)
+✔ direction of a dot-like stroke is not guessed (0.2127ms)
+✔ empty, non-finite, tap and excessive inputs are safe (0.5139ms)
+✔ single stroke 一 can be checked without an alternative assignment (1.139ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 128.6038
+Coverage { likely: 71, review: 0, unable: 0 } { likely: 71, review: 0, unable: 0 } ; geometry and recognition covered
+PASS 71 single-character prompts; classifications; migration; import validation; stroke paths
+{
+  '山': { char: '山', candidates: [ [Object], [Object], [Object] ] },
+  '人': { char: '人', candidates: [ [Object], [Object], [Object] ] },
+  '川': { char: '川', candidates: [ [Object], [Object], [Object] ] },
+  '土': { char: '土', candidates: [ [Object], [Object], [Object] ] },
+  '士': { char: '士', candidates: [ [Object], [Object], [Object] ] },
+  '日': { char: '日', candidates: [ [Object], [Object], [Object] ] },
+  empty: { char: null, candidates: [], reason: 'invalid-input' },
+  partialMountain: { char: null, candidates: [ [Object], [Object], [Object] ] },
+  scribble: { char: null, candidates: [ [Object], [Object], [Object] ] },
+  durationMs: 20.109899999999925
+}
+PASS 30 HTML documents
+{'html_files': 30, 'local_references': 514, 'errors': []}
+mobile fit { height: 664, scroll: 664, viewport: 664, board: 230 }
+PASS v2 workflows and 22 pages
+PASS storage denial does not block keyboard practice; recognizer failure leaves keyboard fallback usable; unreadable progress is not silently overwritten
+PASS extra app and compatibility flows
+order mobile fit { height: 664, scroll: 664, board: 230 }
+PASS stroke-order UI, independent results and model credits
+✔ review cannot silently return to editing; checking rejects retry (1.4293ms)
+✔ retry replaces one task result while keeping attempt history (6.1542ms)
+✔ reload deduplicates result IDs and rejects malformed results (0.7029ms)
+✔ 思: template, scaling, stroke permutations and reverse direction recognition (132.1647ms)
+✔ 思: order assessment does not depend on recognized character (6.5763ms)
+✔ 同: template, scaling, stroke permutations and reverse direction recognition (25.3389ms)
+✔ 同: order assessment does not depend on recognized character (1.7374ms)
+✔ 持: template, scaling, stroke permutations and reverse direction recognition (125.5877ms)
+✔ 持: order assessment does not depend on recognized character (1.895ms)
+✔ 待: template, scaling, stroke permutations and reverse direction recognition (121.0932ms)
+✔ 待: order assessment does not depend on recognized character (1.7428ms)
+✔ 木: template, scaling, stroke permutations and reverse direction recognition (11.7078ms)
+✔ 木: order assessment does not depend on recognized character (1.1952ms)
+✔ 本: template, scaling, stroke permutations and reverse direction recognition (15.8665ms)
+✔ 本: order assessment does not depend on recognized character (0.9154ms)
+✔ 日: template, scaling, stroke permutations and reverse direction recognition (8.799ms)
+✔ 日: order assessment does not depend on recognized character (0.5904ms)
+✔ 目: template, scaling, stroke permutations and reverse direction recognition (15.2347ms)
+✔ 目: order assessment does not depend on recognized character (0.6942ms)
+✔ 口: template, scaling, stroke permutations and reverse direction recognition (5.4078ms)
+✔ 口: order assessment does not depend on recognized character (0.4029ms)
+✔ 国: template, scaling, stroke permutations and reverse direction recognition (87.5462ms)
+✔ 国: order assessment does not depend on recognized character (1.2062ms)
+✔ 思: independent hand-authored pointer fixture (59.8508ms)
+✔ 同: independent hand-authored pointer fixture (13.1568ms)
+✔ 持: independent hand-authored pointer fixture (60.3749ms)
+✔ 待: independent hand-authored pointer fixture (70.8665ms)
+✔ 木: independent hand-authored pointer fixture (4.5027ms)
+✔ 本: independent hand-authored pointer fixture (8.0674ms)
+✔ 日: independent hand-authored pointer fixture (4.5337ms)
+✔ 目: independent hand-authored pointer fixture (7.6197ms)
+✔ 国: independent hand-authored pointer fixture (45.7988ms)
+✔ broad handwritten enclosure remains a documented 口/囗 ambiguity (1.5847ms)
+✔ joined/separated strokes are not silently accepted as the target (79.7774ms)
+✔ invalid streams, taps and scribbles cannot be accepted (0.5682ms)
+✔ reviewed prompts keep all original tasks, hide answers, and retain catalog (15.3466ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1940.3965
+[
+  {
+    lang: 'en',
+    char: '思',
+    result: 'correct',
+    order: 'likely; swapped=review',
+    summaryRows: 1,
+    reload: 'no duplicates'
+  },
+  {
+    lang: 'en',
+    char: '同',
+    result: 'correct',
+    order: 'likely; swapped=review',
+    summaryRows: 1,
+    reload: 'no duplicates'
+  },
+  {
+    lang: 'ja',
+    char: '思',
+    result: 'correct',
+    order: 'likely; swapped=review',
+    summaryRows: 1,
+    reload: 'no duplicates'
+  },
+  {
+    lang: 'ja',
+    char: '同',
+    result: 'correct',
+    order: 'likely; swapped=review',
+    summaryRows: 1,
+    reload: 'no duplicates'
+  }
+]

@@ -31,11 +31,6 @@
       "about/",
       "私について",
       "About"
-    ],
-    [
-      "contact/",
-      "お問い合わせ",
-      "Contact"
     ]
   ],
   "labels": {
@@ -122,20 +117,20 @@
     "home": {
       "route": "",
       "ja": {
-        "title": "ホテル運営とゲームローカライズの経験",
-        "lead": "予約管理、売上・入金の照合、ゲーム翻訳の実務経験があります。データ品質管理、レポーティング、ITオペレーションに関連する仕事を希望しています。",
+        "title": "業務経験を生かし、IT・データ運用の分野へ。",
+        "lead": "ホテル運営での予約管理・データ照合、ゲームローカライズでの翻訳・変更管理を経験してきました。業務システムへの関心を生かし、ITオペレーションやデータ品質管理に関わる仕事を目指しています。",
         "eyebrow": "プロフィール",
-        "description": "ホテル運営とゲームローカライズの経験を持つボロディナ・リディアのポートフォリオ。データ品質管理、レポーティング、ITオペレーション分野への転職を希望しています。",
+        "description": "ホテル運営での予約管理・データ照合、ゲームローカライズでの翻訳・変更管理を経験してきました。業務システムへの関心を生かし、ITオペレーションやデータ品質管理に関わる仕事を目指しています。",
         "titleLines": [
-          "ホテル運営と",
-          "ゲームローカライズの経験"
+          "業務経験を生かし、",
+          "IT・データ運用の分野へ。"
         ]
       },
       "en": {
-        "title": "Hotel operations & game localization",
-        "lead": "My experience includes reservation management, sales and payment reconciliation, and game translation. I am seeking opportunities in data quality, reporting, and IT operations.",
+        "title": "Building on operational experience in IT and data operations.",
+        "lead": "My experience includes reservation management and data verification in hotel operations, as well as translation and change tracking in game localization. I am seeking to build on this experience in IT operations and data quality, particularly in roles involving business systems and information management.",
         "eyebrow": "Profile",
-        "description": "Lidiia Borodina’s career portfolio: hotel operations, game localization, and a move toward data quality, reporting, and IT operations."
+        "description": "My experience includes reservation management and data verification in hotel operations, as well as translation and change tracking in game localization. I am seeking to build on this experience in IT operations and data quality, particularly in roles involving business systems and information management."
       }
     },
     "experience": {
@@ -374,37 +369,25 @@
     {
       "ja": {
         "title": "業務システム・データ",
-        "items": [
-          "PMS・ホテルの業務システム",
-          "データの確認・照合・修正",
-          "予約情報・売上・入金の確認"
-        ]
+        "items": [],
+        "body": "ホテルの予約管理システム（PMS）を使用し、予約内容や料金、客室タイプなどの確認・変更を行っています。複数の情報を照合し、変更内容を関係者に共有する業務も経験しています。"
       },
       "en": {
         "title": "Operational systems & data",
-        "items": [
-          "Hotel PMS and operational systems",
-          "Data verification, reconciliation, and corrections",
-          "Reservation, sales, and payment checks"
-        ]
+        "items": [],
+        "body": "I use hotel property management systems (PMS) to check and update reservations, rates, and room types. My work also involves cross-checking information and communicating changes to relevant colleagues."
       }
     },
     {
       "ja": {
         "title": "表計算・報告",
-        "items": [
-          "Excel・Google Sheets",
-          "基本的な関数・条件付き書式",
-          "日次報告・業務データの整理"
-        ]
+        "items": [],
+        "body": "Excel・Googleスプレッドシートを使用し、日々の業務データの入力・整理、売上・入金情報の照合、報告用データの確認を行っています。基本的な関数や条件付き書式を使用した経験があります。"
       },
       "en": {
         "title": "Spreadsheets & reporting",
-        "items": [
-          "Excel and Google Sheets",
-          "Basic formulas and conditional formatting",
-          "Daily reporting and data organization"
-        ]
+        "items": [],
+        "body": "I use Excel and Google Sheets to enter and organize operational data, reconcile sales and payment information, and check data for reporting. I have experience with basic spreadsheet formulas and conditional formatting."
       }
     },
     {
@@ -906,17 +889,17 @@
       "ja": {
         "title": "仕事への考え方",
         "paragraphs": [
-          "その場で次々と発生する問題に対応すること以上に、問題の原因を考え、情報や業務の流れを整理し、より分かりやすい仕組みをつくることにやりがいを感じます。",
-          "現在のホテル業務でも、システムを使った情報管理や確認作業、業務の整理に特に関心があります。必要な作業を一覧化したり、不具合や情報の不一致が起きた原因を調べたりすることが好きです。",
-          "こうした関心から、ITやデータ管理に関する知識を身につけ、日々の業務を支えるシステムや運用の改善に携わりたいと考えています。"
+          "日々の業務で発生する問題に対応するだけでなく、その原因を考え、同じ問題を防ぐために情報や業務の流れを整理することにやりがいを感じます。",
+          "ホテル業務では、日々必要な対応に取り組みながら、システムを使った情報管理や確認作業にも関心を持っています。作業を一覧化したり、情報の不一致や不具合について確認すべき点を整理したりすることが好きです。",
+          "ITやデータ管理の知識を身につけ、日々の業務を支えるシステムや運用の改善に携わりたいと考えています。"
         ]
       },
       "en": {
         "title": "How I Approach Work",
         "paragraphs": [
-          "I find particular satisfaction in understanding the causes of problems, organizing information and workflows, and making systems easier to use. I am more interested in this systematic work than in continually responding to situations as they arise.",
-          "In my current hotel role, I am especially interested in information management and checks using operational systems, as well as the organization of day-to-day work. I enjoy making task lists and investigating the causes of system issues or inconsistent information.",
-          "These interests motivate me to develop my knowledge of IT and data management and to contribute to improvements in the systems and operations that support everyday work."
+          "Beyond responding to day-to-day issues, I find it rewarding to understand their causes and organize information and workflows in ways that help prevent similar problems from recurring.",
+          "In my hotel role, I handle day-to-day needs while taking an interest in information management and checks using operational systems. I enjoy making task lists and organizing the points that need to be checked when information is inconsistent or a system issue occurs.",
+          "I want to develop my knowledge of IT and data management and contribute to improvements in the systems and operations that support everyday work."
         ]
       }
     },
@@ -958,5 +941,44 @@
         ]
       }
     }
-  ]
+  ],
+  "contactAction": {
+    "route": "contact/",
+    "ja": "お問い合わせ",
+    "en": "Contact"
+  },
+  "professionalSummary": {
+    "ja": {
+      "title": "職務要約",
+      "body": "ホテル運営において、予約管理システムを用いた情報の確認・修正、売上・入金照合、日次報告、業務の引き継ぎなどを担当しています。以前はゲームローカライズに従事し、翻訳、訳文の確認・修正、GitHub・TortoiseSVNを用いたファイルの更新を経験しました。これらの経験を生かし、ITオペレーションやデータ管理に関する業務への転職を目指しています。"
+    },
+    "en": {
+      "title": "Professional Summary",
+      "body": "My professional experience includes reservation record management, sales and payment reconciliation, daily reporting, and operational handovers in hotel operations. Previously, I worked in game localization, translating and reviewing game content and updating files using GitHub and TortoiseSVN. I am looking to apply this experience to IT operations and data management roles."
+    }
+  },
+  "applicationDocuments": {
+    "approved": false,
+    "url": null,
+    "ja": {
+      "title": "応募書類",
+      "body": "応募書類をご希望の場合は、メールでお問い合わせください。",
+      "button": "職務経歴書（PDF）を見る"
+    },
+    "en": {
+      "title": "Application Documents",
+      "body": "Please contact me by email to request application documents.",
+      "button": "View professional résumé (PDF)"
+    }
+  },
+  "residenceStatus": {
+    "value": "技術・人文知識・国際業務",
+    "ja": {
+      "title": "在留資格"
+    },
+    "en": {
+      "title": "Status of residence",
+      "value": "Engineer / Specialist in Humanities / International Services"
+    }
+  }
 }

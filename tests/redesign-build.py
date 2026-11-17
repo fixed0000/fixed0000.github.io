@@ -22,8 +22,12 @@ assert not subprocess.check_output(['git','diff','c6d883e','--','css/kanji-compa
 original_css=subprocess.check_output(['git','show','c6d883e:css/site.css'],cwd=root).decode('utf-8').replace('\r\n','\n')
 assert (root/'css/site.css').read_text(encoding='utf-8').startswith(original_css.rstrip())
 previous=json.loads(subprocess.check_output(['git','show','c6d883e:content/site.json'],cwd=root).decode('utf-8'))
-for key in ['person','education','languages','homeEvidence','projects','research','navigation']:
+for key in ['person','education','languages','homeEvidence','projects','research']:
     assert data[key]==previous[key],key
+assert data['navigation']==previous['navigation'][:5]
+assert data['contactAction']['route']=='contact/'
+assert data['applicationDocuments']['approved'] is False
+assert data['applicationDocuments']['url'] is None
 for key in ['kanji-recall','family','monogatari']:
     assert data['pages'][key]==previous['pages'][key],key
 
@@ -46,5 +50,5 @@ for lang in ['ja','en']:
     contact=(root/prefix/'contact/index.html').read_text(encoding='utf-8')
     assert '.pdf' not in contact
 result={'deterministic':True,'preservedApp':protected,'bilingualPages':len(routes)*2,'licensesPreserved':True,'publicCvLinks':False}
-(root/'artifacts/editorial-refinement/build-audit.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+(root/'artifacts/job-search-final/build-audit.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
 print('PASS deterministic static build; preserved Kanji Recall mechanics, data and markup; licensed content')
