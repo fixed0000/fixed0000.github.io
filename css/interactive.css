@@ -89,3 +89,10 @@ a:hover { text-decoration-thickness:2px; }
 .game-gallery img { display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line); }
 .game-gallery figcaption { margin-top:.5rem;color:var(--muted); }
 @media(max-width:700px) { .game-gallery { grid-template-columns:1fr; } }
+
+/* Professional experience: readable thematic groups within the existing timeline. */
+.entries .duties { margin:1.5rem 0 0; }
+.entries .duties > div + div { margin-top:1.25rem; }
+.entries .duties dt { font-weight:650; }
+.entries .duties dd { margin:.3rem 0 0; }
+.research-subtitle { max-width:48rem; color:var(--muted); margin:0; }

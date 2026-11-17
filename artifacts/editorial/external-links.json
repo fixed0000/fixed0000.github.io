@@ -1,0 +1,42 @@
+[
+  {
+    "url": "https://github.com/fixed0000",
+    "status": 200
+  },
+  {
+    "url": "https://github.com/fixed0000/fixed0000.github.io",
+    "status": 200
+  },
+  {
+    "url": "https://github.com/davidluzgouveia/kanji-data",
+    "status": 200
+  },
+  {
+    "url": "https://www.kanken.or.jp/kanken/outline/degree.html",
+    "status": 200
+  },
+  {
+    "url": "https://kanjivg.tagaini.net/",
+    "status": 200
+  },
+  {
+    "url": "https://github.com/fixed0000/MoriGarden",
+    "status": 200
+  },
+  {
+    "url": "https://github.com/fixed0000/MoriGarden/commits/main/",
+    "status": 429
+  },
+  {
+    "url": "https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c",
+    "status": 200
+  },
+  {
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "status": 200
+  },
+  {
+    "url": "https://github.com/fixed0000/fixed0000.github.io/tree/bca2cf19c28cd41f1511ea425d0d7aa772676d60/js/translations",
+    "status": 200
+  }
+]

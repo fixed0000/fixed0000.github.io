@@ -1,0 +1,550 @@
+{
+  "base": "http://localhost:8000",
+  "layouts": [
+    {
+      "url": "/",
+      "width": 320,
+      "headingHeight": 58,
+      "overflow": false
+    },
+    {
+      "url": "/experience/",
+      "width": 320,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/skills/",
+      "width": 320,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/education/",
+      "width": 320,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/research/",
+      "width": 320,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/research/family/",
+      "width": 320,
+      "headingHeight": 123,
+      "overflow": false
+    },
+    {
+      "url": "/research/monogatari/",
+      "width": 320,
+      "headingHeight": 82,
+      "overflow": false
+    },
+    {
+      "url": "/contact/",
+      "width": 320,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/about/",
+      "width": 320,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/en/",
+      "width": 320,
+      "headingHeight": 246,
+      "overflow": false
+    },
+    {
+      "url": "/en/experience/",
+      "width": 320,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/en/skills/",
+      "width": 320,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/en/education/",
+      "width": 320,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/en/research/",
+      "width": 320,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/en/research/family/",
+      "width": 320,
+      "headingHeight": 164,
+      "overflow": false
+    },
+    {
+      "url": "/en/research/monogatari/",
+      "width": 320,
+      "headingHeight": 164,
+      "overflow": false
+    },
+    {
+      "url": "/en/contact/",
+      "width": 320,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/en/about/",
+      "width": 320,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/",
+      "width": 360,
+      "headingHeight": 58,
+      "overflow": false
+    },
+    {
+      "url": "/experience/",
+      "width": 360,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/skills/",
+      "width": 360,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/education/",
+      "width": 360,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/research/",
+      "width": 360,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/research/family/",
+      "width": 360,
+      "headingHeight": 82,
+      "overflow": false
+    },
+    {
+      "url": "/research/monogatari/",
+      "width": 360,
+      "headingHeight": 82,
+      "overflow": false
+    },
+    {
+      "url": "/contact/",
+      "width": 360,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/about/",
+      "width": 360,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/en/",
+      "width": 360,
+      "headingHeight": 164,
+      "overflow": false
+    },
+    {
+      "url": "/en/experience/",
+      "width": 360,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/en/skills/",
+      "width": 360,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/en/education/",
+      "width": 360,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/en/research/",
+      "width": 360,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/en/research/family/",
+      "width": 360,
+      "headingHeight": 123,
+      "overflow": false
+    },
+    {
+      "url": "/en/research/monogatari/",
+      "width": 360,
+      "headingHeight": 123,
+      "overflow": false
+    },
+    {
+      "url": "/en/contact/",
+      "width": 360,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/en/about/",
+      "width": 360,
+      "headingHeight": 41,
+      "overflow": false
+    },
+    {
+      "url": "/",
+      "width": 768,
+      "headingHeight": 104,
+      "overflow": false
+    },
+    {
+      "url": "/experience/",
+      "width": 768,
+      "headingHeight": 52,
+      "overflow": false
+    },
+    {
+      "url": "/skills/",
+      "width": 768,
+      "headingHeight": 52,
+      "overflow": false
+    },
+    {
+      "url": "/education/",
+      "width": 768,
+      "headingHeight": 52,
+      "overflow": false
+    },
+    {
+      "url": "/research/",
+      "width": 768,
+      "headingHeight": 52,
+      "overflow": false
+    },
+    {
+      "url": "/research/family/",
+      "width": 768,
+      "headingHeight": 104,
+      "overflow": false
+    },
+    {
+      "url": "/research/monogatari/",
+      "width": 768,
+      "headingHeight": 52,
+      "overflow": false
+    },
+    {
+      "url": "/contact/",
+      "width": 768,
+      "headingHeight": 52,
+      "overflow": false
+    },
+    {
+      "url": "/about/",
+      "width": 768,
+      "headingHeight": 52,
+      "overflow": false
+    },
+    {
+      "url": "/en/",
+      "width": 768,
+      "headingHeight": 156,
+      "overflow": false
+    },
+    {
+      "url": "/en/experience/",
+      "width": 768,
+      "headingHeight": 52,
+      "overflow": false
+    },
+    {
+      "url": "/en/skills/",
+      "width": 768,
+      "headingHeight": 52,
+      "overflow": false
+    },
+    {
+      "url": "/en/education/",
+      "width": 768,
+      "headingHeight": 52,
+      "overflow": false
+    },
+    {
+      "url": "/en/research/",
+      "width": 768,
+      "headingHeight": 52,
+      "overflow": false
+    },
+    {
+      "url": "/en/research/family/",
+      "width": 768,
+      "headingHeight": 104,
+      "overflow": false
+    },
+    {
+      "url": "/en/research/monogatari/",
+      "width": 768,
+      "headingHeight": 104,
+      "overflow": false
+    },
+    {
+      "url": "/en/contact/",
+      "width": 768,
+      "headingHeight": 52,
+      "overflow": false
+    },
+    {
+      "url": "/en/about/",
+      "width": 768,
+      "headingHeight": 52,
+      "overflow": false
+    },
+    {
+      "url": "/",
+      "width": 1280,
+      "headingHeight": 168,
+      "overflow": false
+    },
+    {
+      "url": "/experience/",
+      "width": 1280,
+      "headingHeight": 75,
+      "overflow": false
+    },
+    {
+      "url": "/skills/",
+      "width": 1280,
+      "headingHeight": 75,
+      "overflow": false
+    },
+    {
+      "url": "/education/",
+      "width": 1280,
+      "headingHeight": 75,
+      "overflow": false
+    },
+    {
+      "url": "/research/",
+      "width": 1280,
+      "headingHeight": 75,
+      "overflow": false
+    },
+    {
+      "url": "/research/family/",
+      "width": 1280,
+      "headingHeight": 149,
+      "overflow": false
+    },
+    {
+      "url": "/research/monogatari/",
+      "width": 1280,
+      "headingHeight": 75,
+      "overflow": false
+    },
+    {
+      "url": "/contact/",
+      "width": 1280,
+      "headingHeight": 75,
+      "overflow": false
+    },
+    {
+      "url": "/about/",
+      "width": 1280,
+      "headingHeight": 75,
+      "overflow": false
+    },
+    {
+      "url": "/en/",
+      "width": 1280,
+      "headingHeight": 224,
+      "overflow": false
+    },
+    {
+      "url": "/en/experience/",
+      "width": 1280,
+      "headingHeight": 75,
+      "overflow": false
+    },
+    {
+      "url": "/en/skills/",
+      "width": 1280,
+      "headingHeight": 75,
+      "overflow": false
+    },
+    {
+      "url": "/en/education/",
+      "width": 1280,
+      "headingHeight": 75,
+      "overflow": false
+    },
+    {
+      "url": "/en/research/",
+      "width": 1280,
+      "headingHeight": 75,
+      "overflow": false
+    },
+    {
+      "url": "/en/research/family/",
+      "width": 1280,
+      "headingHeight": 149,
+      "overflow": false
+    },
+    {
+      "url": "/en/research/monogatari/",
+      "width": 1280,
+      "headingHeight": 149,
+      "overflow": false
+    },
+    {
+      "url": "/en/contact/",
+      "width": 1280,
+      "headingHeight": 75,
+      "overflow": false
+    },
+    {
+      "url": "/en/about/",
+      "width": 1280,
+      "headingHeight": 75,
+      "overflow": false
+    }
+  ],
+  "metadata": [
+    {
+      "url": "/",
+      "title": "業務の正確性を支える経験を、データ管理・業務運用の仕事へ。 | ボロディナ・リディア",
+      "description": "ホテルでの予約情報管理、売上・入金情報の確認、日次報告、シフト間の引き継ぎに加え、ゲームローカライズでの翻訳テキスト確認・言語品質チェック（LQA）を経験してきました。情報の整合性を確認し、必要な修正や共有を行ってきた経験を生かし、データ品質管理・レポーティング・ITオペレーションなどの分野で専門性を高めたいと考えています。",
+      "ogTitle": "業務の正確性を支える経験を、データ管理・業務運用の仕事へ。"
+    },
+    {
+      "url": "/experience/",
+      "title": "職務経歴 | ボロディナ・リディア",
+      "description": "ホテル運営とゲームローカライズの実務を通じて、情報の照合・修正、品質確認、変更管理、業務の引き継ぎを経験してきました。",
+      "ogTitle": "職務経歴"
+    },
+    {
+      "url": "/skills/",
+      "title": "スキル・資格 | ボロディナ・リディア",
+      "description": "情報の照合・修正、言語品質の確認、日次報告と引き継ぎを通じて培ったスキル。",
+      "ogTitle": "スキル・資格"
+    },
+    {
+      "url": "/education/",
+      "title": "学歴 | ボロディナ・リディア",
+      "description": "モスクワ市立教育大学で日本語の翻訳・通訳を専攻し、2025年に学士課程を修了しました。大学では翻訳実践に加え、言語表現の意味や文脈に関する研究にも取り組みました。",
+      "ogTitle": "学歴"
+    },
+    {
+      "url": "/research/",
+      "title": "研究・制作 | ボロディナ・リディア",
+      "description": "学術研究、個人制作、実務での経験を、それぞれの背景とともに紹介します。",
+      "ogTitle": "研究・制作"
+    },
+    {
+      "url": "/research/family/",
+      "title": "「家族」に対する日本語・ロシア語母語話者の連想比較 | ボロディナ・リディア",
+      "description": "2024 · Completed · 日本語・ロシア語母語話者を対象としたアンケート調査を通じて、「家族」に対する連想の共通点と相違点を比較しました。",
+      "ogTitle": "「家族」に対する日本語・ロシア語母語話者の連想比較"
+    },
+    {
+      "url": "/research/monogatari/",
+      "title": "日本語の会話表現はロシア語にどう訳されるか | ボロディナ・リディア",
+      "description": "2025 · Completed · 〈物語〉シリーズに見られる会話表現とそのロシア語訳を比較し、文脈によって意味やニュアンスがどのように伝えられるかを検討しました。",
+      "ogTitle": "日本語の会話表現はロシア語にどう訳されるか"
+    },
+    {
+      "url": "/contact/",
+      "title": "お問い合わせ | ボロディナ・リディア",
+      "description": "データ品質管理、レポーティング、ITオペレーション、業務運用に関連する職種への転職を希望しています。勤務地は東京都内を第一希望とし、大阪府内および首都圏も検討しています。お問い合わせはメールにてお願いいたします。",
+      "ogTitle": "お問い合わせ"
+    },
+    {
+      "url": "/about/",
+      "title": "このサイトについて | ボロディナ・リディア",
+      "description": "このポートフォリオの目的、デザイン、制作方法と出典。",
+      "ogTitle": "このサイトについて"
+    },
+    {
+      "url": "/en/",
+      "title": "Bringing operational accuracy and information management experience into my next role. | Lidiia Borodina",
+      "description": "My background includes reservation data management, sales and payment checks, daily reporting, and shift handovers in hotel operations, as well as translation review and linguistic quality assurance (LQA) in game localization. I am looking to apply my experience in information accuracy, issue resolution, and operational coordination to roles in data quality, reporting, and IT operations.",
+      "ogTitle": "Bringing operational accuracy and information management experience into my next role."
+    },
+    {
+      "url": "/en/experience/",
+      "title": "Experience | Lidiia Borodina",
+      "description": "My experience spans hotel operations and game localization, including information verification, corrections, quality checks, change tracking, and operational handovers.",
+      "ogTitle": "Experience"
+    },
+    {
+      "url": "/en/skills/",
+      "title": "Skills & Certifications | Lidiia Borodina",
+      "description": "Skills developed through information checks and corrections, linguistic quality assurance, daily reporting, and operational handovers.",
+      "ogTitle": "Skills & Certifications"
+    },
+    {
+      "url": "/en/education/",
+      "title": "Education | Lidiia Borodina",
+      "description": "I completed my bachelor's degree at Moscow City University in 2025, specializing in Japanese translation and interpreting. My studies included translation practice and research into meaning and context in language use.",
+      "ogTitle": "Education"
+    },
+    {
+      "url": "/en/research/",
+      "title": "Research & Projects | Lidiia Borodina",
+      "description": "Academic research, personal software projects, and professional work, each presented in its own context.",
+      "ogTitle": "Research & Projects"
+    },
+    {
+      "url": "/en/research/family/",
+      "title": "Comparing Associations with “Family” in Japanese and Russian | Lidiia Borodina",
+      "description": "2024 · Completed · A questionnaire-based study comparing associations with the concept of “family” among native Japanese and Russian speakers.",
+      "ogTitle": "Comparing Associations with “Family” in Japanese and Russian"
+    },
+    {
+      "url": "/en/research/monogatari/",
+      "title": "Translating Japanese Conversational Expressions into Russian | Lidiia Borodina",
+      "description": "2025 · Completed · An undergraduate study comparing Japanese conversational expressions in the Monogatari series with their Russian translations, focusing on how meaning and nuance are conveyed in context.",
+      "ogTitle": "Translating Japanese Conversational Expressions into Russian"
+    },
+    {
+      "url": "/en/contact/",
+      "title": "Contact | Lidiia Borodina",
+      "description": "I am seeking opportunities in data quality, reporting, IT operations, and operational support. Tokyo is my preferred location, and I am also open to opportunities in Osaka and the greater Tokyo area. Please contact me by email.",
+      "ogTitle": "Contact"
+    },
+    {
+      "url": "/en/about/",
+      "title": "About This Website | Lidiia Borodina",
+      "description": "The purpose, design, development approach, and sources behind this portfolio.",
+      "ogTitle": "About This Website"
+    }
+  ],
+  "errors": [],
+  "keyboard": "passed",
+  "animation": "preserved"
+}

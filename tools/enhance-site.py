@@ -20,11 +20,9 @@ for en in [False,True]:
   ishome=f.parent==(root/'en' if en else root)
   if ishome:
    s=s.replace('<body>','<body class="hero-page">')
-   marker='<p class="career-focus"'
+   marker='<section class="section">'
    pos=s.index(marker);s=s[:pos]+f'<div class="hero-actions"><a class="button primary" href="{prefix}experience/">'+t('職務経歴を見る','View Experience')+f'</a><a class="button" href="{prefix}research/">'+t('制作を見る','Explore Projects')+'</a></div>'+s[pos:]
-   s=s.replace('日本語母語話者における「家族」という概念との連想分析</h3>','「家族」の連想を比較する</h3>').replace('Associations with the concept of “family” among native Japanese speakers</h3>','Associations with “Family”</h3>')
-   s=s.replace('日本語コミュニカティブ表現の露訳における等価性検索の問題（メディアフランチャイズ『〈物語〉シリーズ』の作品を例に）</h3>','〈物語〉シリーズの翻訳表現</h3>').replace('The Problem of Finding Equivalents in Translating Japanese Communicatives into Russian (based on the Monogatari Series media franchise)</h3>','Translating Monogatari</h3>')
-   principles=[('正確性','情報を照合し、不明点を明らかにする。','Accuracy','Check information against its sources and clarify uncertainty.'),('体系化','情報を目的ごとに整理し、必要な情報を見つけやすくする。','Organization','Organize information by purpose so it is easier to find.'),('伝達の分かりやすさ','次の担当者が理解できる形で、背景と変更点を残す。','Clear Handovers','Document context and changes so the next person can understand them.'),('改善','作業の目的を考え、分かりやすい手順を探す。','Improvement','Consider why a task is needed and seek clearer procedures.')]
+   principles=[('正確性','複数の情報を照合し、相違点や確認が必要な箇所を明確にする。','Accuracy','Cross-check information and identify discrepancies and points to verify.'),('体系化','情報を整理し、必要な内容を把握しやすくする。','Organization','Organize information so the relevant details are easy to understand.'),('分かりやすい情報共有','対応状況や変更点を記録し、次の担当者に正確に伝える。','Clear Communication','Record progress and changes accurately for the next person.'),('継続的な改善','日々の業務で分かりにくい点を見直し、より確実な進め方を考える。','Continuous Improvement','Review unclear steps in everyday work and find more reliable ways to proceed.')]
    block='<h3 class="principles-title">'+t('仕事で大切にしたいこと','Working Principles')+'</h3><dl class="principles">'+''.join('<div><dt>'+t(j,e)+'</dt><dd>'+t(jd,ed)+'</dd></div>' for j,jd,e,ed in principles)+'</dl>'
    # Insert before the end of the interests section, not into research cards.
    key=t('興味・関心と大切にしていること','Interests & Working Principles');start=s.index(key+'</h2>');end=s.index('</section>',start);s=s[:end]+block+s[end:]
