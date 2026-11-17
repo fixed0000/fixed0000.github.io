@@ -7,7 +7,7 @@
     "test": "node --test tests/stroke-order.test.mjs && node tests/stroke-order-coverage.mjs && node tests/v2-core.mjs && node tests/recognition.cjs artifacts/v2/recognition-results.json && node tests/validate-html.mjs && python -X utf8 tests/links.py && node tests/v2-browser.cjs && node tests/v2-resilience.cjs && node tests/v2-extra.cjs && node tests/stroke-order-browser.cjs && node --test tests/repair-core.test.mjs && node tests/repair-browser.cjs",
     "serve": "python -X utf8 tools/serve.py",
     "test:stroke-order": "node --test tests/stroke-order.test.mjs && node tests/stroke-order-coverage.mjs && node tests/stroke-order-browser.cjs",
-    "test:site": "python -X utf8 tests/redesign-build.py && node tests/validate-html.mjs && python -X utf8 tests/links.py && node tests/redesign-browser.cjs"
+    "test:site": "python -X utf8 tests/redesign-build.py && node tests/validate-html.mjs && python -X utf8 tests/links.py && node tests/redesign-browser.cjs && node tests/published-media.cjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.11.0",

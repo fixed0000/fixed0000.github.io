@@ -69,12 +69,12 @@
       "ja": {
         "title": "MoriGarden",
         "lead": "仮想の生き物の成長とふれあいを楽しむ、開発中の個人制作3Dゲーム。",
-        "body": "<section class=\"section\"><h2>概要</h2><p>Chao Gardenに着想を得た、生き物の育成やふれあいを楽しむ個人制作の3Dゲームです。非営利のファンプロジェクトとして開発しています。</p></section><section class=\"section\"><h2>制作目的</h2><p>生き物の成長や行動、プレイヤーとのふれあいを扱う個人制作です。</p></section><section class=\"section\"><h2>実装済み機能</h2><ul><li>三人称の移動・カメラ、物を持つ・置く・投げる操作</li><li>卵の孵化、なでる・呼ぶ・餌を与える操作</li><li>自律的な散歩・水泳・休息・遊びと生き物同士の交流</li><li>果物・種・卵のショップ、木と果物の仕組み</li><li>自動保存と20個のセーブスロット、バックアップからの復旧</li></ul></section><section class=\"section\"><h2>開発環境</h2><p>Godot 4.5.1 .NET · C# · .NET 8 · GLBモデル・Python/Tkinter製の別体エディター</p></section><section class=\"section\"><h2>現状・制約</h2><p>In Development。現在の起動手順はWindows向けです。公開Webビルドは確認できていないため、このサイトへのゲームの埋め込みは行っていません。</p></section><section class=\"section\"><h2>今後の予定</h2><p>今後の具体的な公開予定・追加機能は未確定です。開発状況はGitHubで確認できます。</p></section><section class=\"section\"><h2>GitHub</h2><a class=\"button\" href=\"https://github.com/fixed0000/MoriGarden\">ソースコード・起動方法</a><p class=\"note\">確認根拠：README.md、project.godot、Mori.csproj、Scripts/GardenGame.cs、Scripts/SaveStore.cs。</p></section><section class=\"section\" aria-labelledby=\"gallery-title\"><h2 id=\"gallery-title\">ギャラリー</h2><p>2026年11月13日、Godot 4.5.1で実行して撮影。画像を選ぶと原寸で表示します。</p><div class=\"game-gallery\"><figure><a href=\"/assets/screenshots/morigarden/01-garden.png\"><img src=\"/assets/screenshots/morigarden/01-garden.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"庭の全景\"></a><figcaption>庭の全景</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/02-character.png\"><img src=\"/assets/screenshots/morigarden/02-character.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"庭の小道と遊び場\"></a><figcaption>庭の小道と遊び場</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/04-interface.png\"><img src=\"/assets/screenshots/morigarden/04-interface.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"ゲーム内ステータス表示\"></a><figcaption>ゲーム内ステータス表示</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/05-inventory.png\"><img src=\"/assets/screenshots/morigarden/05-inventory.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"持ち物の管理\"></a><figcaption>持ち物の管理</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/06-coastal-cove.png\"><img src=\"/assets/screenshots/morigarden/06-coastal-cove.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Coastal Coveの探索\"></a><figcaption>Coastal Coveの探索</figcaption></figure></div></section><section class=\"section\"><h2>開発の記録</h2><p>2026年11月のコミットでは、Coastal Coveの分離、生き物の移動・休息・接触、アイテム保持や浅瀬での動作などの改善が記録されています。これは公開コミットに基づく紹介で、開発期間全体を示すものではありません。</p><a href=\"https://github.com/fixed0000/MoriGarden/commits/main/\">GitHub commit history</a></section><section class=\"section\" id=\"asset-credits\"><h2>使用素材・クレジット</h2><p><a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Baby Chao</a> — <a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Alice.Sacco</a>（Sketchfab、<a href=\"https://creativecommons.org/licenses/by/4.0/\">CC BY 4.0</a>）。Godotへの取り込みと、表示サイズ・姿勢・目の表示を調整しています。</p><p>SEGAとの提携・承認関係はありません。原作キャラクターの権利は関連する権利者に帰属します。</p><p class=\"note\">公開画像ではBaby Chaoとプレイヤーモデルを非表示にしています。モデル掲載ページのNoAI指定を尊重し、生成AIへの入力には使用していません。</p></section>"
+        "body": "<section class=\"section\"><h2>概要</h2><p>Chao Gardenに着想を得た、生き物の育成やふれあいを楽しむ個人制作の3Dゲームです。非営利のファンプロジェクトとして開発しています。</p></section><section class=\"section\"><h2>制作目的</h2><p>生き物の成長や行動、プレイヤーとのふれあいを扱う個人制作です。</p></section><section class=\"section\"><h2>ゲームの主な機能</h2><p>MoriGardenは、生き物の育成と庭での生活を中心とした個人制作の3Dゲームです。</p><p>プレイヤーは庭を自由に移動し、生き物に餌を与えたり、呼びかけたり、なでたりすることができます。生き物は散歩、水泳、休息、遊び、ほかの生き物との交流などを自律的に行います。</p><p>果物や種、卵を購入できるショップ、木と果物の仕組み、アイテムの持ち運び、複数のセーブスロットを実装しています。</p></section><section class=\"section\"><h2>開発環境</h2><p>Godot 4.5.1 .NET · C# · .NET 8 · GLBモデル・Python/Tkinter製の別体エディター</p></section><section class=\"section\"><h2>現状・制約</h2><p>In Development。現在の起動手順はWindows向けです。公開Webビルドは確認できていないため、このサイトへのゲームの埋め込みは行っていません。</p></section><section class=\"section\"><h2>今後の予定</h2><p>今後の具体的な公開予定・追加機能は未確定です。開発状況はGitHubで確認できます。</p></section><section class=\"section\"><h2>GitHub</h2><a class=\"button\" href=\"https://github.com/fixed0000/MoriGarden\">ソースコード・起動方法</a><p class=\"note\">確認根拠：README.md、project.godot、Mori.csproj、Scripts/GardenGame.cs、Scripts/SaveStore.cs。</p></section><section class=\"section\" aria-labelledby=\"gallery-title\"><h2 id=\"gallery-title\">ギャラリー</h2><p>2026年11月18日の動作画面です。画像を選ぶと原寸で表示します。</p><div class=\"game-gallery\"><figure><a href=\"/assets/screenshots/morigarden/01-garden.webp\"><img src=\"/assets/screenshots/morigarden/01-garden.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"メインガーデンの全景\"></a><figcaption>メインガーデンの全景</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/02-coastal-cove.webp\"><img src=\"/assets/screenshots/morigarden/02-coastal-cove.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Coastal Coveの海辺\"></a><figcaption>Coastal Coveの海辺</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/03-status.webp\"><img src=\"/assets/screenshots/morigarden/03-status.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"生き物の状態を確認する画面\"></a><figcaption>生き物の状態を確認する画面</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/04-inventory.webp\"><img src=\"/assets/screenshots/morigarden/04-inventory.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"果物・種を選ぶインベントリ\"></a><figcaption>果物・種を選ぶインベントリ</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/05-shop.webp\"><img src=\"/assets/screenshots/morigarden/05-shop.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"卵・果物・種を扱うショップ\"></a><figcaption>卵・果物・種を扱うショップ</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/06-trees.webp\"><img src=\"/assets/screenshots/morigarden/06-trees.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"庭の木と果物\"></a><figcaption>庭の木と果物</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/07-item-handling.webp\"><img src=\"/assets/screenshots/morigarden/07-item-handling.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"果物を持ち運ぶ操作\"></a><figcaption>果物を持ち運ぶ操作</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/08-save-slots.webp\"><img src=\"/assets/screenshots/morigarden/08-save-slots.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"複数のセーブスロット\"></a><figcaption>複数のセーブスロット</figcaption></figure></div></section><section class=\"section\"><h2>開発の記録</h2><p>2026年11月のコミットでは、Coastal Coveの分離、生き物の移動・休息・接触、アイテム保持や浅瀬での動作などの改善が記録されています。これは公開コミットに基づく紹介で、開発期間全体を示すものではありません。</p><a href=\"https://github.com/fixed0000/MoriGarden/commits/main/\">GitHub commit history</a></section><section class=\"section\" id=\"asset-credits\"><h2>使用素材・クレジット</h2><p><a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Baby Chao</a> — <a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Alice.Sacco</a>（Sketchfab、<a href=\"https://creativecommons.org/licenses/by/4.0/\">CC BY 4.0</a>）。Godotへの取り込みと、表示サイズ・姿勢・目の表示を調整しています。</p><p>SEGAとの提携・承認関係はありません。原作キャラクターの権利は関連する権利者に帰属します。</p><p class=\"note\">公開画像ではBaby Chaoとプレイヤーモデルを非表示にしています。モデル掲載ページのNoAI指定を尊重し、生成AIへの入力には使用していません。</p></section>"
       },
       "en": {
         "title": "MoriGarden",
         "lead": "A personal 3D game in development about caring for and interacting with virtual creatures.",
-        "body": "<section class=\"section\"><h2>Overview</h2><p>A personal 3D creature-care game inspired by Chao Garden, developed as a non-commercial fan project.</p></section><section class=\"section\"><h2>Motivation</h2><p>A personal exploration of creature growth, autonomous behavior, and interaction with the player.</p></section><section class=\"section\"><h2>Implemented Features</h2><ul><li>Third-person movement and camera; pick up, place, and throw objects</li><li>Egg hatching; petting, calling, and feeding creatures</li><li>Autonomous wandering, swimming, resting, playing, and social interactions</li><li>Shop for fruit, seeds, and eggs; tree and fruit systems</li><li>Autosave, 20 save slots, and backup recovery</li></ul></section><section class=\"section\"><h2>Technologies</h2><p>Godot 4.5.1 .NET · C# · .NET 8 · GLB models · separate Python/Tkinter editor</p></section><section class=\"section\"><h2>Status & Limitations</h2><p>In Development. Current launch instructions target Windows. No public web build has been confirmed, so the game is not embedded in this site.</p></section><section class=\"section\"><h2>Roadmap</h2><p>Specific release plans and future features are not confirmed. Development can be followed on GitHub.</p></section><section class=\"section\"><h2>GitHub</h2><a class=\"button\" href=\"https://github.com/fixed0000/MoriGarden\">Source Code & Launch Instructions</a><p class=\"note\">Evidence: README.md, project.godot, Mori.csproj, Scripts/GardenGame.cs, Scripts/SaveStore.cs.</p></section><section class=\"section\" aria-labelledby=\"gallery-title\"><h2 id=\"gallery-title\">Gallery</h2><p>Captured from the running game in Godot 4.5.1 on 13 November 2026. Select an image to view it at full size.</p><div class=\"game-gallery\"><figure><a href=\"/assets/screenshots/morigarden/01-garden.png\"><img src=\"/assets/screenshots/morigarden/01-garden.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Garden overview\"></a><figcaption>Garden overview</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/02-character.png\"><img src=\"/assets/screenshots/morigarden/02-character.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Garden paths and play area\"></a><figcaption>Garden paths and play area</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/04-interface.png\"><img src=\"/assets/screenshots/morigarden/04-interface.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"In-game status interface\"></a><figcaption>In-game status interface</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/05-inventory.png\"><img src=\"/assets/screenshots/morigarden/05-inventory.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Inventory management\"></a><figcaption>Inventory management</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/06-coastal-cove.png\"><img src=\"/assets/screenshots/morigarden/06-coastal-cove.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Exploring Coastal Cove\"></a><figcaption>Exploring Coastal Cove</figcaption></figure></div></section><section class=\"section\"><h2>Development History</h2><p>Public commits from November 2026 record work on separating Coastal Cove, creature routes and rest, contact handling, item grips, and wading behavior. These are examples from the commit history, not a claim about the project’s entire development period.</p><a href=\"https://github.com/fixed0000/MoriGarden/commits/main/\">GitHub commit history</a></section><section class=\"section\" id=\"asset-credits\"><h2>Asset Credits</h2><p><a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Baby Chao</a> — <a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Alice.Sacco</a> (Sketchfab, <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC BY 4.0</a>). Imported into Godot with adjustments to display scale, pose, and eye display.</p><p>This project is not affiliated with or endorsed by SEGA. Rights to the original character design remain with the relevant rights holders.</p><p class=\"note\">Baby Chao and the player model are hidden in the public screenshots. The source page’s NoAI designation is respected; the model is not used as input to generative AI.</p></section>"
+        "body": "<section class=\"section\"><h2>Overview</h2><p>A personal 3D creature-care game inspired by Chao Garden, developed as a non-commercial fan project.</p></section><section class=\"section\"><h2>Motivation</h2><p>A personal exploration of creature growth, autonomous behavior, and interaction with the player.</p></section><section class=\"section\"><h2>Main Features</h2><p>MoriGarden is a personal 3D game focused on caring for virtual creatures and observing their life in a garden.</p><p>Players can explore the garden, feed creatures, call them, and pet them. The creatures can independently wander, swim, rest, play, and interact with one another.</p><p>The game also includes a shop for fruit, seeds, and eggs, tree and fruit mechanics, item handling, and multiple save slots.</p></section><section class=\"section\"><h2>Technologies</h2><p>Godot 4.5.1 .NET · C# · .NET 8 · GLB models · separate Python/Tkinter editor</p></section><section class=\"section\"><h2>Status & Limitations</h2><p>In Development. Current launch instructions target Windows. No public web build has been confirmed, so the game is not embedded in this site.</p></section><section class=\"section\"><h2>Roadmap</h2><p>Specific release plans and future features are not confirmed. Development can be followed on GitHub.</p></section><section class=\"section\"><h2>GitHub</h2><a class=\"button\" href=\"https://github.com/fixed0000/MoriGarden\">Source Code & Launch Instructions</a><p class=\"note\">Evidence: README.md, project.godot, Mori.csproj, Scripts/GardenGame.cs, Scripts/SaveStore.cs.</p></section><section class=\"section\" aria-labelledby=\"gallery-title\"><h2 id=\"gallery-title\">Gallery</h2><p>Captured from the running application on 18 November 2026. Select an image to view it at full size.</p><div class=\"game-gallery\"><figure><a href=\"/assets/screenshots/morigarden/01-garden.webp\"><img src=\"/assets/screenshots/morigarden/01-garden.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Main garden overview\"></a><figcaption>Main garden overview</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/02-coastal-cove.webp\"><img src=\"/assets/screenshots/morigarden/02-coastal-cove.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"The shore at Coastal Cove\"></a><figcaption>The shore at Coastal Cove</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/03-status.webp\"><img src=\"/assets/screenshots/morigarden/03-status.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Creature status panel\"></a><figcaption>Creature status panel</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/04-inventory.webp\"><img src=\"/assets/screenshots/morigarden/04-inventory.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Inventory for fruit and seeds\"></a><figcaption>Inventory for fruit and seeds</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/05-shop.webp\"><img src=\"/assets/screenshots/morigarden/05-shop.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Shop for eggs, fruit, and seeds\"></a><figcaption>Shop for eggs, fruit, and seeds</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/06-trees.webp\"><img src=\"/assets/screenshots/morigarden/06-trees.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Garden trees and fruit\"></a><figcaption>Garden trees and fruit</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/07-item-handling.webp\"><img src=\"/assets/screenshots/morigarden/07-item-handling.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Carrying a fruit item\"></a><figcaption>Carrying a fruit item</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/08-save-slots.webp\"><img src=\"/assets/screenshots/morigarden/08-save-slots.webp\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Multiple save slots\"></a><figcaption>Multiple save slots</figcaption></figure></div></section><section class=\"section\"><h2>Development History</h2><p>Public commits from November 2026 record work on separating Coastal Cove, creature routes and rest, contact handling, item grips, and wading behavior. These are examples from the commit history, not a claim about the project’s entire development period.</p><a href=\"https://github.com/fixed0000/MoriGarden/commits/main/\">GitHub commit history</a></section><section class=\"section\" id=\"asset-credits\"><h2>Asset Credits</h2><p><a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Baby Chao</a> — <a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Alice.Sacco</a> (Sketchfab, <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC BY 4.0</a>). Imported into Godot with adjustments to display scale, pose, and eye display.</p><p>This project is not affiliated with or endorsed by SEGA. Rights to the original character design remain with the relevant rights holders.</p><p class=\"note\">Baby Chao and the player model are hidden in the public screenshots. The source page’s NoAI designation is respected; the model is not used as input to generative AI.</p></section>"
       }
     },
     "kanji-recall": {
@@ -243,7 +243,7 @@
     {
       "id": "kanji-recall",
       "number": "01",
-      "image": "/assets/screenshots/previews/kanji-recall-960.webp",
+      "image": "/assets/screenshots/previews/kanji-recall-current-960.webp",
       "tech": "HTML · CSS · JavaScript",
       "ja": {
         "title": "Kanji Recall",
@@ -255,12 +255,12 @@
         "description": "A browser-based handwriting app for recalling one kanji from its reading and meaning.",
         "action": "Try the app"
       },
-      "srcset": "/assets/screenshots/previews/kanji-recall-480.webp 480w, /assets/screenshots/previews/kanji-recall-960.webp 960w"
+      "srcset": "/assets/screenshots/previews/kanji-recall-current-480.webp 480w, /assets/screenshots/previews/kanji-recall-current-960.webp 960w"
     },
     {
       "id": "morigarden",
       "number": "02",
-      "image": "/assets/screenshots/previews/morigarden-960.webp",
+      "image": "/assets/screenshots/previews/morigarden-current-960.webp",
       "tech": "Godot · C#",
       "ja": {
         "title": "MoriGarden",
@@ -272,7 +272,7 @@
         "description": "A personal 3D fan game exploring creature growth, care, and interaction.",
         "action": "Explore the project"
       },
-      "srcset": "/assets/screenshots/previews/morigarden-480.webp 480w, /assets/screenshots/previews/morigarden-960.webp 960w"
+      "srcset": "/assets/screenshots/previews/morigarden-current-480.webp 480w, /assets/screenshots/previews/morigarden-current-960.webp 960w"
     }
   ],
   "research": [
@@ -306,7 +306,7 @@
       "ja": {
         "period": "2025年12月 — 現在",
         "role": "ホテル運営",
-        "company": "京都のホテル",
+        "company": "株式会社レアル",
         "body": "京都のホテルで、PMSとExcelを使用した日々の運営業務を担当しています。担当業務の範囲内で清掃状況を確認し、必要な作業の割り振りやシフト間の情報共有にも対応しています。",
         "duties": [
           {
@@ -329,7 +329,7 @@
       "en": {
         "period": "Dec 2025 — Present",
         "role": "Hotel operations",
-        "company": "Hotel in Kyoto",
+        "company": "株式会社レアル",
         "body": "I work in day-to-day hotel operations in Kyoto, using PMS and Excel. Within my area of responsibility, I check cleaning status, assign tasks, and share information between shifts.",
         "duties": [
           {
@@ -797,12 +797,7 @@
     ]
   ],
   "tools": [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Godot",
-    "C#",
-    "AI-assisted development"
+    "HTML"
   ],
   "learning": [
     "R",
@@ -958,17 +953,17 @@
     }
   },
   "applicationDocuments": {
-    "approved": false,
-    "url": null,
+    "approved": true,
+    "url": "/documents/shokumukeirekisho-ja.pdf",
     "ja": {
       "title": "応募書類",
-      "body": "応募書類をご希望の場合は、メールでお問い合わせください。",
+      "body": "職務経歴・業務経験・語学資格をまとめた日本語のPDFです。",
       "button": "職務経歴書（PDF）を見る"
     },
     "en": {
       "title": "Application Documents",
-      "body": "Please contact me by email to request application documents.",
-      "button": "View professional résumé (PDF)"
+      "body": "A Japanese PDF summarizing my professional experience and language qualifications.",
+      "button": "View professional résumé (Japanese PDF)"
     }
   },
   "residenceStatus": {
@@ -980,5 +975,76 @@
       "title": "Status of residence",
       "value": "Engineer / Specialist in Humanities / International Services"
     }
+  },
+  "galleries": {
+    "morigarden": [
+      [
+        "01-garden",
+        "メインガーデンの全景",
+        "Main garden overview"
+      ],
+      [
+        "02-coastal-cove",
+        "Coastal Coveの海辺",
+        "The shore at Coastal Cove"
+      ],
+      [
+        "03-status",
+        "生き物の状態を確認する画面",
+        "Creature status panel"
+      ],
+      [
+        "04-inventory",
+        "果物・種を選ぶインベントリ",
+        "Inventory for fruit and seeds"
+      ],
+      [
+        "05-shop",
+        "卵・果物・種を扱うショップ",
+        "Shop for eggs, fruit, and seeds"
+      ],
+      [
+        "06-trees",
+        "庭の木と果物",
+        "Garden trees and fruit"
+      ],
+      [
+        "07-item-handling",
+        "果物を持ち運ぶ操作",
+        "Carrying a fruit item"
+      ],
+      [
+        "08-save-slots",
+        "複数のセーブスロット",
+        "Multiple save slots"
+      ]
+    ],
+    "kanji-recall": [
+      [
+        "01-setup",
+        "JLPT・漢検の分類とレベル選択",
+        "JLPT / Kanken category and level selection"
+      ],
+      [
+        "02-writing",
+        "「おもう」の手書き練習",
+        "Handwriting practice for the prompt おもう"
+      ],
+      [
+        "03-answer",
+        "思の認識結果と重ねて表示したお手本",
+        "Recognition result for 思 and reference overlay"
+      ],
+      [
+        "04-stroke-order",
+        "書き順の再生と実験的な評価",
+        "Stroke animation and experimental order assessment"
+      ],
+      [
+        "05-history",
+        "実際に行った練習の学習記録",
+        "Progress from the completed practice attempt"
+      ]
+    ]
   }
 }

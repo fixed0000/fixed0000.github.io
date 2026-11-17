@@ -1,0 +1,38 @@
+{
+  "reports": [
+    {
+      "lang": "en",
+      "char": "思",
+      "result": "correct",
+      "order": "likely; swapped=review",
+      "summaryRows": 1,
+      "reload": "no duplicates"
+    },
+    {
+      "lang": "en",
+      "char": "同",
+      "result": "correct",
+      "order": "likely; swapped=review",
+      "summaryRows": 1,
+      "reload": "no duplicates"
+    },
+    {
+      "lang": "ja",
+      "char": "思",
+      "result": "correct",
+      "order": "likely; swapped=review",
+      "summaryRows": 1,
+      "reload": "no duplicates"
+    },
+    {
+      "lang": "ja",
+      "char": "同",
+      "result": "correct",
+      "order": "likely; swapped=review",
+      "summaryRows": 1,
+      "reload": "no duplicates"
+    }
+  ],
+  "races": "passed",
+  "mobile": "mouse boundary, native CDP touch cancel and pen events, reveal during active stroke"
+}

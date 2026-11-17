@@ -18,16 +18,20 @@ protected=['js/kanji','assets/kanji','css/kanji-app.css','tools/build-app-markup
 assert not subprocess.check_output(['git','diff','bdb1deb','--',*protected],cwd=root)
 
 # This editorial task must preserve presentation, application code and personal facts.
-assert not subprocess.check_output(['git','diff','c6d883e','--','css/kanji-compat.css','css/kanji-app.css','js','assets','tools/build-app-markup.py','tools/app-ja.html','tools/app-en.html'],cwd=root)
+assert not subprocess.check_output(['git','diff','c6d883e','--','css/kanji-compat.css','css/kanji-app.css','js','assets/kanji','tools/build-app-markup.py','tools/app-ja.html','tools/app-en.html'],cwd=root)
 original_css=subprocess.check_output(['git','show','c6d883e:css/site.css'],cwd=root).decode('utf-8').replace('\r\n','\n')
 assert (root/'css/site.css').read_text(encoding='utf-8').startswith(original_css.rstrip())
 previous=json.loads(subprocess.check_output(['git','show','c6d883e:content/site.json'],cwd=root).decode('utf-8'))
-for key in ['person','education','languages','homeEvidence','projects','research']:
+for key in ['person','education','languages','homeEvidence','research']:
     assert data[key]==previous[key],key
 assert data['navigation']==previous['navigation'][:5]
 assert data['contactAction']['route']=='contact/'
-assert data['applicationDocuments']['approved'] is False
-assert data['applicationDocuments']['url'] is None
+assert data['applicationDocuments']['approved'] is True
+assert data['applicationDocuments']['url']=='/documents/shokumukeirekisho-ja.pdf'
+assert (root/'documents/shokumukeirekisho-ja.pdf').read_bytes().startswith(b'%PDF-')
+assert data['tools']==['HTML']
+for a,b in zip(data['projects'],previous['projects']):
+    assert {k:v for k,v in a.items() if k not in ['image','srcset']}=={k:v for k,v in b.items() if k not in ['image','srcset']}
 for key in ['kanji-recall','family','monogatari']:
     assert data['pages'][key]==previous['pages'][key],key
 
@@ -48,7 +52,7 @@ for lang in ['ja','en']:
     for required in ['Alice.Sacco','CC BY','Sketchfab','SEGA','NoAI','game-gallery']:
         assert required in mori,required
     contact=(root/prefix/'contact/index.html').read_text(encoding='utf-8')
-    assert '.pdf' not in contact
-result={'deterministic':True,'preservedApp':protected,'bilingualPages':len(routes)*2,'licensesPreserved':True,'publicCvLinks':False}
-(root/'artifacts/job-search-final/build-audit.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+    assert '/documents/shokumukeirekisho-ja.pdf' in contact
+result={'deterministic':True,'preservedApp':protected,'bilingualPages':len(routes)*2,'licensesPreserved':True,'publicCvLinks':True}
+(root/'artifacts/gallery-resume-final/build-audit.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
 print('PASS deterministic static build; preserved Kanji Recall mechanics, data and markup; licensed content')

@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "storage denial does not block keyboard practice",
+    "recognizer failure leaves keyboard fallback usable",
+    "unreadable progress is not silently overwritten"
+  ],
+  "passed": true
+}

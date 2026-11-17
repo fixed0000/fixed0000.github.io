@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-18",
+  "morigardenCommit": "62901ba",
+  "renderer": "Godot 4.5.1 Mono, OpenGL / NVIDIA RTX 2060 SUPER",
+  "isolatedSaveProfile": "MoriPortfolioGallery20261118",
+  "gameScreenshots": [
+    "01-garden",
+    "02-coastal-cove",
+    "03-status",
+    "04-inventory",
+    "05-shop",
+    "06-trees",
+    "07-item-handling",
+    "08-save-slots"
+  ],
+  "kanjiScreenshots": [
+    "01-setup",
+    "02-writing",
+    "03-answer",
+    "04-stroke-order",
+    "05-history"
+  ],
+  "kanjiResult": "思 correct; stroke order likely correct (experimental)",
+  "modelsHiddenBeforeRendering": [
+    "ImportedChao",
+    "playerArt",
+    "mainName"
+  ],
+  "gameBuild": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "pdf": {
+    "pages": 2,
+    "paper": "A4",
+    "selectableJapanese": true,
+    "originalNovember6Available": false
+  },
+  "tests": {
+    "fullSuite": "passed",
+    "siteSuite": "passed",
+    "layouts": 96,
+    "axePages": 24,
+    "html": 30,
+    "localReferences": 548
+  }
+}

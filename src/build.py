@@ -11,6 +11,15 @@ ORIGIN='https://fixed0000.github.io'
 def paragraphs(record):
     return ''.join('<p>'+e(paragraph)+'</p>' for paragraph in record['paragraphs'])
 
+def kanji_gallery(lang):
+    from html import escape
+    items=[]
+    for filename,ja,en in DATA['galleries']['kanji-recall']:
+        caption=escape(ja if lang=='ja' else en)
+        url='/assets/screenshots/kanji-recall/'+filename+'.webp'
+        items.append('<figure><a href="'+url+'"><img src="'+url+'" width="1280" height="900" loading="lazy" alt="'+caption+'"></a><figcaption>'+caption+'</figcaption></figure>')
+    return '<section class="section"><h2>'+('ギャラリー' if lang=='ja' else 'Gallery')+'</h2><div class="game-gallery">'+''.join(items)+'</div></section>'
+
 def content(key,lang):
     t=lambda key:DATA['ui'][key][lang]
     p='/en/' if lang=='en' else '/';d=DATA
@@ -23,8 +32,8 @@ def content(key,lang):
         return section('01',d['professionalSummary'][lang]['title'],'<p class="professional-summary">'+e(d['professionalSummary'][lang]['body'])+'</p>','professional-summary')+section('02',t('work_history'),timeline(d,lang))
     if key=='skills':
         groups='<div class="skill-groups">'+''.join('<article><h3>'+e(s[lang]['title'])+'</h3>'+('<p>'+e(s[lang]['body'])+'</p>' if s[lang].get('body') else '<ul>'+''.join('<li>'+e(x)+'</li>' for x in s[lang]['items'])+'</ul>')+'</article>' for s in d['skills'])+'</div>'
-        tools='<ul class="tool-list">'+''.join('<li>'+x+'</li>' for x in d['tools'])+'</ul><p>'+t('used_in_this_site_kanji_recall_and_morigarden_i_use_ai_assisted_t')+'</p>'
-        return section('01',t('professional_experience'),groups)+section('02',t('personal_project_tools'),tools)+section('03',t('currently_learning'),'<p class="learning"><strong>'+e(' / '.join(d['learning']))+'</strong>'+t('learning_the_fundamentals')+'</p>')+section('04',t('languages_qualifications'),qualifications(d,lang))
+        tools='<ul class="tool-list">'+''.join('<li>'+x+'</li>' for x in d['tools'])+'</ul>'
+        return section('01',t('professional_experience'),groups)+section('02',t('personal_project_tools'),tools)+section('03',t('currently_learning'),'<p class="learning">'+('R・Python：基礎を学習中。' if lang=='ja' else 'R and Python: learning the fundamentals.')+'</p>')+section('04',t('languages_qualifications'),qualifications(d,lang))
     if key=='work':return section('01',t('personal_software_projects'),projects(d,lang))+section('02',t('completed_academic_research'),papers(d,lang))
     if key in ['education','about']:
         education=section('01',t('education'),timeline(d,lang,True),'education')
@@ -38,7 +47,7 @@ def content(key,lang):
         document_link=link(d['applicationDocuments']['url'],d['applicationDocuments'][lang]['button']) if d['applicationDocuments']['approved'] and d['applicationDocuments']['url'] else ''
         return '<div class="contact-layout"><a class="email-address" href="mailto:'+d['person']['email']+'">'+d['person']['email']+' <span aria-hidden="true">↗</span></a><div class="contact-notes"><div><h2>'+t('location_preferences')+'</h2><p>'+t('tokyo_is_my_preferred_location_i_am_also_open_to_opportunities_in')+'</p></div><div><h2>'+t('contact_2')+'</h2><p>'+t('please_contact_me_by_email')+'</p><a class="text-link" href="'+d['person']['github']+'">GitHub / fixed0000 ↗</a></div><div><h2>'+e(d['residenceStatus'][lang]['title'])+'</h2><p>'+residence_value+'</p></div><div id="application-documents"><h2>'+e(d['applicationDocuments'][lang]['title'])+'</h2><p>'+e(d['applicationDocuments'][lang]['body'])+'</p>'+document_link+'</div></div></div>'
     if key=='notfound':return '<div class="notfound-links">'+''.join(link(p+url,j if lang=='ja' else en) for url,j,en in d['navigation'])+'</div>'
-    if key=='kanji-recall':return (ROOT/'tools'/('app-ja.html' if lang=='ja' else 'app-en.html')).read_text(encoding='utf-8')
+    if key=='kanji-recall':return (ROOT/'tools'/('app-ja.html' if lang=='ja' else 'app-en.html')).read_text(encoding='utf-8')+kanji_gallery(lang)
     return d['pages'][key][lang]['body']
 
 def render(key,lang):
