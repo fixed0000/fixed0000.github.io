@@ -74,12 +74,12 @@
       "ja": {
         "title": "MoriGarden",
         "lead": "仮想の生き物の成長とふれあいを楽しむ、開発中の個人制作3Dゲーム。",
-        "body": "<section class=\"section\"><h2>概要</h2><p>Chao Garden（Sonic Adventureシリーズ）に着想を得た、Chao（チャオ）を育てるシングルプレイヤーの3Dゲームです。</p></section><section class=\"section\"><h2>制作目的</h2><p>生き物の成長や行動、プレイヤーとのふれあいを扱う個人制作です。</p></section><section class=\"section\"><h2>実装済み機能</h2><ul><li>三人称の移動・カメラ、物を持つ・置く・投げる操作</li><li>卵の孵化、なでる・呼ぶ・餌を与える操作</li><li>自律的な散歩・水泳・休息・遊びと生き物同士の交流</li><li>果物・種・卵のショップ、木と果物の仕組み</li><li>自動保存と20個のセーブスロット、バックアップからの復旧</li></ul></section><section class=\"section\"><h2>開発環境</h2><p>Godot 4.5.1 .NET · C# · .NET 8 · GLBモデル・Python/Tkinter製の別体エディター</p></section><section class=\"section\"><h2>現状・制約</h2><p>In Development。現在の起動手順はWindows向けです。公開Webビルドは確認できていないため、このサイトへのゲームの埋め込みは行っていません。</p></section><section class=\"section\"><h2>今後の予定</h2><p>今後の具体的な公開予定・追加機能は未確定です。開発状況はGitHubで確認できます。</p></section><section class=\"section\"><h2>GitHub</h2><a class=\"button\" href=\"https://github.com/fixed0000/MoriGarden\">ソースコード・起動方法</a><p class=\"note\">確認根拠：README.md、project.godot、Mori.csproj、Scripts/GardenGame.cs、Scripts/SaveStore.cs。</p></section><section class=\"section\" aria-labelledby=\"gallery-title\"><h2 id=\"gallery-title\">ギャラリー</h2><p>2026年11月13日、Godot 4.5.1で実行して撮影。権利確認が未完了のキャラクターモデルは非表示です。画像を選ぶと原寸で表示します。</p><div class=\"game-gallery\"><figure><a href=\"/assets/screenshots/morigarden/01-garden.png\"><img src=\"/assets/screenshots/morigarden/01-garden.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"庭の全景\"></a><figcaption>庭の全景</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/02-character.png\"><img src=\"/assets/screenshots/morigarden/02-character.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"庭の小道と遊び場\"></a><figcaption>庭の小道と遊び場</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/04-interface.png\"><img src=\"/assets/screenshots/morigarden/04-interface.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"ゲーム内ステータス表示\"></a><figcaption>ゲーム内ステータス表示</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/05-inventory.png\"><img src=\"/assets/screenshots/morigarden/05-inventory.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"持ち物の管理\"></a><figcaption>持ち物の管理</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/06-coastal-cove.png\"><img src=\"/assets/screenshots/morigarden/06-coastal-cove.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Coastal Coveの探索\"></a><figcaption>Coastal Coveの探索</figcaption></figure></div></section><section class=\"section\"><h2>開発の記録</h2><p>2026年11月のコミットでは、Coastal Coveの分離、生き物の移動・休息・接触、アイテム保持や浅瀬での動作などの改善が記録されています。これは公開コミットに基づく紹介で、開発期間全体を示すものではありません。</p><a href=\"https://github.com/fixed0000/MoriGarden/commits/main/\">GitHub commit history</a></section><section class=\"section\"><h2>ゲーム画面・第三者素材</h2><p>使用3Dモデル：<a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Baby Chao</a> — <a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Alice.Sacco</a>（Sketchfab、<a href=\"https://creativecommons.org/licenses/by/4.0/\">CC BY</a>）。原作キャラクターのデザインに関する権利は、関連する権利者に帰属します。本プロジェクトはSEGAの公式作品ではありません。</p><p>組み込み時の調整：GodotへのGLB取り込み、およびコードによるサイズ・姿勢・目の表示の調整。メッシュ編集の詳細な履歴は未確認です。</p><p class=\"note\">掲載ページには「From Sonic Adventure 2」とNoAIの表示があります。CC BYの表示を原作キャラクターに関する権利の許諾とは扱いません。当該モデルを生成AIへの入力に使用しません。以下は実行中のゲームから撮影した画面です。公開用の撮影ではBaby Chaoとプレイヤーモデルを非表示にしています。</p></section><section class=\"section\"><h2>ファン制作について</h2><p class=\"disclaimer\">本プロジェクトは、個人の学習・趣味を目的とした非営利のファン制作プロジェクトです。『Sonic Adventure』シリーズのチャオガーデンから着想を得ており、SEGAおよび関連する権利者とは提携・協賛・承認関係にありません。第三者の素材に関する権利は、それぞれの権利者に帰属します。</p></section>"
+        "body": "<section class=\"section\"><h2>概要</h2><p>Chao Gardenに着想を得た、生き物の育成やふれあいを楽しむ個人制作の3Dゲームです。非営利のファンプロジェクトとして開発しています。</p></section><section class=\"section\"><h2>制作目的</h2><p>生き物の成長や行動、プレイヤーとのふれあいを扱う個人制作です。</p></section><section class=\"section\"><h2>実装済み機能</h2><ul><li>三人称の移動・カメラ、物を持つ・置く・投げる操作</li><li>卵の孵化、なでる・呼ぶ・餌を与える操作</li><li>自律的な散歩・水泳・休息・遊びと生き物同士の交流</li><li>果物・種・卵のショップ、木と果物の仕組み</li><li>自動保存と20個のセーブスロット、バックアップからの復旧</li></ul></section><section class=\"section\"><h2>開発環境</h2><p>Godot 4.5.1 .NET · C# · .NET 8 · GLBモデル・Python/Tkinter製の別体エディター</p></section><section class=\"section\"><h2>現状・制約</h2><p>In Development。現在の起動手順はWindows向けです。公開Webビルドは確認できていないため、このサイトへのゲームの埋め込みは行っていません。</p></section><section class=\"section\"><h2>今後の予定</h2><p>今後の具体的な公開予定・追加機能は未確定です。開発状況はGitHubで確認できます。</p></section><section class=\"section\"><h2>GitHub</h2><a class=\"button\" href=\"https://github.com/fixed0000/MoriGarden\">ソースコード・起動方法</a><p class=\"note\">確認根拠：README.md、project.godot、Mori.csproj、Scripts/GardenGame.cs、Scripts/SaveStore.cs。</p></section><section class=\"section\" aria-labelledby=\"gallery-title\"><h2 id=\"gallery-title\">ギャラリー</h2><p>2026年11月13日、Godot 4.5.1で実行して撮影。画像を選ぶと原寸で表示します。</p><div class=\"game-gallery\"><figure><a href=\"/assets/screenshots/morigarden/01-garden.png\"><img src=\"/assets/screenshots/morigarden/01-garden.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"庭の全景\"></a><figcaption>庭の全景</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/02-character.png\"><img src=\"/assets/screenshots/morigarden/02-character.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"庭の小道と遊び場\"></a><figcaption>庭の小道と遊び場</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/04-interface.png\"><img src=\"/assets/screenshots/morigarden/04-interface.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"ゲーム内ステータス表示\"></a><figcaption>ゲーム内ステータス表示</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/05-inventory.png\"><img src=\"/assets/screenshots/morigarden/05-inventory.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"持ち物の管理\"></a><figcaption>持ち物の管理</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/06-coastal-cove.png\"><img src=\"/assets/screenshots/morigarden/06-coastal-cove.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Coastal Coveの探索\"></a><figcaption>Coastal Coveの探索</figcaption></figure></div></section><section class=\"section\"><h2>開発の記録</h2><p>2026年11月のコミットでは、Coastal Coveの分離、生き物の移動・休息・接触、アイテム保持や浅瀬での動作などの改善が記録されています。これは公開コミットに基づく紹介で、開発期間全体を示すものではありません。</p><a href=\"https://github.com/fixed0000/MoriGarden/commits/main/\">GitHub commit history</a></section><section class=\"section\" id=\"asset-credits\"><h2>使用素材・クレジット</h2><p><a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Baby Chao</a> — <a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Alice.Sacco</a>（Sketchfab、<a href=\"https://creativecommons.org/licenses/by/4.0/\">CC BY 4.0</a>）。Godotへの取り込みと、表示サイズ・姿勢・目の表示を調整しています。</p><p>SEGAとの提携・承認関係はありません。原作キャラクターの権利は関連する権利者に帰属します。</p><p class=\"note\">公開画像ではBaby Chaoとプレイヤーモデルを非表示にしています。モデル掲載ページのNoAI指定を尊重し、生成AIへの入力には使用していません。</p></section>"
       },
       "en": {
         "title": "MoriGarden",
         "lead": "A personal 3D game in development about caring for and interacting with virtual creatures.",
-        "body": "<section class=\"section\"><h2>Overview</h2><p>A single-player 3D game about caring for Chao, inspired by the Chao Garden systems in Sonic Adventure.</p></section><section class=\"section\"><h2>Motivation</h2><p>A personal exploration of creature growth, autonomous behavior, and interaction with the player.</p></section><section class=\"section\"><h2>Implemented Features</h2><ul><li>Third-person movement and camera; pick up, place, and throw objects</li><li>Egg hatching; petting, calling, and feeding creatures</li><li>Autonomous wandering, swimming, resting, playing, and social interactions</li><li>Shop for fruit, seeds, and eggs; tree and fruit systems</li><li>Autosave, 20 save slots, and backup recovery</li></ul></section><section class=\"section\"><h2>Technologies</h2><p>Godot 4.5.1 .NET · C# · .NET 8 · GLB models · separate Python/Tkinter editor</p></section><section class=\"section\"><h2>Status & Limitations</h2><p>In Development. Current launch instructions target Windows. No public web build has been confirmed, so the game is not embedded in this site.</p></section><section class=\"section\"><h2>Roadmap</h2><p>Specific release plans and future features are not confirmed. Development can be followed on GitHub.</p></section><section class=\"section\"><h2>GitHub</h2><a class=\"button\" href=\"https://github.com/fixed0000/MoriGarden\">Source Code & Launch Instructions</a><p class=\"note\">Evidence: README.md, project.godot, Mori.csproj, Scripts/GardenGame.cs, Scripts/SaveStore.cs.</p></section><section class=\"section\" aria-labelledby=\"gallery-title\"><h2 id=\"gallery-title\">Gallery</h2><p>Captured from the running game in Godot 4.5.1 on 13 November 2026. Character models are hidden pending rights clarification. Select an image to view it at full size.</p><div class=\"game-gallery\"><figure><a href=\"/assets/screenshots/morigarden/01-garden.png\"><img src=\"/assets/screenshots/morigarden/01-garden.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Garden overview\"></a><figcaption>Garden overview</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/02-character.png\"><img src=\"/assets/screenshots/morigarden/02-character.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Garden paths and play area\"></a><figcaption>Garden paths and play area</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/04-interface.png\"><img src=\"/assets/screenshots/morigarden/04-interface.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"In-game status interface\"></a><figcaption>In-game status interface</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/05-inventory.png\"><img src=\"/assets/screenshots/morigarden/05-inventory.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Inventory management\"></a><figcaption>Inventory management</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/06-coastal-cove.png\"><img src=\"/assets/screenshots/morigarden/06-coastal-cove.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Exploring Coastal Cove\"></a><figcaption>Exploring Coastal Cove</figcaption></figure></div></section><section class=\"section\"><h2>Development History</h2><p>Public commits from November 2026 record work on separating Coastal Cove, creature routes and rest, contact handling, item grips, and wading behavior. These are examples from the commit history, not a claim about the project’s entire development period.</p><a href=\"https://github.com/fixed0000/MoriGarden/commits/main/\">GitHub commit history</a></section><section class=\"section\"><h2>Gameplay Images & Third-Party Assets</h2><p>3D model used: <a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Baby Chao</a> by <a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Alice.Sacco</a> (Sketchfab, <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC BY</a>). Rights to the original character design remain with the relevant rights holders. This is not an official SEGA project.</p><p>In-project adaptations: GLB import into Godot and code-based scale, pose, and eye-display adjustments. The detailed history of mesh edits has not been verified.</p><p class=\"note\">The source page states “From Sonic Adventure 2” and is tagged NoAI. Its CC BY label is not treated as permission covering the original character design. The model is not used as input to generative AI. The gallery below shows captures from the running game. Baby Chao and the player model were hidden for these public-facing captures.</p></section><section class=\"section\"><h2>Fan Project Disclaimer</h2><p class=\"disclaimer\">MoriGarden is a personal, non-commercial fan project developed for learning and recreation. It is inspired by the Chao Garden features of the Sonic Adventure series and is not affiliated with, sponsored by, or endorsed by SEGA or any related rights holders. Rights to third-party assets remain with their respective owners.</p></section>"
+        "body": "<section class=\"section\"><h2>Overview</h2><p>A personal 3D creature-care game inspired by Chao Garden, developed as a non-commercial fan project.</p></section><section class=\"section\"><h2>Motivation</h2><p>A personal exploration of creature growth, autonomous behavior, and interaction with the player.</p></section><section class=\"section\"><h2>Implemented Features</h2><ul><li>Third-person movement and camera; pick up, place, and throw objects</li><li>Egg hatching; petting, calling, and feeding creatures</li><li>Autonomous wandering, swimming, resting, playing, and social interactions</li><li>Shop for fruit, seeds, and eggs; tree and fruit systems</li><li>Autosave, 20 save slots, and backup recovery</li></ul></section><section class=\"section\"><h2>Technologies</h2><p>Godot 4.5.1 .NET · C# · .NET 8 · GLB models · separate Python/Tkinter editor</p></section><section class=\"section\"><h2>Status & Limitations</h2><p>In Development. Current launch instructions target Windows. No public web build has been confirmed, so the game is not embedded in this site.</p></section><section class=\"section\"><h2>Roadmap</h2><p>Specific release plans and future features are not confirmed. Development can be followed on GitHub.</p></section><section class=\"section\"><h2>GitHub</h2><a class=\"button\" href=\"https://github.com/fixed0000/MoriGarden\">Source Code & Launch Instructions</a><p class=\"note\">Evidence: README.md, project.godot, Mori.csproj, Scripts/GardenGame.cs, Scripts/SaveStore.cs.</p></section><section class=\"section\" aria-labelledby=\"gallery-title\"><h2 id=\"gallery-title\">Gallery</h2><p>Captured from the running game in Godot 4.5.1 on 13 November 2026. Select an image to view it at full size.</p><div class=\"game-gallery\"><figure><a href=\"/assets/screenshots/morigarden/01-garden.png\"><img src=\"/assets/screenshots/morigarden/01-garden.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Garden overview\"></a><figcaption>Garden overview</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/02-character.png\"><img src=\"/assets/screenshots/morigarden/02-character.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Garden paths and play area\"></a><figcaption>Garden paths and play area</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/04-interface.png\"><img src=\"/assets/screenshots/morigarden/04-interface.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"In-game status interface\"></a><figcaption>In-game status interface</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/05-inventory.png\"><img src=\"/assets/screenshots/morigarden/05-inventory.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Inventory management\"></a><figcaption>Inventory management</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/06-coastal-cove.png\"><img src=\"/assets/screenshots/morigarden/06-coastal-cove.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Exploring Coastal Cove\"></a><figcaption>Exploring Coastal Cove</figcaption></figure></div></section><section class=\"section\"><h2>Development History</h2><p>Public commits from November 2026 record work on separating Coastal Cove, creature routes and rest, contact handling, item grips, and wading behavior. These are examples from the commit history, not a claim about the project’s entire development period.</p><a href=\"https://github.com/fixed0000/MoriGarden/commits/main/\">GitHub commit history</a></section><section class=\"section\" id=\"asset-credits\"><h2>Asset Credits</h2><p><a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Baby Chao</a> — <a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Alice.Sacco</a> (Sketchfab, <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC BY 4.0</a>). Imported into Godot with adjustments to display scale, pose, and eye display.</p><p>This project is not affiliated with or endorsed by SEGA. Rights to the original character design remain with the relevant rights holders.</p><p class=\"note\">Baby Chao and the player model are hidden in the public screenshots. The source page’s NoAI designation is respected; the model is not used as input to generative AI.</p></section>"
       }
     },
     "kanji-recall": {
@@ -122,47 +122,47 @@
     "home": {
       "route": "",
       "ja": {
-        "title": "情報を整理し、確かな業務につなげる。",
-        "lead": "予約管理・データ照合・業務の引き継ぎで培った経験を、データ品質管理やITオペレーションの仕事へ。",
-        "eyebrow": "経験を、次の専門性へ",
+        "title": "ホテル運営とゲームローカライズの経験",
+        "lead": "予約管理、売上・入金の照合、ゲーム翻訳の実務経験があります。データ品質管理、レポーティング、ITオペレーションに関連する仕事を希望しています。",
+        "eyebrow": "プロフィール",
         "description": "ホテル運営とゲームローカライズの経験を持つボロディナ・リディアのポートフォリオ。データ品質管理、レポーティング、ITオペレーション分野への転職を希望しています。",
         "titleLines": [
-          "情報を整理し、",
-          "確かな業務につなげる。"
+          "ホテル運営と",
+          "ゲームローカライズの経験"
         ]
       },
       "en": {
-        "title": "Clear information. Reliable operations.",
-        "lead": "Bringing experience in reservations, data verification, and operational handovers to my next role in data quality or IT operations.",
-        "eyebrow": "Experience with a next chapter",
+        "title": "Hotel operations & game localization",
+        "lead": "My experience includes reservation management, sales and payment reconciliation, and game translation. I am seeking opportunities in data quality, reporting, and IT operations.",
+        "eyebrow": "Profile",
         "description": "Lidiia Borodina’s career portfolio: hotel operations, game localization, and a move toward data quality, reporting, and IT operations."
       }
     },
     "experience": {
       "route": "experience/",
       "ja": {
-        "title": "情報を確かめ、業務を前へ。",
-        "lead": "ホテル運営とゲームローカライズ。日々の業務と、具体的な対応事例をご紹介します。",
+        "title": "職務経歴",
+        "lead": "ホテル運営とゲームローカライズの職歴・担当業務を紹介します。",
         "eyebrow": "職務経歴",
-        "description": "予約移管、入金照合、業務マニュアルとゲームローカライズの実務経験。"
+        "description": "ホテルでの予約管理、売上・入金照合、業務マニュアル作成と、Fruitbat Factoryでのゲーム翻訳・訳文確認。"
       },
       "en": {
-        "title": "Checking the details. Moving work forward.",
-        "lead": "Hotel operations and game localization: a concise work history, followed by examples of how I approach the work.",
+        "title": "Experience",
+        "lead": "My work history and responsibilities in hotel operations and game localization.",
         "eyebrow": "Experience",
-        "description": "Practical experience in reservation transfers, payment reconciliation, process documentation, and game localization."
+        "description": "Reservation management, sales and payment reconciliation, internal manuals, and game translation and review for Fruitbat Factory."
       }
     },
     "skills": {
       "route": "skills/",
       "ja": {
-        "title": "実務で使う力と、これから学ぶこと。",
+        "title": "スキル・資格",
         "lead": "業務で培ったスキル、個人制作の道具、学習中の技術を整理しています。",
         "eyebrow": "スキル",
         "description": "PMS、データ照合、Excel、Google Sheets、翻訳・ローカライズ、語学資格と個人制作の技術。"
       },
       "en": {
-        "title": "Practical skills. Room to grow.",
+        "title": "Skills & qualifications",
         "lead": "The tools I use at work, the ones I explore through personal projects, and what I am learning next.",
         "eyebrow": "Skills",
         "description": "PMS, data verification, spreadsheets, localization, language qualifications, and tools used in personal projects."
@@ -171,13 +171,13 @@
     "work": {
       "route": "research/",
       "ja": {
-        "title": "つくる。調べる。理解を深める。",
+        "title": "制作・研究",
         "lead": "ブラウザアプリとゲームの個人制作、日本語とロシア語に関する学術研究。",
         "eyebrow": "制作・研究",
         "description": "Kanji Recall、MoriGarden、家族の連想比較とMonogatariの翻訳研究。"
       },
       "en": {
-        "title": "Make, investigate, understand.",
+        "title": "Work & Research",
         "lead": "Personal software projects, alongside academic work on Japanese and Russian language and meaning.",
         "eyebrow": "Work & Research",
         "description": "Kanji Recall, MoriGarden, associations with family, and translation research on the Monogatari series."
@@ -186,28 +186,28 @@
     "about": {
       "route": "about/",
       "ja": {
-        "title": "言葉と情報の、確かな橋渡しを。",
-        "lead": "日本語の翻訳・通訳を学び、現在は京都でホテル運営に携わっています。情報の意味と、正確に伝える方法に関心があります。",
+        "title": "私について",
+        "lead": "日本語の翻訳・通訳を学び、現在は京都でホテル運営に携わっています。これまでの経験と、学習・個人制作について紹介します。",
         "eyebrow": "私について",
-        "description": "ボロディナ・リディアの学歴、仕事で大切にしていること、ポートフォリオの制作について。"
+        "description": "ボロディナ・リディアの職務経験・学歴、仕事への考え方、PCの組み立てや個人制作などの関心、今後のキャリア目標。"
       },
       "en": {
-        "title": "Connecting language, information, and people.",
-        "lead": "I studied Japanese translation and interpreting and now work in hotel operations in Kyoto. I am interested in what information means and how to communicate it accurately.",
+        "title": "About",
+        "lead": "I studied Japanese translation and interpreting and now work in hotel operations in Kyoto. Here is an overview of my background, learning, and personal projects.",
         "eyebrow": "About",
-        "description": "Lidiia Borodina’s education, working approach, interests, and the making of this portfolio."
+        "description": "Lidiia Borodina’s professional background, education, approach to work, personal interests, and long-term career goals."
       }
     },
     "contact": {
       "route": "contact/",
       "ja": {
-        "title": "次の仕事につながる、お話を。",
+        "title": "お問い合わせ",
         "lead": "データ品質管理、レポーティング、ITオペレーション、業務運用に関連する職種への転職を希望しています。",
         "eyebrow": "お問い合わせ",
         "description": "データ品質管理・ITオペレーション関連の仕事を希望。東京都内を第一希望とし、大阪府内および首都圏も検討しています。"
       },
       "en": {
-        "title": "Let’s talk about the next step.",
+        "title": "Contact",
         "lead": "I am seeking opportunities in data quality, reporting, IT operations, and operational support.",
         "eyebrow": "Contact",
         "description": "Contact Lidiia Borodina about roles in data quality, reporting, IT operations, and operational support."
@@ -216,13 +216,13 @@
     "education": {
       "route": "education/",
       "ja": {
-        "title": "言語と翻訳を学ぶ。",
+        "title": "学歴",
         "lead": "日本語の翻訳・通訳と、意味や文脈に関する学び。",
         "eyebrow": "学歴",
         "description": "Moscow City Universityで2025年7月に学士課程を修了。2024年4月〜8月に筑波大学へ交換留学。"
       },
       "en": {
-        "title": "A foundation in language and translation.",
+        "title": "Education",
         "lead": "Japanese translation and interpreting, with an interest in meaning and context.",
         "eyebrow": "Education",
         "description": "Bachelor’s degree at Moscow City University, July 2025. Exchange at the University of Tsukuba, April–August 2024."
@@ -306,137 +306,53 @@
       }
     }
   ],
-  "cases": [
-    {
-      "id": "reservation-transfer",
-      "number": "01",
-      "metric": {
-        "ja": "約40件",
-        "en": "About 40"
-      },
-      "unit": {
-        "ja": "予約移管",
-        "en": "reservation transfers"
-      },
-      "ja": {
-        "title": "予約を、次の宿泊先へつなぐ。",
-        "summary": "ホテル閉鎖に伴う約40件の予約移管。条件を照合し、お客様ごとの対応を進めました。",
-        "challenge": "ホテルの閉鎖に伴い、既存の予約を別の宿泊先へ移管する必要がありました。",
-        "response": "料金、客室のカテゴリー・定員、立地、空室状況を比較。お客様と個別の条件を調整し、ホテルのPMSと営業部門の管理表を更新しました。",
-        "result": "約40件の予約移管を担当し、移管に伴う条件の調整と情報更新を行いました。",
-        "factors": [
-          "料金",
-          "客室カテゴリー・定員",
-          "立地",
-          "空室状況"
-        ],
-        "flow": [
-          "条件の比較",
-          "お客様との調整",
-          "PMS・営業管理表の更新"
-        ],
-        "skills": "情報の比較・照合 / 個別調整 / 複数システムの更新"
-      },
-      "en": {
-        "title": "A careful handover to the next hotel.",
-        "summary": "Handled around 40 reservation transfers following a hotel closure, comparing conditions and coordinating individual arrangements.",
-        "challenge": "A hotel closure required existing reservations to be transferred to other accommodation.",
-        "response": "Compared rates, room categories and capacity, location, and availability. Coordinated individual arrangements with guests, then updated hotel PMS records and the sales department’s spreadsheet.",
-        "result": "Handled around 40 reservation transfers, including coordination of conditions and the associated record updates.",
-        "factors": [
-          "Rates",
-          "Room category & capacity",
-          "Location",
-          "Availability"
-        ],
-        "flow": [
-          "Compare conditions",
-          "Coordinate with guests",
-          "Update PMS & sales records"
-        ],
-        "skills": "Data comparison / Individual coordination / Record updates"
-      }
-    },
-    {
-      "id": "payment-reconciliation",
-      "number": "02",
-      "metric": {
-        "ja": "80,000円",
-        "en": "¥80,000"
-      },
-      "unit": {
-        "ja": "入金の相違を確認",
-        "en": "payment discrepancy identified"
-      },
-      "ja": {
-        "title": "出発前の確認で、入金差異を解消。",
-        "summary": "入金照合で80,000円の不足を発見。お客様の出発前に追加精算を働きかけました。",
-        "challenge": "売上と入金を照合した際、80,000円の不足が見つかりました。",
-        "response": "お客様の出発前に追加精算を働きかけ、差異への対応を進めました。",
-        "result": "追加精算により、入金の差異が解消されました。",
-        "flow": [
-          "売上・入金の照合",
-          "不足を確認",
-          "出発前に追加精算"
-        ],
-        "skills": "数値の照合 / 不一致の発見 / 適時の対応"
-      },
-      "en": {
-        "title": "Resolving a discrepancy before checkout.",
-        "summary": "Identified an ¥80,000 shortfall during payment reconciliation and initiated additional settlement before the guest departed.",
-        "challenge": "A comparison of sales and payment records revealed an ¥80,000 shortfall.",
-        "response": "Initiated additional settlement before the guest departed and followed up on the discrepancy.",
-        "result": "The additional settlement resolved the payment discrepancy.",
-        "flow": [
-          "Reconcile sales & payments",
-          "Identify the shortfall",
-          "Arrange settlement before departure"
-        ],
-        "skills": "Numerical checks / Discrepancy identification / Timely follow-up"
-      }
-    },
-    {
-      "id": "process-guide",
-      "number": "03",
-      "metric": {
-        "ja": "業務手順",
-        "en": "Process guide"
-      },
-      "unit": {
-        "ja": "社内向けの文書化",
-        "en": "internal documentation"
-      },
-      "ja": {
-        "title": "ウェブサイトの使い方を、共有できる手順に。",
-        "summary": "社内向けに、会社のウェブサイトの使用方法をまとめた業務マニュアルを作成。",
-        "challenge": "会社のウェブサイトの使用方法を、社内で参照できる形に整理する必要がありました。",
-        "response": "操作手順を整理し、社内向けの業務マニュアルを作成しました。",
-        "result": "社内で参照するための手順書としてまとめました。",
-        "skills": "手順の整理 / 文書化 / 情報共有"
-      },
-      "en": {
-        "title": "Turning website tasks into a shared guide.",
-        "summary": "Created an internal manual explaining how to use the company’s website.",
-        "challenge": "Instructions for using the company’s website needed to be organized for internal reference.",
-        "response": "Organized the operating steps and wrote an internal manual.",
-        "result": "Produced a documented guide for internal reference.",
-        "skills": "Process organization / Documentation / Knowledge sharing"
-      }
-    }
-  ],
   "timeline": [
     {
       "ja": {
         "period": "2025年12月 — 現在",
         "role": "ホテル運営",
         "company": "京都のホテル",
-        "body": "PMSによる予約情報の確認・変更、売上・入金の照合、Excelでの日次報告、業務の引き継ぎを担当。担当業務の範囲内で、清掃状況の確認、作業の割り振り、関連情報の共有にも対応しています。"
+        "body": "京都のホテルで、PMSとExcelを使用した日々の運営業務を担当しています。担当業務の範囲内で清掃状況を確認し、必要な作業の割り振りやシフト間の情報共有にも対応しています。",
+        "duties": [
+          {
+            "title": "予約管理",
+            "body": "予約内容、宿泊日程、客室タイプ、料金の確認・変更に対応。ホテル閉鎖時には、移管先の宿泊条件の比較、お客様との調整、PMSと営業部門の管理表の更新を行いました。",
+            "id": "reservation-transfer"
+          },
+          {
+            "title": "売上・入金照合",
+            "body": "売上と入金情報を照合し、日次報告を作成。不一致が見つかった際には内容を確認し、お客様の出発前の追加精算に対応しました。",
+            "id": "payment-reconciliation"
+          },
+          {
+            "title": "業務マニュアル作成",
+            "body": "社内向けに、会社のウェブサイトの使用方法をまとめた業務マニュアルを作成しました。",
+            "id": "process-guide"
+          }
+        ]
       },
       "en": {
         "period": "Dec 2025 — Present",
         "role": "Hotel operations",
         "company": "Hotel in Kyoto",
-        "body": "I check and update reservations in PMS, reconcile sales and payments, prepare daily reports in Excel, and hand over work between shifts. Within my area of responsibility, I also check cleaning status, assign tasks, and share relevant information."
+        "body": "I work in day-to-day hotel operations in Kyoto, using PMS and Excel. Within my area of responsibility, I check cleaning status, assign tasks, and share information between shifts.",
+        "duties": [
+          {
+            "title": "Reservation management",
+            "body": "Check and update booking details, dates, room types, and rates. During a hotel closure, I compared accommodation conditions, coordinated arrangements with guests, and updated PMS records and the sales department’s spreadsheet.",
+            "id": "reservation-transfer"
+          },
+          {
+            "title": "Sales and payment reconciliation",
+            "body": "Reconcile sales and payment records and prepare daily reports. When a discrepancy was found, I checked the details and arranged additional settlement before the guest departed.",
+            "id": "payment-reconciliation"
+          },
+          {
+            "title": "Internal manual",
+            "body": "Created an internal manual explaining how to use the company’s website.",
+            "id": "process-guide"
+          }
+        ]
       }
     },
     {
@@ -638,10 +554,6 @@
       "ja": "メインナビゲーション",
       "en": "Main navigation"
     },
-    "let_s_put_experience_to_work": {
-      "ja": "情報を、次の仕事へ。",
-      "en": "Let’s put experience to work."
-    },
     "about_this_website": {
       "ja": "このサイトについて",
       "en": "About this website"
@@ -687,8 +599,8 @@
       "en": "My interests include Japanese, meaning, translation, and cultural associations. Through personal projects, I explore game systems and learning experiences."
     },
     "morigarden_third_party_assets_fan_project_disclaimer": {
-      "ja": "MoriGardenの第三者素材とファン制作について",
-      "en": "MoriGarden third-party assets & fan-project disclaimer"
+      "ja": "MoriGardenの使用素材・クレジット",
+      "en": "MoriGarden asset credits"
     },
     "experience": {
       "ja": "職務経歴",
@@ -779,8 +691,8 @@
       "en": "Japanese proficiency"
     },
     "work_history_case_details": {
-      "ja": "職務経歴・すべての事例",
-      "en": "Work history & case details"
+      "ja": "職務経歴を見る",
+      "en": "View experience"
     },
     "open_each_case_to_see_the_challenge_action_and_outcome": {
       "ja": "各項目を開くと、課題・対応・結果をご覧いただけます。",
@@ -823,8 +735,8 @@
       "en": "A static Japanese-first portfolio with a full English version. Structured content and translations feed shared HTML components. The design supports keyboard use, responsive layouts, and reduced-motion preferences."
     },
     "designed_for_reading_and_exploration": {
-      "ja": "読みやすく、たどりやすい構成に。",
-      "en": "Designed for reading and exploration."
+      "ja": "構成・アクセシビリティ",
+      "en": "Structure & accessibility"
     },
     "study": {
       "ja": "研究",
@@ -861,6 +773,18 @@
     "translation_platform_tools": {
       "ja": "ウェブ翻訳プラットフォーム / GitHub / TortoiseSVN",
       "en": "Web translation platform / GitHub / TortoiseSVN"
+    },
+    "professional_background": {
+      "ja": "職務経験",
+      "en": "Professional Background"
+    },
+    "professional_biography": {
+      "ja": "略歴",
+      "en": "Background"
+    },
+    "about_technical_intro": {
+      "ja": "日本語・英語の静的サイトです。共通の部品と一元化したコンテンツから生成し、キーボード操作、画面幅への対応、動きを減らす設定を考慮しています。",
+      "en": "A static Japanese–English site generated from shared components and centralized content, with support for keyboard use, responsive layouts, and reduced-motion preferences."
     }
   },
   "redirects": [
@@ -936,6 +860,102 @@
         "label": "Education",
         "value": "Japanese & translation",
         "date": "Moscow City University · 2025"
+      }
+    }
+  ],
+  "background": [
+    {
+      "ja": {
+        "title": "ホテル運営",
+        "body": "京都のホテルで、予約情報の管理、売上・入金の照合、日次報告、シフト間の引き継ぎを担当しています。"
+      },
+      "en": {
+        "title": "Hotel operations",
+        "body": "I work in hotel operations in Kyoto, managing reservation records, reconciling sales and payments, preparing daily reports, and handling shift handovers."
+      }
+    },
+    {
+      "ja": {
+        "title": "ゲームローカライズ — Fruitbat Factory",
+        "body": "100% Orange Juiceのイベント、会話、UIの翻訳と、訳文の確認・修正・更新を担当しました。"
+      },
+      "en": {
+        "title": "Game localization — Fruitbat Factory",
+        "body": "Translated events, dialogue, and interface text for 100% Orange Juice, and reviewed, corrected, and updated translations."
+      }
+    }
+  ],
+  "aboutSections": [
+    {
+      "id": "background",
+      "ja": {
+        "title": "これまでの経歴",
+        "paragraphs": [
+          "2023年6月から2025年7月までFruitbat Factoryのゲームローカライズに携わりました。現在は京都のホテルで、予約管理、売上・入金照合、日次報告などを担当しています。"
+        ]
+      },
+      "en": {
+        "title": "Professional background",
+        "paragraphs": [
+          "From June 2023 to July 2025, I worked on game localization for Fruitbat Factory. I now work at a hotel in Kyoto, handling reservation management, sales and payment reconciliation, and daily reporting."
+        ]
+      }
+    },
+    {
+      "id": "work-approach",
+      "ja": {
+        "title": "仕事への考え方",
+        "paragraphs": [
+          "その場で次々と発生する問題に対応すること以上に、問題の原因を考え、情報や業務の流れを整理し、より分かりやすい仕組みをつくることにやりがいを感じます。",
+          "現在のホテル業務でも、システムを使った情報管理や確認作業、業務の整理に特に関心があります。必要な作業を一覧化したり、不具合や情報の不一致が起きた原因を調べたりすることが好きです。",
+          "こうした関心から、ITやデータ管理に関する知識を身につけ、日々の業務を支えるシステムや運用の改善に携わりたいと考えています。"
+        ]
+      },
+      "en": {
+        "title": "How I Approach Work",
+        "paragraphs": [
+          "I find particular satisfaction in understanding the causes of problems, organizing information and workflows, and making systems easier to use. I am more interested in this systematic work than in continually responding to situations as they arise.",
+          "In my current hotel role, I am especially interested in information management and checks using operational systems, as well as the organization of day-to-day work. I enjoy making task lists and investigating the causes of system issues or inconsistent information.",
+          "These interests motivate me to develop my knowledge of IT and data management and to contribute to improvements in the systems and operations that support everyday work."
+        ]
+      }
+    },
+    {
+      "id": "interests",
+      "ja": {
+        "title": "興味・関心",
+        "paragraphs": [
+          "新しいことを学び、自分で試してみることが好きです。コンピューターに関心があり、最近は自分でPCを組み立てました。",
+          "また、生成AIを開発支援に活用しながら、日常で使える小さなプログラムや個人向けのプロジェクトを制作しています。",
+          "外国語の学習や新しい場所を訪れることも好きで、普段とは異なる考え方や環境に触れ、新しい経験を得ることを楽しんでいます。"
+        ]
+      },
+      "en": {
+        "title": "Personal Interests",
+        "paragraphs": [
+          "I enjoy learning new things and trying them for myself. I am interested in computers and recently assembled my own PC.",
+          "I also use AI-assisted development to create small programs and personal projects for everyday use.",
+          "Outside these projects, I enjoy learning foreign languages and visiting new places. I value the chance to encounter different perspectives and environments and gain new experiences."
+        ]
+      }
+    },
+    {
+      "id": "future-goals",
+      "ja": {
+        "title": "これからの目標",
+        "paragraphs": [
+          "まずは専門分野の知識と実務経験を積み、担当する業務を深く理解できる人材になりたいと考えています。",
+          "将来的には、自分の担当領域だけでなく、他部署とのつながりや会社全体の業務の流れも理解し、部門を横断して課題を考えられるようになることが目標です。",
+          "数年単位で経験を重ねた先の長期的な目標として、課長などの管理職も視野に入れています。専門知識と現場への理解を生かしながら、チームの仕事を支えられる立場を目指しています。"
+        ]
+      },
+      "en": {
+        "title": "Future Goals",
+        "paragraphs": [
+          "My first priority is to build specialist knowledge and practical experience so that I develop a thorough understanding of the work I am responsible for.",
+          "I also want to understand how my area connects with other departments and how work flows through the company as a whole. My goal is to learn to consider problems across departmental boundaries.",
+          "Over the longer term, after gaining further experience over the coming years, I would like to develop toward a management role, such as section manager (課長). I hope to support a team through both specialist knowledge and an understanding of day-to-day work."
+        ]
       }
     }
   ]

@@ -21,26 +21,23 @@ def papers(data,lang):
         result+=f'<article class="paper" id="{"thesis" if item["id"]=="monogatari" else "family"}"><p class="paper-date">{item["year"]}<br><span>{text(data,lang,'study')}</span></p><div><h3><a href="{url}">{e(r["title"])}</a></h3><p>{e(r["description"])}</p><a class="text-link" href="{url}">'+text(data,lang,'read_study')+' ↗</a></div></article>'
     return result+'</div>'
 
-def cases(data,lang,compact=False):
-    p='/en/' if lang=='en' else '/';result='<div class="case-list">'
-    for item in data['cases']:
+def text_blocks(records,lang):
+    result='<div class="site-note">'
+    for item in records:
         r=item[lang]
-        if compact:
-            result+=f'<a class="case-preview" href="{p}experience/#{item["id"]}"><span class="case-number">{item["number"]}</span><div><h3>{e(r["title"])}</h3><p>{e(r["summary"])}</p></div><span class="case-metric">{e(item["metric"][lang])}<small>{e(item["unit"][lang])}</small></span><span class="case-arrow" aria-hidden="true">↗</span></a>'
-        else:
-            result+=f'<details class="case-detail" id="{item["id"]}"><summary><span class="case-number">{item["number"]}</span><span class="case-heading"><strong>{e(r["title"])}</strong><span>{e(r["summary"])}</span></span><span class="disclosure" aria-hidden="true">＋</span></summary><div class="case-body"><dl class="case-process">'
-            for key,label in [('challenge','challenge'),('response','action'),('result','outcome')]:result+=f'<div><dt>{text(data,lang,label)}</dt><dd>{e(r[key])}</dd></div>'
-            result+='</dl>'
-            if 'factors' in r:result+='<div class="comparison"><p class="eyebrow">'+text(data,lang,'compared_factors')+'</p><ul>'+''.join('<li>'+e(x)+'</li>' for x in r['factors'])+'</ul></div>'
-            if 'flow' in r:result+='<ol class="process-flow" aria-label="'+text(data,lang,'workflow')+'">'+''.join(f'<li><span>{i:02}</span>{e(x)}</li>' for i,x in enumerate(r['flow'],1))+'</ol>'
-            result+='<p class="case-skills">'+e(r['skills'])+'</p></div></details>'
+        result+='<h3>'+e(r['title'])+'</h3>'
+        for paragraph in r.get('paragraphs',[r.get('body','')]):
+            if paragraph:result+='<p>'+e(paragraph)+'</p>'
     return result+'</div>'
 
 def timeline(data,lang,education=False):
     result='<div class="timeline">'
     for item in data['education' if education else 'timeline']:
         r=item[lang]
-        result+=f'<article class="timeline-row"><p class="timeline-date">{e(r["period"])}</p><div><h3>{e(r["title"] if education else r["role"])}</h3><p class="organization">{e(r["subtitle"] if education else r["company"])}</p><p>{e(r["body"])}</p></div></article>'
+        result+=f'<article class="timeline-row"><p class="timeline-date">{e(r["period"])}</p><div><h3>{e(r["title"] if education else r["role"])}</h3><p class="organization">{e(r["subtitle"] if education else r["company"])}</p><p>{e(r["body"])}</p>'
+        for duty in r.get('duties',[]):
+            result+='<h4'+(' id="'+e(duty['id'])+'"' if duty.get('id') else '')+'>'+e(duty['title'])+'</h4><p>'+e(duty['body'])+'</p>'
+        result+='</div></article>'
     return result+'</div>'
 
 def qualifications(data,lang):

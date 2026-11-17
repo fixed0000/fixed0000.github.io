@@ -17,6 +17,16 @@ for copy in data['ui'].values():assert set(copy)=={'ja','en'}
 protected=['js/kanji','assets/kanji','css/kanji-app.css','tools/build-app-markup.py','tools/app-ja.html','tools/app-en.html']
 assert not subprocess.check_output(['git','diff','bdb1deb','--',*protected],cwd=root)
 
+# This editorial task must preserve presentation, application code and personal facts.
+assert not subprocess.check_output(['git','diff','c6d883e','--','css/kanji-compat.css','css/kanji-app.css','js','assets','tools/build-app-markup.py','tools/app-ja.html','tools/app-en.html'],cwd=root)
+original_css=subprocess.check_output(['git','show','c6d883e:css/site.css'],cwd=root).decode('utf-8').replace('\r\n','\n')
+assert (root/'css/site.css').read_text(encoding='utf-8').startswith(original_css.rstrip())
+previous=json.loads(subprocess.check_output(['git','show','c6d883e:content/site.json'],cwd=root).decode('utf-8'))
+for key in ['person','education','languages','homeEvidence','projects','research','navigation']:
+    assert data[key]==previous[key],key
+for key in ['kanji-recall','family','monogatari']:
+    assert data['pages'][key]==previous['pages'][key],key
+
 def files():
     paths=[root/(('en/' if lang=='en' else '')+route+('' if route.endswith('.html') else 'index.html')) for lang in ['ja','en'] for route in routes]
     paths+=[root/name for name,_ in data['redirects']]+[root/'sitemap.xml']
@@ -36,5 +46,5 @@ for lang in ['ja','en']:
     contact=(root/prefix/'contact/index.html').read_text(encoding='utf-8')
     assert '.pdf' not in contact
 result={'deterministic':True,'preservedApp':protected,'bilingualPages':len(routes)*2,'licensesPreserved':True,'publicCvLinks':False}
-(root/'artifacts/redesign/build-audit.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+(root/'artifacts/editorial-refinement/build-audit.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
 print('PASS deterministic static build; preserved Kanji Recall mechanics, data and markup; licensed content')

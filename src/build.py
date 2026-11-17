@@ -3,10 +3,13 @@ from pathlib import Path
 from html import unescape
 import json,re,sys
 sys.path.insert(0,str(Path(__file__).parent))
-from components import e,link,section,projects,papers,cases,timeline,qualifications
+from components import e,link,section,projects,papers,text_blocks,timeline,qualifications
 ROOT=Path(__file__).resolve().parents[1]
 DATA=json.loads((ROOT/'content/site.json').read_text(encoding='utf-8'))
 ORIGIN='https://fixed0000.github.io'
+
+def paragraphs(record):
+    return ''.join('<p>'+e(paragraph)+'</p>' for paragraph in record['paragraphs'])
 
 def content(key,lang):
     t=lambda key:DATA['ui'][key][lang]
@@ -15,10 +18,9 @@ def content(key,lang):
         intro='<div class="hero-facts"><p>'+t('hotel_operations_game_localization')+'</p><p>'+t('based_in_kyoto_tokyo_preferred')+'</p></div>'
         actions='<div class="hero-actions">'+link(p+'experience/',t('view_experience'),True)+link(p+'research/',t('explore_the_work'))+link(p+'contact/',t('get_in_touch'))+'</div>'
         evidence='<div class="evidence-strip">'+''.join('<div><span>'+e(item[lang]['label'])+'</span><strong>'+e(item[lang]['value'])+'</strong><small>'+e(item[lang]['date'])+'</small></div>' for item in d['homeEvidence'])+'</div>'
-        return intro+actions+evidence+section('01',t('selected_experience_in_practice'),cases(d,lang,True)+link(p+'experience/',t('work_history_case_details')))+section('02',t('personal_projects'),projects(d,lang))+section('03',t('research_into_language_meaning'),papers(d,lang))
+        return intro+actions+evidence+section('01',t('professional_background'),text_blocks(d['background'],lang)+link(p+'experience/',t('view_experience')),'professional-background')+section('02',t('personal_projects'),projects(d,lang))+section('03',t('research_into_language_meaning'),papers(d,lang))
     if key=='experience':
-        localization='<div class="localization-note"><span class="eyebrow">100% ORANGE JUICE</span><h3>'+t('bringing_new_game_content_into_russian')+'</h3><p>'+t('from_translating_events_dialogue_and_interface_text_to_reviewing_')+'</p><p class="tech">'+t('translation_platform_tools')+'</p></div>'
-        return section('01',t('work_history'),timeline(d,lang))+section('02',t('cases_from_practice'),'<p class="section-intro">'+t('open_each_case_to_see_the_challenge_action_and_outcome')+'</p>'+cases(d,lang))+section('03',t('game_localization'),localization)
+        return section('01',t('work_history'),timeline(d,lang))
     if key=='skills':
         groups='<div class="skill-groups">'+''.join('<article><h3>'+e(s[lang]['title'])+'</h3><ul>'+''.join('<li>'+e(x)+'</li>' for x in s[lang]['items'])+'</ul></article>' for s in d['skills'])+'</div>'
         tools='<ul class="tool-list">'+''.join('<li>'+x+'</li>' for x in d['tools'])+'</ul><p>'+t('used_in_this_site_kanji_recall_and_morigarden_i_use_ai_assisted_t')+'</p>'
@@ -27,9 +29,9 @@ def content(key,lang):
     if key in ['education','about']:
         education=section('01',t('education'),timeline(d,lang,True),'education')
         if key=='education':return education+link(p+'about/',t('more_about_me'))
-        principles='<ol class="working-principles">'+''.join('<li>'+e(x[lang])+'</li>' for x in d['principles'])+'</ol><p>'+t('my_interests_include_japanese_meaning_translation_and_cultural_as')+'</p>'
-        site='<div class="site-note"><h3>'+t('designed_for_reading_and_exploration')+'</h3><p>'+t('a_static_japanese_first_portfolio_with_a_full_english_version_str')+'</p><h3>'+t('ai_assisted_development')+'</h3><p>'+t('i_use_ai_assisted_development_tools_in_my_personal_projects_to_he')+'</p><h3>'+t('source_licenses')+'</h3><ul><li><a href="https://github.com/fixed0000/fixed0000.github.io">GitHub — '+t('portfolio_source')+'</a></li><li><a href="/assets/kanji/DATA-SOURCES.txt">'+t('kanji_data_sources_attribution')+'</a> · <a href="/assets/kanji/LICENSE.txt">KanjiVG — CC BY-SA 3.0</a></li><li><a href="'+p+'projects/morigarden/">'+t('morigarden_third_party_assets_fan_project_disclaimer')+'</a></li></ul></div>'
-        return education+section('02',t('how_i_approach_work'),principles)+section('03',t('about_this_website'),site,'website')
+        site='<div class="site-note"><p>'+t('about_technical_intro')+'</p><ul><li><a href="https://github.com/fixed0000/fixed0000.github.io">GitHub — '+t('portfolio_source')+'</a></li><li><a href="/assets/kanji/DATA-SOURCES.txt">'+t('kanji_data_sources_attribution')+'</a> · <a href="/assets/kanji/LICENSE.txt">KanjiVG — CC BY-SA 3.0</a></li><li><a href="'+p+'projects/morigarden/">'+t('morigarden_third_party_assets_fan_project_disclaimer')+'</a></li></ul></div>'
+        about=d['aboutSections']
+        return section('01',t('professional_biography'),paragraphs(about[0][lang]),'background')+education.replace('>01</span>','>02</span>',1)+''.join(section(f'{i:02}',record[lang]['title'],paragraphs(record[lang]),record['id']) for i,record in enumerate(about[1:],3))+section('06',t('about_this_website'),site,'website')
     if key=='contact':
         return '<div class="contact-layout"><a class="email-address" href="mailto:'+d['person']['email']+'">'+d['person']['email']+' <span aria-hidden="true">↗</span></a><div class="contact-notes"><div><h2>'+t('location_preferences')+'</h2><p>'+t('tokyo_is_my_preferred_location_i_am_also_open_to_opportunities_in')+'</p></div><div><h2>'+t('contact_2')+'</h2><p>'+t('please_contact_me_by_email')+'</p><a class="text-link" href="'+d['person']['github']+'">GitHub / fixed0000 ↗</a></div></div></div>'
     if key=='notfound':return '<div class="notfound-links">'+''.join(link(p+url,j if lang=='ja' else en) for url,j,en in d['navigation'])+'</div>'
@@ -60,7 +62,7 @@ def render(key,lang):
 <body class="editorial-site page-{key}{' app-page' if isapp else ''}"><a class="skip" href="#main">{labels['skip']}</a>
 <header class="site-header"><div class="header-inner"><a class="brand" href="{p}" aria-label="{e(name)} — {t('home')}"><span class="mark" aria-hidden="true">LB<span>·</span></span><span class="brand-name">{e(name)}</span></a><div class="header-tools"><a class="language" href="{alt}" lang="{t('ja')}" hreflang="{t('ja')}">{t('label')}</a><button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" data-open="{labels['menu']}" data-close="{labels['close']}">{labels['menu']} <span aria-hidden="true">＋</span></button></div><nav id="site-navigation" class="navigation" aria-label="{t('main_navigation')}">{nav}</nav></div></header>
 <main class="wrap" id="main" tabindex="-1"><div class="page-heading">{hero}<p class="eyebrow">{e(eyebrow)}</p><h1>{heading}</h1><p class="lead">{lead}</p></div>{content(key,lang)}</main>
-<footer class="footer wrap"><div class="footer-top"><p>{t('let_s_put_experience_to_work')}</p><a href="{p}contact/">{labels['contact']} <span aria-hidden="true">↗</span></a></div><div class="footer-bottom"><span>© 2026 Lidiia Borodina</span><a href="{DATA['person']['github']}">GitHub ↗</a><a href="{p}about/#website">{t('about_this_website')}</a><span>JA / EN</span></div></footer>
+<footer class="footer wrap"><div class="footer-top"><a href="{p}contact/">{labels['contact']} <span aria-hidden="true">↗</span></a></div><div class="footer-bottom"><span>© 2026 Lidiia Borodina</span><a href="{DATA['person']['github']}">GitHub ↗</a><a href="{p}about/#website">{t('about_this_website')}</a><span>JA / EN</span></div></footer>
 {'<script type="module" src="/js/kanji/app.js"></script>' if isapp else ''}</body></html>'''
     target=ROOT/p.strip('/')/route
     target=target if route.endswith('.html') else target/'index.html'

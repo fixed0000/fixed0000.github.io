@@ -1286,3 +1286,8 @@ li+li {
     width:100%
   }
 }
+
+/* About: keep personal essays within a comfortable reading measure. */
+.page-about .editorial-section .section-content > p {
+  max-width: 44rem;
+}
