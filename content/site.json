@@ -92,26 +92,30 @@
       "route": "research/family/",
       "ja": {
         "title": "「家族」に対する日本語・ロシア語母語話者の連想比較",
-        "lead": "2024 · Completed · 日本語・ロシア語母語話者を対象としたアンケート調査を通じて、「家族」に対する連想の共通点と相違点を比較しました。",
-        "body": "<section class=\"section\"><h2>目的</h2><p>連想の共通点と相違点を検討すること。</p></section><section class=\"section\"><h2>資料・方法</h2><p>アンケートと比較分析。質問文・参加者数・分析手順の詳細は原資料での確認が必要です。</p></section><section class=\"section\"><h2>関連スキル</h2><p>アンケート設計・比較分析・言語文化研究</p></section><section class=\"section\"><h2>資料と確認事項</h2><p>本サイトの既存研究紹介と旧翻訳ファイルに記載された情報を整理した概要です。原論文は未掲載のため、参加者数、数値的結果、統計的有意性は記載していません。正式な提出題目の表記は原資料との最終照合が必要です。</p><a href=\"https://github.com/fixed0000/fixed0000.github.io/tree/bca2cf19c28cd41f1511ea425d0d7aa772676d60/js/translations\">既存の記載を見る</a></section><section class=\"section\"><h2>原題</h2><p>日本語母語話者における「家族」という概念との連想分析</p><p class=\"note\">既存資料に記載された題目です。提出原稿との最終照合は未了です。</p></section>"
+        "lead": "日本語とロシア語の母語話者を対象に、「家族」という概念に対する連想をアンケートで調査し、回答の共通点と相違点を比較しました。",
+        "description": "日本語とロシア語の母語話者を対象に、「家族」という概念に対する連想をアンケートで調査し、回答の共通点と相違点を比較しました。",
+        "eyebrow": "2024 / 大学での研究"
       },
       "en": {
         "title": "Comparing Associations with “Family” in Japanese and Russian",
-        "lead": "2024 · Completed · A questionnaire-based study comparing associations with the concept of “family” among native Japanese and Russian speakers.",
-        "body": "<section class=\"section\"><h2>Purpose</h2><p>To examine similarities and differences in associations.</p></section><section class=\"section\"><h2>Materials & Methodology</h2><p>Questionnaires and comparative analysis. The questionnaire, participant count, and detailed analysis procedure require verification against the original materials.</p></section><section class=\"section\"><h2>Related Skills</h2><p>Questionnaire design · comparative analysis · language and culture</p></section><section class=\"section\"><h2>Sources & Verification</h2><p>This summary consolidates information from the existing research page and archived translation files. The original papers are not published here; participant counts, numerical findings, and statistical significance are therefore not reported. The wording of the submitted title needs a final check against the original document.</p><a href=\"https://github.com/fixed0000/fixed0000.github.io/tree/bca2cf19c28cd41f1511ea425d0d7aa772676d60/js/translations\">View archived descriptions</a></section><section class=\"section\"><h2>Original title</h2><p>Associations with the concept of “family” among native Japanese speakers</p><p class=\"note\">Title recorded in the archived materials; final verification against the submitted paper is pending.</p></section>"
+        "lead": "A questionnaire-based study examining associations with the concept of “family” among native Japanese and Russian speakers, comparing similarities and differences in their responses.",
+        "description": "A questionnaire-based study examining associations with the concept of “family” among native Japanese and Russian speakers, comparing similarities and differences in their responses.",
+        "eyebrow": "2024 / University Research"
       }
     },
     "monogatari": {
       "route": "research/monogatari/",
       "ja": {
         "title": "日本語の会話表現はロシア語にどう訳されるか",
-        "lead": "2025 · Completed · 〈物語〉シリーズに見られる会話表現とそのロシア語訳を比較し、文脈によって意味やニュアンスがどのように伝えられるかを検討しました。",
-        "body": "<p class=\"research-subtitle\">〈物語〉シリーズを対象とした翻訳の等価性とニュアンスの分析</p><section class=\"section\"><h2>目的</h2><p>日本語の会話表現に対する翻訳上の等価性を検討すること。</p></section><section class=\"section\"><h2>資料・方法</h2><p>原文と翻訳の照合・比較。使用作品・表現の選定基準と最終的な結論は原論文での確認が必要です。</p></section><section class=\"section\"><h2>関連スキル</h2><p>翻訳比較・文脈分析・日本語とロシア語</p></section><section class=\"section\"><h2>資料と確認事項</h2><p>本サイトの既存研究紹介と旧翻訳ファイルに記載された情報を整理した概要です。原論文は未掲載のため、参加者数、数値的結果、統計的有意性は記載していません。正式な提出題目の表記は原資料との最終照合が必要です。</p><a href=\"https://github.com/fixed0000/fixed0000.github.io/tree/bca2cf19c28cd41f1511ea425d0d7aa772676d60/js/translations\">既存の記載を見る</a></section><section class=\"section\"><h2>原題</h2><p>日本語コミュニカティブ表現の露訳における等価性検索の問題（メディアフランチャイズ『〈物語〉シリーズ』の作品を例に）</p><p class=\"note\">既存資料に記載された題目です。提出原稿との最終照合は未了です。</p></section>"
+        "lead": "〈物語〉シリーズに見られる日本語の会話表現とロシア語訳を比較し、文脈に応じた意味やニュアンスの伝わり方について検討しました。",
+        "description": "〈物語〉シリーズに見られる日本語の会話表現とロシア語訳を比較し、文脈に応じた意味やニュアンスの伝わり方について検討しました。",
+        "eyebrow": "2025 / 大学での研究"
       },
       "en": {
         "title": "Translating Japanese Conversational Expressions into Russian",
-        "lead": "2025 · Completed · An undergraduate study comparing Japanese conversational expressions in the Monogatari series with their Russian translations, focusing on how meaning and nuance are conveyed in context.",
-        "body": "<p class=\"research-subtitle\">An analysis of equivalence and nuance in the Monogatari series</p><section class=\"section\"><h2>Purpose</h2><p>To examine translation equivalence for Japanese conversational expressions.</p></section><section class=\"section\"><h2>Materials & Methodology</h2><p>Comparison of original expressions with translations. The selected works, expression selection criteria, and final conclusions require verification against the thesis.</p></section><section class=\"section\"><h2>Related Skills</h2><p>Translation comparison · contextual analysis · Japanese and Russian</p></section><section class=\"section\"><h2>Sources & Verification</h2><p>This summary consolidates information from the existing research page and archived translation files. The original papers are not published here; participant counts, numerical findings, and statistical significance are therefore not reported. The wording of the submitted title needs a final check against the original document.</p><a href=\"https://github.com/fixed0000/fixed0000.github.io/tree/bca2cf19c28cd41f1511ea425d0d7aa772676d60/js/translations\">View archived descriptions</a></section><section class=\"section\"><h2>Original title</h2><p>The Problem of Finding Equivalents in Translating Japanese Communicatives into Russian (based on the Monogatari Series media franchise)</p><p class=\"note\">Title recorded in the archived materials; final verification against the submitted paper is pending.</p></section>"
+        "lead": "A comparative study of Japanese conversational expressions in the Monogatari series and their Russian translations, examining how meaning and nuance are conveyed in context.",
+        "description": "A comparative study of Japanese conversational expressions in the Monogatari series and their Russian translations, examining how meaning and nuance are conveyed in context.",
+        "eyebrow": "2025 / University Research"
       }
     },
     "home": {
@@ -152,15 +156,15 @@
       "route": "skills/",
       "ja": {
         "title": "スキル・資格",
-        "lead": "業務で培ったスキル、個人制作の道具、学習中の技術を整理しています。",
+        "lead": "実務で使用しているツールと業務経験、個人制作の基礎知識、語学資格を紹介します。",
         "eyebrow": "スキル",
-        "description": "PMS、データ照合、Excel、Google Sheets、翻訳・ローカライズ、語学資格と個人制作の技術。"
+        "description": "PMS、Excel・Googleスプレッドシート、データ照合、翻訳・変更管理、個人制作の基礎知識、語学資格。"
       },
       "en": {
         "title": "Skills & qualifications",
-        "lead": "The tools I use at work, the ones I explore through personal projects, and what I am learning next.",
+        "lead": "Professional tools and experience, foundational knowledge used in personal projects, and language qualifications.",
         "eyebrow": "Skills",
-        "description": "PMS, data verification, spreadsheets, localization, language qualifications, and tools used in personal projects."
+        "description": "PMS, spreadsheets, data verification, localization and change tracking, foundational knowledge for personal projects, and language qualifications."
       }
     },
     "work": {
@@ -281,24 +285,36 @@
       "year": "2024",
       "ja": {
         "title": "「家族」に対する日本語・ロシア語母語話者の連想比較",
-        "description": "日本語・ロシア語母語話者を対象としたアンケート調査を通じて、「家族」に対する連想の共通点と相違点を比較しました。"
+        "description": "日本語とロシア語の母語話者を対象に、「家族」という概念に対する連想をアンケートで調査し、回答の共通点と相違点を比較しました。",
+        "methods": "アンケート調査・回答の整理・比較分析",
+        "approach": "回答を整理し、二つの言語の母語話者による連想を比較するアプローチを取りました。"
       },
       "en": {
         "title": "Comparing Associations with “Family” in Japanese and Russian",
-        "description": "A questionnaire-based study comparing associations with the concept of “family” among native Japanese and Russian speakers."
-      }
+        "description": "A questionnaire-based study examining associations with the concept of “family” among native Japanese and Russian speakers, comparing similarities and differences in their responses.",
+        "methods": "Questionnaire research · Response organization · Comparative analysis",
+        "approach": "The study organized questionnaire responses and compared associations across the two native-language groups."
+      },
+      "originalUrl": null
     },
     {
       "id": "monogatari",
       "year": "2025",
       "ja": {
         "title": "日本語の会話表現はロシア語にどう訳されるか",
-        "description": "〈物語〉シリーズに見られる会話表現とそのロシア語訳を比較し、文脈によって意味やニュアンスがどのように伝えられるかを検討しました。"
+        "description": "〈物語〉シリーズに見られる日本語の会話表現とロシア語訳を比較し、文脈に応じた意味やニュアンスの伝わり方について検討しました。",
+        "subtitle": "〈物語〉シリーズを対象とした翻訳表現の比較",
+        "methods": "原文と翻訳の照合・文脈分析・翻訳比較",
+        "approach": "個々の表現を文脈とあわせて読み、原文とロシア語訳の対応を検討しました。"
       },
       "en": {
         "title": "Translating Japanese Conversational Expressions into Russian",
-        "description": "An undergraduate study comparing Japanese conversational expressions in the Monogatari series with their Russian translations, focusing on how meaning and nuance are conveyed in context."
-      }
+        "description": "A comparative study of Japanese conversational expressions in the Monogatari series and their Russian translations, examining how meaning and nuance are conveyed in context.",
+        "subtitle": "A comparison of translation choices in the Monogatari series",
+        "methods": "Source–translation comparison · Contextual analysis · Translation analysis",
+        "approach": "The study considered expressions in context and examined the relationship between the Japanese source and its Russian translation."
+      },
+      "originalUrl": null
     }
   ],
   "timeline": [
@@ -434,14 +450,14 @@
       "ja": {
         "period": "2020年 — 2025年7月",
         "title": "モスクワ市立教育大学",
-        "subtitle": "Moscow City University",
-        "body": "学士課程修了。日本語、翻訳・翻訳学を専攻。翻訳実践に加え、言語表現の意味や文脈に関する研究に取り組みました。"
+        "subtitle": "言語学（学士）・翻訳通訳学（日本語）",
+        "body": "専攻：45.03.02 言語学。日本語の翻訳・通訳を中心に学び、2025年7月に学士課程を修了しました。"
       },
       "en": {
         "period": "2020 — Jul 2025",
         "title": "Moscow City University",
-        "subtitle": "Bachelor’s degree",
-        "body": "Specialized in Japanese language, translation, and translation studies. Studied translation practice and researched meaning and context in language use."
+        "subtitle": "Bachelor’s Degree in Linguistics — Translation and Interpreting (Japanese)",
+        "body": "Degree programme: 45.03.02 Linguistics, specializing in Japanese translation and interpreting. Completed in July 2025."
       }
     },
     {
@@ -561,13 +577,9 @@
       "ja": "ゲームローカライズ",
       "en": "Game localization"
     },
-    "used_in_this_site_kanji_recall_and_morigarden_i_use_ai_assisted_t": {
-      "ja": "本サイト・Kanji Recall・MoriGardenで使用。AIを開発支援ツールとして活用し、機能の検討、コード確認、動作テストを行っています。",
-      "en": "Used in this site, Kanji Recall, and MoriGarden. I use AI-assisted tools to explore features, review code, and test functionality."
-    },
     "languages_qualifications": {
       "ja": "語学・資格",
-      "en": "Languages & qualifications"
+      "en": "Languages & Certifications"
     },
     "personal_software_projects": {
       "ja": "個人のソフトウェア制作",
@@ -621,10 +633,6 @@
       "ja": "業務の事例",
       "en": "Cases from practice"
     },
-    "currently_learning": {
-      "ja": "学習中",
-      "en": "Currently learning"
-    },
     "more_about_me": {
       "ja": "私について",
       "en": "More about me"
@@ -650,12 +658,8 @@
       "en": "Bringing new game content into Russian."
     },
     "professional_experience": {
-      "ja": "実務で培ったスキル",
-      "en": "Professional experience"
-    },
-    "personal_project_tools": {
-      "ja": "個人制作の道具",
-      "en": "Personal project tools"
+      "ja": "実務で使用しているツール・経験",
+      "en": "Professional Tools & Experience"
     },
     "please_contact_me_by_email": {
       "ja": "お問い合わせはメールにてお願いいたします。",
@@ -664,10 +668,6 @@
     "view_experience": {
       "ja": "職務経歴を見る",
       "en": "View experience"
-    },
-    "learning_the_fundamentals": {
-      "ja": "基礎を学習中。",
-      "en": "Learning the fundamentals."
     },
     "japanese_proficiency": {
       "ja": "日本語能力試験",
@@ -768,6 +768,26 @@
     "about_technical_intro": {
       "ja": "日本語・英語の静的サイトです。共通の部品と一元化したコンテンツから生成し、キーボード操作、画面幅への対応、動きを減らす設定を考慮しています。",
       "en": "A static Japanese–English site generated from shared components and centralized content, with support for keyboard use, responsive layouts, and reduced-motion preferences."
+    },
+    "academic_research": {
+      "ja": "大学での研究",
+      "en": "Academic Research"
+    },
+    "view_research": {
+      "ja": "研究を見る",
+      "en": "View Research"
+    },
+    "original_russian": {
+      "ja": "ロシア語の原文を見る",
+      "en": "Read Original (Russian)"
+    },
+    "original_language": {
+      "ja": "原文：ロシア語",
+      "en": "Original language: Russian"
+    },
+    "university_research": {
+      "ja": "大学での研究",
+      "en": "University Research"
     }
   },
   "redirects": [
@@ -795,13 +815,6 @@
       "under-construction.html",
       ""
     ]
-  ],
-  "tools": [
-    "HTML"
-  ],
-  "learning": [
-    "R",
-    "Python"
   ],
   "homeEvidence": [
     {
@@ -887,7 +900,8 @@
           "日々の業務で発生する問題に対応するだけでなく、その原因を考え、同じ問題を防ぐために情報や業務の流れを整理することにやりがいを感じます。",
           "ホテル業務では、日々必要な対応に取り組みながら、システムを使った情報管理や確認作業にも関心を持っています。作業を一覧化したり、情報の不一致や不具合について確認すべき点を整理したりすることが好きです。",
           "ITやデータ管理の知識を身につけ、日々の業務を支えるシステムや運用の改善に携わりたいと考えています。"
-        ]
+        ],
+        "highlight": "問題の原因を考え、仕組みを整理する。"
       },
       "en": {
         "title": "How I Approach Work",
@@ -895,27 +909,50 @@
           "Beyond responding to day-to-day issues, I find it rewarding to understand their causes and organize information and workflows in ways that help prevent similar problems from recurring.",
           "In my hotel role, I handle day-to-day needs while taking an interest in information management and checks using operational systems. I enjoy making task lists and organizing the points that need to be checked when information is inconsistent or a system issue occurs.",
           "I want to develop my knowledge of IT and data management and contribute to improvements in the systems and operations that support everyday work."
-        ]
+        ],
+        "highlight": "Understand the causes. Organize the systems."
       }
     },
     {
       "id": "interests",
       "ja": {
-        "title": "興味・関心",
-        "paragraphs": [
-          "新しいことを学び、自分で試してみることが好きです。コンピューターに関心があり、最近は自分でPCを組み立てました。",
-          "また、生成AIを開発支援に活用しながら、日常で使える小さなプログラムや個人向けのプロジェクトを制作しています。",
-          "外国語の学習や新しい場所を訪れることも好きで、普段とは異なる考え方や環境に触れ、新しい経験を得ることを楽しんでいます。"
-        ]
+        "title": "興味・関心"
       },
       "en": {
-        "title": "Personal Interests",
-        "paragraphs": [
-          "I enjoy learning new things and trying them for myself. I am interested in computers and recently assembled my own PC.",
-          "I also use AI-assisted development to create small programs and personal projects for everyday use.",
-          "Outside these projects, I enjoy learning foreign languages and visiting new places. I value the chance to encounter different perspectives and environments and gain new experiences."
-        ]
-      }
+        "title": "Personal Interests"
+      },
+      "groups": [
+        {
+          "ja": {
+            "title": "コンピューター・個人制作",
+            "body": "コンピューターに関心があり、最近は自分でPCを組み立てました。生成AIを開発支援に活用し、日常で使える小さなプログラムや個人向けのプロジェクトを制作しています。"
+          },
+          "en": {
+            "title": "Computers & Personal Projects",
+            "body": "I am interested in computers and recently assembled my own PC. I use AI-assisted development to create small programs and personal projects for everyday use."
+          }
+        },
+        {
+          "ja": {
+            "title": "外国語・言語研究",
+            "body": "外国語の学習が好きです。大学では日本語の翻訳・通訳を学び、日本語とロシア語を対象とした研究に取り組みました。"
+          },
+          "en": {
+            "title": "Languages & Language Research",
+            "body": "I enjoy learning foreign languages. At university, I studied Japanese translation and interpreting and conducted research involving Japanese and Russian."
+          }
+        },
+        {
+          "ja": {
+            "title": "新しい場所・経験",
+            "body": "新しい場所を訪れ、普段とは異なる考え方や環境に触れることを楽しんでいます。新しいことを学び、自分で試してみることが好きです。"
+          },
+          "en": {
+            "title": "New Places & Experiences",
+            "body": "I enjoy visiting new places and encountering different perspectives and environments. I like learning new things and trying them for myself."
+          }
+        }
+      ]
     },
     {
       "id": "future-goals",
@@ -925,6 +962,11 @@
           "まずは専門分野の知識と実務経験を積み、担当する業務を深く理解できる人材になりたいと考えています。",
           "将来的には、自分の担当領域だけでなく、他部署とのつながりや会社全体の業務の流れも理解し、部門を横断して課題を考えられるようになることが目標です。",
           "数年単位で経験を重ねた先の長期的な目標として、課長などの管理職も視野に入れています。専門知識と現場への理解を生かしながら、チームの仕事を支えられる立場を目指しています。"
+        ],
+        "steps": [
+          "専門知識の習得",
+          "業務理解の深化",
+          "将来的なマネジメント"
         ]
       },
       "en": {
@@ -933,6 +975,11 @@
           "My first priority is to build specialist knowledge and practical experience so that I develop a thorough understanding of the work I am responsible for.",
           "I also want to understand how my area connects with other departments and how work flows through the company as a whole. My goal is to learn to consider problems across departmental boundaries.",
           "Over the longer term, after gaining further experience over the coming years, I would like to develop toward a management role, such as section manager (課長). I hope to support a team through both specialist knowledge and an understanding of day-to-day work."
+        ],
+        "steps": [
+          "Build specialist knowledge",
+          "Deepen operational understanding",
+          "Work toward management"
         ]
       }
     }
@@ -1046,5 +1093,128 @@
         "Progress from the completed practice attempt"
       ]
     ]
+  },
+  "educationStudies": {
+    "ja": {
+      "title": "大学で学んだこと",
+      "intro": "モスクワ市立教育大学では、言語学を専攻し、日本語の翻訳・通訳を中心に学びました。翻訳の理論と実践に加え、日本語の音声・文法・語彙・文体、テキスト分析、翻訳における情報技術、研究成果の発表などを学びました。"
+    },
+    "en": {
+      "title": "What I Studied",
+      "intro": "At Moscow City University, I studied linguistics with a specialization in Japanese translation and interpreting. My coursework covered translation theory and practice, Japanese phonetics, grammar, vocabulary and stylistics, text analysis, information technology in translation, and the presentation of research findings."
+    },
+    "groups": [
+      {
+        "index": "A",
+        "ja": {
+          "title": "日本語学",
+          "items": [
+            "日本語理論音声学",
+            "日本語理論文法",
+            "日本語語彙論",
+            "日本語文体論"
+          ]
+        },
+        "en": {
+          "title": "Japanese Linguistics",
+          "items": [
+            "Theoretical phonetics of Japanese",
+            "Theoretical grammar of Japanese",
+            "Japanese lexicology",
+            "Japanese stylistics"
+          ]
+        }
+      },
+      {
+        "index": "B",
+        "ja": {
+          "title": "翻訳・通訳",
+          "items": [
+            "翻訳の理論と実践",
+            "逐次通訳の基礎",
+            "実践翻訳演習",
+            "実践通訳演習",
+            "翻訳前テキスト分析"
+          ]
+        },
+        "en": {
+          "title": "Translation & Interpreting",
+          "items": [
+            "Translation theory and practice",
+            "Fundamentals of consecutive interpreting",
+            "Practical translation exercises",
+            "Practical interpreting exercises",
+            "Pre-translation text analysis"
+          ]
+        }
+      },
+      {
+        "index": "C",
+        "ja": {
+          "title": "専門的な翻訳",
+          "items": [
+            "字幕・吹替翻訳の基礎",
+            "文芸翻訳",
+            "日本文化の記号としての古典テキスト"
+          ]
+        },
+        "en": {
+          "title": "Specialized Translation",
+          "items": [
+            "Fundamentals of subtitling and dubbing translation",
+            "Literary translation",
+            "Classical texts as signs of Japanese culture"
+          ]
+        }
+      },
+      {
+        "index": "D",
+        "ja": {
+          "title": "情報技術・研究",
+          "items": [
+            "翻訳業務における情報技術",
+            "翻訳学における情報技術",
+            "翻訳学における研究活動の基礎",
+            "日本語による研究成果発表の基礎"
+          ]
+        },
+        "en": {
+          "title": "Technology & Research",
+          "items": [
+            "Information technology in translation practice",
+            "Information technology in translation studies",
+            "Fundamentals of research in translation studies",
+            "Fundamentals of presenting research findings in Japanese"
+          ]
+        }
+      }
+    ]
+  },
+  "personalKnowledge": {
+    "ja": {
+      "title": "個人制作と基礎知識",
+      "body": "個人制作では、HTMLの基礎知識と生成AIによる開発支援を活用して、Webサイトや小規模なアプリケーションを制作しています。Pythonについても基礎的な知識があります。制作したプログラムのすべてを独力で実装したわけではなく、AIを活用しながら機能の検討や動作確認、改善に取り組んでいます。"
+    },
+    "en": {
+      "title": "Personal Projects & Basic Knowledge",
+      "body": "In my personal projects, I use basic HTML knowledge and AI-assisted development tools to create websites and small applications. I also have foundational knowledge of Python. I do not develop every component independently; I use AI assistance to explore features, check functionality, and improve the results."
+    }
+  },
+  "homeResearch": {
+    "ja": {
+      "body": "大学では、日本語とロシア語を対象に、アンケート調査による連想分析と、会話表現の翻訳比較に取り組みました。"
+    },
+    "en": {
+      "body": "During my university studies, I conducted questionnaire-based research into word associations and comparative research on the translation of Japanese conversational expressions into Russian."
+    }
+  },
+  "researchResource": {
+    "url": "https://www.elibrary.ru/item.asp?id=82319309",
+    "ja": {
+      "label": "eLIBRARY — 研究資料（ロシア語）"
+    },
+    "en": {
+      "label": "eLIBRARY — Research Material (Russian)"
+    }
   }
 }

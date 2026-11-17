@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": [
+    "favorites persisted and practiced",
+    "three correct answers unlock mixed set",
+    "full mixed set",
+    "daily completed",
+    "progress bar fills after answer",
+    "PDF signatures",
+    "legacy redirects including English",
+    "reduced motion disables hero animation"
+  ]
+}

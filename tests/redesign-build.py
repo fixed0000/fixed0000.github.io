@@ -18,21 +18,27 @@ protected=['js/kanji','assets/kanji','css/kanji-app.css','tools/build-app-markup
 assert not subprocess.check_output(['git','diff','bdb1deb','--',*protected],cwd=root)
 
 # This editorial task must preserve presentation, application code and personal facts.
-assert not subprocess.check_output(['git','diff','c6d883e','--','css/kanji-compat.css','css/kanji-app.css','js','assets/kanji','tools/build-app-markup.py','tools/app-ja.html','tools/app-en.html'],cwd=root)
+assert not subprocess.check_output(['git','diff','c6d883e','--','css/kanji-compat.css','css/kanji-app.css','js/kanji','assets/kanji','tools/build-app-markup.py','tools/app-ja.html','tools/app-en.html'],cwd=root)
 original_css=subprocess.check_output(['git','show','c6d883e:css/site.css'],cwd=root).decode('utf-8').replace('\r\n','\n')
 assert (root/'css/site.css').read_text(encoding='utf-8').startswith(original_css.rstrip())
-previous=json.loads(subprocess.check_output(['git','show','c6d883e:content/site.json'],cwd=root).decode('utf-8'))
-for key in ['person','education','languages','homeEvidence','research']:
+previous=json.loads(subprocess.check_output(['git','show','af7aded:content/site.json'],cwd=root).decode('utf-8'))
+for key in ['person','languages','homeEvidence','timeline','projects','galleries','applicationDocuments']:
     assert data[key]==previous[key],key
-assert data['navigation']==previous['navigation'][:5]
+assert data['navigation']==previous['navigation']
 assert data['contactAction']['route']=='contact/'
 assert data['applicationDocuments']['approved'] is True
 assert data['applicationDocuments']['url']=='/documents/shokumukeirekisho-ja.pdf'
 assert (root/'documents/shokumukeirekisho-ja.pdf').read_bytes().startswith(b'%PDF-')
-assert data['tools']==['HTML']
+assert 'tools' not in data and 'learning' not in data
+assert len(data['educationStudies']['groups'])==4
+assert [len(x['ja']['items']) for x in data['educationStudies']['groups']]==[4,5,3,4]
+assert [(r['id'],r['year']) for r in data['research']]==[(r['id'],r['year']) for r in previous['research']]
+for a,b in zip(data['education'],previous['education']):
+    for lang in ['ja','en']:assert (a[lang]['period'],a[lang]['title'])==(b[lang]['period'],b[lang]['title'])
+assert data['pages']['home']==previous['pages']['home']
 for a,b in zip(data['projects'],previous['projects']):
     assert {k:v for k,v in a.items() if k not in ['image','srcset']}=={k:v for k,v in b.items() if k not in ['image','srcset']}
-for key in ['kanji-recall','family','monogatari']:
+for key in ['kanji-recall','morigarden']:
     assert data['pages'][key]==previous['pages'][key],key
 
 def files():
@@ -54,5 +60,5 @@ for lang in ['ja','en']:
     contact=(root/prefix/'contact/index.html').read_text(encoding='utf-8')
     assert '/documents/shokumukeirekisho-ja.pdf' in contact
 result={'deterministic':True,'preservedApp':protected,'bilingualPages':len(routes)*2,'licensesPreserved':True,'publicCvLinks':True}
-(root/'artifacts/gallery-resume-final/build-audit.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+(root/'artifacts/portfolio-3/build-audit.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
 print('PASS deterministic static build; preserved Kanji Recall mechanics, data and markup; licensed content')
