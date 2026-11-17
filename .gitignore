@@ -1,3 +1,6 @@
 node_modules/
 __pycache__/
 trash.txt
+
+# Private source documents are never part of the public Pages root.
+private/

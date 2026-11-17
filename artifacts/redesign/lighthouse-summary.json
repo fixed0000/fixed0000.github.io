@@ -1,0 +1,32 @@
+{
+  "lighthouse-home-ja.json": {
+    "url": "http://localhost:8000/",
+    "scores": {
+      "performance": 94,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "fetchTime": "2026-11-17T17:53:45.226Z"
+  },
+  "lighthouse-experience-en.json": {
+    "url": "http://localhost:8000/en/experience/",
+    "scores": {
+      "performance": 94,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "fetchTime": "2026-11-17T17:51:12.469Z"
+  },
+  "lighthouse-kanji-en.json": {
+    "url": "http://localhost:8000/en/projects/kanji-recall/",
+    "scores": {
+      "performance": 93,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "fetchTime": "2026-11-17T17:54:23.483Z"
+  }
+}

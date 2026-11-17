@@ -1,0 +1,942 @@
+{
+  "version": 1,
+  "person": {
+    "ja": "ボロディナ・リディア",
+    "en": "Lidiia Borodina",
+    "email": "borodina.l2097@gmail.com",
+    "github": "https://github.com/fixed0000"
+  },
+  "navigation": [
+    [
+      "",
+      "ホーム",
+      "Home"
+    ],
+    [
+      "experience/",
+      "職務経歴",
+      "Experience"
+    ],
+    [
+      "skills/",
+      "スキル",
+      "Skills"
+    ],
+    [
+      "research/",
+      "制作・研究",
+      "Work & Research"
+    ],
+    [
+      "about/",
+      "私について",
+      "About"
+    ],
+    [
+      "contact/",
+      "お問い合わせ",
+      "Contact"
+    ]
+  ],
+  "labels": {
+    "ja": {
+      "menu": "メニュー",
+      "close": "閉じる",
+      "skip": "本文へ",
+      "more": "詳しく見る",
+      "work": "制作・研究",
+      "back": "制作・研究に戻る",
+      "contact": "お問い合わせ",
+      "source": "ソースコード",
+      "personal": "個人制作",
+      "research": "学術研究",
+      "status": "開発中",
+      "next": "次のステップ"
+    },
+    "en": {
+      "menu": "Menu",
+      "close": "Close menu",
+      "skip": "Skip to content",
+      "more": "Explore the work",
+      "work": "Work & Research",
+      "back": "Back to Work & Research",
+      "contact": "Get in touch",
+      "source": "Source code",
+      "personal": "Personal project",
+      "research": "Academic research",
+      "status": "In development",
+      "next": "Next step"
+    }
+  },
+  "pages": {
+    "morigarden": {
+      "route": "projects/morigarden/",
+      "ja": {
+        "title": "MoriGarden",
+        "lead": "仮想の生き物の成長とふれあいを楽しむ、開発中の個人制作3Dゲーム。",
+        "body": "<section class=\"section\"><h2>概要</h2><p>Chao Garden（Sonic Adventureシリーズ）に着想を得た、Chao（チャオ）を育てるシングルプレイヤーの3Dゲームです。</p></section><section class=\"section\"><h2>制作目的</h2><p>生き物の成長や行動、プレイヤーとのふれあいを扱う個人制作です。</p></section><section class=\"section\"><h2>実装済み機能</h2><ul><li>三人称の移動・カメラ、物を持つ・置く・投げる操作</li><li>卵の孵化、なでる・呼ぶ・餌を与える操作</li><li>自律的な散歩・水泳・休息・遊びと生き物同士の交流</li><li>果物・種・卵のショップ、木と果物の仕組み</li><li>自動保存と20個のセーブスロット、バックアップからの復旧</li></ul></section><section class=\"section\"><h2>開発環境</h2><p>Godot 4.5.1 .NET · C# · .NET 8 · GLBモデル・Python/Tkinter製の別体エディター</p></section><section class=\"section\"><h2>現状・制約</h2><p>In Development。現在の起動手順はWindows向けです。公開Webビルドは確認できていないため、このサイトへのゲームの埋め込みは行っていません。</p></section><section class=\"section\"><h2>今後の予定</h2><p>今後の具体的な公開予定・追加機能は未確定です。開発状況はGitHubで確認できます。</p></section><section class=\"section\"><h2>GitHub</h2><a class=\"button\" href=\"https://github.com/fixed0000/MoriGarden\">ソースコード・起動方法</a><p class=\"note\">確認根拠：README.md、project.godot、Mori.csproj、Scripts/GardenGame.cs、Scripts/SaveStore.cs。</p></section><section class=\"section\" aria-labelledby=\"gallery-title\"><h2 id=\"gallery-title\">ギャラリー</h2><p>2026年11月13日、Godot 4.5.1で実行して撮影。権利確認が未完了のキャラクターモデルは非表示です。画像を選ぶと原寸で表示します。</p><div class=\"game-gallery\"><figure><a href=\"/assets/screenshots/morigarden/01-garden.png\"><img src=\"/assets/screenshots/morigarden/01-garden.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"庭の全景\"></a><figcaption>庭の全景</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/02-character.png\"><img src=\"/assets/screenshots/morigarden/02-character.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"庭の小道と遊び場\"></a><figcaption>庭の小道と遊び場</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/04-interface.png\"><img src=\"/assets/screenshots/morigarden/04-interface.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"ゲーム内ステータス表示\"></a><figcaption>ゲーム内ステータス表示</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/05-inventory.png\"><img src=\"/assets/screenshots/morigarden/05-inventory.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"持ち物の管理\"></a><figcaption>持ち物の管理</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/06-coastal-cove.png\"><img src=\"/assets/screenshots/morigarden/06-coastal-cove.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Coastal Coveの探索\"></a><figcaption>Coastal Coveの探索</figcaption></figure></div></section><section class=\"section\"><h2>開発の記録</h2><p>2026年11月のコミットでは、Coastal Coveの分離、生き物の移動・休息・接触、アイテム保持や浅瀬での動作などの改善が記録されています。これは公開コミットに基づく紹介で、開発期間全体を示すものではありません。</p><a href=\"https://github.com/fixed0000/MoriGarden/commits/main/\">GitHub commit history</a></section><section class=\"section\"><h2>ゲーム画面・第三者素材</h2><p>使用3Dモデル：<a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Baby Chao</a> — <a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Alice.Sacco</a>（Sketchfab、<a href=\"https://creativecommons.org/licenses/by/4.0/\">CC BY</a>）。原作キャラクターのデザインに関する権利は、関連する権利者に帰属します。本プロジェクトはSEGAの公式作品ではありません。</p><p>組み込み時の調整：GodotへのGLB取り込み、およびコードによるサイズ・姿勢・目の表示の調整。メッシュ編集の詳細な履歴は未確認です。</p><p class=\"note\">掲載ページには「From Sonic Adventure 2」とNoAIの表示があります。CC BYの表示を原作キャラクターに関する権利の許諾とは扱いません。当該モデルを生成AIへの入力に使用しません。以下は実行中のゲームから撮影した画面です。公開用の撮影ではBaby Chaoとプレイヤーモデルを非表示にしています。</p></section><section class=\"section\"><h2>ファン制作について</h2><p class=\"disclaimer\">本プロジェクトは、個人の学習・趣味を目的とした非営利のファン制作プロジェクトです。『Sonic Adventure』シリーズのチャオガーデンから着想を得ており、SEGAおよび関連する権利者とは提携・協賛・承認関係にありません。第三者の素材に関する権利は、それぞれの権利者に帰属します。</p></section>"
+      },
+      "en": {
+        "title": "MoriGarden",
+        "lead": "A personal 3D game in development about caring for and interacting with virtual creatures.",
+        "body": "<section class=\"section\"><h2>Overview</h2><p>A single-player 3D game about caring for Chao, inspired by the Chao Garden systems in Sonic Adventure.</p></section><section class=\"section\"><h2>Motivation</h2><p>A personal exploration of creature growth, autonomous behavior, and interaction with the player.</p></section><section class=\"section\"><h2>Implemented Features</h2><ul><li>Third-person movement and camera; pick up, place, and throw objects</li><li>Egg hatching; petting, calling, and feeding creatures</li><li>Autonomous wandering, swimming, resting, playing, and social interactions</li><li>Shop for fruit, seeds, and eggs; tree and fruit systems</li><li>Autosave, 20 save slots, and backup recovery</li></ul></section><section class=\"section\"><h2>Technologies</h2><p>Godot 4.5.1 .NET · C# · .NET 8 · GLB models · separate Python/Tkinter editor</p></section><section class=\"section\"><h2>Status & Limitations</h2><p>In Development. Current launch instructions target Windows. No public web build has been confirmed, so the game is not embedded in this site.</p></section><section class=\"section\"><h2>Roadmap</h2><p>Specific release plans and future features are not confirmed. Development can be followed on GitHub.</p></section><section class=\"section\"><h2>GitHub</h2><a class=\"button\" href=\"https://github.com/fixed0000/MoriGarden\">Source Code & Launch Instructions</a><p class=\"note\">Evidence: README.md, project.godot, Mori.csproj, Scripts/GardenGame.cs, Scripts/SaveStore.cs.</p></section><section class=\"section\" aria-labelledby=\"gallery-title\"><h2 id=\"gallery-title\">Gallery</h2><p>Captured from the running game in Godot 4.5.1 on 13 November 2026. Character models are hidden pending rights clarification. Select an image to view it at full size.</p><div class=\"game-gallery\"><figure><a href=\"/assets/screenshots/morigarden/01-garden.png\"><img src=\"/assets/screenshots/morigarden/01-garden.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Garden overview\"></a><figcaption>Garden overview</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/02-character.png\"><img src=\"/assets/screenshots/morigarden/02-character.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Garden paths and play area\"></a><figcaption>Garden paths and play area</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/04-interface.png\"><img src=\"/assets/screenshots/morigarden/04-interface.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"In-game status interface\"></a><figcaption>In-game status interface</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/05-inventory.png\"><img src=\"/assets/screenshots/morigarden/05-inventory.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Inventory management\"></a><figcaption>Inventory management</figcaption></figure><figure><a href=\"/assets/screenshots/morigarden/06-coastal-cove.png\"><img src=\"/assets/screenshots/morigarden/06-coastal-cove.png\" width=\"1280\" height=\"800\" loading=\"lazy\" alt=\"Exploring Coastal Cove\"></a><figcaption>Exploring Coastal Cove</figcaption></figure></div></section><section class=\"section\"><h2>Development History</h2><p>Public commits from November 2026 record work on separating Coastal Cove, creature routes and rest, contact handling, item grips, and wading behavior. These are examples from the commit history, not a claim about the project’s entire development period.</p><a href=\"https://github.com/fixed0000/MoriGarden/commits/main/\">GitHub commit history</a></section><section class=\"section\"><h2>Gameplay Images & Third-Party Assets</h2><p>3D model used: <a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Baby Chao</a> by <a href=\"https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c\">Alice.Sacco</a> (Sketchfab, <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC BY</a>). Rights to the original character design remain with the relevant rights holders. This is not an official SEGA project.</p><p>In-project adaptations: GLB import into Godot and code-based scale, pose, and eye-display adjustments. The detailed history of mesh edits has not been verified.</p><p class=\"note\">The source page states “From Sonic Adventure 2” and is tagged NoAI. Its CC BY label is not treated as permission covering the original character design. The model is not used as input to generative AI. The gallery below shows captures from the running game. Baby Chao and the player model were hidden for these public-facing captures.</p></section><section class=\"section\"><h2>Fan Project Disclaimer</h2><p class=\"disclaimer\">MoriGarden is a personal, non-commercial fan project developed for learning and recreation. It is inspired by the Chao Garden features of the Sonic Adventure series and is not affiliated with, sponsored by, or endorsed by SEGA or any related rights holders. Rights to third-party assets remain with their respective owners.</p></section>"
+      }
+    },
+    "kanji-recall": {
+      "route": "projects/kanji-recall/",
+      "ja": {
+        "title": "Kanji Recall",
+        "lead": "読みと意味から漢字を思い出す、手書き練習アプリ。In Development。"
+      },
+      "en": {
+        "title": "Kanji Recall",
+        "lead": "Recall kanji from readings and meanings. A handwriting practice app, In Development."
+      }
+    },
+    "family": {
+      "route": "research/family/",
+      "ja": {
+        "title": "「家族」に対する日本語・ロシア語母語話者の連想比較",
+        "lead": "2024 · Completed · 日本語・ロシア語母語話者を対象としたアンケート調査を通じて、「家族」に対する連想の共通点と相違点を比較しました。",
+        "body": "<section class=\"section\"><h2>目的</h2><p>連想の共通点と相違点を検討すること。</p></section><section class=\"section\"><h2>資料・方法</h2><p>アンケートと比較分析。質問文・参加者数・分析手順の詳細は原資料での確認が必要です。</p></section><section class=\"section\"><h2>関連スキル</h2><p>アンケート設計・比較分析・言語文化研究</p></section><section class=\"section\"><h2>資料と確認事項</h2><p>本サイトの既存研究紹介と旧翻訳ファイルに記載された情報を整理した概要です。原論文は未掲載のため、参加者数、数値的結果、統計的有意性は記載していません。正式な提出題目の表記は原資料との最終照合が必要です。</p><a href=\"https://github.com/fixed0000/fixed0000.github.io/tree/bca2cf19c28cd41f1511ea425d0d7aa772676d60/js/translations\">既存の記載を見る</a></section><section class=\"section\"><h2>原題</h2><p>日本語母語話者における「家族」という概念との連想分析</p><p class=\"note\">既存資料に記載された題目です。提出原稿との最終照合は未了です。</p></section>"
+      },
+      "en": {
+        "title": "Comparing Associations with “Family” in Japanese and Russian",
+        "lead": "2024 · Completed · A questionnaire-based study comparing associations with the concept of “family” among native Japanese and Russian speakers.",
+        "body": "<section class=\"section\"><h2>Purpose</h2><p>To examine similarities and differences in associations.</p></section><section class=\"section\"><h2>Materials & Methodology</h2><p>Questionnaires and comparative analysis. The questionnaire, participant count, and detailed analysis procedure require verification against the original materials.</p></section><section class=\"section\"><h2>Related Skills</h2><p>Questionnaire design · comparative analysis · language and culture</p></section><section class=\"section\"><h2>Sources & Verification</h2><p>This summary consolidates information from the existing research page and archived translation files. The original papers are not published here; participant counts, numerical findings, and statistical significance are therefore not reported. The wording of the submitted title needs a final check against the original document.</p><a href=\"https://github.com/fixed0000/fixed0000.github.io/tree/bca2cf19c28cd41f1511ea425d0d7aa772676d60/js/translations\">View archived descriptions</a></section><section class=\"section\"><h2>Original title</h2><p>Associations with the concept of “family” among native Japanese speakers</p><p class=\"note\">Title recorded in the archived materials; final verification against the submitted paper is pending.</p></section>"
+      }
+    },
+    "monogatari": {
+      "route": "research/monogatari/",
+      "ja": {
+        "title": "日本語の会話表現はロシア語にどう訳されるか",
+        "lead": "2025 · Completed · 〈物語〉シリーズに見られる会話表現とそのロシア語訳を比較し、文脈によって意味やニュアンスがどのように伝えられるかを検討しました。",
+        "body": "<p class=\"research-subtitle\">〈物語〉シリーズを対象とした翻訳の等価性とニュアンスの分析</p><section class=\"section\"><h2>目的</h2><p>日本語の会話表現に対する翻訳上の等価性を検討すること。</p></section><section class=\"section\"><h2>資料・方法</h2><p>原文と翻訳の照合・比較。使用作品・表現の選定基準と最終的な結論は原論文での確認が必要です。</p></section><section class=\"section\"><h2>関連スキル</h2><p>翻訳比較・文脈分析・日本語とロシア語</p></section><section class=\"section\"><h2>資料と確認事項</h2><p>本サイトの既存研究紹介と旧翻訳ファイルに記載された情報を整理した概要です。原論文は未掲載のため、参加者数、数値的結果、統計的有意性は記載していません。正式な提出題目の表記は原資料との最終照合が必要です。</p><a href=\"https://github.com/fixed0000/fixed0000.github.io/tree/bca2cf19c28cd41f1511ea425d0d7aa772676d60/js/translations\">既存の記載を見る</a></section><section class=\"section\"><h2>原題</h2><p>日本語コミュニカティブ表現の露訳における等価性検索の問題（メディアフランチャイズ『〈物語〉シリーズ』の作品を例に）</p><p class=\"note\">既存資料に記載された題目です。提出原稿との最終照合は未了です。</p></section>"
+      },
+      "en": {
+        "title": "Translating Japanese Conversational Expressions into Russian",
+        "lead": "2025 · Completed · An undergraduate study comparing Japanese conversational expressions in the Monogatari series with their Russian translations, focusing on how meaning and nuance are conveyed in context.",
+        "body": "<p class=\"research-subtitle\">An analysis of equivalence and nuance in the Monogatari series</p><section class=\"section\"><h2>Purpose</h2><p>To examine translation equivalence for Japanese conversational expressions.</p></section><section class=\"section\"><h2>Materials & Methodology</h2><p>Comparison of original expressions with translations. The selected works, expression selection criteria, and final conclusions require verification against the thesis.</p></section><section class=\"section\"><h2>Related Skills</h2><p>Translation comparison · contextual analysis · Japanese and Russian</p></section><section class=\"section\"><h2>Sources & Verification</h2><p>This summary consolidates information from the existing research page and archived translation files. The original papers are not published here; participant counts, numerical findings, and statistical significance are therefore not reported. The wording of the submitted title needs a final check against the original document.</p><a href=\"https://github.com/fixed0000/fixed0000.github.io/tree/bca2cf19c28cd41f1511ea425d0d7aa772676d60/js/translations\">View archived descriptions</a></section><section class=\"section\"><h2>Original title</h2><p>The Problem of Finding Equivalents in Translating Japanese Communicatives into Russian (based on the Monogatari Series media franchise)</p><p class=\"note\">Title recorded in the archived materials; final verification against the submitted paper is pending.</p></section>"
+      }
+    },
+    "home": {
+      "route": "",
+      "ja": {
+        "title": "情報を整理し、確かな業務につなげる。",
+        "lead": "予約管理・データ照合・業務の引き継ぎで培った経験を、データ品質管理やITオペレーションの仕事へ。",
+        "eyebrow": "経験を、次の専門性へ",
+        "description": "ホテル運営とゲームローカライズの経験を持つボロディナ・リディアのポートフォリオ。データ品質管理、レポーティング、ITオペレーション分野への転職を希望しています。",
+        "titleLines": [
+          "情報を整理し、",
+          "確かな業務につなげる。"
+        ]
+      },
+      "en": {
+        "title": "Clear information. Reliable operations.",
+        "lead": "Bringing experience in reservations, data verification, and operational handovers to my next role in data quality or IT operations.",
+        "eyebrow": "Experience with a next chapter",
+        "description": "Lidiia Borodina’s career portfolio: hotel operations, game localization, and a move toward data quality, reporting, and IT operations."
+      }
+    },
+    "experience": {
+      "route": "experience/",
+      "ja": {
+        "title": "情報を確かめ、業務を前へ。",
+        "lead": "ホテル運営とゲームローカライズ。日々の業務と、具体的な対応事例をご紹介します。",
+        "eyebrow": "職務経歴",
+        "description": "予約移管、入金照合、業務マニュアルとゲームローカライズの実務経験。"
+      },
+      "en": {
+        "title": "Checking the details. Moving work forward.",
+        "lead": "Hotel operations and game localization: a concise work history, followed by examples of how I approach the work.",
+        "eyebrow": "Experience",
+        "description": "Practical experience in reservation transfers, payment reconciliation, process documentation, and game localization."
+      }
+    },
+    "skills": {
+      "route": "skills/",
+      "ja": {
+        "title": "実務で使う力と、これから学ぶこと。",
+        "lead": "業務で培ったスキル、個人制作の道具、学習中の技術を整理しています。",
+        "eyebrow": "スキル",
+        "description": "PMS、データ照合、Excel、Google Sheets、翻訳・ローカライズ、語学資格と個人制作の技術。"
+      },
+      "en": {
+        "title": "Practical skills. Room to grow.",
+        "lead": "The tools I use at work, the ones I explore through personal projects, and what I am learning next.",
+        "eyebrow": "Skills",
+        "description": "PMS, data verification, spreadsheets, localization, language qualifications, and tools used in personal projects."
+      }
+    },
+    "work": {
+      "route": "research/",
+      "ja": {
+        "title": "つくる。調べる。理解を深める。",
+        "lead": "ブラウザアプリとゲームの個人制作、日本語とロシア語に関する学術研究。",
+        "eyebrow": "制作・研究",
+        "description": "Kanji Recall、MoriGarden、家族の連想比較とMonogatariの翻訳研究。"
+      },
+      "en": {
+        "title": "Make, investigate, understand.",
+        "lead": "Personal software projects, alongside academic work on Japanese and Russian language and meaning.",
+        "eyebrow": "Work & Research",
+        "description": "Kanji Recall, MoriGarden, associations with family, and translation research on the Monogatari series."
+      }
+    },
+    "about": {
+      "route": "about/",
+      "ja": {
+        "title": "言葉と情報の、確かな橋渡しを。",
+        "lead": "日本語の翻訳・通訳を学び、現在は京都でホテル運営に携わっています。情報の意味と、正確に伝える方法に関心があります。",
+        "eyebrow": "私について",
+        "description": "ボロディナ・リディアの学歴、仕事で大切にしていること、ポートフォリオの制作について。"
+      },
+      "en": {
+        "title": "Connecting language, information, and people.",
+        "lead": "I studied Japanese translation and interpreting and now work in hotel operations in Kyoto. I am interested in what information means and how to communicate it accurately.",
+        "eyebrow": "About",
+        "description": "Lidiia Borodina’s education, working approach, interests, and the making of this portfolio."
+      }
+    },
+    "contact": {
+      "route": "contact/",
+      "ja": {
+        "title": "次の仕事につながる、お話を。",
+        "lead": "データ品質管理、レポーティング、ITオペレーション、業務運用に関連する職種への転職を希望しています。",
+        "eyebrow": "お問い合わせ",
+        "description": "データ品質管理・ITオペレーション関連の仕事を希望。東京都内を第一希望とし、大阪府内および首都圏も検討しています。"
+      },
+      "en": {
+        "title": "Let’s talk about the next step.",
+        "lead": "I am seeking opportunities in data quality, reporting, IT operations, and operational support.",
+        "eyebrow": "Contact",
+        "description": "Contact Lidiia Borodina about roles in data quality, reporting, IT operations, and operational support."
+      }
+    },
+    "education": {
+      "route": "education/",
+      "ja": {
+        "title": "言語と翻訳を学ぶ。",
+        "lead": "日本語の翻訳・通訳と、意味や文脈に関する学び。",
+        "eyebrow": "学歴",
+        "description": "Moscow City Universityで2025年7月に学士課程を修了。2024年4月〜8月に筑波大学へ交換留学。"
+      },
+      "en": {
+        "title": "A foundation in language and translation.",
+        "lead": "Japanese translation and interpreting, with an interest in meaning and context.",
+        "eyebrow": "Education",
+        "description": "Bachelor’s degree at Moscow City University, July 2025. Exchange at the University of Tsukuba, April–August 2024."
+      }
+    },
+    "notfound": {
+      "route": "404.html",
+      "ja": {
+        "title": "このページは見つかりません。",
+        "lead": "URLをご確認いただくか、下のリンクからお探しのページへお進みください。",
+        "eyebrow": "404 / Page not found",
+        "description": "ページが見つかりません。ポートフォリオの主要ページをご案内します。"
+      },
+      "en": {
+        "title": "This page couldn’t be found.",
+        "lead": "Check the address, or use the links below to find your way back.",
+        "eyebrow": "404 / Page not found",
+        "description": "Find your way back to Lidiia Borodina’s portfolio."
+      }
+    }
+  },
+  "projects": [
+    {
+      "id": "kanji-recall",
+      "number": "01",
+      "image": "/assets/screenshots/previews/kanji-recall-960.webp",
+      "tech": "HTML · CSS · JavaScript",
+      "ja": {
+        "title": "Kanji Recall",
+        "description": "読みと意味から一字を思い出す、ブラウザで使える手書き練習アプリ。",
+        "action": "アプリを試す"
+      },
+      "en": {
+        "title": "Kanji Recall",
+        "description": "A browser-based handwriting app for recalling one kanji from its reading and meaning.",
+        "action": "Try the app"
+      },
+      "srcset": "/assets/screenshots/previews/kanji-recall-480.webp 480w, /assets/screenshots/previews/kanji-recall-960.webp 960w"
+    },
+    {
+      "id": "morigarden",
+      "number": "02",
+      "image": "/assets/screenshots/previews/morigarden-960.webp",
+      "tech": "Godot · C#",
+      "ja": {
+        "title": "MoriGarden",
+        "description": "生き物の成長とふれあいを扱う、個人制作の3Dファンゲーム。",
+        "action": "制作を見る"
+      },
+      "en": {
+        "title": "MoriGarden",
+        "description": "A personal 3D fan game exploring creature growth, care, and interaction.",
+        "action": "Explore the project"
+      },
+      "srcset": "/assets/screenshots/previews/morigarden-480.webp 480w, /assets/screenshots/previews/morigarden-960.webp 960w"
+    }
+  ],
+  "research": [
+    {
+      "id": "family",
+      "year": "2024",
+      "ja": {
+        "title": "「家族」に対する日本語・ロシア語母語話者の連想比較",
+        "description": "日本語・ロシア語母語話者を対象としたアンケート調査を通じて、「家族」に対する連想の共通点と相違点を比較しました。"
+      },
+      "en": {
+        "title": "Comparing Associations with “Family” in Japanese and Russian",
+        "description": "A questionnaire-based study comparing associations with the concept of “family” among native Japanese and Russian speakers."
+      }
+    },
+    {
+      "id": "monogatari",
+      "year": "2025",
+      "ja": {
+        "title": "日本語の会話表現はロシア語にどう訳されるか",
+        "description": "〈物語〉シリーズに見られる会話表現とそのロシア語訳を比較し、文脈によって意味やニュアンスがどのように伝えられるかを検討しました。"
+      },
+      "en": {
+        "title": "Translating Japanese Conversational Expressions into Russian",
+        "description": "An undergraduate study comparing Japanese conversational expressions in the Monogatari series with their Russian translations, focusing on how meaning and nuance are conveyed in context."
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "reservation-transfer",
+      "number": "01",
+      "metric": {
+        "ja": "約40件",
+        "en": "About 40"
+      },
+      "unit": {
+        "ja": "予約移管",
+        "en": "reservation transfers"
+      },
+      "ja": {
+        "title": "予約を、次の宿泊先へつなぐ。",
+        "summary": "ホテル閉鎖に伴う約40件の予約移管。条件を照合し、お客様ごとの対応を進めました。",
+        "challenge": "ホテルの閉鎖に伴い、既存の予約を別の宿泊先へ移管する必要がありました。",
+        "response": "料金、客室のカテゴリー・定員、立地、空室状況を比較。お客様と個別の条件を調整し、ホテルのPMSと営業部門の管理表を更新しました。",
+        "result": "約40件の予約移管を担当し、移管に伴う条件の調整と情報更新を行いました。",
+        "factors": [
+          "料金",
+          "客室カテゴリー・定員",
+          "立地",
+          "空室状況"
+        ],
+        "flow": [
+          "条件の比較",
+          "お客様との調整",
+          "PMS・営業管理表の更新"
+        ],
+        "skills": "情報の比較・照合 / 個別調整 / 複数システムの更新"
+      },
+      "en": {
+        "title": "A careful handover to the next hotel.",
+        "summary": "Handled around 40 reservation transfers following a hotel closure, comparing conditions and coordinating individual arrangements.",
+        "challenge": "A hotel closure required existing reservations to be transferred to other accommodation.",
+        "response": "Compared rates, room categories and capacity, location, and availability. Coordinated individual arrangements with guests, then updated hotel PMS records and the sales department’s spreadsheet.",
+        "result": "Handled around 40 reservation transfers, including coordination of conditions and the associated record updates.",
+        "factors": [
+          "Rates",
+          "Room category & capacity",
+          "Location",
+          "Availability"
+        ],
+        "flow": [
+          "Compare conditions",
+          "Coordinate with guests",
+          "Update PMS & sales records"
+        ],
+        "skills": "Data comparison / Individual coordination / Record updates"
+      }
+    },
+    {
+      "id": "payment-reconciliation",
+      "number": "02",
+      "metric": {
+        "ja": "80,000円",
+        "en": "¥80,000"
+      },
+      "unit": {
+        "ja": "入金の相違を確認",
+        "en": "payment discrepancy identified"
+      },
+      "ja": {
+        "title": "出発前の確認で、入金差異を解消。",
+        "summary": "入金照合で80,000円の不足を発見。お客様の出発前に追加精算を働きかけました。",
+        "challenge": "売上と入金を照合した際、80,000円の不足が見つかりました。",
+        "response": "お客様の出発前に追加精算を働きかけ、差異への対応を進めました。",
+        "result": "追加精算により、入金の差異が解消されました。",
+        "flow": [
+          "売上・入金の照合",
+          "不足を確認",
+          "出発前に追加精算"
+        ],
+        "skills": "数値の照合 / 不一致の発見 / 適時の対応"
+      },
+      "en": {
+        "title": "Resolving a discrepancy before checkout.",
+        "summary": "Identified an ¥80,000 shortfall during payment reconciliation and initiated additional settlement before the guest departed.",
+        "challenge": "A comparison of sales and payment records revealed an ¥80,000 shortfall.",
+        "response": "Initiated additional settlement before the guest departed and followed up on the discrepancy.",
+        "result": "The additional settlement resolved the payment discrepancy.",
+        "flow": [
+          "Reconcile sales & payments",
+          "Identify the shortfall",
+          "Arrange settlement before departure"
+        ],
+        "skills": "Numerical checks / Discrepancy identification / Timely follow-up"
+      }
+    },
+    {
+      "id": "process-guide",
+      "number": "03",
+      "metric": {
+        "ja": "業務手順",
+        "en": "Process guide"
+      },
+      "unit": {
+        "ja": "社内向けの文書化",
+        "en": "internal documentation"
+      },
+      "ja": {
+        "title": "ウェブサイトの使い方を、共有できる手順に。",
+        "summary": "社内向けに、会社のウェブサイトの使用方法をまとめた業務マニュアルを作成。",
+        "challenge": "会社のウェブサイトの使用方法を、社内で参照できる形に整理する必要がありました。",
+        "response": "操作手順を整理し、社内向けの業務マニュアルを作成しました。",
+        "result": "社内で参照するための手順書としてまとめました。",
+        "skills": "手順の整理 / 文書化 / 情報共有"
+      },
+      "en": {
+        "title": "Turning website tasks into a shared guide.",
+        "summary": "Created an internal manual explaining how to use the company’s website.",
+        "challenge": "Instructions for using the company’s website needed to be organized for internal reference.",
+        "response": "Organized the operating steps and wrote an internal manual.",
+        "result": "Produced a documented guide for internal reference.",
+        "skills": "Process organization / Documentation / Knowledge sharing"
+      }
+    }
+  ],
+  "timeline": [
+    {
+      "ja": {
+        "period": "2025年12月 — 現在",
+        "role": "ホテル運営",
+        "company": "京都のホテル",
+        "body": "PMSによる予約情報の確認・変更、売上・入金の照合、Excelでの日次報告、業務の引き継ぎを担当。担当業務の範囲内で、清掃状況の確認、作業の割り振り、関連情報の共有にも対応しています。"
+      },
+      "en": {
+        "period": "Dec 2025 — Present",
+        "role": "Hotel operations",
+        "company": "Hotel in Kyoto",
+        "body": "I check and update reservations in PMS, reconcile sales and payments, prepare daily reports in Excel, and hand over work between shifts. Within my area of responsibility, I also check cleaning status, assign tasks, and share relevant information."
+      }
+    },
+    {
+      "ja": {
+        "period": "2023年6月 — 2025年7月",
+        "role": "ゲームローカライズ",
+        "company": "Fruitbat Factory",
+        "body": "100% Orange Juiceの新規コンテンツ（イベント、会話、UIなど）の翻訳を担当。訳文の確認・修正・更新も行い、ウェブ翻訳プラットフォーム、GitHub、TortoiseSVNを使用しました。"
+      },
+      "en": {
+        "period": "Jun 2023 — Jul 2025",
+        "role": "Game localization",
+        "company": "Fruitbat Factory",
+        "body": "Translated new content for 100% Orange Juice, including events, dialogue, and interface text. Also reviewed, corrected, and updated translations, using a web-based translation platform, GitHub, and TortoiseSVN."
+      }
+    }
+  ],
+  "skills": [
+    {
+      "ja": {
+        "title": "業務システム・データ",
+        "items": [
+          "PMS・ホテルの業務システム",
+          "データの確認・照合・修正",
+          "予約情報・売上・入金の確認"
+        ]
+      },
+      "en": {
+        "title": "Operational systems & data",
+        "items": [
+          "Hotel PMS and operational systems",
+          "Data verification, reconciliation, and corrections",
+          "Reservation, sales, and payment checks"
+        ]
+      }
+    },
+    {
+      "ja": {
+        "title": "表計算・報告",
+        "items": [
+          "Excel・Google Sheets",
+          "基本的な関数・条件付き書式",
+          "日次報告・業務データの整理"
+        ]
+      },
+      "en": {
+        "title": "Spreadsheets & reporting",
+        "items": [
+          "Excel and Google Sheets",
+          "Basic formulas and conditional formatting",
+          "Daily reporting and data organization"
+        ]
+      }
+    },
+    {
+      "ja": {
+        "title": "翻訳・変更管理",
+        "items": [
+          "ゲーム翻訳・ローカライズ",
+          "言語品質チェック・訳文の修正",
+          "ウェブ翻訳プラットフォーム",
+          "GitHub・TortoiseSVN"
+        ]
+      },
+      "en": {
+        "title": "Localization & change tracking",
+        "items": [
+          "Game translation and localization",
+          "Linguistic quality checks and revisions",
+          "Web-based translation platform",
+          "GitHub and TortoiseSVN"
+        ]
+      }
+    },
+    {
+      "ja": {
+        "title": "文書化・業務連携",
+        "items": [
+          "操作手順の整理・マニュアル作成",
+          "業務の引き継ぎ・注意事項の共有",
+          "関係者との条件調整"
+        ]
+      },
+      "en": {
+        "title": "Documentation & coordination",
+        "items": [
+          "Process guides and internal manuals",
+          "Operational handovers and important notes",
+          "Coordination of individual arrangements"
+        ]
+      }
+    }
+  ],
+  "education": [
+    {
+      "ja": {
+        "period": "2020年 — 2025年7月",
+        "title": "モスクワ市立教育大学",
+        "subtitle": "Moscow City University",
+        "body": "学士課程修了。日本語、翻訳・翻訳学を専攻。翻訳実践に加え、言語表現の意味や文脈に関する研究に取り組みました。"
+      },
+      "en": {
+        "period": "2020 — Jul 2025",
+        "title": "Moscow City University",
+        "subtitle": "Bachelor’s degree",
+        "body": "Specialized in Japanese language, translation, and translation studies. Studied translation practice and researched meaning and context in language use."
+      }
+    },
+    {
+      "ja": {
+        "period": "2024年4月 — 8月",
+        "title": "筑波大学",
+        "subtitle": "交換留学",
+        "body": "交換留学生として、日本の大学で学びました。"
+      },
+      "en": {
+        "period": "Apr — Aug 2024",
+        "title": "University of Tsukuba",
+        "subtitle": "Exchange programme",
+        "body": "Studied in Japan as an exchange student."
+      }
+    }
+  ],
+  "languages": [
+    {
+      "ja": {
+        "title": "日本語",
+        "value": "JLPT N1",
+        "date": "2024年7月"
+      },
+      "en": {
+        "title": "Japanese",
+        "value": "JLPT N1",
+        "date": "July 2024"
+      }
+    },
+    {
+      "ja": {
+        "title": "英語",
+        "value": "TOEIC L&R 910",
+        "date": "2026年7月"
+      },
+      "en": {
+        "title": "English",
+        "value": "TOEIC L&R 910",
+        "date": "July 2026"
+      }
+    },
+    {
+      "ja": {
+        "title": "ロシア語",
+        "value": "母語",
+        "date": ""
+      },
+      "en": {
+        "title": "Russian",
+        "value": "Native",
+        "date": ""
+      }
+    }
+  ],
+  "principles": [
+    {
+      "ja": "複数の情報を照合し、相違点や確認が必要な箇所を明確にする。",
+      "en": "Cross-check information and make discrepancies and open questions explicit."
+    },
+    {
+      "ja": "必要な情報を整理し、次の担当者が把握できる形で残す。",
+      "en": "Organize relevant information so the next person can understand and use it."
+    },
+    {
+      "ja": "分かりにくい手順を見直し、より確実な進め方を考える。",
+      "en": "Review unclear steps and look for a more reliable way to complete the work."
+    }
+  ],
+  "factStatus": {
+    "source": "Owner task statement, 2026-11-18; current site; prior confirmations",
+    "privatePdfs": "Not received. Never include source CVs or targeted motivation text in output.",
+    "publicDocuments": "Separate approval required."
+  },
+  "ui": {
+    "education": {
+      "ja": "学歴",
+      "en": "Education"
+    },
+    "home": {
+      "ja": "ホーム",
+      "en": "Home"
+    },
+    "ja": {
+      "ja": "en",
+      "en": "ja"
+    },
+    "label": {
+      "ja": "EN",
+      "en": "日本語"
+    },
+    "main_navigation": {
+      "ja": "メインナビゲーション",
+      "en": "Main navigation"
+    },
+    "let_s_put_experience_to_work": {
+      "ja": "情報を、次の仕事へ。",
+      "en": "Let’s put experience to work."
+    },
+    "about_this_website": {
+      "ja": "このサイトについて",
+      "en": "About this website"
+    },
+    "based_in_kyoto_tokyo_preferred": {
+      "ja": "京都在住 · 東京都内を第一希望",
+      "en": "Based in Kyoto · Tokyo preferred"
+    },
+    "japanese_translation": {
+      "ja": "日本語・翻訳",
+      "en": "Japanese & translation"
+    },
+    "research_into_language_meaning": {
+      "ja": "言葉と意味を探る研究",
+      "en": "Research into language & meaning"
+    },
+    "from_translating_events_dialogue_and_interface_text_to_reviewing_": {
+      "ja": "イベント・会話・UIの翻訳から、訳文の確認、修正、更新まで。ウェブ翻訳プラットフォームと変更管理ツールを使い、追加される内容に対応しました。",
+      "en": "From translating events, dialogue, and interface text to reviewing, correcting, and updating translations, I worked with new content using a web-based translation platform and change-tracking tools."
+    },
+    "game_localization": {
+      "ja": "ゲームローカライズ",
+      "en": "Game localization"
+    },
+    "used_in_this_site_kanji_recall_and_morigarden_i_use_ai_assisted_t": {
+      "ja": "本サイト・Kanji Recall・MoriGardenで使用。AIを開発支援ツールとして活用し、機能の検討、コード確認、動作テストを行っています。",
+      "en": "Used in this site, Kanji Recall, and MoriGarden. I use AI-assisted tools to explore features, review code, and test functionality."
+    },
+    "languages_qualifications": {
+      "ja": "語学・資格",
+      "en": "Languages & qualifications"
+    },
+    "personal_software_projects": {
+      "ja": "個人のソフトウェア制作",
+      "en": "Personal software projects"
+    },
+    "completed_academic_research": {
+      "ja": "完了した学術研究",
+      "en": "Completed academic research"
+    },
+    "my_interests_include_japanese_meaning_translation_and_cultural_as": {
+      "ja": "日本語、意味、翻訳、文化による連想の違いに関心があります。個人制作では、ゲームの仕組みや学習の体験を探っています。",
+      "en": "My interests include Japanese, meaning, translation, and cultural associations. Through personal projects, I explore game systems and learning experiences."
+    },
+    "morigarden_third_party_assets_fan_project_disclaimer": {
+      "ja": "MoriGardenの第三者素材とファン制作について",
+      "en": "MoriGarden third-party assets & fan-project disclaimer"
+    },
+    "experience": {
+      "ja": "職務経歴",
+      "en": "Experience"
+    },
+    "skills": {
+      "ja": "スキル",
+      "en": "Skills"
+    },
+    "work_research": {
+      "ja": "制作・研究",
+      "en": "Work & Research"
+    },
+    "about": {
+      "ja": "私について",
+      "en": "About"
+    },
+    "contact": {
+      "ja": "お問い合わせ",
+      "en": "Contact"
+    },
+    "get_in_touch": {
+      "ja": "お問い合わせ",
+      "en": "Get in touch"
+    },
+    "personal_projects": {
+      "ja": "個人制作",
+      "en": "Personal projects"
+    },
+    "work_history": {
+      "ja": "職務の歩み",
+      "en": "Work history"
+    },
+    "cases_from_practice": {
+      "ja": "業務の事例",
+      "en": "Cases from practice"
+    },
+    "currently_learning": {
+      "ja": "学習中",
+      "en": "Currently learning"
+    },
+    "more_about_me": {
+      "ja": "私について",
+      "en": "More about me"
+    },
+    "how_i_approach_work": {
+      "ja": "仕事で大切にしていること",
+      "en": "How I approach work"
+    },
+    "hotel_operations_game_localization": {
+      "ja": "ホテル運営 / ゲームローカライズ",
+      "en": "Hotel operations / Game localization"
+    },
+    "explore_the_work": {
+      "ja": "制作を見る",
+      "en": "Explore the work"
+    },
+    "selected_experience_in_practice": {
+      "ja": "仕事の中で、対応してきたこと。",
+      "en": "Selected experience in practice."
+    },
+    "bringing_new_game_content_into_russian": {
+      "ja": "新しいコンテンツを、ロシア語へ。",
+      "en": "Bringing new game content into Russian."
+    },
+    "professional_experience": {
+      "ja": "実務で培ったスキル",
+      "en": "Professional experience"
+    },
+    "personal_project_tools": {
+      "ja": "個人制作の道具",
+      "en": "Personal project tools"
+    },
+    "please_contact_me_by_email": {
+      "ja": "お問い合わせはメールにてお願いいたします。",
+      "en": "Please contact me by email."
+    },
+    "view_experience": {
+      "ja": "職務経歴を見る",
+      "en": "View experience"
+    },
+    "learning_the_fundamentals": {
+      "ja": "基礎を学習中。",
+      "en": "Learning the fundamentals."
+    },
+    "japanese_proficiency": {
+      "ja": "日本語能力試験",
+      "en": "Japanese proficiency"
+    },
+    "work_history_case_details": {
+      "ja": "職務経歴・すべての事例",
+      "en": "Work history & case details"
+    },
+    "open_each_case_to_see_the_challenge_action_and_outcome": {
+      "ja": "各項目を開くと、課題・対応・結果をご覧いただけます。",
+      "en": "Open each case to see the challenge, action, and outcome."
+    },
+    "kanji_data_sources_attribution": {
+      "ja": "漢字データの出典・クレジット",
+      "en": "Kanji data sources & attribution"
+    },
+    "contact_2": {
+      "ja": "ご連絡",
+      "en": "Contact"
+    },
+    "portfolio_source": {
+      "ja": "ポートフォリオのソース",
+      "en": "portfolio source"
+    },
+    "tokyo_is_my_preferred_location_i_am_also_open_to_opportunities_in": {
+      "ja": "東京都内を第一希望とし、大阪府内および首都圏も検討しています。",
+      "en": "Tokyo is my preferred location. I am also open to opportunities in Osaka and the greater Tokyo area."
+    },
+    "source_licenses": {
+      "ja": "ソースとライセンス",
+      "en": "Source & licenses"
+    },
+    "location_preferences": {
+      "ja": "希望勤務地",
+      "en": "Location preferences"
+    },
+    "i_use_ai_assisted_development_tools_in_my_personal_projects_to_he": {
+      "ja": "個人制作では、AIを開発支援ツールとして活用しています。要件の整理、機能の検討、コードの確認、動作テスト、改善を繰り返しながら制作しています。",
+      "en": "I use AI-assisted development tools in my personal projects to help plan features, review code, test functionality, and make iterative improvements."
+    },
+    "ai_assisted_development": {
+      "ja": "AIを活用した制作",
+      "en": "AI-assisted development"
+    },
+    "a_static_japanese_first_portfolio_with_a_full_english_version_str": {
+      "ja": "日本語を標準とする静的なJA/ENサイトです。コンテンツと翻訳を一元化し、共通の部品からHTMLを生成しています。キーボード操作、画面幅への対応、動きを減らす設定を考慮しています。",
+      "en": "A static Japanese-first portfolio with a full English version. Structured content and translations feed shared HTML components. The design supports keyboard use, responsive layouts, and reduced-motion preferences."
+    },
+    "designed_for_reading_and_exploration": {
+      "ja": "読みやすく、たどりやすい構成に。",
+      "en": "Designed for reading and exploration."
+    },
+    "study": {
+      "ja": "研究",
+      "en": "Study"
+    },
+    "read_study": {
+      "ja": "研究の詳細",
+      "en": "Read the study"
+    },
+    "compared_factors": {
+      "ja": "比較した条件",
+      "en": "Factors compared"
+    },
+    "workflow": {
+      "ja": "対応の流れ",
+      "en": "Workflow"
+    },
+    "challenge": {
+      "ja": "課題",
+      "en": "Challenge"
+    },
+    "action": {
+      "ja": "対応",
+      "en": "Action"
+    },
+    "outcome": {
+      "ja": "結果",
+      "en": "Outcome"
+    },
+    "redirect_title": {
+      "ja": "ページを移動しました",
+      "en": "This page has moved"
+    },
+    "translation_platform_tools": {
+      "ja": "ウェブ翻訳プラットフォーム / GitHub / TortoiseSVN",
+      "en": "Web translation platform / GitHub / TortoiseSVN"
+    }
+  },
+  "redirects": [
+    [
+      "experience.html",
+      "experience/"
+    ],
+    [
+      "education.html",
+      "education/"
+    ],
+    [
+      "playground.html",
+      "research/"
+    ],
+    [
+      "services.html",
+      "contact/"
+    ],
+    [
+      "trash.html",
+      "research/"
+    ],
+    [
+      "under-construction.html",
+      ""
+    ]
+  ],
+  "tools": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Godot",
+    "C#",
+    "AI-assisted development"
+  ],
+  "learning": [
+    "R",
+    "Python"
+  ],
+  "homeEvidence": [
+    {
+      "ja": {
+        "label": "日本語能力試験",
+        "value": "JLPT N1",
+        "date": "2024.07"
+      },
+      "en": {
+        "label": "Japanese proficiency",
+        "value": "JLPT N1",
+        "date": "2024.07"
+      }
+    },
+    {
+      "ja": {
+        "label": "TOEIC Listening & Reading",
+        "value": "910",
+        "date": "2026.07"
+      },
+      "en": {
+        "label": "TOEIC Listening & Reading",
+        "value": "910",
+        "date": "2026.07"
+      }
+    },
+    {
+      "ja": {
+        "label": "学歴",
+        "value": "日本語・翻訳",
+        "date": "Moscow City University · 2025"
+      },
+      "en": {
+        "label": "Education",
+        "value": "Japanese & translation",
+        "date": "Moscow City University · 2025"
+      }
+    }
+  ]
+}

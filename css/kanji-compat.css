@@ -1,0 +1,8 @@
+/* Existing trainer base controls, extracted from the retired portfolio styles. */
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:.65rem;margin-block:1rem}
+.app-page select,.app-page input{font:inherit;min-height:44px;border:1px solid var(--muted);background:white;color:var(--ink);padding:.5rem;max-width:100%}
+.app-page .pads{display:grid;grid-template-columns:repeat(2,minmax(0,240px));gap:1rem}.app-page .pad{min-width:0}
+.app-page .pad canvas{display:block;width:100%;aspect-ratio:1;border:2px solid var(--muted);touch-action:none;background:linear-gradient(90deg,transparent 49.7%,#e3e8ef 50%,transparent 50.3%),linear-gradient(transparent 49.7%,#e3e8ef 50%,transparent 50.3%)}
+.app-page .pad .controls{gap:.4rem}.app-page .pad button{font-size:.86rem;padding:.45rem .6rem}.app-page #result{min-height:3rem;border-left:3px solid var(--green);padding-left:1rem;margin-block:1rem;white-space:pre-line}
+.app-page #reading{font-size:2rem;letter-spacing:.12em}.app-page .pads:has(.pad:only-child){grid-template-columns:minmax(0,280px)}
+@media(max-width:40rem){.app-page .pads,.app-page .pads:has(.pad:only-child){grid-template-columns:minmax(0,1fr);max-width:320px}.app-page .pads{gap:.65rem}}

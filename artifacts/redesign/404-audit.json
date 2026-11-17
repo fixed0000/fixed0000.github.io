@@ -1,0 +1,18 @@
+[
+  {
+    "url": "/missing/path",
+    "status": 404,
+    "final": "http://localhost:8000/missing/path",
+    "lang": "ja",
+    "h1": "このページは見つかりません。",
+    "noindex": "noindex"
+  },
+  {
+    "url": "/en/missing/path",
+    "status": 404,
+    "final": "http://localhost:8000/en/404.html?from=%2Fen%2Fmissing%2Fpath",
+    "lang": "en",
+    "h1": "This page couldn’t be found.",
+    "noindex": "noindex"
+  }
+]
