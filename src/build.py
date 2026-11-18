@@ -33,7 +33,7 @@ def content(key,lang):
     if key=='skills':
         groups='<div class="skill-groups">'+''.join('<article><h3>'+e(s[lang]['title'])+'</h3>'+('<p>'+e(s[lang]['body'])+'</p>' if s[lang].get('body') else '<ul>'+''.join('<li>'+e(x)+'</li>' for x in s[lang]['items'])+'</ul>')+'</article>' for s in d['skills'])+'</div>'
         return section('01',t('professional_experience'),groups,'professional-tools')+section('02',d['personalKnowledge'][lang]['title'],'<p>'+e(d['personalKnowledge'][lang]['body'])+'</p>','personal-knowledge')+section('03',t('languages_qualifications'),qualifications(d,lang),'languages')
-    if key=='work':return section('01',t('personal_software_projects'),projects(d,lang),'personal-projects')+section('02',t('academic_research'),papers(d,lang)+'<p class="research-resource">'+link(d['researchResource']['url'],d['researchResource'][lang]['label'])+'</p>','academic-research')
+    if key=='work':return section('01',t('personal_software_projects'),projects(d,lang),'personal-projects')+section('02',t('academic_research'),papers(d,lang),'academic-research')
     if key in ['education','about']:
         education=section('01',t('education'),timeline(d,lang,True),'education')
         if key=='education':return education+section('02',d['educationStudies'][lang]['title'],study_program(d,lang),'what-i-studied')+link(p+'about/',t('more_about_me'))

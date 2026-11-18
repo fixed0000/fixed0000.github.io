@@ -21,9 +21,10 @@
   "elibrary": {
     "url": "https://www.elibrary.ru/item.asp?id=82319309",
     "check": "Redirected to ip_restricted.asp; authentication required from this IP",
-    "paperMapping": "Awaiting owner clarification",
-    "display": "General Russian research resource, supplied by owner; not assigned to either paper"
+    "paperMapping": "family, explicitly confirmed by owner on 2026-11-18",
+    "display": "Original-language link on the family study entry and detail pages, JA/EN"
   },
   "thesisPublicCopy": false,
-  "previousResearchLinks": "Archived descriptions only; not originals"
+  "previousResearchLinks": "Archived descriptions only; not originals",
+  "thesisPublicationPreference": "Use only to verify the description; do not publish, confirmed by owner"
 }

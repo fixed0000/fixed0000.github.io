@@ -295,7 +295,7 @@
         "methods": "Questionnaire research · Response organization · Comparative analysis",
         "approach": "The study organized questionnaire responses and compared associations across the two native-language groups."
       },
-      "originalUrl": null
+      "originalUrl": "https://www.elibrary.ru/item.asp?id=82319309"
     },
     {
       "id": "monogatari",
@@ -1206,15 +1206,6 @@
     },
     "en": {
       "body": "During my university studies, I conducted questionnaire-based research into word associations and comparative research on the translation of Japanese conversational expressions into Russian."
-    }
-  },
-  "researchResource": {
-    "url": "https://www.elibrary.ru/item.asp?id=82319309",
-    "ja": {
-      "label": "eLIBRARY — 研究資料（ロシア語）"
-    },
-    "en": {
-      "label": "eLIBRARY — Research Material (Russian)"
     }
   }
 }
