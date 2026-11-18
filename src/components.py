@@ -15,7 +15,7 @@ def projects(data,lang):
     return result+'</div>'
 
 def original_link(data,item,lang):
-    return link(item['originalUrl'],text(data,lang,'original_russian')) if item.get('originalUrl') else ''
+    return link(item['originalUrl'],item[lang].get('sourceLabel',text(data,lang,'original_russian'))) if item.get('originalUrl') else ''
 
 def papers(data,lang):
     p='/en/' if lang=='en' else '/'
@@ -30,7 +30,7 @@ def study_detail(data,key,lang):
     subtitle='<p class="research-subtitle">'+e(r['subtitle'])+'</p>' if r.get('subtitle') else ''
     methods='研究方法' if lang=='ja' else 'Methods'
     approach='研究のアプローチ' if lang=='ja' else 'Research Approach'
-    return subtitle+'<article class="study-detail"><dl><div><dt>'+methods+'</dt><dd>'+e(r['methods'])+'</dd></div><div><dt>'+approach+'</dt><dd>'+e(r['approach'])+'</dd></div></dl><div class="study-source"><p>'+text(data,lang,'original_language')+'</p>'+original_link(data,item,lang)+'</div></article>'
+    return subtitle+'<article class="study-detail"><dl><div><dt>'+methods+'</dt><dd>'+e(r['methods'])+'</dd></div><div><dt>'+approach+'</dt><dd>'+e(r['approach'])+'</dd></div></dl><div class="study-source"><p>'+r.get('sourceNote',text(data,lang,'original_language'))+'</p>'+original_link(data,item,lang)+'</div></article>'
 
 def study_program(data,lang):
     program=data['educationStudies'];r=program[lang]

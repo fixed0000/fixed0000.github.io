@@ -1,0 +1,13 @@
+{
+  "deterministic": true,
+  "preservedApp": [
+    "js/kanji",
+    "assets/kanji",
+    "tools/build-app-markup.py",
+    "tools/app-ja.html",
+    "tools/app-en.html"
+  ],
+  "bilingualPages": 24,
+  "licensesPreserved": true,
+  "publicCvLinks": true
+}

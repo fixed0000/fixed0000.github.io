@@ -1,0 +1,116 @@
+[
+  {
+    "label": "Portfolio GitHub",
+    "url": "https://github.com/fixed0000/fixed0000.github.io",
+    "http": 200,
+    "finalUrl": "https://github.com/fixed0000/fixed0000.github.io",
+    "status": "Работает",
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 331670,
+    "title": "GitHub - fixed0000/fixed0000.github.io: 自己紹介 · GitHub",
+    "restriction": false
+  },
+  {
+    "label": "MoriGarden GitHub",
+    "url": "https://github.com/fixed0000/MoriGarden",
+    "http": 200,
+    "finalUrl": "https://github.com/fixed0000/MoriGarden",
+    "status": "Работает",
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 261680,
+    "title": "GitHub - fixed0000/MoriGarden: Tamagochi game · GitHub",
+    "restriction": false
+  },
+  {
+    "label": "MoriGarden history",
+    "url": "https://github.com/fixed0000/MoriGarden/commits/main/",
+    "http": 429,
+    "finalUrl": "https://github.com/fixed0000/MoriGarden/commits/main/",
+    "status": "Не удалось проверить",
+    "contentType": "text/html",
+    "bytes": 11043,
+    "title": "Too many requests &middot; GitHub",
+    "restriction": false
+  },
+  {
+    "label": "Baby Chao / Sketchfab",
+    "url": "https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c",
+    "http": 200,
+    "finalUrl": "https://sketchfab.com/3d-models/baby-chao-4bbffce818cc45aa88c9862ebe296e7c",
+    "status": "Работает",
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 97466,
+    "title": "Baby Chao - Download Free 3D model by Alice.Sacco [4bbffce] - Sketchfab",
+    "restriction": false
+  },
+  {
+    "label": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "http": 200,
+    "finalUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "status": "Работает",
+    "contentType": "text/html",
+    "bytes": 31950,
+    "title": "Deed - Attribution 4.0 International - Creative Commons",
+    "restriction": false
+  },
+  {
+    "label": "KanjiVG",
+    "url": "https://github.com/KanjiVG/kanjivg",
+    "http": 200,
+    "finalUrl": "https://github.com/KanjiVG/kanjivg",
+    "status": "Работает",
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 247908,
+    "title": "GitHub - KanjiVG/kanjivg: Kanji vector graphics · GitHub",
+    "restriction": false
+  },
+  {
+    "label": "KanjiVG license",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "http": 200,
+    "finalUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "status": "Работает",
+    "contentType": "text/html",
+    "bytes": 35431,
+    "title": "Deed - Attribution-ShareAlike 3.0 Unported - Creative Commons",
+    "restriction": false
+  },
+  {
+    "label": "Kanken classification PDF",
+    "url": "https://www.kanken.or.jp/kanken/outline/data/outline_degree_national_list20200217.pdf",
+    "http": 200,
+    "finalUrl": "https://www.kanken.or.jp/kanken/outline/data/outline_degree_national_list20200217.pdf",
+    "status": "Работает",
+    "contentType": "application/pdf",
+    "bytes": 1615642,
+    "restriction": false
+  },
+  {
+    "label": "Kanken levels",
+    "url": "https://www.kanken.or.jp/kanken/grades/overview/",
+    "http": 200,
+    "finalUrl": "https://www.kanken.or.jp/kanken/grades/overview/",
+    "status": "Работает",
+    "contentType": "text/html; charset=UTF-8",
+    "bytes": 76323,
+    "title": "各級の概要（出題内容・審査基準・合格基準・採点基準）｜漢検（日本漢字能力検定）",
+    "restriction": false
+  },
+  {
+    "label": "Family / eLIBRARY",
+    "url": "https://www.elibrary.ru/item.asp?id=82319309",
+    "status": "Не удалось проверить",
+    "error": "The operation was aborted due to timeout"
+  },
+  {
+    "label": "Professional résumé",
+    "url": "https://fixed0000.github.io/documents/shokumukeirekisho-ja.pdf",
+    "http": 200,
+    "finalUrl": "https://fixed0000.github.io/documents/shokumukeirekisho-ja.pdf",
+    "status": "Работает",
+    "contentType": "application/pdf",
+    "bytes": 161965,
+    "restriction": false
+  }
+]

@@ -1431,3 +1431,13 @@ a { transition:color .2s; }
  .paper { display:block; }
  .paper-date { margin-bottom:.55rem; }
 }
+
+/* Full-size project images, with native keyboard focus and Escape support. */
+.gallery-lightbox { width:min(1160px,calc(100% - 2rem)); max-height:calc(100dvh - 2rem); padding:1rem; border:1px solid var(--line); background:var(--paper); color:var(--ink); }
+.gallery-lightbox::backdrop { background:rgb(20 30 25 / .8); }
+.gallery-toolbar { display:flex; justify-content:flex-end; margin-bottom:.7rem; }
+.gallery-lightbox img { display:block; width:auto; max-width:100%; max-height:calc(100dvh - 14rem); object-fit:contain; margin:auto; }
+.gallery-caption { margin:.7rem 0; font-size:.9rem; }
+.gallery-controls { display:flex; justify-content:space-between; gap:.7rem; align-items:center; }
+.gallery-position { font-size:.85rem; white-space:nowrap; }
+@media(max-width:420px){.gallery-lightbox{padding:.6rem}.gallery-controls button{padding:.5rem;font-size:.8rem}.gallery-caption{font-size:.85rem}}

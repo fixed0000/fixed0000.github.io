@@ -77,7 +77,13 @@ def render(key,lang):
     asset_version=hashlib.sha256((ROOT/'css/site.css').read_bytes()).hexdigest()[:10]
     script_version=hashlib.sha256((ROOT/'js/site.js').read_bytes()).hexdigest()[:10]
     css=f'<link rel="stylesheet" href="/css/site.css?v={asset_version}">'
-    if isapp:css='<link rel="stylesheet" href="/css/kanji-compat.css">'+css+'<link rel="stylesheet" href="/css/kanji-app.css">'
+    if isapp:
+        trainer_version=hashlib.sha256((ROOT/'css/kanji-app.css').read_bytes()).hexdigest()[:10]
+        css='<link rel="stylesheet" href="/css/kanji-compat.css">'+css+f'<link rel="stylesheet" href="/css/kanji-app.css?v={trainer_version}">'
+    lightbox=''
+    if key in ['morigarden','kanji-recall']:
+        first_image='/assets/screenshots/'+key+'/'+DATA['galleries'][key][0][0]+'.webp'
+        lightbox='<dialog class="gallery-lightbox" aria-label="'+e(t('gallery_viewer'))+'"><div class="gallery-toolbar"><button type="button" data-gallery-close>'+e(t('gallery_close'))+'</button></div><img src="'+first_image+'" alt=""><p class="gallery-caption"></p><div class="gallery-controls"><button type="button" data-gallery-prev>'+e(t('gallery_previous'))+'</button><span class="gallery-position" aria-live="polite"></span><button type="button" data-gallery-next>'+e(t('gallery_next'))+'</button></div></dialog>'
     noindex='<meta name="robots" content="noindex">' if key=='notfound' else ''
     page=f'''<!doctype html>
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -87,7 +93,7 @@ def render(key,lang):
 {css}<link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><script src="/js/site.js?v={script_version}" defer></script></head>
 <body class="editorial-site page-{key}{' app-page' if isapp else ''}"><a class="skip" href="#main">{labels['skip']}</a>
 <header class="site-header"><div class="header-inner"><a class="brand" href="{p}" aria-label="{e(name)} — {t('home')}"><span class="mark" aria-hidden="true">LB<span>·</span></span><span class="brand-name">{e(name)}</span></a><div class="header-tools">{contact_action}<a class="language" href="{alt}" lang="{t('ja')}" hreflang="{t('ja')}">{t('label')}</a><button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" data-open="{labels['menu']}" data-close="{labels['close']}">{labels['menu']} <span aria-hidden="true">＋</span></button></div><nav id="site-navigation" class="navigation" aria-label="{t('main_navigation')}">{nav}</nav></div></header>
-<main class="wrap" id="main" tabindex="-1"><div class="page-heading">{hero}<p class="eyebrow">{e(eyebrow)}</p><h1>{heading}</h1><p class="lead">{lead}</p></div>{content(key,lang)}</main>
+<main class="wrap" id="main" tabindex="-1"><div class="page-heading">{hero}<p class="eyebrow">{e(eyebrow)}</p><h1>{heading}</h1><p class="lead">{lead}</p></div>{content(key,lang)}</main>{lightbox}
 <footer class="footer wrap"><div class="footer-top"><a href="{p}contact/">{labels['contact']} <span aria-hidden="true">↗</span></a></div><div class="footer-bottom"><span>© 2026 Lidiia Borodina</span><a href="{DATA['person']['github']}">GitHub ↗</a><a href="{p}about/#website">{t('about_this_website')}</a><span>JA / EN</span></div></footer>
 {'<script type="module" src="/js/kanji/app.js"></script>' if isapp else ''}</body></html>'''
     target=ROOT/p.strip('/')/route

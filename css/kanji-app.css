@@ -131,3 +131,7 @@ th,td { padding:.45rem; border-bottom:1px solid var(--line); text-align:left; }
 /* Resolve feedback ink on the card itself, including the trainer's dark theme. */
 #practice #result { color:var(--trainer-ink); }
 #practice.trainer-dark :focus-visible { outline-color:#9ac6f7; }
+
+/* Keep the correct verdict on one line below its compact caption. */
+#practice #result.correct .assessment-header>h3 { font-size:clamp(1.05rem,1.7vw,1.35rem); line-height:1.4; white-space:nowrap; overflow-wrap:normal; }
+#practice #result.correct .character-caption { display:block; margin-bottom:.2rem; }

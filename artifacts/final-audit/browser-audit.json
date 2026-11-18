@@ -1,0 +1,736 @@
+{
+  "base": "http://localhost:8000",
+  "layouts": [
+    {
+      "url": "/projects/morigarden/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/projects/kanji-recall/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/research/family/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/research/monogatari/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/experience/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/skills/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/research/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/about/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/contact/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/education/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/404.html",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/projects/morigarden/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/projects/kanji-recall/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/research/family/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/research/monogatari/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/experience/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/skills/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/research/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/about/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/contact/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/education/",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/404.html",
+      "width": 320,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/projects/morigarden/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/projects/kanji-recall/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/research/family/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/research/monogatari/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/experience/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/skills/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/research/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/about/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/contact/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/education/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/404.html",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/projects/morigarden/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/projects/kanji-recall/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/research/family/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/research/monogatari/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/experience/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/skills/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/research/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/about/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/contact/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/education/",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/404.html",
+      "width": 390,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/projects/morigarden/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/projects/kanji-recall/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/research/family/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/research/monogatari/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/experience/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/skills/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/research/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/about/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/contact/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/education/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/404.html",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/projects/morigarden/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/projects/kanji-recall/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/research/family/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/research/monogatari/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/experience/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/skills/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/research/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/about/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/contact/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/education/",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/404.html",
+      "width": 768,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/projects/morigarden/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/projects/kanji-recall/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/research/family/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/research/monogatari/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/experience/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/skills/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/research/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/about/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/contact/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/education/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/404.html",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/projects/morigarden/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/projects/kanji-recall/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/research/family/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/research/monogatari/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/experience/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/skills/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/research/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/about/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/contact/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/education/",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/404.html",
+      "width": 1024,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/projects/morigarden/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/projects/kanji-recall/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/research/family/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/research/monogatari/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/experience/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/skills/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/research/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/about/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/contact/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/education/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/404.html",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/projects/morigarden/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/projects/kanji-recall/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/research/family/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/research/monogatari/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/experience/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/skills/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/research/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/about/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/contact/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/education/",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "url": "/en/404.html",
+      "width": 1440,
+      "overflow": false,
+      "brokenImages": []
+    }
+  ],
+  "audits": [],
+  "errors": [],
+  "checks": [
+    "mobile menu and Escape focus",
+    "language route parity",
+    "experience navigation and bilingual duties",
+    "no-JS navigation and readable responsibilities",
+    "gallery full-size links",
+    "200% reflow",
+    "professional background before projects"
+  ]
+}

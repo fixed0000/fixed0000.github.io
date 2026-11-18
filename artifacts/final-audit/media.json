@@ -1,0 +1,36 @@
+{
+  "gameCommit": "62901ba618cfdaf8dbf1de055d6ab57bbba348fd",
+  "gameBuild": "0 warnings, 0 errors",
+  "moriGallery": [
+    "01-garden",
+    "02-coastal-cove",
+    "05-shop-final",
+    "07-item-handling-final"
+  ],
+  "omitted": [
+    "03-status",
+    "04-inventory",
+    "06-trees",
+    "08-save-slots"
+  ],
+  "kanjiGallery": [
+    "01-setup",
+    "03-answer-final",
+    "04-stroke-order-final"
+  ],
+  "omittedKanji": [
+    "02-writing",
+    "05-history"
+  ],
+  "modelsHidden": true,
+  "userProgressTouched": false,
+  "resumePdfChanged": false,
+  "strokeAnimationFrame": "3 of 9; two completed paths and one partial path; own ink hidden",
+  "lightbox": {
+    "keyboard": true,
+    "arrows": true,
+    "escape": true,
+    "focusRestored": true,
+    "axeViolations": 0
+  }
+}

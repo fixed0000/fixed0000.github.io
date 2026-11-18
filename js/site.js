@@ -16,3 +16,18 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObser
  const revealObserver=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.remove('reveal-pending');entry.target.classList.add('reveal-visible');revealObserver.unobserve(entry.target);}},{threshold:0,rootMargin:'0px 0px 32px 0px'});
  document.querySelectorAll('main > .editorial-section').forEach(section=>{if(section.getBoundingClientRect().top>innerHeight){section.classList.add('reveal-pending');revealObserver.observe(section);}});
 }
+
+// Native modal viewer; ordinary image links remain usable without JavaScript.
+const galleryDialog=document.querySelector('.gallery-lightbox');
+if(galleryDialog && typeof galleryDialog.showModal==='function'){
+ const links=[...document.querySelectorAll('.game-gallery a')];let selected=0,opener=null;
+ const viewerImage=galleryDialog.querySelector('img');
+ function showImage(index){selected=(index+links.length)%links.length;const img=links[selected].querySelector('img');viewerImage.src=links[selected].href;viewerImage.alt=img.alt;galleryDialog.querySelector('.gallery-caption').textContent=links[selected].closest('figure').querySelector('figcaption').textContent;galleryDialog.querySelector('.gallery-position').textContent=(selected+1)+' / '+links.length;}
+ links.forEach((link,index)=>link.addEventListener('click',event=>{if(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;event.preventDefault();opener=link;showImage(index);galleryDialog.showModal();}));
+ galleryDialog.querySelector('[data-gallery-close]').addEventListener('click',()=>galleryDialog.close());
+ galleryDialog.querySelector('[data-gallery-prev]').addEventListener('click',()=>showImage(selected-1));
+ galleryDialog.querySelector('[data-gallery-next]').addEventListener('click',()=>showImage(selected+1));
+ galleryDialog.addEventListener('keydown',event=>{if(event.key==='ArrowRight'){event.preventDefault();showImage(selected+1);}if(event.key==='ArrowLeft'){event.preventDefault();showImage(selected-1);}});
+ galleryDialog.addEventListener('click',event=>{if(event.target===galleryDialog){const r=galleryDialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)galleryDialog.close();}});
+ galleryDialog.addEventListener('close',()=>opener?.focus());
+}
