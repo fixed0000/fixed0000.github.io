@@ -1,0 +1,376 @@
+{
+  "origin": "http://localhost:8000",
+  "reports": [
+    {
+      "id": "一-authored-a",
+      "expected": "一",
+      "actual": "一",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "一-authored-b",
+      "expected": "一",
+      "actual": "一",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "二-authored-a",
+      "expected": "二",
+      "actual": "二",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "二-authored-b",
+      "expected": "二",
+      "actual": "二",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "三-authored-a",
+      "expected": "三",
+      "actual": "三",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "三-authored-b",
+      "expected": "三",
+      "actual": "三",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "十-authored-a",
+      "expected": "十",
+      "actual": "十",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "十-authored-b",
+      "expected": "十",
+      "actual": "十",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "口-authored-a",
+      "expected": "口",
+      "actual": null,
+      "reason": "ambiguous-candidates",
+      "shape": "partial",
+      "sequence": "partial",
+      "direction": "partial"
+    },
+    {
+      "id": "口-authored-b",
+      "expected": "口",
+      "actual": null,
+      "reason": "ambiguous-candidates",
+      "shape": "partial",
+      "sequence": "partial",
+      "direction": "partial"
+    },
+    {
+      "id": "日-authored-a",
+      "expected": "日",
+      "actual": "日",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "日-authored-b",
+      "expected": "日",
+      "actual": "日",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "田-authored-a",
+      "expected": "田",
+      "actual": "田",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "田-authored-b",
+      "expected": "田",
+      "actual": "田",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "木-authored-a",
+      "expected": "木",
+      "actual": "木",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "木-authored-b",
+      "expected": "木",
+      "actual": "木",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "本-authored-a",
+      "expected": "本",
+      "actual": "本",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "本-authored-b",
+      "expected": "本",
+      "actual": "本",
+      "reason": "matched",
+      "shape": "partial",
+      "sequence": "partial",
+      "direction": "partial"
+    },
+    {
+      "id": "山-authored-a",
+      "expected": "山",
+      "actual": "山",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "川-authored-a",
+      "expected": "川",
+      "actual": "川",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "川-authored-b",
+      "expected": "川",
+      "actual": "川",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "同-authored-a",
+      "expected": "同",
+      "actual": "同",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "同-authored-b",
+      "expected": "同",
+      "actual": "同",
+      "reason": "matched",
+      "shape": "partial",
+      "sequence": "partial",
+      "direction": "partial"
+    },
+    {
+      "id": "思-authored-a",
+      "expected": "思",
+      "actual": "思",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "思-authored-b",
+      "expected": "思",
+      "actual": "思",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "持-authored-a",
+      "expected": "持",
+      "actual": "持",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "持-authored-b",
+      "expected": "持",
+      "actual": "持",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "待-authored-a",
+      "expected": "待",
+      "actual": "待",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "待-authored-b",
+      "expected": "待",
+      "actual": "待",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "leaning-center",
+      "expected": "山",
+      "actual": "山",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "curved-left",
+      "expected": "山",
+      "actual": "山",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "low-wide",
+      "expected": "山",
+      "actual": "山",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "tall-narrow",
+      "expected": "山",
+      "actual": "山",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "uneven-parts",
+      "expected": "山",
+      "actual": "山",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "small-offset",
+      "expected": "山",
+      "actual": "山",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "holdout-left-lean",
+      "expected": "山",
+      "actual": "山",
+      "reason": "matched",
+      "shape": "partial",
+      "sequence": "partial",
+      "direction": "partial"
+    },
+    {
+      "id": "holdout-bowed-center",
+      "expected": "山",
+      "actual": "山",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "holdout-rounded-bottom",
+      "expected": "山",
+      "actual": "山",
+      "reason": "matched",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "id": "holdout-high-right",
+      "expected": "山",
+      "actual": "山",
+      "reason": "matched",
+      "shape": "partial",
+      "sequence": "partial",
+      "direction": "partial"
+    },
+    {
+      "id": "口-slanted-enclosure",
+      "expected": "口",
+      "actual": null,
+      "reason": "ambiguous-candidates",
+      "shape": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    }
+  ],
+  "checks": [
+    "JA/EN and native touch",
+    "Independent recognition separate from shape comparison",
+    "No score or history changes on Compare",
+    "Visible disabled Undo/Clear",
+    "Retry clears every assessment and marker",
+    "Recognition failure still compares",
+    "Incomplete strokes explained",
+    "Reference failure explained"
+  ],
+  "errors": []
+}

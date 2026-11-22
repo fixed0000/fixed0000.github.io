@@ -1,0 +1,168 @@
+{
+  "山": {
+    "char": "山",
+    "candidates": [
+      {
+        "char": "山",
+        "score": 0.05195227647593849
+      },
+      {
+        "char": "⺌",
+        "score": 0.20591622980868382
+      },
+      {
+        "char": "屮",
+        "score": 0.2076273204173438
+      }
+    ],
+    "reason": "matched",
+    "strokeCount": 3,
+    "margin": 0.15396395333274532
+  },
+  "人": {
+    "char": "人",
+    "candidates": [
+      {
+        "char": "人",
+        "score": 0.07023539094354175
+      },
+      {
+        "char": "𠆢",
+        "score": 0.09705819405549662
+      },
+      {
+        "char": "乂",
+        "score": 0.12287557703198404
+      }
+    ],
+    "reason": "matched",
+    "strokeCount": 2,
+    "margin": 0.026822803111954868
+  },
+  "川": {
+    "char": "川",
+    "candidates": [
+      {
+        "char": "川",
+        "score": 0.03694138911408998
+      },
+      {
+        "char": "巛",
+        "score": 0.10816655355560241
+      },
+      {
+        "char": "⺍",
+        "score": 0.1730100022778669
+      }
+    ],
+    "reason": "matched",
+    "strokeCount": 3,
+    "margin": 0.07122516444151243
+  },
+  "土": {
+    "char": "土",
+    "candidates": [
+      {
+        "char": "土",
+        "score": 0.05620516289396942
+      },
+      {
+        "char": "上",
+        "score": 0.06893397992445435
+      },
+      {
+        "char": "士",
+        "score": 0.09399406388335999
+      }
+    ],
+    "reason": "matched",
+    "strokeCount": 3,
+    "margin": 0.01272881703048493
+  },
+  "士": {
+    "char": "士",
+    "candidates": [
+      {
+        "char": "士",
+        "score": 0.08576534901542945
+      },
+      {
+        "char": "土",
+        "score": 0.12008609481341463
+      },
+      {
+        "char": "上",
+        "score": 0.13903248379445335
+      }
+    ],
+    "reason": "matched",
+    "strokeCount": 3,
+    "margin": 0.03432074579798518
+  },
+  "日": {
+    "char": "日",
+    "candidates": [
+      {
+        "char": "日",
+        "score": 0.023936151474195835
+      },
+      {
+        "char": "曰",
+        "score": 0.06916506833454965
+      },
+      {
+        "char": "丑",
+        "score": 0.1702021230254042
+      }
+    ],
+    "reason": "matched",
+    "strokeCount": 4,
+    "margin": 0.04522891686035381
+  },
+  "empty": {
+    "char": null,
+    "candidates": [],
+    "reason": "invalid-input"
+  },
+  "partialMountain": {
+    "char": null,
+    "candidates": [
+      {
+        "char": "十",
+        "score": 0.22177664731140237
+      },
+      {
+        "char": "九",
+        "score": 0.2430157376646589
+      },
+      {
+        "char": "人",
+        "score": 0.2486920704095764
+      }
+    ],
+    "reason": "shape-distance",
+    "strokeCount": 2,
+    "margin": 0.021239090353256523
+  },
+  "scribble": {
+    "char": null,
+    "candidates": [
+      {
+        "char": "丶",
+        "score": 0.27908818426729054
+      },
+      {
+        "char": "丨",
+        "score": 0.3203103933701435
+      },
+      {
+        "char": "亅",
+        "score": 0.3506155035030913
+      }
+    ],
+    "reason": "shape-distance",
+    "strokeCount": 1,
+    "margin": 0.04122220910285296
+  },
+  "durationMs": 126.63070000000005
+}

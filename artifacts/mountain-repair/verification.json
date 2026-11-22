@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-23",
+  "release": "3dc3ac2f6f0a",
+  "metrics": {
+    "old": {
+      "correct": 77,
+      "falseRecognitions": 9,
+      "abstentions": 34,
+      "nonContourAbstentions": 34,
+      "randomFalseAcceptances": 0,
+      "falseTargetAcceptances": 0,
+      "incompleteRecognizedAsOther": 14
+    },
+    "current": {
+      "correct": 111,
+      "falseRecognitions": 0,
+      "abstentions": 9,
+      "nonContourAbstentions": 0,
+      "randomFalseAcceptances": 0,
+      "falseTargetAcceptances": 0,
+      "incompleteRecognizedAsOther": 22
+    },
+    "positiveCases": 120,
+    "totalCases": 320,
+    "mountainCases": 33,
+    "mountainCorrect": 33,
+    "detectedOrderCases": 38,
+    "detectedDirectionCases": 40
+  },
+  "professionalPagesUnchanged": true,
+  "publicResume": {
+    "pages": 2,
+    "unchanged": true,
+    "sha256": "f866ab208863b548f985867a397092e45ce0a891ef63f65d025745c33dfcc19a",
+    "targetedMotivation": false,
+    "privateContacts": false
+  },
+  "storageSchemaChanged": false,
+  "moriGardenChanged": false,
+  "checks": [
+    "build",
+    "npm test",
+    "test:site",
+    "test:stroke-order",
+    "test:recognition",
+    "120 page layouts",
+    "24 axe pages",
+    "40 authored Pointer Event controls",
+    "worker failures and partial glyphs",
+    "JA/EN keyboard and touch"
+  ],
+  "limitations": [
+    "No original user stroke coordinates were available",
+    "Authored trajectories and browser events are not an independent human handwriting corpus",
+    "Closed silhouettes remain ambiguous; partial drawings can be other valid kanji",
+    "Physical mobile hardware and Safari were not tested"
+  ]
+}

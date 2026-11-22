@@ -2,7 +2,7 @@ import {miniStroke} from './stroke-visual.js';
 const en = document.documentElement.lang === 'en';
 const t = (ja, english) => en ? english : ja;
 export const orderLabels = {likely: t('正しい可能性が高い', 'Likely Correct'), review: t('要確認', 'Review Needed'), partial:t('一部判定不可','Partially Undetermined'), unable: t('判定できません', 'Unable to Determine')};
-export const unableOrder = reason => ({status: 'unable', sequence:{status:'unable'},direction:{status:'unable'},reason, issues: [],strokes:[]});
+export const unableOrder = reason => ({status: 'unable', shape:{status:'unable',reason},sequence:{status:'unable'},direction:{status:'unable'},reason, issues: [],strokes:[]});
 export class StrokeOrderService {
   constructor() { this.worker = null; this.jobs = new Map(); this.serial = 0; }
   evaluate(userStrokes, referenceStrokes, context) {
@@ -49,15 +49,29 @@ function reasonText(assessment) {
   };
   return reasons[assessment.reason] || reasons['insufficient-input'];
 }
+export const shapeLabels={likely:t('一致する可能性が高い','Likely Similar'),partial:t('一部のみ照合できました','Partially Matched'),unable:t('字形を照合できません','Unable to Match Shape')};
+export function recognitionExplanation(result,actual,expected){if(actual!==null&&expected!==null&&actual!==expected)return t('記録された画数がお手本と異なります。つながった画や未完了の画がないか確認できます。','The recorded stroke count differs from the reference. Check for joined or unfinished strokes.');const reasons={
+ 'shape-distance':t('候補の字形との違いが大きく、文字を特定できませんでした。お手本との比較は別に確認できます。','The drawing differs too much from candidate shapes for independent recognition. You can compare it with the reference separately.'),
+ 'ambiguous-candidates':t('似た候補を十分に区別できませんでした。認識不可は、不正解とは別の結果です。','Similar candidates could not be distinguished reliably. Unrecognized is separate from incorrect.'),
+ 'no-stroke-count-candidates':t('この画数に対応する認識候補を取得できませんでした。','No recognition candidates were available for this stroke count.'),
+ 'processing-error':t('認識処理を完了できませんでした。筆跡を残したまま、お手本との比較を利用できます。','Recognition processing could not finish. Your strokes remain available for reference comparison.'),
+ 'insufficient-input':t('文字を特定するための筆跡が不足しています。','There is insufficient handwriting to identify a character.'),
+ 'invalid-input':t('筆跡データを処理できませんでした。新しい試行で確認してください。','The stroke data could not be processed. Please use a new attempt.'),
+ 'input-limit':t('筆跡データが処理できる量を超えています。','The stroke data exceeds the processing limit.')};return reasons[result?.reason]||reasons['ambiguous-candidates'];}
 const statusText=status=>orderLabels[status]||t('判定中…','Checking…');
-export function orderView(assessment,onHighlight,onReset){
+export function orderView(assessment,onHighlight,onReset,context={}){
  const container=document.createElement('div');container.id='stroke-order-assessment';container.className='stroke-order-assessment '+(assessment?.status||'pending');
+ if(context.showComparison){const row=document.createElement('div');row.className='stroke-verdict-row shape-verdict';const caption=document.createElement('span'),value=document.createElement('strong');caption.textContent=t('お手本との字形比較','Reference Shape');value.id='reference-shape-verdict';value.textContent=shapeLabels[assessment?.shape?.status]||t('比較中…','Comparing…');row.append(caption,value);container.append(row);}
  for(const [key,title,id]of [['sequence',t('書き順','Stroke Sequence'),'stroke-order-verdict'],['direction',t('運筆方向','Stroke Direction'),'stroke-direction-verdict']]){
   const row=document.createElement('div');row.className='stroke-verdict-row';const caption=document.createElement('span'),value=document.createElement('strong');caption.textContent=title;value.id=id;
   const status=assessment?.[key]?.status||assessment?.status;value.className=status||'pending';value.textContent=(status==='likely'?'✓ ':status==='review'?'! ':'')+statusText(status);row.append(caption,value);container.append(row);
  }
- const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent=t('画ごとの確認','Stroke Details');details.append(summary);
+ const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent=t('判定の詳細','Assessment Details');details.append(summary);
  const body=document.createElement('div');body.className='stroke-order-explanation';const explanation=document.createElement('p');explanation.textContent=assessment?reasonText(assessment):t('順序と方向を別々に照合しています。','Comparing sequence and direction separately.');body.append(explanation);
+ const diagnostics=document.createElement('dl');diagnostics.className='assessment-diagnostics';
+ const unknown=(assessment?.strokes||[]).filter(s=>s.referenceStrokeIndex===null||s.sequenceStatus==='unable'||s.directionStatus==='unable').map(s=>s.userStroke);
+ for(const [label,value]of [[context.keyboard?t('入力した文字','Typed Character'):t('文字認識','Character Recognition'),context.kind==='correct'?t('正解','Correct'):context.kind==='incorrect'?t('不正解','Incorrect'):t('判定不可','Undetermined')],[t('お手本との字形比較','Reference Shape Comparison'),context.showComparison?(shapeLabels[assessment?.shape?.status]||'—'):t('「お手本と比較する」で確認','Use Compare with Reference')],[t('記録された画数','Recorded Strokes'),context.actual??'—'],[t('お手本の画数','Reference Strokes'),context.expected??'—'],[t('書き順','Stroke Sequence'),statusText(assessment?.sequence?.status||assessment?.status)],[t('運筆方向','Stroke Direction'),statusText(assessment?.direction?.status||assessment?.status)],[t('未確定の画','Undetermined Strokes'),unknown.length?unknown.join(', '):assessment?.strokes?.length?t('なし','None'):'—']]){const row=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;row.append(dt,dd);diagnostics.append(row);}body.append(diagnostics);
+ if(!context.keyboard&&(context.kind==='unrecognized'||context.kind==='incorrect'&&context.actual!==context.expected)){const reason=document.createElement('p');reason.textContent=recognitionExplanation(context.recognition,context.actual,context.expected);body.append(reason);}
  const strokes=assessment?.strokes||assessment?.mapping||[];
  if(strokes.length){
   const comparison=document.createElement('div');comparison.className='stroke-comparison';comparison.setAttribute('aria-live','polite');

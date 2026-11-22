@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "lang": "ja",
+      "path": "",
+      "overflow": false
+    },
+    {
+      "lang": "ja",
+      "path": "experience/",
+      "overflow": false
+    },
+    {
+      "lang": "ja",
+      "path": "skills/",
+      "overflow": false
+    },
+    {
+      "lang": "ja",
+      "path": "about/",
+      "overflow": false
+    },
+    {
+      "lang": "ja",
+      "path": "contact/",
+      "overflow": false
+    },
+    {
+      "lang": "ja",
+      "path": "research/",
+      "overflow": false
+    },
+    {
+      "lang": "en",
+      "path": "",
+      "overflow": false
+    },
+    {
+      "lang": "en",
+      "path": "experience/",
+      "overflow": false
+    },
+    {
+      "lang": "en",
+      "path": "skills/",
+      "overflow": false
+    },
+    {
+      "lang": "en",
+      "path": "about/",
+      "overflow": false
+    },
+    {
+      "lang": "en",
+      "path": "contact/",
+      "overflow": false
+    },
+    {
+      "lang": "en",
+      "path": "research/",
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

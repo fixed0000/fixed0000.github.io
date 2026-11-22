@@ -14,7 +14,7 @@ for key,page in data['pages'].items():
 for copy in data['ui'].values():assert set(copy)=={'ja','en'}
 
 # App mechanics, reviewed data, source markup and trainer geometry remain unchanged.
-protected=['js/kanji/recognizer.js','js/kanji/worker.js','js/kanji/store.js','js/kanji/task-state.js','assets/kanji']
+protected=['js/kanji/worker.js','js/kanji/store.js','js/kanji/task-state.js','assets/kanji']
 assert not subprocess.check_output(['git','diff','bdb1deb','--',*protected],cwd=root)
 
 trainer_base=subprocess.check_output(['git','show','549b719:css/kanji-app.css'],cwd=root).decode('utf-8').replace('\r\n','\n')

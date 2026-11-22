@@ -1,3 +1,4 @@
+import {describe,elasticCost,aspectCost} from './geometry.js';
 /** Experimental online-stroke comparison. No OCR, pixels, or character recognition.
  * Match geometry without sequence/direction first, isolate ambiguous edges,
  * then inspect the resulting permutation and oriented trajectories separately.
@@ -5,7 +6,7 @@
  */
 const POINTS = 32;
 const LIMITS = Object.freeze({mean: .11, pair: .19, assignmentGap: .055, directionGap: .04, chord: .035, length: .045});
-const unable = (reason, details = {}) => ({status: 'unable', sequence: {status:'unable',reason}, direction: {status:'unable',reason}, reason, issues: [], mapping: [], strokes: [], ...details});
+const unable = (reason, details = {}) => ({status: 'unable', shape:{status:'unable',reason}, sequence: {status:'unable',reason}, direction: {status:'unable',reason}, reason, issues: [], mapping: [], strokes: [], ...details});
 const distance = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
 function length(stroke) { let value = 0; for (let i = 1; i < stroke.length; i++) value += distance(stroke[i - 1], stroke[i]); return value; }
 function valid(strokes) {
@@ -24,18 +25,8 @@ function resample(stroke) {
     return [stroke[k - 1][0] + f * (stroke[k][0] - stroke[k - 1][0]), stroke[k - 1][1] + f * (stroke[k][1] - stroke[k - 1][1])];
   });
 }
-function normalize(strokes) {
-  let left = Infinity, top = Infinity, right = -Infinity, bottom = -Infinity;
-  for (const s of strokes) for (const [x, y] of s) { left = Math.min(left, x); top = Math.min(top, y); right = Math.max(right, x); bottom = Math.max(bottom, y); }
-  const size = Math.max(right - left, bottom - top);
-  if (!Number.isFinite(size) || size < 1e-7) return null;
-  return strokes.map(s => resample(s).map(([x, y]) => [(x - (left + right) / 2) / size, (y - (top + bottom) / 2) / size]));
-}
-function orientedCost(a, b, reverse = false) {
-  let mean = 0; for (let i = 0; i < POINTS; i++) mean += distance(a[i], b[reverse ? POINTS - 1 - i : i]);
-  const endpoints = (distance(a[0], b[reverse ? POINTS - 1 : 0]) + distance(a.at(-1), b[reverse ? 0 : POINTS - 1])) / 2;
-  return .8 * mean / POINTS + .2 * endpoints;
-}
+function normalize(strokes){const d=describe(strokes,POINTS);return {strokes:d.strokes.map(s=>s.map(([x,y])=>[x-.5,y-.5])),aspect:d.aspect};}
+function orientedCost(a,b,reverse=false){return elasticCost(a,b,reverse);}
 // Hungarian minimum-cost bijection. Optional forbidden edge measures an alternative.
 function assign(cost, forbidden = null) {
   const n = cost.length, u = Array(n + 1).fill(0), v = [...u], p = [...u], way = [...u];
@@ -62,7 +53,7 @@ function assign(cost, forbidden = null) {
  */
 export function analyzeStrokeOrder(userStrokes, referenceStrokes) {
   if (!valid(userStrokes) || !valid(referenceStrokes) || userStrokes.reduce((n,s)=>n+s.length,0)>20000) return unable('insufficient-input');
-  const user=normalize(userStrokes), reference=normalize(referenceStrokes);
+  const ud=normalize(userStrokes),rd=normalize(referenceStrokes),user=ud.strokes,reference=rd.strokes;
   if(!user||!reference)return unable('insufficient-input');
   const n=Math.max(user.length,reference.length);
   const oriented=user.map(a=>reference.map(b=>({forward:orientedCost(a,b),reverse:orientedCost(a,b,true)})));
@@ -81,9 +72,11 @@ export function analyzeStrokeOrder(userStrokes, referenceStrokes) {
       userPoints:a,referencePoints:reliable?b:null,reason:reason||'matched',sequenceReason:reason,directionReason:reason,order:false,direction:false};
   });
   const reliable=strokes.filter(x=>x.referenceStrokeIndex!==null);
-  const geometrySupported=reliable.reduce((sum,x)=>sum+x.matchingCost,0)/Math.max(1,reliable.length)<=LIMITS.mean;
+  const geometryCost=reliable.reduce((sum,x)=>sum+x.matchingCost,0)/Math.max(1,reliable.length)+aspectCost(ud.aspect,rd.aspect);
+  const geometrySupported=geometryCost<=LIMITS.mean;
   const enough=reliable.length>=Math.max(1,Math.ceil(n*.5)) && geometrySupported;
   const complete=reliable.length===user.length&&user.length===reference.length;
+  const wholeShapeReliable=complete&&geometrySupported&&reliable.every(x=>x.matchingCost<=LIMITS.mean);
   for(const match of reliable){
     const i=match.userStrokeIndex,j=match.referenceStrokeIndex,a=user[i],b=reference[j],pair=oriented[i][j];
     // A reversal of relative positions proves a swap; an index shift caused
@@ -103,13 +96,15 @@ export function analyzeStrokeOrder(userStrokes, referenceStrokes) {
     else if(pair.forward<pair.reverse&&forwardEnds<reverseEnds&&cosine>.45){match.directionStatus='likely';match.directionReason='matched';}
     else match.directionReason='ambiguous-direction';
   }
-  if(!geometrySupported)for(const match of strokes){match.sequenceStatus=match.directionStatus='unable';match.reason=match.sequenceReason=match.directionReason='geometry';match.order=match.direction=false;match.referenceStrokeIndex=match.referenceStroke=match.referencePoints=match.referenceStartPoint=match.referenceEndPoint=null;}
-  const aggregate=field=>!enough?'unable':strokes.every(x=>x[field]==='likely')&&complete?'likely':field==='directionStatus'&&strokes.some(x=>x[field]==='review')?'review':complete&&strokes.every(x=>x[field]!=='unable')&&strokes.some(x=>x[field]==='review')?'review':strokes.some(x=>x[field]!=='unable')?'partial':'unable';
+  // Global shape and local evidence are separate. Preserve reliable local
+  // matches even when the entire glyph fails the shape comparison.
+  const aggregate=field=>!strokes.some(x=>x[field]!=='unable')?'unable':!enough||!wholeShapeReliable?'partial':strokes.every(x=>x[field]==='likely')?'likely':field==='directionStatus'&&strokes.some(x=>x[field]==='review')?'review':strokes.every(x=>x[field]!=='unable')&&strokes.some(x=>x[field]==='review')?'review':'partial';
   const sequence={status:aggregate('sequenceStatus')},direction={status:aggregate('directionStatus')};
   const status=[sequence.status,direction.status].includes('review')?'review':[sequence.status,direction.status].includes('partial')?'partial':sequence.status==='likely'&&direction.status==='likely'?'likely':'unable';
   const issues=strokes.filter(x=>x.sequenceStatus!=='likely'||x.directionStatus!=='likely');
   const reason=!enough?(user.length!==reference.length?'stroke-count':strokes.every(x=>x.reason==='ambiguous-matching')?'ambiguous-matching':'geometry'):status==='likely'?'matched':status==='review'?'possible-violation':'partial-assessment';
-  return {status,sequence,direction,reason,issues,mapping:strokes,strokes,actual:user.length,expected:reference.length,
+  const shape={status:wholeShapeReliable?'likely':enough?'partial':'unable',reason:!geometrySupported?'geometry':!complete?'incomplete-matching':'matched',cost:geometryCost};
+  return {status,shape,sequence,direction,reason,issues,mapping:strokes,strokes,actual:user.length,expected:reference.length,
     matched:strokes.filter(x=>x.referenceStrokeIndex!==null).length,missingReferenceStrokes:reference.map((_,j)=>j).filter(j=>!reliable.some(x=>x.referenceStrokeIndex===j)),
     meanDistance:best.total/n,maxDistance:Math.max(...selected),assignmentGap:null};
 }

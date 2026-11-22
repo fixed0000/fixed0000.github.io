@@ -188,3 +188,17 @@ th,td { padding:.45rem; border-bottom:1px solid var(--line); text-align:left; }
 #result .stroke-order-assessment .stroke-verdict-row strong.likely { color:#205a3a; }
 #result .stroke-order-assessment .stroke-verdict-row strong.review { color:#804308; }
 #result .stroke-order-assessment .stroke-verdict-row strong.partial,#result .stroke-order-assessment .stroke-verdict-row strong.unable { color:#40566d; }
+
+/* Locked controls must visibly differ from available actions. */
+#practice .pad button:disabled { opacity:.45; background:var(--trainer-bg); border-style:dashed; cursor:not-allowed; box-shadow:none; }
+.assessment-diagnostics { margin:.6rem 0; }
+.assessment-diagnostics>div { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.2fr); gap:.6rem; padding:.3rem 0; border-bottom:1px solid var(--trainer-line); }
+.assessment-diagnostics dt,.assessment-diagnostics dd { margin:0; font-size:.75rem; overflow-wrap:anywhere; }
+#result .shape-verdict { border-bottom:1px solid var(--trainer-line); margin-bottom:.2rem; }
+#result.unrecognized>p { line-height:1.4; font-size:.78rem; }
+@media(max-width:700px){#reference-controls #compare-reference{font-size:.7rem;padding:.3rem}.assessment-diagnostics>div{grid-template-columns:1fr 1fr}}
+
+@media(max-width:700px){#reference-controls>.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.2rem}#reference-controls>.controls>button{width:100%;padding:.25rem;font-size:.68rem;min-height:30px}#reference-controls>.controls>label{min-width:0;font-size:.68rem}}
+
+@media(max-width:700px){#reference-controls{padding-top:0}#reference-controls>.controls{margin:0}}
+#practice .practice-actions { position:sticky; bottom:0; background:var(--trainer-bg); z-index:3; }

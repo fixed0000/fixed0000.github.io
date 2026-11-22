@@ -1,0 +1,148 @@
+{
+  "origin": "http://localhost:8000",
+  "reports": [
+    {
+      "char": "一",
+      "input": "browser mouse Pointer Events",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "char": "二",
+      "input": "browser mouse Pointer Events",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "char": "三",
+      "input": "browser mouse Pointer Events",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "char": "十",
+      "input": "browser mouse Pointer Events",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "char": "口",
+      "input": "browser mouse Pointer Events",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial"
+    },
+    {
+      "char": "日",
+      "input": "browser mouse Pointer Events",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "char": "田",
+      "input": "browser mouse Pointer Events",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "char": "木",
+      "input": "browser mouse Pointer Events",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "char": "本",
+      "input": "browser mouse Pointer Events",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "char": "山",
+      "input": "browser mouse Pointer Events",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "char": "川",
+      "input": "browser mouse Pointer Events",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "char": "同",
+      "input": "browser mouse Pointer Events",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "char": "思",
+      "input": "browser mouse Pointer Events",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "char": "持",
+      "input": "browser mouse Pointer Events",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "char": "待",
+      "input": "browser mouse Pointer Events",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely"
+    },
+    {
+      "char": "思",
+      "lang": "ja",
+      "mobile": true,
+      "reversedDetected": true,
+      "sequenceIndependent": true,
+      "markers": true,
+      "retryCleared": true,
+      "oneTaskTwoAttempts": true
+    },
+    {
+      "char": "同",
+      "lang": "en",
+      "mobile": false,
+      "reversedDetected": true,
+      "sequenceIndependent": true,
+      "markers": true,
+      "retryCleared": true,
+      "oneTaskTwoAttempts": true
+    },
+    {
+      "char": "日",
+      "lang": "en",
+      "mobile": false,
+      "reversedDetected": true,
+      "sequenceIndependent": true,
+      "markers": true,
+      "retryCleared": true,
+      "oneTaskTwoAttempts": true
+    },
+    {
+      "char": "思",
+      "shortStroke": "partial instead of whole-character refusal"
+    },
+    {
+      "staleResultAfterNext": "discarded"
+    }
+  ],
+  "errors": []
+}
