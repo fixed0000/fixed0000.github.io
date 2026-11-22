@@ -1,0 +1,29 @@
+{
+  "release": "b83cf0e3a3a2",
+  "recognizerChanged": false,
+  "storageSchemaChanged": false,
+  "moriGardenChanged": false,
+  "publicResume": {
+    "unchanged": true,
+    "pages": 2,
+    "sha256": "f866ab208863b548f985867a397092e45ce0a891ef63f65d025745c33dfcc19a",
+    "targetedMotivation": false,
+    "privateContacts": false,
+    "draftMarks": false
+  },
+  "tests": {
+    "build": true,
+    "siteLayouts": 120,
+    "axePages": 24,
+    "htmlDocuments": 30,
+    "localReferences": 524,
+    "unitTests": 53,
+    "diagnosticCases": 386,
+    "browserPointerCharacters": 15
+  },
+  "limitations": [
+    "Authored pointer fixtures are not a human handwriting accuracy study",
+    "Wide handwritten 口 remains a geometry refusal",
+    "Dots, merged strokes and ambiguous neighbors may be partially or fully undetermined"
+  ]
+}

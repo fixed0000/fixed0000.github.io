@@ -1,17 +1,18 @@
+import {miniStroke} from './stroke-visual.js';
 const en = document.documentElement.lang === 'en';
 const t = (ja, english) => en ? english : ja;
-export const orderLabels = {likely: t('正しい可能性が高い', 'Likely Correct'), review: t('要確認', 'Review Needed'), unable: t('判定できません', 'Unable to Determine')};
-export const unableOrder = reason => ({status: 'unable', reason, issues: []});
+export const orderLabels = {likely: t('正しい可能性が高い', 'Likely Correct'), review: t('要確認', 'Review Needed'), partial:t('一部判定不可','Partially Undetermined'), unable: t('判定できません', 'Unable to Determine')};
+export const unableOrder = reason => ({status: 'unable', sequence:{status:'unable'},direction:{status:'unable'},reason, issues: [],strokes:[]});
 export class StrokeOrderService {
   constructor() { this.worker = null; this.jobs = new Map(); this.serial = 0; }
   evaluate(userStrokes, referenceStrokes, context) {
     if (!referenceStrokes?.length) return Promise.resolve(unableOrder('reference-unavailable'));
     try {
       if (!this.worker) {
-        const worker = new Worker('/js/kanji/stroke-order-worker.js', {type: 'module'});
+        const worker = new Worker(new URL('./stroke-order-worker.js',import.meta.url), {type: 'module'});
         this.worker = worker;
-        worker.onmessage = ({data}) => { const job = this.jobs.get(data.id); if (!job) return; clearTimeout(job.timer); this.jobs.delete(data.id); job.resolve(data.assessment); };
-        worker.onerror = event => { event.preventDefault(); this.fail(); };
+        worker.onmessage = ({data}) => { if(this.worker!==worker)return; const job = this.jobs.get(data.id); if (!job) return; clearTimeout(job.timer); this.jobs.delete(data.id); job.resolve(data.assessment); };
+        worker.onerror = event => { event.preventDefault(); if(this.worker===worker)this.fail(); };
       }
       return new Promise(resolve => {
         const id = ++this.serial;
@@ -29,6 +30,7 @@ export class StrokeOrderService {
 }
 function reasonText(assessment) {
   const reasons = {
+    'partial-assessment':t('確かな対応だけを評価しています。未確定の画は誤りとして扱いません。','Only reliable matches are assessed. Undetermined strokes are not errors.'),
     matched: t('形を安定して照合できた範囲では、順序と方向が一致しています。', 'For the strokes that could be matched reliably, sequence and direction align.'),
     'possible-violation': t('順序や方向が異なる可能性のある画があります。下の項目から照合できます。', 'Some strokes may differ in sequence or direction. Inspect the matches below.'),
     'unrecognized-character': t('文字を安定して認識できなかったため、書き順の判断は保留します。', 'The character was not recognized reliably, so its stroke order is undetermined.'),
@@ -47,27 +49,26 @@ function reasonText(assessment) {
   };
   return reasons[assessment.reason] || reasons['insufficient-input'];
 }
-export function orderView(assessment, onHighlight, onReset) {
-  const details = document.createElement('details'); details.id = 'stroke-order-assessment'; details.className = 'stroke-order-assessment ' + (assessment?.status || 'pending');
-  const summary = document.createElement('summary'), caption = document.createElement('span'), label = document.createElement('strong');
-  caption.className = 'order-caption'; caption.textContent = t('書き順 · 実験的', 'Stroke Order · Experimental');
-  label.id = 'stroke-order-verdict'; label.textContent = assessment ? orderLabels[assessment.status] : t('判定中…', 'Checking…');
-  summary.append(caption, label); details.append(summary);
-  const body = document.createElement('div'); body.className = 'stroke-order-explanation'; const text = document.createElement('p');
-  text.textContent = assessment ? reasonText(assessment) : t('筆跡の順序と方向を、お手本と照合しています。', 'Comparing recorded trajectories with the reference.'); body.append(text);
-  if (assessment?.issues?.length) {
-    const list = document.createElement('ol');
-    for (const issue of assessment.issues) {
-      const li = document.createElement('li'), button = document.createElement('button');
-      button.type = 'button'; button.dataset.userStroke = issue.userStroke; button.dataset.referenceStroke = issue.referenceStroke;
-      const warnings = [issue.order ? t('順序', 'sequence') : '', issue.direction ? t('方向', 'direction') : ''].filter(Boolean).join(' / ');
-      button.textContent = t(`自分の${issue.userStroke}画目 → お手本の${issue.referenceStroke}画目：${warnings}を確認`, `Your stroke ${issue.userStroke} → reference ${issue.referenceStroke}: inspect ${warnings}`);
-      button.onclick = () => onHighlight?.(issue); li.append(button); list.append(li);
-    }
-    const legend = document.createElement('p'); legend.className = 'stroke-match-legend'; legend.textContent = t('オレンジ：自分の画 ／ 青緑：お手本の画', 'Orange: your stroke / teal: reference stroke');
-    const reset = document.createElement('button'); reset.type = 'button'; reset.textContent = t('強調表示を戻す', 'Reset Highlights'); reset.onclick = () => onReset?.();
-    body.append(list, legend, reset);
+const statusText=status=>orderLabels[status]||t('判定中…','Checking…');
+export function orderView(assessment,onHighlight,onReset){
+ const container=document.createElement('div');container.id='stroke-order-assessment';container.className='stroke-order-assessment '+(assessment?.status||'pending');
+ for(const [key,title,id]of [['sequence',t('書き順','Stroke Sequence'),'stroke-order-verdict'],['direction',t('運筆方向','Stroke Direction'),'stroke-direction-verdict']]){
+  const row=document.createElement('div');row.className='stroke-verdict-row';const caption=document.createElement('span'),value=document.createElement('strong');caption.textContent=title;value.id=id;
+  const status=assessment?.[key]?.status||assessment?.status;value.className=status||'pending';value.textContent=(status==='likely'?'✓ ':status==='review'?'! ':'')+statusText(status);row.append(caption,value);container.append(row);
+ }
+ const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent=t('画ごとの確認','Stroke Details');details.append(summary);
+ const body=document.createElement('div');body.className='stroke-order-explanation';const explanation=document.createElement('p');explanation.textContent=assessment?reasonText(assessment):t('順序と方向を別々に照合しています。','Comparing sequence and direction separately.');body.append(explanation);
+ const strokes=assessment?.strokes||assessment?.mapping||[];
+ if(strokes.length){
+  const comparison=document.createElement('div');comparison.className='stroke-comparison';comparison.setAttribute('aria-live','polite');
+  const list=document.createElement('ol');list.className='stroke-inspection-list';
+  for(const stroke of strokes){const li=document.createElement('li'),button=document.createElement('button');button.type='button';button.dataset.userStroke=stroke.userStroke;button.dataset.referenceStroke=stroke.referenceStroke??'';
+   const sequence=statusText(stroke.sequenceStatus),direction=statusText(stroke.directionStatus);
+   button.textContent=t('自分の'+stroke.userStroke+'画目 → '+(stroke.referenceStroke?'お手本の'+stroke.referenceStroke+'画目':'対応未確定')+'：順序 '+sequence+' ／ 方向 '+direction,'Your stroke '+stroke.userStroke+' → '+(stroke.referenceStroke?'reference '+stroke.referenceStroke:'unmatched')+': sequence '+sequence+' / direction '+direction);
+   button.setAttribute('aria-label',button.textContent);const symbol=status=>status==='likely'?'✓':status==='review'?'!':'?';button.textContent=stroke.userStroke+' → '+(stroke.referenceStroke??'?')+' · '+t('順','Seq')+' '+symbol(stroke.sequenceStatus)+' / '+t('向','Dir')+' '+symbol(stroke.directionStatus);
+   button.onclick=()=>{list.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));onHighlight?.(stroke);comparison.replaceChildren(miniStroke(stroke.userPoints,stroke.userStrokeIndex,'#a84a13',t('自分の筆跡','Your Stroke')),miniStroke(stroke.referencePoints,stroke.referenceStrokeIndex,'#006778',t('お手本','Reference')));const reason=document.createElement('p');reason.className='stroke-reason';reason.textContent=stroke.directionReason==='short-stroke'?t('短い画のため、方向は判定できません。','This stroke is too short to determine its direction.'):stroke.directionStatus==='review'?t('始点・終点と軌跡は逆方向を示しています。','The endpoints and trajectory indicate a reversed direction.'):stroke.referenceStrokeIndex===null?t('安定した対応がないため、この画の順序・方向を断定しません。','Without a reliable match, sequence and direction are undetermined.'):t('丸は始点、小さい点は終点、矢印は記録された方向です。','The circle marks the start, the small dot the end, and the arrow the recorded direction.');comparison.append(reason);comparison.scrollIntoView({block:'nearest'});};button.setAttribute('aria-pressed','false');li.append(button);list.append(li);
   }
-  const note = document.createElement('p'); note.className = 'note'; note.textContent = t('KanjiVGに基づく参考判定です。漢検の公式判定ではなく、精度が保証された評価でもありません。', 'An experimental KanjiVG comparison, not official Kanken grading or a validated accuracy guarantee.'); body.append(note); details.append(body);
-  return details;
+  const legend=document.createElement('p');legend.className='stroke-match-legend';legend.textContent=t('オレンジ：自分の画 ／ 青緑：お手本の画','Orange: your stroke / teal: reference stroke');const reset=document.createElement('button');reset.type='button';reset.textContent=t('強調表示を戻す','Reset Highlights');reset.onclick=()=>{onReset?.();comparison.replaceChildren();list.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false'));};body.append(comparison,list,legend,reset);
+ }
+ const note=document.createElement('p');note.className='note';note.textContent=t('KanjiVGに基づく実験的な参考判定です。漢検の公式判定ではありません。','Experimental KanjiVG feedback, not official Kanken grading or a validated accuracy guarantee.');body.append(note);details.append(body);container.append(details);return container;
 }

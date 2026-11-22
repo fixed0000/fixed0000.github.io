@@ -2,11 +2,13 @@
   "canonical": {
     "likely": 71,
     "review": 0,
+    "partial": 0,
     "unable": 0
   },
   "perturbed": {
     "likely": 71,
     "review": 0,
+    "partial": 0,
     "unable": 0
   },
   "cases": [

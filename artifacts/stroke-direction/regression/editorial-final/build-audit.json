@@ -1,0 +1,13 @@
+{
+  "deterministic": true,
+  "preservedApp": [
+    "js/kanji/recognizer.js",
+    "js/kanji/worker.js",
+    "js/kanji/store.js",
+    "js/kanji/task-state.js",
+    "assets/kanji"
+  ],
+  "bilingualPages": 24,
+  "licensesPreserved": true,
+  "publicCvLinks": true
+}

@@ -632,7 +632,7 @@
       "en": "Personal projects"
     },
     "work_history": {
-      "ja": "職務の歩み",
+      "ja": "職務経歴",
       "en": "Work history"
     },
     "cases_from_practice": {
@@ -1190,11 +1190,11 @@
   },
   "personalKnowledge": {
     "ja": {
-      "title": "個人制作と基礎知識",
+      "title": "個人制作・基礎的なIT知識",
       "body": "HTMLとPythonの基礎知識があります。個人制作では生成AIによる開発支援を活用し、Webサイトや小規模なアプリケーションの機能検討、動作確認、改善に取り組んでいます。"
     },
     "en": {
-      "title": "Personal Projects & Basic Knowledge",
+      "title": "Personal Projects & Foundational IT Knowledge",
       "body": "I have basic knowledge of HTML and Python. In personal projects, I use AI-assisted development tools to explore features, check functionality, and improve websites and small applications."
     }
   },

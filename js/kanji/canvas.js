@@ -1,3 +1,4 @@
+import {svgElement,strokeTrail} from './stroke-visual.js';
 export class WritingPad {
  constructor(container,index,labels,onchange){
  this.strokes=[];this.highlightedStroke=null;this.active=null;this.onchange=onchange;this.locked=false;
@@ -18,8 +19,8 @@ export class WritingPad {
  }
  point(e){const r=this.canvas.getBoundingClientRect();return [(e.clientX-r.left)/r.width,(e.clientY-r.top)/r.height];}
  resize(){const r=this.canvas.getBoundingClientRect();const dpr=window.devicePixelRatio||1;this.canvas.width=Math.round(r.width*dpr);this.canvas.height=Math.round(r.height*dpr);this.redraw();}
- redraw(){const c=this.canvas,ctx=c.getContext('2d');ctx.clearRect(0,0,c.width,c.height);if(!this.visible)return;ctx.strokeStyle=this.color;ctx.lineWidth=c.width*this.brush/100;ctx.lineCap='round';ctx.lineJoin='round';for(const [index,s] of this.strokes.entries()){const highlighted=this.highlightedStroke===index;ctx.globalAlpha=this.highlightedStroke===null||highlighted?1:.2;ctx.strokeStyle=highlighted?'#bd5519':this.color;ctx.beginPath();s.forEach(([x,y],i)=>i?ctx.lineTo(x*c.width,y*c.height):ctx.moveTo(x*c.width,y*c.height));ctx.stroke();}ctx.globalAlpha=1;}
- highlightStroke(index){this.highlightedStroke=Number.isInteger(index)?index:null;this.redraw();}
+ redraw(){const c=this.canvas,ctx=c.getContext('2d');ctx.clearRect(0,0,c.width,c.height);const markers=this.surface.querySelector('.user-stroke-markers');if(markers)markers.style.display=this.visible?'':'none';if(!this.visible)return;ctx.strokeStyle=this.color;ctx.lineWidth=c.width*this.brush/100;ctx.lineCap='round';ctx.lineJoin='round';for(const [index,s] of this.strokes.entries()){const highlighted=this.highlightedStroke===index;ctx.globalAlpha=this.highlightedStroke===null||highlighted?1:.2;ctx.strokeStyle=highlighted?'#bd5519':this.color;ctx.beginPath();s.forEach(([x,y],i)=>i?ctx.lineTo(x*c.width,y*c.height):ctx.moveTo(x*c.width,y*c.height));ctx.stroke();}ctx.globalAlpha=1;}
+ highlightStroke(index){this.highlightedStroke=Number.isInteger(index)?index:null;this.surface.querySelector('.user-stroke-markers')?.remove();if(this.highlightedStroke!==null){const svg=svgElement('svg',{viewBox:'0 0 1 1','class':'user-stroke-markers','aria-hidden':'true'});svg.append(strokeTrail(this.strokes[index],index,'#bd5519'));this.surface.append(svg);}this.redraw();}
  setLocked(value){this.locked=value;if(value&&this.active!==null){const id=this.active;this.active=null;this.strokes.pop();if(this.canvas.hasPointerCapture(id))this.canvas.releasePointerCapture(id);this.redraw();}this.element.querySelectorAll('button').forEach(b=>b.disabled=value);this.canvas.setAttribute('aria-disabled',String(value));}
  undo(){if(this.locked||this.active!==null)return;this.strokes.pop();this.highlightedStroke=null;this.redraw();this.onchange();}
  clear(){if(this.locked||this.active!==null)return;this.strokes=[];this.highlightedStroke=null;this.redraw();this.onchange();}

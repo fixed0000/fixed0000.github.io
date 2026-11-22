@@ -1,7 +1,7 @@
 """Verify preservation and deterministic output across the architecture migration."""
 from pathlib import Path
 from html.parser import HTMLParser
-import hashlib,json,subprocess
+import hashlib,json,subprocess,re
 
 root=Path(__file__).resolve().parents[1]
 data=json.loads((root/'content/site.json').read_text(encoding='utf-8'))
@@ -14,13 +14,13 @@ for key,page in data['pages'].items():
 for copy in data['ui'].values():assert set(copy)=={'ja','en'}
 
 # App mechanics, reviewed data, source markup and trainer geometry remain unchanged.
-protected=['js/kanji','assets/kanji']
+protected=['js/kanji/recognizer.js','js/kanji/worker.js','js/kanji/store.js','js/kanji/task-state.js','assets/kanji']
 assert not subprocess.check_output(['git','diff','bdb1deb','--',*protected],cwd=root)
 
 trainer_base=subprocess.check_output(['git','show','549b719:css/kanji-app.css'],cwd=root).decode('utf-8').replace('\r\n','\n')
 assert (root/'css/kanji-app.css').read_text(encoding='utf-8').startswith(trainer_base.rstrip())
 # This editorial task must preserve presentation, application code and personal facts.
-assert not subprocess.check_output(['git','diff','c6d883e','--','css/kanji-compat.css','js/kanji','assets/kanji'],cwd=root)
+assert not subprocess.check_output(['git','diff','c6d883e','--','css/kanji-compat.css',*protected],cwd=root)
 original_css=subprocess.check_output(['git','show','c6d883e:css/site.css'],cwd=root).decode('utf-8').replace('\r\n','\n')
 assert (root/'css/site.css').read_text(encoding='utf-8').startswith(original_css.rstrip())
 previous=json.loads(subprocess.check_output(['git','show','af7aded:content/site.json'],cwd=root).decode('utf-8'))
@@ -57,6 +57,11 @@ for lang in ['ja','en']:
     app=(root/prefix/'projects/kanji-recall/index.html').read_text(encoding='utf-8')
     source=(root/'tools'/f'app-{lang}.html').read_text(encoding='utf-8')
     assert source in app
+    release=re.search(r'/js/kanji/releases/([a-f0-9]{12})/app.js',app).group(1)
+    for module in (root/'js/kanji').glob('*.js'):
+        assert module.read_bytes().replace(b'\r\n',b'\n')==(root/'js/kanji/releases'/release/module.name).read_bytes().replace(b'\r\n',b'\n')
+    assert "new URL('./worker.js',import.meta.url)" in (root/'js/kanji/app.js').read_text(encoding='utf-8')
+    assert "new URL('./stroke-order-worker.js',import.meta.url)" in (root/'js/kanji/stroke-order-ui.js').read_text(encoding='utf-8')
     mori=(root/prefix/'projects/morigarden/index.html').read_text(encoding='utf-8')
     for required in ['Alice.Sacco','CC BY','Sketchfab','SEGA','NoAI','game-gallery']:
         assert required in mori,required

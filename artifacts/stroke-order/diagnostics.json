@@ -1,0 +1,6384 @@
+{
+  "fixtureProvenance": "Independent hand-authored control points, plus KanjiVG controls. Browser test records dispatched pointer trajectories separately. No physical human handwriting corpus or accuracy claim.",
+  "totalTests": 386,
+  "statuses": {
+    "likely": 147,
+    "review": 141,
+    "partial": 64,
+    "unable": 34
+  },
+  "sequence": {
+    "likely": 235,
+    "review": 54,
+    "partial": 55,
+    "unable": 42
+  },
+  "direction": {
+    "likely": 201,
+    "review": 87,
+    "partial": 64,
+    "unable": 34
+  },
+  "byCharacter": {
+    "一": {
+      "tests": 20,
+      "statuses": {
+        "likely": 12,
+        "review": 6,
+        "partial": 0,
+        "unable": 2
+      },
+      "sequence": {
+        "likely": 18,
+        "review": 0,
+        "partial": 0,
+        "unable": 2
+      },
+      "direction": {
+        "likely": 12,
+        "review": 6,
+        "partial": 0,
+        "unable": 2
+      }
+    },
+    "二": {
+      "tests": 26,
+      "statuses": {
+        "likely": 10,
+        "review": 10,
+        "partial": 2,
+        "unable": 4
+      },
+      "sequence": {
+        "likely": 16,
+        "review": 4,
+        "partial": 0,
+        "unable": 6
+      },
+      "direction": {
+        "likely": 14,
+        "review": 6,
+        "partial": 2,
+        "unable": 4
+      }
+    },
+    "三": {
+      "tests": 26,
+      "statuses": {
+        "likely": 10,
+        "review": 10,
+        "partial": 2,
+        "unable": 4
+      },
+      "sequence": {
+        "likely": 16,
+        "review": 4,
+        "partial": 0,
+        "unable": 6
+      },
+      "direction": {
+        "likely": 14,
+        "review": 6,
+        "partial": 2,
+        "unable": 4
+      }
+    },
+    "十": {
+      "tests": 26,
+      "statuses": {
+        "likely": 10,
+        "review": 10,
+        "partial": 2,
+        "unable": 4
+      },
+      "sequence": {
+        "likely": 16,
+        "review": 4,
+        "partial": 0,
+        "unable": 6
+      },
+      "direction": {
+        "likely": 14,
+        "review": 6,
+        "partial": 2,
+        "unable": 4
+      }
+    },
+    "口": {
+      "tests": 26,
+      "statuses": {
+        "likely": 5,
+        "review": 5,
+        "partial": 2,
+        "unable": 14
+      },
+      "sequence": {
+        "likely": 8,
+        "review": 2,
+        "partial": 2,
+        "unable": 14
+      },
+      "direction": {
+        "likely": 7,
+        "review": 3,
+        "partial": 2,
+        "unable": 14
+      }
+    },
+    "日": {
+      "tests": 26,
+      "statuses": {
+        "likely": 10,
+        "review": 10,
+        "partial": 6,
+        "unable": 0
+      },
+      "sequence": {
+        "likely": 16,
+        "review": 4,
+        "partial": 6,
+        "unable": 0
+      },
+      "direction": {
+        "likely": 14,
+        "review": 6,
+        "partial": 6,
+        "unable": 0
+      }
+    },
+    "田": {
+      "tests": 26,
+      "statuses": {
+        "likely": 10,
+        "review": 10,
+        "partial": 6,
+        "unable": 0
+      },
+      "sequence": {
+        "likely": 16,
+        "review": 4,
+        "partial": 6,
+        "unable": 0
+      },
+      "direction": {
+        "likely": 14,
+        "review": 6,
+        "partial": 6,
+        "unable": 0
+      }
+    },
+    "木": {
+      "tests": 26,
+      "statuses": {
+        "likely": 10,
+        "review": 10,
+        "partial": 6,
+        "unable": 0
+      },
+      "sequence": {
+        "likely": 16,
+        "review": 4,
+        "partial": 6,
+        "unable": 0
+      },
+      "direction": {
+        "likely": 14,
+        "review": 6,
+        "partial": 6,
+        "unable": 0
+      }
+    },
+    "本": {
+      "tests": 26,
+      "statuses": {
+        "likely": 10,
+        "review": 10,
+        "partial": 6,
+        "unable": 0
+      },
+      "sequence": {
+        "likely": 16,
+        "review": 4,
+        "partial": 6,
+        "unable": 0
+      },
+      "direction": {
+        "likely": 14,
+        "review": 6,
+        "partial": 6,
+        "unable": 0
+      }
+    },
+    "山": {
+      "tests": 26,
+      "statuses": {
+        "likely": 10,
+        "review": 10,
+        "partial": 4,
+        "unable": 2
+      },
+      "sequence": {
+        "likely": 16,
+        "review": 4,
+        "partial": 4,
+        "unable": 2
+      },
+      "direction": {
+        "likely": 14,
+        "review": 6,
+        "partial": 4,
+        "unable": 2
+      }
+    },
+    "川": {
+      "tests": 26,
+      "statuses": {
+        "likely": 10,
+        "review": 10,
+        "partial": 2,
+        "unable": 4
+      },
+      "sequence": {
+        "likely": 16,
+        "review": 4,
+        "partial": 0,
+        "unable": 6
+      },
+      "direction": {
+        "likely": 14,
+        "review": 6,
+        "partial": 2,
+        "unable": 4
+      }
+    },
+    "同": {
+      "tests": 26,
+      "statuses": {
+        "likely": 10,
+        "review": 10,
+        "partial": 6,
+        "unable": 0
+      },
+      "sequence": {
+        "likely": 16,
+        "review": 4,
+        "partial": 6,
+        "unable": 0
+      },
+      "direction": {
+        "likely": 14,
+        "review": 6,
+        "partial": 6,
+        "unable": 0
+      }
+    },
+    "思": {
+      "tests": 26,
+      "statuses": {
+        "likely": 10,
+        "review": 10,
+        "partial": 6,
+        "unable": 0
+      },
+      "sequence": {
+        "likely": 16,
+        "review": 4,
+        "partial": 6,
+        "unable": 0
+      },
+      "direction": {
+        "likely": 14,
+        "review": 6,
+        "partial": 6,
+        "unable": 0
+      }
+    },
+    "持": {
+      "tests": 26,
+      "statuses": {
+        "likely": 10,
+        "review": 10,
+        "partial": 6,
+        "unable": 0
+      },
+      "sequence": {
+        "likely": 16,
+        "review": 4,
+        "partial": 6,
+        "unable": 0
+      },
+      "direction": {
+        "likely": 14,
+        "review": 6,
+        "partial": 6,
+        "unable": 0
+      }
+    },
+    "待": {
+      "tests": 26,
+      "statuses": {
+        "likely": 10,
+        "review": 10,
+        "partial": 6,
+        "unable": 0
+      },
+      "sequence": {
+        "likely": 16,
+        "review": 4,
+        "partial": 6,
+        "unable": 0
+      },
+      "direction": {
+        "likely": 14,
+        "review": 6,
+        "partial": 6,
+        "unable": 0
+      }
+    }
+  },
+  "reasons": {
+    "reversed-direction": 87,
+    "geometry": 69,
+    "uncertain-neighbor": 69,
+    "sequence-inversion": 54,
+    "ambiguous-direction": 1,
+    "ambiguous-matching": 2
+  },
+  "refusalReasons": {
+    "insufficient-input": 2,
+    "stroke-count": 19,
+    "partial-assessment": 62,
+    "geometry": 13
+  },
+  "declinedViolations": [
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "geometry"
+    },
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "geometry"
+    },
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "geometry"
+    }
+  ],
+  "detectedReversedStrokes": 191,
+  "detectedPermutations": 54,
+  "falsePositives": [],
+  "missedObviousViolations": [],
+  "cases": [
+    {
+      "char": "一",
+      "origin": "kanjivg-control",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 1,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "kanjivg-control",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 1,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0
+      ],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "kanjivg-control",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 1,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0
+      ],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "kanjivg-control",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 1,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0
+      ],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "kanjivg-control",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 1,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "kanjivg-control",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 1,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "kanjivg-control",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 1,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "kanjivg-control",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 1,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "kanjivg-control",
+      "name": "missing",
+      "reason": "insufficient-input",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "kanjivg-control",
+      "name": "short-stroke",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 1,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "independent-authored",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 1,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 1,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0
+      ],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 1,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0
+      ],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 1,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0
+      ],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "independent-authored",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 1,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "independent-authored",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 1,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "independent-authored",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 1,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "independent-authored",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 1,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "independent-authored",
+      "name": "missing",
+      "reason": "insufficient-input",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "一",
+      "origin": "independent-authored",
+      "name": "short-stroke",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 1,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "kanjivg-control",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "kanjivg-control",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 2,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "kanjivg-control",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 2,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "kanjivg-control",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 2,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "kanjivg-control",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "kanjivg-control",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "kanjivg-control",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "kanjivg-control",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "kanjivg-control",
+      "name": "missing",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "kanjivg-control",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "unable",
+      "direction": "partial",
+      "matched": 1,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "kanjivg-control",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "二",
+      "origin": "kanjivg-control",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "二",
+      "origin": "kanjivg-control",
+      "name": "joined",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "independent-authored",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 2,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 2,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 2,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "independent-authored",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "independent-authored",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "independent-authored",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "independent-authored",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "independent-authored",
+      "name": "missing",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "independent-authored",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "unable",
+      "direction": "partial",
+      "matched": 1,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "二",
+      "origin": "independent-authored",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "二",
+      "origin": "independent-authored",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "二",
+      "origin": "independent-authored",
+      "name": "joined",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "kanjivg-control",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "kanjivg-control",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        2
+      ],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "kanjivg-control",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2
+      ],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "kanjivg-control",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        2
+      ],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "kanjivg-control",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "kanjivg-control",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "kanjivg-control",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "kanjivg-control",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "kanjivg-control",
+      "name": "missing",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "kanjivg-control",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "unable",
+      "direction": "partial",
+      "matched": 2,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "kanjivg-control",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "char": "三",
+      "origin": "kanjivg-control",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "char": "三",
+      "origin": "kanjivg-control",
+      "name": "joined",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 1,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "independent-authored",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        2
+      ],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2
+      ],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        2
+      ],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "independent-authored",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "independent-authored",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "independent-authored",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "independent-authored",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "independent-authored",
+      "name": "missing",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "independent-authored",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "unable",
+      "direction": "partial",
+      "matched": 2,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "三",
+      "origin": "independent-authored",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "char": "三",
+      "origin": "independent-authored",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "char": "三",
+      "origin": "independent-authored",
+      "name": "joined",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 1,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "kanjivg-control",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "kanjivg-control",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 2,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "kanjivg-control",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 2,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "kanjivg-control",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 2,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "kanjivg-control",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "kanjivg-control",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "kanjivg-control",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "kanjivg-control",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "kanjivg-control",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "unable",
+      "direction": "partial",
+      "matched": 1,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "kanjivg-control",
+      "name": "short-stroke",
+      "reason": "geometry",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "kanjivg-control",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "十",
+      "origin": "kanjivg-control",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "十",
+      "origin": "kanjivg-control",
+      "name": "joined",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "independent-authored",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 2,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 2,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 2,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "independent-authored",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "independent-authored",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "independent-authored",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "independent-authored",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "independent-authored",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "unable",
+      "direction": "partial",
+      "matched": 1,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "independent-authored",
+      "name": "short-stroke",
+      "reason": "geometry",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "十",
+      "origin": "independent-authored",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "十",
+      "origin": "independent-authored",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 2,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "十",
+      "origin": "independent-authored",
+      "name": "joined",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "kanjivg-control",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "kanjivg-control",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "kanjivg-control",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2
+      ],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "kanjivg-control",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "kanjivg-control",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "kanjivg-control",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "kanjivg-control",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "kanjivg-control",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "kanjivg-control",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 2,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "kanjivg-control",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 2,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "kanjivg-control",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        1,
+        2
+      ]
+    },
+    {
+      "char": "口",
+      "origin": "kanjivg-control",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        1,
+        2
+      ]
+    },
+    {
+      "char": "口",
+      "origin": "kanjivg-control",
+      "name": "joined",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 1,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "correct",
+      "reason": "geometry",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "geometry",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "geometry",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "geometry",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "translation",
+      "reason": "geometry",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "scale",
+      "reason": "geometry",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "tilt",
+      "reason": "geometry",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "imperfect-shape",
+      "reason": "geometry",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "missing",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "short-stroke",
+      "reason": "geometry",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "swapped",
+      "reason": "geometry",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "geometry",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "口",
+      "origin": "independent-authored",
+      "name": "joined",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "kanjivg-control",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "kanjivg-control",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 4,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "kanjivg-control",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 4,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "kanjivg-control",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 4,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "kanjivg-control",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "kanjivg-control",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "kanjivg-control",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "kanjivg-control",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "kanjivg-control",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 3,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "kanjivg-control",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 3,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "kanjivg-control",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "日",
+      "origin": "kanjivg-control",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "日",
+      "origin": "kanjivg-control",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 2,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "independent-authored",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 4,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 4,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 4,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "independent-authored",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "independent-authored",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "independent-authored",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "independent-authored",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "independent-authored",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 3,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "independent-authored",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 3,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "日",
+      "origin": "independent-authored",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "日",
+      "origin": "independent-authored",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "日",
+      "origin": "independent-authored",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 2,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "kanjivg-control",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "kanjivg-control",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 5,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "kanjivg-control",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 5,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "kanjivg-control",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 5,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "kanjivg-control",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "kanjivg-control",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "kanjivg-control",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "kanjivg-control",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "kanjivg-control",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 4,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "kanjivg-control",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 4,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "kanjivg-control",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "char": "田",
+      "origin": "kanjivg-control",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "char": "田",
+      "origin": "kanjivg-control",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 3,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "independent-authored",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 5,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 5,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 5,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "independent-authored",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "independent-authored",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "independent-authored",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "independent-authored",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "independent-authored",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 4,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "independent-authored",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 4,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "田",
+      "origin": "independent-authored",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "田",
+      "origin": "independent-authored",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "田",
+      "origin": "independent-authored",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 3,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "kanjivg-control",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "kanjivg-control",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 4,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "kanjivg-control",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 4,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "kanjivg-control",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 4,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "kanjivg-control",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "kanjivg-control",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "kanjivg-control",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "kanjivg-control",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "kanjivg-control",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 3,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "kanjivg-control",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 3,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "kanjivg-control",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "木",
+      "origin": "kanjivg-control",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "木",
+      "origin": "kanjivg-control",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 2,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "independent-authored",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 4,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 4,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 4,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "independent-authored",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "independent-authored",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "independent-authored",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "independent-authored",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "independent-authored",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 3,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "independent-authored",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 3,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "木",
+      "origin": "independent-authored",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "木",
+      "origin": "independent-authored",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 4,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "木",
+      "origin": "independent-authored",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 2,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "kanjivg-control",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "kanjivg-control",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 5,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "kanjivg-control",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 5,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "kanjivg-control",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 5,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "kanjivg-control",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "kanjivg-control",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "kanjivg-control",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "kanjivg-control",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "kanjivg-control",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 4,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "kanjivg-control",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 4,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "kanjivg-control",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "本",
+      "origin": "kanjivg-control",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "本",
+      "origin": "kanjivg-control",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 3,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "independent-authored",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 5,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 5,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 5,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "independent-authored",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "independent-authored",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "independent-authored",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "independent-authored",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "independent-authored",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 4,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "independent-authored",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 4,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "本",
+      "origin": "independent-authored",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "本",
+      "origin": "independent-authored",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 5,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "本",
+      "origin": "independent-authored",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 3,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "kanjivg-control",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "kanjivg-control",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "kanjivg-control",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2
+      ],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "kanjivg-control",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "kanjivg-control",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "kanjivg-control",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "kanjivg-control",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "kanjivg-control",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "kanjivg-control",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 2,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "kanjivg-control",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 2,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "kanjivg-control",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "山",
+      "origin": "kanjivg-control",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "山",
+      "origin": "kanjivg-control",
+      "name": "joined",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 1,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "independent-authored",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2
+      ],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "independent-authored",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "independent-authored",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "independent-authored",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "independent-authored",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "independent-authored",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 2,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "independent-authored",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 2,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "山",
+      "origin": "independent-authored",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "山",
+      "origin": "independent-authored",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "山",
+      "origin": "independent-authored",
+      "name": "joined",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 1,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "kanjivg-control",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "kanjivg-control",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        2
+      ],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "kanjivg-control",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2
+      ],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "kanjivg-control",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        2
+      ],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "kanjivg-control",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "kanjivg-control",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "kanjivg-control",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "kanjivg-control",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "kanjivg-control",
+      "name": "missing",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "kanjivg-control",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "unable",
+      "direction": "partial",
+      "matched": 2,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "kanjivg-control",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "char": "川",
+      "origin": "kanjivg-control",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "char": "川",
+      "origin": "kanjivg-control",
+      "name": "joined",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 1,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "independent-authored",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        2
+      ],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2
+      ],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 3,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        2
+      ],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "independent-authored",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "independent-authored",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "independent-authored",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "independent-authored",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "independent-authored",
+      "name": "missing",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 0,
+      "reasons": [
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "independent-authored",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "unable",
+      "direction": "partial",
+      "matched": 2,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "川",
+      "origin": "independent-authored",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "char": "川",
+      "origin": "independent-authored",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 3,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "char": "川",
+      "origin": "independent-authored",
+      "name": "joined",
+      "reason": "stroke-count",
+      "status": "unable",
+      "sequence": "unable",
+      "direction": "unable",
+      "matched": 1,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "kanjivg-control",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 6,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "kanjivg-control",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 6,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "kanjivg-control",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 6,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "kanjivg-control",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 6,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "kanjivg-control",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 6,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "kanjivg-control",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 6,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "kanjivg-control",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 6,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "kanjivg-control",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 6,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "kanjivg-control",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 5,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "kanjivg-control",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 5,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "kanjivg-control",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 6,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "同",
+      "origin": "kanjivg-control",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 6,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "同",
+      "origin": "kanjivg-control",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 4,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "independent-authored",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 6,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 6,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 6,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 6,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "independent-authored",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 6,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "independent-authored",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 6,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "independent-authored",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 6,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "independent-authored",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 6,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "independent-authored",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 5,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "independent-authored",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 5,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "同",
+      "origin": "independent-authored",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 6,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "同",
+      "origin": "independent-authored",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 6,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        0,
+        1
+      ]
+    },
+    {
+      "char": "同",
+      "origin": "independent-authored",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 4,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "kanjivg-control",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "kanjivg-control",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "kanjivg-control",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "kanjivg-control",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "kanjivg-control",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "kanjivg-control",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "kanjivg-control",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "kanjivg-control",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "kanjivg-control",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 8,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "kanjivg-control",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 8,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "kanjivg-control",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "char": "思",
+      "origin": "kanjivg-control",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "char": "思",
+      "origin": "kanjivg-control",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 7,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "independent-authored",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "independent-authored",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "independent-authored",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "independent-authored",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "independent-authored",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "independent-authored",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 8,
+      "reasons": [
+        "uncertain-neighbor",
+        "ambiguous-direction"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "independent-authored",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 8,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "思",
+      "origin": "independent-authored",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "char": "思",
+      "origin": "independent-authored",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "char": "思",
+      "origin": "independent-authored",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 7,
+      "reasons": [
+        "geometry",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "kanjivg-control",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "kanjivg-control",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "kanjivg-control",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "kanjivg-control",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "kanjivg-control",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "kanjivg-control",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "kanjivg-control",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "kanjivg-control",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "kanjivg-control",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 8,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "kanjivg-control",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 8,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "kanjivg-control",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "char": "持",
+      "origin": "kanjivg-control",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "char": "持",
+      "origin": "kanjivg-control",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 8,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "independent-authored",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        1
+      ],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "independent-authored",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "independent-authored",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "independent-authored",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "independent-authored",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "independent-authored",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 8,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "independent-authored",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 8,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "持",
+      "origin": "independent-authored",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "char": "持",
+      "origin": "independent-authored",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "char": "持",
+      "origin": "independent-authored",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 8,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "kanjivg-control",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "kanjivg-control",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        5
+      ],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "kanjivg-control",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "kanjivg-control",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        5
+      ],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "kanjivg-control",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "kanjivg-control",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "kanjivg-control",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "kanjivg-control",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "kanjivg-control",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 8,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "kanjivg-control",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 8,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "kanjivg-control",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "char": "待",
+      "origin": "kanjivg-control",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "char": "待",
+      "origin": "kanjivg-control",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 7,
+      "reasons": [
+        "ambiguous-matching",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "independent-authored",
+      "name": "correct",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "independent-authored",
+      "name": "one-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        5
+      ],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "independent-authored",
+      "name": "several-reversed",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "independent-authored",
+      "name": "sequence-correct-direction-wrong",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "likely",
+      "direction": "review",
+      "matched": 9,
+      "reasons": [
+        "reversed-direction"
+      ],
+      "reversed": [
+        5
+      ],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "independent-authored",
+      "name": "translation",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "independent-authored",
+      "name": "scale",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "independent-authored",
+      "name": "tilt",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "independent-authored",
+      "name": "imperfect-shape",
+      "reason": "matched",
+      "status": "likely",
+      "sequence": "likely",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "independent-authored",
+      "name": "missing",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 8,
+      "reasons": [
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "independent-authored",
+      "name": "short-stroke",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 8,
+      "reasons": [
+        "uncertain-neighbor",
+        "geometry"
+      ],
+      "reversed": [],
+      "inversions": []
+    },
+    {
+      "char": "待",
+      "origin": "independent-authored",
+      "name": "swapped",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "char": "待",
+      "origin": "independent-authored",
+      "name": "sequence-wrong-direction-correct",
+      "reason": "possible-violation",
+      "status": "review",
+      "sequence": "review",
+      "direction": "likely",
+      "matched": 9,
+      "reasons": [
+        "sequence-inversion"
+      ],
+      "reversed": [],
+      "inversions": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "char": "待",
+      "origin": "independent-authored",
+      "name": "joined",
+      "reason": "partial-assessment",
+      "status": "partial",
+      "sequence": "partial",
+      "direction": "partial",
+      "matched": 7,
+      "reasons": [
+        "ambiguous-matching",
+        "uncertain-neighbor"
+      ],
+      "reversed": [],
+      "inversions": []
+    }
+  ],
+  "additionalControls": {
+    "ambiguousPairs": "partial",
+    "zeroLengthDot": "partial"
+  },
+  "knownHistoricalFixtureCorrection": {
+    "character": "国",
+    "finding": "The old repair fixture writes strokes 4 and 5 in the opposite order to KanjiVG. It previously abstained; the new sequence review is a genuine inversion, not a false positive."
+  },
+  "characterCaseCount": 384,
+  "controlTestCount": 2
+}

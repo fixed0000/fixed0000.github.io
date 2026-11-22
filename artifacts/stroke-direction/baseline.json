@@ -1,0 +1,7 @@
+{
+  "case": "Independent authored 思 with a shortened stroke 8; browser pointer input",
+  "character": "correct",
+  "strokeOrder": "unable",
+  "result": "Character\n✓ Correct!\nStroke Order · Experimental\nUnable to Determine\n\nInput / recognized: 思 · Answer: 思",
+  "cause": "Whole-character early return on individual geometry"
+}

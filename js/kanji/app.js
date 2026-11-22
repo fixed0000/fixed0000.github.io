@@ -49,13 +49,13 @@ function revealReference(){if(!reference?.paths?.length)return;reference.full();
 function resetStrokeHighlights(){pad?.highlightStroke(null);reference?.full();}
 function inspectStroke(issue){
  if(!pad||!reference)return;
- $('show-ink').checked=true;pad.visible=true;pad.highlightStroke(issue.userStroke-1);
- $('show-reference').checked=true;reference.show(true);reference.highlightStroke(issue.referenceStroke-1);
+ $('show-ink').checked=true;pad.visible=true;pad.highlightStroke(issue.userStrokeIndex);
+ $('show-reference').checked=true;reference.show(true);if(issue.referenceStrokeIndex!==null)reference.highlightStroke(issue.referenceStrokeIndex);else reference.full();
 }
 function replaceOrderView(assessment){
  const old=$('stroke-order-assessment');if(!old)return;
- const wasOpen=old.open,hadFocus=old.contains(document.activeElement);
- const replacement=orderView(assessment,inspectStroke,resetStrokeHighlights);replacement.open=wasOpen;old.replaceWith(replacement);
+ const wasOpen=old.querySelector('details')?.open,hadFocus=old.contains(document.activeElement);
+ const replacement=orderView(assessment,inspectStroke,resetStrokeHighlights);replacement.querySelector('details').open=wasOpen;old.replaceWith(replacement);
  if(hadFocus)replacement.querySelector('summary').focus({preventScroll:true});
 }
 function assessRow(row){
@@ -86,7 +86,7 @@ function result(kind,recognized=''){
  if(exam){h.textContent=t('記録しました','Answer recorded');p.textContent=t('文字と書き順の結果は終了後に表示します。','Character and stroke-order feedback appears at the end.');$('result').replaceChildren(h,p);}
  else{
   const header=document.createElement('div');header.className='assessment-header';
-  const caption=document.createElement('span');caption.className='character-caption';caption.textContent=t('文字の正誤 ','Character ');
+  const caption=document.createElement('span');caption.className='character-caption';caption.textContent=t('文字の正誤 ','Character Recognition ');
   h.append(caption,document.createTextNode((kind==='correct'?'✓ ':kind==='incorrect'?'× ':'')+statuses[kind]));
   p.textContent=kind==='unrecognized'?t('もう一度、画を分けて書いてみてください。','Try again with distinct strokes.'):t('入力・認識：','Input / recognized: ')+(recognized||'—')+' · '+t('正解：','Answer: ')+current.char;
   header.append(h,orderView(row.order,inspectStroke,resetStrokeHighlights));$('result').replaceChildren(header,p);
@@ -102,7 +102,7 @@ async function next(){if(!active||taskState.value!=='review')return;state('finis
 function renderSessionSummary(rows){
  const title=document.createElement('h2'),p=document.createElement('p'),list=document.createElement('ul');
  title.textContent=t('今回の記録','Session Summary');p.textContent=Object.entries(statuses).map(([kind,label])=>label+' '+rows.filter(x=>x.kind===kind).length).join(' · ');
- for(const row of rows){const li=document.createElement('li');li.textContent=`${row.char} · ${statuses[row.kind]}${row.recognized?' · '+row.recognized:''} · `+t('書き順（実験）：','Stroke order (experimental): ')+(row.order?orderLabels[row.order.status]:t('判定中…','Checking…'));list.append(li);}
+ for(const row of rows){const li=document.createElement('li');li.textContent=`${row.char} · ${statuses[row.kind]}${row.recognized?' · '+row.recognized:''} · `+t('書き順（実験）：','Stroke order (experimental): ')+(row.order?orderLabels[row.order.sequence?.status||row.order.status]:t('判定中…','Checking…'))+' · '+t('運筆方向：','Stroke direction: ')+(row.order?orderLabels[row.order.direction?.status||row.order.status]:t('判定中…','Checking…'));list.append(li);}
  $('summary').replaceChildren(title,p,list);
 }
 function finish(){
@@ -125,8 +125,8 @@ $('import').onchange=async()=>{const file=$('import').files[0];if(!file)return;t
 $('reset').onclick=()=>confirm(t('新旧すべての学習記録をこのブラウザから削除しますか？','Delete all current and legacy progress in this browser?'),()=>{data=fresh();storageProtected=false;try{localStorage.removeItem(OLD_KEY);localStorage.removeItem(KEY);}catch{storage=false;}applySettings();save();$('data-status').textContent=t('データを削除しました。','Progress deleted.');});
 function applySettings(){$('brush').value=data.settings.brush;$('dark').checked=data.settings.dark;}
 function fail(){recognitionFailed=true;ready=false;cancel();if(taskState.value==='checking')state('writing');$('practice-loading').textContent=t('認識を読み込めません','Recognition unavailable');$('check').disabled=false;$('load-status').className='loading-state failed';$('load-status').textContent=t('認識を読み込めません。キーボード入力は利用できます。','Recognition could not load. Keyboard practice is available.');}
-try{worker=new Worker('/js/kanji/worker.js',{type:'module'});worker.onmessage=({data:r})=>{if(r.type==='ready'){ready=true;$('practice-loading').textContent=t('認識準備完了','Recognition ready');$('load-status').className='loading-state ready';$('load-status').textContent=t('認識データ準備完了 · ローカル処理','Recognition ready · local processing');}else if(r.type==='result'&&r.id===pending&&active&&taskState.value==='checking'){clearTimeout(checkTimer);pending=null;notice('');const recognized=r.results[0].char;result(recognized?(recognized===current.char?'correct':'incorrect'):'unrecognized',recognized||'');}else if(r.type==='error'&&(r.id===undefined||r.id===pending))fail();};worker.onerror=fail;}catch{fail();}
+try{worker=new Worker(new URL('./worker.js',import.meta.url),{type:'module'});worker.onmessage=({data:r})=>{if(r.type==='ready'){ready=true;$('practice-loading').textContent=t('認識準備完了','Recognition ready');$('load-status').className='loading-state ready';$('load-status').textContent=t('認識データ準備完了 · ローカル処理','Recognition ready · local processing');}else if(r.type==='result'&&r.id===pending&&active&&taskState.value==='checking'){clearTimeout(checkTimer);pending=null;notice('');const recognized=r.results[0].char;result(recognized?(recognized===current.char?'correct':'incorrect'):'unrecognized',recognized||'');}else if(r.type==='error'&&(r.id===undefined||r.id===pending))fail();};worker.onerror=fail;}catch{fail();}
 // Keep keyboard focus inside the fullscreen practice surface. Escape always exits.
-document.addEventListener('keydown',e=>{if(!active)return;if(e.key==='Escape'){e.preventDefault();finish();return;}if(e.key==='Tab'){const controls=[...$('practice').querySelectorAll('button,input,select,[tabindex="0"]')].filter(x=>!x.disabled&&x.getClientRects().length),first=controls[0],last=controls.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}if(e.key==='Enter'&&e.ctrlKey){e.preventDefault();settled?next():check();}});
+document.addEventListener('keydown',e=>{if(!active)return;if(e.key==='Escape'){e.preventDefault();finish();return;}if(e.key==='Tab'){const controls=[...$('practice').querySelectorAll('button,input,select,summary,[tabindex="0"]')].filter(x=>!x.disabled&&x.getClientRects().length),first=controls[0],last=controls.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}if(e.key==='Enter'&&e.ctrlKey){e.preventDefault();settled?next():check();}});
 async function init(){for(const id of ['start','exam','daily','review','favorites','custom-practice'])$(id).disabled=true;$('load-status').textContent=t('認識データを準備しています…','Preparing recognition…');try{const a=await fetch('/assets/kanji/tasks.json');if(!a.ok)throw Error('data');tasks=await a.json();catalog=Object.fromEntries(tasks.map(x=>[x.char,x]));try{const existing=localStorage.getItem(KEY);if(existing)data=validate(JSON.parse(existing));else{const old=JSON.parse(localStorage.getItem(OLD_KEY)||'null');if(old){const r=await fetch('/assets/kanji/words.json');data=migrate(old,await r.json());}}}catch{storage=false;storageProtected=true;notice(t('保存データを読み込めません。元のデータは消去していません。','Stored progress could not be read. Original data was not deleted.'),false);}if([...data.custom,...data.favorites,...Object.keys(data.records)].some(c=>!catalog[c]))await ensureCatalog();applySettings();levels();stats();for(const id of ['daily','review','favorites','custom-practice'])$(id).disabled=false;if(!worker)fail();else{$('load-status').className='loading-state idle';$('load-status').textContent=t('練習開始時に認識データを読み込みます。','Recognition data loads when handwriting practice starts.');}if(storage)save();}catch{notice(t('練習データを読み込めません。再読み込みしてください。','Practice data could not load. Please reload.'),false);}}
 init();

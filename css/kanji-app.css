@@ -141,3 +141,50 @@ th,td { padding:.45rem; border-bottom:1px solid var(--line); text-align:left; }
 .practice-options>.disclosure-body>.controls { padding-top:.5rem; }
 .practice-options .settings { margin-top:1.5rem; border-top:1px solid var(--line); padding-top:1rem; }
 .practice-options .settings h3 { margin-block:.8rem; }
+
+/* Sequence and direction are independent; details expand naturally, without clipping. */
+#result .assessment-header { display:block; }
+#result .assessment-header>h3 { display:flex; flex-wrap:wrap; align-items:baseline; gap:.4rem; margin-bottom:.3rem; }
+#result .character-caption { display:inline!important; margin:0!important; }
+#result .stroke-verdict-row { display:grid; grid-template-columns:minmax(5rem,.8fr) minmax(0,1.6fr); gap:.5rem; padding:.2rem 0; font-size:.78rem; }
+#result .stroke-verdict-row strong { font-size:.78rem; }
+#result .stroke-verdict-row .likely { color:#205a3a; }
+#result .stroke-verdict-row .review { color:#804308; }
+#result .stroke-order-assessment details>summary { min-height:36px; padding:.35rem 0; color:#40566d; font-weight:600; }
+#result .stroke-order-explanation { max-height:none; }
+#result .stroke-inspection-list { padding-left:1.3rem; }
+#result .stroke-inspection-list li { margin:.4rem 0; }
+#result .stroke-inspection-list button { width:100%; font-size:.75rem; }
+#result .stroke-inspection-list button[aria-pressed=true] { outline:2px solid #bd5519; outline-offset:1px; }
+.stroke-comparison { display:grid; grid-template-columns:1fr 1fr; gap:.65rem; }
+.stroke-comparison figure { margin:0; min-width:0; }
+.stroke-comparison figcaption { font-size:.8rem; font-weight:600; }
+.stroke-comparison svg { width:100%; background:#fff; border:1px solid #b5c2d2; }
+.stroke-comparison .stroke-reason { grid-column:1/-1; }
+.user-stroke-markers { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; overflow:visible; }
+#result .stroke-order-explanation .note { color:#40566d; }
+@media(max-width:700px){#result .stroke-verdict-row{padding:.05rem 0;font-size:.7rem}#result .stroke-verdict-row strong{font-size:.7rem}#practice #result{padding:.4rem .6rem}#result .stroke-order-assessment details>summary{min-height:30px;padding:.15rem 0}}
+
+#result .stroke-verdict-row { grid-template-columns:minmax(6.7rem,1fr) minmax(0,1.7fr); }
+#result .stroke-inspection-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.35rem; list-style:none; padding:0; }
+#result .stroke-inspection-list li { margin:0; }
+#result .stroke-inspection-list button { padding:.35rem; font-size:.72rem; }
+.practice-workspace:has(.stroke-order-assessment details[open]) { align-items:start; }
+
+@media(max-width:700px){
+ #result .stroke-order-assessment details>summary { min-height:24px; padding:0; }
+ #result .stroke-verdict-row { font-size:.68rem; line-height:1.35; }
+ #result .stroke-verdict-row strong { font-size:.68rem; line-height:1.35; }
+ #result .assessment-header>h3 { margin-bottom:0; }
+ #result .character-caption { font-size:.6rem; }
+ #practice .practice-actions { padding-top:.1rem; gap:.35rem; }
+ #practice .practice-actions button { min-height:36px; }
+ #reference-controls .controls { margin:.15rem 0; }
+ #reference-controls button { min-height:32px; }
+ .prompt h2 { margin:0; }
+ #stroke-hint { margin-bottom:.2rem; }
+}
+
+#result .stroke-order-assessment .stroke-verdict-row strong.likely { color:#205a3a; }
+#result .stroke-order-assessment .stroke-verdict-row strong.review { color:#804308; }
+#result .stroke-order-assessment .stroke-verdict-row strong.partial,#result .stroke-order-assessment .stroke-verdict-row strong.unable { color:#40566d; }

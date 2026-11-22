@@ -1,10 +1,15 @@
 """Deterministic, dependency-free static renderer for GitHub Pages."""
 from pathlib import Path
 from html import unescape
-import json,re,sys,hashlib
+import json,re,sys,hashlib,shutil
 sys.path.insert(0,str(Path(__file__).parent))
 from components import e,link,section,projects,papers,text_blocks,timeline,qualifications,study_program,personal_interests,study_detail
 ROOT=Path(__file__).resolve().parents[1]
+APP_FILES=sorted((ROOT/'js/kanji').glob('*.js'))
+APP_VERSION=hashlib.sha256(b''.join(p.name.encode()+p.read_bytes().replace(b'\r\n',b'\n') for p in APP_FILES)).hexdigest()[:12]
+APP_RELEASE=ROOT/'js/kanji/releases'/APP_VERSION
+APP_RELEASE.mkdir(parents=True,exist_ok=True)
+for module in APP_FILES:shutil.copyfile(module,APP_RELEASE/module.name)
 DATA=json.loads((ROOT/'content/site.json').read_text(encoding='utf-8'))
 ORIGIN='https://fixed0000.github.io'
 
@@ -96,7 +101,7 @@ def render(key,lang):
 <header class="site-header"><div class="header-inner"><a class="brand" href="{p}" aria-label="{e(name)} — {t('home')}"><span class="mark" aria-hidden="true">LB<span>·</span></span><span class="brand-name">{e(name)}</span></a><div class="header-tools">{contact_action}<a class="language" href="{alt}" lang="{t('ja')}" hreflang="{t('ja')}">{t('label')}</a><button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" data-open="{labels['menu']}" data-close="{labels['close']}">{labels['menu']} <span aria-hidden="true">＋</span></button></div><nav id="site-navigation" class="navigation" aria-label="{t('main_navigation')}">{nav}</nav></div></header>
 <main class="wrap" id="main" tabindex="-1"><div class="page-heading">{hero}<p class="eyebrow">{e(eyebrow)}</p><h1>{heading}</h1><p class="lead">{lead}</p></div>{content(key,lang)}</main>{lightbox}
 <footer class="footer wrap">{footer_cta}<div class="footer-bottom"><span>© 2026 Lidiia Borodina</span><a href="{DATA['person']['github']}">GitHub ↗</a><a href="{p}about/#website">{t('about_this_website')}</a><span>JA / EN</span></div></footer>
-{'<script type="module" src="/js/kanji/app.js"></script>' if isapp else ''}</body></html>'''
+{f'<script type="module" src="/js/kanji/releases/{APP_VERSION}/app.js"></script>' if isapp else ''}</body></html>'''
     target=ROOT/p.strip('/')/route
     target=target if route.endswith('.html') else target/'index.html'
     target.parent.mkdir(parents=True,exist_ok=True);target.write_text(page,encoding='utf-8')

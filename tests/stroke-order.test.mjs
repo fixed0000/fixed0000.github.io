@@ -12,10 +12,10 @@ test('small rotation and distortion do not become order errors',()=>{const angle
 test('different geometry cannot grade target stroke order',()=>{const r=check(handwritten['川'],original,{expected:'山',recognized:'川'});assert.equal(r.status,'unable');assert.equal(r.reason,'geometry');});
 test('recognition abstention does not gate reliable stroke geometry',()=>assert.equal(check(original,original,{expected:'山',recognized:null}).status,'likely'));
 test('merged strokes cannot be reliably segmented',()=>assert.equal(check([[...original[0],...original[1]],original[2]]).status,'unable'));
-test('missing stroke is unable, not an order violation',()=>{const r=check(original.slice(0,2));assert.equal(r.status,'unable');assert.equal(r.reason,'stroke-count');});
+test('missing stroke retains reliable direction without claiming complete order',()=>{const r=check(original.slice(0,2));assert.equal(r.status,'partial');assert.notEqual(r.sequence.status,'likely');assert(r.strokes.some(x=>x.directionStatus==='likely'));assert(r.strokes.every(x=>x.sequenceStatus!=='review'));});
 test('matching stroke count alone is insufficient',()=>{const bad=original.map((s,i)=>s.map(([x,y])=>[y,Math.sin(x*12+i)*.3+.5]));assert.equal(check(bad).status,'unable');});
 test('equally plausible stroke assignment is rejected',()=>{const line=[[.5,.1],[.5,.9]],r=check([line,line],[line,line]);assert.equal(r.status,'unable');assert.equal(r.reason,'ambiguous-matching');});
 test('close parallel strokes are ambiguous',()=>{const a=[[.50,.1],[.50,.9]],b=[[.51,.1],[.51,.9]];assert.equal(check([a,b],[a,b]).status,'unable');});
-test('direction of a dot-like stroke is not guessed',()=>{const r=check([[[.1,.1],[.101,.101]],[[.2,.2],[.8,.8]]],[[[.1,.1],[.101,.101]],[[.2,.2],[.8,.8]]]);assert.equal(r.status,'unable');});
+test('one uncertain dot does not erase other results',()=>{const dot=[[.1,.1],[.101,.101]],line=[[.2,.2],[.8,.8]],r=check([dot,line],[dot,line]);assert.equal(r.sequence.status,'likely');assert.equal(r.direction.status,'partial');assert.equal(r.strokes[0].directionStatus,'unable');assert.equal(r.strokes[1].directionStatus,'likely');});
 test('empty, non-finite, tap and excessive inputs are safe',()=>{for(const x of [[],[[[NaN,0],[1,1]]],[[[0,0],[0,0]]],Array.from({length:65},()=>[[0,0],[1,1]])])assert.equal(check(x).status,'unable');});
 test('single stroke 一 can be checked without an alternative assignment',()=>assert.equal(check(referenceFor('一'),referenceFor('一'),{expected:'一',recognized:'一'}).status,'likely'));
