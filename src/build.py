@@ -25,7 +25,7 @@ def content(key,lang):
     p='/en/' if lang=='en' else '/';d=DATA
     if key=='home':
         intro='<div class="hero-facts"><p>'+t('hotel_operations_game_localization')+'</p><p>'+t('based_in_kyoto_tokyo_preferred')+'</p></div>'
-        actions='<div class="hero-actions">'+link(p+'experience/',t('view_experience'),True)+link(p+'research/',t('explore_the_work'))+link(p+'contact/',t('get_in_touch'))+'</div>'
+        actions='<div class="hero-actions">'+link(p+'experience/',t('view_experience'),True)+link(p+'research/',t('explore_the_work'))+'</div>'
         evidence='<div class="evidence-strip">'+''.join('<div><span>'+e(item[lang]['label'])+'</span><strong>'+e(item[lang]['value'])+'</strong><small>'+e(item[lang]['date'])+'</small></div>' for item in d['homeEvidence'])+'</div>'
         return intro+actions+evidence+section('01',t('professional_background'),text_blocks(d['background'],lang)+link(p+'experience/',t('view_experience')),'professional-background')+section('02',t('personal_projects'),projects(d,lang))+section('03',t('academic_research'),'<p>'+e(d['homeResearch'][lang]['body'])+'</p><div class="research-transition-links">'+link(p+'research/#academic-research',t('view_research'))+link(p+'about/#education',t('education'))+'</div>','academic-intro')+section('04',t('contact'),'<p>'+t('please_contact_me_by_email')+'</p>'+link(p+'contact/',t('get_in_touch')),'contact-cta')
     if key=='experience':
@@ -39,9 +39,9 @@ def content(key,lang):
         if key=='education':return education+section('02',d['educationStudies'][lang]['title'],study_program(d,lang),'what-i-studied')+link(p+'about/',t('more_about_me'))
         site='<div class="site-note"><p>'+t('about_technical_intro')+'</p><ul><li><a href="https://github.com/fixed0000/fixed0000.github.io">GitHub — '+t('portfolio_source')+'</a></li><li><a href="/assets/kanji/DATA-SOURCES.txt">'+t('kanji_data_sources_attribution')+'</a> · <a href="/assets/kanji/LICENSE.txt">KanjiVG — CC BY-SA 3.0</a></li><li><a href="'+p+'projects/morigarden/">'+t('morigarden_third_party_assets_fan_project_disclaimer')+'</a></li></ul></div>'
         about=d['aboutSections']
-        result=section('01',t('professional_biography'),paragraphs(about[0][lang]),'background')+education.replace('>01</span>','>02</span>',1)
-        result+=section('03',d['educationStudies'][lang]['title'],study_program(d,lang),'what-i-studied')
-        for i,record in enumerate(about[1:],4):
+        result=education
+        result+=section('02',d['educationStudies'][lang]['title'],study_program(d,lang),'what-i-studied')
+        for i,record in enumerate(about[1:],3):
             r=record[lang];aside=''
             if record['id']=='interests':body=personal_interests(record,lang)
             else:
@@ -49,7 +49,7 @@ def content(key,lang):
                 if r.get('highlight'):aside='<p class="section-thought">'+e(r['highlight'])+'</p>'
                 if r.get('steps'):body='<ol class="career-direction">'+''.join('<li>'+e(x)+'</li>' for x in r['steps'])+'</ol>'+body
             result+=section(f'{i:02}',r['title'],body,record['id'],aside)
-        return result+section('07',t('about_this_website'),site,'website')
+        return result+section('06',t('about_this_website'),site,'website')
     if key in ['family','monogatari']:return study_detail(d,key,lang)
     if key=='contact':
         residence_value=e(d['residenceStatus'][lang].get('value',d['residenceStatus']['value']))
@@ -85,6 +85,7 @@ def render(key,lang):
         first_image='/assets/screenshots/'+key+'/'+DATA['galleries'][key][0][0]+'.webp'
         lightbox='<dialog class="gallery-lightbox" aria-label="'+e(t('gallery_viewer'))+'"><div class="gallery-toolbar"><button type="button" data-gallery-close>'+e(t('gallery_close'))+'</button></div><img src="'+first_image+'" alt=""><p class="gallery-caption"></p><div class="gallery-controls"><button type="button" data-gallery-prev>'+e(t('gallery_previous'))+'</button><span class="gallery-position" aria-live="polite"></span><button type="button" data-gallery-next>'+e(t('gallery_next'))+'</button></div></dialog>'
     noindex='<meta name="robots" content="noindex">' if key=='notfound' else ''
+    footer_cta='' if key in ['home','contact'] else '<div class="footer-top"><a href="'+p+'contact/">'+labels['contact']+' <span aria-hidden="true">↗</span></a></div>'
     page=f'''<!doctype html>
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(description)}">{noindex}<meta name="theme-color" content="#f4f2ec">
@@ -94,7 +95,7 @@ def render(key,lang):
 <body class="editorial-site page-{key}{' app-page' if isapp else ''}"><a class="skip" href="#main">{labels['skip']}</a>
 <header class="site-header"><div class="header-inner"><a class="brand" href="{p}" aria-label="{e(name)} — {t('home')}"><span class="mark" aria-hidden="true">LB<span>·</span></span><span class="brand-name">{e(name)}</span></a><div class="header-tools">{contact_action}<a class="language" href="{alt}" lang="{t('ja')}" hreflang="{t('ja')}">{t('label')}</a><button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" data-open="{labels['menu']}" data-close="{labels['close']}">{labels['menu']} <span aria-hidden="true">＋</span></button></div><nav id="site-navigation" class="navigation" aria-label="{t('main_navigation')}">{nav}</nav></div></header>
 <main class="wrap" id="main" tabindex="-1"><div class="page-heading">{hero}<p class="eyebrow">{e(eyebrow)}</p><h1>{heading}</h1><p class="lead">{lead}</p></div>{content(key,lang)}</main>{lightbox}
-<footer class="footer wrap"><div class="footer-top"><a href="{p}contact/">{labels['contact']} <span aria-hidden="true">↗</span></a></div><div class="footer-bottom"><span>© 2026 Lidiia Borodina</span><a href="{DATA['person']['github']}">GitHub ↗</a><a href="{p}about/#website">{t('about_this_website')}</a><span>JA / EN</span></div></footer>
+<footer class="footer wrap">{footer_cta}<div class="footer-bottom"><span>© 2026 Lidiia Borodina</span><a href="{DATA['person']['github']}">GitHub ↗</a><a href="{p}about/#website">{t('about_this_website')}</a><span>JA / EN</span></div></footer>
 {'<script type="module" src="/js/kanji/app.js"></script>' if isapp else ''}</body></html>'''
     target=ROOT/p.strip('/')/route
     target=target if route.endswith('.html') else target/'index.html'

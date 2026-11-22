@@ -1,0 +1,10 @@
+{
+  "base": "http://localhost:8000",
+  "checks": [
+    "ja keyboard accordions, task state and preserved storage",
+    "en keyboard accordions, task state and preserved storage"
+  ],
+  "reducedMotion": true,
+  "retiredPrivateCVs": true,
+  "errors": []
+}

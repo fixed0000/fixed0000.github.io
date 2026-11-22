@@ -25,7 +25,7 @@
     [
       "research/",
       "制作・研究",
-      "Work & Research"
+      "Projects & Research"
     ],
     [
       "about/",
@@ -53,8 +53,8 @@
       "close": "Close menu",
       "skip": "Skip to content",
       "more": "Explore the work",
-      "work": "Work & Research",
-      "back": "Back to Work & Research",
+      "work": "Projects & Research",
+      "back": "Back to Projects & Research",
       "contact": "Get in touch",
       "source": "Source code",
       "personal": "Personal project",
@@ -176,9 +176,9 @@
         "description": "Kanji Recall、MoriGarden、家族の連想比較とMonogatariの翻訳研究。"
       },
       "en": {
-        "title": "Work & Research",
+        "title": "Projects & Research",
         "lead": "Personal software projects, alongside academic work on Japanese and Russian language and meaning.",
-        "eyebrow": "Work & Research",
+        "eyebrow": "Projects & Research",
         "description": "Kanji Recall, MoriGarden, associations with family, and translation research on the Monogatari series."
       }
     },
@@ -186,13 +186,13 @@
       "route": "about/",
       "ja": {
         "title": "私について",
-        "lead": "日本語の翻訳・通訳を学び、現在は京都でホテル運営に携わっています。これまでの経験と、学習・個人制作について紹介します。",
+        "lead": "モスクワ市立教育大学で日本語の翻訳・通訳を学び、現在は京都のホテルで働いています。業務システムや情報管理への関心から、IT・データ運用の分野への転職を目指しています。",
         "eyebrow": "私について",
         "description": "ボロディナ・リディアの職務経験・学歴、仕事への考え方、PCの組み立てや個人制作などの関心、今後のキャリア目標。"
       },
       "en": {
         "title": "About",
-        "lead": "I studied Japanese translation and interpreting and now work in hotel operations in Kyoto. Here is an overview of my background, learning, and personal projects.",
+        "lead": "I studied Japanese translation and interpreting at Moscow City University and currently work in hotel operations in Kyoto. My interest in business systems and information management has led me to pursue opportunities in IT and data operations.",
         "eyebrow": "About",
         "description": "Lidiia Borodina’s professional background, education, approach to work, personal interests, and long-term career goals."
       }
@@ -295,7 +295,7 @@
         "description": "A questionnaire-based study examining associations with the concept of “family” among native Japanese and Russian speakers, comparing similarities and differences in their responses.",
         "methods": "Questionnaire research · Response organization · Comparative analysis",
         "approach": "The study organized questionnaire responses and compared associations across the two native-language groups.",
-        "sourceLabel": "View Publication (Russian)"
+        "sourceLabel": "View Publication Information (Russian)"
       },
       "originalUrl": "https://www.elibrary.ru/item.asp?id=82319309"
     },
@@ -318,7 +318,7 @@
         "methods": "Source–translation comparison · Contextual analysis · Translation analysis",
         "approach": "The study considered expressions in context and examined the relationship between the Japanese source and its Russian translation.",
         "sourceLabel": "View Original Thesis (Russian)",
-        "sourceNote": "Undergraduate thesis (original language: Russian)"
+        "sourceNote": "Undergraduate Thesis (Russian)"
       },
       "originalUrl": "/documents/monogatari-thesis-ru.pdf"
     }
@@ -392,24 +392,24 @@
       "ja": {
         "title": "業務システム・データ",
         "items": [],
-        "body": "ホテルの予約管理システム（PMS）を使用し、予約内容や料金、客室タイプなどの確認・変更を行っています。複数の情報を照合し、変更内容を関係者に共有する業務も経験しています。"
+        "body": "PMSで予約内容・料金・客室タイプを確認・変更し、複数の記録を照合。変更内容を関係者に共有しています。"
       },
       "en": {
         "title": "Operational systems & data",
         "items": [],
-        "body": "I use hotel property management systems (PMS) to check and update reservations, rates, and room types. My work also involves cross-checking information and communicating changes to relevant colleagues."
+        "body": "Checking and updating reservations, rates, and room types in PMS; cross-checking records and sharing changes with colleagues."
       }
     },
     {
       "ja": {
         "title": "表計算・報告",
         "items": [],
-        "body": "Excel・Googleスプレッドシートを使用し、日々の業務データの入力・整理、売上・入金情報の照合、報告用データの確認を行っています。基本的な関数や条件付き書式を使用した経験があります。"
+        "body": "Excel・Googleスプレッドシートで業務データを入力・整理し、売上・入金を照合。報告用データの確認、基本的な関数・条件付き書式の使用経験があります。"
       },
       "en": {
         "title": "Spreadsheets & reporting",
         "items": [],
-        "body": "I use Excel and Google Sheets to enter and organize operational data, reconcile sales and payment information, and check data for reporting. I have experience with basic spreadsheet formulas and conditional formatting."
+        "body": "Entering and organizing operational data in Excel and Google Sheets, reconciling sales and payments, and checking reports. Experience with basic formulas and conditional formatting."
       }
     },
     {
@@ -613,7 +613,7 @@
     },
     "work_research": {
       "ja": "制作・研究",
-      "en": "Work & Research"
+      "en": "Projects & Research"
     },
     "about": {
       "ja": "私について",
@@ -919,18 +919,16 @@
       "ja": {
         "title": "仕事への考え方",
         "paragraphs": [
-          "日々の業務で発生する問題に対応するだけでなく、その原因を考え、同じ問題を防ぐために情報や業務の流れを整理することにやりがいを感じます。",
-          "ホテル業務では、日々必要な対応に取り組みながら、システムを使った情報管理や確認作業にも関心を持っています。作業を一覧化したり、情報の不一致や不具合について確認すべき点を整理したりすることが好きです。",
-          "ITやデータ管理の知識を身につけ、日々の業務を支えるシステムや運用の改善に携わりたいと考えています。"
+          "日々の業務に対応するだけでなく、問題の原因を考え、情報や作業の流れを整理することにやりがいを感じます。ホテル業務では、予約管理システムを使った確認作業や、必要な作業・注意事項の整理に特に関心があります。",
+          "これまでの経験を生かし、ITやデータ管理の知識を深めながら、業務を安定して進めるための仕組みや運用に携わりたいと考えています。"
         ],
         "highlight": "問題の原因を考え、仕組みを整理する。"
       },
       "en": {
         "title": "How I Approach Work",
         "paragraphs": [
-          "Beyond responding to day-to-day issues, I find it rewarding to understand their causes and organize information and workflows in ways that help prevent similar problems from recurring.",
-          "In my hotel role, I handle day-to-day needs while taking an interest in information management and checks using operational systems. I enjoy making task lists and organizing the points that need to be checked when information is inconsistent or a system issue occurs.",
-          "I want to develop my knowledge of IT and data management and contribute to improvements in the systems and operations that support everyday work."
+          "I enjoy understanding the causes of problems and organizing information and workflows, rather than focusing only on immediate responses. In hotel operations, I am particularly interested in working with reservation systems and keeping tasks and important information organized.",
+          "I hope to build on this experience by developing my knowledge of IT and data management and contributing to reliable operational processes."
         ],
         "highlight": "Understand the causes. Organize the systems."
       }
@@ -982,26 +980,14 @@
         "title": "これからの目標",
         "paragraphs": [
           "まずは専門分野の知識と実務経験を積み、担当する業務を深く理解できる人材になりたいと考えています。",
-          "将来的には、自分の担当領域だけでなく、他部署とのつながりや会社全体の業務の流れも理解し、部門を横断して課題を考えられるようになることが目標です。",
-          "数年単位で経験を重ねた先の長期的な目標として、課長などの管理職も視野に入れています。専門知識と現場への理解を生かしながら、チームの仕事を支えられる立場を目指しています。"
-        ],
-        "steps": [
-          "専門知識の習得",
-          "業務理解の深化",
-          "将来的なマネジメント"
+          "将来的には、他部署とのつながりや会社全体の業務の流れも理解し、部門を横断して課題を考えられるようになることが目標です。さらに経験を重ねた先には、課長などの管理職として、専門知識と現場への理解を生かしながらチームの仕事を支えたいと考えています。"
         ]
       },
       "en": {
         "title": "Future Goals",
         "paragraphs": [
           "My first priority is to build specialist knowledge and practical experience so that I develop a thorough understanding of the work I am responsible for.",
-          "I also want to understand how my area connects with other departments and how work flows through the company as a whole. My goal is to learn to consider problems across departmental boundaries.",
-          "Over the longer term, after gaining further experience over the coming years, I would like to develop toward a management role, such as section manager (課長). I hope to support a team through both specialist knowledge and an understanding of day-to-day work."
-        ],
-        "steps": [
-          "Build specialist knowledge",
-          "Deepen operational understanding",
-          "Work toward management"
+          "Over time, I want to understand how departments connect and how work flows through the company, so that I can consider problems across departmental boundaries. After gaining further experience, my long-term goal is to support a team in a management role, such as section manager (課長), drawing on specialist knowledge and an understanding of day-to-day work."
         ]
       }
     }
@@ -1115,7 +1101,12 @@
             "Japanese lexicology",
             "Japanese stylistics"
           ]
-        }
+        },
+        "primaryIndices": [
+          1,
+          2,
+          3
+        ]
       },
       {
         "index": "B",
@@ -1138,7 +1129,12 @@
             "Practical interpreting exercises",
             "Pre-translation text analysis"
           ]
-        }
+        },
+        "primaryIndices": [
+          0,
+          1,
+          4
+        ]
       },
       {
         "index": "C",
@@ -1157,7 +1153,12 @@
             "Literary translation",
             "Classical texts as signs of Japanese culture"
           ]
-        }
+        },
+        "primaryIndices": [
+          0,
+          1,
+          2
+        ]
       },
       {
         "index": "D",
@@ -1178,7 +1179,12 @@
             "Fundamentals of research in translation studies",
             "Fundamentals of presenting research findings in Japanese"
           ]
-        }
+        },
+        "primaryIndices": [
+          0,
+          2,
+          3
+        ]
       }
     ]
   },

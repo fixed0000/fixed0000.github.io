@@ -22,7 +22,7 @@ def papers(data,lang):
     result='<div class="paper-list">'
     for item in data['research']:
         r=item[lang];url=p+'research/'+item['id']+'/'
-        result+=f'<article class="paper" id="{"thesis" if item["id"]=="monogatari" else "family"}"><p class="paper-date">{item["year"]}</p><div><h3><a href="{url}">{e(r["title"])}</a></h3><p>{e(r["description"])}</p><p class="paper-methods">{e(r["methods"])}</p><div class="paper-links"><a class="text-link" href="{url}">'+text(data,lang,'read_study')+' <span aria-hidden="true">↗</span></a><span class="original-language">'+text(data,lang,'original_language')+'</span></div>'+original_link(data,item,lang)+'</div></article>'
+        result+=f'<article class="paper" id="{"thesis" if item["id"]=="monogatari" else "family"}"><p class="paper-date">{item["year"]}</p><div><h3><a href="{url}">{e(r["title"])}</a></h3><p>{e(r["description"])}</p><p class="paper-methods">{e(r["methods"])}</p><div class="paper-links"><a class="text-link" href="{url}">'+text(data,lang,'read_study')+' <span aria-hidden="true">↗</span></a><span class="original-language">'+e(r.get('sourceNote',text(data,lang,'original_language')))+'</span></div>'+original_link(data,item,lang)+'</div></article>'
     return result+'</div>'
 
 def study_detail(data,key,lang):
@@ -30,15 +30,18 @@ def study_detail(data,key,lang):
     subtitle='<p class="research-subtitle">'+e(r['subtitle'])+'</p>' if r.get('subtitle') else ''
     methods='研究方法' if lang=='ja' else 'Methods'
     approach='研究のアプローチ' if lang=='ja' else 'Research Approach'
-    return subtitle+'<article class="study-detail"><dl><div><dt>'+methods+'</dt><dd>'+e(r['methods'])+'</dd></div><div><dt>'+approach+'</dt><dd>'+e(r['approach'])+'</dd></div></dl><div class="study-source"><p>'+r.get('sourceNote',text(data,lang,'original_language'))+'</p>'+original_link(data,item,lang)+'</div></article>'
+    return subtitle+'<article class="study-detail"><dl><div><dt>'+methods+'</dt><dd>'+e(r['methods'])+'</dd></div></dl><div class="study-source"><p>'+r.get('sourceNote',text(data,lang,'original_language'))+'</p>'+original_link(data,item,lang)+'</div></article>'
 
 def study_program(data,lang):
     program=data['educationStudies'];r=program[lang]
     result='<div class="study-program"><p class="study-intro">'+e(r['intro'])+'</p><div class="discipline-grid">'
+    extra=[]
     for group in program['groups']:
         g=group[lang]
-        result+='<article class="discipline'+(' discipline-technology' if group['index']=='D' else '')+'"><span class="discipline-index" aria-hidden="true">'+group['index']+'</span><h3>'+e(g['title'])+'</h3><ul>'+''.join('<li>'+e(x)+'</li>' for x in g['items'])+'</ul></article>'
-    return result+'</div></div>'
+        result+='<article class="discipline'+(' discipline-technology' if group['index']=='D' else '')+'"><span class="discipline-index" aria-hidden="true">'+group['index']+'</span><h3>'+e(g['title'])+'</h3><ul>'+''.join('<li>'+e(x)+'</li>' for i,x in enumerate(g['items']) if i in group['primaryIndices'])+'</ul></article>'
+        extra.extend((g['title'],x) for i,x in enumerate(g['items']) if i not in group['primaryIndices'])
+    summary='その他の履修科目を見る' if lang=='ja' else 'View additional coursework'
+    return result+'</div><details class="coursework-details"><summary>'+summary+'</summary><div class="disclosure-body"><ul>'+''.join('<li><span>'+e(title)+'</span> — '+e(item)+'</li>' for title,item in extra)+'</ul></div></details></div>'
 
 def personal_interests(record,lang):
     return '<div class="interest-grid">'+''.join('<article><h3>'+e(g[lang]['title'])+'</h3><p>'+e(g[lang]['body'])+'</p></article>' for g in record['groups'])+'</div>'

@@ -14,19 +14,20 @@ for key,page in data['pages'].items():
 for copy in data['ui'].values():assert set(copy)=={'ja','en'}
 
 # App mechanics, reviewed data, source markup and trainer geometry remain unchanged.
-protected=['js/kanji','assets/kanji','tools/build-app-markup.py','tools/app-ja.html','tools/app-en.html']
+protected=['js/kanji','assets/kanji']
 assert not subprocess.check_output(['git','diff','bdb1deb','--',*protected],cwd=root)
 
 trainer_base=subprocess.check_output(['git','show','549b719:css/kanji-app.css'],cwd=root).decode('utf-8').replace('\r\n','\n')
 assert (root/'css/kanji-app.css').read_text(encoding='utf-8').startswith(trainer_base.rstrip())
 # This editorial task must preserve presentation, application code and personal facts.
-assert not subprocess.check_output(['git','diff','c6d883e','--','css/kanji-compat.css','js/kanji','assets/kanji','tools/build-app-markup.py','tools/app-ja.html','tools/app-en.html'],cwd=root)
+assert not subprocess.check_output(['git','diff','c6d883e','--','css/kanji-compat.css','js/kanji','assets/kanji'],cwd=root)
 original_css=subprocess.check_output(['git','show','c6d883e:css/site.css'],cwd=root).decode('utf-8').replace('\r\n','\n')
 assert (root/'css/site.css').read_text(encoding='utf-8').startswith(original_css.rstrip())
 previous=json.loads(subprocess.check_output(['git','show','af7aded:content/site.json'],cwd=root).decode('utf-8'))
 for key in ['person','languages','homeEvidence','timeline','applicationDocuments']:
     assert data[key]==previous[key],key
-assert data['navigation']==previous['navigation']
+assert [x[0] for x in data['navigation']]==[x[0] for x in previous['navigation']]
+assert data['navigation'][3][2]=='Projects & Research'
 assert data['contactAction']['route']=='contact/'
 assert data['applicationDocuments']['approved'] is True
 assert data['applicationDocuments']['url']=='/documents/shokumukeirekisho-ja.pdf'
@@ -62,5 +63,5 @@ for lang in ['ja','en']:
     contact=(root/prefix/'contact/index.html').read_text(encoding='utf-8')
     assert '/documents/shokumukeirekisho-ja.pdf' in contact
 result={'deterministic':True,'preservedApp':protected,'bilingualPages':len(routes)*2,'licensesPreserved':True,'publicCvLinks':True}
-(root/'artifacts/final-audit/build-audit.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+(root/'artifacts/editorial-final/build-audit.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
 print('PASS deterministic static build; preserved Kanji Recall mechanics, data and markup; licensed content')

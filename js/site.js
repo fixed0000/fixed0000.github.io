@@ -11,10 +11,19 @@ addEventListener('hashchange',revealCase);revealCase();
 // GitHub Pages serves the root 404 for nested unknown routes.
 if(document.body.classList.contains('page-notfound')&&location.pathname.startsWith('/en/')&&document.documentElement.lang==='ja')location.replace('/en/404.html?from='+encodeURIComponent(location.pathname));
 
-// Reveal only below-fold editorial sections; keep no-JS and reduced-motion content visible.
-if(!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window){
- const revealObserver=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.remove('reveal-pending');entry.target.classList.add('reveal-visible');revealObserver.unobserve(entry.target);}},{threshold:0,rootMargin:'0px 0px 32px 0px'});
- document.querySelectorAll('main > .editorial-section').forEach(section=>{if(section.getBoundingClientRect().top>innerHeight){section.classList.add('reveal-pending');revealObserver.observe(section);}});
+// Decorative motion never controls content availability or keyboard access.
+const motionPreference=matchMedia('(prefers-reduced-motion: reduce)');
+if(!motionPreference.matches){
+ const hero=document.querySelector('.page-home .page-heading');
+ if(hero){[hero.querySelector('.hero-name'),hero.querySelector('h1'),hero.querySelector('.lead'),document.querySelector('.hero-actions')].filter(Boolean).forEach((el,i)=>{el.style.setProperty('--hero-delay',i*85+'ms');el.classList.add('hero-enter');});}
+ if('IntersectionObserver' in window){
+  const reveal=el=>{el.classList.remove('reveal-pending');el.classList.add('reveal-visible');};
+  // Observe a short, real heading: 15% can be reached even for very tall sections.
+  const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){reveal(entry.target.closest('.editorial-section'));observer.unobserve(entry.target);}},{threshold:.15});
+  document.querySelectorAll('main > .editorial-section').forEach(section=>{if(section.getBoundingClientRect().top>innerHeight){section.classList.add('reveal-pending');observer.observe(section.querySelector('.section-label'));}});
+  document.addEventListener('focusin',event=>{const section=event.target.closest('.reveal-pending');if(section)reveal(section);});
+  motionPreference.addEventListener('change',event=>{if(event.matches){observer.disconnect();document.querySelectorAll('.reveal-pending').forEach(reveal);}});
+ }
 }
 
 // Native modal viewer; ordinary image links remain usable without JavaScript.

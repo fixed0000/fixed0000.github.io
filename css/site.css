@@ -1441,3 +1441,44 @@ a { transition:color .2s; }
 .gallery-controls { display:flex; justify-content:space-between; gap:.7rem; align-items:center; }
 .gallery-position { font-size:.85rem; white-space:nowrap; }
 @media(max-width:420px){.gallery-lightbox{padding:.6rem}.gallery-controls button{padding:.5rem;font-size:.8rem}.gallery-caption{font-size:.85rem}}
+
+/* Final editorial refinement: motion affects paint only, never layout. */
+@keyframes hero-editorial { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:none; } }
+.hero-enter { animation:hero-editorial 520ms cubic-bezier(.22,1,.36,1) var(--hero-delay,0ms) both; }
+.reveal-pending { opacity:0; transform:translateY(14px); }
+.reveal-visible { opacity:1; transform:none; transition:opacity 420ms cubic-bezier(.22,1,.36,1),transform 420ms cubic-bezier(.22,1,.36,1); }
+.editorial-section:focus-within { opacity:1; transform:none; }
+.coursework-details { margin-top:1.8rem; border-top:1px solid var(--line); padding-top:1rem; }
+.coursework-details summary,.practice-options summary { cursor:pointer; padding:.65rem 0; font-weight:600; }
+.coursework-details li { margin:.6rem 0; }
+.coursework-details li span { color:var(--muted); }
+.disclosure-body { padding-block:.5rem 1rem; }
+details[open]>.disclosure-body { animation:disclosure-enter 200ms ease-out; }
+@keyframes disclosure-enter { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+@supports (interpolate-size:allow-keywords) {
+ .coursework-details,.practice-options { interpolate-size:allow-keywords; }
+ .coursework-details::details-content,.practice-options::details-content { block-size:0; overflow:clip; transition:block-size 200ms ease,content-visibility 200ms allow-discrete; }
+ .coursework-details[open]::details-content,.practice-options[open]::details-content { block-size:auto; }
+}
+.project-row { transition:transform 210ms ease,border-color 210ms ease; }
+.project-visual { overflow:hidden; }
+.project-visual img { transition:transform 210ms ease; }
+.text-link,.back-link { text-decoration:none; background-image:linear-gradient(currentColor,currentColor); background-size:0 1px; background-repeat:no-repeat; background-position:left bottom; transition:background-size 180ms ease; }
+.text-link:hover,.back-link:hover,.text-link:focus-visible,.back-link:focus-visible { background-size:100% 1px; }
+.text-link span,.button span { display:inline-block; transition:transform 180ms ease; }
+@media(hover:hover) and (pointer:fine) {
+ .project-row:hover { transform:translateY(-3px); border-color:var(--accent); }
+ .project-row:hover .project-visual img { transform:scale(1.015); }
+ .text-link:hover span,.button:hover span { transform:translateX(3px); }
+}
+@media(max-width:700px) {
+ .js .navigation.is-open { animation:menu-editorial 200ms cubic-bezier(.22,1,.36,1); }
+ @keyframes menu-editorial { from { opacity:0; transform:translateY(-7px); } to { opacity:1; transform:none; } }
+}
+@media(prefers-reduced-motion:reduce) {
+ html { scroll-behavior:auto; }
+ .hero-enter,.reveal-pending,.reveal-visible,.js .navigation.is-open,details[open]>.disclosure-body { animation:none; opacity:1; transform:none; transition:none; }
+ .project-row,.project-visual img,.text-link,.back-link,.button span,.text-link span { transition:none; }
+ .project-row:hover,.project-row:hover .project-visual img,.text-link:hover span,.button:hover span { transform:none; }
+ .coursework-details::details-content,.practice-options::details-content { transition:none; }
+}

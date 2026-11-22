@@ -1,0 +1,10 @@
+{
+  "deterministic": true,
+  "preservedApp": [
+    "js/kanji",
+    "assets/kanji"
+  ],
+  "bilingualPages": 24,
+  "licensesPreserved": true,
+  "publicCvLinks": true
+}

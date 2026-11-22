@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-22",
+  "publishedResume": {
+    "pages": 2,
+    "sha256": "f866ab208863b548f985867a397092e45ce0a891ef63f65d025745c33dfcc19a",
+    "targetedMotivation": false,
+    "privateContactData": false,
+    "draftMarks": false,
+    "visuallyInspected": [
+      1,
+      2
+    ],
+    "retainedUnchanged": true,
+    "generator": "tmp/pdfs/build_resume_final.py (outside public root)"
+  },
+  "retiredPublicFiles": [
+    "Lidia_Borodina_CV_JP.pdf",
+    "Lidia_Borodina_CV_EN.pdf",
+    "images/Lidia_Borodina_CV_EN.jpg"
+  ],
+  "retirementReasons": [
+    "Addressed wording and outdated dates in archived Japanese CV",
+    "Phone number and outdated statements in archived English CV and its preview"
+  ],
+  "thesis": {
+    "pages": 89,
+    "sha256": "1939ac2cb83a7c8393b2800f6fc856eea6a9a95d1831cf8a773549d3a2099dc7",
+    "annotations": 0,
+    "metadataClean": true,
+    "retainedUnchanged": true
+  },
+  "heroLayoutShift": 0,
+  "limitations": [
+    "eLIBRARY inaccessible from test environment; full text not claimed",
+    "No physical mobile device or screen reader testing",
+    "Retired assets remain in Git history; history was not rewritten"
+  ]
+}
